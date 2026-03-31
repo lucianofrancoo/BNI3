@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	Gene286 & Gene601	4	2	0.0	Gene286, Gene601	2	1
+2	Gene505 | (Gene109 & Gene786)	4	3	0.0	Gene109, Gene505, Gene786	3	1
+3	Gene505 | (Gene109 & Gene786)	4	3	0.0	Gene109, Gene505, Gene786	3	1
+4	Gene451 | Gene880	4	2	0.0	Gene451, Gene880	2	1
+5	Gene201 | Gene505	4	2	0.0	Gene201, Gene505	2	1
+6	Gene505	4	1	0.5	Gene505	1	1
+7	Gene505 | Gene811	4	2	0.0	Gene505, Gene811	2	1
+8	Gene453 | Gene505 | Gene786	4	3	0.0	Gene453, Gene505, Gene786	3	1
+9	Gene601 | (Gene1 & Gene451)	4	3	0.0	Gene1, Gene451, Gene601	3	1
+10	Gene451 | Gene880	4	2	0.0	Gene451, Gene880	2	1
+11	Gene505 | Gene811	4	2	0.0	Gene505, Gene811	2	1
+12	Gene505	4	1	0.5	Gene505	1	1
+13	Gene505 | Gene880	4	2	0.0	Gene505, Gene880	2	1
+14	Gene505 | Gene880	4	2	0.0	Gene505, Gene880	2	1
+15	Gene201 | Gene505	4	2	0.0	Gene201, Gene505	2	1
+16	Gene505 | Gene811 | Gene880	4	3	0.0	Gene505, Gene811, Gene880	3	1
+17	Gene505 & (Gene322 | Gene371)	4	3	0.0	Gene322, Gene371, Gene505	3	1
+18	Gene371 | Gene757 | Gene899	4	3	0.0	Gene371, Gene757, Gene899	3	1
+19	Gene463 | Gene880	4	2	0.0	Gene463, Gene880	2	1
+20	Gene505 | Gene811	4	2	0.0	Gene505, Gene811	2	1
+21	Gene450 | Gene505 | Gene887	4	3	0.0	Gene450, Gene505, Gene887	3	1
+22	Gene505	4	1	0.5	Gene505	1	1
+23	Gene505	4	1	0.5	Gene505	1	1
+24	Gene371	4	1	0.5	Gene371	1	1
+25	Gene505	4	1	0.5	Gene505	1	1
+26	Gene880	4	1	0.5	Gene880	1	1
+27	Gene505	4	1	0.5	Gene505	1	1
+28	Gene880	4	1	0.5	Gene880	1	1
+29	Gene505	4	1	0.5	Gene505	1	1
+30	Gene505	4	1	0.5	Gene505	1	1
+31	Gene162 | Gene371 | Gene757 | Gene811	4	4	0.5	Gene162, Gene371, Gene757, Gene811	4	1
+32	Gene880	4	1	0.5	Gene880	1	1
+33	Gene371 | Gene501	3	2	0.0	Gene371, Gene501	2	1
+34	Gene757 | Gene811	3	2	0.0	Gene757, Gene811	2	1
+35	Gene331	3	1	0.5	Gene331	1	1
+36	Gene1 | Gene601	3	2	0.0	Gene1, Gene601	2	1
+37	Gene1 | Gene601 | (Gene789 & Gene831)	3	4	0.5	Gene1, Gene601, Gene789, Gene831	4	1
+38	Gene151 | Gene371 | (~Gene322 & ~Gene757)	3	4	0.5	Gene151, Gene322, Gene371, Gene757	4	1
+39	Gene151	3	1	0.5	Gene151	1	1
+40	Gene789 | Gene811 | (Gene1 & Gene412) | (Gene11 & Gene331)	3	6	1.5	Gene1, Gene11, Gene331, Gene412, Gene789, Gene811	6	1
+41	Gene757 | Gene959	2	2	0.0	Gene757, Gene959	2	1
+42	Gene109 | Gene811	2	2	0.0	Gene109, Gene811	2	1
+43	Gene505 & Gene811	2	2	0.0	Gene505, Gene811	2	1
+44	Gene151 & Gene497	2	2	0.0	Gene151, Gene497	2	1
+45	Gene109 | Gene811	2	2	0.0	Gene109, Gene811	2	1
+46	Gene757 | ~Gene635 | (Gene322 & Gene789)	2	4	0.5	Gene322, Gene635, Gene757, Gene789	4	1
+47	Gene451	2	1	0.5	Gene451	1	1
+48	Gene1 | Gene757	1	2	0.0	Gene1, Gene757	2	1
+49	Gene757 | ~Gene371	1	2	0.0	Gene371, Gene757	2	1
+50	Gene1 | Gene452	0	2	0.0	Gene1, Gene452	2	1

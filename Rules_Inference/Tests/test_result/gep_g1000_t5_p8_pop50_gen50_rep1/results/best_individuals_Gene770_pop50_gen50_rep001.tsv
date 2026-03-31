@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	Gene645 & (Gene440 | Gene509)	4	3	0.0	Gene440, Gene509, Gene645	3	1
+2	Gene440 & Gene623 & Gene645	4	3	0.0	Gene440, Gene623, Gene645	3	1
+3	Gene645	4	1	0.5	Gene645	1	1
+4	Gene645 & (Gene440 | Gene509)	4	3	0.0	Gene440, Gene509, Gene645	3	1
+5	Gene395 & Gene653	4	2	0.0	Gene395, Gene653	2	1
+6	Gene15 & Gene978	4	2	0.0	Gene15, Gene978	2	1
+7	Gene15 & Gene978	4	2	0.0	Gene15, Gene978	2	1
+8	Gene440 & Gene623 & Gene645	4	3	0.0	Gene440, Gene623, Gene645	3	1
+9	Gene440 & Gene645	4	2	0.0	Gene440, Gene645	2	1
+10	Gene509 & Gene947	4	2	0.0	Gene509, Gene947	2	1
+11	Gene395 & Gene653	4	2	0.0	Gene395, Gene653	2	1
+12	Gene440 & Gene645	4	2	0.0	Gene440, Gene645	2	1
+13	Gene440 & Gene645	4	2	0.0	Gene440, Gene645	2	1
+14	Gene623 & Gene645	4	2	0.0	Gene623, Gene645	2	1
+15	Gene645 | Gene947	4	2	0.0	Gene645, Gene947	2	1
+16	Gene440 & Gene645	4	2	0.0	Gene440, Gene645	2	1
+17	Gene15 & Gene645 & Gene978	4	3	0.0	Gene15, Gene645, Gene978	3	1
+18	Gene15 & Gene440 & Gene645	4	3	0.0	Gene15, Gene440, Gene645	3	1
+19	Gene15 & Gene429	4	2	0.0	Gene15, Gene429	2	1
+20	Gene15 & Gene978	4	2	0.0	Gene15, Gene978	2	1
+21	Gene509 & Gene947	4	2	0.0	Gene509, Gene947	2	1
+22	Gene395 & Gene653	4	2	0.0	Gene395, Gene653	2	1
+23	Gene440 & Gene645 & Gene868 & Gene947	4	4	0.5	Gene440, Gene645, Gene868, Gene947	4	1
+24	Gene645	4	1	0.5	Gene645	1	1
+25	Gene947	4	1	0.5	Gene947	1	1
+26	Gene645	4	1	0.5	Gene645	1	1
+27	Gene947	4	1	0.5	Gene947	1	1
+28	Gene645	4	1	0.5	Gene645	1	1
+29	Gene645	4	1	0.5	Gene645	1	1
+30	Gene440 & Gene839	3	2	0.0	Gene440, Gene839	2	1
+31	Gene440 & Gene645 & Gene959	3	3	0.0	Gene440, Gene645, Gene959	3	1
+32	Gene440 | Gene947	3	2	0.0	Gene440, Gene947	2	1
+33	Gene440 | Gene645	3	2	0.0	Gene440, Gene645	2	1
+34	Gene440 & ~Gene262	3	2	0.0	Gene262, Gene440	2	1
+35	Gene725 & Gene760 & Gene959	3	3	0.0	Gene725, Gene760, Gene959	3	1
+36	Gene439 & Gene959	3	2	0.0	Gene439, Gene959	2	1
+37	Gene440 & Gene623	3	2	0.0	Gene440, Gene623	2	1
+38	Gene645 | (Gene509 & Gene790)	3	3	0.0	Gene509, Gene645, Gene790	3	1
+39	Gene621 & Gene790	3	2	0.0	Gene621, Gene790	2	1
+40	~Gene91 & ~Gene967 & (Gene440 | Gene509)	3	4	0.5	Gene440, Gene509, Gene91, Gene967	4	1
+41	Gene440	3	1	0.5	Gene440	1	1
+42	Gene440 & Gene623 & (Gene226 | Gene967)	3	4	0.5	Gene226, Gene440, Gene623, Gene967	4	1
+43	Gene440 | (Gene439 & Gene725 & Gene959) | (Gene439 & Gene916 & Gene959)	3	5	1.0	Gene439, Gene440, Gene725, Gene916, Gene959	5	1
+44	Gene440 & Gene967 & Gene975	2	3	0.0	Gene440, Gene967, Gene975	3	1
+45	Gene725 & Gene916	2	2	0.0	Gene725, Gene916	2	1
+46	Gene561 & Gene74	2	2	0.0	Gene561, Gene74	2	1
+47	Gene711 & Gene978	2	2	0.0	Gene711, Gene978	2	1
+48	Gene255 | Gene355 | Gene653 | Gene766	2	4	0.5	Gene255, Gene355, Gene653, Gene766	4	1
+49	Gene199	2	1	0.5	Gene199	1	1
+50	~Gene15	1	1	0.5	Gene15	1	1

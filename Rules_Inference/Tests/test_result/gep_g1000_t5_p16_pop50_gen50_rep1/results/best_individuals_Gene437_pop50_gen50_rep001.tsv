@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	~Gene141 & ~Gene651	4	2	0.0	Gene141, Gene651	2	1
+2	Gene141 | ~Gene651	4	2	0.0	Gene141, Gene651	2	1
+3	~Gene141 & ~Gene651	4	2	0.0	Gene141, Gene651	2	1
+4	~Gene141 & ~Gene651	4	2	0.0	Gene141, Gene651	2	1
+5	~Gene141 & ~Gene651	4	2	0.0	Gene141, Gene651	2	1
+6	~Gene538 & ~Gene700	4	2	0.0	Gene538, Gene700	2	1
+7	~Gene141 & ~Gene651	4	2	0.0	Gene141, Gene651	2	1
+8	~Gene141 & ~Gene651	4	2	0.0	Gene141, Gene651	2	1
+9	~Gene141 & ~Gene651	4	2	0.0	Gene141, Gene651	2	1
+10	~Gene141 & ~Gene651	4	2	0.0	Gene141, Gene651	2	1
+11	~Gene538 & ~Gene700	4	2	0.0	Gene538, Gene700	2	1
+12	Gene141 | ~Gene651	4	2	0.0	Gene141, Gene651	2	1
+13	~Gene141 & ~Gene651	4	2	0.0	Gene141, Gene651	2	1
+14	Gene141 | Gene824 | ~Gene651	4	3	0.0	Gene141, Gene651, Gene824	3	1
+15	~Gene651	4	1	0.5	Gene651	1	1
+16	~Gene651	4	1	0.5	Gene651	1	1
+17	~Gene651	4	1	0.5	Gene651	1	1
+18	~Gene651	4	1	0.5	Gene651	1	1
+19	~Gene651	4	1	0.5	Gene651	1	1
+20	Gene733 | Gene824	3	2	0.0	Gene733, Gene824	2	1
+21	~Gene651 & ~Gene768 & ~Gene824	3	3	0.0	Gene651, Gene768, Gene824	3	1
+22	Gene824 | Gene896	3	2	0.0	Gene824, Gene896	2	1
+23	Gene826 & ~Gene768 & ~Gene824	3	3	0.0	Gene768, Gene824, Gene826	3	1
+24	Gene458 | Gene896	3	2	0.0	Gene458, Gene896	2	1
+25	~Gene651 & (Gene824 | Gene896)	3	3	0.0	Gene651, Gene824, Gene896	3	1
+26	Gene824 | ~Gene506	3	2	0.0	Gene506, Gene824	2	1
+27	Gene824	3	1	0.5	Gene824	1	1
+28	Gene651 | ~Gene141	2	2	0.0	Gene141, Gene651	2	1
+29	True	2	1	0.5	True	1	1
+30	Gene506 | Gene824	2	2	0.0	Gene506, Gene824	2	1
+31	~Gene594 & ~Gene824 & ~Gene896	2	3	0.0	Gene594, Gene824, Gene896	3	1
+32	Gene506 | Gene768	2	2	0.0	Gene506, Gene768	2	1
+33	Gene505 | Gene506 | Gene768	2	3	0.0	Gene505, Gene506, Gene768	3	1
+34	~Gene954	2	1	0.5	Gene954	1	1
+35	True	2	1	0.5	True	1	1
+36	~Gene141	2	1	0.5	Gene141	1	1
+37	~Gene141	2	1	0.5	Gene141	1	1
+38	Gene141 | ~Gene824	1	2	0.0	Gene141, Gene824	2	1
+39	Gene141 | ~Gene824	1	2	0.0	Gene141, Gene824	2	1
+40	Gene148 | Gene506	1	2	0.0	Gene148, Gene506	2	1
+41	Gene651 | Gene824	1	2	0.0	Gene651, Gene824	2	1
+42	Gene141 | ~Gene824	1	2	0.0	Gene141, Gene824	2	1
+43	Gene506	1	1	0.5	Gene506	1	1
+44	~Gene824	1	1	0.5	Gene824	1	1
+45	Gene496	1	1	0.5	Gene496	1	1
+46	~Gene410	1	1	0.5	Gene410	1	1
+47	Gene141 | Gene651	0	2	0.0	Gene141, Gene651	2	1
+48	Gene141 | Gene651	0	2	0.0	Gene141, Gene651	2	1
+49	Gene141 | Gene651	0	2	0.0	Gene141, Gene651	2	1
+50	Gene651	0	1	0.5	Gene651	1	1

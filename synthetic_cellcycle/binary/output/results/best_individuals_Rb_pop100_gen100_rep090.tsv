@@ -1,0 +1,101 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	E2F & ~Cdh1 & ~UbcH10	4	3	0.0	Cdh1, E2F, UbcH10	3	90
+2	Rb & UbcH10	4	2	0.0	Rb, UbcH10	2	90
+3	CycD & UbcH10	4	2	0.0	CycD, UbcH10	2	90
+4	E2F & UbcH10	4	2	0.0	E2F, UbcH10	2	90
+5	UbcH10 & ~Cdh1	4	2	0.0	Cdh1, UbcH10	2	90
+6	Rb & p27	4	2	0.0	Rb, p27	2	90
+7	~Cdh1 & ~E2F	4	2	0.0	Cdh1, E2F	2	90
+8	Rb & UbcH10	4	2	0.0	Rb, UbcH10	2	90
+9	CycB & ~CycA & ~p27	4	3	0.0	CycA, CycB, p27	3	90
+10	E2F & UbcH10	4	2	0.0	E2F, UbcH10	2	90
+11	E2F & UbcH10	4	2	0.0	E2F, UbcH10	2	90
+12	Rb & UbcH10	4	2	0.0	Rb, UbcH10	2	90
+13	Cdh1 & CycD & UbcH10	4	3	0.0	Cdh1, CycD, UbcH10	3	90
+14	Cdc20 & CycB & UbcH10	4	3	0.0	Cdc20, CycB, UbcH10	3	90
+15	Rb & UbcH10	4	2	0.0	Rb, UbcH10	2	90
+16	CycE & Rb & UbcH10	4	3	0.0	CycE, Rb, UbcH10	3	90
+17	Cdc20 & E2F & UbcH10	4	3	0.0	Cdc20, E2F, UbcH10	3	90
+18	CycB & UbcH10	4	2	0.0	CycB, UbcH10	2	90
+19	Rb & UbcH10 & p27	4	3	0.0	Rb, UbcH10, p27	3	90
+20	Cdh1 & E2F & UbcH10	4	3	0.0	Cdh1, E2F, UbcH10	3	90
+21	E2F & UbcH10	4	2	0.0	E2F, UbcH10	2	90
+22	CycE & UbcH10	4	2	0.0	CycE, UbcH10	2	90
+23	CycB & UbcH10	4	2	0.0	CycB, UbcH10	2	90
+24	Rb & UbcH10	4	2	0.0	Rb, UbcH10	2	90
+25	Rb & UbcH10	4	2	0.0	Rb, UbcH10	2	90
+26	Cdc20 & E2F & UbcH10	4	3	0.0	Cdc20, E2F, UbcH10	3	90
+27	E2F & UbcH10	4	2	0.0	E2F, UbcH10	2	90
+28	E2F & UbcH10	4	2	0.0	E2F, UbcH10	2	90
+29	Cdc20 & E2F & UbcH10	4	3	0.0	Cdc20, E2F, UbcH10	3	90
+30	CycB & UbcH10	4	2	0.0	CycB, UbcH10	2	90
+31	Cdh1 & CycE & UbcH10	4	3	0.0	Cdh1, CycE, UbcH10	3	90
+32	CycE & UbcH10	4	2	0.0	CycE, UbcH10	2	90
+33	CycE & UbcH10	4	2	0.0	CycE, UbcH10	2	90
+34	CycD & CycE & UbcH10	4	3	0.0	CycD, CycE, UbcH10	3	90
+35	CycB & UbcH10	4	2	0.0	CycB, UbcH10	2	90
+36	Cdc20 & E2F	4	2	0.0	Cdc20, E2F	2	90
+37	CycD & UbcH10	4	2	0.0	CycD, UbcH10	2	90
+38	CycE & UbcH10	4	2	0.0	CycE, UbcH10	2	90
+39	Rb & UbcH10	4	2	0.0	Rb, UbcH10	2	90
+40	CycB & CycE & Rb & UbcH10	4	4	0.5	CycB, CycE, Rb, UbcH10	4	90
+41	CycA & CycE & E2F & UbcH10	4	4	0.5	CycA, CycE, E2F, UbcH10	4	90
+42	~Cdh1	4	1	0.5	Cdh1	1	90
+43	Cdh1 & CycE & UbcH10 & p27	4	4	0.5	Cdh1, CycE, UbcH10, p27	4	90
+44	~Cdh1	4	1	0.5	Cdh1	1	90
+45	CycE & Rb	3	2	0.0	CycE, Rb	2	90
+46	CycA & UbcH10	3	2	0.0	CycA, UbcH10	2	90
+47	Cdh1 & Rb	3	2	0.0	Cdh1, Rb	2	90
+48	CycB & Rb	3	2	0.0	CycB, Rb	2	90
+49	CycE & Rb	3	2	0.0	CycE, Rb	2	90
+50	CycA & E2F	3	2	0.0	CycA, E2F	2	90
+51	CycD & E2F	3	2	0.0	CycD, E2F	2	90
+52	Cdc20 & UbcH10	3	2	0.0	Cdc20, UbcH10	2	90
+53	CycA & UbcH10	3	2	0.0	CycA, UbcH10	2	90
+54	CycB & Rb	3	2	0.0	CycB, Rb	2	90
+55	UbcH10 & (Cdh1 | CycD)	3	3	0.0	Cdh1, CycD, UbcH10	3	90
+56	CycE & Rb	3	2	0.0	CycE, Rb	2	90
+57	CycA & E2F	3	2	0.0	CycA, E2F	2	90
+58	UbcH10 & (Cdc20 | E2F)	3	3	0.0	Cdc20, E2F, UbcH10	3	90
+59	Cdc20 & UbcH10	3	2	0.0	Cdc20, UbcH10	2	90
+60	CycE & Rb	3	2	0.0	CycE, Rb	2	90
+61	UbcH10	3	1	0.5	UbcH10	1	90
+62	UbcH10	3	1	0.5	UbcH10	1	90
+63	Rb	3	1	0.5	Rb	1	90
+64	UbcH10	3	1	0.5	UbcH10	1	90
+65	UbcH10	3	1	0.5	UbcH10	1	90
+66	UbcH10	3	1	0.5	UbcH10	1	90
+67	UbcH10	3	1	0.5	UbcH10	1	90
+68	~p27	3	1	0.5	p27	1	90
+69	Rb	3	1	0.5	Rb	1	90
+70	UbcH10	3	1	0.5	UbcH10	1	90
+71	UbcH10	3	1	0.5	UbcH10	1	90
+72	~UbcH10 & (~CycA | ~p27)	2	3	0.0	CycA, UbcH10, p27	3	90
+73	CycB	2	1	0.5	CycB	1	90
+74	CycB & CycE	2	2	0.0	CycB, CycE	2	90
+75	Rb | UbcH10	2	2	0.0	Rb, UbcH10	2	90
+76	CycD | Rb	2	2	0.0	CycD, Rb	2	90
+77	Cdh1 & E2F	2	2	0.0	Cdh1, E2F	2	90
+78	Cdh1 & CycB	2	2	0.0	Cdh1, CycB	2	90
+79	Cdh1 & CycB	2	2	0.0	Cdh1, CycB	2	90
+80	CycD	2	1	0.5	CycD	1	90
+81	E2F	2	1	0.5	E2F	1	90
+82	E2F	2	1	0.5	E2F	1	90
+83	~E2F	2	1	0.5	E2F	1	90
+84	Cdc20	2	1	0.5	Cdc20	1	90
+85	Cdc20	2	1	0.5	Cdc20	1	90
+86	CycB	2	1	0.5	CycB	1	90
+87	CycB	2	1	0.5	CycB	1	90
+88	~CycB	2	1	0.5	CycB	1	90
+89	~E2F	2	1	0.5	E2F	1	90
+90	Cdh1 & CycE	1	2	0.0	Cdh1, CycE	2	90
+91	CycE | Rb	1	2	0.0	CycE, Rb	2	90
+92	Cdh1 & CycE	1	2	0.0	Cdh1, CycE	2	90
+93	CycD | CycE	1	2	0.0	CycD, CycE	2	90
+94	~UbcH10	1	1	0.5	UbcH10	1	90
+95	p27	1	1	0.5	p27	1	90
+96	Cdh1 | UbcH10	0	2	0.0	Cdh1, UbcH10	2	90
+97	Cdh1	0	1	0.5	Cdh1	1	90
+98	Cdh1	0	1	0.5	Cdh1	1	90
+99	True	0	1	0.5	True	1	90
+100	Cdh1	0	1	0.5	Cdh1	1	90

@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	Gene177 | ~Gene91	2	2	0.0	Gene177, Gene91	2	1
+2	Gene342 | ~Gene114	2	2	0.0	Gene114, Gene342	2	1
+3	~Gene492 & ~Gene92	2	2	0.0	Gene492, Gene92	2	1
+4	~Gene91 | (Gene177 & Gene179)	2	3	0.0	Gene177, Gene179, Gene91	3	1
+5	Gene226 & (Gene220 | ~Gene92)	2	3	0.0	Gene220, Gene226, Gene92	3	1
+6	Gene296 | Gene415	2	2	0.0	Gene296, Gene415	2	1
+7	Gene378 | Gene57	2	2	0.0	Gene378, Gene57	2	1
+8	Gene327 | Gene57	2	2	0.0	Gene327, Gene57	2	1
+9	Gene341 & Gene367	2	2	0.0	Gene341, Gene367	2	1
+10	Gene327 | Gene57	2	2	0.0	Gene327, Gene57	2	1
+11	Gene177 | ~Gene91	2	2	0.0	Gene177, Gene91	2	1
+12	Gene327 | Gene57	2	2	0.0	Gene327, Gene57	2	1
+13	~Gene85 | (~Gene378 & ~Gene92)	2	3	0.0	Gene378, Gene85, Gene92	3	1
+14	Gene367 & (Gene181 | Gene218)	2	3	0.0	Gene181, Gene218, Gene367	3	1
+15	Gene378 & Gene480	2	2	0.0	Gene378, Gene480	2	1
+16	Gene66 & (Gene220 | ~Gene168)	2	3	0.0	Gene168, Gene220, Gene66	3	1
+17	Gene179 | Gene57	2	2	0.0	Gene179, Gene57	2	1
+18	Gene378 | Gene480	2	2	0.0	Gene378, Gene480	2	1
+19	Gene327 | ~Gene92	2	2	0.0	Gene327, Gene92	2	1
+20	~Gene492	2	1	0.5	Gene492	1	1
+21	~Gene349	2	1	0.5	Gene349	1	1
+22	~Gene85	2	1	0.5	Gene85	1	1
+23	Gene327	2	1	0.5	Gene327	1	1
+24	~Gene492	2	1	0.5	Gene492	1	1
+25	Gene110 | (Gene279 & Gene327) | (Gene327 & Gene449)	2	4	0.5	Gene110, Gene279, Gene327, Gene449	4	1
+26	Gene327	2	1	0.5	Gene327	1	1
+27	~Gene349 & (Gene203 | Gene341) & (Gene273 | Gene341)	2	4	0.5	Gene203, Gene273, Gene341, Gene349	4	1
+28	Gene480	2	1	0.5	Gene480	1	1
+29	Gene177 & Gene91	1	2	0.0	Gene177, Gene91	2	1
+30	Gene226 | Gene92	1	2	0.0	Gene226, Gene92	2	1
+31	Gene327 | Gene465	1	2	0.0	Gene327, Gene465	2	1
+32	Gene168 & Gene419	1	2	0.0	Gene168, Gene419	2	1
+33	Gene281 | ~Gene114	1	2	0.0	Gene114, Gene281	2	1
+34	Gene349 | Gene415 | Gene445	1	3	0.0	Gene349, Gene415, Gene445	3	1
+35	Gene327 | Gene85	1	2	0.0	Gene327, Gene85	2	1
+36	~Gene218 & ~Gene45	1	2	0.0	Gene218, Gene45	2	1
+37	Gene177 & Gene492 & ~Gene179	1	3	0.0	Gene177, Gene179, Gene492	3	1
+38	Gene327 | Gene57 | Gene92	1	3	0.0	Gene327, Gene57, Gene92	3	1
+39	Gene273	1	1	0.5	Gene273	1	1
+40	~Gene179	1	1	0.5	Gene179	1	1
+41	Gene423	1	1	0.5	Gene423	1	1
+42	Gene279	1	1	0.5	Gene279	1	1
+43	Gene114 | Gene281 | Gene382	0	3	0.0	Gene114, Gene281, Gene382	3	1
+44	Gene114 | Gene349	0	2	0.0	Gene114, Gene349	2	1
+45	Gene398 & Gene4	0	2	0.0	Gene398, Gene4	2	1
+46	Gene168 & Gene182	0	2	0.0	Gene168, Gene182	2	1
+47	Gene179 | Gene91	0	2	0.0	Gene179, Gene91	2	1
+48	Gene92	0	1	0.5	Gene92	1	1
+49	Gene269	0	1	0.5	Gene269	1	1
+50	~Gene156	0	1	0.5	Gene156	1	1

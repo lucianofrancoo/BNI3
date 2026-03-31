@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	Gene365 & ~Gene448	2	2	0.0	Gene365, Gene448	2	1
+2	Gene430 & ~Gene413	2	2	0.0	Gene413, Gene430	2	1
+3	Gene110 & Gene125	2	2	0.0	Gene110, Gene125	2	1
+4	~Gene219 & (Gene420 | Gene97)	2	3	0.0	Gene219, Gene420, Gene97	3	1
+5	~Gene219 & ~Gene97	2	2	0.0	Gene219, Gene97	2	1
+6	Gene127 & Gene201	2	2	0.0	Gene127, Gene201	2	1
+7	Gene13 & ~Gene118 & ~Gene301	2	3	0.0	Gene118, Gene13, Gene301	3	1
+8	Gene113 & Gene299	2	2	0.0	Gene113, Gene299	2	1
+9	Gene362 | Gene432	2	2	0.0	Gene362, Gene432	2	1
+10	Gene450 | ~Gene165	2	2	0.0	Gene165, Gene450	2	1
+11	Gene335 | Gene365	2	2	0.0	Gene335, Gene365	2	1
+12	Gene362 & Gene432	2	2	0.0	Gene362, Gene432	2	1
+13	Gene365 & ~Gene395	2	2	0.0	Gene365, Gene395	2	1
+14	~Gene448 & ~Gene465	2	2	0.0	Gene448, Gene465	2	1
+15	Gene324 | Gene420	2	2	0.0	Gene324, Gene420	2	1
+16	Gene110 & Gene125	2	2	0.0	Gene110, Gene125	2	1
+17	Gene362 & Gene432	2	2	0.0	Gene362, Gene432	2	1
+18	Gene420 | Gene97 | ~Gene219	2	3	0.0	Gene219, Gene420, Gene97	3	1
+19	Gene150 & Gene432	2	2	0.0	Gene150, Gene432	2	1
+20	Gene335 & Gene362	2	2	0.0	Gene335, Gene362	2	1
+21	Gene150 & Gene432	2	2	0.0	Gene150, Gene432	2	1
+22	Gene420 | Gene443	2	2	0.0	Gene420, Gene443	2	1
+23	Gene138 | Gene324	2	2	0.0	Gene138, Gene324	2	1
+24	Gene260 & Gene362	2	2	0.0	Gene260, Gene362	2	1
+25	Gene410 | Gene432	2	2	0.0	Gene410, Gene432	2	1
+26	~Gene448	2	1	0.5	Gene448	1	1
+27	Gene76	2	1	0.5	Gene76	1	1
+28	~Gene413	2	1	0.5	Gene413	1	1
+29	Gene433 & Gene491	1	2	0.0	Gene433, Gene491	2	1
+30	Gene13 & Gene161	1	2	0.0	Gene13, Gene161	2	1
+31	Gene433 | Gene74	1	2	0.0	Gene433, Gene74	2	1
+32	Gene110 & Gene286	1	2	0.0	Gene110, Gene286	2	1
+33	Gene201 | Gene224	1	2	0.0	Gene201, Gene224	2	1
+34	Gene11 & Gene125 & Gene6	1	3	0.0	Gene11, Gene125, Gene6	3	1
+35	Gene11 & Gene357	1	2	0.0	Gene11, Gene357	2	1
+36	Gene189 | Gene420	1	2	0.0	Gene189, Gene420	2	1
+37	Gene138 | Gene433	1	2	0.0	Gene138, Gene433	2	1
+38	Gene141 & Gene472 & ~Gene420	1	3	0.0	Gene141, Gene420, Gene472	3	1
+39	Gene201 & (~Gene11 | ~Gene113)	1	3	0.0	Gene11, Gene113, Gene201	3	1
+40	~Gene125	1	1	0.5	Gene125	1	1
+41	Gene448 & ~Gene365	0	2	0.0	Gene365, Gene448	2	1
+42	Gene11 & Gene45	0	2	0.0	Gene11, Gene45	2	1
+43	Gene361 | ~Gene193	0	2	0.0	Gene193, Gene361	2	1
+44	Gene136 | Gene500	0	2	0.0	Gene136, Gene500	2	1
+45	Gene440 & (Gene208 | Gene420)	0	3	0.0	Gene208, Gene420, Gene440	3	1
+46	Gene206 | Gene384	0	2	0.0	Gene206, Gene384	2	1
+47	Gene224 & Gene473	0	2	0.0	Gene224, Gene473	2	1
+48	~Gene113	0	1	0.5	Gene113	1	1
+49	~Gene362	0	1	0.5	Gene362	1	1
+50	~Gene357	0	1	0.5	Gene357	1	1

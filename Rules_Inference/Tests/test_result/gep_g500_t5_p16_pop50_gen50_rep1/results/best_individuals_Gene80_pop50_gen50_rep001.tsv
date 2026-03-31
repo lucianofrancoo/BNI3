@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	Gene349 & Gene474	4	2	0.0	Gene349, Gene474	2	1
+2	Gene349 & Gene474	4	2	0.0	Gene349, Gene474	2	1
+3	Gene474	4	1	0.5	Gene474	1	1
+4	Gene349 & Gene474	4	2	0.0	Gene349, Gene474	2	1
+5	Gene474 | (Gene220 & Gene349)	4	3	0.0	Gene220, Gene349, Gene474	3	1
+6	Gene349 & Gene474	4	2	0.0	Gene349, Gene474	2	1
+7	Gene474 & (Gene349 | Gene372)	4	3	0.0	Gene349, Gene372, Gene474	3	1
+8	Gene349 & Gene474	4	2	0.0	Gene349, Gene474	2	1
+9	Gene474	4	1	0.5	Gene474	1	1
+10	Gene11 & Gene349	4	2	0.0	Gene11, Gene349	2	1
+11	Gene349 | Gene474	4	2	0.0	Gene349, Gene474	2	1
+12	Gene349 & Gene474	4	2	0.0	Gene349, Gene474	2	1
+13	Gene349 & Gene474	4	2	0.0	Gene349, Gene474	2	1
+14	Gene349 & Gene474	4	2	0.0	Gene349, Gene474	2	1
+15	Gene11 & Gene474	4	2	0.0	Gene11, Gene474	2	1
+16	Gene349 & Gene474	4	2	0.0	Gene349, Gene474	2	1
+17	Gene349 & Gene474	4	2	0.0	Gene349, Gene474	2	1
+18	Gene349	4	1	0.5	Gene349	1	1
+19	Gene349 | Gene474	4	2	0.0	Gene349, Gene474	2	1
+20	Gene236 & Gene325	4	2	0.0	Gene236, Gene325	2	1
+21	Gene325 & Gene474	4	2	0.0	Gene325, Gene474	2	1
+22	Gene32 & Gene474	4	2	0.0	Gene32, Gene474	2	1
+23	Gene474	4	1	0.5	Gene474	1	1
+24	Gene349 & Gene474	4	2	0.0	Gene349, Gene474	2	1
+25	Gene474	4	1	0.5	Gene474	1	1
+26	Gene349 | (Gene38 & Gene467 & Gene474)	4	4	0.5	Gene349, Gene38, Gene467, Gene474	4	1
+27	Gene349	4	1	0.5	Gene349	1	1
+28	Gene236	4	1	0.5	Gene236	1	1
+29	Gene349	4	1	0.5	Gene349	1	1
+30	Gene346 | Gene372 | Gene474	3	3	0.0	Gene346, Gene372, Gene474	3	1
+31	Gene372 & Gene474	3	2	0.0	Gene372, Gene474	2	1
+32	Gene134 & Gene292	3	2	0.0	Gene134, Gene292	2	1
+33	Gene119 & Gene73	3	2	0.0	Gene119, Gene73	2	1
+34	Gene346 & Gene474	3	2	0.0	Gene346, Gene474	2	1
+35	Gene325 & Gene73	3	2	0.0	Gene325, Gene73	2	1
+36	Gene372 & Gene474	3	2	0.0	Gene372, Gene474	2	1
+37	Gene414 | Gene474	3	2	0.0	Gene414, Gene474	2	1
+38	Gene372 & Gene474 & (Gene307 | Gene414)	3	4	0.5	Gene307, Gene372, Gene414, Gene474	4	1
+39	Gene372 & Gene414	2	2	0.0	Gene372, Gene414	2	1
+40	Gene111 & Gene372	2	2	0.0	Gene111, Gene372	2	1
+41	Gene16 & Gene414	2	2	0.0	Gene16, Gene414	2	1
+42	Gene461 | Gene474	2	2	0.0	Gene461, Gene474	2	1
+43	Gene307 | Gene447	2	2	0.0	Gene307, Gene447	2	1
+44	Gene388	2	1	0.5	Gene388	1	1
+45	Gene487	2	1	0.5	Gene487	1	1
+46	Gene318 | Gene372 | Gene474 | (Gene307 & Gene414)	2	5	1.0	Gene307, Gene318, Gene372, Gene414, Gene474	5	1
+47	Gene406 & Gene495	1	2	0.0	Gene406, Gene495	2	1
+48	~Gene474	0	1	0.5	Gene474	1	1
+49	~Gene474	0	1	0.5	Gene474	1	1
+50	~Gene474	0	1	0.5	Gene474	1	1

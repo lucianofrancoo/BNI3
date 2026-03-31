@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	Gene137 & Gene16	2	2	0.0	Gene137, Gene16	2	1
+2	Gene378 & (Gene373 | ~Gene196)	2	3	0.0	Gene196, Gene373, Gene378	3	1
+3	Gene137 & Gene16	2	2	0.0	Gene137, Gene16	2	1
+4	Gene306 & Gene368	2	2	0.0	Gene306, Gene368	2	1
+5	Gene470	2	1	0.5	Gene470	1	1
+6	Gene332 & Gene51	2	2	0.0	Gene332, Gene51	2	1
+7	Gene174 | Gene404	2	2	0.0	Gene174, Gene404	2	1
+8	~Gene429 | (Gene471 & Gene59)	2	3	0.0	Gene429, Gene471, Gene59	3	1
+9	Gene255 & Gene371	2	2	0.0	Gene255, Gene371	2	1
+10	Gene471 & Gene59	2	2	0.0	Gene471, Gene59	2	1
+11	Gene255 & Gene371 & Gene480	2	3	0.0	Gene255, Gene371, Gene480	3	1
+12	Gene328 | Gene471	2	2	0.0	Gene328, Gene471	2	1
+13	Gene16 & Gene471 & Gene51	2	3	0.0	Gene16, Gene471, Gene51	3	1
+14	Gene470 & Gene471	2	2	0.0	Gene470, Gene471	2	1
+15	Gene113 & Gene471	2	2	0.0	Gene113, Gene471	2	1
+16	Gene332 & (Gene306 | Gene368)	2	3	0.0	Gene306, Gene332, Gene368	3	1
+17	Gene332 & Gene371	2	2	0.0	Gene332, Gene371	2	1
+18	Gene255 & Gene480	2	2	0.0	Gene255, Gene480	2	1
+19	Gene135 & Gene471	2	2	0.0	Gene135, Gene471	2	1
+20	Gene135 & Gene471	2	2	0.0	Gene135, Gene471	2	1
+21	Gene222 & Gene255	2	2	0.0	Gene222, Gene255	2	1
+22	Gene306 & Gene368	2	2	0.0	Gene306, Gene368	2	1
+23	Gene329 | Gene393 | Gene404	2	3	0.0	Gene329, Gene393, Gene404	3	1
+24	Gene470	2	1	0.5	Gene470	1	1
+25	Gene122 & Gene332	2	2	0.0	Gene122, Gene332	2	1
+26	Gene137 & Gene51	2	2	0.0	Gene137, Gene51	2	1
+27	Gene306 | Gene471	2	2	0.0	Gene306, Gene471	2	1
+28	Gene470 | Gene471	2	2	0.0	Gene470, Gene471	2	1
+29	Gene470	2	1	0.5	Gene470	1	1
+30	Gene59	2	1	0.5	Gene59	1	1
+31	Gene471	2	1	0.5	Gene471	1	1
+32	Gene204	2	1	0.5	Gene204	1	1
+33	Gene135	2	1	0.5	Gene135	1	1
+34	Gene386	2	1	0.5	Gene386	1	1
+35	Gene137	2	1	0.5	Gene137	1	1
+36	Gene306	2	1	0.5	Gene306	1	1
+37	Gene332	2	1	0.5	Gene332	1	1
+38	Gene470	2	1	0.5	Gene470	1	1
+39	Gene393 | Gene46	1	2	0.0	Gene393, Gene46	2	1
+40	Gene470 | ~Gene177	1	2	0.0	Gene177, Gene470	2	1
+41	Gene38 & Gene470	1	2	0.0	Gene38, Gene470	2	1
+42	Gene16 & Gene269 & Gene332	1	3	0.0	Gene16, Gene269, Gene332	3	1
+43	Gene255 & Gene391	1	2	0.0	Gene255, Gene391	2	1
+44	Gene135 & Gene380 & (Gene471 | Gene59)	1	4	0.5	Gene135, Gene380, Gene471, Gene59	4	1
+45	Gene368	1	1	0.5	Gene368	1	1
+46	Gene370	1	1	0.5	Gene370	1	1
+47	Gene306 | Gene368 | (Gene135 & Gene471)	1	4	0.5	Gene135, Gene306, Gene368, Gene471	4	1
+48	Gene12 | Gene303	0	2	0.0	Gene12, Gene303	2	1
+49	Gene380	0	1	0.5	Gene380	1	1
+50	Gene309	0	1	0.5	Gene309	1	1

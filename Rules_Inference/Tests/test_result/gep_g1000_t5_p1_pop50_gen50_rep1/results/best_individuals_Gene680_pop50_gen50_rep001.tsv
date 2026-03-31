@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	Gene38 | Gene70	4	2	0.0	Gene38, Gene70	2	1
+2	Gene38 | Gene70	4	2	0.0	Gene38, Gene70	2	1
+3	Gene546 & ~Gene794	4	2	0.0	Gene546, Gene794	2	1
+4	~Gene770 & ~Gene794	4	2	0.0	Gene770, Gene794	2	1
+5	Gene38 | Gene70	4	2	0.0	Gene38, Gene70	2	1
+6	Gene650 & ~Gene282	4	2	0.0	Gene282, Gene650	2	1
+7	Gene746 & Gene871	4	2	0.0	Gene746, Gene871	2	1
+8	Gene38 | Gene70	4	2	0.0	Gene38, Gene70	2	1
+9	Gene746 & Gene871	4	2	0.0	Gene746, Gene871	2	1
+10	Gene650 & ~Gene607	4	2	0.0	Gene607, Gene650	2	1
+11	Gene746 & Gene871	4	2	0.0	Gene746, Gene871	2	1
+12	Gene871	4	1	0.5	Gene871	1	1
+13	~Gene770 & ~Gene794	4	2	0.0	Gene770, Gene794	2	1
+14	Gene272 & Gene871	4	2	0.0	Gene272, Gene871	2	1
+15	Gene272 & Gene871	4	2	0.0	Gene272, Gene871	2	1
+16	Gene650 & (Gene549 | Gene871)	4	3	0.0	Gene549, Gene650, Gene871	3	1
+17	Gene272 & Gene871	4	2	0.0	Gene272, Gene871	2	1
+18	Gene38 | Gene70	4	2	0.0	Gene38, Gene70	2	1
+19	Gene129	4	1	0.5	Gene129	1	1
+20	(Gene38 & Gene770) | (Gene38 & Gene871) | (Gene70 & Gene770) | (Gene70 & Gene871)	4	4	0.5	Gene38, Gene70, Gene770, Gene871	4	1
+21	~Gene607	4	1	0.5	Gene607	1	1
+22	Gene746 & Gene871 & (Gene458 | Gene794)	4	4	0.5	Gene458, Gene746, Gene794, Gene871	4	1
+23	Gene607 & Gene871	3	2	0.0	Gene607, Gene871	2	1
+24	Gene490 & Gene746	3	2	0.0	Gene490, Gene746	2	1
+25	Gene225 & Gene871	3	2	0.0	Gene225, Gene871	2	1
+26	Gene546 & Gene770	3	2	0.0	Gene546, Gene770	2	1
+27	Gene469 & Gene607	3	2	0.0	Gene469, Gene607	2	1
+28	Gene469 & Gene607 & Gene650	3	3	0.0	Gene469, Gene607, Gene650	3	1
+29	Gene31 & Gene746	3	2	0.0	Gene31, Gene746	2	1
+30	Gene225 & Gene835	3	2	0.0	Gene225, Gene835	2	1
+31	Gene650 & Gene954	3	2	0.0	Gene650, Gene954	2	1
+32	False	3	1	0.5	False	1	1
+33	Gene469	3	1	0.5	Gene469	1	1
+34	Gene70 & (Gene189 | Gene746 | Gene794)	3	4	0.5	Gene189, Gene70, Gene746, Gene794	4	1
+35	Gene160 & Gene46 & Gene474 & Gene620 & Gene974	3	5	1.0	Gene160, Gene46, Gene474, Gene620, Gene974	5	1
+36	Gene225 | Gene746 | Gene871	2	3	0.0	Gene225, Gene746, Gene871	3	1
+37	Gene770 & Gene972	2	2	0.0	Gene770, Gene972	2	1
+38	Gene220 & Gene661 & Gene770	2	3	0.0	Gene220, Gene661, Gene770	3	1
+39	Gene355 & Gene61	2	2	0.0	Gene355, Gene61	2	1
+40	Gene547 & Gene89	2	2	0.0	Gene547, Gene89	2	1
+41	Gene220 & Gene974	2	2	0.0	Gene220, Gene974	2	1
+42	Gene746	2	1	0.5	Gene746	1	1
+43	~Gene696	2	1	0.5	Gene696	1	1
+44	Gene711 | Gene784	1	2	0.0	Gene711, Gene784	2	1
+45	Gene770 | Gene794	0	2	0.0	Gene770, Gene794	2	1
+46	Gene770 | Gene784	0	2	0.0	Gene770, Gene784	2	1
+47	Gene770 | Gene794	0	2	0.0	Gene770, Gene794	2	1
+48	Gene607 | ~Gene856	0	2	0.0	Gene607, Gene856	2	1
+49	Gene160 | Gene690	0	2	0.0	Gene160, Gene690	2	1
+50	~Gene871	0	1	0.5	Gene871	1	1

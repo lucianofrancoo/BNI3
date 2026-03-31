@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	Gene274 | (Gene754 & ~Gene934)	4	3	0.0	Gene274, Gene754, Gene934	3	1
+2	Gene274 | (Gene321 & Gene944)	4	3	0.0	Gene274, Gene321, Gene944	3	1
+3	Gene554 & Gene562	4	2	0.0	Gene554, Gene562	2	1
+4	Gene274 | (Gene321 & Gene944)	4	3	0.0	Gene274, Gene321, Gene944	3	1
+5	Gene274 | (Gene754 & ~Gene934)	4	3	0.0	Gene274, Gene754, Gene934	3	1
+6	Gene274 | (Gene754 & ~Gene934)	4	3	0.0	Gene274, Gene754, Gene934	3	1
+7	Gene274 | (Gene754 & ~Gene934)	4	3	0.0	Gene274, Gene754, Gene934	3	1
+8	Gene960 & ~Gene288 & ~Gene754	4	3	0.0	Gene288, Gene754, Gene960	3	1
+9	Gene274 | (Gene754 & ~Gene934)	4	3	0.0	Gene274, Gene754, Gene934	3	1
+10	Gene274 | (Gene593 & Gene908)	4	3	0.0	Gene274, Gene593, Gene908	3	1
+11	Gene274 & Gene46	4	2	0.0	Gene274, Gene46	2	1
+12	Gene274 | (Gene321 & Gene944)	4	3	0.0	Gene274, Gene321, Gene944	3	1
+13	Gene554 & Gene872	4	2	0.0	Gene554, Gene872	2	1
+14	Gene274 & Gene317	4	2	0.0	Gene274, Gene317	2	1
+15	Gene274 & Gene872	4	2	0.0	Gene274, Gene872	2	1
+16	Gene274 & Gene872	4	2	0.0	Gene274, Gene872	2	1
+17	Gene274 & Gene554	4	2	0.0	Gene274, Gene554	2	1
+18	Gene274	4	1	0.5	Gene274	1	1
+19	Gene274	4	1	0.5	Gene274	1	1
+20	Gene754 & ~Gene944	3	2	0.0	Gene754, Gene944	2	1
+21	Gene317 & Gene321	3	2	0.0	Gene317, Gene321	2	1
+22	Gene274 | ~Gene934	3	2	0.0	Gene274, Gene934	2	1
+23	Gene554 & Gene991	3	2	0.0	Gene554, Gene991	2	1
+24	Gene274 | Gene593	3	2	0.0	Gene274, Gene593	2	1
+25	Gene754 & ~Gene274 & ~Gene934	3	3	0.0	Gene274, Gene754, Gene934	3	1
+26	~Gene934	3	1	0.5	Gene934	1	1
+27	~Gene934	3	1	0.5	Gene934	1	1
+28	Gene274 & ~Gene259 & (Gene754 | Gene934)	3	4	0.5	Gene259, Gene274, Gene754, Gene934	4	1
+29	Gene274 | (Gene229 & Gene754 & Gene934) | (Gene754 & Gene877 & Gene934)	3	5	1.0	Gene229, Gene274, Gene754, Gene877, Gene934	5	1
+30	Gene872 & Gene877	2	2	0.0	Gene872, Gene877	2	1
+31	Gene46 | Gene872	2	2	0.0	Gene46, Gene872	2	1
+32	Gene274 | ~Gene754 | ~Gene934	2	3	0.0	Gene274, Gene754, Gene934	3	1
+33	Gene944 | (Gene680 & Gene872)	2	3	0.0	Gene680, Gene872, Gene944	3	1
+34	Gene274 | Gene754 | Gene934	2	3	0.0	Gene274, Gene754, Gene934	3	1
+35	Gene294 & Gene813	2	2	0.0	Gene294, Gene813	2	1
+36	Gene317 & Gene46	2	2	0.0	Gene317, Gene46	2	1
+37	Gene274 | Gene46	2	2	0.0	Gene274, Gene46	2	1
+38	Gene288 | (Gene754 & Gene908)	2	3	0.0	Gene288, Gene754, Gene908	3	1
+39	Gene872 | (Gene864 & ~Gene934)	2	3	0.0	Gene864, Gene872, Gene934	3	1
+40	~Gene296 & (Gene132 | Gene527 | ~Gene864)	2	4	0.5	Gene132, Gene296, Gene527, Gene864	4	1
+41	~Gene754	2	1	0.5	Gene754	1	1
+42	Gene872	2	1	0.5	Gene872	1	1
+43	~Gene288	2	1	0.5	Gene288	1	1
+44	Gene46	2	1	0.5	Gene46	1	1
+45	~Gene372	2	1	0.5	Gene372	1	1
+46	Gene520 & Gene864 & Gene872 & Gene877 & Gene934	2	5	1.0	Gene520, Gene864, Gene872, Gene877, Gene934	5	1
+47	Gene754 | Gene872 | ~Gene934	1	3	0.0	Gene754, Gene872, Gene934	3	1
+48	~Gene680	1	1	0.5	Gene680	1	1
+49	Gene927 | (~Gene137 & ~Gene317) | (~Gene317 & ~Gene754)	1	4	0.5	Gene137, Gene317, Gene754, Gene927	4	1
+50	Gene584 | ~Gene100	0	2	0.0	Gene100, Gene584	2	1

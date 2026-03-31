@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	Gene100 & Gene789	2	2	0.0	Gene100, Gene789	2	1
+2	Gene820 & (Gene790 | Gene935)	2	3	0.0	Gene790, Gene820, Gene935	3	1
+3	Gene539 & Gene922	2	2	0.0	Gene539, Gene922	2	1
+4	Gene27 & (Gene822 | ~Gene185)	2	3	0.0	Gene185, Gene27, Gene822	3	1
+5	Gene100 & Gene789	2	2	0.0	Gene100, Gene789	2	1
+6	Gene322 & Gene37	2	2	0.0	Gene322, Gene37	2	1
+7	Gene472 & (Gene793 | Gene913)	2	3	0.0	Gene472, Gene793, Gene913	3	1
+8	Gene100 & Gene616	2	2	0.0	Gene100, Gene616	2	1
+9	Gene174 & (Gene770 | Gene954)	2	3	0.0	Gene174, Gene770, Gene954	3	1
+10	Gene100 & Gene954	2	2	0.0	Gene100, Gene954	2	1
+11	Gene616 & Gene820 & Gene913	2	3	0.0	Gene616, Gene820, Gene913	3	1
+12	Gene820 & Gene913	2	2	0.0	Gene820, Gene913	2	1
+13	Gene100 & Gene954	2	2	0.0	Gene100, Gene954	2	1
+14	Gene616 & Gene789	2	2	0.0	Gene616, Gene789	2	1
+15	Gene664 & Gene676	2	2	0.0	Gene664, Gene676	2	1
+16	Gene616 & Gene954	2	2	0.0	Gene616, Gene954	2	1
+17	Gene143 & Gene650	2	2	0.0	Gene143, Gene650	2	1
+18	Gene100 & Gene616 & Gene650	2	3	0.0	Gene100, Gene616, Gene650	3	1
+19	Gene322 & Gene37	2	2	0.0	Gene322, Gene37	2	1
+20	Gene539 & Gene731 & Gene922	2	3	0.0	Gene539, Gene731, Gene922	3	1
+21	Gene100	2	1	0.5	Gene100	1	1
+22	Gene539 & Gene69	2	2	0.0	Gene539, Gene69	2	1
+23	Gene322 & Gene37	2	2	0.0	Gene322, Gene37	2	1
+24	Gene100 & Gene322 & Gene37	2	3	0.0	Gene100, Gene322, Gene37	3	1
+25	Gene896 & Gene954	2	2	0.0	Gene896, Gene954	2	1
+26	Gene100 & Gene913	2	2	0.0	Gene100, Gene913	2	1
+27	Gene472	2	1	0.5	Gene472	1	1
+28	Gene92	2	1	0.5	Gene92	1	1
+29	Gene650	2	1	0.5	Gene650	1	1
+30	Gene650	2	1	0.5	Gene650	1	1
+31	Gene664 & Gene955	1	2	0.0	Gene664, Gene955	2	1
+32	Gene31 & Gene4	1	2	0.0	Gene31, Gene4	2	1
+33	Gene100 | Gene616	1	2	0.0	Gene100, Gene616	2	1
+34	Gene327 & Gene789	1	2	0.0	Gene327, Gene789	2	1
+35	Gene100 & Gene313 & Gene37	1	3	0.0	Gene100, Gene313, Gene37	3	1
+36	Gene191 & Gene539 & Gene69	1	3	0.0	Gene191, Gene539, Gene69	3	1
+37	Gene149 & Gene544	1	2	0.0	Gene149, Gene544	2	1
+38	Gene199 | Gene996	1	2	0.0	Gene199, Gene996	2	1
+39	Gene174 & Gene24	1	2	0.0	Gene174, Gene24	2	1
+40	Gene456 & ~Gene544 & (Gene14 | Gene67)	1	4	0.5	Gene14, Gene456, Gene544, Gene67	4	1
+41	Gene955 | (Gene174 & Gene616) | (Gene174 & Gene954)	1	4	0.5	Gene174, Gene616, Gene954, Gene955	4	1
+42	Gene313 & Gene37 & Gene616 & Gene908	1	4	0.5	Gene313, Gene37, Gene616, Gene908	4	1
+43	Gene684 | Gene896 | Gene943 | ~Gene922 | ~Gene979	1	5	1.0	Gene684, Gene896, Gene922, Gene943, Gene979	5	1
+44	(Gene110 & Gene616) | (Gene110 & Gene954) | (Gene174 & Gene616) | (Gene174 & Gene954) | (Gene616 & Gene650) | (Gene650 & Gene954)	1	5	1.0	Gene110, Gene174, Gene616, Gene650, Gene954	5	1
+45	Gene544 & Gene910	0	2	0.0	Gene544, Gene910	2	1
+46	Gene313 & Gene350	0	2	0.0	Gene313, Gene350	2	1
+47	Gene616 & ~Gene954	0	2	0.0	Gene616, Gene954	2	1
+48	Gene616 & Gene907	0	2	0.0	Gene616, Gene907	2	1
+49	Gene492	0	1	0.5	Gene492	1	1
+50	Gene206	0	1	0.5	Gene206	1	1

@@ -1,0 +1,87 @@
+================================================================================
+GEP BOOLEAN NETWORK INFERENCE BENCHMARK
+================================================================================
+Binary data dir:  /home/lahumada/disco1/BNI3/Binarization/Tests/test_bin_datasets_p1
+Raw data dir:     /home/lahumada/disco1/BNI3/Binarization/Tests/test_datasets
+Output dir:       test_result_g10_t10_p16_32_48
+Processors:       16, 32, 48
+Gene counts:      10
+Timepoint counts: 10
+Population:       50
+Generations:      50
+Repetitions:      1
+GEP script:       /home/lahumada/disco1/BNI3/Rules_Inference/BNI3_Boolean_Rules_Inference.py
+================================================================================
+
+Found 36 total SSD binary datasets
+Selected 1 datasets matching criteria
+================================================================================
+
+bin_ssd_g10_t10_p1_test_data_g10_t10.tsv
+  Dataset: 10 genes × 10 timepoints
+  Running GEP (p=16)... ✓ (1173.33s)
+  Running GEP (p=32)... ✓ (661.97s)
+  Running GEP (p=48)... ✓ (561.64s)
+
+================================================================================
+GEP INFERENCE BENCHMARK SUMMARY
+================================================================================
+
+📊 OVERALL STATISTICS:
+--------------------------------------------------------------------------------
+Total runs:        3
+Successful:        3
+Failed:            0
+Success rate:      100.0%
+
+Total time:        2396.94 seconds
+Avg time/run:      798.98 seconds
+Min time/run:      561.64 seconds
+Max time/run:      1173.33 seconds
+
+⚡ PERFORMANCE BY PROCESSOR COUNT:
+--------------------------------------------------------------------------------
+
+16 Processor(s):
+  Runs:                        1
+  Avg total time:              1173.33 seconds
+  Avg time per gene:           117.2500 seconds
+  Avg time per gene per rep:   117.2500 seconds
+  Throughput (genes/sec):      0.0085
+
+32 Processor(s):
+  Runs:                        1
+  Avg total time:              661.97 seconds
+  Avg time per gene:           66.1100 seconds
+  Avg time per gene per rep:   66.1100 seconds
+  Throughput (genes/sec):      0.0151
+
+48 Processor(s):
+  Runs:                        1
+  Avg total time:              561.64 seconds
+  Avg time per gene:           56.0800 seconds
+  Avg time per gene per rep:   56.0800 seconds
+  Throughput (genes/sec):      0.0178
+
+📋 DETAILED RESULTS:
+--------------------------------------------------------------------------------
+ Genes  Times  Procs   Pop   Gen   Rep   Total(s)    Time/Gene Status    
+--------------------------------------------------------------------------------
+    10     10     16    50    50     1    1173.33   117.250000 ✓ Success 
+    10     10     32    50    50     1     661.97    66.110000 ✓ Success 
+    10     10     48    50    50     1     561.64    56.080000 ✓ Success 
+
+📈 SCALING ANALYSIS:
+--------------------------------------------------------------------------------
+
+ Genes  Times  Procs    Time(s)    Speedup   Efficiency(%)
+--------------------------------------------------------------------------------
+  10.0   10.0   16.0    1173.33       1.00x          100.0%
+  10.0   10.0   32.0     661.97       1.77x           88.6%
+  10.0   10.0   48.0     561.64       2.09x           69.6%
+
+📁 Scaling analysis saved to: test_result_g10_t10_p16_32_48/inference_scaling_analysis.csv
+
+================================================================================
+📁 Detailed results saved to: test_result_g10_t10_p16_32_48/inference_benchmark_results.csv
+================================================================================

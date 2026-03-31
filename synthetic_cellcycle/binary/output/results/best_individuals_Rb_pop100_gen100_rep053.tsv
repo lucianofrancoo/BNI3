@@ -1,0 +1,101 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	~CycA & ~CycD	4	2	0.0	CycA, CycD	2	53
+2	~CycE & ~p27	4	2	0.0	CycE, p27	2	53
+3	Cdh1 & ~CycA & ~p27	4	3	0.0	Cdh1, CycA, p27	3	53
+4	Rb & ~CycD	4	2	0.0	CycD, Rb	2	53
+5	Cdc20 & ~Cdh1 & ~CycE	4	3	0.0	Cdc20, Cdh1, CycE	3	53
+6	Cdh1 & CycE & UbcH10	4	3	0.0	Cdh1, CycE, UbcH10	3	53
+7	Rb & UbcH10	4	2	0.0	Rb, UbcH10	2	53
+8	~Cdc20 & ~CycE	4	2	0.0	Cdc20, CycE	2	53
+9	CycD & UbcH10	4	2	0.0	CycD, UbcH10	2	53
+10	Cdc20 & E2F	4	2	0.0	Cdc20, E2F	2	53
+11	CycB & E2F & UbcH10	4	3	0.0	CycB, E2F, UbcH10	3	53
+12	UbcH10 & (E2F | ~Cdc20)	4	3	0.0	Cdc20, E2F, UbcH10	3	53
+13	False	4	1	0.5	False	1	53
+14	False	4	1	0.5	False	1	53
+15	CycD & UbcH10	4	2	0.0	CycD, UbcH10	2	53
+16	CycD & E2F & UbcH10	4	3	0.0	CycD, E2F, UbcH10	3	53
+17	Rb & p27	4	2	0.0	Rb, p27	2	53
+18	~CycA & ~E2F	4	2	0.0	CycA, E2F	2	53
+19	CycD & UbcH10	4	2	0.0	CycD, UbcH10	2	53
+20	E2F & Rb & ~UbcH10	4	3	0.0	E2F, Rb, UbcH10	3	53
+21	CycB & E2F & UbcH10	4	3	0.0	CycB, E2F, UbcH10	3	53
+22	CycB & UbcH10	4	2	0.0	CycB, UbcH10	2	53
+23	Cdc20 & E2F	4	2	0.0	Cdc20, E2F	2	53
+24	p27 & ~Cdh1	4	2	0.0	Cdh1, p27	2	53
+25	Rb & ~CycD	4	2	0.0	CycD, Rb	2	53
+26	Cdc20 & Cdh1 & E2F	4	3	0.0	Cdc20, Cdh1, E2F	3	53
+27	E2F & Rb	4	2	0.0	E2F, Rb	2	53
+28	CycA & CycD & E2F	4	3	0.0	CycA, CycD, E2F	3	53
+29	Cdh1 & CycE & UbcH10	4	3	0.0	Cdh1, CycE, UbcH10	3	53
+30	CycE & E2F & Rb	4	3	0.0	CycE, E2F, Rb	3	53
+31	Cdc20 & Cdh1 & CycE & p27	4	4	0.5	Cdc20, Cdh1, CycE, p27	4	53
+32	~Cdh1	4	1	0.5	Cdh1	1	53
+33	Cdc20 & Cdh1 & CycE & E2F	4	4	0.5	Cdc20, Cdh1, CycE, E2F	4	53
+34	~Cdh1	4	1	0.5	Cdh1	1	53
+35	CycA & CycD	3	2	0.0	CycA, CycD	2	53
+36	Cdh1 & CycE & Rb	3	3	0.0	Cdh1, CycE, Rb	3	53
+37	Cdh1 & UbcH10 & p27	3	3	0.0	Cdh1, UbcH10, p27	3	53
+38	CycA & p27 & ~E2F	3	3	0.0	CycA, E2F, p27	3	53
+39	Rb & ~UbcH10	3	2	0.0	Rb, UbcH10	2	53
+40	Cdc20 & CycB	3	2	0.0	Cdc20, CycB	2	53
+41	Cdc20 & UbcH10	3	2	0.0	Cdc20, UbcH10	2	53
+42	UbcH10 & p27	3	2	0.0	UbcH10, p27	2	53
+43	CycD & E2F	3	2	0.0	CycD, E2F	2	53
+44	Cdh1 & UbcH10	3	2	0.0	Cdh1, UbcH10	2	53
+45	Cdh1 & UbcH10	3	2	0.0	Cdh1, UbcH10	2	53
+46	Cdc20 & CycD	3	2	0.0	Cdc20, CycD	2	53
+47	CycD & Rb	3	2	0.0	CycD, Rb	2	53
+48	CycD & E2F	3	2	0.0	CycD, E2F	2	53
+49	Cdc20 & Cdh1 & ~p27	3	3	0.0	Cdc20, Cdh1, p27	3	53
+50	CycD & Rb	3	2	0.0	CycD, Rb	2	53
+51	CycA & CycB	3	2	0.0	CycA, CycB	2	53
+52	Cdc20 & p27	3	2	0.0	Cdc20, p27	2	53
+53	Cdh1 & UbcH10	3	2	0.0	Cdh1, UbcH10	2	53
+54	Cdc20 & ~UbcH10	3	2	0.0	Cdc20, UbcH10	2	53
+55	CycD & Rb	3	2	0.0	CycD, Rb	2	53
+56	Cdc20 & CycD	3	2	0.0	Cdc20, CycD	2	53
+57	Rb	3	1	0.5	Rb	1	53
+58	UbcH10	3	1	0.5	UbcH10	1	53
+59	Rb	3	1	0.5	Rb	1	53
+60	Cdc20 & Cdh1 & CycD & CycE	3	4	0.5	Cdc20, Cdh1, CycD, CycE	4	53
+61	Rb	3	1	0.5	Rb	1	53
+62	~p27	3	1	0.5	p27	1	53
+63	~p27	3	1	0.5	p27	1	53
+64	Rb	3	1	0.5	Rb	1	53
+65	Rb | ~CycE	2	2	0.0	CycE, Rb	2	53
+66	E2F & p27	2	2	0.0	E2F, p27	2	53
+67	Cdh1 & CycD	2	2	0.0	Cdh1, CycD	2	53
+68	UbcH10 | ~p27	2	2	0.0	UbcH10, p27	2	53
+69	Rb | UbcH10	2	2	0.0	Rb, UbcH10	2	53
+70	~Cdc20 & ~Rb	2	2	0.0	Cdc20, Rb	2	53
+71	CycB & CycE	2	2	0.0	CycB, CycE	2	53
+72	CycA & p27	2	2	0.0	CycA, p27	2	53
+73	Cdh1 & CycD	2	2	0.0	Cdh1, CycD	2	53
+74	Cdh1 & CycA & p27	2	3	0.0	Cdh1, CycA, p27	3	53
+75	~Cdh1 | ~CycB | ~CycE	2	3	0.0	Cdh1, CycB, CycE	3	53
+76	CycE & E2F	2	2	0.0	CycE, E2F	2	53
+77	Cdc20 | Rb	2	2	0.0	Cdc20, Rb	2	53
+78	CycA & p27	2	2	0.0	CycA, p27	2	53
+79	~CycD	2	1	0.5	CycD	1	53
+80	CycB	2	1	0.5	CycB	1	53
+81	Cdc20	2	1	0.5	Cdc20	1	53
+82	p27 & (~Cdc20 | ~CycB)	1	3	0.0	Cdc20, CycB, p27	3	53
+83	~CycD | ~Rb	1	2	0.0	CycD, Rb	2	53
+84	p27	1	1	0.5	p27	1	53
+85	~Rb	1	1	0.5	Rb	1	53
+86	~UbcH10	1	1	0.5	UbcH10	1	53
+87	CycE	1	1	0.5	CycE	1	53
+88	~UbcH10	1	1	0.5	UbcH10	1	53
+89	CycE	1	1	0.5	CycE	1	53
+90	~Rb	1	1	0.5	Rb	1	53
+91	CycE	1	1	0.5	CycE	1	53
+92	CycE	1	1	0.5	CycE	1	53
+93	p27	1	1	0.5	p27	1	53
+94	CycA	1	1	0.5	CycA	1	53
+95	CycA	1	1	0.5	CycA	1	53
+96	p27	1	1	0.5	p27	1	53
+97	Cdh1 | ~CycD	0	2	0.0	Cdh1, CycD	2	53
+98	Cdh1	0	1	0.5	Cdh1	1	53
+99	Cdh1	0	1	0.5	Cdh1	1	53
+100	Cdc20 | CycA | CycE | Rb	0	4	0.5	Cdc20, CycA, CycE, Rb	4	53

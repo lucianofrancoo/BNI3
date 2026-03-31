@@ -1,0 +1,101 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	~CycB | (UbcH10 & ~E2F)	4	3	0.0	CycB, E2F, UbcH10	3	77
+2	~CycB | (E2F & UbcH10)	4	3	0.0	CycB, E2F, UbcH10	3	77
+3	~CycD | (Cdc20 & UbcH10)	4	3	0.0	Cdc20, CycD, UbcH10	3	77
+4	~Cdh1 | ~CycD	4	2	0.0	Cdh1, CycD	2	77
+5	~CycB | (UbcH10 & ~E2F)	4	3	0.0	CycB, E2F, UbcH10	3	77
+6	~CycB | (E2F & UbcH10)	4	3	0.0	CycB, E2F, UbcH10	3	77
+7	~Cdh1 | ~CycD	4	2	0.0	Cdh1, CycD	2	77
+8	p27 & ~CycD	4	2	0.0	CycD, p27	2	77
+9	~Cdh1 | ~CycD	4	2	0.0	Cdh1, CycD	2	77
+10	p27 & ~CycD	4	2	0.0	CycD, p27	2	77
+11	p27 & ~CycD	4	2	0.0	CycD, p27	2	77
+12	~Cdh1 | ~CycD	4	2	0.0	Cdh1, CycD	2	77
+13	UbcH10 | ~CycB	4	2	0.0	CycB, UbcH10	2	77
+14	p27 & ~CycD	4	2	0.0	CycD, p27	2	77
+15	~CycB	4	1	0.5	CycB	1	77
+16	~CycB	4	1	0.5	CycB	1	77
+17	~CycB	4	1	0.5	CycB	1	77
+18	~CycD	4	1	0.5	CycD	1	77
+19	~CycB	4	1	0.5	CycB	1	77
+20	~CycD	4	1	0.5	CycD	1	77
+21	~CycD	4	1	0.5	CycD	1	77
+22	~CycD	4	1	0.5	CycD	1	77
+23	~CycD	4	1	0.5	CycD	1	77
+24	~CycB	4	1	0.5	CycB	1	77
+25	~CycB	4	1	0.5	CycB	1	77
+26	~CycD	4	1	0.5	CycD	1	77
+27	~CycD	4	1	0.5	CycD	1	77
+28	~CycD	4	1	0.5	CycD	1	77
+29	~CycB	4	1	0.5	CycB	1	77
+30	~CycD	4	1	0.5	CycD	1	77
+31	~CycD	4	1	0.5	CycD	1	77
+32	E2F | UbcH10	3	2	0.0	E2F, UbcH10	2	77
+33	~CycD & (UbcH10 | ~Cdh1)	3	3	0.0	Cdh1, CycD, UbcH10	3	77
+34	~CycB | ~E2F	3	2	0.0	CycB, E2F	2	77
+35	~E2F & ~Rb	3	2	0.0	E2F, Rb	2	77
+36	CycA & UbcH10	3	2	0.0	CycA, UbcH10	2	77
+37	CycA & UbcH10	3	2	0.0	CycA, UbcH10	2	77
+38	p27	3	1	0.5	p27	1	77
+39	~Rb	3	1	0.5	Rb	1	77
+40	UbcH10	3	1	0.5	UbcH10	1	77
+41	UbcH10	3	1	0.5	UbcH10	1	77
+42	p27	3	1	0.5	p27	1	77
+43	UbcH10	3	1	0.5	UbcH10	1	77
+44	~Rb	3	1	0.5	Rb	1	77
+45	p27	3	1	0.5	p27	1	77
+46	~Rb	3	1	0.5	Rb	1	77
+47	p27	3	1	0.5	p27	1	77
+48	UbcH10	3	1	0.5	UbcH10	1	77
+49	CycB & CycD & UbcH10	2	3	0.0	CycB, CycD, UbcH10	3	77
+50	CycB & UbcH10	2	2	0.0	CycB, UbcH10	2	77
+51	E2F & Rb	2	2	0.0	E2F, Rb	2	77
+52	~CycA | ~CycD | ~E2F	2	3	0.0	CycA, CycD, E2F	3	77
+53	CycA | E2F | ~Cdh1	2	3	0.0	Cdh1, CycA, E2F	3	77
+54	CycB & ~CycE	2	2	0.0	CycB, CycE	2	77
+55	Rb & p27	2	2	0.0	Rb, p27	2	77
+56	Rb & p27	2	2	0.0	Rb, p27	2	77
+57	p27 & ~UbcH10	2	2	0.0	UbcH10, p27	2	77
+58	E2F & UbcH10	2	2	0.0	E2F, UbcH10	2	77
+59	False	2	1	0.5	False	1	77
+60	False	2	1	0.5	False	1	77
+61	UbcH10 & ~p27	2	2	0.0	UbcH10, p27	2	77
+62	Cdh1 | UbcH10	2	2	0.0	Cdh1, UbcH10	2	77
+63	CycB & CycE & UbcH10 & p27	2	4	0.5	CycB, CycE, UbcH10, p27	4	77
+64	~Cdh1	2	1	0.5	Cdh1	1	77
+65	E2F	2	1	0.5	E2F	1	77
+66	Cdc20	2	1	0.5	Cdc20	1	77
+67	Cdh1 | E2F | UbcH10 | ~CycB	2	4	0.5	Cdh1, CycB, E2F, UbcH10	4	77
+68	CycB & CycE & UbcH10 & p27	2	4	0.5	CycB, CycE, UbcH10, p27	4	77
+69	~Cdh1	2	1	0.5	Cdh1	1	77
+70	True	2	1	0.5	True	1	77
+71	E2F	2	1	0.5	E2F	1	77
+72	~Cdh1	2	1	0.5	Cdh1	1	77
+73	~E2F	2	1	0.5	E2F	1	77
+74	~Cdh1	2	1	0.5	Cdh1	1	77
+75	~E2F	2	1	0.5	E2F	1	77
+76	Cdc20	2	1	0.5	Cdc20	1	77
+77	~UbcH10 | (CycB & CycE)	1	3	0.0	CycB, CycE, UbcH10	3	77
+78	Rb & ~UbcH10	1	2	0.0	Rb, UbcH10	2	77
+79	Cdc20 | CycD	1	2	0.0	Cdc20, CycD	2	77
+80	Cdc20 | CycD	1	2	0.0	Cdc20, CycD	2	77
+81	Cdc20 & Rb	1	2	0.0	Cdc20, Rb	2	77
+82	Rb | (p27 & ~UbcH10)	1	3	0.0	Rb, UbcH10, p27	3	77
+83	CycD | ~UbcH10	1	2	0.0	CycD, UbcH10	2	77
+84	CycB & ~E2F & ~UbcH10	1	3	0.0	CycB, E2F, UbcH10	3	77
+85	~CycA	1	1	0.5	CycA	1	77
+86	~UbcH10	1	1	0.5	UbcH10	1	77
+87	~p27	1	1	0.5	p27	1	77
+88	CycB | ~UbcH10 | (CycA & CycD)	1	4	0.5	CycA, CycB, CycD, UbcH10	4	77
+89	Rb	1	1	0.5	Rb	1	77
+90	~UbcH10	1	1	0.5	UbcH10	1	77
+91	~UbcH10	1	1	0.5	UbcH10	1	77
+92	~UbcH10	1	1	0.5	UbcH10	1	77
+93	CycD & ~UbcH10	0	2	0.0	CycD, UbcH10	2	77
+94	CycB & ~UbcH10	0	2	0.0	CycB, UbcH10	2	77
+95	CycD | Rb	0	2	0.0	CycD, Rb	2	77
+96	CycB	0	1	0.5	CycB	1	77
+97	CycB	0	1	0.5	CycB	1	77
+98	CycB	0	1	0.5	CycB	1	77
+99	CycD	0	1	0.5	CycD	1	77
+100	CycB	0	1	0.5	CycB	1	77

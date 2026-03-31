@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	Gene313 & Gene473	4	2	0.0	Gene313, Gene473	2	1
+2	Gene222 | Gene875	4	2	0.0	Gene222, Gene875	2	1
+3	Gene473 | Gene875	4	2	0.0	Gene473, Gene875	2	1
+4	Gene875 & Gene949	4	2	0.0	Gene875, Gene949	2	1
+5	Gene442 | Gene444	4	2	0.0	Gene442, Gene444	2	1
+6	Gene868 & Gene875 & Gene949	4	3	0.0	Gene868, Gene875, Gene949	3	1
+7	Gene868 & Gene875 & Gene949	4	3	0.0	Gene868, Gene875, Gene949	3	1
+8	Gene473 | Gene875	4	2	0.0	Gene473, Gene875	2	1
+9	Gene868 & Gene875	4	2	0.0	Gene868, Gene875	2	1
+10	Gene313 & Gene753	4	2	0.0	Gene313, Gene753	2	1
+11	Gene313 & Gene473	4	2	0.0	Gene313, Gene473	2	1
+12	Gene222 | Gene313	4	2	0.0	Gene222, Gene313	2	1
+13	Gene222 | Gene313	4	2	0.0	Gene222, Gene313	2	1
+14	Gene481 | ~Gene708	4	2	0.0	Gene481, Gene708	2	1
+15	Gene313 | Gene875	4	2	0.0	Gene313, Gene875	2	1
+16	Gene875 | Gene893	4	2	0.0	Gene875, Gene893	2	1
+17	Gene875 | Gene893	4	2	0.0	Gene875, Gene893	2	1
+18	Gene473 & Gene868	4	2	0.0	Gene473, Gene868	2	1
+19	Gene875 & Gene949	4	2	0.0	Gene875, Gene949	2	1
+20	Gene523 & Gene868	4	2	0.0	Gene523, Gene868	2	1
+21	Gene523 & Gene868	4	2	0.0	Gene523, Gene868	2	1
+22	Gene313 | Gene875	4	2	0.0	Gene313, Gene875	2	1
+23	Gene473 & Gene875	4	2	0.0	Gene473, Gene875	2	1
+24	Gene875	4	1	0.5	Gene875	1	1
+25	Gene473 & Gene875 & (Gene313 | Gene708)	4	4	0.5	Gene313, Gene473, Gene708, Gene875	4	1
+26	Gene875	4	1	0.5	Gene875	1	1
+27	Gene868 | Gene875	3	2	0.0	Gene868, Gene875	2	1
+28	Gene728 & Gene875	3	2	0.0	Gene728, Gene875	2	1
+29	Gene78 | Gene875	3	2	0.0	Gene78, Gene875	2	1
+30	Gene313 | Gene553 | Gene687	3	3	0.0	Gene313, Gene553, Gene687	3	1
+31	Gene562 | Gene704	3	2	0.0	Gene562, Gene704	2	1
+32	Gene473 | Gene868 | Gene875	3	3	0.0	Gene473, Gene868, Gene875	3	1
+33	Gene25 & Gene906	3	2	0.0	Gene25, Gene906	2	1
+34	Gene875 | (Gene239 & Gene562)	3	3	0.0	Gene239, Gene562, Gene875	3	1
+35	Gene239 | Gene875	3	2	0.0	Gene239, Gene875	2	1
+36	Gene473 & Gene868 & Gene893	2	3	0.0	Gene473, Gene868, Gene893	3	1
+37	Gene473 & Gene893	2	2	0.0	Gene473, Gene893	2	1
+38	Gene728 & Gene753	2	2	0.0	Gene728, Gene753	2	1
+39	Gene728 | Gene893	2	2	0.0	Gene728, Gene893	2	1
+40	Gene473 & Gene502	2	2	0.0	Gene473, Gene502	2	1
+41	Gene543 & Gene893	2	2	0.0	Gene543, Gene893	2	1
+42	Gene875 & Gene998	2	2	0.0	Gene875, Gene998	2	1
+43	Gene390 & Gene745	2	2	0.0	Gene390, Gene745	2	1
+44	Gene473 & Gene893	2	2	0.0	Gene473, Gene893	2	1
+45	Gene661	2	1	0.5	Gene661	1	1
+46	Gene656 & Gene686	1	2	0.0	Gene656, Gene686	2	1
+47	Gene758	1	1	0.5	Gene758	1	1
+48	Gene239 & Gene875 & (Gene708 | Gene893)	1	4	0.5	Gene239, Gene708, Gene875, Gene893	4	1
+49	Gene214	1	1	0.5	Gene214	1	1
+50	Gene454 & Gene745	0	2	0.0	Gene454, Gene745	2	1

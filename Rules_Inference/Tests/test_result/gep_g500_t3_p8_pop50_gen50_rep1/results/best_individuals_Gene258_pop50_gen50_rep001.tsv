@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	Gene488 & (Gene253 | Gene35)	2	3	0.0	Gene253, Gene35, Gene488	3	1
+2	Gene274 & Gene47	2	2	0.0	Gene274, Gene47	2	1
+3	Gene420 & (Gene264 | Gene319)	2	3	0.0	Gene264, Gene319, Gene420	3	1
+4	Gene456 | ~Gene238	2	2	0.0	Gene238, Gene456	2	1
+5	Gene210 & Gene253	2	2	0.0	Gene210, Gene253	2	1
+6	Gene137 | (Gene139 & ~Gene317)	2	3	0.0	Gene137, Gene139, Gene317	3	1
+7	Gene318 & Gene35	2	2	0.0	Gene318, Gene35	2	1
+8	Gene318 & Gene70	2	2	0.0	Gene318, Gene70	2	1
+9	Gene181 & Gene214	2	2	0.0	Gene181, Gene214	2	1
+10	Gene122 & Gene477	2	2	0.0	Gene122, Gene477	2	1
+11	Gene477 | Gene71	2	2	0.0	Gene477, Gene71	2	1
+12	Gene122 & Gene477	2	2	0.0	Gene122, Gene477	2	1
+13	Gene122 & Gene127 & Gene477	2	3	0.0	Gene122, Gene127, Gene477	3	1
+14	Gene197 & Gene477 & Gene80	2	3	0.0	Gene197, Gene477, Gene80	3	1
+15	Gene149 & Gene318	2	2	0.0	Gene149, Gene318	2	1
+16	Gene253 & Gene70	2	2	0.0	Gene253, Gene70	2	1
+17	Gene181 | Gene80	2	2	0.0	Gene181, Gene80	2	1
+18	Gene122 & Gene477	2	2	0.0	Gene122, Gene477	2	1
+19	Gene420 & Gene498	2	2	0.0	Gene420, Gene498	2	1
+20	Gene122 & Gene477	2	2	0.0	Gene122, Gene477	2	1
+21	Gene47 & Gene482	2	2	0.0	Gene47, Gene482	2	1
+22	Gene253 & Gene35	2	2	0.0	Gene253, Gene35	2	1
+23	Gene420 & (Gene274 | ~Gene480)	2	3	0.0	Gene274, Gene420, Gene480	3	1
+24	Gene204 & Gene47	2	2	0.0	Gene204, Gene47	2	1
+25	Gene122 & Gene477	2	2	0.0	Gene122, Gene477	2	1
+26	Gene197 & Gene420 & Gene80	2	3	0.0	Gene197, Gene420, Gene80	3	1
+27	Gene274 & Gene47	2	2	0.0	Gene274, Gene47	2	1
+28	Gene35 & Gene477	2	2	0.0	Gene35, Gene477	2	1
+29	Gene214 & Gene35	2	2	0.0	Gene214, Gene35	2	1
+30	Gene477	2	1	0.5	Gene477	1	1
+31	~Gene5	2	1	0.5	Gene5	1	1
+32	~Gene265	2	1	0.5	Gene265	1	1
+33	Gene99	2	1	0.5	Gene99	1	1
+34	Gene137	2	1	0.5	Gene137	1	1
+35	Gene481 & ~Gene408	1	2	0.0	Gene408, Gene481	2	1
+36	Gene305 & ~Gene264	1	2	0.0	Gene264, Gene305	2	1
+37	Gene168 | Gene480	1	2	0.0	Gene168, Gene480	2	1
+38	Gene264	1	1	0.5	Gene264	1	1
+39	Gene264 | Gene498	1	2	0.0	Gene264, Gene498	2	1
+40	Gene274	1	1	0.5	Gene274	1	1
+41	~Gene264	1	1	0.5	Gene264	1	1
+42	Gene264	1	1	0.5	Gene264	1	1
+43	Gene149 & Gene210 & Gene253 & Gene265 & Gene452	1	5	1.0	Gene149, Gene210, Gene253, Gene265, Gene452	5	1
+44	Gene264 & Gene31 & Gene319 & Gene456 & ~Gene498	1	5	1.0	Gene264, Gene31, Gene319, Gene456, Gene498	5	1
+45	Gene215 & Gene494	0	2	0.0	Gene215, Gene494	2	1
+46	Gene182 & Gene319	0	2	0.0	Gene182, Gene319	2	1
+47	~Gene122	0	1	0.5	Gene122	1	1
+48	Gene441	0	1	0.5	Gene441	1	1
+49	~Gene477	0	1	0.5	Gene477	1	1
+50	Gene495	0	1	0.5	Gene495	1	1

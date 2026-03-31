@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	~Gene340 | (~Gene329 & ~Gene855)	4	3	0.0	Gene329, Gene340, Gene855	3	1
+2	~Gene329 & ~Gene855	4	2	0.0	Gene329, Gene855	2	1
+3	~Gene340 | (~Gene329 & ~Gene855)	4	3	0.0	Gene329, Gene340, Gene855	3	1
+4	Gene600 | Gene991	4	2	0.0	Gene600, Gene991	2	1
+5	Gene600 | Gene991	4	2	0.0	Gene600, Gene991	2	1
+6	Gene600 | Gene991	4	2	0.0	Gene600, Gene991	2	1
+7	~Gene340 & ~Gene855	4	2	0.0	Gene340, Gene855	2	1
+8	~Gene340 & ~Gene855	4	2	0.0	Gene340, Gene855	2	1
+9	Gene600 | Gene991	4	2	0.0	Gene600, Gene991	2	1
+10	Gene7 | ~Gene855	4	2	0.0	Gene7, Gene855	2	1
+11	Gene600 | (~Gene79 & ~Gene844)	4	3	0.0	Gene600, Gene79, Gene844	3	1
+12	Gene669 | (~Gene329 & ~Gene855)	4	3	0.0	Gene329, Gene669, Gene855	3	1
+13	~Gene855	4	1	0.5	Gene855	1	1
+14	Gene600 | Gene991	4	2	0.0	Gene600, Gene991	2	1
+15	Gene524 | Gene600	4	2	0.0	Gene524, Gene600	2	1
+16	Gene600 | (Gene329 & ~Gene855)	4	3	0.0	Gene329, Gene600, Gene855	3	1
+17	~Gene855	4	1	0.5	Gene855	1	1
+18	Gene600	4	1	0.5	Gene600	1	1
+19	Gene817	4	1	0.5	Gene817	1	1
+20	~Gene855	4	1	0.5	Gene855	1	1
+21	Gene669	4	1	0.5	Gene669	1	1
+22	~Gene855	4	1	0.5	Gene855	1	1
+23	~Gene79	4	1	0.5	Gene79	1	1
+24	Gene812 | ~Gene991	3	2	0.0	Gene812, Gene991	2	1
+25	~Gene669 | ~Gene7 | ~Gene855	3	3	0.0	Gene669, Gene7, Gene855	3	1
+26	~Gene300 | ~Gene329	3	2	0.0	Gene300, Gene329	2	1
+27	Gene329 | Gene600 | Gene79	3	3	0.0	Gene329, Gene600, Gene79	3	1
+28	Gene546 & Gene812	3	2	0.0	Gene546, Gene812	2	1
+29	Gene15 | Gene844	2	2	0.0	Gene15, Gene844	2	1
+30	Gene764 | Gene79 | ~Gene15	2	3	0.0	Gene15, Gene764, Gene79	3	1
+31	Gene227 | Gene844	2	2	0.0	Gene227, Gene844	2	1
+32	~Gene277	2	1	0.5	Gene277	1	1
+33	(Gene79 | ~Gene15) & (Gene79 | ~Gene694) & (Gene855 | ~Gene15) & (Gene855 | ~Gene694)	2	4	0.5	Gene15, Gene694, Gene79, Gene855	4	1
+34	~Gene629	2	1	0.5	Gene629	1	1
+35	Gene855 & ~Gene329	1	2	0.0	Gene329, Gene855	2	1
+36	Gene764 | Gene855	1	2	0.0	Gene764, Gene855	2	1
+37	Gene855 & ~Gene768	1	2	0.0	Gene768, Gene855	2	1
+38	Gene329 | Gene666	1	2	0.0	Gene329, Gene666	2	1
+39	Gene991	1	1	0.5	Gene991	1	1
+40	Gene79 | Gene888 | Gene991 | (Gene15 & Gene764)	1	5	1.0	Gene15, Gene764, Gene79, Gene888, Gene991	5	1
+41	Gene329 | Gene855	0	2	0.0	Gene329, Gene855	2	1
+42	Gene340 | Gene855	0	2	0.0	Gene340, Gene855	2	1
+43	Gene340 | Gene855	0	2	0.0	Gene340, Gene855	2	1
+44	Gene855	0	1	0.5	Gene855	1	1
+45	~Gene769	0	1	0.5	Gene769	1	1
+46	Gene340	0	1	0.5	Gene340	1	1
+47	~Gene600	0	1	0.5	Gene600	1	1
+48	~Gene669	0	1	0.5	Gene669	1	1
+49	~Gene669	0	1	0.5	Gene669	1	1
+50	Gene855	0	1	0.5	Gene855	1	1

@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	~Gene196 | (Gene333 & Gene613)	4	3	0.0	Gene196, Gene333, Gene613	3	1
+2	Gene569 | (Gene517 & Gene802)	4	3	0.0	Gene517, Gene569, Gene802	3	1
+3	Gene194 | (~Gene77 & ~Gene833)	4	3	0.0	Gene194, Gene77, Gene833	3	1
+4	Gene354 & Gene356	4	2	0.0	Gene354, Gene356	2	1
+5	Gene194 | Gene428	4	2	0.0	Gene194, Gene428	2	1
+6	Gene119 | Gene194	4	2	0.0	Gene119, Gene194	2	1
+7	Gene569 | (Gene517 & Gene802)	4	3	0.0	Gene517, Gene569, Gene802	3	1
+8	Gene354 | Gene428	4	2	0.0	Gene354, Gene428	2	1
+9	Gene356 & Gene782	4	2	0.0	Gene356, Gene782	2	1
+10	Gene194 | Gene428	4	2	0.0	Gene194, Gene428	2	1
+11	Gene114 | Gene194	4	2	0.0	Gene114, Gene194	2	1
+12	Gene569 | (Gene517 & Gene802)	4	3	0.0	Gene517, Gene569, Gene802	3	1
+13	Gene356 & Gene782	4	2	0.0	Gene356, Gene782	2	1
+14	Gene194 | Gene992	4	2	0.0	Gene194, Gene992	2	1
+15	Gene356 & Gene782	4	2	0.0	Gene356, Gene782	2	1
+16	Gene114 | Gene194	4	2	0.0	Gene114, Gene194	2	1
+17	Gene354 | Gene770	4	2	0.0	Gene354, Gene770	2	1
+18	Gene194	4	1	0.5	Gene194	1	1
+19	Gene354	4	1	0.5	Gene354	1	1
+20	Gene194 | Gene449 | (Gene428 & Gene77)	4	4	0.5	Gene194, Gene428, Gene449, Gene77	4	1
+21	Gene194 & (Gene428 | Gene489 | Gene77) & (Gene428 | Gene77 | Gene967)	4	5	1.0	Gene194, Gene428, Gene489, Gene77, Gene967	5	1
+22	Gene376 | Gene589	3	2	0.0	Gene376, Gene589	2	1
+23	Gene428 | Gene77 | Gene933	3	3	0.0	Gene428, Gene77, Gene933	3	1
+24	Gene428 | Gene565	3	2	0.0	Gene428, Gene565	2	1
+25	Gene428 | Gene565	3	2	0.0	Gene428, Gene565	2	1
+26	Gene367 | Gene428 | Gene77	3	3	0.0	Gene367, Gene428, Gene77	3	1
+27	Gene428 | Gene489	3	2	0.0	Gene428, Gene489	2	1
+28	Gene249 | Gene565 | Gene77	3	3	0.0	Gene249, Gene565, Gene77	3	1
+29	Gene640 | Gene692	3	2	0.0	Gene640, Gene692	2	1
+30	Gene428 | Gene489	3	2	0.0	Gene428, Gene489	2	1
+31	Gene114 | Gene428	3	2	0.0	Gene114, Gene428	2	1
+32	Gene569 & Gene802	3	2	0.0	Gene569, Gene802	2	1
+33	Gene194 | Gene428 | Gene73	3	3	0.0	Gene194, Gene428, Gene73	3	1
+34	Gene428 | (Gene194 & Gene613)	3	3	0.0	Gene194, Gene428, Gene613	3	1
+35	Gene569 & Gene802	3	2	0.0	Gene569, Gene802	2	1
+36	Gene802 | (Gene517 & Gene569)	3	3	0.0	Gene517, Gene569, Gene802	3	1
+37	Gene356	3	1	0.5	Gene356	1	1
+38	Gene33 | Gene428 | Gene649 | Gene791	3	4	0.5	Gene33, Gene428, Gene649, Gene791	4	1
+39	Gene932	3	1	0.5	Gene932	1	1
+40	Gene613 | Gene77	2	2	0.0	Gene613, Gene77	2	1
+41	Gene428 & Gene791	2	2	0.0	Gene428, Gene791	2	1
+42	Gene119 | Gene428	2	2	0.0	Gene119, Gene428	2	1
+43	Gene428 & (Gene565 | Gene958)	2	3	0.0	Gene428, Gene565, Gene958	3	1
+44	Gene785	2	1	0.5	Gene785	1	1
+45	Gene958	2	1	0.5	Gene958	1	1
+46	Gene879	2	1	0.5	Gene879	1	1
+47	Gene719 | ~Gene802 | (~Gene517 & ~Gene670)	2	4	0.5	Gene517, Gene670, Gene719, Gene802	4	1
+48	Gene688 | Gene820 | (Gene194 & Gene514 & Gene553)	2	5	1.0	Gene194, Gene514, Gene553, Gene688, Gene820	5	1
+49	Gene77 | Gene959	1	2	0.0	Gene77, Gene959	2	1
+50	Gene922 & (Gene428 | Gene77)	1	3	0.0	Gene428, Gene77, Gene922	3	1

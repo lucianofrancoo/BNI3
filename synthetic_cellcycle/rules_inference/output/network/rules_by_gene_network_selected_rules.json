@@ -1,0 +1,82 @@
+{
+  "Cdc20": {
+    "position": 1,
+    "rule": "CycB",
+    "score": "1.9375",
+    "n_correct": 4,
+    "n_regulators": 3,
+    "mse": "nan"
+  },
+  "Cdh1": {
+    "position": 1,
+    "rule": "(~CycA & ~CycB) | Cdc20 | (p27 & ~CycB)",
+    "score": "1.9375",
+    "n_correct": 4,
+    "n_regulators": 2,
+    "mse": "nan"
+  },
+  "CycA": {
+    "position": 1,
+    "rule": "(E2F & ~Rb & ~Cdc20 & ~(Cdh1 & UbcH10)) | (CycA & ~Rb & ~Cdc20 & ~(Cdh1 & UbcH10))",
+    "score": "1.9375",
+    "n_correct": 4,
+    "n_regulators": 3,
+    "mse": "nan"
+  },
+  "CycB": {
+    "position": 1,
+    "rule": "~Cdc20 & ~Cdh1",
+    "score": "1.9375",
+    "n_correct": 4,
+    "n_regulators": 2,
+    "mse": "nan"
+  },
+  "CycD": {
+    "position": 1,
+    "rule": "CycD",
+    "score": "1.9375",
+    "n_correct": 4,
+    "n_regulators": 3,
+    "mse": "nan"
+  },
+  "CycE": {
+    "position": 1,
+    "rule": "E2F & ~Rb",
+    "score": "1.9375",
+    "n_correct": 4,
+    "n_regulators": 3,
+    "mse": "nan"
+  },
+  "E2F": {
+    "position": 1,
+    "rule": "(~Rb & ~CycA & ~CycB) | (p27 & ~Rb & ~CycB)",
+    "score": "1.9375",
+    "n_correct": 4,
+    "n_regulators": 2,
+    "mse": "nan"
+  },
+  "Rb": {
+    "position": 1,
+    "rule": "(~CycD & ~CycE & ~CycA & ~CycB) | (p27 & ~CycD & ~CycB)",
+    "score": "1.9375",
+    "n_correct": 4,
+    "n_regulators": 2,
+    "mse": "nan"
+  },
+  "UbcH10": {
+    "position": 1,
+    "rule": "~Cdh1 | (Cdh1 & UbcH10 & (Cdc20 | CycA | CycB))",
+    "score": "1.9375",
+    "n_correct": 4,
+    "n_regulators": 3,
+    "mse": "nan"
+  },
+  "p27": {
+    "position": 1,
+    "rule": "(~CycD & ~CycE & ~CycA & ~CycB) | (p27 & ~(CycE & CycA) & ~CycB & ~CycD)",
+    "score": "1.9375",
+    "n_correct": 4,
+    "n_regulators": 2,
+    "mse": "nan"
+  }
+}

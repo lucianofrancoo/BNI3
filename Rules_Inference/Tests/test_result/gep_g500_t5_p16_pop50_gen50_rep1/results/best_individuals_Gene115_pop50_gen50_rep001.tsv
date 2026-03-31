@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	Gene436 | Gene58	4	2	0.0	Gene436, Gene58	2	1
+2	Gene436 | Gene58	4	2	0.0	Gene436, Gene58	2	1
+3	Gene155 | Gene436	4	2	0.0	Gene155, Gene436	2	1
+4	Gene150 | Gene382	4	2	0.0	Gene150, Gene382	2	1
+5	Gene150 | Gene392	4	2	0.0	Gene150, Gene392	2	1
+6	Gene58	4	1	0.5	Gene58	1	1
+7	Gene142 | (Gene106 & Gene405)	4	3	0.0	Gene106, Gene142, Gene405	3	1
+8	Gene58	4	1	0.5	Gene58	1	1
+9	Gene150 | Gene470	4	2	0.0	Gene150, Gene470	2	1
+10	Gene150 | Gene252	4	2	0.0	Gene150, Gene252	2	1
+11	Gene150 | Gene58	4	2	0.0	Gene150, Gene58	2	1
+12	Gene58 | (Gene436 & Gene88)	4	3	0.0	Gene436, Gene58, Gene88	3	1
+13	Gene276 | Gene58	4	2	0.0	Gene276, Gene58	2	1
+14	Gene150 & Gene58	4	2	0.0	Gene150, Gene58	2	1
+15	Gene150 | Gene470	4	2	0.0	Gene150, Gene470	2	1
+16	Gene142 & Gene58	4	2	0.0	Gene142, Gene58	2	1
+17	Gene58	4	1	0.5	Gene58	1	1
+18	Gene150	4	1	0.5	Gene150	1	1
+19	Gene150	4	1	0.5	Gene150	1	1
+20	Gene58	4	1	0.5	Gene58	1	1
+21	Gene108 | Gene150 | Gene429 | Gene436 | Gene58	4	5	1.0	Gene108, Gene150, Gene429, Gene436, Gene58	5	1
+22	Gene388 | Gene58	3	2	0.0	Gene388, Gene58	2	1
+23	~Gene252 | ~Gene405	3	2	0.0	Gene252, Gene405	2	1
+24	Gene150 | Gene483	3	2	0.0	Gene150, Gene483	2	1
+25	Gene405 | ~Gene456	3	2	0.0	Gene405, Gene456	2	1
+26	Gene343 | Gene58	3	2	0.0	Gene343, Gene58	2	1
+27	Gene124 | Gene276	3	2	0.0	Gene124, Gene276	2	1
+28	Gene271 | Gene58	3	2	0.0	Gene271, Gene58	2	1
+29	Gene124 | Gene98	3	2	0.0	Gene124, Gene98	2	1
+30	Gene150 | Gene201 | Gene58	3	3	0.0	Gene150, Gene201, Gene58	3	1
+31	Gene367 | Gene58	3	2	0.0	Gene367, Gene58	2	1
+32	Gene470 | Gene98	3	2	0.0	Gene470, Gene98	2	1
+33	Gene58 & Gene98	3	2	0.0	Gene58, Gene98	2	1
+34	Gene98	3	1	0.5	Gene98	1	1
+35	Gene276 | (Gene271 & Gene429)	2	3	0.0	Gene271, Gene276, Gene429	3	1
+36	Gene117 | Gene367	2	2	0.0	Gene117, Gene367	2	1
+37	Gene367	2	1	0.5	Gene367	1	1
+38	Gene436 | Gene88	2	2	0.0	Gene436, Gene88	2	1
+39	Gene343 & Gene397	2	2	0.0	Gene343, Gene397	2	1
+40	Gene276 & Gene58	2	2	0.0	Gene276, Gene58	2	1
+41	Gene235	2	1	0.5	Gene235	1	1
+42	Gene209	2	1	0.5	Gene209	1	1
+43	Gene392	2	1	0.5	Gene392	1	1
+44	Gene276	2	1	0.5	Gene276	1	1
+45	Gene381 & Gene58	2	2	0.0	Gene381, Gene58	2	1
+46	False	1	1	0.5	False	1	1
+47	Gene201 & (Gene388 | Gene88)	1	3	0.0	Gene201, Gene388, Gene88	3	1
+48	~Gene124	1	1	0.5	Gene124	1	1
+49	~Gene124	1	1	0.5	Gene124	1	1
+50	~Gene58	0	1	0.5	Gene58	1	1

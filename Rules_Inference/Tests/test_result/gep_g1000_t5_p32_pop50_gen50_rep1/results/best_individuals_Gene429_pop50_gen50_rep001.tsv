@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	Gene850 & Gene898	4	2	0.0	Gene850, Gene898	2	1
+2	Gene850 | Gene990	4	2	0.0	Gene850, Gene990	2	1
+3	Gene553 | ~Gene78	4	2	0.0	Gene553, Gene78	2	1
+4	Gene553 | Gene990	4	2	0.0	Gene553, Gene990	2	1
+5	Gene850 & Gene898	4	2	0.0	Gene850, Gene898	2	1
+6	Gene743 & ~Gene235	4	2	0.0	Gene235, Gene743	2	1
+7	Gene553 | Gene990	4	2	0.0	Gene553, Gene990	2	1
+8	Gene553 | Gene990	4	2	0.0	Gene553, Gene990	2	1
+9	Gene850 & Gene898	4	2	0.0	Gene850, Gene898	2	1
+10	Gene850 & Gene997	4	2	0.0	Gene850, Gene997	2	1
+11	Gene850 & Gene898	4	2	0.0	Gene850, Gene898	2	1
+12	Gene925 & Gene990	4	2	0.0	Gene925, Gene990	2	1
+13	Gene850 | Gene990	4	2	0.0	Gene850, Gene990	2	1
+14	Gene850 & Gene997	4	2	0.0	Gene850, Gene997	2	1
+15	Gene743 & Gene990	4	2	0.0	Gene743, Gene990	2	1
+16	Gene850 & Gene898	4	2	0.0	Gene850, Gene898	2	1
+17	Gene850 & Gene898	4	2	0.0	Gene850, Gene898	2	1
+18	Gene850 & Gene898	4	2	0.0	Gene850, Gene898	2	1
+19	Gene553 | Gene990	4	2	0.0	Gene553, Gene990	2	1
+20	Gene850 & Gene898	4	2	0.0	Gene850, Gene898	2	1
+21	Gene553 | Gene898	4	2	0.0	Gene553, Gene898	2	1
+22	Gene553 | Gene990	4	2	0.0	Gene553, Gene990	2	1
+23	Gene850 & Gene898	4	2	0.0	Gene850, Gene898	2	1
+24	Gene553 | Gene990	4	2	0.0	Gene553, Gene990	2	1
+25	Gene990	4	1	0.5	Gene990	1	1
+26	Gene850	4	1	0.5	Gene850	1	1
+27	Gene990	4	1	0.5	Gene990	1	1
+28	Gene990	4	1	0.5	Gene990	1	1
+29	Gene512 & Gene850	3	2	0.0	Gene512, Gene850	2	1
+30	Gene512 & Gene850	3	2	0.0	Gene512, Gene850	2	1
+31	Gene553 & Gene78	3	2	0.0	Gene553, Gene78	2	1
+32	Gene384 & ~Gene235 & ~Gene990	3	3	0.0	Gene235, Gene384, Gene990	3	1
+33	Gene512 & Gene850	3	2	0.0	Gene512, Gene850	2	1
+34	Gene553 & Gene990 & ~Gene512	3	3	0.0	Gene512, Gene553, Gene990	3	1
+35	Gene850 | (Gene512 & Gene812)	3	3	0.0	Gene512, Gene812, Gene850	3	1
+36	Gene841 | Gene850	3	2	0.0	Gene841, Gene850	2	1
+37	Gene235 & Gene553 & Gene990	3	3	0.0	Gene235, Gene553, Gene990	3	1
+38	Gene553	3	1	0.5	Gene553	1	1
+39	Gene925 | Gene990 | (Gene235 & Gene476)	3	4	0.5	Gene235, Gene476, Gene925, Gene990	4	1
+40	Gene553	3	1	0.5	Gene553	1	1
+41	Gene71 & Gene839 & (Gene199 | Gene384) & (Gene46 | Gene498)	3	6	1.5	Gene199, Gene384, Gene46, Gene498, Gene71, Gene839	6	1
+42	Gene46 | Gene498	2	2	0.0	Gene46, Gene498	2	1
+43	Gene384 | Gene990	2	2	0.0	Gene384, Gene990	2	1
+44	Gene476 & Gene5	2	2	0.0	Gene476, Gene5	2	1
+45	Gene905	2	1	0.5	Gene905	1	1
+46	Gene372	2	1	0.5	Gene372	1	1
+47	Gene659 | Gene990	1	2	0.0	Gene659, Gene990	2	1
+48	Gene235 | Gene990	1	2	0.0	Gene235, Gene990	2	1
+49	Gene990 | ~Gene553	1	2	0.0	Gene553, Gene990	2	1
+50	Gene384 | Gene990 | (Gene235 & Gene743)	1	4	0.5	Gene235, Gene384, Gene743, Gene990	4	1

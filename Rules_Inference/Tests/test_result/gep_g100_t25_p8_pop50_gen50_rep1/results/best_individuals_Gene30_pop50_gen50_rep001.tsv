@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition	mlp_loss
+1	Gene30 & Gene64 & Gene65 & Gene99	22	4	0.5	Gene30, Gene64, Gene65, Gene99	4	1	0.346001184223357
+2	Gene30 & Gene64 & Gene65 & Gene99	22	4	0.5	Gene30, Gene64, Gene65, Gene99	4	1	0.346001184223357
+3	Gene30 & Gene64 & Gene65 & Gene99	22	4	0.5	Gene30, Gene64, Gene65, Gene99	4	1	0.346001184223357
+4	Gene30 & Gene64 & Gene65 & Gene99	22	4	0.5	Gene30, Gene64, Gene65, Gene99	4	1	0.346001184223357
+5	Gene30 & Gene64 & Gene65 & Gene99	22	4	0.5	Gene30, Gene64, Gene65, Gene99	4	1	0.346001184223357
+6	Gene30 & Gene64 & Gene65 & Gene99	22	4	0.5	Gene30, Gene64, Gene65, Gene99	4	1	0.346001184223357
+7	Gene30 & Gene64 & Gene65 & Gene99	22	4	0.5	Gene30, Gene64, Gene65, Gene99	4	1	0.346001184223357
+8	Gene30 & Gene64 & Gene65 & Gene99	22	4	0.5	Gene30, Gene64, Gene65, Gene99	4	1	0.346001184223357
+9	Gene30 & Gene64 & Gene65 & Gene99	22	4	0.5	Gene30, Gene64, Gene65, Gene99	4	1	0.346001184223357
+10	Gene30 & Gene64 & Gene65 & Gene99	22	4	0.5	Gene30, Gene64, Gene65, Gene99	4	1	0.346001184223357
+11	Gene30 & Gene64 & Gene65 & Gene99	22	4	0.5	Gene30, Gene64, Gene65, Gene99	4	1	0.346001184223357
+12	Gene30 & Gene64 & Gene65 & Gene99	22	4	0.5	Gene30, Gene64, Gene65, Gene99	4	1	0.346001184223357
+13	Gene30 & Gene64 & Gene65 & Gene99	22	4	0.5	Gene30, Gene64, Gene65, Gene99	4	1	0.346001184223357
+14	Gene30 & Gene64 & Gene65 & Gene99	22	4	0.5	Gene30, Gene64, Gene65, Gene99	4	1	0.346001184223357
+15	Gene30 & Gene64 & Gene99	21	3	0.0	Gene30, Gene64, Gene99	3	1	1.493810372770006
+16	Gene30 & Gene64 & Gene99	21	3	0.0	Gene30, Gene64, Gene99	3	1	1.493810372770006
+17	Gene25 & Gene30 & Gene64 & Gene65 & Gene99	21	5	1.0	Gene25, Gene30, Gene64, Gene65, Gene99	5	1	0.7122536969759606
+18	Gene30 & Gene99	20	2	0.0	Gene30, Gene99	2	1	1.5319027569474946
+19	Gene30 & Gene99	20	2	0.0	Gene30, Gene99	2	1	1.5319027569474946
+20	Gene30 & Gene65	20	2	0.0	Gene30, Gene65	2	1	1.5711583310188173
+21	Gene30 & Gene65	20	2	0.0	Gene30, Gene65	2	1	1.5711583310188173
+22	Gene30 & Gene65	20	2	0.0	Gene30, Gene65	2	1	1.5711583310188173
+23	Gene30 & Gene65	20	2	0.0	Gene30, Gene65	2	1	1.5711583310188173
+24	Gene30 & Gene64	20	2	0.0	Gene30, Gene64	2	1	1.579035977188548
+25	Gene24 & Gene30	20	2	0.0	Gene24, Gene30	2	1	1.6021633362236667
+26	Gene24 & Gene30 & Gene63 & Gene99	20	4	0.5	Gene24, Gene30, Gene63, Gene99	4	1	0.7942659070991996
+27	Gene64 & Gene65 & Gene99	17	3	0.0	Gene64, Gene65, Gene99	3	1	2.0730415101899125
+28	Gene64 & Gene65 & Gene8 & Gene99	17	4	0.5	Gene64, Gene65, Gene8, Gene99	4	1	1.8353497158074439
+29	Gene65 & Gene99	16	2	0.0	Gene65, Gene99	2	1	3.040552212881294
+30	Gene65 & Gene99	16	2	0.0	Gene65, Gene99	2	1	3.040552212881294
+31	Gene65 & Gene99	16	2	0.0	Gene65, Gene99	2	1	3.040552212881294
+32	Gene35 & Gene99	16	2	0.0	Gene35, Gene99	2	1	3.078663728360869
+33	Gene64 & Gene99	16	2	0.0	Gene64, Gene99	2	1	3.0921383780492873
+34	Gene64 & Gene99	16	2	0.0	Gene64, Gene99	2	1	3.0921383780492873
+35	Gene4	15	1	0.5	Gene4	1	1	2.9737390731684683
+36	(Gene30 | Gene64) & (Gene30 | Gene99) & (Gene64 | Gene65) & (Gene64 | Gene8) & (Gene65 | Gene99) & (Gene8 | Gene99)	15	5	1.0	Gene30, Gene64, Gene65, Gene8, Gene99	5	1	0.26423718281948405
+37	Gene99 | (Gene64 & Gene65)	14	3	0.0	Gene64, Gene65, Gene99	3	1	2.0730415101899125
+38	Gene65 & Gene97	14	2	0.0	Gene65, Gene97	2	1	2.794437619385515
+39	Gene40 & Gene64	14	2	0.0	Gene40, Gene64	2	1	2.98577896740178
+40	Gene33 & Gene8	14	2	0.0	Gene33, Gene8	2	1	3.1705950710411726
+41	Gene30 | (Gene64 & Gene65 & Gene99)	14	4	0.5	Gene30, Gene64, Gene65, Gene99	4	1	0.346001184223357
+42	Gene65 | (Gene64 & Gene8 & Gene99)	14	4	0.5	Gene64, Gene65, Gene8, Gene99	4	1	1.8353497158074439
+43	Gene30 & Gene53 & Gene64 & Gene65 & Gene8	14	5	1.0	Gene30, Gene53, Gene64, Gene65, Gene8	5	1	0.4011157343146394
+44	Gene15 & Gene30 & Gene63 & Gene64 & Gene99	14	5	1.0	Gene15, Gene30, Gene63, Gene64, Gene99	5	1	1.4192981535096096
+45	Gene30 & Gene6 & (Gene64 | Gene99)	12	4	0.5	Gene30, Gene6, Gene64, Gene99	4	1	0.9367920181059115
+46	Gene21 & Gene65	11	2	0.0	Gene21, Gene65	2	1	1.7902558895115408
+47	Gene25 & Gene27 & Gene64 & Gene7 & Gene83 & Gene99	11	6	1.5	Gene25, Gene27, Gene64, Gene7, Gene83, Gene99	6	1	0.4704097374785019
+48	Gene30 & Gene64 & Gene74 & Gene99	10	4	0.5	Gene30, Gene64, Gene74, Gene99	4	1	1.130335363070896
+49	Gene53	10	1	0.5	Gene53	1	1	3.149262986057992
+50	Gene99 & ~Gene64 & ~Gene7	9	3	0.0	Gene64, Gene7, Gene99	3	1	2.400099376384974

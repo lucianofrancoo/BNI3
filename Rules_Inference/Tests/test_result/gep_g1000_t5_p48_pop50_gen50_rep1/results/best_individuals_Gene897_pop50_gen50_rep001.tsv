@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	Gene600 & Gene745	4	2	0.0	Gene600, Gene745	2	1
+2	Gene83 & (Gene50 | Gene917)	4	3	0.0	Gene50, Gene83, Gene917	3	1
+3	Gene745 & Gene956	4	2	0.0	Gene745, Gene956	2	1
+4	Gene600 & Gene745	4	2	0.0	Gene600, Gene745	2	1
+5	Gene600 & Gene745 & Gene956	4	3	0.0	Gene600, Gene745, Gene956	3	1
+6	Gene870 & Gene994	4	2	0.0	Gene870, Gene994	2	1
+7	Gene600 & Gene745	4	2	0.0	Gene600, Gene745	2	1
+8	Gene745 & Gene956	4	2	0.0	Gene745, Gene956	2	1
+9	Gene600 & Gene745	4	2	0.0	Gene600, Gene745	2	1
+10	Gene745 & Gene956	4	2	0.0	Gene745, Gene956	2	1
+11	Gene745 & Gene956	4	2	0.0	Gene745, Gene956	2	1
+12	Gene600 & Gene745	4	2	0.0	Gene600, Gene745	2	1
+13	Gene600 & Gene745	4	2	0.0	Gene600, Gene745	2	1
+14	Gene600 & Gene745	4	2	0.0	Gene600, Gene745	2	1
+15	Gene600 & Gene745	4	2	0.0	Gene600, Gene745	2	1
+16	Gene600 & Gene848	4	2	0.0	Gene600, Gene848	2	1
+17	Gene600 & Gene745	4	2	0.0	Gene600, Gene745	2	1
+18	Gene745 & Gene956	4	2	0.0	Gene745, Gene956	2	1
+19	Gene505 & Gene956	4	2	0.0	Gene505, Gene956	2	1
+20	Gene600 & Gene745	4	2	0.0	Gene600, Gene745	2	1
+21	Gene116 & Gene956	3	2	0.0	Gene116, Gene956	2	1
+22	Gene862 & Gene956	3	2	0.0	Gene862, Gene956	2	1
+23	Gene600 & Gene956	3	2	0.0	Gene600, Gene956	2	1
+24	Gene673 & Gene745	3	2	0.0	Gene673, Gene745	2	1
+25	Gene600 & Gene673	3	2	0.0	Gene600, Gene673	2	1
+26	Gene600 & Gene673 & Gene956	3	3	0.0	Gene600, Gene673, Gene956	3	1
+27	Gene525 & Gene92	3	2	0.0	Gene525, Gene92	2	1
+28	Gene600 & Gene92 & Gene956	3	3	0.0	Gene600, Gene92, Gene956	3	1
+29	Gene673 & Gene956	3	2	0.0	Gene673, Gene956	2	1
+30	Gene673 & Gene745 & Gene956	3	3	0.0	Gene673, Gene745, Gene956	3	1
+31	Gene600 & Gene673 & Gene956	3	3	0.0	Gene600, Gene673, Gene956	3	1
+32	Gene600 & Gene92	3	2	0.0	Gene600, Gene92	2	1
+33	Gene417	3	1	0.5	Gene417	1	1
+34	Gene956	3	1	0.5	Gene956	1	1
+35	Gene600	3	1	0.5	Gene600	1	1
+36	Gene956	3	1	0.5	Gene956	1	1
+37	Gene600	3	1	0.5	Gene600	1	1
+38	Gene956	3	1	0.5	Gene956	1	1
+39	Gene600 & Gene673 & Gene745 & Gene956	3	4	0.5	Gene600, Gene673, Gene745, Gene956	4	1
+40	Gene652	3	1	0.5	Gene652	1	1
+41	Gene209 & Gene600	2	2	0.0	Gene209, Gene600	2	1
+42	Gene673 & Gene944	2	2	0.0	Gene673, Gene944	2	1
+43	True	2	1	0.5	True	1	1
+44	Gene870 & Gene881	2	2	0.0	Gene870, Gene881	2	1
+45	Gene19 & Gene944	2	2	0.0	Gene19, Gene944	2	1
+46	Gene673 & Gene944 & Gene956	2	3	0.0	Gene673, Gene944, Gene956	3	1
+47	Gene745 & Gene944	1	2	0.0	Gene745, Gene944	2	1
+48	~Gene956 & (Gene342 | Gene50)	1	3	0.0	Gene342, Gene50, Gene956	3	1
+49	Gene944	1	1	0.5	Gene944	1	1
+50	Gene583	1	1	0.5	Gene583	1	1

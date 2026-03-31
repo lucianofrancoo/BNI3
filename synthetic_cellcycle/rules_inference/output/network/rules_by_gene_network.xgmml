@@ -1,0 +1,436 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graph xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:cy="http://www.cytoscape.org" xmlns="http://www.cs.rpi.edu/XGMML" directed="1" label="Boolean Gene Regulatory Network">
+  <att name="documentVersion" value="1.1" />
+  <att name="networkMetadata" />
+  <att name="backgroundColor" value="#FFFFFF" />
+  <node id="Cdc20" label="Cdc20">
+    <att name="name" value="Cdc20" />
+    <att name="node_type" value="gene" />
+    <att name="position" value="1" />
+    <att name="rule" value="CycB" />
+    <att name="score" value="1.9375" />
+    <att name="n_correct" value="4" />
+    <att name="n_regulators" value="3" />
+    <att name="mse" value="nan" />
+    <graphics type="ELLIPSE" x="-286.8" y="117.9" w="75.0" h="50.0" fill="#7BCCC4" outline="#000000">
+      <att name="node_border_width" value="2.0" />
+      <att name="NODE_LABEL_FONT_FACE" value="Arial Black" />
+      <att name="NODE_LABEL_FONT_SIZE" value="12" />
+    </graphics>
+  </node>
+  <node id="CycE" label="CycE">
+    <att name="name" value="CycE" />
+    <att name="node_type" value="gene" />
+    <att name="position" value="1" />
+    <att name="rule" value="E2F &amp; ~Rb" />
+    <att name="score" value="1.9375" />
+    <att name="n_correct" value="4" />
+    <att name="n_regulators" value="3" />
+    <att name="mse" value="nan" />
+    <graphics type="ELLIPSE" x="300.0" y="67.1" w="75.0" h="50.0" fill="#7BCCC4" outline="#000000">
+      <att name="node_border_width" value="2.0" />
+      <att name="NODE_LABEL_FONT_FACE" value="Arial Black" />
+      <att name="NODE_LABEL_FONT_SIZE" value="12" />
+    </graphics>
+  </node>
+  <node id="CycA" label="CycA">
+    <att name="name" value="CycA" />
+    <att name="node_type" value="gene" />
+    <att name="position" value="1" />
+    <att name="rule" value="(E2F &amp; ~Rb &amp; ~Cdc20 &amp; ~(Cdh1 &amp; UbcH10)) | (CycA &amp; ~Rb &amp; ~Cdc20 &amp; ~(Cdh1 &amp; UbcH10))" />
+    <att name="score" value="1.9375" />
+    <att name="n_correct" value="4" />
+    <att name="n_regulators" value="3" />
+    <att name="mse" value="nan" />
+    <graphics type="ELLIPSE" x="-52.6" y="10.6" w="75.0" h="50.0" fill="#7BCCC4" outline="#000000">
+      <att name="node_border_width" value="2.0" />
+      <att name="NODE_LABEL_FONT_FACE" value="Arial Black" />
+      <att name="NODE_LABEL_FONT_SIZE" value="12" />
+    </graphics>
+  </node>
+  <node id="E2F" label="E2F">
+    <att name="name" value="E2F" />
+    <att name="node_type" value="gene" />
+    <att name="position" value="1" />
+    <att name="rule" value="(~Rb &amp; ~CycA &amp; ~CycB) | (p27 &amp; ~Rb &amp; ~CycB)" />
+    <att name="score" value="1.9375" />
+    <att name="n_correct" value="4" />
+    <att name="n_regulators" value="2" />
+    <att name="mse" value="nan" />
+    <graphics type="ELLIPSE" x="85.0" y="161.2" w="75.0" h="50.0" fill="#7BCCC4" outline="#000000">
+      <att name="node_border_width" value="2.0" />
+      <att name="NODE_LABEL_FONT_FACE" value="Arial Black" />
+      <att name="NODE_LABEL_FONT_SIZE" value="12" />
+    </graphics>
+  </node>
+  <node id="CycB" label="CycB">
+    <att name="name" value="CycB" />
+    <att name="node_type" value="gene" />
+    <att name="position" value="1" />
+    <att name="rule" value="~Cdc20 &amp; ~Cdh1" />
+    <att name="score" value="1.9375" />
+    <att name="n_correct" value="4" />
+    <att name="n_regulators" value="2" />
+    <att name="mse" value="nan" />
+    <graphics type="ELLIPSE" x="-108.7" y="97.3" w="75.0" h="50.0" fill="#7BCCC4" outline="#000000">
+      <att name="node_border_width" value="2.0" />
+      <att name="NODE_LABEL_FONT_FACE" value="Arial Black" />
+      <att name="NODE_LABEL_FONT_SIZE" value="12" />
+    </graphics>
+  </node>
+  <node id="UbcH10" label="UbcH10">
+    <att name="name" value="UbcH10" />
+    <att name="node_type" value="gene" />
+    <att name="position" value="1" />
+    <att name="rule" value="~Cdh1 | (Cdh1 &amp; UbcH10 &amp; (Cdc20 | CycA | CycB))" />
+    <att name="score" value="1.9375" />
+    <att name="n_correct" value="4" />
+    <att name="n_regulators" value="3" />
+    <att name="mse" value="nan" />
+    <graphics type="ELLIPSE" x="-267.3" y="-39.7" w="75.0" h="50.0" fill="#7BCCC4" outline="#000000">
+      <att name="node_border_width" value="2.0" />
+      <att name="NODE_LABEL_FONT_FACE" value="Arial Black" />
+      <att name="NODE_LABEL_FONT_SIZE" value="12" />
+    </graphics>
+  </node>
+  <node id="p27" label="p27">
+    <att name="name" value="p27" />
+    <att name="node_type" value="gene" />
+    <att name="position" value="1" />
+    <att name="rule" value="(~CycD &amp; ~CycE &amp; ~CycA &amp; ~CycB) | (p27 &amp; ~(CycE &amp; CycA) &amp; ~CycB &amp; ~CycD)" />
+    <att name="score" value="1.9375" />
+    <att name="n_correct" value="4" />
+    <att name="n_regulators" value="2" />
+    <att name="mse" value="nan" />
+    <graphics type="ELLIPSE" x="83.7" y="-105.8" w="75.0" h="50.0" fill="#7BCCC4" outline="#000000">
+      <att name="node_border_width" value="2.0" />
+      <att name="NODE_LABEL_FONT_FACE" value="Arial Black" />
+      <att name="NODE_LABEL_FONT_SIZE" value="12" />
+    </graphics>
+  </node>
+  <node id="Rb" label="Rb">
+    <att name="name" value="Rb" />
+    <att name="node_type" value="gene" />
+    <att name="position" value="1" />
+    <att name="rule" value="(~CycD &amp; ~CycE &amp; ~CycA &amp; ~CycB) | (p27 &amp; ~CycD &amp; ~CycB)" />
+    <att name="score" value="1.9375" />
+    <att name="n_correct" value="4" />
+    <att name="n_regulators" value="2" />
+    <att name="mse" value="nan" />
+    <graphics type="ELLIPSE" x="146.2" y="10.6" w="75.0" h="50.0" fill="#7BCCC4" outline="#000000">
+      <att name="node_border_width" value="2.0" />
+      <att name="NODE_LABEL_FONT_FACE" value="Arial Black" />
+      <att name="NODE_LABEL_FONT_SIZE" value="12" />
+    </graphics>
+  </node>
+  <node id="CycD" label="CycD">
+    <att name="name" value="CycD" />
+    <att name="node_type" value="gene" />
+    <att name="position" value="1" />
+    <att name="rule" value="CycD" />
+    <att name="score" value="1.9375" />
+    <att name="n_correct" value="4" />
+    <att name="n_regulators" value="3" />
+    <att name="mse" value="nan" />
+    <graphics type="ELLIPSE" x="240.3" y="-200.0" w="75.0" h="50.0" fill="#7BCCC4" outline="#000000">
+      <att name="node_border_width" value="2.0" />
+      <att name="NODE_LABEL_FONT_FACE" value="Arial Black" />
+      <att name="NODE_LABEL_FONT_SIZE" value="12" />
+    </graphics>
+  </node>
+  <node id="Cdh1" label="Cdh1">
+    <att name="name" value="Cdh1" />
+    <att name="node_type" value="gene" />
+    <att name="position" value="1" />
+    <att name="rule" value="(~CycA &amp; ~CycB) | Cdc20 | (p27 &amp; ~CycB)" />
+    <att name="score" value="1.9375" />
+    <att name="n_correct" value="4" />
+    <att name="n_regulators" value="2" />
+    <att name="mse" value="nan" />
+    <graphics type="ELLIPSE" x="-139.9" y="-119.2" w="75.0" h="50.0" fill="#7BCCC4" outline="#000000">
+      <att name="node_border_width" value="2.0" />
+      <att name="NODE_LABEL_FONT_FACE" value="Arial Black" />
+      <att name="NODE_LABEL_FONT_SIZE" value="12" />
+    </graphics>
+  </node>
+  <edge id="0" source="Cdc20" target="Cdh1" label="Cdc20 -&gt; Cdh1">
+    <att name="regulation_type" value="positive" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="activation" />
+    <att name="rule" value="(~CycA &amp; ~CycB) | Cdc20 | (p27 &amp; ~CycB)" />
+    <att name="score" value="1.9375" />
+    <graphics width="2.0" style="SOLID" fill="#3690C0" targetArrow="DELTA" targetArrowColor="#3690C0" />
+  </edge>
+  <edge id="1" source="Cdc20" target="CycA" label="Cdc20 -&gt; CycA">
+    <att name="regulation_type" value="negative" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="inhibition" />
+    <att name="rule" value="(E2F &amp; ~Rb &amp; ~Cdc20 &amp; ~(Cdh1 &amp; UbcH10)) | (CycA &amp; ~Rb &amp; ~Cdc20 &amp; ~(Cdh1 &amp; UbcH10))" />
+    <att name="score" value="1.9375" />
+    <graphics width="2.0" style="SOLID" fill="#D7301F" targetArrow="T" targetArrowColor="#D7301F" />
+  </edge>
+  <edge id="2" source="Cdc20" target="CycB" label="Cdc20 -&gt; CycB">
+    <att name="regulation_type" value="negative" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="inhibition" />
+    <att name="rule" value="~Cdc20 &amp; ~Cdh1" />
+    <att name="score" value="1.9375" />
+    <graphics width="2.0" style="SOLID" fill="#D7301F" targetArrow="T" targetArrowColor="#D7301F" />
+  </edge>
+  <edge id="3" source="Cdc20" target="UbcH10" label="Cdc20 -&gt; UbcH10">
+    <att name="regulation_type" value="positive" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="activation" />
+    <att name="rule" value="~Cdh1 | (Cdh1 &amp; UbcH10 &amp; (Cdc20 | CycA | CycB))" />
+    <att name="score" value="1.9375" />
+    <graphics width="2.0" style="SOLID" fill="#3690C0" targetArrow="DELTA" targetArrowColor="#3690C0" />
+  </edge>
+  <edge id="4" source="CycE" target="Rb" label="CycE -&gt; Rb">
+    <att name="regulation_type" value="negative" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="inhibition" />
+    <att name="rule" value="(~CycD &amp; ~CycE &amp; ~CycA &amp; ~CycB) | (p27 &amp; ~CycD &amp; ~CycB)" />
+    <att name="score" value="1.9375" />
+    <graphics width="2.0" style="SOLID" fill="#D7301F" targetArrow="T" targetArrowColor="#D7301F" />
+  </edge>
+  <edge id="5" source="CycE" target="p27" label="CycE -&gt; p27">
+    <att name="regulation_type" value="negative" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="inhibition" />
+    <att name="rule" value="(~CycD &amp; ~CycE &amp; ~CycA &amp; ~CycB) | (p27 &amp; ~(CycE &amp; CycA) &amp; ~CycB &amp; ~CycD)" />
+    <att name="score" value="1.9375" />
+    <graphics width="2.0" style="SOLID" fill="#D7301F" targetArrow="T" targetArrowColor="#D7301F" />
+  </edge>
+  <edge id="6" source="CycA" target="Cdh1" label="CycA -&gt; Cdh1">
+    <att name="regulation_type" value="negative" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="inhibition" />
+    <att name="rule" value="(~CycA &amp; ~CycB) | Cdc20 | (p27 &amp; ~CycB)" />
+    <att name="score" value="1.9375" />
+    <graphics width="2.0" style="SOLID" fill="#D7301F" targetArrow="T" targetArrowColor="#D7301F" />
+  </edge>
+  <edge id="7" source="CycA" target="CycA" label="CycA -&gt; CycA">
+    <att name="regulation_type" value="positive" />
+    <att name="is_autoregulation" value="True" />
+    <att name="interaction_type" value="activation" />
+    <att name="rule" value="(E2F &amp; ~Rb &amp; ~Cdc20 &amp; ~(Cdh1 &amp; UbcH10)) | (CycA &amp; ~Rb &amp; ~Cdc20 &amp; ~(Cdh1 &amp; UbcH10))" />
+    <att name="score" value="1.9375" />
+    <graphics width="2.0" style="SOLID" fill="#3690C0" targetArrow="DELTA" targetArrowColor="#3690C0" />
+  </edge>
+  <edge id="8" source="CycA" target="E2F" label="CycA -&gt; E2F">
+    <att name="regulation_type" value="negative" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="inhibition" />
+    <att name="rule" value="(~Rb &amp; ~CycA &amp; ~CycB) | (p27 &amp; ~Rb &amp; ~CycB)" />
+    <att name="score" value="1.9375" />
+    <graphics width="2.0" style="SOLID" fill="#D7301F" targetArrow="T" targetArrowColor="#D7301F" />
+  </edge>
+  <edge id="9" source="CycA" target="Rb" label="CycA -&gt; Rb">
+    <att name="regulation_type" value="negative" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="inhibition" />
+    <att name="rule" value="(~CycD &amp; ~CycE &amp; ~CycA &amp; ~CycB) | (p27 &amp; ~CycD &amp; ~CycB)" />
+    <att name="score" value="1.9375" />
+    <graphics width="2.0" style="SOLID" fill="#D7301F" targetArrow="T" targetArrowColor="#D7301F" />
+  </edge>
+  <edge id="10" source="CycA" target="UbcH10" label="CycA -&gt; UbcH10">
+    <att name="regulation_type" value="positive" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="activation" />
+    <att name="rule" value="~Cdh1 | (Cdh1 &amp; UbcH10 &amp; (Cdc20 | CycA | CycB))" />
+    <att name="score" value="1.9375" />
+    <graphics width="2.0" style="SOLID" fill="#3690C0" targetArrow="DELTA" targetArrowColor="#3690C0" />
+  </edge>
+  <edge id="11" source="CycA" target="p27" label="CycA -&gt; p27">
+    <att name="regulation_type" value="negative" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="inhibition" />
+    <att name="rule" value="(~CycD &amp; ~CycE &amp; ~CycA &amp; ~CycB) | (p27 &amp; ~(CycE &amp; CycA) &amp; ~CycB &amp; ~CycD)" />
+    <att name="score" value="1.9375" />
+    <graphics width="2.0" style="SOLID" fill="#D7301F" targetArrow="T" targetArrowColor="#D7301F" />
+  </edge>
+  <edge id="12" source="E2F" target="CycA" label="E2F -&gt; CycA">
+    <att name="regulation_type" value="positive" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="activation" />
+    <att name="rule" value="(E2F &amp; ~Rb &amp; ~Cdc20 &amp; ~(Cdh1 &amp; UbcH10)) | (CycA &amp; ~Rb &amp; ~Cdc20 &amp; ~(Cdh1 &amp; UbcH10))" />
+    <att name="score" value="1.9375" />
+    <graphics width="2.0" style="SOLID" fill="#3690C0" targetArrow="DELTA" targetArrowColor="#3690C0" />
+  </edge>
+  <edge id="13" source="E2F" target="CycE" label="E2F -&gt; CycE">
+    <att name="regulation_type" value="positive" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="activation" />
+    <att name="rule" value="E2F &amp; ~Rb" />
+    <att name="score" value="1.9375" />
+    <graphics width="2.0" style="SOLID" fill="#3690C0" targetArrow="DELTA" targetArrowColor="#3690C0" />
+  </edge>
+  <edge id="14" source="CycB" target="Cdc20" label="CycB -&gt; Cdc20">
+    <att name="regulation_type" value="positive" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="activation" />
+    <att name="rule" value="CycB" />
+    <att name="score" value="1.9375" />
+    <graphics width="2.0" style="SOLID" fill="#3690C0" targetArrow="DELTA" targetArrowColor="#3690C0" />
+  </edge>
+  <edge id="15" source="CycB" target="Cdh1" label="CycB -&gt; Cdh1">
+    <att name="regulation_type" value="negative" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="inhibition" />
+    <att name="rule" value="(~CycA &amp; ~CycB) | Cdc20 | (p27 &amp; ~CycB)" />
+    <att name="score" value="1.9375" />
+    <graphics width="2.0" style="SOLID" fill="#D7301F" targetArrow="T" targetArrowColor="#D7301F" />
+  </edge>
+  <edge id="16" source="CycB" target="E2F" label="CycB -&gt; E2F">
+    <att name="regulation_type" value="negative" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="inhibition" />
+    <att name="rule" value="(~Rb &amp; ~CycA &amp; ~CycB) | (p27 &amp; ~Rb &amp; ~CycB)" />
+    <att name="score" value="1.9375" />
+    <graphics width="2.0" style="SOLID" fill="#D7301F" targetArrow="T" targetArrowColor="#D7301F" />
+  </edge>
+  <edge id="17" source="CycB" target="Rb" label="CycB -&gt; Rb">
+    <att name="regulation_type" value="negative" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="inhibition" />
+    <att name="rule" value="(~CycD &amp; ~CycE &amp; ~CycA &amp; ~CycB) | (p27 &amp; ~CycD &amp; ~CycB)" />
+    <att name="score" value="1.9375" />
+    <graphics width="2.0" style="SOLID" fill="#D7301F" targetArrow="T" targetArrowColor="#D7301F" />
+  </edge>
+  <edge id="18" source="CycB" target="UbcH10" label="CycB -&gt; UbcH10">
+    <att name="regulation_type" value="positive" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="activation" />
+    <att name="rule" value="~Cdh1 | (Cdh1 &amp; UbcH10 &amp; (Cdc20 | CycA | CycB))" />
+    <att name="score" value="1.9375" />
+    <graphics width="2.0" style="SOLID" fill="#3690C0" targetArrow="DELTA" targetArrowColor="#3690C0" />
+  </edge>
+  <edge id="19" source="CycB" target="p27" label="CycB -&gt; p27">
+    <att name="regulation_type" value="negative" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="inhibition" />
+    <att name="rule" value="(~CycD &amp; ~CycE &amp; ~CycA &amp; ~CycB) | (p27 &amp; ~(CycE &amp; CycA) &amp; ~CycB &amp; ~CycD)" />
+    <att name="score" value="1.9375" />
+    <graphics width="2.0" style="SOLID" fill="#D7301F" targetArrow="T" targetArrowColor="#D7301F" />
+  </edge>
+  <edge id="20" source="UbcH10" target="CycA" label="UbcH10 -&gt; CycA">
+    <att name="regulation_type" value="positive" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="activation" />
+    <att name="rule" value="(E2F &amp; ~Rb &amp; ~Cdc20 &amp; ~(Cdh1 &amp; UbcH10)) | (CycA &amp; ~Rb &amp; ~Cdc20 &amp; ~(Cdh1 &amp; UbcH10))" />
+    <att name="score" value="1.9375" />
+    <graphics width="2.0" style="SOLID" fill="#3690C0" targetArrow="DELTA" targetArrowColor="#3690C0" />
+  </edge>
+  <edge id="21" source="UbcH10" target="UbcH10" label="UbcH10 -&gt; UbcH10">
+    <att name="regulation_type" value="positive" />
+    <att name="is_autoregulation" value="True" />
+    <att name="interaction_type" value="activation" />
+    <att name="rule" value="~Cdh1 | (Cdh1 &amp; UbcH10 &amp; (Cdc20 | CycA | CycB))" />
+    <att name="score" value="1.9375" />
+    <graphics width="2.0" style="SOLID" fill="#3690C0" targetArrow="DELTA" targetArrowColor="#3690C0" />
+  </edge>
+  <edge id="22" source="p27" target="Cdh1" label="p27 -&gt; Cdh1">
+    <att name="regulation_type" value="positive" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="activation" />
+    <att name="rule" value="(~CycA &amp; ~CycB) | Cdc20 | (p27 &amp; ~CycB)" />
+    <att name="score" value="1.9375" />
+    <graphics width="2.0" style="SOLID" fill="#3690C0" targetArrow="DELTA" targetArrowColor="#3690C0" />
+  </edge>
+  <edge id="23" source="p27" target="E2F" label="p27 -&gt; E2F">
+    <att name="regulation_type" value="positive" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="activation" />
+    <att name="rule" value="(~Rb &amp; ~CycA &amp; ~CycB) | (p27 &amp; ~Rb &amp; ~CycB)" />
+    <att name="score" value="1.9375" />
+    <graphics width="2.0" style="SOLID" fill="#3690C0" targetArrow="DELTA" targetArrowColor="#3690C0" />
+  </edge>
+  <edge id="24" source="p27" target="Rb" label="p27 -&gt; Rb">
+    <att name="regulation_type" value="positive" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="activation" />
+    <att name="rule" value="(~CycD &amp; ~CycE &amp; ~CycA &amp; ~CycB) | (p27 &amp; ~CycD &amp; ~CycB)" />
+    <att name="score" value="1.9375" />
+    <graphics width="2.0" style="SOLID" fill="#3690C0" targetArrow="DELTA" targetArrowColor="#3690C0" />
+  </edge>
+  <edge id="25" source="p27" target="p27" label="p27 -&gt; p27">
+    <att name="regulation_type" value="positive" />
+    <att name="is_autoregulation" value="True" />
+    <att name="interaction_type" value="activation" />
+    <att name="rule" value="(~CycD &amp; ~CycE &amp; ~CycA &amp; ~CycB) | (p27 &amp; ~(CycE &amp; CycA) &amp; ~CycB &amp; ~CycD)" />
+    <att name="score" value="1.9375" />
+    <graphics width="2.0" style="SOLID" fill="#3690C0" targetArrow="DELTA" targetArrowColor="#3690C0" />
+  </edge>
+  <edge id="26" source="Rb" target="CycA" label="Rb -&gt; CycA">
+    <att name="regulation_type" value="negative" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="inhibition" />
+    <att name="rule" value="(E2F &amp; ~Rb &amp; ~Cdc20 &amp; ~(Cdh1 &amp; UbcH10)) | (CycA &amp; ~Rb &amp; ~Cdc20 &amp; ~(Cdh1 &amp; UbcH10))" />
+    <att name="score" value="1.9375" />
+    <graphics width="2.0" style="SOLID" fill="#D7301F" targetArrow="T" targetArrowColor="#D7301F" />
+  </edge>
+  <edge id="27" source="Rb" target="CycE" label="Rb -&gt; CycE">
+    <att name="regulation_type" value="negative" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="inhibition" />
+    <att name="rule" value="E2F &amp; ~Rb" />
+    <att name="score" value="1.9375" />
+    <graphics width="2.0" style="SOLID" fill="#D7301F" targetArrow="T" targetArrowColor="#D7301F" />
+  </edge>
+  <edge id="28" source="Rb" target="E2F" label="Rb -&gt; E2F">
+    <att name="regulation_type" value="negative" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="inhibition" />
+    <att name="rule" value="(~Rb &amp; ~CycA &amp; ~CycB) | (p27 &amp; ~Rb &amp; ~CycB)" />
+    <att name="score" value="1.9375" />
+    <graphics width="2.0" style="SOLID" fill="#D7301F" targetArrow="T" targetArrowColor="#D7301F" />
+  </edge>
+  <edge id="29" source="CycD" target="CycD" label="CycD -&gt; CycD">
+    <att name="regulation_type" value="positive" />
+    <att name="is_autoregulation" value="True" />
+    <att name="interaction_type" value="activation" />
+    <att name="rule" value="CycD" />
+    <att name="score" value="1.9375" />
+    <graphics width="2.0" style="SOLID" fill="#3690C0" targetArrow="DELTA" targetArrowColor="#3690C0" />
+  </edge>
+  <edge id="30" source="CycD" target="Rb" label="CycD -&gt; Rb">
+    <att name="regulation_type" value="negative" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="inhibition" />
+    <att name="rule" value="(~CycD &amp; ~CycE &amp; ~CycA &amp; ~CycB) | (p27 &amp; ~CycD &amp; ~CycB)" />
+    <att name="score" value="1.9375" />
+    <graphics width="2.0" style="SOLID" fill="#D7301F" targetArrow="T" targetArrowColor="#D7301F" />
+  </edge>
+  <edge id="31" source="CycD" target="p27" label="CycD -&gt; p27">
+    <att name="regulation_type" value="negative" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="inhibition" />
+    <att name="rule" value="(~CycD &amp; ~CycE &amp; ~CycA &amp; ~CycB) | (p27 &amp; ~(CycE &amp; CycA) &amp; ~CycB &amp; ~CycD)" />
+    <att name="score" value="1.9375" />
+    <graphics width="2.0" style="SOLID" fill="#D7301F" targetArrow="T" targetArrowColor="#D7301F" />
+  </edge>
+  <edge id="32" source="Cdh1" target="CycA" label="Cdh1 -&gt; CycA">
+    <att name="regulation_type" value="positive" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="activation" />
+    <att name="rule" value="(E2F &amp; ~Rb &amp; ~Cdc20 &amp; ~(Cdh1 &amp; UbcH10)) | (CycA &amp; ~Rb &amp; ~Cdc20 &amp; ~(Cdh1 &amp; UbcH10))" />
+    <att name="score" value="1.9375" />
+    <graphics width="2.0" style="SOLID" fill="#3690C0" targetArrow="DELTA" targetArrowColor="#3690C0" />
+  </edge>
+  <edge id="33" source="Cdh1" target="CycB" label="Cdh1 -&gt; CycB">
+    <att name="regulation_type" value="negative" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="inhibition" />
+    <att name="rule" value="~Cdc20 &amp; ~Cdh1" />
+    <att name="score" value="1.9375" />
+    <graphics width="2.0" style="SOLID" fill="#D7301F" targetArrow="T" targetArrowColor="#D7301F" />
+  </edge>
+  <edge id="34" source="Cdh1" target="UbcH10" label="Cdh1 -&gt; UbcH10">
+    <att name="regulation_type" value="negative" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="inhibition" />
+    <att name="rule" value="~Cdh1 | (Cdh1 &amp; UbcH10 &amp; (Cdc20 | CycA | CycB))" />
+    <att name="score" value="1.9375" />
+    <graphics width="2.0" style="SOLID" fill="#D7301F" targetArrow="T" targetArrowColor="#D7301F" />
+  </edge>
+</graph>

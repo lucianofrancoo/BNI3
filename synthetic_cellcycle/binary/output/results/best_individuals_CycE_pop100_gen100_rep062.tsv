@@ -1,0 +1,101 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	E2F | UbcH10	4	2	0.0	E2F, UbcH10	2	62
+2	E2F | UbcH10	4	2	0.0	E2F, UbcH10	2	62
+3	E2F | (Cdc20 & UbcH10)	4	3	0.0	Cdc20, E2F, UbcH10	3	62
+4	E2F | UbcH10	4	2	0.0	E2F, UbcH10	2	62
+5	E2F | p27	4	2	0.0	E2F, p27	2	62
+6	UbcH10 | p27	4	2	0.0	UbcH10, p27	2	62
+7	E2F | UbcH10	4	2	0.0	E2F, UbcH10	2	62
+8	E2F | UbcH10	4	2	0.0	E2F, UbcH10	2	62
+9	E2F | UbcH10	4	2	0.0	E2F, UbcH10	2	62
+10	E2F | ~CycD	4	2	0.0	CycD, E2F	2	62
+11	E2F | p27	4	2	0.0	E2F, p27	2	62
+12	E2F | UbcH10	4	2	0.0	E2F, UbcH10	2	62
+13	E2F | UbcH10	4	2	0.0	E2F, UbcH10	2	62
+14	E2F | p27	4	2	0.0	E2F, p27	2	62
+15	UbcH10 | p27	4	2	0.0	UbcH10, p27	2	62
+16	UbcH10 | p27	4	2	0.0	UbcH10, p27	2	62
+17	E2F | p27	4	2	0.0	E2F, p27	2	62
+18	E2F | UbcH10	4	2	0.0	E2F, UbcH10	2	62
+19	E2F | (Cdc20 & UbcH10)	4	3	0.0	Cdc20, E2F, UbcH10	3	62
+20	UbcH10 | p27	4	2	0.0	UbcH10, p27	2	62
+21	E2F | UbcH10	4	2	0.0	E2F, UbcH10	2	62
+22	E2F | UbcH10 | p27	4	3	0.0	E2F, UbcH10, p27	3	62
+23	E2F | p27	4	2	0.0	E2F, p27	2	62
+24	UbcH10 | p27	4	2	0.0	UbcH10, p27	2	62
+25	E2F | UbcH10	4	2	0.0	E2F, UbcH10	2	62
+26	E2F | UbcH10 | p27	4	3	0.0	E2F, UbcH10, p27	3	62
+27	E2F | UbcH10	4	2	0.0	E2F, UbcH10	2	62
+28	E2F | UbcH10	4	2	0.0	E2F, UbcH10	2	62
+29	E2F | UbcH10	4	2	0.0	E2F, UbcH10	2	62
+30	E2F | p27	4	2	0.0	E2F, p27	2	62
+31	UbcH10 | p27	4	2	0.0	UbcH10, p27	2	62
+32	E2F | UbcH10	4	2	0.0	E2F, UbcH10	2	62
+33	E2F | UbcH10	4	2	0.0	E2F, UbcH10	2	62
+34	UbcH10 | p27	4	2	0.0	UbcH10, p27	2	62
+35	UbcH10 | p27	4	2	0.0	UbcH10, p27	2	62
+36	E2F | p27	4	2	0.0	E2F, p27	2	62
+37	UbcH10 | p27	4	2	0.0	UbcH10, p27	2	62
+38	E2F | p27	4	2	0.0	E2F, p27	2	62
+39	p27	4	1	0.5	p27	1	62
+40	p27	4	1	0.5	p27	1	62
+41	E2F | (CycD & p27) | (UbcH10 & p27)	4	4	0.5	CycD, E2F, UbcH10, p27	4	62
+42	p27	4	1	0.5	p27	1	62
+43	p27	4	1	0.5	p27	1	62
+44	p27	4	1	0.5	p27	1	62
+45	p27	4	1	0.5	p27	1	62
+46	p27	4	1	0.5	p27	1	62
+47	E2F | (Cdc20 & p27) | (UbcH10 & p27)	4	4	0.5	Cdc20, E2F, UbcH10, p27	4	62
+48	CycA | E2F | p27	3	3	0.0	CycA, E2F, p27	3	62
+49	Cdc20 | E2F	3	2	0.0	Cdc20, E2F	2	62
+50	CycA | CycE	3	2	0.0	CycA, CycE	2	62
+51	CycD | p27	3	2	0.0	CycD, p27	2	62
+52	CycD | E2F | UbcH10	3	3	0.0	CycD, E2F, UbcH10	3	62
+53	E2F	3	1	0.5	E2F	1	62
+54	Cdh1 | UbcH10	3	2	0.0	Cdh1, UbcH10	2	62
+55	CycE | E2F | p27	3	3	0.0	CycE, E2F, p27	3	62
+56	Cdc20 | p27	3	2	0.0	Cdc20, p27	2	62
+57	Cdc20 | CycE | p27	3	3	0.0	Cdc20, CycE, p27	3	62
+58	CycB | p27	3	2	0.0	CycB, p27	2	62
+59	CycB | p27	3	2	0.0	CycB, p27	2	62
+60	Cdh1 | Rb	3	2	0.0	Cdh1, Rb	2	62
+61	Cdh1 | p27	3	2	0.0	Cdh1, p27	2	62
+62	Rb | p27	3	2	0.0	Rb, p27	2	62
+63	Cdc20 | E2F	3	2	0.0	Cdc20, E2F	2	62
+64	E2F	3	1	0.5	E2F	1	62
+65	E2F	3	1	0.5	E2F	1	62
+66	E2F	3	1	0.5	E2F	1	62
+67	Cdh1 | E2F | (CycB & UbcH10)	3	4	0.5	Cdh1, CycB, E2F, UbcH10	4	62
+68	CycE | (Cdc20 & p27) | (E2F & p27)	3	4	0.5	Cdc20, CycE, E2F, p27	4	62
+69	E2F	3	1	0.5	E2F	1	62
+70	E2F	3	1	0.5	E2F	1	62
+71	CycE | (E2F & p27)	2	3	0.0	CycE, E2F, p27	3	62
+72	UbcH10	2	1	0.5	UbcH10	1	62
+73	UbcH10 & p27	2	2	0.0	UbcH10, p27	2	62
+74	CycD | E2F	2	2	0.0	CycD, E2F	2	62
+75	CycD | E2F	2	2	0.0	CycD, E2F	2	62
+76	CycB & (E2F | p27)	2	3	0.0	CycB, E2F, p27	3	62
+77	CycB | E2F	2	2	0.0	CycB, E2F	2	62
+78	CycB | ~UbcH10	2	2	0.0	CycB, UbcH10	2	62
+79	CycD | E2F	2	2	0.0	CycD, E2F	2	62
+80	UbcH10	2	1	0.5	UbcH10	1	62
+81	CycA | UbcH10	2	2	0.0	CycA, UbcH10	2	62
+82	CycD | UbcH10	2	2	0.0	CycD, UbcH10	2	62
+83	UbcH10	2	1	0.5	UbcH10	1	62
+84	UbcH10	2	1	0.5	UbcH10	1	62
+85	UbcH10	2	1	0.5	UbcH10	1	62
+86	UbcH10	2	1	0.5	UbcH10	1	62
+87	UbcH10	2	1	0.5	UbcH10	1	62
+88	UbcH10	2	1	0.5	UbcH10	1	62
+89	UbcH10	2	1	0.5	UbcH10	1	62
+90	Cdc20 | ~E2F	1	2	0.0	Cdc20, E2F	2	62
+91	CycB | Rb	1	2	0.0	CycB, Rb	2	62
+92	Cdc20 | ~E2F	1	2	0.0	Cdc20, E2F	2	62
+93	Cdc20 | UbcH10	1	2	0.0	Cdc20, UbcH10	2	62
+94	Cdc20 & E2F	1	2	0.0	Cdc20, E2F	2	62
+95	UbcH10 | (Cdc20 & CycB)	1	3	0.0	Cdc20, CycB, UbcH10	3	62
+96	Cdc20 | UbcH10	1	2	0.0	Cdc20, UbcH10	2	62
+97	CycB	1	1	0.5	CycB	1	62
+98	CycD	1	1	0.5	CycD	1	62
+99	Cdc20	1	1	0.5	Cdc20	1	62
+100	Cdc20 & (E2F | Rb) & (Rb | p27)	0	4	0.5	Cdc20, E2F, Rb, p27	4	62

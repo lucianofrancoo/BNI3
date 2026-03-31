@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition	mlp_loss
+1	Gene3 & ~Gene8 & (Gene15 | Gene4)	39	4	0.5	Gene15, Gene3, Gene4, Gene8	4	1	1.9567392393804137
+2	Gene3 & ~Gene8 & (Gene15 | Gene4)	39	4	0.5	Gene15, Gene3, Gene4, Gene8	4	1	1.9567392393804137
+3	Gene3 & ~Gene8 & (Gene15 | Gene4)	39	4	0.5	Gene15, Gene3, Gene4, Gene8	4	1	1.9567392393804137
+4	Gene3 & ~Gene8 & (Gene15 | Gene4)	39	4	0.5	Gene15, Gene3, Gene4, Gene8	4	1	1.9567392393804137
+5	Gene3 & ~Gene8 & (Gene15 | Gene4)	39	4	0.5	Gene15, Gene3, Gene4, Gene8	4	1	1.9567392393804137
+6	Gene3 & ~Gene8 & (Gene15 | Gene4)	39	4	0.5	Gene15, Gene3, Gene4, Gene8	4	1	1.9567392393804137
+7	Gene3 & ~Gene8 & (Gene15 | Gene4)	39	4	0.5	Gene15, Gene3, Gene4, Gene8	4	1	1.9567392393804137
+8	Gene3 & ~Gene8 & (Gene15 | Gene4)	39	4	0.5	Gene15, Gene3, Gene4, Gene8	4	1	1.9567392393804137
+9	Gene3 & ~Gene8 & (Gene15 | Gene4)	39	4	0.5	Gene15, Gene3, Gene4, Gene8	4	1	1.9567392393804137
+10	Gene3 & ~Gene8 & (Gene15 | Gene2)	39	4	0.5	Gene15, Gene2, Gene3, Gene8	4	1	3.126991639745069
+11	Gene3 & ~Gene8 & (Gene15 | Gene2)	39	4	0.5	Gene15, Gene2, Gene3, Gene8	4	1	3.126991639745069
+12	Gene4 & (Gene15 | Gene2)	34	3	0.0	Gene15, Gene2, Gene4	3	1	2.4209570137085805
+13	Gene14 & Gene4	34	2	0.0	Gene14, Gene4	2	1	3.927208778374576
+14	Gene14 & Gene4	34	2	0.0	Gene14, Gene4	2	1	3.927208778374576
+15	Gene3 & Gene4	34	2	0.0	Gene3, Gene4	2	1	4.148497922438457
+16	~Gene14 & ~Gene4 & (~Gene15 | ~Gene8)	34	4	0.5	Gene14, Gene15, Gene4, Gene8	4	1	2.492649947044381
+17	Gene4 & (Gene15 | Gene16 | Gene8)	34	4	0.5	Gene15, Gene16, Gene4, Gene8	4	1	2.9721730457308757
+18	~Gene14	34	1	0.5	Gene14	1	1	4.315629231480912
+19	False	33	1	0.5	False	1	1	2.0672215209010427
+20	Gene3 & Gene4 & ~Gene15	33	3	0.0	Gene15, Gene3, Gene4	3	1	2.8893454407086727
+21	Gene15 & Gene2	33	2	0.0	Gene15, Gene2	2	1	3.342265806246359
+22	Gene15 & Gene2	33	2	0.0	Gene15, Gene2	2	1	3.3636599149441646
+23	Gene2 & Gene8	33	2	0.0	Gene2, Gene8	2	1	3.430422703548323
+24	Gene15 & Gene16 & Gene17 & Gene2 & Gene8	33	5	1.0	Gene15, Gene16, Gene17, Gene2, Gene8	5	1	1.519743940278743
+25	Gene15 & Gene20	32	2	0.0	Gene15, Gene20	2	1	4.283040318783064
+26	Gene15	32	1	0.5	Gene15	1	1	4.390390766666703
+27	Gene11	31	1	0.5	Gene11	1	1	4.454160771390693
+28	Gene15 & Gene3 & Gene8	30	3	0.0	Gene15, Gene3, Gene8	3	1	2.628567223137654
+29	Gene15 & Gene8	30	2	0.0	Gene15, Gene8	2	1	4.167531772290346
+30	Gene15 & Gene3 & Gene8 & ~Gene4	30	4	0.5	Gene15, Gene3, Gene4, Gene8	4	1	1.9567392393804137
+31	Gene15 & Gene3 & Gene8 & ~Gene4	30	4	0.5	Gene15, Gene3, Gene4, Gene8	4	1	1.9567392393804137
+32	Gene13	30	1	0.5	Gene13	1	1	4.271330030147349
+33	Gene3 & ~Gene8	29	2	0.0	Gene3, Gene8	2	1	4.042870247354405
+34	~Gene3	27	1	0.5	Gene3	1	1	4.316499600669087
+35	Gene15 | Gene8 | (Gene11 & Gene16 & Gene2 & Gene9)	27	6	1.5	Gene11, Gene15, Gene16, Gene2, Gene8, Gene9	6	1	0.6924413505427666
+36	Gene19 & Gene3 & ~Gene8	26	3	0.0	Gene19, Gene3, Gene8	3	1	2.1369337205186065
+37	Gene3 & Gene8	26	2	0.0	Gene3, Gene8	2	1	2.628567223137654
+38	Gene16 & Gene9 & ~Gene8	26	3	0.0	Gene16, Gene8, Gene9	3	1	3.197871230963987
+39	Gene4 | Gene8	26	2	0.0	Gene4, Gene8	2	1	3.838804737289653
+40	Gene8	25	1	0.5	Gene8	1	1	4.518327622740907
+41	Gene8	25	1	0.5	Gene8	1	1	4.518327622740907
+42	Gene3 | ~Gene17 | ~Gene5	24	3	0.0	Gene17, Gene3, Gene5	3	1	3.3604779367423983
+43	Gene3 & (~Gene15 | ~Gene18 | ~Gene8)	24	4	0.5	Gene15, Gene18, Gene3, Gene8	4	1	2.173176495719703
+44	Gene3 | (Gene15 & Gene8)	22	3	0.0	Gene15, Gene3, Gene8	3	1	2.628567223137654
+45	Gene3 & Gene9	21	2	0.0	Gene3, Gene9	2	1	4.292742014554852
+46	Gene16 | (Gene11 & Gene4)	19	3	0.0	Gene11, Gene16, Gene4	3	1	2.8544765994437786
+47	~Gene13	19	1	0.5	Gene13	1	1	4.271330030147349
+48	~Gene2 & (Gene16 | Gene3) & (Gene7 | Gene8)	18	5	1.0	Gene16, Gene2, Gene3, Gene7, Gene8	5	1	2.3711216570703555
+49	Gene6 & (Gene7 | Gene8)	16	3	0.0	Gene6, Gene7, Gene8	3	1	2.0966234502085177
+50	Gene14 | Gene4 | (~Gene15 & ~Gene8)	16	4	0.5	Gene14, Gene15, Gene4, Gene8	4	1	2.492649947044381

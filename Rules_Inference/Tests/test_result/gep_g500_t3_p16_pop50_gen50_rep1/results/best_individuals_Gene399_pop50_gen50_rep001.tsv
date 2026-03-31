@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	Gene401 | Gene458	2	2	0.0	Gene401, Gene458	2	1
+2	~Gene292 & ~Gene432 & ~Gene52	2	3	0.0	Gene292, Gene432, Gene52	3	1
+3	Gene81 | (~Gene127 & ~Gene441)	2	3	0.0	Gene127, Gene441, Gene81	3	1
+4	Gene401 | Gene458	2	2	0.0	Gene401, Gene458	2	1
+5	Gene141 | Gene301	2	2	0.0	Gene141, Gene301	2	1
+6	Gene236 & Gene395	2	2	0.0	Gene236, Gene395	2	1
+7	Gene134 | Gene301	2	2	0.0	Gene134, Gene301	2	1
+8	Gene249 & (Gene321 | Gene398)	2	3	0.0	Gene249, Gene321, Gene398	3	1
+9	Gene247 | Gene458	2	2	0.0	Gene247, Gene458	2	1
+10	~Gene292 & ~Gene432 & ~Gene52	2	3	0.0	Gene292, Gene432, Gene52	3	1
+11	Gene141 | Gene249	2	2	0.0	Gene141, Gene249	2	1
+12	Gene41 | Gene458	2	2	0.0	Gene41, Gene458	2	1
+13	Gene249 & (Gene292 | Gene401)	2	3	0.0	Gene249, Gene292, Gene401	3	1
+14	Gene272 | Gene458	2	2	0.0	Gene272, Gene458	2	1
+15	Gene213 & Gene413	2	2	0.0	Gene213, Gene413	2	1
+16	Gene395 & Gene61	2	2	0.0	Gene395, Gene61	2	1
+17	Gene331 | (Gene364 & Gene471)	2	3	0.0	Gene331, Gene364, Gene471	3	1
+18	Gene141 | Gene249	2	2	0.0	Gene141, Gene249	2	1
+19	Gene213 & Gene413	2	2	0.0	Gene213, Gene413	2	1
+20	Gene458 | Gene481	2	2	0.0	Gene458, Gene481	2	1
+21	Gene331 | Gene401	2	2	0.0	Gene331, Gene401	2	1
+22	Gene247 | Gene458	2	2	0.0	Gene247, Gene458	2	1
+23	Gene249 | (Gene401 & Gene495)	2	3	0.0	Gene249, Gene401, Gene495	3	1
+24	Gene247 | Gene331	2	2	0.0	Gene247, Gene331	2	1
+25	Gene484 & Gene8	2	2	0.0	Gene484, Gene8	2	1
+26	Gene249 | Gene321	2	2	0.0	Gene249, Gene321	2	1
+27	Gene481	2	1	0.5	Gene481	1	1
+28	~Gene127	2	1	0.5	Gene127	1	1
+29	Gene407	2	1	0.5	Gene407	1	1
+30	Gene150 | Gene8	1	2	0.0	Gene150, Gene8	2	1
+31	Gene101 | Gene331	1	2	0.0	Gene101, Gene331	2	1
+32	Gene101 | Gene127 | Gene458	1	3	0.0	Gene101, Gene127, Gene458	3	1
+33	Gene395 | (Gene223 & Gene47)	1	3	0.0	Gene223, Gene395, Gene47	3	1
+34	Gene23 & Gene401	1	2	0.0	Gene23, Gene401	2	1
+35	Gene340 & Gene471	1	2	0.0	Gene340, Gene471	2	1
+36	Gene150 | Gene458	1	2	0.0	Gene150, Gene458	2	1
+37	False	1	1	0.5	False	1	1
+38	True	1	1	0.5	True	1	1
+39	Gene353 | ~Gene134	1	2	0.0	Gene134, Gene353	2	1
+40	Gene101 | Gene127	1	2	0.0	Gene101, Gene127	2	1
+41	Gene23 | Gene448	1	2	0.0	Gene23, Gene448	2	1
+42	~Gene52	1	1	0.5	Gene52	1	1
+43	Gene133 & (Gene150 | Gene458 | Gene495)	1	4	0.5	Gene133, Gene150, Gene458, Gene495	4	1
+44	Gene249 & Gene398 & (Gene150 | Gene292)	1	4	0.5	Gene150, Gene249, Gene292, Gene398	4	1
+45	Gene150 | Gene331 | Gene340 | Gene401 | Gene448	1	5	1.0	Gene150, Gene331, Gene340, Gene401, Gene448	5	1
+46	Gene432 | Gene52	0	2	0.0	Gene432, Gene52	2	1
+47	Gene101 & Gene127	0	2	0.0	Gene101, Gene127	2	1
+48	Gene150 & ~Gene331 & ~Gene340 & ~Gene495	0	4	0.5	Gene150, Gene331, Gene340, Gene495	4	1
+49	~Gene401	0	1	0.5	Gene401	1	1
+50	~Gene331	0	1	0.5	Gene331	1	1

@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	Gene403 | Gene474	4	2	0.0	Gene403, Gene474	2	1
+2	Gene309 | (Gene354 & Gene398)	4	3	0.0	Gene309, Gene354, Gene398	3	1
+3	Gene309 | Gene474	4	2	0.0	Gene309, Gene474	2	1
+4	Gene309 | Gene474	4	2	0.0	Gene309, Gene474	2	1
+5	Gene403 | Gene474	4	2	0.0	Gene403, Gene474	2	1
+6	Gene309 | Gene474	4	2	0.0	Gene309, Gene474	2	1
+7	Gene309 | Gene474	4	2	0.0	Gene309, Gene474	2	1
+8	Gene403 | Gene474	4	2	0.0	Gene403, Gene474	2	1
+9	Gene403 | Gene474	4	2	0.0	Gene403, Gene474	2	1
+10	Gene403 | Gene474	4	2	0.0	Gene403, Gene474	2	1
+11	Gene309 & (Gene403 | Gene474)	4	3	0.0	Gene309, Gene403, Gene474	3	1
+12	Gene403 | Gene474	4	2	0.0	Gene403, Gene474	2	1
+13	Gene309	4	1	0.5	Gene309	1	1
+14	Gene369 | Gene474	4	2	0.0	Gene369, Gene474	2	1
+15	Gene309 & (Gene403 | Gene474)	4	3	0.0	Gene309, Gene403, Gene474	3	1
+16	Gene140 | Gene309 | Gene403	4	3	0.0	Gene140, Gene309, Gene403	3	1
+17	Gene309	4	1	0.5	Gene309	1	1
+18	Gene309	4	1	0.5	Gene309	1	1
+19	Gene309 & (Gene257 | Gene474 | Gene55)	4	4	0.5	Gene257, Gene309, Gene474, Gene55	4	1
+20	Gene25 | Gene398 | Gene474 | ~Gene257	4	4	0.5	Gene25, Gene257, Gene398, Gene474	4	1
+21	Gene354 | Gene398	3	2	0.0	Gene354, Gene398	2	1
+22	Gene295 | Gene354 | Gene474	3	3	0.0	Gene295, Gene354, Gene474	3	1
+23	Gene403	3	1	0.5	Gene403	1	1
+24	Gene295 | Gene77	3	2	0.0	Gene295, Gene77	2	1
+25	Gene384 | Gene474	3	2	0.0	Gene384, Gene474	2	1
+26	Gene295 | Gene474	3	2	0.0	Gene295, Gene474	2	1
+27	Gene120 | Gene474	3	2	0.0	Gene120, Gene474	2	1
+28	Gene339 & Gene403	3	2	0.0	Gene339, Gene403	2	1
+29	Gene309 & Gene354	3	2	0.0	Gene309, Gene354	2	1
+30	Gene309 & Gene403	3	2	0.0	Gene309, Gene403	2	1
+31	Gene354	3	1	0.5	Gene354	1	1
+32	Gene33	3	1	0.5	Gene33	1	1
+33	Gene474	3	1	0.5	Gene474	1	1
+34	Gene208	3	1	0.5	Gene208	1	1
+35	Gene354	3	1	0.5	Gene354	1	1
+36	Gene474	3	1	0.5	Gene474	1	1
+37	Gene474	3	1	0.5	Gene474	1	1
+38	Gene403	3	1	0.5	Gene403	1	1
+39	Gene403	3	1	0.5	Gene403	1	1
+40	Gene203 & Gene403 & Gene474	2	3	0.0	Gene203, Gene403, Gene474	3	1
+41	Gene252 & Gene339 & Gene474	2	3	0.0	Gene252, Gene339, Gene474	3	1
+42	Gene403 & Gene474	2	2	0.0	Gene403, Gene474	2	1
+43	Gene169 | Gene257	2	2	0.0	Gene169, Gene257	2	1
+44	Gene403 & Gene474	2	2	0.0	Gene403, Gene474	2	1
+45	Gene339 | Gene379 | Gene403	2	3	0.0	Gene339, Gene379, Gene403	3	1
+46	Gene11 | Gene140	2	2	0.0	Gene11, Gene140	2	1
+47	Gene403 | (~Gene309 & ~Gene354)	1	3	0.0	Gene309, Gene354, Gene403	3	1
+48	Gene257 | Gene55	1	2	0.0	Gene257, Gene55	2	1
+49	~Gene474	1	1	0.5	Gene474	1	1
+50	~Gene403	1	1	0.5	Gene403	1	1

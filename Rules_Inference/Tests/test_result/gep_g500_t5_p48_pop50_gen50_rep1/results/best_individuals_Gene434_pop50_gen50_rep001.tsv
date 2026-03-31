@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	~Gene23 | ~Gene362 | ~Gene60	4	3	0.0	Gene23, Gene362, Gene60	3	1
+2	~Gene23 | ~Gene362 | ~Gene60	4	3	0.0	Gene23, Gene362, Gene60	3	1
+3	~Gene23 | ~Gene362 | ~Gene60	4	3	0.0	Gene23, Gene362, Gene60	3	1
+4	~Gene362 | ~Gene60	4	2	0.0	Gene362, Gene60	2	1
+5	~Gene60 | (~Gene23 & ~Gene362)	4	3	0.0	Gene23, Gene362, Gene60	3	1
+6	~Gene23 | ~Gene362 | ~Gene60	4	3	0.0	Gene23, Gene362, Gene60	3	1
+7	~Gene282 & ~Gene328	4	2	0.0	Gene282, Gene328	2	1
+8	~Gene60 | (~Gene23 & ~Gene362)	4	3	0.0	Gene23, Gene362, Gene60	3	1
+9	~Gene23 | ~Gene362 | ~Gene60	4	3	0.0	Gene23, Gene362, Gene60	3	1
+10	~Gene23 | ~Gene362 | ~Gene60	4	3	0.0	Gene23, Gene362, Gene60	3	1
+11	Gene401 | ~Gene60	4	2	0.0	Gene401, Gene60	2	1
+12	~Gene362 | ~Gene60	4	2	0.0	Gene362, Gene60	2	1
+13	Gene201 | (Gene23 & ~Gene362)	4	3	0.0	Gene201, Gene23, Gene362	3	1
+14	~Gene60	4	1	0.5	Gene60	1	1
+15	~Gene60	4	1	0.5	Gene60	1	1
+16	Gene201	4	1	0.5	Gene201	1	1
+17	~Gene60	4	1	0.5	Gene60	1	1
+18	~Gene60	4	1	0.5	Gene60	1	1
+19	Gene201 & Gene210	3	2	0.0	Gene201, Gene210	2	1
+20	Gene321 & ~Gene279	3	2	0.0	Gene279, Gene321	2	1
+21	Gene201 & Gene210	3	2	0.0	Gene201, Gene210	2	1
+22	Gene66	3	1	0.5	Gene66	1	1
+23	Gene66	3	1	0.5	Gene66	1	1
+24	Gene66	3	1	0.5	Gene66	1	1
+25	~Gene23 & ~Gene362	2	2	0.0	Gene23, Gene362	2	1
+26	Gene23 | Gene362 | Gene60	2	3	0.0	Gene23, Gene362, Gene60	3	1
+27	Gene362 | Gene74	2	2	0.0	Gene362, Gene74	2	1
+28	~Gene362	2	1	0.5	Gene362	1	1
+29	Gene328 & ~Gene362	2	2	0.0	Gene328, Gene362	2	1
+30	Gene187 | Gene253	2	2	0.0	Gene187, Gene253	2	1
+31	Gene362 | ~Gene23	2	2	0.0	Gene23, Gene362	2	1
+32	Gene362 | ~Gene201	2	2	0.0	Gene201, Gene362	2	1
+33	~Gene190 | ~Gene201	2	2	0.0	Gene190, Gene201	2	1
+34	Gene195 & Gene202	2	2	0.0	Gene195, Gene202	2	1
+35	Gene362 | ~Gene60	2	2	0.0	Gene362, Gene60	2	1
+36	Gene31 | Gene362	2	2	0.0	Gene31, Gene362	2	1
+37	~Gene362	2	1	0.5	Gene362	1	1
+38	~Gene362	2	1	0.5	Gene362	1	1
+39	Gene266	2	1	0.5	Gene266	1	1
+40	~Gene362	2	1	0.5	Gene362	1	1
+41	Gene486 | (~Gene23 & ~Gene362)	1	3	0.0	Gene23, Gene362, Gene486	3	1
+42	Gene476 | (~Gene23 & ~Gene362)	1	3	0.0	Gene23, Gene362, Gene476	3	1
+43	Gene60 | (Gene23 & Gene362)	1	3	0.0	Gene23, Gene362, Gene60	3	1
+44	Gene23 & Gene362	1	2	0.0	Gene23, Gene362	2	1
+45	Gene54	1	1	0.5	Gene54	1	1
+46	Gene23	1	1	0.5	Gene23	1	1
+47	Gene60 | (Gene23 & ~Gene362)	0	3	0.0	Gene23, Gene362, Gene60	3	1
+48	Gene486 | Gene60	0	2	0.0	Gene486, Gene60	2	1
+49	Gene60 | ~Gene362	0	2	0.0	Gene362, Gene60	2	1
+50	Gene60	0	1	0.5	Gene60	1	1

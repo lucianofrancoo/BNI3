@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	Gene229 | Gene599	4	2	0.0	Gene229, Gene599	2	1
+2	Gene229 | Gene344	4	2	0.0	Gene229, Gene344	2	1
+3	Gene344 | Gene599	4	2	0.0	Gene344, Gene599	2	1
+4	Gene229 | Gene849	4	2	0.0	Gene229, Gene849	2	1
+5	Gene229 | Gene599	4	2	0.0	Gene229, Gene599	2	1
+6	Gene229 | Gene599	4	2	0.0	Gene229, Gene599	2	1
+7	Gene344 | Gene849	4	2	0.0	Gene344, Gene849	2	1
+8	Gene217 | Gene894	4	2	0.0	Gene217, Gene894	2	1
+9	Gene229 | Gene849	4	2	0.0	Gene229, Gene849	2	1
+10	Gene344 | Gene849	4	2	0.0	Gene344, Gene849	2	1
+11	Gene344 | Gene849	4	2	0.0	Gene344, Gene849	2	1
+12	Gene344 | Gene599	4	2	0.0	Gene344, Gene599	2	1
+13	Gene229 | Gene849	4	2	0.0	Gene229, Gene849	2	1
+14	Gene237 | (Gene344 & Gene543)	4	3	0.0	Gene237, Gene344, Gene543	3	1
+15	Gene229 | Gene599	4	2	0.0	Gene229, Gene599	2	1
+16	Gene344 | Gene849	4	2	0.0	Gene344, Gene849	2	1
+17	Gene344 | Gene599	4	2	0.0	Gene344, Gene599	2	1
+18	Gene229 | Gene344 | Gene849	4	3	0.0	Gene229, Gene344, Gene849	3	1
+19	Gene229 | Gene849	4	2	0.0	Gene229, Gene849	2	1
+20	Gene344 | Gene599	4	2	0.0	Gene344, Gene599	2	1
+21	Gene229 | (Gene243 & Gene311)	4	3	0.0	Gene229, Gene243, Gene311	3	1
+22	Gene229 | Gene698	4	2	0.0	Gene229, Gene698	2	1
+23	Gene344 | Gene849	4	2	0.0	Gene344, Gene849	2	1
+24	Gene344 | Gene849	4	2	0.0	Gene344, Gene849	2	1
+25	Gene229 | Gene513	4	2	0.0	Gene229, Gene513	2	1
+26	Gene229	4	1	0.5	Gene229	1	1
+27	Gene344	4	1	0.5	Gene344	1	1
+28	Gene229 | (Gene243 & Gene441 & Gene917) | (Gene441 & Gene709 & Gene917)	4	5	1.0	Gene229, Gene243, Gene441, Gene709, Gene917	5	1
+29	Gene229 | (Gene243 & Gene441) | (Gene243 & Gene9) | (Gene441 & Gene709) | (Gene709 & Gene9)	4	5	1.0	Gene229, Gene243, Gene441, Gene709, Gene9	5	1
+30	Gene237 | Gene543	3	2	0.0	Gene237, Gene543	2	1
+31	Gene243 | Gene709 | Gene971	3	3	0.0	Gene243, Gene709, Gene971	3	1
+32	Gene237 | Gene543	3	2	0.0	Gene237, Gene543	2	1
+33	Gene229 | Gene917	3	2	0.0	Gene229, Gene917	2	1
+34	Gene204 | Gene543	3	2	0.0	Gene204, Gene543	2	1
+35	Gene460 | Gene917	3	2	0.0	Gene460, Gene917	2	1
+36	Gene709 | Gene987	3	2	0.0	Gene709, Gene987	2	1
+37	Gene556 | Gene599	3	2	0.0	Gene556, Gene599	2	1
+38	Gene229 | Gene543	3	2	0.0	Gene229, Gene543	2	1
+39	Gene243 | Gene441 | Gene709 | Gene987	3	4	0.5	Gene243, Gene441, Gene709, Gene987	4	1
+40	Gene995	3	1	0.5	Gene995	1	1
+41	(Gene229 & Gene441) | (Gene229 & Gene917) | (Gene243 & Gene543)	3	5	1.0	Gene229, Gene243, Gene441, Gene543, Gene917	5	1
+42	Gene441 | Gene917	2	2	0.0	Gene441, Gene917	2	1
+43	Gene229 & Gene855	2	2	0.0	Gene229, Gene855	2	1
+44	Gene441 | Gene917	2	2	0.0	Gene441, Gene917	2	1
+45	Gene237 | Gene427	2	2	0.0	Gene237, Gene427	2	1
+46	Gene357	2	1	0.5	Gene357	1	1
+47	Gene441 & Gene917	2	2	0.0	Gene441, Gene917	2	1
+48	~Gene229 & ~Gene836	1	2	0.0	Gene229, Gene836	2	1
+49	Gene94 & Gene976	1	2	0.0	Gene94, Gene976	2	1
+50	Gene237 & Gene543	1	2	0.0	Gene237, Gene543	2	1

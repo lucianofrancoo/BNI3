@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	Gene155 | Gene77	4	2	0.0	Gene155, Gene77	2	1
+2	Gene433 & (Gene184 | Gene357)	4	3	0.0	Gene184, Gene357, Gene433	3	1
+3	Gene433 & (Gene184 | Gene357)	4	3	0.0	Gene184, Gene357, Gene433	3	1
+4	Gene433 & (Gene184 | Gene357)	4	3	0.0	Gene184, Gene357, Gene433	3	1
+5	Gene433 & (Gene184 | Gene357)	4	3	0.0	Gene184, Gene357, Gene433	3	1
+6	Gene155 | Gene77	4	2	0.0	Gene155, Gene77	2	1
+7	Gene433 & (Gene184 | Gene357)	4	3	0.0	Gene184, Gene357, Gene433	3	1
+8	Gene113 | Gene155	4	2	0.0	Gene113, Gene155	2	1
+9	Gene433 & (Gene184 | Gene357)	4	3	0.0	Gene184, Gene357, Gene433	3	1
+10	Gene433	4	1	0.5	Gene433	1	1
+11	Gene433	4	1	0.5	Gene433	1	1
+12	Gene206 | Gene433	4	2	0.0	Gene206, Gene433	2	1
+13	Gene198 | Gene206 | Gene433	4	3	0.0	Gene198, Gene206, Gene433	3	1
+14	Gene433 & (Gene184 | Gene357)	4	3	0.0	Gene184, Gene357, Gene433	3	1
+15	Gene433 | (Gene184 & Gene198)	4	3	0.0	Gene184, Gene198, Gene433	3	1
+16	Gene198 | Gene433	4	2	0.0	Gene198, Gene433	2	1
+17	Gene113 | Gene155	4	2	0.0	Gene113, Gene155	2	1
+18	Gene198 | Gene433	4	2	0.0	Gene198, Gene433	2	1
+19	Gene433	4	1	0.5	Gene433	1	1
+20	Gene433 & (Gene184 | Gene357)	4	3	0.0	Gene184, Gene357, Gene433	3	1
+21	Gene433	4	1	0.5	Gene433	1	1
+22	(Gene155 | Gene357) & (Gene155 | Gene433) & (Gene357 | Gene77) & (Gene433 | Gene77)	4	4	0.5	Gene155, Gene357, Gene433, Gene77	4	1
+23	Gene433	4	1	0.5	Gene433	1	1
+24	Gene433	4	1	0.5	Gene433	1	1
+25	Gene433	4	1	0.5	Gene433	1	1
+26	Gene433	4	1	0.5	Gene433	1	1
+27	Gene433	4	1	0.5	Gene433	1	1
+28	Gene198 | Gene362 | Gene433	3	3	0.0	Gene198, Gene362, Gene433	3	1
+29	Gene357 | Gene433	3	2	0.0	Gene357, Gene433	2	1
+30	Gene319 | Gene357 | Gene433	3	3	0.0	Gene319, Gene357, Gene433	3	1
+31	Gene433 | ~Gene170	3	2	0.0	Gene170, Gene433	2	1
+32	Gene389 | Gene433	3	2	0.0	Gene389, Gene433	2	1
+33	Gene231 | Gene368	3	2	0.0	Gene231, Gene368	2	1
+34	Gene232 | Gene52	3	2	0.0	Gene232, Gene52	2	1
+35	Gene357 | Gene433	3	2	0.0	Gene357, Gene433	2	1
+36	Gene189 | Gene357 | Gene433	3	3	0.0	Gene189, Gene357, Gene433	3	1
+37	Gene389 & Gene433 & (Gene231 | Gene374)	3	4	0.5	Gene231, Gene374, Gene389, Gene433	4	1
+38	(Gene184 & Gene357) | (Gene184 & Gene433) | (Gene319 & Gene357) | (Gene319 & Gene433) | (Gene357 & Gene9) | (Gene433 & Gene9)	3	5	1.0	Gene184, Gene319, Gene357, Gene433, Gene9	5	1
+39	Gene184 & Gene433	2	2	0.0	Gene184, Gene433	2	1
+40	Gene330 | Gene482	2	2	0.0	Gene330, Gene482	2	1
+41	Gene184 | Gene206	2	2	0.0	Gene184, Gene206	2	1
+42	Gene9 | ~Gene357	2	2	0.0	Gene357, Gene9	2	1
+43	Gene184 & Gene433	2	2	0.0	Gene184, Gene433	2	1
+44	Gene318	2	1	0.5	Gene318	1	1
+45	Gene357	2	1	0.5	Gene357	1	1
+46	Gene184	2	1	0.5	Gene184	1	1
+47	Gene113 | ~Gene357 | ~Gene433	1	3	0.0	Gene113, Gene357, Gene433	3	1
+48	Gene120 & Gene283	1	2	0.0	Gene120, Gene283	2	1
+49	~Gene155 & (Gene113 | Gene482)	1	3	0.0	Gene113, Gene155, Gene482	3	1
+50	Gene184 & Gene357 & Gene433 & Gene482	1	4	0.5	Gene184, Gene357, Gene433, Gene482	4	1

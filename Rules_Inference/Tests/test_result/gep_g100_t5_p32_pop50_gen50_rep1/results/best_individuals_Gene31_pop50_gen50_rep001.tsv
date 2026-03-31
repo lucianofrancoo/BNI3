@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	Gene25 & Gene55	4	2	0.0	Gene25, Gene55	2	1
+2	Gene100 & Gene34 & Gene37	4	3	0.0	Gene100, Gene34, Gene37	3	1
+3	Gene40 & Gene42	4	2	0.0	Gene40, Gene42	2	1
+4	Gene34 | Gene75	4	2	0.0	Gene34, Gene75	2	1
+5	Gene100 & Gene16 & Gene55	4	3	0.0	Gene100, Gene16, Gene55	3	1
+6	Gene34 | Gene75	4	2	0.0	Gene34, Gene75	2	1
+7	Gene34 & Gene42	4	2	0.0	Gene34, Gene42	2	1
+8	Gene40 & Gene42	4	2	0.0	Gene40, Gene42	2	1
+9	Gene34 | Gene75	4	2	0.0	Gene34, Gene75	2	1
+10	Gene100 & Gene34 & Gene37	4	3	0.0	Gene100, Gene34, Gene37	3	1
+11	Gene34 & Gene42	4	2	0.0	Gene34, Gene42	2	1
+12	Gene34 | Gene75	4	2	0.0	Gene34, Gene75	2	1
+13	Gene2 & Gene42	4	2	0.0	Gene2, Gene42	2	1
+14	Gene34 & Gene58	4	2	0.0	Gene34, Gene58	2	1
+15	Gene34 & Gene42	4	2	0.0	Gene34, Gene42	2	1
+16	Gene34 & Gene40	4	2	0.0	Gene34, Gene40	2	1
+17	Gene57 & (Gene34 | Gene75)	4	3	0.0	Gene34, Gene57, Gene75	3	1
+18	Gene40 & Gene42	4	2	0.0	Gene40, Gene42	2	1
+19	Gene32 & Gene55	4	2	0.0	Gene32, Gene55	2	1
+20	Gene34 & Gene42	4	2	0.0	Gene34, Gene42	2	1
+21	Gene34 | Gene75	4	2	0.0	Gene34, Gene75	2	1
+22	Gene34	4	1	0.5	Gene34	1	1
+23	Gene34	4	1	0.5	Gene34	1	1
+24	Gene42	4	1	0.5	Gene42	1	1
+25	Gene4 & Gene80	3	2	0.0	Gene4, Gene80	2	1
+26	Gene40 & Gene61	3	2	0.0	Gene40, Gene61	2	1
+27	Gene11 & Gene23 & Gene55	3	3	0.0	Gene11, Gene23, Gene55	3	1
+28	Gene34 | Gene46	3	2	0.0	Gene34, Gene46	2	1
+29	Gene4 & Gene40	3	2	0.0	Gene4, Gene40	2	1
+30	Gene37 & Gene96	3	2	0.0	Gene37, Gene96	2	1
+31	Gene39 & Gene77	3	2	0.0	Gene39, Gene77	2	1
+32	Gene37 & Gene75	3	2	0.0	Gene37, Gene75	2	1
+33	Gene56	3	1	0.5	Gene56	1	1
+34	Gene34 & Gene75 & (Gene100 | Gene70)	3	4	0.5	Gene100, Gene34, Gene70, Gene75	4	1
+35	Gene34 | (Gene100 & Gene37 & Gene57)	3	4	0.5	Gene100, Gene34, Gene37, Gene57	4	1
+36	Gene32 & Gene34 & Gene55 & Gene99	3	4	0.5	Gene32, Gene34, Gene55, Gene99	4	1
+37	Gene4 & Gene89	2	2	0.0	Gene4, Gene89	2	1
+38	Gene40 & Gene77	2	2	0.0	Gene40, Gene77	2	1
+39	Gene40 & Gene83	2	2	0.0	Gene40, Gene83	2	1
+40	Gene4 & Gene89	2	2	0.0	Gene4, Gene89	2	1
+41	Gene100	2	1	0.5	Gene100	1	1
+42	Gene100	2	1	0.5	Gene100	1	1
+43	Gene83	2	1	0.5	Gene83	1	1
+44	Gene37	2	1	0.5	Gene37	1	1
+45	Gene43	2	1	0.5	Gene43	1	1
+46	Gene100	2	1	0.5	Gene100	1	1
+47	Gene34 | Gene99	1	2	0.0	Gene34, Gene99	2	1
+48	Gene100 | Gene36	1	2	0.0	Gene100, Gene36	2	1
+49	Gene40 & Gene85	1	2	0.0	Gene40, Gene85	2	1
+50	Gene75 | ~Gene34	0	2	0.0	Gene34, Gene75	2	1

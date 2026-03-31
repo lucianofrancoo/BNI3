@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition	mlp_loss
+1	Gene49 | Gene58 | Gene69	24	3	0.0	Gene49, Gene58, Gene69	3	1	0.07115609509047013
+2	Gene24 & (Gene10 | Gene69)	24	3	0.0	Gene10, Gene24, Gene69	3	1	0.09561852777935934
+3	Gene10 | Gene69	24	2	0.0	Gene10, Gene69	2	1	0.10029659766436352
+4	Gene69 | (Gene10 & Gene24 & Gene66)	24	4	0.5	Gene10, Gene24, Gene66, Gene69	4	1	0.07584422776904354
+5	Gene69 | (Gene24 & Gene49) | (Gene24 & Gene58) | (Gene49 & Gene68) | (Gene58 & Gene68)	24	5	1.0	Gene24, Gene49, Gene58, Gene68, Gene69	5	1	0.032026896136903696
+6	Gene69 | (Gene24 & Gene49) | (Gene24 & Gene58) | (Gene49 & Gene68) | (Gene58 & Gene68)	24	5	1.0	Gene24, Gene49, Gene58, Gene68, Gene69	5	1	0.032026896136903696
+7	Gene69 | (Gene24 & Gene49) | (Gene24 & Gene58) | (Gene49 & Gene68) | (Gene58 & Gene68)	24	5	1.0	Gene24, Gene49, Gene58, Gene68, Gene69	5	1	0.032026896136903696
+8	Gene69 | (Gene24 & Gene49) | (Gene24 & Gene58) | (Gene49 & Gene68) | (Gene58 & Gene68)	24	5	1.0	Gene24, Gene49, Gene58, Gene68, Gene69	5	1	0.032026896136903696
+9	Gene69 | (Gene24 & Gene49) | (Gene24 & Gene58) | (Gene49 & Gene68) | (Gene58 & Gene68)	24	5	1.0	Gene24, Gene49, Gene58, Gene68, Gene69	5	1	0.032026896136903696
+10	Gene69 | (Gene24 & Gene49) | (Gene24 & Gene58) | (Gene49 & Gene68) | (Gene58 & Gene68)	24	5	1.0	Gene24, Gene49, Gene58, Gene68, Gene69	5	1	0.032026896136903696
+11	Gene69 | (Gene24 & Gene49) | (Gene24 & Gene58) | (Gene49 & Gene68) | (Gene58 & Gene68)	24	5	1.0	Gene24, Gene49, Gene58, Gene68, Gene69	5	1	0.032026896136903696
+12	Gene69 | (Gene24 & Gene49) | (Gene24 & Gene58) | (Gene49 & Gene68) | (Gene58 & Gene68)	24	5	1.0	Gene24, Gene49, Gene58, Gene68, Gene69	5	1	0.032026896136903696
+13	(Gene24 & Gene49) | (Gene24 & Gene58) | (Gene24 & Gene69) | (Gene49 & Gene68) | (Gene58 & Gene68) | (Gene68 & Gene69)	24	5	1.0	Gene24, Gene49, Gene58, Gene68, Gene69	5	1	0.032026896136903696
+14	Gene69 | (Gene24 & Gene58)	23	3	0.0	Gene24, Gene58, Gene69	3	1	0.06907876950899525
+15	Gene10 | Gene58	23	2	0.0	Gene10, Gene58	2	1	0.07967783518239693
+16	Gene93 | (Gene24 & Gene49) | (Gene24 & Gene58) | (Gene49 & Gene68) | (Gene58 & Gene68)	23	5	1.0	Gene24, Gene49, Gene58, Gene68, Gene93	5	1	0.039757860398965394
+17	Gene58	22	1	0.5	Gene58	1	1	0.11711631194617651
+18	Gene49 | (Gene13 & Gene58)	20	3	0.0	Gene13, Gene49, Gene58	3	1	0.05264109000441382
+19	Gene49 & Gene81	18	2	0.0	Gene49, Gene81	2	1	0.09608638037658188
+20	Gene10 | Gene17	18	2	0.0	Gene10, Gene17	2	1	0.10389648913830601
+21	Gene24 & Gene68 & Gene69	18	3	0.0	Gene24, Gene68, Gene69	3	1	1.9135091004164815
+22	Gene69 & (Gene24 | Gene68)	18	3	0.0	Gene24, Gene68, Gene69	3	1	1.9135091004164815
+23	Gene69 & (Gene24 | Gene68)	18	3	0.0	Gene24, Gene68, Gene69	3	1	1.9135091004164815
+24	Gene69	18	1	0.5	Gene69	1	1	1.503386628549648
+25	(Gene13 & Gene24) | (Gene24 & Gene49) | (Gene24 & Gene58) | (Gene49 & Gene68) | (Gene58 & Gene68)	18	5	1.0	Gene13, Gene24, Gene49, Gene58, Gene68	5	1	0.039113572188575044
+26	Gene17 | Gene49 | Gene58 | (Gene10 & Gene45)	18	5	1.0	Gene10, Gene17, Gene45, Gene49, Gene58	5	1	0.043781320705849
+27	Gene73 & (Gene26 | Gene93)	17	3	0.0	Gene26, Gene73, Gene93	3	1	0.10432552999176001
+28	Gene10 | Gene17 | Gene45	17	3	0.0	Gene10, Gene17, Gene45	3	1	0.10483302667815397
+29	Gene49 | Gene58 | Gene69 | (Gene24 & Gene68)	17	5	1.0	Gene24, Gene49, Gene58, Gene68, Gene69	5	1	0.032026896136903696
+30	Gene49 | Gene58 | Gene69 | (Gene24 & Gene68)	17	5	1.0	Gene24, Gene49, Gene58, Gene68, Gene69	5	1	0.032026896136903696
+31	Gene49 | Gene58 | Gene69 | (Gene24 & Gene68)	17	5	1.0	Gene24, Gene49, Gene58, Gene68, Gene69	5	1	0.032026896136903696
+32	Gene10 | (Gene24 & Gene68) | (Gene49 & Gene58)	17	5	1.0	Gene10, Gene24, Gene49, Gene58, Gene68	5	1	0.03789568124553115
+33	Gene68 & Gene80	15	2	0.0	Gene68, Gene80	2	1	2.0430778489874504
+34	Gene49 | Gene69 | (Gene24 & Gene68)	14	4	0.5	Gene24, Gene49, Gene68, Gene69	4	1	0.03756665548348858
+35	Gene24 & (Gene49 | Gene68) & (Gene58 | Gene68)	13	4	0.5	Gene24, Gene49, Gene58, Gene68	4	1	0.031564050806911104
+36	Gene49 | Gene68 | Gene82	12	3	0.0	Gene49, Gene68, Gene82	3	1	0.05789002050356298
+37	~Gene49 & ~Gene68	12	2	0.0	Gene49, Gene68	2	1	0.11523292017508212
+38	Gene49 | Gene68	12	2	0.0	Gene49, Gene68	2	1	0.11523292017508212
+39	Gene49 | Gene68 | Gene69 | ~Gene24	12	4	0.5	Gene24, Gene49, Gene68, Gene69	4	1	0.03756665548348858
+40	Gene49 | Gene68 | ~Gene24 | (Gene13 & Gene58)	12	5	1.0	Gene13, Gene24, Gene49, Gene58, Gene68	5	1	0.039113572188575044
+41	Gene68 | (Gene15 & Gene93)	10	3	0.0	Gene15, Gene68, Gene93	3	1	1.4048547073847049
+42	Gene68 | (Gene49 & Gene69)	9	3	0.0	Gene49, Gene68, Gene69	3	1	0.11099042725125835
+43	Gene5 | Gene78	9	2	0.0	Gene5, Gene78	2	1	2.0167776726145705
+44	Gene24 | Gene69	9	2	0.0	Gene24, Gene69	2	1	2.0173472744702607
+45	Gene24 | (Gene49 & Gene8) | (Gene58 & Gene8)	9	4	0.5	Gene24, Gene49, Gene58, Gene8	4	1	0.08512457958081274
+46	Gene24 | Gene68 | Gene69	7	3	0.0	Gene24, Gene68, Gene69	3	1	1.9135091004164815
+47	Gene24 | Gene68 | (Gene49 & Gene98)	7	4	0.5	Gene24, Gene49, Gene68, Gene98	4	1	0.09169337967192426
+48	Gene24 | Gene68 | (Gene49 & Gene69) | (Gene58 & Gene69)	7	5	1.0	Gene24, Gene49, Gene58, Gene68, Gene69	5	1	0.032026896136903696
+49	Gene24 | Gene68 | Gene69 | (Gene49 & Gene58)	7	5	1.0	Gene24, Gene49, Gene58, Gene68, Gene69	5	1	0.032026896136903696
+50	Gene49 | Gene68 | Gene81 | ~Gene58	4	4	0.5	Gene49, Gene58, Gene68, Gene81	4	1	0.08440027407094121

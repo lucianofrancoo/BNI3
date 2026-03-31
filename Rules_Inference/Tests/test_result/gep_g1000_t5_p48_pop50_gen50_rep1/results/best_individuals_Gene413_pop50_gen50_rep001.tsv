@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	Gene265 & ~Gene600	4	2	0.0	Gene265, Gene600	2	1
+2	Gene443 | (Gene407 & Gene707)	4	3	0.0	Gene407, Gene443, Gene707	3	1
+3	~Gene600 & ~Gene797	4	2	0.0	Gene600, Gene797	2	1
+4	Gene407 | Gene707	4	2	0.0	Gene407, Gene707	2	1
+5	Gene378 & Gene537	4	2	0.0	Gene378, Gene537	2	1
+6	Gene91 & ~Gene70	4	2	0.0	Gene70, Gene91	2	1
+7	~Gene37 & ~Gene600	4	2	0.0	Gene37, Gene600	2	1
+8	~Gene600 & ~Gene797	4	2	0.0	Gene600, Gene797	2	1
+9	Gene72 & Gene948 & ~Gene587	4	3	0.0	Gene587, Gene72, Gene948	3	1
+10	Gene407 | Gene707	4	2	0.0	Gene407, Gene707	2	1
+11	Gene234 & Gene407	4	2	0.0	Gene234, Gene407	2	1
+12	Gene407 | Gene707	4	2	0.0	Gene407, Gene707	2	1
+13	Gene443	4	1	0.5	Gene443	1	1
+14	Gene72 & Gene948 & ~Gene587	4	3	0.0	Gene587, Gene72, Gene948	3	1
+15	Gene378 & Gene537	4	2	0.0	Gene378, Gene537	2	1
+16	Gene118 & Gene329	4	2	0.0	Gene118, Gene329	2	1
+17	Gene119 & Gene583	4	2	0.0	Gene119, Gene583	2	1
+18	Gene537 & Gene72	4	2	0.0	Gene537, Gene72	2	1
+19	Gene378 & Gene537	4	2	0.0	Gene378, Gene537	2	1
+20	Gene378 & Gene537	4	2	0.0	Gene378, Gene537	2	1
+21	Gene407	4	1	0.5	Gene407	1	1
+22	Gene378 & Gene72	4	2	0.0	Gene378, Gene72	2	1
+23	Gene537 & Gene72	4	2	0.0	Gene537, Gene72	2	1
+24	Gene72	4	1	0.5	Gene72	1	1
+25	Gene407 | Gene70	4	2	0.0	Gene407, Gene70	2	1
+26	Gene407 | Gene70	4	2	0.0	Gene407, Gene70	2	1
+27	Gene118 | Gene443	4	2	0.0	Gene118, Gene443	2	1
+28	Gene407 | Gene707	4	2	0.0	Gene407, Gene707	2	1
+29	Gene443	4	1	0.5	Gene443	1	1
+30	Gene72	4	1	0.5	Gene72	1	1
+31	Gene707	4	1	0.5	Gene707	1	1
+32	Gene407	4	1	0.5	Gene407	1	1
+33	Gene91 & Gene962	3	2	0.0	Gene91, Gene962	2	1
+34	Gene407 & Gene587	3	2	0.0	Gene407, Gene587	2	1
+35	~Gene118 & ~Gene600	3	2	0.0	Gene118, Gene600	2	1
+36	Gene200 & Gene638 & ~Gene91	3	3	0.0	Gene200, Gene638, Gene91	3	1
+37	~Gene265 & ~Gene600	3	2	0.0	Gene265, Gene600	2	1
+38	Gene72 & Gene921	3	2	0.0	Gene72, Gene921	2	1
+39	Gene143 & Gene443	3	2	0.0	Gene143, Gene443	2	1
+40	Gene359	3	1	0.5	Gene359	1	1
+41	Gene137 & Gene202 & Gene520 & Gene72 & Gene809	3	5	1.0	Gene137, Gene202, Gene520, Gene72, Gene809	5	1
+42	Gene100 | Gene707	2	2	0.0	Gene100, Gene707	2	1
+43	Gene143 | Gene443	1	2	0.0	Gene143, Gene443	2	1
+44	Gene707 | Gene977	1	2	0.0	Gene707, Gene977	2	1
+45	Gene100 | Gene306 | Gene407 | Gene692	1	4	0.5	Gene100, Gene306, Gene407, Gene692	4	1
+46	Gene423 | Gene692	0	2	0.0	Gene423, Gene692	2	1
+47	Gene600 | Gene966	0	2	0.0	Gene600, Gene966	2	1
+48	~Gene72	0	1	0.5	Gene72	1	1
+49	Gene423	0	1	0.5	Gene423	1	1
+50	~Gene454	0	1	0.5	Gene454	1	1

@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition	mlp_loss
+1	Gene34 | (Gene11 & Gene50)	80	3	0.0	Gene11, Gene34, Gene50	3	1	7.0224540260212915
+2	Gene34 | (Gene11 & Gene50)	80	3	0.0	Gene11, Gene34, Gene50	3	1	7.0224540260212915
+3	Gene34 | (Gene11 & Gene50)	80	3	0.0	Gene11, Gene34, Gene50	3	1	7.0224540260212915
+4	Gene34 | (Gene11 & Gene50)	80	3	0.0	Gene11, Gene34, Gene50	3	1	7.0224540260212915
+5	Gene34 | (Gene11 & Gene50)	80	3	0.0	Gene11, Gene34, Gene50	3	1	7.0224540260212915
+6	Gene34 | (Gene11 & Gene50)	80	3	0.0	Gene11, Gene34, Gene50	3	1	7.0224540260212915
+7	Gene34 | (Gene11 & Gene48) | (Gene11 & Gene50)	80	4	0.5	Gene11, Gene34, Gene48, Gene50	4	1	5.592343386044735
+8	Gene34 | (Gene11 & Gene48) | (Gene11 & Gene50)	80	4	0.5	Gene11, Gene34, Gene48, Gene50	4	1	5.592343386044735
+9	Gene34 | (Gene11 & Gene48) | (Gene11 & Gene50)	80	4	0.5	Gene11, Gene34, Gene48, Gene50	4	1	5.592343386044735
+10	Gene34 | (Gene11 & Gene48) | (Gene11 & Gene50)	80	4	0.5	Gene11, Gene34, Gene48, Gene50	4	1	5.592343386044735
+11	Gene34 | (Gene11 & Gene48) | (Gene11 & Gene50)	80	4	0.5	Gene11, Gene34, Gene48, Gene50	4	1	5.592343386044735
+12	Gene34 | (Gene11 & Gene48) | (Gene11 & Gene50)	80	4	0.5	Gene11, Gene34, Gene48, Gene50	4	1	5.592343386044735
+13	Gene34 | (Gene11 & Gene47)	79	3	0.0	Gene11, Gene34, Gene47	3	1	6.015621532559422
+14	Gene11 | Gene34	79	2	0.0	Gene11, Gene34	2	1	6.69367363736059
+15	Gene11 | Gene34 | (Gene48 & Gene50)	79	4	0.5	Gene11, Gene34, Gene48, Gene50	4	1	5.592343386044735
+16	Gene34 | Gene50	78	2	0.0	Gene34, Gene50	2	1	6.15522935324404
+17	Gene34 | Gene50	78	2	0.0	Gene34, Gene50	2	1	6.624273511480161
+18	Gene17 | Gene50	78	2	0.0	Gene17, Gene50	2	1	6.997362427574281
+19	Gene50 | (Gene34 & ~Gene48)	78	3	0.0	Gene34, Gene48, Gene50	3	1	7.084004872011217
+20	Gene48 | Gene50 | (Gene31 & Gene44)	78	4	0.5	Gene31, Gene44, Gene48, Gene50	4	1	6.95031114870684
+21	Gene48 | Gene50 | (Gene31 & Gene44)	78	4	0.5	Gene31, Gene44, Gene48, Gene50	4	1	6.95031114870684
+22	Gene50	78	1	0.5	Gene50	1	1	8.01717776500831
+23	Gene33 | Gene48 | Gene50	77	3	0.0	Gene33, Gene48, Gene50	3	1	6.58665416426298
+24	Gene48 | (Gene11 & Gene50)	77	3	0.0	Gene11, Gene48, Gene50	3	1	7.073459864517666
+25	Gene11 | Gene29	77	2	0.0	Gene11, Gene29	2	1	7.1142727692495304
+26	Gene11 & Gene50	77	2	0.0	Gene11, Gene50	2	1	7.297601837541136
+27	Gene33 | Gene50	77	2	0.0	Gene33, Gene50	2	1	7.412711337377558
+28	True	77	1	0.5	True	1	1	7.574239132305729
+29	Gene11 | (Gene48 & Gene5) | (Gene5 & Gene50)	77	4	0.5	Gene11, Gene48, Gene5, Gene50	4	1	5.783510142655252
+30	Gene11 | Gene34 | Gene44 | Gene50	77	4	0.5	Gene11, Gene34, Gene44, Gene50	4	1	5.964798283554997
+31	~Gene34 | ~Gene48 | ~Gene50	76	3	0.0	Gene34, Gene48, Gene50	3	1	6.007494240348472
+32	Gene11 | Gene44	76	2	0.0	Gene11, Gene44	2	1	7.609288209396562
+33	Gene11	76	1	0.5	Gene11	1	1	8.215919260541
+34	Gene11	76	1	0.5	Gene11	1	1	8.215919260541
+35	Gene27 | Gene28	75	2	0.0	Gene27, Gene28	2	1	7.806028093317627
+36	Gene19 | Gene27	75	2	0.0	Gene19, Gene27	2	1	7.850240988242369
+37	~Gene42	70	1	0.5	Gene42	1	1	8.384234666026451
+38	~Gene21	67	1	0.5	Gene21	1	1	8.384264276602895
+39	Gene34 | (Gene48 & Gene50)	63	3	0.0	Gene34, Gene48, Gene50	3	1	6.007494240348472
+40	Gene17 | Gene22 | Gene34	63	3	0.0	Gene17, Gene22, Gene34	3	1	6.337486368822246
+41	Gene34	62	1	0.5	Gene34	1	1	6.15522935324404
+42	Gene34	62	1	0.5	Gene34	1	1	8.32220189350995
+43	Gene11 & Gene34	59	2	0.0	Gene11, Gene34	2	1	6.69367363736059
+44	Gene48 & Gene50	24	2	0.0	Gene48, Gene50	2	1	6.3874292225721865
+45	Gene32 & Gene48	24	2	0.0	Gene32, Gene48	2	1	7.592435195350179
+46	Gene48	24	1	0.5	Gene48	1	1	8.329425088956391
+47	Gene11 & Gene34 & Gene48 & Gene50	23	4	0.5	Gene11, Gene34, Gene48, Gene50	4	1	4.175177149378325
+48	Gene19 | Gene31	22	2	0.0	Gene19, Gene31	2	1	7.001036875115178
+49	(Gene48 | ~Gene44) & (Gene48 | ~Gene50) & (~Gene44 | ~Gene5) & (~Gene5 | ~Gene50)	22	4	0.5	Gene44, Gene48, Gene5, Gene50	4	1	5.934184393287632
+50	Gene3 & Gene31 & (Gene48 | Gene50)	21	4	0.5	Gene3, Gene31, Gene48, Gene50	4	1	7.013801645034994

@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	Gene172 & Gene296	4	2	0.0	Gene172, Gene296	2	1
+2	Gene172 & Gene176	4	2	0.0	Gene172, Gene176	2	1
+3	Gene24 & Gene296	4	2	0.0	Gene24, Gene296	2	1
+4	Gene24 & Gene296	4	2	0.0	Gene24, Gene296	2	1
+5	Gene296 | Gene54	4	2	0.0	Gene296, Gene54	2	1
+6	Gene172 & Gene296	4	2	0.0	Gene172, Gene296	2	1
+7	Gene296 | Gene54	4	2	0.0	Gene296, Gene54	2	1
+8	Gene172 & Gene176 & Gene296	4	3	0.0	Gene172, Gene176, Gene296	3	1
+9	Gene172 & Gene296	4	2	0.0	Gene172, Gene296	2	1
+10	Gene24 & Gene457	4	2	0.0	Gene24, Gene457	2	1
+11	Gene172 & Gene296	4	2	0.0	Gene172, Gene296	2	1
+12	Gene172 & Gene296	4	2	0.0	Gene172, Gene296	2	1
+13	Gene172 & Gene296	4	2	0.0	Gene172, Gene296	2	1
+14	Gene172 & Gene176	4	2	0.0	Gene172, Gene176	2	1
+15	Gene296 | Gene54	4	2	0.0	Gene296, Gene54	2	1
+16	Gene24 & Gene457	4	2	0.0	Gene24, Gene457	2	1
+17	Gene296 | Gene54	4	2	0.0	Gene296, Gene54	2	1
+18	Gene24 & (Gene457 | Gene54)	4	3	0.0	Gene24, Gene457, Gene54	3	1
+19	Gene172 & Gene296	4	2	0.0	Gene172, Gene296	2	1
+20	Gene296 & Gene54	4	2	0.0	Gene296, Gene54	2	1
+21	Gene172 & Gene176 & Gene296	4	3	0.0	Gene172, Gene176, Gene296	3	1
+22	Gene172 & Gene296	4	2	0.0	Gene172, Gene296	2	1
+23	Gene172 & Gene296	4	2	0.0	Gene172, Gene296	2	1
+24	Gene24 & Gene296	4	2	0.0	Gene24, Gene296	2	1
+25	Gene172 & Gene176 & Gene296 & Gene357	4	4	0.5	Gene172, Gene176, Gene296, Gene357	4	1
+26	Gene108 & Gene172 & Gene176 & Gene88	4	4	0.5	Gene108, Gene172, Gene176, Gene88	4	1
+27	Gene296	4	1	0.5	Gene296	1	1
+28	Gene296	4	1	0.5	Gene296	1	1
+29	Gene172 & Gene254	3	2	0.0	Gene172, Gene254	2	1
+30	Gene172 & Gene452 & Gene88	3	3	0.0	Gene172, Gene452, Gene88	3	1
+31	Gene172 & Gene344	3	2	0.0	Gene172, Gene344	2	1
+32	Gene172 & Gene24	3	2	0.0	Gene172, Gene24	2	1
+33	Gene168 & Gene172 & Gene296	3	3	0.0	Gene168, Gene172, Gene296	3	1
+34	Gene172 | Gene296	3	2	0.0	Gene172, Gene296	2	1
+35	Gene297 | Gene54	3	2	0.0	Gene297, Gene54	2	1
+36	Gene172	3	1	0.5	Gene172	1	1
+37	Gene168 & Gene172 & Gene204 & Gene296	3	4	0.5	Gene168, Gene172, Gene204, Gene296	4	1
+38	Gene172	3	1	0.5	Gene172	1	1
+39	Gene279 & Gene306 & Gene446 & Gene452 & (Gene172 | Gene61)	3	6	1.5	Gene172, Gene279, Gene306, Gene446, Gene452, Gene61	6	1
+40	Gene24 & Gene297	2	2	0.0	Gene24, Gene297	2	1
+41	Gene227 & Gene319	2	2	0.0	Gene227, Gene319	2	1
+42	Gene102 & Gene278	2	2	0.0	Gene102, Gene278	2	1
+43	Gene197 & Gene341	2	2	0.0	Gene197, Gene341	2	1
+44	Gene452 & Gene88	2	2	0.0	Gene452, Gene88	2	1
+45	Gene321 & Gene84	2	2	0.0	Gene321, Gene84	2	1
+46	Gene208 & Gene452	2	2	0.0	Gene208, Gene452	2	1
+47	Gene176	2	1	0.5	Gene176	1	1
+48	Gene143 | Gene191	1	2	0.0	Gene143, Gene191	2	1
+49	~Gene172	1	1	0.5	Gene172	1	1
+50	Gene390 | (Gene443 & Gene461)	1	3	0.0	Gene390, Gene443, Gene461	3	1

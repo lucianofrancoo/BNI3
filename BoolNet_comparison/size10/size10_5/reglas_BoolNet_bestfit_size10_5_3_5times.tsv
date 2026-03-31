@@ -1,0 +1,11 @@
+Gen	Regla	Error	N_reguladores
+G1	(!G1 & !G8) | (G1 & G8)	0	2
+G2	(G1 & !G10)	0	2
+G3	(G10)	0	1
+G4	(!G1)	0	1
+G5	1	0	1
+G6	(!G10)	0	1
+G7	(!G1)	0	1
+G8	(G10)	0	1
+G9	(!G1)	0	1
+G10	0	0	1

@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	Gene224 | Gene657	4	2	0.0	Gene224, Gene657	2	1
+2	Gene224 | Gene657 | Gene728	4	3	0.0	Gene224, Gene657, Gene728	3	1
+3	Gene224 | Gene728	4	2	0.0	Gene224, Gene728	2	1
+4	Gene224 | Gene657	4	2	0.0	Gene224, Gene657	2	1
+5	Gene224 | Gene657	4	2	0.0	Gene224, Gene657	2	1
+6	Gene224 | Gene728	4	2	0.0	Gene224, Gene728	2	1
+7	Gene224 | Gene657	4	2	0.0	Gene224, Gene657	2	1
+8	Gene224 | Gene657	4	2	0.0	Gene224, Gene657	2	1
+9	Gene243 | Gene299 | Gene609	4	3	0.0	Gene243, Gene299, Gene609	3	1
+10	Gene224 | Gene657 | Gene705	4	3	0.0	Gene224, Gene657, Gene705	3	1
+11	Gene299 | Gene8	4	2	0.0	Gene299, Gene8	2	1
+12	Gene113 | Gene728	4	2	0.0	Gene113, Gene728	2	1
+13	Gene224 | Gene657	4	2	0.0	Gene224, Gene657	2	1
+14	Gene224 | Gene657 | Gene705	4	3	0.0	Gene224, Gene657, Gene705	3	1
+15	Gene224 | Gene657	4	2	0.0	Gene224, Gene657	2	1
+16	Gene224 | Gene657	4	2	0.0	Gene224, Gene657	2	1
+17	Gene657 & (Gene224 | Gene728)	4	3	0.0	Gene224, Gene657, Gene728	3	1
+18	Gene224 | Gene657	4	2	0.0	Gene224, Gene657	2	1
+19	Gene224 | Gene728	4	2	0.0	Gene224, Gene728	2	1
+20	Gene299 | Gene8	4	2	0.0	Gene299, Gene8	2	1
+21	Gene224 | Gene657	4	2	0.0	Gene224, Gene657	2	1
+22	Gene224 | Gene657	4	2	0.0	Gene224, Gene657	2	1
+23	Gene224 | Gene728	4	2	0.0	Gene224, Gene728	2	1
+24	Gene657	4	1	0.5	Gene657	1	1
+25	Gene657	4	1	0.5	Gene657	1	1
+26	Gene657	4	1	0.5	Gene657	1	1
+27	Gene728	4	1	0.5	Gene728	1	1
+28	Gene174 | Gene686 | Gene728	3	3	0.0	Gene174, Gene686, Gene728	3	1
+29	Gene367 | Gene511	3	2	0.0	Gene367, Gene511	2	1
+30	Gene174 | Gene464	3	2	0.0	Gene174, Gene464	2	1
+31	Gene367 | Gene511	3	2	0.0	Gene367, Gene511	2	1
+32	Gene464 & Gene657	3	2	0.0	Gene464, Gene657	2	1
+33	Gene174 | Gene464	3	2	0.0	Gene174, Gene464	2	1
+34	Gene464 | Gene657	3	2	0.0	Gene464, Gene657	2	1
+35	Gene464 | Gene875	3	2	0.0	Gene464, Gene875	2	1
+36	Gene224 & Gene728	3	2	0.0	Gene224, Gene728	2	1
+37	Gene404 | Gene728	3	2	0.0	Gene404, Gene728	2	1
+38	Gene224	3	1	0.5	Gene224	1	1
+39	Gene174 | Gene224 | Gene464 | Gene657	3	4	0.5	Gene174, Gene224, Gene464, Gene657	4	1
+40	Gene174 | Gene367 | Gene464 | Gene511 | Gene728	3	5	1.0	Gene174, Gene367, Gene464, Gene511, Gene728	5	1
+41	Gene464 | Gene932 | (Gene168 & Gene853 & Gene974) | (Gene511 & Gene853 & Gene974)	3	6	1.5	Gene168, Gene464, Gene511, Gene853, Gene932, Gene974	6	1
+42	Gene288 | Gene679	2	2	0.0	Gene288, Gene679	2	1
+43	Gene320 | Gene367	2	2	0.0	Gene320, Gene367	2	1
+44	Gene288 | Gene679	2	2	0.0	Gene288, Gene679	2	1
+45	Gene511 | (Gene7 & ~Gene464)	2	3	0.0	Gene464, Gene511, Gene7	3	1
+46	Gene174	2	1	0.5	Gene174	1	1
+47	Gene174	2	1	0.5	Gene174	1	1
+48	Gene174 & Gene464	1	2	0.0	Gene174, Gene464	2	1
+49	~Gene224	1	1	0.5	Gene224	1	1
+50	~Gene224	1	1	0.5	Gene224	1	1

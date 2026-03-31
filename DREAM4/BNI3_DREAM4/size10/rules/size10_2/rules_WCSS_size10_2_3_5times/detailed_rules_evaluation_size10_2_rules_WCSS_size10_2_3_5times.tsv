@@ -1,0 +1,1260 @@
+Size	Network	Method	Binarization	Rep	Source_File	Gene	Position	Rule	Score	MSE	Correct	TP	FP	FN	TN	Precision	Recall	F1_score	Accuracy	DynamicAccuracy	N_Predictions	N_Errors	N_Regulators
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	1	G3 & (G10 | G7)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	2	G8 & ~G1	1.9375	N/A	4	0	1	0	8	0	0	0	0.888888888888889	1	4	0	1
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	3	~G1 & (G10 | G3)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	4	G3 & ~G1	1.9375	N/A	4	0	1	0	8	0	0	0	0.888888888888889	1	4	0	1
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	5	~G1 & (G10 | G7)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	6	~G1 | (~G10 & ~G2)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	7	~G1 & (G2 | G9)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	8	~G1 | ~G9	1.9375	N/A	4	0	1	0	8	0	0	0	0.888888888888889	1	4	0	1
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	9	~G1 | ~G2	1.9375	N/A	4	0	1	0	8	0	0	0	0.888888888888889	1	4	0	1
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	10	~G2 | ~G9	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	11	~G1 | ~G2 | ~G4	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	12	G3 & (G5 | G7)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	13	G5 | (G7 & G8)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	14	G5 | (G3 & G7)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	15	G10 | ~G1	1.9375	N/A	4	0	1	0	8	0	0	0	0.888888888888889	1	4	0	1
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	16	~G4 | (G6 & G7)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	17	~G9 | (~G4 & ~G7)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	18	~G4 | ~G9	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	19	G5 | ~G1	1.9375	N/A	4	0	1	0	8	0	0	0	0.888888888888889	1	4	0	1
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	20	~G9 | (~G2 & ~G4)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	21	G10 | ~G9	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	22	~G1 | ~G4	1.9375	N/A	4	0	1	0	8	0	0	0	0.888888888888889	1	4	0	1
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	23	~G4 | (G3 & G7)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	24	G5 | ~G1 | ~G4	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	25	~G1 | (G3 & G5)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	26	~G1 | (~G4 & ~G9)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	27	~G1 | (~G5 & ~G9)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	28	~G1 & (~G4 | ~G9)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	29	~G1 | (G10 & ~G4)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	30	~G1 | (G5 & G7)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	31	~G2 | (~G10 & ~G9)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	32	~G1 & (G3 | G8)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	33	G8 & (~G2 | ~G9)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	34	G3 & (G5 | ~G9)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	35	~G1 & (~G5 | ~G6)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	36	~G1 & (G4 | G5)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	37	~G2 | ~G4 | ~G9	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	38	~G1 & (G6 | G8)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	39	~G1 & (G3 | G7)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	40	~G1 & (G8 | G9)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	41	~G1 & (G10 | G6)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	42	G5 | ~G9	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	43	G5 | ~G1 | ~G2	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	44	G10 | ~G1 | ~G4	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	45	G10 | (G3 & G7)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	46	G10 | (G2 & ~G1)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	47	G3 & G8 & ~G1	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	48	~G1 | (G10 & G6)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	49	~G1 & (G3 | ~G6)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	50	G10 | ~G1 | ~G2	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	51	~G1 & (G10 | G8)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	52	~G4 | (~G1 & ~G9)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	53	~G1 | (G5 & ~G2)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	54	~G1 | (G10 & G2)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	55	~G1 | (G10 & G3)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	56	G8 & (~G1 | ~G2)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	57	G8 & (~G1 | ~G6)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	58	~G1 | (~G2 & ~G6)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	59	~G1 | ~G2 | ~G9	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	60	~G1 & (G6 | ~G2)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	61	G10 | (~G1 & ~G9)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	62	~G1 | (G2 & ~G9)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	63	G5 | ~G2 | ~G9	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	64	~G1 & (G5 | G7)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	65	G5 | (G2 & ~G9)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	66	~G9 | (G5 & G8)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	67	~G1 & (G3 | G5)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	68	~G1 | (~G4 & ~G8)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	69	~G1 | ~G4 | ~G9	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	70	~G1 & (G5 | G8)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	71	~G1 & (G10 | G4)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	72	~G2 | (~G1 & ~G5)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	73	~G1 & (~G6 | ~G9)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	74	G10 | (G3 & ~G9)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	75	~G1 & (G3 | G9)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	76	~G1 & (G4 | G8)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G1	77	~G1 & (G3 | G6)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	1	G4 | G5	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	2	G10 | G2	1.9375	N/A	4	0	1	2	6	0	0	0	0.666666666666667	1	4	0	1
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	3	G2 | G8	1.9375	N/A	4	0	1	2	6	0	0	0	0.666666666666667	1	4	0	1
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	4	G4 | G8	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	5	G7 | G8	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	6	G4 | G9	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	7	G6 | G9	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	8	G2 | G5	1.9375	N/A	4	1	0	1	7	1	0.5	0.666666666666667	0.888888888888889	1	4	0	1
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	9	G1 | G8	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	10	G1 | G4 | G5	1.9375	N/A	4	2	1	0	6	0.666666666666667	1	0.8	0.888888888888889	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	11	G1 | G5 | G8	1.9375	N/A	4	2	1	0	6	0.666666666666667	1	0.8	0.888888888888889	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	12	G1 | G4 | G8	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	13	G7 | G9	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	14	G2 | G4 | G8	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	15	G2 | G3	1.9375	N/A	4	0	1	2	6	0	0	0	0.666666666666667	1	4	0	1
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	16	G9 | ~G1 | ~G4	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	17	G1 | G2 | G3	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	18	G3 | G7	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	19	G4 | ~G1	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	20	G10 | G4	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	21	G3 | G9	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	22	G10 | G4 | G6	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	23	G2 | G9	1.9375	N/A	4	0	1	2	6	0	0	0	0.666666666666667	1	4	0	1
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	24	G2 | G3 | G5	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	25	G8 | G9	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	26	G3 | ~G8	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	27	G2 | G3 | G9	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	28	G2 | G3 | G8	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	29	G4 | G8 | G9	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	30	G1 | G3	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	31	G4 | G5 | G7	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	32	G1 | G3 | G8	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	33	G3 | G4	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	34	G10 | G8 | G9	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	35	G2 | G8 | ~G5	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	36	~G10 | ~G3 | ~G6	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	37	G1 | G5 | ~G10	1.9375	N/A	4	2	1	0	6	0.666666666666667	1	0.8	0.888888888888889	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	38	G8 | (G1 & ~G5)	1.9375	N/A	4	2	1	0	6	0.666666666666667	1	0.8	0.888888888888889	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	39	G8 | ~G5	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	40	G8 | ~G3	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	41	G10 | G3 | G9	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	42	G1 | G6 | G9	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	43	G1 | G7 | G9	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	44	G7 | G9 | ~G4	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	45	~G4 | ~G5	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	46	G2 | ~G1	1.9375	N/A	4	1	0	1	7	1	0.5	0.666666666666667	0.888888888888889	1	4	0	1
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	47	G1 | G10 | G4	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	48	G10 | G3 | G7	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	49	G2 | (G3 & G9)	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	50	G8 | ~G1 | ~G10	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	51	G7 | G8 | G9	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	52	G10 | G7 | G8	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	53	G3 | G7 | G8	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	54	G2 | G4 | G5	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	55	G6 | G8 | ~G5	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	56	G3 | G7 | ~G6	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	57	G6 | G9 | ~G8	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	58	G3 | G5 | ~G8	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	59	G3 | G4 | G6	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	60	G3 | G6 | G9	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	61	G9 | (G6 & G8)	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	62	G1 | G2 | G9	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	63	G2 | G7 | G8	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	64	G9 | ~G1	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	65	G3 | G4 | G8	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	66	G3 | ~G10	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	67	G8 | (G9 & ~G3)	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	68	G1 | G3 | ~G9	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	69	G4 | ~G2	1.9375	N/A	4	0	1	2	6	0	0	0	0.666666666666667	1	4	0	1
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	70	G1 | G3 | G5	1.9375	N/A	4	2	1	0	6	0.666666666666667	1	0.8	0.888888888888889	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	71	G3 | G9 | ~G8	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	72	G1 | G8 | G9	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	73	G2 | G3 | G6	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	74	G5 | G8 | G9	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	75	G10 | G4 | G8	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	76	G6 | G8 | G9	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	77	G2 | G5 | G8	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	78	G8 | ~G6	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	79	G10 | G2 | G7	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	80	G10 | G6 | G7	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	81	G1 | (G3 & G8)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	82	G10 | G3 | G4	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	83	G1 | G3 | G4	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	84	G4 | (G3 & G9)	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	85	G10 | G6 | G9	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	86	G1 | G10 | G3	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	87	G10 | ~G5	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	88	G3 | G4 | G5	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	89	G10 | G4 | G5	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	90	G2 | G9 | ~G5	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	91	G8 | ~G10	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	92	G5 | ~G10	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	93	G2 | G3 | ~G9	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	94	G10 | G2 | G3	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	95	G2 | ~G6	1.9375	N/A	4	0	1	2	6	0	0	0	0.666666666666667	1	4	0	1
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	96	G4 | G8 | ~G6	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	97	G2 | G8 | G9	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	98	G2 | ~G7	1.9375	N/A	4	0	1	2	6	0	0	0	0.666666666666667	1	4	0	1
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	99	G4 | G6 | G9	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	100	G3 | G4 | G7	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	101	G3 | G7 | G9	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	102	G2 | G8 | ~G3	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	103	~G10 | ~G7 | ~G8	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	104	G2 | G3 | G4	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	105	G3 | G8 | G9	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	106	G10 | G2 | G9	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	107	G10 | G6 | ~G8	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	108	G10 | G9 | ~G1	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	109	G6 | G7 | G8	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	110	G10 | G4 | ~G8	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	111	G3 | ~G6	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	112	G1 | G10 | G8	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	113	G2 | G7 | G9	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	114	G10 | G2 | G4	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	115	G1 | G2 | G5	1.9375	N/A	4	2	0	0	7	1	1	1	1	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	116	G2 | G3 | G7	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	117	G4 | G7 | G8	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	118	G2 | G6 | G8	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	119	G1 | G6 | G8	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	120	G4 | G5 | ~G2	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	121	G5 | ~G10 | ~G8	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	122	G1 | G8 | ~G4	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	123	G5 | G7 | G9	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	124	G3 | G4 | G9	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	125	~G10 | ~G6	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	126	G2 | G9 | ~G10	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	127	~G10 | ~G2 | ~G9	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	128	G10 | G7 | G9	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	129	~G10 | ~G3 | ~G7	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	130	~G5 | (G9 & ~G1)	1.9375	N/A	4	2	1	0	6	0.666666666666667	1	0.8	0.888888888888889	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	131	G1 | G9 | ~G10	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	132	~G5 | (~G4 & ~G7)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	133	G4 | ~G7 | ~G9	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	134	G4 | ~G7	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	135	G1 | G3 | G9	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	136	G3 | ~G5	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	137	G1 | G6 | ~G4	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	138	G10 | G2 | G5	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	139	~G2 | ~G5	1.9375	N/A	4	1	0	1	7	1	0.5	0.666666666666667	0.888888888888889	1	4	0	1
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	140	G5 | (G2 & G4)	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	141	G1 | G10 | G6	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	142	G10 | G2 | G8	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	143	G2 | G8 | ~G6	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	144	G10 | G4 | G7	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	145	G7 | (G3 & G8)	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	146	G4 | G5 | ~G3	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	147	G3 | G5 | G7	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	148	G2 | G5 | G7	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	149	G10 | G4 | G9	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	150	G4 | G5 | G9	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	151	G10 | G2 | ~G4	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	152	G4 | G5 | G6	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	153	G5 | G7 | G8	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	154	G1 | G2 | G8	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	155	G9 | ~G10 | ~G5	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	156	G2 | G5 | ~G4	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	157	G8 | (G9 & ~G5)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	158	G6 | G7 | ~G4	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	159	G2 | G6 | G9	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	160	G9 | ~G5	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	161	G2 | ~G4	1.9375	N/A	4	0	1	2	6	0	0	0	0.666666666666667	1	4	0	1
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	162	G10 | G2 | ~G3	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	163	G1 | G7 | G8	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	164	G8 | ~G3 | ~G9	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	165	G3 | ~G10 | ~G9	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	166	G3 | ~G8 | ~G9	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	167	G3 | G8 | ~G10	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	168	~G10 | ~G7	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	169	G1 | G4 | G9	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	170	G6 | G9 | ~G2	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	171	G3 | G6 | G7	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	172	G1 | G3 | ~G7	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	173	~G5 | (~G2 & ~G7)	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	174	~G10 | (G3 & ~G2)	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	175	G4 | ~G6	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	176	G1 | G10 | G2	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	177	G4 | (G5 & G8)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	178	G9 | (G4 & G8)	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	179	G2 | G5 | G6	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	180	G8 | ~G6 | ~G7	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	181	~G1 | ~G5 | ~G9	1.9375	N/A	4	2	1	0	6	0.666666666666667	1	0.8	0.888888888888889	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	182	G3 | G5 | G9	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	183	G6 | ~G7 | ~G8	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	184	G2 | G5 | ~G8	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	185	G3 | G9 | ~G4	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	186	~G1 | ~G5	1.9375	N/A	4	2	0	0	7	1	1	1	1	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	187	G3 | (G1 & G7)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	188	G5 | G8 | ~G10	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	189	G2 | ~G3 | ~G7	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	190	G9 | (G4 & ~G5)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	191	~G1 | ~G10	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	192	~G1 | ~G10 | ~G8	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	193	G4 | G8 | ~G1	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	194	G3 | (G4 & G7)	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	195	G2 | G4 | G9	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	196	G4 | G5 | G8	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	197	G5 | (G4 & ~G10)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	198	G10 | G8 | ~G6	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	199	G1 | G5 | G6	1.9375	N/A	4	2	1	0	6	0.666666666666667	1	0.8	0.888888888888889	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	200	G1 | G4 | ~G6	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	201	G4 | (G10 & G9)	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	202	G10 | G2 | ~G8	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	203	G3 | G8 | ~G6	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	204	G6 | G7 | G9	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	205	G2 | G9 | ~G4	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	206	G3 | G4 | ~G6	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	207	G3 | (G2 & G9)	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G2	208	G2 | ~G1 | ~G7	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G3	1	G3 & G9	1.9375	N/A	4	0	1	3	5	0	0	0	0.555555555555556	1	4	0	1
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G3	2	G3 & (G1 | G10)	1.9375	N/A	4	1	1	2	5	0.5	0.333333333333333	0.4	0.666666666666667	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G3	3	G8 & ~G7	1.9375	N/A	4	0	2	3	4	0	0	0	0.444444444444444	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G3	4	G3 & ~G7	1.9375	N/A	4	0	1	3	5	0	0	0	0.555555555555556	1	4	0	1
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G3	5	G9 & ~G7	1.9375	N/A	4	0	2	3	4	0	0	0	0.444444444444444	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G3	6	G9 & (G10 | G6)	1.9375	N/A	4	1	2	2	4	0.333333333333333	0.333333333333333	0.333333333333333	0.555555555555556	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G3	7	~G4 | ~G7	1.9375	N/A	4	1	1	2	5	0.5	0.333333333333333	0.4	0.666666666666667	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G3	8	~G7 | (~G2 & ~G5)	1.9375	N/A	4	1	2	2	4	0.333333333333333	0.333333333333333	0.333333333333333	0.555555555555556	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G3	9	~G2 | ~G7	1.9375	N/A	4	0	2	3	4	0	0	0	0.444444444444444	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G3	10	G10 | ~G7	1.9375	N/A	4	1	1	2	5	0.5	0.333333333333333	0.4	0.666666666666667	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G3	11	G8 & G9	1.9375	N/A	4	0	2	3	4	0	0	0	0.444444444444444	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G3	12	G8 & (G1 | G5)	1.9375	N/A	4	1	2	2	4	0.333333333333333	0.333333333333333	0.333333333333333	0.555555555555556	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G3	13	G5 | (G1 & G6)	1.9375	N/A	4	1	2	2	4	0.333333333333333	0.333333333333333	0.333333333333333	0.555555555555556	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G3	14	G3 & (G1 | G9)	1.9375	N/A	4	0	2	3	4	0	0	0	0.444444444444444	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G3	15	G8 & (~G6 | ~G7)	1.9375	N/A	4	0	3	3	3	0	0	0	0.333333333333333	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G3	16	G5 | (G8 & G9)	1.9375	N/A	4	1	2	2	4	0.333333333333333	0.333333333333333	0.333333333333333	0.555555555555556	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G3	17	~G7 & (G1 | G10)	1.9375	N/A	4	1	2	2	4	0.333333333333333	0.333333333333333	0.333333333333333	0.555555555555556	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G3	18	G10 | (G1 & ~G7)	1.9375	N/A	4	1	2	2	4	0.333333333333333	0.333333333333333	0.333333333333333	0.555555555555556	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G3	19	G9 & (G3 | G5)	1.9375	N/A	4	1	1	2	5	0.5	0.333333333333333	0.4	0.666666666666667	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G3	20	~G7 | (G9 & ~G4)	1.9375	N/A	4	1	2	2	4	0.333333333333333	0.333333333333333	0.333333333333333	0.555555555555556	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G3	21	G3 & G8 & G9	1.9375	N/A	4	0	2	3	4	0	0	0	0.444444444444444	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G3	22	G10 | (G3 & G9)	1.9375	N/A	4	1	1	2	5	0.5	0.333333333333333	0.4	0.666666666666667	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G3	23	~G2 | (G3 & G9)	1.9375	N/A	4	0	2	3	4	0	0	0	0.444444444444444	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G3	24	G5 | (G3 & G9)	1.9375	N/A	4	1	1	2	5	0.5	0.333333333333333	0.4	0.666666666666667	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G3	25	G3 & (G1 | ~G4)	1.9375	N/A	4	1	1	2	5	0.5	0.333333333333333	0.4	0.666666666666667	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G3	26	~G7 & (G3 | G8)	1.9375	N/A	4	0	2	3	4	0	0	0	0.444444444444444	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G3	27	~G2 | (G1 & G6)	1.9375	N/A	4	0	3	3	3	0	0	0	0.333333333333333	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G3	28	~G2 | (G1 & G3)	1.9375	N/A	4	0	2	3	4	0	0	0	0.444444444444444	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G3	29	~G7 | (G3 & G9)	1.9375	N/A	4	0	2	3	4	0	0	0	0.444444444444444	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G3	30	G9 & (G3 | ~G2)	1.9375	N/A	4	0	2	3	4	0	0	0	0.444444444444444	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G3	31	~G2 | (G6 & G9)	1.9375	N/A	4	0	3	3	3	0	0	0	0.333333333333333	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G3	32	~G7 & (G10 | G3)	1.9375	N/A	4	1	1	2	5	0.5	0.333333333333333	0.4	0.666666666666667	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G3	33	G5 | (G1 & G8)	1.9375	N/A	4	1	2	2	4	0.333333333333333	0.333333333333333	0.333333333333333	0.555555555555556	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G3	34	G8 & (G9 | ~G6)	1.9375	N/A	4	0	3	3	3	0	0	0	0.333333333333333	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G3	35	G10 | (G1 & G8)	1.9375	N/A	4	1	2	2	4	0.333333333333333	0.333333333333333	0.333333333333333	0.555555555555556	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G3	36	G10 | (G9 & ~G7)	1.9375	N/A	4	1	2	2	4	0.333333333333333	0.333333333333333	0.333333333333333	0.555555555555556	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G3	37	G3 & G9 & ~G7	1.9375	N/A	4	0	2	3	4	0	0	0	0.444444444444444	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G3	38	G8 & (G1 | G10)	1.9375	N/A	4	1	2	2	4	0.333333333333333	0.333333333333333	0.333333333333333	0.555555555555556	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G3	39	G5 | ~G7	1.9375	N/A	4	1	1	2	5	0.5	0.333333333333333	0.4	0.666666666666667	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G3	40	~G7 & (G3 | ~G8)	1.9375	N/A	4	0	2	3	4	0	0	0	0.444444444444444	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G3	41	~G7 & (G2 | G8)	1.9375	N/A	4	0	3	3	3	0	0	0	0.333333333333333	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G3	42	G3 & G8 & ~G7	1.9375	N/A	4	0	2	3	4	0	0	0	0.444444444444444	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G3	43	~G7 & (G8 | ~G4)	1.9375	N/A	4	1	2	2	4	0.333333333333333	0.333333333333333	0.333333333333333	0.555555555555556	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G3	44	~G7 & (G6 | G8)	1.9375	N/A	4	0	3	3	3	0	0	0	0.333333333333333	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G3	45	~G7 | (G5 & G6)	1.9375	N/A	4	1	2	2	4	0.333333333333333	0.333333333333333	0.333333333333333	0.555555555555556	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G3	46	G9 & (G10 | G3)	1.9375	N/A	4	1	1	2	5	0.5	0.333333333333333	0.4	0.666666666666667	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G3	47	G10 | (G8 & G9)	1.9375	N/A	4	1	2	2	4	0.333333333333333	0.333333333333333	0.333333333333333	0.555555555555556	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G3	48	~G7 | (G5 & G9)	1.9375	N/A	4	1	2	2	4	0.333333333333333	0.333333333333333	0.333333333333333	0.555555555555556	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G3	49	G5 | ~G4 | ~G7	1.9375	N/A	4	2	1	1	5	0.666666666666667	0.666666666666667	0.666666666666667	0.777777777777778	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G3	50	~G7 & (G4 | G5)	1.9375	N/A	4	2	1	1	5	0.666666666666667	0.666666666666667	0.666666666666667	0.777777777777778	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G3	51	~G7 | (G6 & ~G3)	1.9375	N/A	4	0	2	3	4	0	0	0	0.444444444444444	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G3	52	G5 | (G6 & ~G7)	1.9375	N/A	4	1	2	2	4	0.333333333333333	0.333333333333333	0.333333333333333	0.555555555555556	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G3	53	G10 | (G6 & ~G7)	1.9375	N/A	4	1	2	2	4	0.333333333333333	0.333333333333333	0.333333333333333	0.555555555555556	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G3	54	G3 & (G10 | ~G7)	1.9375	N/A	4	1	1	2	5	0.5	0.333333333333333	0.4	0.666666666666667	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G3	55	G3 & (G10 | G9)	1.9375	N/A	4	1	1	2	5	0.5	0.333333333333333	0.4	0.666666666666667	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G3	56	G3 & (G5 | G9)	1.9375	N/A	4	1	1	2	5	0.5	0.333333333333333	0.4	0.666666666666667	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G3	57	~G7 | (~G2 & ~G3)	1.9375	N/A	4	0	2	3	4	0	0	0	0.444444444444444	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G3	58	~G7 & (G8 | ~G2)	1.9375	N/A	4	0	3	3	3	0	0	0	0.333333333333333	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G3	59	(G1 & G5) | (G1 & G8) | (G5 & G8)	1.9375	N/A	4	1	2	2	4	0.333333333333333	0.333333333333333	0.333333333333333	0.555555555555556	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	1	G2 | G3 | G9	1.9375	N/A	4	2	1	0	6	0.666666666666667	1	0.8	0.888888888888889	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	2	G6 | G9	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	3	G2 | G5 | ~G4	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	4	G2 | G3	1.9375	N/A	4	2	0	0	7	1	1	1	1	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	5	G2 | G6 | G9	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	6	G3 | G6 | G9	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	7	G1 | G2 | G8	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	8	G2 | G9	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	9	G3 | G4	1.9375	N/A	4	1	0	1	7	1	0.5	0.666666666666667	0.888888888888889	1	4	0	1
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	10	G3 | G9	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	11	G2 | G3 | G4	1.9375	N/A	4	2	0	0	7	1	1	1	1	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	12	G4 | G9	1.9375	N/A	4	0	1	2	6	0	0	0	0.666666666666667	1	4	0	1
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	13	G6 | G8 | G9	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	14	G2 | G4 | G9	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	15	G2 | G8	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	16	G8 | G9	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	17	G10 | G2	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	18	G9 | ~G5 | ~G8	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	19	G1 | G8	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	20	G2 | G5	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	21	G9 | ~G5	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	22	G10 | G4	1.9375	N/A	4	0	1	2	6	0	0	0	0.666666666666667	1	4	0	1
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	23	G10 | G4 | ~G1	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	24	G2 | G3 | G5	1.9375	N/A	4	2	1	0	6	0.666666666666667	1	0.8	0.888888888888889	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	25	G7 | G8	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	26	G3 | G5 | G7	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	27	~G1 | ~G10	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	28	G1 | G5 | ~G9	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	29	G2 | G7 | G8	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	30	G3 | ~G8	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	31	G3 | G7	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	32	G1 | G2 | G5	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	33	G5 | G7 | G8	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	34	G2 | G8 | G9	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	35	G4 | G5 | G8	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	36	~G10 | ~G2	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	37	~G10 | ~G7 | ~G9	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	38	G6 | ~G10 | ~G4	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	39	~G10 | ~G6	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	40	G4 | G5	1.9375	N/A	4	0	1	2	6	0	0	0	0.666666666666667	1	4	0	1
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	41	G1 | G2 | ~G7	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	42	G10 | G2 | G8	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	43	G10 | G4 | G8	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	44	G4 | G8 | G9	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	45	G1 | G3 | ~G5	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	46	G9 | ~G1	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	47	G1 | G3	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	48	G1 | G10 | G6	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	49	G4 | G8	1.9375	N/A	4	0	1	2	6	0	0	0	0.666666666666667	1	4	0	1
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	50	G1 | G10 | G8	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	51	G4 | G5 | G7	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	52	G2 | G9 | ~G8	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	53	G4 | ~G2	1.9375	N/A	4	1	0	1	7	1	0.5	0.666666666666667	0.888888888888889	1	4	0	1
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	54	G2 | G4 | G8	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	55	G2 | ~G4 | ~G8	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	56	G4 | ~G1	1.9375	N/A	4	0	1	2	6	0	0	0	0.666666666666667	1	4	0	1
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	57	G2 | G5 | G9	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	58	G8 | (G1 & G2)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	59	G9 | (G3 & G8)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	60	G9 | (G2 & G3)	1.9375	N/A	4	2	1	0	6	0.666666666666667	1	0.8	0.888888888888889	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	61	G3 | ~G10	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	62	G7 | G9	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	63	G1 | G6 | G8	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	64	G10 | G2 | G6	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	65	G9 | (G4 & G6)	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	66	G2 | ~G6	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	67	G10 | G6 | G7	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	68	G4 | G5 | ~G1	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	69	G10 | G3 | G4	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	70	G8 | ~G5	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	71	G10 | G2 | G7	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	72	G5 | G8 | G9	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	73	G3 | ~G4 | ~G8	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	74	G10 | G4 | ~G2	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	75	G3 | G4 | G8	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	76	G3 | G4 | G5	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	77	G1 | G5 | ~G10	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	78	G4 | ~G1 | ~G2	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	79	~G4 | ~G5	1.9375	N/A	4	0	1	2	6	0	0	0	0.666666666666667	1	4	0	1
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	80	~G10 | ~G7	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	81	G2 | G3 | G7	1.9375	N/A	4	2	1	0	6	0.666666666666667	1	0.8	0.888888888888889	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	82	G4 | ~G2 | ~G7	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	83	~G10 | ~G4 | ~G6	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	84	G10 | ~G5	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	85	G3 | G7 | G8	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	86	G8 | ~G10	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	87	~G1 | ~G2 | ~G5	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	88	G5 | ~G10	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	89	G2 | G9 | ~G6	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	90	G3 | G5 | G9	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	91	G10 | G3 | G9	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	92	G1 | G8 | G9	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	93	G8 | ~G6	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	94	G10 | G4 | G7	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	95	G10 | G8 | G9	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	96	G1 | G7 | G8	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	97	G4 | G7 | G8	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	98	G7 | G8 | G9	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	99	G2 | ~G6 | ~G7	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	100	G2 | G4 | G5	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	101	G1 | G3 | G6	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	102	G2 | G6 | G8	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	103	G3 | G4 | G6	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	104	G10 | G2 | G4	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	105	G1 | G3 | G5	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	106	G3 | ~G6	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	107	~G2 | ~G5	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	108	G9 | (G6 & G8)	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	109	G10 | G4 | G5	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	110	G4 | G5 | ~G3	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	111	~G10 | ~G4	1.9375	N/A	4	0	1	2	6	0	0	0	0.666666666666667	1	4	0	1
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	112	G1 | G6 | G9	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	113	G5 | G6 | G9	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	114	G4 | G7 | G9	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	115	~G5 | (~G2 & ~G7)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	116	G1 | G7 | G9	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	117	G3 | G8 | G9	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	118	G4 | ~G10 | ~G7	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	119	G1 | G3 | G9	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	120	G2 | G3 | G8	1.9375	N/A	4	2	1	0	6	0.666666666666667	1	0.8	0.888888888888889	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	121	G10 | G2 | G3	1.9375	N/A	4	2	1	0	6	0.666666666666667	1	0.8	0.888888888888889	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	122	G4 | G6 | G8	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	123	G1 | G2 | ~G6	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	124	G2 | G9 | ~G1	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	125	G2 | G7 | ~G1	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	126	G10 | G2 | G9	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	127	G2 | G7 | G9	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	128	G3 | G6 | G7	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	129	G5 | G6 | G7	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	130	G2 | G9 | ~G10	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	131	G5 | G7 | G9	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	132	~G5 | ~G7	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	133	G3 | ~G10 | ~G8	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	134	G2 | (G10 & G3)	1.9375	N/A	4	2	1	0	6	0.666666666666667	1	0.8	0.888888888888889	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	135	G2 | G5 | G8	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	136	G3 | (G2 & ~G10)	1.9375	N/A	4	2	1	0	6	0.666666666666667	1	0.8	0.888888888888889	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	137	G2 | (G3 & G5)	1.9375	N/A	4	2	1	0	6	0.666666666666667	1	0.8	0.888888888888889	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	138	G9 | ~G10 | ~G8	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	139	G3 | (G4 & G9)	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	140	G3 | (G1 & G9)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	141	G10 | G4 | G6	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	142	G4 | ~G6	1.9375	N/A	4	0	1	2	6	0	0	0	0.666666666666667	1	4	0	1
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	143	~G10 | ~G4 | ~G8	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	144	G1 | G10 | G7	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	145	G3 | G4 | G7	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	146	G1 | G5 | G6	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	147	~G10 | ~G4 | ~G7	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	148	G2 | (G5 & G9)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	149	G2 | ~G4	1.9375	N/A	4	1	0	1	7	1	0.5	0.666666666666667	0.888888888888889	1	4	0	1
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	150	G3 | G7 | G9	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	151	G3 | (G7 & G9)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	152	G4 | G6 | G9	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	153	~G5 | (~G4 & ~G7)	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	154	~G10 | (G8 & ~G6)	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	155	~G10 | ~G6 | ~G8	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	156	G4 | G8 | ~G1	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	157	G3 | (G1 & G2)	1.9375	N/A	4	2	1	0	6	0.666666666666667	1	0.8	0.888888888888889	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	158	G1 | G2 | G9	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	159	G4 | (G8 & G9)	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	160	~G5 | ~G6	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	161	G9 | (G4 & G8)	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	162	~G2 | ~G4 | ~G5	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	163	G2 | ~G1	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	164	G4 | (G3 & G8)	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	165	G3 | G4 | G9	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	166	G10 | G4 | ~G9	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	167	G5 | G6 | ~G10	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	168	G3 | G8 | ~G6	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	169	~G5 | ~G6 | ~G9	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	170	G3 | G9 | ~G10	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	171	G1 | G8 | ~G3	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	172	G10 | G2 | ~G5	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	173	G6 | G9 | ~G8	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	174	G10 | G4 | G9	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	175	G4 | ~G7	1.9375	N/A	4	0	1	2	6	0	0	0	0.666666666666667	1	4	0	1
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	176	G8 | ~G3	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	177	G6 | G8 | ~G10	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	178	G4 | ~G1 | ~G3	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	179	G4 | (~G2 & ~G6)	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	180	G4 | ~G1 | ~G5	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	181	G7 | G8 | ~G1	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	182	G1 | G5 | G7	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	183	G9 | ~G5 | ~G6	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	184	~G3 | ~G7 | ~G9	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	185	~G5 | (G3 & G9)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	186	~G1 | ~G10 | ~G8	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	187	G10 | G4 | ~G7	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	188	G10 | ~G5 | ~G6	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	189	G2 | (G3 & G9)	1.9375	N/A	4	2	1	0	6	0.666666666666667	1	0.8	0.888888888888889	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	190	G10 | G2 | G5	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	191	G4 | G9 | ~G5	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	192	G9 | (G7 & G8)	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	193	G1 | G4 | G9	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	194	G1 | G3 | G4	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	195	~G1 | ~G5	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	196	G3 | G7 | ~G10	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	197	G3 | G4 | ~G9	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G4	198	G6 | ~G5 | ~G7	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	1	G5 & G7	1.9375	N/A	4	0	1	4	4	0	0	0	0.444444444444444	1	4	0	1
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	2	G4 & ~G8 & ~G9	1.9375	N/A	4	2	1	2	4	0.666666666666667	0.5	0.571428571428572	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	3	~G2 & ~G6 & ~G8	1.9375	N/A	4	1	2	3	3	0.333333333333333	0.25	0.285714285714286	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	4	G10 & G6	1.9375	N/A	4	0	2	4	3	0	0	0	0.333333333333333	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	5	G10 & G3 & G6	1.9375	N/A	4	1	2	3	3	0.333333333333333	0.25	0.285714285714286	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	6	G10 & G4	1.9375	N/A	4	1	1	3	4	0.5	0.25	0.333333333333333	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	7	G10 & G4 & G5	1.9375	N/A	4	1	1	3	4	0.5	0.25	0.333333333333333	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	8	G1 & G5	1.9375	N/A	4	0	1	4	4	0	0	0	0.444444444444444	1	4	0	1
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	9	G4 & G5	1.9375	N/A	4	1	0	3	5	1	0.25	0.4	0.666666666666667	1	4	0	1
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	10	G5 & G6 & G7	1.9375	N/A	4	0	2	4	3	0	0	0	0.333333333333333	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	11	G10 & G4 & ~G3	1.9375	N/A	4	2	1	2	4	0.666666666666667	0.5	0.571428571428572	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	12	G10 & G4 & G6	1.9375	N/A	4	1	2	3	3	0.333333333333333	0.25	0.285714285714286	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	13	G10 & ~G8	1.9375	N/A	4	0	2	4	3	0	0	0	0.333333333333333	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	14	G10 & G7	1.9375	N/A	4	0	2	4	3	0	0	0	0.333333333333333	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	15	G5 & G6	1.9375	N/A	4	0	1	4	4	0	0	0	0.444444444444444	1	4	0	1
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	16	G1 & G10	1.9375	N/A	4	0	2	4	3	0	0	0	0.333333333333333	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	17	G5 & G6 & G8	1.9375	N/A	4	0	2	4	3	0	0	0	0.333333333333333	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	18	G1 & G5 & G6	1.9375	N/A	4	0	2	4	3	0	0	0	0.333333333333333	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	19	G10 & G4 & G9	1.9375	N/A	4	2	1	2	4	0.666666666666667	0.5	0.571428571428572	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	20	G1 & G10 & G9	1.9375	N/A	4	1	2	3	3	0.333333333333333	0.25	0.285714285714286	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	21	G1 & G10 & G2	1.9375	N/A	4	1	2	3	3	0.333333333333333	0.25	0.285714285714286	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	22	G10 & G6 & G9	1.9375	N/A	4	1	2	3	3	0.333333333333333	0.25	0.285714285714286	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	23	G10 & G2	1.9375	N/A	4	1	1	3	4	0.5	0.25	0.333333333333333	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	24	G5 & G6 & G9	1.9375	N/A	4	1	1	3	4	0.5	0.25	0.333333333333333	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	25	G1 & G10 & G5	1.9375	N/A	4	0	2	4	3	0	0	0	0.333333333333333	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	26	~G3 & ~G9	1.9375	N/A	4	2	0	2	5	1	0.5	0.666666666666667	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	27	G1 & ~G4	1.9375	N/A	4	1	1	3	4	0.5	0.25	0.333333333333333	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	28	G1 & G5 & ~G9	1.9375	N/A	4	1	1	3	4	0.5	0.25	0.333333333333333	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	29	G2 & G5	1.9375	N/A	4	1	0	3	5	1	0.25	0.4	0.666666666666667	1	4	0	1
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	30	G2 & G9 & ~G4	1.9375	N/A	4	3	0	1	5	1	0.75	0.857142857142857	0.888888888888889	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	31	G1 & G10 & G6	1.9375	N/A	4	0	3	4	2	0	0	0	0.222222222222222	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	32	G8 & ~G1 & ~G3	1.9375	N/A	4	1	2	3	3	0.333333333333333	0.25	0.285714285714286	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	33	G6 & ~G4	1.9375	N/A	4	1	1	3	4	0.5	0.25	0.333333333333333	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	34	G7 & G8 & G9	1.9375	N/A	4	1	2	3	3	0.333333333333333	0.25	0.285714285714286	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	35	G10 & G2 & G7	1.9375	N/A	4	1	2	3	3	0.333333333333333	0.25	0.285714285714286	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	36	G10 & ~G7 & ~G8	1.9375	N/A	4	0	3	4	2	0	0	0	0.222222222222222	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	37	G1 & G2 & G5	1.9375	N/A	4	1	1	3	4	0.5	0.25	0.333333333333333	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	38	G4 & G6 & ~G3	1.9375	N/A	4	2	1	2	4	0.666666666666667	0.5	0.571428571428572	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	39	G10 & G2 & G5	1.9375	N/A	4	1	1	3	4	0.5	0.25	0.333333333333333	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	40	G2 & G5 & G6	1.9375	N/A	4	1	1	3	4	0.5	0.25	0.333333333333333	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	41	G10 & G3 & ~G8	1.9375	N/A	4	1	2	3	3	0.333333333333333	0.25	0.285714285714286	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	42	G10 & G7 & G8	1.9375	N/A	4	0	3	4	2	0	0	0	0.222222222222222	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	43	G1 & ~G2	1.9375	N/A	4	1	1	3	4	0.5	0.25	0.333333333333333	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	44	~G3 & ~G4 & ~G5	1.9375	N/A	4	2	0	2	5	1	0.5	0.666666666666667	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	45	G2 & G5 & G7	1.9375	N/A	4	1	1	3	4	0.5	0.25	0.333333333333333	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	46	G4 & G5 & G6	1.9375	N/A	4	1	1	3	4	0.5	0.25	0.333333333333333	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	47	G2 & G4 & G5	1.9375	N/A	4	2	0	2	5	1	0.5	0.666666666666667	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	48	G2 & G3 & G5	1.9375	N/A	4	2	0	2	5	1	0.5	0.666666666666667	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	49	G5 & ~G8	1.9375	N/A	4	0	1	4	4	0	0	0	0.444444444444444	1	4	0	1
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	50	G5 & ~G10	1.9375	N/A	4	0	1	4	4	0	0	0	0.444444444444444	1	4	0	1
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	51	G1 & G10 & G7	1.9375	N/A	4	0	3	4	2	0	0	0	0.222222222222222	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	52	G9 & ~G10 & ~G2	1.9375	N/A	4	2	1	2	4	0.666666666666667	0.5	0.571428571428572	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	53	G10 & G7 & G9	1.9375	N/A	4	1	2	3	3	0.333333333333333	0.25	0.285714285714286	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	54	~G2 & ~G9	1.9375	N/A	4	2	0	2	5	1	0.5	0.666666666666667	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	55	~G1 & ~G2 & ~G8	1.9375	N/A	4	1	2	3	3	0.333333333333333	0.25	0.285714285714286	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	56	~G1 & ~G7 & ~G8	1.9375	N/A	4	0	3	4	2	0	0	0	0.222222222222222	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	57	G10 & G3 & G7	1.9375	N/A	4	1	2	3	3	0.333333333333333	0.25	0.285714285714286	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	58	G1 & G3 & G7	1.9375	N/A	4	1	2	3	3	0.333333333333333	0.25	0.285714285714286	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	59	G10 & G6 & G7	1.9375	N/A	4	0	3	4	2	0	0	0	0.222222222222222	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	60	~G10 & ~G4	1.9375	N/A	4	1	1	3	4	0.5	0.25	0.333333333333333	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	61	G6 & G7 & G9	1.9375	N/A	4	1	2	3	3	0.333333333333333	0.25	0.285714285714286	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	62	~G2 & ~G5	1.9375	N/A	4	1	0	3	5	1	0.25	0.4	0.666666666666667	1	4	0	1
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	63	G2 & G5 & ~G7	1.9375	N/A	4	1	1	3	4	0.5	0.25	0.333333333333333	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	64	G5 & (G6 | ~G8)	1.9375	N/A	4	0	2	4	3	0	0	0	0.333333333333333	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	65	G1 & G10 & G4	1.9375	N/A	4	1	2	3	3	0.333333333333333	0.25	0.285714285714286	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	66	G4 & ~G2	1.9375	N/A	4	2	0	2	5	1	0.5	0.666666666666667	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	67	G9 & ~G3 & ~G4	1.9375	N/A	4	3	0	1	5	1	0.75	0.857142857142857	0.888888888888889	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	68	G1 & G5 & G7	1.9375	N/A	4	0	2	4	3	0	0	0	0.333333333333333	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	69	G5 & G7 & G8	1.9375	N/A	4	0	2	4	3	0	0	0	0.333333333333333	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	70	G1 & G6 & G7	1.9375	N/A	4	0	3	4	2	0	0	0	0.222222222222222	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	71	G7 & ~G2	1.9375	N/A	4	1	1	3	4	0.5	0.25	0.333333333333333	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	72	G8 & ~G3	1.9375	N/A	4	1	1	3	4	0.5	0.25	0.333333333333333	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	73	G1 & G7 & G8	1.9375	N/A	4	0	3	4	2	0	0	0	0.222222222222222	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	74	G10 & G9 & ~G8	1.9375	N/A	4	1	2	3	3	0.333333333333333	0.25	0.285714285714286	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	75	~G2 & ~G3 & ~G7	1.9375	N/A	4	2	1	2	4	0.666666666666667	0.5	0.571428571428572	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	76	G3 & G5 & G6	1.9375	N/A	4	1	1	3	4	0.5	0.25	0.333333333333333	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	77	~G1 & ~G8	1.9375	N/A	4	0	2	4	3	0	0	0	0.333333333333333	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	78	~G2 & ~G3 & ~G5	1.9375	N/A	4	2	0	2	5	1	0.5	0.666666666666667	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	79	G1 & G5 & G8	1.9375	N/A	4	0	2	4	3	0	0	0	0.333333333333333	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	80	G4 & G5 & G8	1.9375	N/A	4	1	1	3	4	0.5	0.25	0.333333333333333	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	81	G10 & G2 & G6	1.9375	N/A	4	1	2	3	3	0.333333333333333	0.25	0.285714285714286	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	82	G2 & G9 & ~G1	1.9375	N/A	4	2	1	2	4	0.666666666666667	0.5	0.571428571428572	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	83	G4 & G5 & G9	1.9375	N/A	4	2	0	2	5	1	0.5	0.666666666666667	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	84	G1 & G4 & G5	1.9375	N/A	4	1	1	3	4	0.5	0.25	0.333333333333333	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	85	G10 & G4 & G8	1.9375	N/A	4	1	2	3	3	0.333333333333333	0.25	0.285714285714286	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	86	~G4 & ~G9	1.9375	N/A	4	2	0	2	5	1	0.5	0.666666666666667	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	87	G3 & G4 & G5	1.9375	N/A	4	2	0	2	5	1	0.5	0.666666666666667	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	88	G3 & ~G10 & ~G8	1.9375	N/A	4	1	2	3	3	0.333333333333333	0.25	0.285714285714286	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	89	G3 & ~G8	1.9375	N/A	4	1	1	3	4	0.5	0.25	0.333333333333333	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	90	G9 & ~G10 & ~G4	1.9375	N/A	4	2	1	2	4	0.666666666666667	0.5	0.571428571428572	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	91	~G3 & (~G1 | ~G7)	1.9375	N/A	4	1	2	3	3	0.333333333333333	0.25	0.285714285714286	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	92	~G7 & ~G8	1.9375	N/A	4	0	2	4	3	0	0	0	0.333333333333333	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	93	G10 & G6 & ~G5	1.9375	N/A	4	0	2	4	3	0	0	0	0.333333333333333	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	94	G6 & ~G3	1.9375	N/A	4	1	1	3	4	0.5	0.25	0.333333333333333	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	95	~G3 & ~G4 & ~G8	1.9375	N/A	4	2	1	2	4	0.666666666666667	0.5	0.571428571428572	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	96	G10 & ~G3	1.9375	N/A	4	1	1	3	4	0.5	0.25	0.333333333333333	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	97	G7 & (~G2 | ~G4)	1.9375	N/A	4	2	1	2	4	0.666666666666667	0.5	0.571428571428572	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	98	G3 & ~G4 & ~G5	1.9375	N/A	4	2	0	2	5	1	0.5	0.666666666666667	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	99	G10 & G2 & G9	1.9375	N/A	4	2	1	2	4	0.666666666666667	0.5	0.571428571428572	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	100	G1 & G10 & G3	1.9375	N/A	4	1	2	3	3	0.333333333333333	0.25	0.285714285714286	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	101	G5 & ~G3	1.9375	N/A	4	1	0	3	5	1	0.25	0.4	0.666666666666667	1	4	0	1
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	102	G2 & G5 & ~G10	1.9375	N/A	4	1	1	3	4	0.5	0.25	0.333333333333333	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	103	G2 & G5 & ~G6	1.9375	N/A	4	1	1	3	4	0.5	0.25	0.333333333333333	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	104	~G1 & ~G3	1.9375	N/A	4	1	1	3	4	0.5	0.25	0.333333333333333	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	105	~G10 & ~G2 & ~G5	1.9375	N/A	4	1	1	3	4	0.5	0.25	0.333333333333333	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	106	G10 & G2 & G3	1.9375	N/A	4	2	1	2	4	0.666666666666667	0.5	0.571428571428572	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	107	~G3 & ~G4	1.9375	N/A	4	2	0	2	5	1	0.5	0.666666666666667	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	108	G10 & G4 & G7	1.9375	N/A	4	1	2	3	3	0.333333333333333	0.25	0.285714285714286	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	109	G7 & ~G4 & ~G5	1.9375	N/A	4	1	1	3	4	0.5	0.25	0.333333333333333	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	110	G1 & G10 & G8	1.9375	N/A	4	0	3	4	2	0	0	0	0.222222222222222	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	111	G10 & ~G5 & ~G7	1.9375	N/A	4	0	2	4	3	0	0	0	0.333333333333333	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	112	G7 & ~G1 & ~G8	1.9375	N/A	4	0	3	4	2	0	0	0	0.222222222222222	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	113	G1 & G10 & ~G2	1.9375	N/A	4	1	2	3	3	0.333333333333333	0.25	0.285714285714286	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	114	~G9 & (~G4 | ~G8)	1.9375	N/A	4	2	1	2	4	0.666666666666667	0.5	0.571428571428572	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	115	G3 & ~G4 & ~G8	1.9375	N/A	4	2	1	2	4	0.666666666666667	0.5	0.571428571428572	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	116	G9 & ~G7 & ~G8	1.9375	N/A	4	1	2	3	3	0.333333333333333	0.25	0.285714285714286	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	117	G1 & ~G9	1.9375	N/A	4	1	1	3	4	0.5	0.25	0.333333333333333	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	118	G1 & G10 & ~G9	1.9375	N/A	4	1	2	3	3	0.333333333333333	0.25	0.285714285714286	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	119	~G2 & ~G3 & ~G9	1.9375	N/A	4	3	0	1	5	1	0.75	0.857142857142857	0.888888888888889	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	120	G5 & G7 & G9	1.9375	N/A	4	1	1	3	4	0.5	0.25	0.333333333333333	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	121	G4 & G9 & ~G1	1.9375	N/A	4	2	1	2	4	0.666666666666667	0.5	0.571428571428572	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	122	G6 & (G10 | ~G4)	1.9375	N/A	4	1	2	3	3	0.333333333333333	0.25	0.285714285714286	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	123	G10 & ~G3 & ~G8	1.9375	N/A	4	1	2	3	3	0.333333333333333	0.25	0.285714285714286	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	124	G2 & ~G4	1.9375	N/A	4	2	0	2	5	1	0.5	0.666666666666667	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	125	G4 & G8 & ~G2	1.9375	N/A	4	2	1	2	4	0.666666666666667	0.5	0.571428571428572	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	126	~G4 & ~G5 & ~G8	1.9375	N/A	4	1	1	3	4	0.5	0.25	0.333333333333333	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	127	G1 & ~G4 & ~G9	1.9375	N/A	4	2	1	2	4	0.666666666666667	0.5	0.571428571428572	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	128	G10 & G4 & ~G7	1.9375	N/A	4	1	2	3	3	0.333333333333333	0.25	0.285714285714286	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	129	~G4 & ~G5	1.9375	N/A	4	1	0	3	5	1	0.25	0.4	0.666666666666667	1	4	0	1
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	130	~G6 & ~G9	1.9375	N/A	4	1	1	3	4	0.5	0.25	0.333333333333333	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	131	G6 & (G5 | ~G2)	1.9375	N/A	4	1	1	3	4	0.5	0.25	0.333333333333333	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	132	G10 & ~G9	1.9375	N/A	4	1	1	3	4	0.5	0.25	0.333333333333333	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	133	G4 & G5 & ~G10	1.9375	N/A	4	1	1	3	4	0.5	0.25	0.333333333333333	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	134	G6 & ~G1 & ~G3	1.9375	N/A	4	1	2	3	3	0.333333333333333	0.25	0.285714285714286	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	135	G8 & ~G10 & ~G3	1.9375	N/A	4	1	2	3	3	0.333333333333333	0.25	0.285714285714286	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	136	G3 & G5 & ~G10	1.9375	N/A	4	1	1	3	4	0.5	0.25	0.333333333333333	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	137	G1 & G5 & G9	1.9375	N/A	4	1	1	3	4	0.5	0.25	0.333333333333333	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	138	G10 & ~G5	1.9375	N/A	4	0	1	4	4	0	0	0	0.444444444444444	1	4	0	1
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	139	~G4 & ~G8	1.9375	N/A	4	1	1	3	4	0.5	0.25	0.333333333333333	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	140	G10 & G5 & ~G8	1.9375	N/A	4	0	2	4	3	0	0	0	0.333333333333333	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	141	G5 & G8 & ~G10	1.9375	N/A	4	0	2	4	3	0	0	0	0.333333333333333	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	142	G2 & G5 & G9	1.9375	N/A	4	2	0	2	5	1	0.5	0.666666666666667	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	143	G4 & G5 & G7	1.9375	N/A	4	1	1	3	4	0.5	0.25	0.333333333333333	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	144	G3 & G4 & ~G6	1.9375	N/A	4	2	1	2	4	0.666666666666667	0.5	0.571428571428572	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	145	G10 & G4 & ~G9	1.9375	N/A	4	2	1	2	4	0.666666666666667	0.5	0.571428571428572	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	146	G5 & G7 & ~G10	1.9375	N/A	4	0	2	4	3	0	0	0	0.333333333333333	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	147	G6 & G9 & ~G1	1.9375	N/A	4	1	2	3	3	0.333333333333333	0.25	0.285714285714286	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	148	G1 & G10 & ~G5	1.9375	N/A	4	0	2	4	3	0	0	0	0.333333333333333	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	149	~G3 & ~G7	1.9375	N/A	4	1	1	3	4	0.5	0.25	0.333333333333333	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	150	G1 & G3 & ~G2	1.9375	N/A	4	2	1	2	4	0.666666666666667	0.5	0.571428571428572	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	151	~G1 & ~G3 & ~G9	1.9375	N/A	4	2	1	2	4	0.666666666666667	0.5	0.571428571428572	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	152	G3 & G5 & G7	1.9375	N/A	4	1	1	3	4	0.5	0.25	0.333333333333333	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	153	G10 & G6 & G8	1.9375	N/A	4	0	3	4	2	0	0	0	0.222222222222222	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	154	G3 & ~G1 & ~G8	1.9375	N/A	4	1	2	3	3	0.333333333333333	0.25	0.285714285714286	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	155	G1 & G7 & ~G4	1.9375	N/A	4	1	2	3	3	0.333333333333333	0.25	0.285714285714286	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	156	G10 & G6 & ~G2	1.9375	N/A	4	1	2	3	3	0.333333333333333	0.25	0.285714285714286	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	157	G10 & G2 & ~G1	1.9375	N/A	4	1	2	3	3	0.333333333333333	0.25	0.285714285714286	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	158	~G4 & (G1 | G7)	1.9375	N/A	4	1	2	3	3	0.333333333333333	0.25	0.285714285714286	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	159	G10 & G2 & G4	1.9375	N/A	4	2	1	2	4	0.666666666666667	0.5	0.571428571428572	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	160	G5 & G6 & ~G8	1.9375	N/A	4	0	2	4	3	0	0	0	0.333333333333333	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	161	G10 & G5 & G6	1.9375	N/A	4	0	2	4	3	0	0	0	0.333333333333333	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	162	G2 & G5 & ~G4	1.9375	N/A	4	2	0	2	5	1	0.5	0.666666666666667	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	163	G5 & (G1 | G4)	1.9375	N/A	4	1	1	3	4	0.5	0.25	0.333333333333333	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	164	~G2 & ~G3	1.9375	N/A	4	2	0	2	5	1	0.5	0.666666666666667	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	165	G5 & ~G9	1.9375	N/A	4	1	0	3	5	1	0.25	0.4	0.666666666666667	1	4	0	1
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	166	G10 & G5 & G7	1.9375	N/A	4	0	2	4	3	0	0	0	0.333333333333333	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	167	G4 & ~G1 & ~G2	1.9375	N/A	4	2	1	2	4	0.666666666666667	0.5	0.571428571428572	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	168	G2 & ~G4 & ~G7	1.9375	N/A	4	2	1	2	4	0.666666666666667	0.5	0.571428571428572	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	169	G10 & (G4 | G6)	1.9375	N/A	4	1	2	3	3	0.333333333333333	0.25	0.285714285714286	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	170	~G2 & ~G8	1.9375	N/A	4	1	1	3	4	0.5	0.25	0.333333333333333	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	171	G3 & G7 & G9	1.9375	N/A	4	2	1	2	4	0.666666666666667	0.5	0.571428571428572	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	172	G1 & G5 & ~G7	1.9375	N/A	4	0	2	4	3	0	0	0	0.333333333333333	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	173	G1 & G3 & G5	1.9375	N/A	4	1	1	3	4	0.5	0.25	0.333333333333333	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	174	G5 & G6 & ~G3	1.9375	N/A	4	1	1	3	4	0.5	0.25	0.333333333333333	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	175	G5 & G7 & ~G3	1.9375	N/A	4	1	1	3	4	0.5	0.25	0.333333333333333	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	176	G10 & G2 & G8	1.9375	N/A	4	1	2	3	3	0.333333333333333	0.25	0.285714285714286	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	177	G10 & G7 & ~G8	1.9375	N/A	4	0	3	4	2	0	0	0	0.222222222222222	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	178	G5 & G6 & ~G10	1.9375	N/A	4	0	2	4	3	0	0	0	0.333333333333333	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	179	G4 & G5 & ~G8	1.9375	N/A	4	1	1	3	4	0.5	0.25	0.333333333333333	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	180	~G2 & (~G10 | ~G8)	1.9375	N/A	4	1	2	3	3	0.333333333333333	0.25	0.285714285714286	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	181	G10 & G7 & ~G5	1.9375	N/A	4	0	2	4	3	0	0	0	0.333333333333333	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	182	G2 & G5 & G8	1.9375	N/A	4	1	1	3	4	0.5	0.25	0.333333333333333	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	183	G10 & G9 & ~G5	1.9375	N/A	4	1	1	3	4	0.5	0.25	0.333333333333333	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	184	G6 & G7 & ~G4	1.9375	N/A	4	1	2	3	3	0.333333333333333	0.25	0.285714285714286	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G5	185	G3 & G5 & ~G8	1.9375	N/A	4	1	1	3	4	0.5	0.25	0.333333333333333	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G6	1	G8 & (G5 | G9)	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G6	2	G3 & ~G7	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G6	3	G3 & G9	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G6	4	G8 & G9	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G6	5	G8 & ~G7	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G6	6	~G7 & (G5 | G8)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G6	7	G10 | (G1 & G3)	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G6	8	G3 & (~G7 | ~G8)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G6	9	G9 & ~G7	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G6	10	G3 & G8 & G9	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G6	11	G5 | ~G7	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G6	12	~G2 | ~G7	1.9375	N/A	4	2	0	0	7	1	1	1	1	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G6	13	G10 | G5 | ~G7	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G6	14	~G7 & (G1 | ~G2)	1.9375	N/A	4	2	1	0	6	0.666666666666667	1	0.8	0.888888888888889	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G6	15	~G4 | ~G7	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G6	16	~G7 | (G10 & G2)	1.9375	N/A	4	2	1	0	6	0.666666666666667	1	0.8	0.888888888888889	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G6	17	G9 & (G5 | G6)	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G6	18	~G7 & (G1 | G3)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G6	19	G10 | ~G7	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G6	20	~G7 & (G2 | G5)	1.9375	N/A	4	2	1	0	6	0.666666666666667	1	0.8	0.888888888888889	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G6	21	~G7 & (G3 | ~G2)	1.9375	N/A	4	2	1	0	6	0.666666666666667	1	0.8	0.888888888888889	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G6	22	G9 & (~G2 | ~G7)	1.9375	N/A	4	2	1	0	6	0.666666666666667	1	0.8	0.888888888888889	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G6	23	G8 & (G10 | G9)	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G6	24	~G7 | (G1 & G10)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G6	25	G5 | (G3 & G9)	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G6	26	G3 & (G5 | G9)	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G6	27	~G7 & (~G10 | ~G4)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G6	28	~G7 | (~G10 & ~G4)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G6	29	~G7 & (~G1 | ~G10)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G6	30	~G7 & (~G10 | ~G2)	1.9375	N/A	4	2	1	0	6	0.666666666666667	1	0.8	0.888888888888889	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G6	31	G10 | (G1 & G8)	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G6	32	~G7 | (G1 & G8)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G6	33	G5 | (G1 & ~G7)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G6	34	~G7 & (G5 | G9)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G6	35	G5 | (G9 & ~G7)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G6	36	~G7 | (G1 & G5)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G6	37	G9 & (G3 | G5)	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G6	38	~G7 & (G3 | G8)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G6	39	G10 | (G6 & ~G7)	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G6	40	G3 & (G9 | ~G6)	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G6	41	G3 & (G9 | ~G8)	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G6	42	G3 & (G1 | G9)	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G6	43	~G7 & (G2 | G3)	1.9375	N/A	4	2	1	0	6	0.666666666666667	1	0.8	0.888888888888889	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G6	44	~G7 & (G8 | ~G3)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G6	45	~G2 | (G1 & G3)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G6	46	G3 & (G1 | G5)	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G6	47	~G2 | (G8 & G9)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G6	48	G9 & (G5 | G8)	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G6	49	~G7 | (~G10 & ~G2)	1.9375	N/A	4	2	1	0	6	0.666666666666667	1	0.8	0.888888888888889	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G6	50	G8 & (G1 | G10)	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G6	51	G8 & (G5 | ~G7)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G6	52	G8 & (~G3 | ~G7)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G6	53	G8 & G9 & ~G7	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G6	54	G3 & (G10 | G9)	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G6	55	G9 & (G6 | ~G2)	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G6	56	G9 & (G8 | ~G2)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G6	57	G3 & G9 & ~G7	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G6	58	G9 & (G10 | G8)	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G6	59	G8 & (G1 | G9)	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G6	60	~G7 | (G5 & G9)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G6	61	G3 & (G5 | ~G7)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G6	62	~G7 & (G1 | G5)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G6	63	G9 & (G10 | G3)	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G6	64	G9 & (G6 | G8)	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	1	G2 & G4	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	2	G2 | G6	1.9375	N/A	4	2	0	0	7	1	1	1	1	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	3	G2 & (G4 | ~G1)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	4	G6 | (G2 & ~G10)	1.9375	N/A	4	2	1	0	6	0.666666666666667	1	0.8	0.888888888888889	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	5	G6 | (G4 & ~G5)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	6	G2 | G4	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	7	G2 | (G1 & G6)	1.9375	N/A	4	2	1	0	6	0.666666666666667	1	0.8	0.888888888888889	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	8	G2 | ~G3	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	9	G2 | ~G5	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	10	G1 | G2	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	11	G1 | G6	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	12	G2 | ~G10 | ~G9	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	13	G4 | G7	1.9375	N/A	4	0	1	2	6	0	0	0	0.666666666666667	1	4	0	1
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	14	G2 & ~G10	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	15	G4 | (G2 & ~G6)	1.9375	N/A	4	2	1	0	6	0.666666666666667	1	0.8	0.888888888888889	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	16	G4 | ~G8	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	17	G2 | G4 | G7	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	18	G2 | ~G10	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	19	G1 | ~G10	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	20	G6 | G7	1.9375	N/A	4	1	0	1	7	1	0.5	0.666666666666667	0.888888888888889	1	4	0	1
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	21	G4 | G6	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	22	G7 | (G4 & G9)	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	23	G2 & ~G5	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	24	G2 & (G7 | G9)	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	25	G4 | ~G5	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	26	G1 | G7	1.9375	N/A	4	0	1	2	6	0	0	0	0.666666666666667	1	4	0	1
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	27	G1 | G4	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	28	G2 & (G4 | G9)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	29	G4 | (G5 & G7)	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	30	G4 & (~G10 | ~G3)	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	31	G2 | (~G3 & ~G7)	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	32	G4 & (G2 | G5)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	33	G2 | G7	1.9375	N/A	4	1	0	1	7	1	0.5	0.666666666666667	0.888888888888889	1	4	0	1
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	34	G4 & (G7 | G9)	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	35	G2 | (G1 & G4)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	36	G1 | G2 | G4	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	37	G2 | ~G8	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	38	G2 | ~G9	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	39	G6 | (G1 & G2)	1.9375	N/A	4	2	1	0	6	0.666666666666667	1	0.8	0.888888888888889	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	40	G4 & ~G10	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	41	G4 & ~G5	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	42	G4 & ~G10 & ~G5	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	43	G4 | ~G10	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	44	G7 | (G1 & ~G10)	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	45	G4 & (G8 | G9)	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	46	~G5 & (G1 | G6)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	47	G4 | ~G3	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	48	G1 | G2 | G6	1.9375	N/A	4	2	1	0	6	0.666666666666667	1	0.8	0.888888888888889	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	49	G7 | (G2 & G6)	1.9375	N/A	4	2	0	0	7	1	1	1	1	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	50	G2 | (G1 & G9)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	51	G1 | (G2 & G7)	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	52	G1 | G4 | G6	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	53	G1 | G4 | G7	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	54	G1 | (G2 & G4)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	55	G1 | ~G5	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	56	G2 & (G3 | ~G10)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	57	G4 | G6 | G7	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	58	G2 & (G6 | G9)	1.9375	N/A	4	2	1	0	6	0.666666666666667	1	0.8	0.888888888888889	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	59	G2 & (G6 | ~G3)	1.9375	N/A	4	2	1	0	6	0.666666666666667	1	0.8	0.888888888888889	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	60	G6 | ~G5	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	61	G2 & (~G10 | ~G6)	1.9375	N/A	4	2	1	0	6	0.666666666666667	1	0.8	0.888888888888889	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	62	G2 | (~G5 & ~G6)	1.9375	N/A	4	2	1	0	6	0.666666666666667	1	0.8	0.888888888888889	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	63	G2 | (G6 & G9)	1.9375	N/A	4	2	1	0	6	0.666666666666667	1	0.8	0.888888888888889	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	64	G2 | (G4 & G9)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	65	G2 | G4 | G6	1.9375	N/A	4	2	1	0	6	0.666666666666667	1	0.8	0.888888888888889	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	66	~G10 | (G4 & ~G3)	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	67	G7 | ~G5 | ~G8	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	68	~G5 | (~G1 & ~G8)	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	69	G4 | (~G3 & ~G6)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	70	G4 | (~G3 & ~G9)	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	71	G1 | G2 | ~G9	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	72	G2 | (G5 & G7)	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	73	G4 & (G2 | G9)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	74	G2 | (G7 & G9)	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	75	G6 | ~G8	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	76	G6 | G7 | ~G10	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	77	G1 | G6 | ~G8	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	78	~G10 | ~G5	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	79	G2 | (G4 & G5)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	80	G7 | ~G5	1.9375	N/A	4	0	1	2	6	0	0	0	0.666666666666667	1	4	0	1
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	81	~G10 | (~G1 & ~G5)	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	82	G1 | G2 | G7	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	83	G4 & (G2 | G3)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	84	G4 | ~G8 | ~G9	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	85	G1 | (G4 & G7)	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	86	G7 | ~G10	1.9375	N/A	4	0	1	2	6	0	0	0	0.666666666666667	1	4	0	1
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	87	G4 & (G1 | G7)	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	88	G4 | (G7 & ~G3)	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	89	G4 | (G10 & G6)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	90	G2 | (G7 & ~G3)	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	91	G4 | (G10 & G2)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	92	G2 | (~G3 & ~G4)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	93	G1 | G2 | ~G10	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	94	~G10 | (G1 & G8)	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	95	G1 | ~G9	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	96	G7 | (G8 & ~G5)	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	97	G7 | (G2 & G3)	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	98	G7 | (G1 & G9)	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	99	G2 & (G9 | ~G10)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	100	G1 | G4 | ~G10	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	101	~G3 | ~G5	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	102	G7 | (G1 & G6)	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	103	G2 | ~G10 | ~G5	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	104	G1 | (G6 & G7)	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	105	G4 | (G1 & G10)	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	106	G4 | (G2 & ~G8)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	107	G4 & (G2 | G6)	1.9375	N/A	4	2	1	0	6	0.666666666666667	1	0.8	0.888888888888889	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	108	G4 | ~G9	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	109	G2 | G4 | ~G9	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	110	G4 & (G1 | G2)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	111	G2 | G4 | ~G3	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	112	~G5 | ~G9	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	113	~G5 | (G1 & G4)	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	114	G1 | G6 | G7	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	115	G4 | (~G1 & ~G3)	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	116	G4 & (~G5 | ~G8)	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	117	~G10 | (G1 & G6)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	118	G2 & (G4 | G7)	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	119	~G5 | (G4 & G7)	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	120	~G10 | ~G9	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	121	~G5 & (G2 | ~G4)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	122	~G5 | (G2 & ~G3)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	123	G6 | (G4 & ~G8)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	124	~G10 & ~G5	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	125	G7 | (G3 & ~G5)	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	126	G2 | (G4 & ~G5)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	127	G2 & (G4 | ~G6)	1.9375	N/A	4	2	1	0	6	0.666666666666667	1	0.8	0.888888888888889	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	128	~G5 | (G4 & G9)	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	129	G4 | (G1 & G7)	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	130	~G3 | (G2 & G8)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	131	~G3 | ~G5 | ~G8	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	132	~G5 | ~G8	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	133	G4 | ~G5 | ~G8	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	134	~G10 | ~G3	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	135	G6 | (G2 & G9)	1.9375	N/A	4	2	1	0	6	0.666666666666667	1	0.8	0.888888888888889	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	136	G4 | (G1 & G8)	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	137	~G10 & (G7 | G8)	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	138	G1 | (G6 & G8)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	139	G1 | (G3 & G4)	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	140	G4 & (G3 | ~G10)	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	141	G2 & (G6 | G7)	1.9375	N/A	4	2	0	0	7	1	1	1	1	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	142	G2 | (G10 & G4)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	143	~G10 & (G2 | G3)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	144	G4 | (~G1 & ~G9)	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	145	G2 | (G3 & G6)	1.9375	N/A	4	2	1	0	6	0.666666666666667	1	0.8	0.888888888888889	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	146	G2 | (G1 & G5)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	147	G2 | (G5 & G6)	1.9375	N/A	4	2	1	0	6	0.666666666666667	1	0.8	0.888888888888889	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	148	G2 | (~G7 & ~G9)	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	149	~G5 & (G8 | G9)	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	150	G6 | ~G3	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G7	151	~G10 | ~G8	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G8	1	G10 | ~G7	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G8	2	G3 & ~G7	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G8	3	G5 | ~G7	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G8	4	~G7 | (G10 & G9)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G8	5	G3 & G9	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G8	6	G8 & ~G7	1.9375	N/A	4	0	1	1	7	0	0	0	0.777777777777778	1	4	0	1
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G8	7	G8 & (~G2 | ~G7)	1.9375	N/A	4	1	1	0	7	0.5	1	0.666666666666667	0.888888888888889	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G8	8	G9 & (G5 | G6)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G8	9	G9 & ~G7	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G8	10	G3 & G8 & G9	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G8	11	G8 & G9	1.9375	N/A	4	0	1	1	7	0	0	0	0.777777777777778	1	4	0	1
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G8	12	G9 & (G6 | G8)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G8	13	~G4 | (G8 & G9)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G8	14	~G7 | (G5 & ~G9)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G8	15	G9 & (G3 | G6)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G8	16	G5 | (G8 & G9)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G8	17	G8 & (G1 | G10)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G8	18	G8 & (G5 | G9)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G8	19	G8 & (G9 | ~G7)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G8	20	G10 | (G3 & G9)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G8	21	G10 | (G1 & G8)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G8	22	G9 & (G10 | G8)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G8	23	G3 & (G10 | G9)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G8	24	G9 & (G10 | G3)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G8	25	G3 & G9 & ~G7	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G8	26	G9 & (G5 | G8)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G8	27	~G4 | ~G7	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G8	28	~G2 | ~G7	1.9375	N/A	4	1	1	0	7	0.5	1	0.666666666666667	0.888888888888889	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G8	29	~G7 & (G4 | G9)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G8	30	G5 | (G1 & G6)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G8	31	~G7 | (G1 & G6)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G8	32	G3 & G8 & ~G7	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G8	33	G5 | (G3 & G9)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G8	34	G3 & (G10 | ~G7)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G8	35	G8 & (~G6 | ~G7)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G8	36	~G7 | (G10 & G2)	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G8	37	(G3 & ~G7) | (~G3 & ~G4)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G8	38	~G7 & (G1 | G3)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G8	39	~G7 & (G1 | G8)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G8	40	~G7 | (~G3 & ~G9)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G8	41	~G4 | (G1 & G6)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G8	42	~G7 & (G4 | G8)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G8	43	~G7 & (G2 | G8)	1.9375	N/A	4	1	1	0	7	0.5	1	0.666666666666667	0.888888888888889	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G8	44	G3 & (~G6 | ~G7)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G8	45	~G7 | (G8 & G9)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G8	46	G5 | (G1 & G8)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G8	47	G5 | (G6 & G9)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G8	48	G3 & (G1 | G5)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G8	49	~G7 & (G3 | G8)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G8	50	G9 & (G3 | G5)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G8	51	G10 | (G1 & G3)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G8	52	~G7 & (G3 | G9)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G8	53	~G7 | (G3 & G9)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G9	1	~G1 | (~G2 & ~G3)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G9	2	~G1 | ~G9	1.9375	N/A	4	0	1	0	8	0	0	0	0.888888888888889	1	4	0	1
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G9	3	~G1 & (G10 | G7)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G9	4	~G1 | (~G6 & ~G7)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G9	5	~G1 | ~G2	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G9	6	G3 & ~G1	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G9	7	G5 | ~G1	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G9	8	G5 | ~G9	1.9375	N/A	4	0	1	0	8	0	0	0	0.888888888888889	1	4	0	1
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G9	9	~G4 | ~G9	1.9375	N/A	4	0	1	0	8	0	0	0	0.888888888888889	1	4	0	1
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G9	10	~G1 | (G3 & G5)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G9	11	G10 | (G7 & G8)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G9	12	G8 & ~G1	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G9	13	G3 & (G5 | G7)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G9	14	G8 & (~G1 | ~G3)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G9	15	G5 | (~G10 & ~G9)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G9	16	G10 | G5 | ~G9	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G9	17	~G1 | ~G2 | ~G4	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G9	18	G5 | ~G1 | ~G4	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G9	19	~G1 | (G4 & G5)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G9	20	G10 | ~G1 | ~G4	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G9	21	~G1 | (G3 & ~G4)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G9	22	G10 | G5 | ~G1	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G9	23	G5 | (G2 & ~G1)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G9	24	G10 | (~G1 & ~G5)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G9	25	~G1 | ~G4	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G9	26	G10 | ~G1	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G9	27	~G1 | ~G2 | ~G9	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G9	28	~G1 | (~G4 & ~G9)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G9	29	~G1 & (G10 | G2)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G9	30	~G2 | ~G9	1.9375	N/A	4	0	1	0	8	0	0	0	0.888888888888889	1	4	0	1
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G9	31	G10 | (G6 & G7)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G9	32	~G9 | (~G2 & ~G4)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G9	33	~G9 | (G10 & G8)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G9	34	~G1 | (G3 & G7)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G9	35	G10 | ~G9	1.9375	N/A	4	0	1	0	8	0	0	0	0.888888888888889	1	4	0	1
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G9	36	~G1 | (G10 & G4)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G9	37	~G1 & (~G10 | ~G4)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G9	38	~G1 | (G10 & G3)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G9	39	~G1 & (G10 | G3)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G9	40	G3 & (G7 | ~G2)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G9	41	G8 & (G7 | ~G6)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G9	42	~G1 | (G5 & G8)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G9	43	~G1 & (G5 | G8)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G9	44	~G2 | (G8 & ~G1)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G9	45	G10 | ~G1 | ~G9	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G9	46	~G1 & (G10 | ~G5)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G9	47	~G9 | (~G4 & ~G6)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G9	48	G10 | (~G1 & ~G9)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G9	49	G8 & (~G1 | ~G6)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G9	50	G5 | (G6 & G7)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G9	51	G5 | (G7 & G8)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G9	52	~G4 | (G3 & G7)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G9	53	~G1 & (~G4 | ~G9)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G9	54	~G1 & (~G7 | ~G9)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G9	55	~G1 | (~G6 & ~G9)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G9	56	~G1 & (G6 | G9)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G9	57	~G1 | (~G10 & ~G9)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G9	58	~G1 | (~G5 & ~G9)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G9	59	G10 | (G6 & ~G9)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G9	60	G10 | (~G5 & ~G9)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G9	61	~G1 & (~G10 | ~G2)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G9	62	~G1 | (~G4 & ~G8)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G9	63	~G1 | (~G10 & ~G4)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G9	64	~G1 & (G6 | ~G2)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G9	65	~G1 | ~G4 | ~G9	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G9	66	~G1 & (G3 | G6)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G9	67	~G9 | (G10 & ~G6)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G9	68	G8 & (G10 | G7)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G9	69	~G1 | (~G2 & ~G8)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G9	70	~G1 & (G4 | G8)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	1	G10 & G2	1.9375	N/A	4	0	1	0	8	0	0	0	0.888888888888889	1	4	0	1
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	2	G10 & G4	1.9375	N/A	4	0	1	0	8	0	0	0	0.888888888888889	1	4	0	1
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	3	G10 & G7	1.9375	N/A	4	0	1	0	8	0	0	0	0.888888888888889	1	4	0	1
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	4	G10 & ~G5	1.9375	N/A	4	0	1	0	8	0	0	0	0.888888888888889	1	4	0	1
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	5	G10 & G6 & G7	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	6	G5 & G7	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	7	G10 & G2 & G6	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	8	G3 & G7 & ~G4	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	9	G10 & G2 & G4	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	10	G10 & G3 & G7	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	11	G1 & G5	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	12	G1 & G5 & G7	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	13	G6 & (G10 | G5)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	14	~G8 & ~G9	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	15	G5 & G6 & G9	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	16	G2 & G5	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	17	G4 & G5	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	18	G10 & G2 & G9	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	19	G5 & G6 & G7	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	20	G3 & G7 & G9	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	21	G1 & G3 & G7	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	22	G1 & G7 & G8	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	23	G5 & G6	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	24	G8 & ~G3	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	25	G1 & G2 & G5	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	26	~G10 & ~G2	1.9375	N/A	4	0	1	0	8	0	0	0	0.888888888888889	1	4	0	1
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	27	G5 & ~G4 & ~G9	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	28	G1 & G3 & G5	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	29	G3 & G5 & G6	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	30	G10 & G4 & G8	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	31	G6 & ~G2	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	32	G10 & G6	1.9375	N/A	4	0	1	0	8	0	0	0	0.888888888888889	1	4	0	1
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	33	G3 & G5 & G7	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	34	G2 & G4 & G5	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	35	G2 & ~G4 & ~G8	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	36	G10 & G2 & G3	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	37	G1 & G10	1.9375	N/A	4	0	1	0	8	0	0	0	0.888888888888889	1	4	0	1
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	38	G10 & G3 & G6	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	39	G2 & ~G4	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	40	~G2 & ~G9	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	41	~G4 & ~G5	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	42	G5 & ~G1 & ~G3	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	43	G5 & (G1 | G7)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	44	~G4 & ~G9	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	45	G5 & ~G3	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	46	G10 & G5 & G7	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	47	G4 & ~G2	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	48	~G3 & ~G4	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	49	G10 & G4 & G6	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	50	G10 & (G1 | G4)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	51	~G1 & ~G3	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	52	G5 & ~G10 & ~G2	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	53	G10 & G5 & G6	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	54	G1 & G10 & G9	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	55	G3 & G4 & G5	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	56	G10 & ~G9	1.9375	N/A	4	0	1	0	8	0	0	0	0.888888888888889	1	4	0	1
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	57	G1 & ~G9	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	58	~G10 & ~G4	1.9375	N/A	4	0	1	0	8	0	0	0	0.888888888888889	1	4	0	1
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	59	G1 & G10 & G6	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	60	G10 & G4 & G9	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	61	G1 & G10 & ~G7	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	62	G6 & ~G4	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	63	~G10 & ~G4 & ~G8	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	64	~G1 & ~G10 & ~G7	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	65	G4 & G5 & G9	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	66	G5 & ~G7 & ~G9	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	67	G10 & G7 & G8	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	68	G2 & G3 & G5	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	69	~G6 & ~G9	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	70	G5 & G7 & G8	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	71	G2 & G5 & G6	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	72	G10 & G2 & G5	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	73	G6 & (G10 | ~G3)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	74	G10 & ~G3	1.9375	N/A	4	0	1	0	8	0	0	0	0.888888888888889	1	4	0	1
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	75	G6 & ~G10 & ~G3	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	76	G10 & (G6 | ~G3)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	77	G6 & ~G3	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	78	G1 & ~G3 & ~G9	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	79	G1 & (G10 | G5)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	80	G1 & G5 & G9	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	81	G10 & G7 & G9	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	82	G10 & G2 & G7	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	83	G3 & ~G8	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	84	G1 & G10 & G5	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	85	G1 & G10 & ~G9	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	86	G10 & ~G8	1.9375	N/A	4	0	1	0	8	0	0	0	0.888888888888889	1	4	0	1
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	87	G2 & G6 & ~G8	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	88	G5 & ~G8	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	89	G10 & G6 & G9	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	90	G10 & (G6 | G7)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	91	G1 & G10 & G7	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	92	G10 & G4 & G7	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	93	G7 & G8 & ~G3	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	94	G4 & G6 & ~G8	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	95	G6 & ~G8	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	96	G4 & G5 & G7	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	97	G10 & G2 & G8	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	98	G5 & G7 & ~G6	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	99	G10 & G3 & G4	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	100	G2 & G6 & ~G3	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	101	G5 & G6 & G8	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	102	G5 & G9 & ~G3	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	103	G4 & G5 & ~G9	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	104	G2 & G5 & G7	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	105	~G2 & (~G5 | ~G9)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	106	G2 & G5 & G8	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	107	~G1 & ~G8	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	108	G5 & (G2 | G7)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	109	G1 & G5 & G6	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	110	G10 & G8 & ~G3	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	111	G1 & ~G2	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	112	G1 & G10 & G3	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	113	G10 & (G4 | G7)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	114	G7 & G8 & G9	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	115	~G2 & ~G3	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	116	~G3 & ~G7 & ~G8	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	117	~G3 & ~G7	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	118	G10 & G7 & ~G3	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	119	~G3 & (G10 | G8)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	120	~G4 & ~G8	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	121	G1 & G9 & ~G2	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	122	G8 & ~G10 & ~G4	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	123	G2 & G5 & G9	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	124	G4 & G5 & G8	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	125	~G2 & ~G4 & ~G8	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	126	G9 & ~G2 & ~G5	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	127	G4 & G8 & ~G2	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	128	G5 & ~G10	1.9375	N/A	4	0	1	0	8	0	0	0	0.888888888888889	1	4	0	1
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	129	G7 & ~G2 & ~G6	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	130	G5 & ~G10 & ~G7	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	131	~G3 & ~G7 & ~G9	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	132	G8 & ~G3 & ~G9	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	133	G8 & ~G3 & ~G4	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	134	G4 & G8 & ~G3	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	135	G1 & ~G4	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	136	G5 & G6 & ~G2	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	137	G1 & G6 & ~G3	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	138	G4 & G5 & G6	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	139	G6 & G9 & ~G3	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	140	~G2 & ~G5	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	141	G4 & ~G7 & ~G8	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	142	~G1 & ~G7 & ~G8	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	143	G1 & G5 & G8	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	144	~G4 & (~G5 | ~G8)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	145	G7 & G8 & ~G2	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	146	G10 & G4 & ~G6	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	147	~G9 & (G1 | ~G4)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	148	G1 & ~G4 & ~G8	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	149	G10 & G4 & ~G1	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	150	G9 & ~G4 & ~G8	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	151	G10 & ~G3 & ~G9	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	152	G5 & G7 & G9	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	153	G9 & ~G2 & ~G8	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	154	~G2 & ~G5 & ~G8	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	155	G1 & ~G4 & ~G5	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	156	G7 & ~G4	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	157	G5 & ~G9	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	158	G4 & G7 & ~G2	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	159	G1 & G10 & G4	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	160	G10 & G4 & G5	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	161	G2 & ~G4 & ~G7	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	162	~G4 & (G2 | G7)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	163	~G1 & ~G8 & ~G9	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	164	G1 & G4 & ~G2	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	165	G10 & G4 & ~G7	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	166	G5 & ~G2 & ~G3	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	167	G7 & G9 & ~G1	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	168	G5 & G7 & ~G8	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	169	G7 & ~G3 & ~G9	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	170	G1 & G7 & ~G9	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	171	G1 & G6 & G7	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	172	G3 & G5 & ~G8	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	173	~G6 & ~G7 & ~G8	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	174	~G2 & ~G3 & ~G8	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	175	G5 & ~G6 & ~G8	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	176	G3 & G6 & ~G8	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	177	G2 & G5 & ~G1	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	178	~G3 & (G10 | G5)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	179	G10 & (G1 | ~G3)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	180	G10 & ~G2 & ~G3	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	181	~G2 & ~G8	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	182	~G2 & (~G3 | ~G5)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	183	G8 & ~G4 & ~G5	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	184	G10 & G4 & ~G8	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	185	~G1 & ~G5 & ~G8	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	186	~G1 & ~G10 & ~G3	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	187	G10 & G6 & G8	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	188	G2 & G8 & ~G6	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	189	G1 & G5 & ~G2	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	190	G10 & G6 & ~G2	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	191	G10 & G7 & ~G6	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	192	G1 & G10 & G8	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	193	G5 & (G1 | ~G9)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_2	rules_WCSS_size10_2_3_5times	WCSS	3_5times	rules_by_gene.tsv	G10	194	G4 & ~G1 & ~G8	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3

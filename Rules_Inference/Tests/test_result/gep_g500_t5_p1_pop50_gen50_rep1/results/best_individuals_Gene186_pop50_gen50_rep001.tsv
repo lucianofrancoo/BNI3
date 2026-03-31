@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	Gene170 | Gene280	4	2	0.0	Gene170, Gene280	2	1
+2	Gene170 | Gene280	4	2	0.0	Gene170, Gene280	2	1
+3	Gene170 | Gene280	4	2	0.0	Gene170, Gene280	2	1
+4	Gene170 | Gene280	4	2	0.0	Gene170, Gene280	2	1
+5	Gene170 | Gene280	4	2	0.0	Gene170, Gene280	2	1
+6	Gene170 | Gene280	4	2	0.0	Gene170, Gene280	2	1
+7	Gene170 | Gene280	4	2	0.0	Gene170, Gene280	2	1
+8	Gene170 | Gene280	4	2	0.0	Gene170, Gene280	2	1
+9	Gene170 & ~Gene280	4	2	0.0	Gene170, Gene280	2	1
+10	Gene170 | Gene280	4	2	0.0	Gene170, Gene280	2	1
+11	Gene170 & ~Gene280	4	2	0.0	Gene170, Gene280	2	1
+12	~Gene338 & (Gene170 | Gene280)	4	3	0.0	Gene170, Gene280, Gene338	3	1
+13	Gene170 | Gene280	4	2	0.0	Gene170, Gene280	2	1
+14	Gene170 | Gene280	4	2	0.0	Gene170, Gene280	2	1
+15	Gene170 | Gene280	4	2	0.0	Gene170, Gene280	2	1
+16	Gene170 | Gene280	4	2	0.0	Gene170, Gene280	2	1
+17	Gene170 | Gene280	4	2	0.0	Gene170, Gene280	2	1
+18	Gene170 | Gene280	4	2	0.0	Gene170, Gene280	2	1
+19	Gene170	4	1	0.5	Gene170	1	1
+20	Gene170	4	1	0.5	Gene170	1	1
+21	Gene170	4	1	0.5	Gene170	1	1
+22	Gene280	3	1	0.5	Gene280	1	1
+23	Gene210 & Gene280	3	2	0.0	Gene210, Gene280	2	1
+24	Gene280 & ~Gene170	3	2	0.0	Gene170, Gene280	2	1
+25	~Gene280 & ~Gene303	3	2	0.0	Gene280, Gene303	2	1
+26	Gene280	3	1	0.5	Gene280	1	1
+27	Gene280	3	1	0.5	Gene280	1	1
+28	Gene280 | Gene440	2	2	0.0	Gene280, Gene440	2	1
+29	Gene170 | Gene366	2	2	0.0	Gene170, Gene366	2	1
+30	Gene112 | Gene170	2	2	0.0	Gene112, Gene170	2	1
+31	Gene170 | Gene368	2	2	0.0	Gene170, Gene368	2	1
+32	~Gene101	2	1	0.5	Gene101	1	1
+33	Gene440	2	1	0.5	Gene440	1	1
+34	~Gene144	2	1	0.5	Gene144	1	1
+35	~Gene30	2	1	0.5	Gene30	1	1
+36	~Gene440	2	1	0.5	Gene440	1	1
+37	~Gene313	2	1	0.5	Gene313	1	1
+38	~Gene356	2	1	0.5	Gene356	1	1
+39	~Gene338	2	1	0.5	Gene338	1	1
+40	Gene170 | Gene303 | Gene453	1	3	0.0	Gene170, Gene303, Gene453	3	1
+41	Gene303 | Gene356	1	2	0.0	Gene303, Gene356	2	1
+42	Gene303 & ~Gene280	1	2	0.0	Gene280, Gene303	2	1
+43	True	1	1	0.5	True	1	1
+44	~Gene280	1	1	0.5	Gene280	1	1
+45	Gene185	1	1	0.5	Gene185	1	1
+46	Gene280 | ~Gene170	0	2	0.0	Gene170, Gene280	2	1
+47	~Gene170	0	1	0.5	Gene170	1	1
+48	~Gene170	0	1	0.5	Gene170	1	1
+49	~Gene170	0	1	0.5	Gene170	1	1
+50	~Gene170	0	1	0.5	Gene170	1	1

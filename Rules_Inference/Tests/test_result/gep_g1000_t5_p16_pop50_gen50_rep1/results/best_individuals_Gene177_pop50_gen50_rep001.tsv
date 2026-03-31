@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	Gene147 & Gene531 & ~Gene820	4	3	0.0	Gene147, Gene531, Gene820	3	1
+2	Gene122 & Gene596	4	2	0.0	Gene122, Gene596	2	1
+3	Gene122 & Gene596	4	2	0.0	Gene122, Gene596	2	1
+4	Gene122 & Gene596	4	2	0.0	Gene122, Gene596	2	1
+5	Gene147 & Gene531 & ~Gene820	4	3	0.0	Gene147, Gene531, Gene820	3	1
+6	Gene122 & Gene596	4	2	0.0	Gene122, Gene596	2	1
+7	Gene147 & Gene531	4	2	0.0	Gene147, Gene531	2	1
+8	Gene122 & Gene596	4	2	0.0	Gene122, Gene596	2	1
+9	Gene122 & Gene596	4	2	0.0	Gene122, Gene596	2	1
+10	Gene122 & Gene596	4	2	0.0	Gene122, Gene596	2	1
+11	Gene122 & Gene596	4	2	0.0	Gene122, Gene596	2	1
+12	Gene122 & Gene596	4	2	0.0	Gene122, Gene596	2	1
+13	Gene122 & Gene596	4	2	0.0	Gene122, Gene596	2	1
+14	Gene122 & Gene596	4	2	0.0	Gene122, Gene596	2	1
+15	Gene596 & ~Gene425 & ~Gene503	4	3	0.0	Gene425, Gene503, Gene596	3	1
+16	Gene122 & Gene596	4	2	0.0	Gene122, Gene596	2	1
+17	Gene122 & Gene596	4	2	0.0	Gene122, Gene596	2	1
+18	Gene122 & Gene596	4	2	0.0	Gene122, Gene596	2	1
+19	Gene147 & Gene596	4	2	0.0	Gene147, Gene596	2	1
+20	Gene122 & Gene596	4	2	0.0	Gene122, Gene596	2	1
+21	Gene238 & Gene596	4	2	0.0	Gene238, Gene596	2	1
+22	Gene122 & Gene596	4	2	0.0	Gene122, Gene596	2	1
+23	Gene122 & Gene596	4	2	0.0	Gene122, Gene596	2	1
+24	Gene147 & Gene531 & ~Gene820	4	3	0.0	Gene147, Gene531, Gene820	3	1
+25	Gene274	4	1	0.5	Gene274	1	1
+26	Gene596	4	1	0.5	Gene596	1	1
+27	Gene274	4	1	0.5	Gene274	1	1
+28	Gene274	4	1	0.5	Gene274	1	1
+29	Gene596	4	1	0.5	Gene596	1	1
+30	Gene273 & Gene651	3	2	0.0	Gene273, Gene651	2	1
+31	Gene122 & Gene139 & Gene596	3	3	0.0	Gene122, Gene139, Gene596	3	1
+32	Gene503 & Gene596	3	2	0.0	Gene503, Gene596	2	1
+33	Gene545 & Gene596	3	2	0.0	Gene545, Gene596	2	1
+34	False	3	1	0.5	False	1	1
+35	Gene503 & Gene596	3	2	0.0	Gene503, Gene596	2	1
+36	Gene380 & ~Gene122	3	2	0.0	Gene122, Gene380	2	1
+37	Gene139 & Gene441	2	2	0.0	Gene139, Gene441	2	1
+38	Gene380 & Gene545	2	2	0.0	Gene380, Gene545	2	1
+39	Gene122 & Gene76	2	2	0.0	Gene122, Gene76	2	1
+40	Gene441 & Gene651	2	2	0.0	Gene441, Gene651	2	1
+41	Gene122 & Gene139 & Gene441	2	3	0.0	Gene122, Gene139, Gene441	3	1
+42	Gene122 & Gene147	2	2	0.0	Gene122, Gene147	2	1
+43	Gene122 & Gene139 & ~Gene441	2	3	0.0	Gene122, Gene139, Gene441	3	1
+44	Gene362 & Gene441	2	2	0.0	Gene362, Gene441	2	1
+45	Gene820 & (~Gene139 | ~Gene441)	2	3	0.0	Gene139, Gene441, Gene820	3	1
+46	Gene441	2	1	0.5	Gene441	1	1
+47	Gene545	2	1	0.5	Gene545	1	1
+48	Gene139 & Gene76 & (Gene122 | Gene441 | Gene651)	2	5	1.0	Gene122, Gene139, Gene441, Gene651, Gene76	5	1
+49	Gene122 | Gene596	1	2	0.0	Gene122, Gene596	2	1
+50	Gene122	1	1	0.5	Gene122	1	1

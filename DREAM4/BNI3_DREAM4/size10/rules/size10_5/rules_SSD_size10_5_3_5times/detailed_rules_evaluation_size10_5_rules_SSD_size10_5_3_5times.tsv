@@ -1,0 +1,1256 @@
+Size	Network	Method	Binarization	Rep	Source_File	Gene	Position	Rule	Score	MSE	Correct	TP	FP	FN	TN	Precision	Recall	F1_score	Accuracy	DynamicAccuracy	N_Predictions	N_Errors	N_Regulators
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	1	G6 | G8 | ~G1	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	2	G8 | ~G1	1.9375	N/A	4	0	1	1	7	0	0	0	0.777777777777778	1	4	0	1
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	3	~G2 & ~G9	1.9375	N/A	4	1	1	0	7	0.5	1	0.666666666666667	0.888888888888889	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	4	G10 | G8 | ~G1	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	5	~G2 | ~G3	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	6	~G1 | ~G2	1.9375	N/A	4	0	1	1	7	0	0	0	0.777777777777778	1	4	0	1
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	7	~G2 | ~G5	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	8	G3 & ~G2	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	9	~G1 | (G3 & G8)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	10	G6 | (~G2 & ~G7)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	11	G7 | (~G2 & ~G6)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	12	~G2 & ~G7	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	13	G7 | ~G2	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	14	G6 | ~G2	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	15	G8 | G9 | ~G1	1.9375	N/A	4	1	1	0	7	0.5	1	0.666666666666667	0.888888888888889	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	16	G6 | G7 | ~G2	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	17	~G2 & ~G6	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	18	~G2 & ~G6 & ~G9	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	19	G4 | ~G2	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	20	G10 | ~G2	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	21	~G2 | ~G3 | ~G5	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	22	~G2 & (~G6 | ~G7)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	23	G8 | ~G2	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	24	G8 | (~G2 & ~G9)	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	25	G6 | ~G2 | ~G5	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	26	G7 | G8 | ~G2	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	27	G6 | (G3 & ~G2)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	28	~G2 | (G6 & ~G3)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	29	~G2 | (~G1 & ~G3)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	30	~G2 | (G6 & ~G7)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	31	G4 | (~G2 & ~G6)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	32	~G2 & (~G6 | ~G9)	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	33	~G2 & ~G4	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	34	~G2 & ~G4 & ~G6	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	35	G9 | ~G2	1.9375	N/A	4	1	1	0	7	0.5	1	0.666666666666667	0.888888888888889	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	36	G8 | (~G10 & ~G2)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	37	~G2 & (~G7 | ~G9)	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	38	G4 | G6 | ~G2	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	39	~G2 & (~G10 | ~G7)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	40	~G2 | (G1 & G10)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	41	~G5 | (~G2 & ~G7)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	42	~G2 & ~G6 & ~G7	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	43	(G2 & G9) | (G3 & ~G2)	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	44	G3 & ~G2 & ~G4	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	45	~G2 | (G7 & ~G4)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	46	~G2 | (G4 & G5)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	47	~G2 & (G7 | ~G6)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	48	~G2 | (G9 & ~G6)	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	49	~G2 & (G3 | G9)	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	50	~G2 | (~G4 & ~G5)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	51	~G2 | (G9 & ~G1)	1.9375	N/A	4	1	1	0	7	0.5	1	0.666666666666667	0.888888888888889	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	52	G8 | (~G1 & ~G9)	1.9375	N/A	4	1	1	0	7	0.5	1	0.666666666666667	0.888888888888889	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	53	G7 | G8 | ~G1	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	54	~G2 | (G10 & G3)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	55	~G2 & (G3 | G7)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	56	G10 | G6 | ~G2	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	57	G8 | ~G2 | ~G5	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	58	~G2 | (~G5 & ~G8)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	59	G10 | G7 | ~G2	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	60	~G2 | (~G3 & ~G9)	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	61	~G2 & (G3 | G6)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	62	~G2 | (G10 & G7)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	63	~G2 | (G6 & G7)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	64	~G2 | (~G10 & ~G3)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	65	~G2 | (~G3 & ~G4)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	66	~G2 | (~G1 & ~G6)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	67	~G2 | (G1 & G6)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	68	~G2 & (~G1 | ~G9)	1.9375	N/A	4	1	1	0	7	0.5	1	0.666666666666667	0.888888888888889	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	69	G4 | G8 | ~G1	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	70	~G2 & (~G5 | ~G7)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	71	G8 | G9 | ~G2	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	72	~G2 | (G4 & G6)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	73	G9 | ~G2 | ~G3	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	74	G3 & ~G2 & ~G9	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	75	G7 | (G3 & ~G2)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	76	~G2 | (G5 & G9)	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	77	G7 | ~G2 | ~G5	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	78	G9 | ~G2 | ~G5	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	79	G3 & (G8 | ~G2)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	80	G4 | ~G2 | ~G5	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	81	~G2 | (G9 & ~G7)	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	82	G6 | (~G2 & ~G9)	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	83	G8 | (~G1 & ~G6)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	84	G10 | (~G2 & ~G9)	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	85	G8 | (G5 & ~G1)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	86	G8 | (~G1 & ~G10)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	87	G8 | ~G1 | ~G5	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	88	~G2 & (~G4 | ~G6)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	89	G8 | ~G1 | ~G2	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G1	90	G8 | (~G1 & ~G2)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G2	1	G5 & G8	1.9375	N/A	4	0	2	3	4	0	0	0	0.444444444444444	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G2	2	G1 & G5 & G8	1.9375	N/A	4	1	2	2	4	0.333333333333333	0.333333333333333	0.333333333333333	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G2	3	G8 & ~G10	1.9375	N/A	4	0	2	3	4	0	0	0	0.444444444444444	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G2	4	G5 & (G10 | G8)	1.9375	N/A	4	0	3	3	3	0	0	0	0.333333333333333	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G2	5	G3 & G5 & G8	1.9375	N/A	4	0	3	3	3	0	0	0	0.333333333333333	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G2	6	G5 & (G6 | G8)	1.9375	N/A	4	0	3	3	3	0	0	0	0.333333333333333	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G2	7	G8 & (~G1 | ~G10)	1.9375	N/A	4	1	2	2	4	0.333333333333333	0.333333333333333	0.333333333333333	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G2	8	G5 & G8 & ~G9	1.9375	N/A	4	0	3	3	3	0	0	0	0.333333333333333	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G2	9	G8 & (G5 | ~G1)	1.9375	N/A	4	1	2	2	4	0.333333333333333	0.333333333333333	0.333333333333333	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G2	10	G8 & (G5 | ~G10)	1.9375	N/A	4	0	3	3	3	0	0	0	0.333333333333333	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G2	11	G1 & G8 & ~G10	1.9375	N/A	4	1	2	2	4	0.333333333333333	0.333333333333333	0.333333333333333	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G2	12	G8 & (G4 | G5)	1.9375	N/A	4	1	2	2	4	0.333333333333333	0.333333333333333	0.333333333333333	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G2	13	G8 & (G7 | ~G10)	1.9375	N/A	4	1	2	2	4	0.333333333333333	0.333333333333333	0.333333333333333	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G2	14	G8 & (G5 | G9)	1.9375	N/A	4	0	3	3	3	0	0	0	0.333333333333333	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G2	15	G9 | (G5 & G8)	1.9375	N/A	4	0	3	3	3	0	0	0	0.333333333333333	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G2	16	G8 & ~G10 & ~G9	1.9375	N/A	4	0	3	3	3	0	0	0	0.333333333333333	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G2	17	G4 | (G5 & G8)	1.9375	N/A	4	1	2	2	4	0.333333333333333	0.333333333333333	0.333333333333333	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G2	18	G8 & (G5 | G6)	1.9375	N/A	4	0	3	3	3	0	0	0	0.333333333333333	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G2	19	G5 & (G7 | G8)	1.9375	N/A	4	1	2	2	4	0.333333333333333	0.333333333333333	0.333333333333333	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G2	20	G5 & G8 & ~G2	1.9375	N/A	4	0	2	3	4	0	0	0	0.444444444444444	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G2	21	G5 & (G4 | G8)	1.9375	N/A	4	1	2	2	4	0.333333333333333	0.333333333333333	0.333333333333333	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G2	22	G5 & G8 & ~G4	1.9375	N/A	4	1	2	2	4	0.333333333333333	0.333333333333333	0.333333333333333	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G2	23	G5 & (G8 | G9)	1.9375	N/A	4	0	3	3	3	0	0	0	0.333333333333333	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G2	24	G8 & (~G10 | ~G3)	1.9375	N/A	4	0	3	3	3	0	0	0	0.333333333333333	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	1	G2 | G8	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	2	G1 | G2	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	3	G1 & G3	1.9375	N/A	4	0	1	1	7	0	0	0	0.777777777777778	1	4	0	1
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	4	G1 | G6	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	5	G3 & (G1 | G10)	1.9375	N/A	4	1	1	0	7	0.5	1	0.666666666666667	0.888888888888889	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	6	G1 & ~G4	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	7	G1 | G7	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	8	G1 | G10	1.9375	N/A	4	1	1	0	7	0.5	1	0.666666666666667	0.888888888888889	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	9	G1 | G8	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	10	G1 | G9	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	11	G1 | G4	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	12	G1 | G2 | G7	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	13	G1 & (~G3 | ~G9)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	14	G1 | (G9 & ~G10)	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	15	G1 | (G10 & G4)	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	16	G7 | (G1 & G3)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	17	(G10 & G8) | (G1 & ~G10)	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	18	G1 | G10 | G6	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	19	G1 & ~G7	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	20	G1 | ~G5	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	21	G1 | G8 | G9	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	22	G1 | G7 | G8	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	23	G1 | (~G5 & ~G6)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	24	G1 | G7 | G9	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	25	G2 | G8 | G9	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	26	G1 | G10 | G8	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	27	G1 | G2 | ~G3	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	28	G1 | G10 | G9	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	29	G1 & (G8 | ~G4)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	30	G1 & (G5 | G8)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	31	G2 | G6 | G8	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	32	G1 & ~G6 & ~G7	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	33	G1 | G6 | G9	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	34	G1 | G6 | G8	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	35	G6 | (G1 & ~G7)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	36	G8 | (G1 & G3)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	37	G1 | G4 | G8	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	38	G1 | G10 | G2	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	39	G1 | G10 | G4	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	40	G1 & (G2 | G3)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	41	G1 | G2 | G6	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	42	G1 | G4 | G6	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	43	G1 & (G4 | ~G7)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	44	G1 | (G10 & G5)	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	45	G1 | (G5 & G7)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	46	G8 | (G1 & G5)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	47	G4 | (G1 & G3)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	48	G1 | (G4 & G8)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	49	G1 & G3 & ~G4	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	50	G1 & (~G6 | ~G8)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	51	G1 | (G10 & G2)	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	52	G1 | ~G3	1.9375	N/A	4	0	1	1	7	0	0	0	0.777777777777778	1	4	0	1
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	53	G1 | (G10 & G7)	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	54	G2 | G7 | G8	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	55	G10 | G2 | G8	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	56	G10 | (G1 & G3)	1.9375	N/A	4	1	1	0	7	0.5	1	0.666666666666667	0.888888888888889	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	57	G1 | G2 | G9	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	58	G1 & (G3 | G5)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	59	G1 | G7 | ~G3	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	60	G1 | G6 | G7	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	61	G1 | G10 | ~G3	1.9375	N/A	4	1	1	0	7	0.5	1	0.666666666666667	0.888888888888889	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	62	G6 | (G1 & ~G4)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	63	G3 & (G1 | G2)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	64	G1 & ~G6	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	65	G1 & (~G10 | ~G4)	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	66	G1 | (G5 & G8)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	67	G1 | G10 | G7	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	68	G3 & (G1 | G8)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	69	G2 | (G1 & G3)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	70	G1 | G2 | G4	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	71	G1 & (G10 | G3)	1.9375	N/A	4	1	1	0	7	0.5	1	0.666666666666667	0.888888888888889	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	72	G1 | (G10 & G8)	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	73	G1 | G4 | G9	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	74	G1 | G4 | G7	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	75	G3 & (G1 | G9)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	76	G1 | (G3 & G4)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	77	G8 | (G1 & G2)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	78	G2 | G4 | G8	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	79	G3 & (G1 | G6)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	80	G1 & (~G2 | ~G7)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	81	G1 | (G7 & G9)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	82	G1 | (G6 & ~G7)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	83	G1 | G2 | G8	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	84	G1 | G4 | ~G5	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	85	G1 | (G8 & G9)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	86	G1 & (G8 | ~G7)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	87	G1 | (G5 & G6)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	88	G1 | (G5 & G9)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	89	G1 | (G2 & G7)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	90	G1 | (G2 & G3)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	91	~G9 & (G1 | G4)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	92	G1 | (G2 & G6)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G3	93	G1 | (G7 & ~G2)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	1	G4 | ~G1	1.9375	N/A	4	0	1	1	7	0	0	0	0.777777777777778	1	4	0	1
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	2	~G1 & ~G7	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	3	~G1 & ~G2 & ~G4	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	4	G9 | ~G1	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	5	~G1 & ~G2 & ~G7	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	6	~G1 & ~G4	1.9375	N/A	4	0	1	1	7	0	0	0	0.777777777777778	1	4	0	1
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	7	G7 | ~G1	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	8	G5 & ~G1	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	9	G5 & (~G1 | ~G3)	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	10	~G1 | ~G3	1.9375	N/A	4	1	1	0	7	0.5	1	0.666666666666667	0.888888888888889	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	11	G3 & ~G1	1.9375	N/A	4	1	1	0	7	0.5	1	0.666666666666667	0.888888888888889	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	12	G3 & G5 & ~G1	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	13	~G1 & ~G2 & ~G6	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	14	~G1 & ~G8	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	15	~G1 & ~G9	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	16	G6 | ~G1	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	17	~G1 & ~G10	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	18	G4 | (~G1 & ~G7)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	19	~G1 & ~G4 & ~G7	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	20	G7 | (G5 & ~G1)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	21	G4 | G7 | ~G1	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	22	~G1 & ~G2	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	23	~G1 & (G10 | G3)	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	24	~G1 & (G3 | G7)	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	25	~G1 & (~G2 | ~G5)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	26	~G1 & ~G6	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	27	~G1 & ~G7 & ~G8	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	28	G3 & ~G1 & ~G2	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	29	G5 & (G4 | ~G1)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	30	G3 & ~G1 & ~G10	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	31	~G1 & ~G10 & ~G9	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	32	~G1 & (~G7 | ~G9)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	33	~G1 & ~G6 & ~G7	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	34	~G1 & (G9 | ~G6)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	35	G9 | (~G1 & ~G6)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	36	~G1 & (G3 | G5)	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	37	~G1 & ~G10 & ~G2	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	38	~G1 | (G8 & G9)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	39	~G1 & (G10 | ~G4)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	40	G6 | G7 | ~G1	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	41	~G1 & (~G5 | ~G9)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	42	~G1 & ~G4 & ~G8	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	43	G4 | G9 | ~G1	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	44	~G2 & ~G4 & ~G8	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	45	~G1 & (~G4 | ~G9)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	46	~G1 & ~G2 & ~G8	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	47	~G1 | (G10 & G5)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	48	G6 | G9 | ~G1	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	49	G4 | (~G1 & ~G8)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	50	G6 | (G3 & ~G1)	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	51	G3 & ~G1 & ~G6	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	52	G5 & ~G1 & ~G9	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	53	~G10 & ~G2 & ~G8	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	54	~G1 | (G3 & G7)	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	55	~G2 & ~G8	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	56	~G2 & ~G7 & ~G8	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	57	~G3 | (~G1 & ~G8)	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	58	G3 & ~G1 & ~G8	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	59	~G1 | (G10 & G7)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	60	~G1 & (G5 | G7)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	61	~G1 & (G5 | G9)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	62	~G1 & ~G4 & ~G9	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	63	~G1 & (G6 | ~G9)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	64	~G1 | (G10 & G9)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	65	~G1 | (G4 & ~G8)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	66	~G1 | (G10 & ~G8)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	67	~G1 | (~G3 & ~G4)	1.9375	N/A	4	1	1	0	7	0.5	1	0.666666666666667	0.888888888888889	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	68	~G1 & (G2 | G3)	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	69	~G1 | (G3 & G4)	1.9375	N/A	4	1	1	0	7	0.5	1	0.666666666666667	0.888888888888889	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	70	G7 | G9 | ~G1	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	71	~G1 & (G9 | ~G7)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	72	~G1 & ~G7 & ~G9	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	73	G7 | (~G1 & ~G9)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	74	G9 | (~G1 & ~G7)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	75	~G1 & ~G10 & ~G6	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	76	~G1 & (~G3 | ~G9)	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	77	~G1 & (G10 | G5)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G4	78	~G2 & ~G8 & ~G9	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	1	G10 | G5	1.9375	N/A	4	0	1	1	7	0	0	0	0.777777777777778	1	4	0	1
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	2	G2 | ~G4	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	3	G1 | G5 | ~G4	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	4	G3 | G5 | G6	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	5	G3 | G9	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	6	~G4 | ~G5	1.9375	N/A	4	0	1	1	7	0	0	0	0.777777777777778	1	4	0	1
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	7	G3 | G8	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	8	G1 | G10 | G3	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	9	G1 | G3	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	10	G10 | G3	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	11	G3 & ~G9	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	12	G3 | G6	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	13	G2 | G3	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	14	G1 | G2 | G5	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	15	G10 | G3 | G7	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	16	G2 | G3 | G6	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	17	~G2 | ~G6	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	18	G3 | G4	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	19	G3 | (G2 & G9)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	20	~G7 & ~G9	1.9375	N/A	4	1	1	0	7	0.5	1	0.666666666666667	0.888888888888889	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	21	G5 | (G10 & G3)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	22	~G3 | ~G7	1.9375	N/A	4	1	1	0	7	0.5	1	0.666666666666667	0.888888888888889	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	23	G5 | G8	1.9375	N/A	4	0	1	1	7	0	0	0	0.777777777777778	1	4	0	1
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	24	~G3 | ~G6	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	25	G3 | ~G7	1.9375	N/A	4	1	1	0	7	0.5	1	0.666666666666667	0.888888888888889	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	26	G2 | G3 | G7	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	27	G1 | G3 | G5	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	28	G3 | G5	1.9375	N/A	4	0	1	1	7	0	0	0	0.777777777777778	1	4	0	1
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	29	G10 | G5 | G7	1.9375	N/A	4	1	1	0	7	0.5	1	0.666666666666667	0.888888888888889	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	30	G10 | G3 | G4	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	31	G2 | G9 | ~G7	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	32	G8 | ~G2 | ~G7	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	33	G8 | ~G4 | ~G9	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	34	G1 | G5	1.9375	N/A	4	0	1	1	7	0	0	0	0.777777777777778	1	4	0	1
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	35	G3 | ~G4	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	36	G8 | (~G4 & ~G9)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	37	G8 | ~G9	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	38	~G5 | ~G9	1.9375	N/A	4	0	1	1	7	0	0	0	0.777777777777778	1	4	0	1
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	39	G1 | G4 | G5	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	40	G1 | ~G6	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	41	~G10 | ~G5	1.9375	N/A	4	0	1	1	7	0	0	0	0.777777777777778	1	4	0	1
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	42	~G2 | ~G5 | ~G8	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	43	G1 | ~G8	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	44	~G1 | ~G9	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	45	G3 | ~G2	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	46	G5 | ~G2	1.9375	N/A	4	0	1	1	7	0	0	0	0.777777777777778	1	4	0	1
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	47	G3 | ~G6	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	48	G3 | G5 | G8	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	49	G1 | G3 | ~G2	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	50	~G10 | ~G6	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	51	G1 | G3 | G6	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	52	G1 | G4 | ~G6	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	53	G3 | G7	1.9375	N/A	4	1	1	0	7	0.5	1	0.666666666666667	0.888888888888889	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	54	G1 | G10 | G5	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	55	G1 | ~G4	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	56	G6 | ~G7	1.9375	N/A	4	1	1	0	7	0.5	1	0.666666666666667	0.888888888888889	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	57	~G10 | ~G2	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	58	G10 | G5 | G8	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	59	G10 | G2 | G5	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	60	G2 | G3 | G5	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	61	G6 | ~G10 | ~G7	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	62	G3 | G4 | ~G10	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	63	G3 & ~G6	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	64	G6 | ~G4	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	65	G3 | G5 | G9	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	66	G1 | G3 | G9	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	67	~G4 | (G2 & G6)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	68	G3 | ~G1 | ~G6	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	69	~G10 | (~G2 & ~G7)	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	70	~G5 | ~G6	1.9375	N/A	4	0	1	1	7	0	0	0	0.777777777777778	1	4	0	1
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	71	~G6 | (G4 & G5)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	72	G3 | (G1 & G10)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	73	~G2 | ~G8	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	74	G4 | ~G9	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	75	G4 | G5 | G8	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	76	G5 | ~G7	1.9375	N/A	4	1	0	0	8	1	1	1	1	1	4	0	1
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	77	G4 | ~G10 | ~G9	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	78	G3 | G6 | G8	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	79	G3 | G6 | G7	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	80	G3 | (G7 & ~G1)	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	81	~G6 & (G5 | G8)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	82	~G1 | ~G3 | ~G7	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	83	~G6 | (G1 & G3)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	84	~G6 | (~G2 & ~G8)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	85	~G9 & (~G5 | ~G6)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	86	G5 | G7 | G8	1.9375	N/A	4	1	1	0	7	0.5	1	0.666666666666667	0.888888888888889	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	87	G10 | G8 | ~G6	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	88	G5 | (G10 & ~G7)	1.9375	N/A	4	1	1	0	7	0.5	1	0.666666666666667	0.888888888888889	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	89	G3 | G8 | ~G1	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	90	G3 | (G4 & ~G2)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	91	G3 | G4 | G9	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	92	G2 | ~G7	1.9375	N/A	4	1	1	0	7	0.5	1	0.666666666666667	0.888888888888889	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	93	G3 | ~G1 | ~G8	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	94	G4 | ~G3 | ~G9	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	95	G1 | G2 | ~G10	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	96	~G6 & ~G9	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	97	G2 | ~G9	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	98	G1 | G5 | G6	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	99	G5 | G8 | G9	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	100	G5 | ~G9	1.9375	N/A	4	0	1	1	7	0	0	0	0.777777777777778	1	4	0	1
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	101	G2 | G3 | G4	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	102	G10 | G3 | ~G9	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	103	G3 | ~G10	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	104	~G1 | ~G4	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	105	G1 | G5 | ~G2	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	106	G3 | (G7 & ~G5)	1.9375	N/A	4	1	1	0	7	0.5	1	0.666666666666667	0.888888888888889	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	107	G3 | (G1 & G6)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	108	~G3 | ~G9	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	109	G1 | G6 | ~G9	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	110	G3 | G6 | G9	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	111	G7 | ~G6	1.9375	N/A	4	1	1	0	7	0.5	1	0.666666666666667	0.888888888888889	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	112	G2 | G3 | G9	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	113	G3 | ~G9	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	114	~G7 | (G6 & G8)	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	115	G10 | G8 | ~G9	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	116	G3 | G7 | ~G2	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	117	~G6 | ~G9	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	118	G7 | ~G9	1.9375	N/A	4	1	1	0	7	0.5	1	0.666666666666667	0.888888888888889	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	119	G9 | ~G6	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	120	G3 | (G4 & ~G10)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	121	~G3 | ~G4	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	122	G1 | ~G9	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	123	G10 | G3 | G8	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	124	G3 | (G2 & G8)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	125	G3 | (G5 & ~G8)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	126	G10 | G3 | G5	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	127	~G1 | ~G10 | ~G5	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	128	~G6 | (~G2 & ~G3)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	129	G4 | ~G7	1.9375	N/A	4	1	1	0	7	0.5	1	0.666666666666667	0.888888888888889	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	130	G3 | (G6 & G8)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	131	G1 | G3 | G7	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	132	~G10 | ~G7	1.9375	N/A	4	1	1	0	7	0.5	1	0.666666666666667	0.888888888888889	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	133	G8 | ~G7	1.9375	N/A	4	1	1	0	7	0.5	1	0.666666666666667	0.888888888888889	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	134	~G4 | ~G9	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	135	G8 | ~G6	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	136	~G10 | ~G4	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	137	~G6 | ~G7	1.9375	N/A	4	1	1	0	7	0.5	1	0.666666666666667	0.888888888888889	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	138	G1 | G7 | ~G2	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	139	G1 | ~G7	1.9375	N/A	4	1	1	0	7	0.5	1	0.666666666666667	0.888888888888889	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	140	G1 | ~G2	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	141	G1 | ~G10	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	142	G2 | G3 | ~G10	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	143	G10 | ~G6	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	144	~G2 | ~G7	1.9375	N/A	4	1	1	0	7	0.5	1	0.666666666666667	0.888888888888889	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	145	G10 | G2 | G3	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	146	G8 | ~G10	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	147	G10 | ~G6 | ~G9	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	148	G5 | G8 | ~G2	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	149	G1 | G5 | ~G6	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	150	~G7 | ~G9	1.9375	N/A	4	1	1	0	7	0.5	1	0.666666666666667	0.888888888888889	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	151	G5 | (G1 & G3)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	152	G9 | ~G7	1.9375	N/A	4	1	1	0	7	0.5	1	0.666666666666667	0.888888888888889	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	153	~G10 | ~G8 | ~G9	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	154	G3 | ~G2 | ~G8	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	155	~G6 | (~G5 & ~G8)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	156	G5 | G6 | G8	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	157	~G8 | (~G2 & ~G4)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	158	~G6 | ~G8	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	159	G6 | ~G9	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	160	G5 | G6 | ~G9	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	161	G3 | G4 | G5	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	162	~G4 | ~G5 | ~G7	1.9375	N/A	4	1	1	0	7	0.5	1	0.666666666666667	0.888888888888889	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	163	G10 | ~G2 | ~G8	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	164	~G4 | ~G7	1.9375	N/A	4	1	1	0	7	0.5	1	0.666666666666667	0.888888888888889	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	165	G1 | G10 | ~G4	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	166	~G3 | ~G4 | ~G8	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	167	G1 | G9 | ~G2	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	168	~G3 | ~G7 | ~G9	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	169	G6 | ~G10 | ~G4	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	170	~G3 | ~G4 | ~G7	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	171	G5 | ~G4 | ~G8	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	172	~G4 & ~G7	1.9375	N/A	4	1	1	0	7	0.5	1	0.666666666666667	0.888888888888889	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	173	G5 | (~G6 & ~G7)	1.9375	N/A	4	1	1	0	7	0.5	1	0.666666666666667	0.888888888888889	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	174	G2 | G4 | ~G9	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	175	G3 | (G5 & G8)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	176	G10 | G3 | G6	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	177	~G4 & ~G9	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	178	G10 | ~G6 | ~G7	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	179	~G7 | ~G8	1.9375	N/A	4	1	1	0	7	0.5	1	0.666666666666667	0.888888888888889	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	180	G8 | ~G3 | ~G6	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	181	G3 | (G5 & G9)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	182	G7 | ~G3 | ~G6	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	183	G2 | G6 | ~G9	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	184	G3 & ~G7	1.9375	N/A	4	1	1	0	7	0.5	1	0.666666666666667	0.888888888888889	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	185	G2 | ~G6	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	186	G3 | G7 | G9	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	187	G3 | G8 | ~G5	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	188	~G9 | (G2 & G5)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	189	G7 | ~G4	1.9375	N/A	4	1	1	0	7	0.5	1	0.666666666666667	0.888888888888889	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	190	~G10 | ~G9	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	191	G10 | G3 | ~G6	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	192	G1 | G4 | ~G7	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	193	G3 | (~G10 & ~G6)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	194	G1 | (G3 & ~G9)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	195	G3 | G4 | G8	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	196	~G9 | (~G2 & ~G3)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	197	G5 | (G3 & ~G2)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	198	G1 | G3 | G4	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	199	G2 | G8 | ~G7	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	200	G1 | G10 | ~G2	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	201	G10 | ~G4	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	202	G3 | G7 | ~G1	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	203	G10 | ~G9	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	204	~G10 | (~G5 & ~G7)	1.9375	N/A	4	1	1	0	7	0.5	1	0.666666666666667	0.888888888888889	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	205	G9 | ~G4	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	206	G8 | (G3 & ~G10)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	207	G1 | G3 | G8	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	208	G3 | G5 | ~G8	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	209	G8 | (G3 & ~G7)	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	210	G3 & (G9 | ~G6)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	211	G3 | G7 | G8	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	212	~G8 | (~G4 & ~G7)	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	213	~G8 | ~G9	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	214	~G9 & (G3 | G8)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	215	~G2 | (G1 & G5)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	216	G8 | (~G6 & ~G9)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	217	G3 | ~G8	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	218	G3 | G5 | ~G4	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	219	~G7 | (G1 & G2)	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	220	~G4 | (~G2 & ~G3)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	221	~G7 | (G10 & G8)	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	222	~G5 | ~G7	1.9375	N/A	4	1	0	0	8	1	1	1	1	1	4	0	1
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	223	G8 | ~G1 | ~G9	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	224	G3 | (~G10 & ~G8)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	225	G3 | G4 | G6	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	226	G10 | G5 | G6	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	227	G10 | ~G7	1.9375	N/A	4	1	1	0	7	0.5	1	0.666666666666667	0.888888888888889	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	228	~G9 | (G10 & G5)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	229	G2 | ~G10 | ~G7	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	230	G3 | (~G10 & ~G9)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	231	G3 & (G10 | G5)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	232	G3 | G7 | ~G4	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	233	G3 | G5 | ~G7	1.9375	N/A	4	1	1	0	7	0.5	1	0.666666666666667	0.888888888888889	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	234	G3 | G5 | ~G10	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	235	G3 | (~G5 & ~G7)	1.9375	N/A	4	1	1	0	7	0.5	1	0.666666666666667	0.888888888888889	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	236	~G6 | (~G1 & ~G3)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	237	~G6 & ~G7 & ~G9	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	238	~G7 & (G3 | G6)	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	239	G8 | ~G4 | ~G5	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	240	~G9 & (~G3 | ~G7)	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	241	~G7 | (G3 & G8)	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	242	G3 | G8 | G9	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	243	G1 | G5 | ~G8	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	244	~G4 | ~G6	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	245	~G1 | ~G4 | ~G5	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	246	~G4 | ~G8	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	247	G2 | G7 | ~G6	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	248	G1 | G3 | ~G8	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	249	G3 & (G2 | ~G4)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	250	G3 & (G6 | ~G9)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	251	~G7 & (G1 | ~G9)	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	252	G5 | ~G7 | ~G9	1.9375	N/A	4	1	1	0	7	0.5	1	0.666666666666667	0.888888888888889	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	253	~G6 & ~G7	1.9375	N/A	4	1	1	0	7	0.5	1	0.666666666666667	0.888888888888889	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	254	~G6 & (G3 | G9)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	255	G3 | (~G4 & ~G6)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	256	G3 | (G1 & G4)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	257	~G9 & (~G3 | ~G6)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	258	~G9 | (G1 & G8)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	259	~G2 | ~G9	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	260	G2 | G3 | G8	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	261	~G4 | (~G6 & ~G8)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	262	G4 | ~G6	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	263	G5 | ~G6 | ~G8	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	264	G1 | G9 | ~G4	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	265	~G7 | (G1 & ~G2)	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	266	~G3 | ~G6 | ~G8	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	267	G3 | ~G1	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	268	~G5 | ~G6 | ~G8	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	269	G1 | G4 | ~G2	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	270	G1 | G5 | G9	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	271	~G4 & (G3 | ~G5)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	272	G1 | G5 | G7	1.9375	N/A	4	1	1	0	7	0.5	1	0.666666666666667	0.888888888888889	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	273	~G2 | ~G8 | ~G9	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	274	G5 | G7 | ~G6	1.9375	N/A	4	1	1	0	7	0.5	1	0.666666666666667	0.888888888888889	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	275	~G5 | ~G7 | ~G8	1.9375	N/A	4	1	1	0	7	0.5	1	0.666666666666667	0.888888888888889	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	276	G3 & ~G4	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	277	G6 | G8 | ~G7	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	278	G3 | G6 | ~G4	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G5	279	~G7 | (G5 & G6)	1.9375	N/A	4	1	1	0	7	0.5	1	0.666666666666667	0.888888888888889	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	1	~G1 & ~G4	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	2	G4 | ~G1	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	3	G5 & ~G1	1.9375	N/A	4	1	1	0	7	0.5	1	0.666666666666667	0.888888888888889	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	4	~G1 | (G2 & G4)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	5	G3 & ~G1	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	6	G7 | ~G1	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	7	G9 | (~G1 & ~G8)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	8	G9 | ~G1	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	9	~G2 & ~G8	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	10	G7 | (~G1 & ~G4)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	11	~G1 & (G5 | ~G8)	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	12	~G1 & (~G10 | ~G2)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	13	~G1 & ~G2	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	14	~G1 & (~G10 | ~G8)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	15	~G1 & ~G4 & ~G9	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	16	~G1 & ~G9	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	17	~G1 & ~G10	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	18	~G1 & ~G6	1.9375	N/A	4	0	1	1	7	0	0	0	0.777777777777778	1	4	0	1
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	19	~G1 & ~G6 & ~G7	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	20	G5 & ~G1 & ~G6	1.9375	N/A	4	1	1	0	7	0.5	1	0.666666666666667	0.888888888888889	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	21	~G1 & ~G4 & ~G8	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	22	~G1 | ~G3	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	23	G6 | ~G1	1.9375	N/A	4	0	1	1	7	0	0	0	0.777777777777778	1	4	0	1
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	24	~G1 & ~G8	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	25	~G1 & ~G8 & ~G9	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	26	~G1 & ~G7	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	27	~G1 & (G10 | ~G9)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	28	~G1 & ~G10 & ~G8	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	29	~G1 & (G10 | ~G6)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	30	~G1 & (~G6 | ~G7)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	31	~G1 & (~G3 | ~G6)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	32	~G1 | (G2 & ~G3)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	33	~G1 & (G3 | G8)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	34	~G1 | (G10 & G2)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	35	~G1 & (G5 | ~G2)	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	36	G4 | (~G1 & ~G6)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	37	G5 & ~G1 & ~G7	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	38	~G1 | (~G3 & ~G6)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	39	~G1 | (G2 & G6)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	40	~G1 | (G3 & G6)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	41	~G1 & (~G10 | ~G7)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	42	~G1 | (~G3 & ~G4)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	43	G3 & (G9 | ~G1)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	44	~G1 & (~G3 | ~G4)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	45	~G1 & (G10 | ~G2)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	46	~G1 & (G6 | ~G2)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	47	~G1 & (G5 | G7)	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	48	~G1 & ~G10 & ~G4	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	49	~G1 | (G2 & G8)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	50	~G1 & (~G2 | ~G8)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	51	~G1 & (~G2 | ~G9)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	52	~G2 & ~G7 & ~G8	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	53	~G2 & ~G6 & ~G8	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	54	~G1 & ~G2 & ~G8	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	55	~G1 & (~G5 | ~G9)	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	56	~G1 & (~G10 | ~G9)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	57	~G1 & (~G4 | ~G9)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	58	G5 & ~G1 & ~G10	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	59	~G1 & ~G2 & ~G7	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	60	~G1 | (G6 & ~G4)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	61	G6 | G9 | ~G1	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	62	~G1 & (~G7 | ~G8)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	63	~G1 & (G3 | G5)	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	64	~G1 & ~G10 & ~G9	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	65	G7 | (G5 & ~G1)	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	66	~G1 & ~G7 & ~G8	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	67	~G1 | (~G3 & ~G7)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	68	~G1 & ~G10 & ~G6	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	69	~G1 & (~G7 | ~G9)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	70	G5 & ~G1 & ~G9	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	71	G9 | (G5 & ~G1)	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	72	~G1 & ~G2 & ~G9	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	73	~G1 & (~G3 | ~G9)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	74	~G2 & (G6 | ~G8)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	75	G5 & (~G1 | ~G3)	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	76	~G1 & (~G10 | ~G3)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	77	G6 | (~G1 & ~G9)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	78	G6 | (~G1 & ~G8)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	79	~G2 & ~G4 & ~G8	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	80	~G10 & ~G2 & ~G8	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	81	~G1 & ~G6 & ~G8	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	82	~G1 | (G4 & G8)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	83	~G1 | (G10 & G5)	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	84	~G1 | (G10 & G9)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	85	~G1 | (G4 & G5)	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	86	~G1 | (G7 & G9)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	87	~G1 & (~G8 | ~G9)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G6	88	~G1 | (G3 & G4)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	1	~G1 & ~G2 & ~G8	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	2	~G1 & (~G5 | ~G9)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	3	~G1 & ~G9	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	4	G5 & ~G1 & ~G2	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	5	G3 & ~G1	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	6	G5 & ~G1	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	7	~G1 & ~G2	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	8	~G2 & ~G8	1.9375	N/A	4	1	1	0	7	0.5	1	0.666666666666667	0.888888888888889	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	9	G9 | ~G1	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	10	~G1 & ~G10 & ~G8	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	11	~G1 & ~G10	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	12	~G1 | (G10 & G7)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	13	G6 | ~G1	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	14	~G1 | (G10 & G5)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	15	~G1 & ~G7	1.9375	N/A	4	0	1	1	7	0	0	0	0.777777777777778	1	4	0	1
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	16	~G1 & ~G6	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	17	G5 & ~G2 & ~G8	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	18	~G2 & ~G4 & ~G8	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	19	~G1 | ~G3	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	20	~G1 & ~G4	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	21	G4 | ~G1	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	22	~G1 & ~G2 & ~G4	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	23	G7 | (G3 & ~G1)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	24	~G1 & (~G2 | ~G5)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	25	~G1 & ~G6 & ~G8	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	26	G9 | (G3 & ~G1)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	27	~G1 & (~G5 | ~G6)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	28	~G1 & (G10 | G3)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	29	~G1 & ~G10 & ~G6	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	30	~G1 & ~G8	1.9375	N/A	4	1	1	0	7	0.5	1	0.666666666666667	0.888888888888889	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	31	~G1 | (G6 & G9)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	32	~G1 & (~G6 | ~G9)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	33	~G1 | (G9 & ~G6)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	34	~G1 | (G6 & ~G7)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	35	~G1 | (G9 & ~G3)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	36	~G3 | (~G1 & ~G2)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	37	~G1 & ~G4 & ~G7	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	38	G3 & G5 & ~G1	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	39	~G1 & ~G6 & ~G7	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	40	(G1 & G6) | (G3 & ~G1)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	41	~G7 & (G4 | ~G1)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	42	G4 | (~G1 & ~G9)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	43	~G1 | (G7 & G9)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	44	G7 | ~G1	1.9375	N/A	4	0	1	1	7	0	0	0	0.777777777777778	1	4	0	1
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	45	G6 | (~G1 & ~G9)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	46	~G1 & (~G2 | ~G9)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	47	~G1 & ~G6 & ~G9	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	48	~G1 | (G4 & G5)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	49	~G1 & ~G2 & ~G9	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	50	~G1 & ~G10 & ~G2	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	51	G3 & ~G1 & ~G9	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	52	~G1 & (G3 | G9)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	53	~G1 & ~G8 & ~G9	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	54	~G1 | (G3 & G9)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	55	G4 | G9 | ~G1	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	56	~G1 | (G2 & G4)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	57	~G1 & ~G10 & ~G4	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	58	~G1 & (~G10 | ~G5)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	59	~G1 & (~G6 | ~G7)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	60	G5 & ~G1 & ~G10	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	61	~G1 & (G10 | G5)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	62	~G1 & ~G2 & ~G7	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	63	~G1 & (~G4 | ~G8)	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	64	~G2 & ~G7 & ~G8	1.9375	N/A	4	1	1	0	7	0.5	1	0.666666666666667	0.888888888888889	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	65	G7 | (~G1 & ~G2)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	66	~G1 & ~G7 & ~G8	1.9375	N/A	4	1	1	0	7	0.5	1	0.666666666666667	0.888888888888889	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	67	~G2 & ~G8 & ~G9	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	68	~G1 & (G8 | ~G6)	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	69	~G1 | (G4 & G6)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	70	~G1 & (~G3 | ~G9)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	71	~G1 & (~G3 | ~G6)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	72	~G1 & (~G2 | ~G3)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	73	~G4 & (G9 | ~G1)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	74	~G1 & (G4 | ~G2)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	75	G3 & ~G1 & ~G2	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	76	~G1 & (~G3 | ~G7)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	77	G5 & ~G1 & ~G9	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	78	G9 | ~G1 | ~G3	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	79	G5 & ~G1 & ~G6	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	80	~G1 & ~G2 & ~G6	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	81	G9 | (~G1 & ~G6)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	82	~G1 & ~G10 & ~G9	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	83	~G1 & ~G10 & ~G7	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G7	84	G4 | (~G1 & ~G8)	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	1	G10 & (G2 | ~G7)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	2	G10 & (G3 | G6)	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	3	G10 & ~G9	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	4	G10 | G6	1.9375	N/A	4	1	1	0	7	0.5	1	0.666666666666667	0.888888888888889	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	5	G10 & (~G5 | ~G9)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	6	G10 | G9	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	7	G10 | G4	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	8	G10 & (~G4 | ~G9)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	9	G10 | G4 | G6	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	10	G10 & G3	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	11	G10 | (G3 & G7)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	12	G10 & (G1 | G8)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	13	G10 & (G3 | G8)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	14	G10 & G3 & G8	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	15	G10 & (~G1 | ~G7)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	16	G10 & G8	1.9375	N/A	4	0	1	1	7	0	0	0	0.777777777777778	1	4	0	1
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	17	G10 | G7	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	18	G1 & G10 & G3	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	19	G10 & (G1 | G4)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	20	G10 & ~G4	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	21	G1 & G10	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	22	G10 & (G2 | G3)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	23	G10 & ~G5	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	24	G10 | (G6 & ~G5)	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	25	G10 | ~G5	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	26	G10 | G6 | G9	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	27	G8 & (G10 | G7)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	28	G10 | (G7 & G9)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	29	G10 | G6 | G7	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	30	G8 & (G10 | G2)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	31	G10 | G7 | G9	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	32	G9 | ~G5	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	33	G10 & ~G2 & ~G4	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	34	G10 & G8 & ~G5	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	35	~G5 | (G2 & G4)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	36	G10 | G4 | G9	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	37	G1 & G10 & G8	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	38	~G3 | (G10 & ~G4)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	39	G10 & G3 & ~G5	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	40	G8 & ~G5	1.9375	N/A	4	0	1	1	7	0	0	0	0.777777777777778	1	4	0	1
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	41	G6 | ~G5	1.9375	N/A	4	1	1	0	7	0.5	1	0.666666666666667	0.888888888888889	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	42	~G2 & ~G5	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	43	G4 | ~G5	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	44	~G5 & ~G9	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	45	G10 | (G5 & G7)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	46	G10 | G4 | G7	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	47	G3 & ~G5	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	48	G10 | (G7 & G8)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	49	G9 | (G10 & G3)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	50	G8 & (G10 | G9)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	51	G10 | ~G3	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	52	~G5 & ~G6	1.9375	N/A	4	1	1	0	7	0.5	1	0.666666666666667	0.888888888888889	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	53	G10 & (G5 | G8)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	54	G9 | (G10 & ~G2)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	55	G7 | ~G5	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	56	~G5 | (G2 & G7)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	57	G10 & ~G2 & ~G9	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	58	G10 & ~G2	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	59	G10 | G4 | ~G5	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	60	~G5 & (G3 | G4)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	61	G1 & (G10 | G6)	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	62	G10 & (G1 | G5)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	63	G10 & (G1 | G3)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	64	~G5 & (G10 | G6)	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	65	G7 | (G10 & G8)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	66	G10 | (G4 & G7)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	67	G10 | (~G5 & ~G6)	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	68	G10 & (G2 | G8)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	69	G10 & (G1 | G2)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	70	G4 | (G1 & G10)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	71	~G3 | ~G5	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	72	G10 | (G4 & G9)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	73	G3 & (G10 | G7)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	74	G3 & (G10 | G9)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	75	G10 | G7 | ~G3	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	76	~G5 & ~G7	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	77	G10 & (G1 | G6)	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	78	G10 & (G3 | G7)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	79	G9 | (G10 & G8)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	80	G10 | (~G5 & ~G8)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	81	G10 & ~G2 & ~G7	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	82	G8 & (G10 | ~G5)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	83	(G8 & G9) | (G10 & ~G9)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	84	G10 | (G8 & G9)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	85	G10 & (G7 | ~G9)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	86	~G5 & ~G7 & ~G9	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	87	G10 & (G8 | G9)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	88	G10 | (G2 & G6)	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	89	G10 & (G3 | G4)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	90	G1 & G3 & ~G5	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	91	G3 & ~G4 & ~G5	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	92	G10 & ~G6	1.9375	N/A	4	1	1	0	7	0.5	1	0.666666666666667	0.888888888888889	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	93	G10 & ~G7	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	94	G10 & (G1 | G9)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	95	G10 & G8 & ~G2	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	96	G1 & (G10 | G4)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	97	G10 & (G6 | G8)	1.9375	N/A	4	1	1	0	7	0.5	1	0.666666666666667	0.888888888888889	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	98	G10 | (G4 & G6)	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	99	G10 & G3 & ~G6	1.9375	N/A	4	1	2	0	6	0.333333333333333	1	0.5	0.777777777777778	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	100	G7 | (G1 & G10)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	101	~G5 & (~G4 | ~G7)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	102	G7 | (G10 & ~G2)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	103	~G5 & (~G2 | ~G7)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	104	G1 & (G10 | G7)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	105	G4 | (G10 & ~G2)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	106	G8 & (~G3 | ~G5)	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	107	G10 & ~G5 & ~G9	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	108	G3 & (G9 | ~G5)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	109	G1 & ~G2 & ~G5	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	110	G10 & (G2 | ~G5)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	111	G4 | (G1 & ~G5)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	112	G1 & ~G5	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	113	G10 | (G4 & ~G5)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	114	~G4 & ~G5	1.9375	N/A	4	0	2	1	6	0	0	0	0.666666666666667	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	115	G10 & (G1 | G7)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	116	G3 & ~G5 & ~G9	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G8	117	G1 & (~G3 | ~G5)	1.9375	N/A	4	0	3	1	5	0	0	0	0.555555555555556	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	1	G5 & ~G1 & ~G8	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	2	G3 & ~G1	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	3	~G1 | ~G3	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	4	G4 | ~G1	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	5	~G1 & ~G8	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	6	~G1 & ~G4	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	7	G9 | ~G1	1.9375	N/A	4	0	1	2	6	0	0	0	0.666666666666667	1	4	0	1
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	8	~G1 & ~G6	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	9	G6 | ~G1 | ~G3	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	10	~G1 & ~G9	1.9375	N/A	4	0	1	2	6	0	0	0	0.666666666666667	1	4	0	1
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	11	~G6 & (~G1 | ~G3)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	12	G5 & ~G1	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	13	G6 | (G5 & ~G1)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	14	G6 | ~G1	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	15	~G2 & ~G8	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	16	~G9 & (~G1 | ~G3)	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	17	~G1 | (G9 & ~G8)	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	18	~G1 & ~G10	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	19	~G1 & ~G10 & ~G8	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	20	~G1 & ~G7 & ~G8	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	21	G7 | ~G1	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	22	~G1 & ~G2 & ~G9	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	23	~G1 & ~G2 & ~G7	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	24	~G1 | (G3 & G6)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	25	~G1 & ~G2	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	26	~G1 | (~G10 & ~G5)	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	27	~G1 & (~G10 | ~G5)	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	28	~G1 | (~G3 & ~G5)	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	29	~G1 & ~G7	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	30	G9 | (~G1 & ~G10)	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	31	~G1 & ~G10 & ~G6	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	32	G6 | (~G1 & ~G10)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	33	~G1 & (~G10 | ~G3)	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	34	~G1 & (~G4 | ~G7)	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	35	~G1 & (~G5 | ~G6)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	36	~G1 | (~G3 & ~G6)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	37	G3 & ~G1 & ~G6	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	38	~G1 | (G10 & ~G3)	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	39	G4 | ~G1 | ~G3	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	40	G6 | G9 | ~G1	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	41	~G1 | (G6 & G9)	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	42	~G1 & ~G10 & ~G9	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	43	~G1 & (~G6 | ~G7)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	44	~G1 & ~G4 & ~G6	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	45	G7 | (G5 & ~G1)	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	46	~G1 & (~G5 | ~G7)	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	47	G4 | (~G1 & ~G7)	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	48	~G1 & ~G7 & ~G9	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	49	~G1 & ~G10 & ~G7	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	50	~G1 & (~G4 | ~G5)	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	51	~G1 & (G3 | G5)	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	52	~G1 & (~G3 | ~G7)	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	53	~G1 & ~G10 & ~G4	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	54	~G1 & (G10 | G3)	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	55	G4 | (~G1 & ~G8)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	56	G4 | (~G2 & ~G8)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	57	~G1 | (G4 & G7)	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	58	~G1 & ~G2 & ~G6	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	59	~G1 & (~G2 | ~G6)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	60	G4 | (~G1 & ~G10)	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	61	~G1 & ~G2 & ~G4	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	62	~G2 & ~G7 & ~G8	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	63	~G1 & ~G8 & ~G9	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	64	~G1 | (G10 & ~G8)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	65	~G1 & ~G2 & ~G8	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	66	G5 & ~G1 & ~G7	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	67	G3 & G5 & ~G1	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	68	G6 | (~G1 & ~G9)	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	69	G4 | G9 | ~G1	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	70	~G1 & (G10 | G5)	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	71	G6 | (~G1 & ~G4)	1.9375	N/A	4	1	2	1	5	0.333333333333333	0.5	0.4	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	72	G7 | G9 | ~G1	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	73	~G1 | (G7 & G9)	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	74	~G1 | (G9 & ~G7)	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	75	~G1 & (~G7 | ~G9)	1.9375	N/A	4	0	2	2	5	0	0	0	0.555555555555556	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	76	~G1 & (G5 | G7)	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	77	~G1 & (G9 | ~G8)	1.9375	N/A	4	1	1	1	6	0.5	0.5	0.5	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	78	~G1 | (~G3 & ~G4)	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G9	79	G3 & (G7 | ~G1)	1.9375	N/A	4	0	3	2	4	0	0	0	0.444444444444444	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	1	G6 & (G4 | G5)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	2	G2 & G9	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	3	G4 | G7 | G9	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	4	G7 & G9	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	5	G3 & G9	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	6	G10 & G9	1.9375	N/A	4	0	1	0	8	0	0	0	0.888888888888889	1	4	0	1
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	7	G3 & G7	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	8	G4 & G6	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	9	G1 & ~G3	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	10	G2 & G4	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	11	G1 & G4	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	12	G8 & ~G1	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	13	G6 & G9	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	14	G1 & G7	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	15	G2 & (G10 | G9)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	16	G4 & G9	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	17	G2 & G7	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	18	G4 & G5	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	19	G5 & (G10 | G4)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	20	G4 & G8	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	21	G3 & G4 & G8	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	22	G9 | ~G3	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	23	G7 & ~G3	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	24	G2 & G9 & ~G5	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	25	G10 & G9 & ~G4	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	26	G6 | G9	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	27	G10 & G4	1.9375	N/A	4	0	1	0	8	0	0	0	0.888888888888889	1	4	0	1
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	28	G3 & G4	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	29	G6 | G7	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	30	G10 & G2 & G8	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	31	G10 & G7	1.9375	N/A	4	0	1	0	8	0	0	0	0.888888888888889	1	4	0	1
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	32	G7 & ~G4 & ~G8	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	33	G8 & G9	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	34	G7 & G8	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	35	G2 & G8	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	36	G7 | G9	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	37	G6 & G8	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	38	G10 & G4 & G8	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	39	G10 & G2	1.9375	N/A	4	0	1	0	8	0	0	0	0.888888888888889	1	4	0	1
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	40	G9 | (G5 & G7)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	41	G6 & G7 & ~G5	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	42	G9 & (G4 | G6)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	43	G6 | (~G2 & ~G3)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	44	G9 & ~G10	1.9375	N/A	4	0	1	0	8	0	0	0	0.888888888888889	1	4	0	1
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	45	G6 & G7	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	46	G3 & G5 & G7	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	47	G1 & G6	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	48	G10 & G2 & G7	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	49	G10 & G6	1.9375	N/A	4	0	1	0	8	0	0	0	0.888888888888889	1	4	0	1
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	50	G2 & G6	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	51	G3 & G6 & G8	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	52	G3 & G4 & G9	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	53	G4 & G7	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	54	G5 & G7	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	55	G9 & (G6 | G8)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	56	G4 & G6 & G9	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	57	G6 & G7 & G9	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	58	G1 & G6 & G7	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	59	G2 & (G9 | ~G1)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	60	G9 & ~G1 & ~G7	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	61	G6 & G9 & ~G1	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	62	G1 & G2 & G7	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	63	G4 | G9	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	64	G6 & (~G1 | ~G7)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	65	G7 & (G4 | G9)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	66	~G10 & ~G3	1.9375	N/A	4	0	1	0	8	0	0	0	0.888888888888889	1	4	0	1
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	67	G6 & ~G9	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	68	G1 & G7 & G9	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	69	G10 & G5	1.9375	N/A	4	0	1	0	8	0	0	0	0.888888888888889	1	4	0	1
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	70	G1 & G9	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	71	G2 & G8 & G9	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	72	G1 & G4 & G9	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	73	G4 & (G5 | G7)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	74	G9 & ~G8	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	75	G1 & G6 & G8	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	76	G4 & (G1 | G6)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	77	G5 & G6	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	78	G5 & G9	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	79	G4 & (~G1 | ~G10)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	80	G1 & G6 & G9	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	81	G2 & G7 & G8	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	82	G7 & (G10 | G4)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	83	G9 & ~G3	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	84	G4 | G7	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	85	G9 | (G10 & G4)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	86	G7 & (G10 | G9)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	87	G5 & G7 & G8	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	88	G10 & G8 & G9	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	89	G4 & G8 & G9	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	90	G2 & G3 & G8	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	91	~G2 & ~G5 & ~G8	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	92	G10 & G5 & ~G8	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	93	G4 & (G10 | G7)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	94	G5 & G7 & ~G4	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	95	G3 & G6	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	96	G4 | G6	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	97	G10 & ~G3	1.9375	N/A	4	0	1	0	8	0	0	0	0.888888888888889	1	4	0	1
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	98	~G5 & ~G6 & ~G8	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	99	G6 & ~G2	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	100	G4 & ~G10 & ~G9	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	101	G4 | G9 | ~G3	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	102	~G10 & ~G5	1.9375	N/A	4	0	1	0	8	0	0	0	0.888888888888889	1	4	0	1
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	103	G4 & ~G2	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	104	G9 | (G2 & G8)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	105	G6 & (G5 | G9)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	106	G9 | (G6 & G8)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	107	G9 & ~G4	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	108	~G3 & (G2 | ~G5)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	109	G3 & G4 & G6	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	110	G4 & ~G10 & ~G3	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	111	G9 & ~G4 & ~G7	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	112	G1 & G3 & G4	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	113	G2 & G3 & G6	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	114	G10 & G4 & G5	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	115	G2 & G4 & G6	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	116	G7 & G9 & ~G2	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	117	G7 & ~G10 & ~G4	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	118	~G1 & ~G3	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	119	~G3 & (~G4 | ~G6)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	120	G7 | ~G3	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	121	G9 & (~G1 | ~G3)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	122	~G2 & ~G3	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	123	G9 & (G10 | G7)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	124	G6 & ~G7	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	125	~G3 & (~G2 | ~G9)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	126	G4 & G7 & ~G3	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	127	G2 & G4 & G7	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	128	G10 & (G2 | G4)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	129	G5 & G6 & G7	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	130	G4 & G6 & G8	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	131	G8 & ~G3	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	132	G10 & G2 & ~G4	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	133	G6 & ~G1	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	134	G1 & G2 & ~G3	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	135	G4 & G5 & G7	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	136	G10 & G4 & ~G2	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	137	G1 & G2 & G8	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	138	G1 & G2 & G6	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	139	G1 & G4 & G7	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	140	G4 | ~G3	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	141	G5 & G6 & G9	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	142	~G1 & ~G5	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	143	G3 & G5 & G6	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	144	G2 & G3 & ~G1	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	145	G1 & G2 & G9	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	146	G10 & G3 & G4	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	147	G1 & G8 & G9	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	148	G7 & ~G6	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	149	G2 & ~G1	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	150	G4 & ~G1	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	151	G9 & ~G1	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	152	G1 & G4 & G8	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	153	~G3 & ~G9	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	154	G9 & (G5 | G8)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	155	G4 | (G10 & G5)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	156	G10 & G5 & G7	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	157	G2 & G7 & G9	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	158	G4 & G5 & G8	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	159	G9 & ~G5	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	160	G4 & G5 & ~G7	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	161	G9 & ~G7	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	162	G2 & G3 & G9	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	163	G7 & ~G2	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	164	G10 & G7 & G9	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	165	G7 & (G5 | G6)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	166	~G3 & ~G4	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	167	G3 & G7 & ~G1	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	168	G3 & G6 & G9	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	169	G7 | (G10 & G4)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	170	G5 & G8 & G9	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	171	G10 & G2 & ~G7	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	172	G2 & G4 & G8	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	173	G9 & ~G4 & ~G8	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	174	G4 & ~G9	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	175	G9 & ~G6	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	176	G3 & G7 & G8	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	177	G2 & G4 & G5	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	178	G4 & G7 & G8	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	179	G1 & ~G10 & ~G3	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	180	G1 & (G7 | G9)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	181	G1 & G2 & G4	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	182	G4 & (G10 | G6)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	183	G7 & ~G1	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	184	G10 & G2 & ~G3	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	185	G3 & G9 & ~G5	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	186	G1 & G10 & G2	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	187	G1 & G10 & G4	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	188	G4 & G6 & ~G10	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	189	G7 & (G3 | G9)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	190	G7 | (G3 & G9)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	191	G1 & G5 & G7	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	192	G7 & (G4 | G5)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	193	G10 & G6 & G9	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	194	G10 & G3 & G7	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	195	G4 & G6 & ~G5	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	196	G3 & G7 & G9	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	197	G6 & G8 & ~G10	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	198	G4 | (G7 & ~G8)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	199	G4 | (G1 & G9)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	200	G7 & (~G10 | ~G3)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	201	~G3 & (~G4 | ~G5)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	202	G4 & ~G6	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	203	G4 & G5 & G6	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	204	G2 & ~G5	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	205	G4 & G7 & G9	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	206	G2 & G5 & G7	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	207	G2 & G5 & G8	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	208	G4 & ~G5	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	209	G7 & G8 & ~G10	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	210	G10 & G4 & ~G1	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	211	G5 & G7 & ~G1	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	212	G10 & G3 & G6	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	213	G4 & (~G10 | ~G8)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	214	G4 & (G2 | G7)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	215	G4 & (G10 | ~G8)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	216	G2 & G4 & G9	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	217	~G7 & (G6 | G9)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	218	G1 & G10 & G7	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	219	G10 & ~G1	1.9375	N/A	4	0	1	0	8	0	0	0	0.888888888888889	1	4	0	1
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	220	G7 & ~G10 & ~G9	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	221	G4 & ~G8	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	222	G1 & G4 & G6	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	223	G6 | (G10 & G7)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	224	G7 | (G3 & G4)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	225	G10 & (G5 | G9)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	226	G7 | (G6 & G9)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	227	G6 | (G2 & G8)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	228	~G10 & (G4 | G9)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	229	G1 & G5 & G6	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	230	G1 & G9 & ~G10	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	231	G7 & (~G3 | ~G8)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	232	G7 | (G2 & G6)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	233	~G3 & ~G5	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	234	G9 | (G1 & G6)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	235	G5 & G7 & ~G3	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	236	G3 & G4 & ~G7	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	237	G10 & G5 & ~G1	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	238	G6 & (G7 | G9)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	239	G6 & ~G4	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	240	G4 & (G5 | G9)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	241	G9 | (G6 & G7)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	242	G1 & G6 & ~G10	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	243	G6 & ~G10	1.9375	N/A	4	0	1	0	8	0	0	0	0.888888888888889	1	4	0	1
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	244	G7 & (G1 | G6)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	245	G9 & (~G10 | ~G4)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	246	G7 & (G1 | ~G3)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	247	G4 & (G7 | G8)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	248	G4 & G9 & ~G10	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	249	G6 & (G3 | G7)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	250	G3 & G4 & G7	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	251	G10 & G2 & G5	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	252	~G3 & ~G6 & ~G8	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	253	G3 & (G4 | G6)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	254	G10 & ~G2 & ~G3	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	255	G1 & G3 & G7	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	256	G10 & G7 & G8	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	257	G9 & (G2 | G5)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	258	G6 & (G10 | G4)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	259	G6 & ~G4 & ~G7	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	260	G9 | (G1 & ~G3)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	261	G1 & G3 & G6	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	262	G10 & G6 & ~G1	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	263	G7 & (G1 | ~G2)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	264	G9 & ~G10 & ~G7	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	265	G4 & G7 & ~G10	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	266	G9 & (G3 | G4)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	267	G6 & G7 & G8	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	268	G8 & (G2 | G6)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	269	G1 & G4 & G5	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	270	G4 | (G3 & G6)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	271	G7 & ~G8	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	272	G3 & (G6 | G7)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	273	G4 | (G5 & G7)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	274	G4 | (~G3 & ~G6)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	275	G4 & ~G7	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	276	G2 & G8 & ~G3	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	277	G6 | (G7 & ~G1)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	278	G9 | (G10 & G5)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	279	G1 & G9 & ~G7	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	280	G10 & G2 & G6	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	281	G7 & (G6 | ~G1)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	282	G5 & ~G3	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	283	G7 | (G1 & G4)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	284	G9 & (G6 | ~G8)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	285	G2 & G6 & G7	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	286	G7 & G9 & ~G1	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	287	G7 & ~G9	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	288	G10 & (G4 | G7)	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	289	G6 | (G4 & G7)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	290	G4 & G6 & G7	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	291	G6 | (G7 & G9)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	292	G10 & G4 & G9	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	293	~G8 & (G4 | G9)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	294	G10 & ~G8	1.9375	N/A	4	0	1	0	8	0	0	0	0.888888888888889	1	4	0	1
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	295	G4 & ~G10	1.9375	N/A	4	0	1	0	8	0	0	0	0.888888888888889	1	4	0	1
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	296	G10 & G4 & G7	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	297	G7 & G9 & ~G10	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	298	G7 & ~G4	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	299	~G3 | (G1 & G6)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	300	G2 & (G4 | G7)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	301	G4 & (G1 | G7)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	302	G1 & ~G3 & ~G6	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	303	G4 & ~G5 & ~G7	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	304	G3 & G7 & ~G5	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	305	G6 | (G2 & G9)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	306	~G3 & (~G1 | ~G9)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	307	G4 & G9 & ~G6	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	308	G7 & ~G5	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	309	G4 & (G6 | G8)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	310	~G3 & ~G6	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	311	G2 & (G6 | ~G5)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	312	G7 & ~G5 & ~G9	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	313	(G1 & G6) | (G7 & ~G1)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	314	G9 & (G2 | G7)	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	315	G4 & G6 & ~G1	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	316	G1 & G4 & ~G9	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	317	~G3 & ~G5 & ~G6	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	318	G8 & ~G10 & ~G5	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	319	G6 | ~G3	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	320	G9 & ~G10 & ~G5	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	321	G1 & G3 & G9	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	322	G3 & G6 & G7	1.9375	N/A	4	0	3	0	6	0	0	0	0.666666666666667	1	4	0	3
+10	size10_5	rules_SSD_size10_5_3_5times	SSD	3_5times	rules_by_gene.tsv	G10	323	G10 & G3 & G5	1.9375	N/A	4	0	2	0	7	0	0	0	0.777777777777778	1	4	0	2

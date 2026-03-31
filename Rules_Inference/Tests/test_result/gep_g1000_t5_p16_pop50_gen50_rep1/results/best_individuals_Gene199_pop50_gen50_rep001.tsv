@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	Gene851 & ~Gene165	4	2	0.0	Gene165, Gene851	2	1
+2	Gene851 & ~Gene165 & ~Gene808	4	3	0.0	Gene165, Gene808, Gene851	3	1
+3	Gene469 | Gene483	4	2	0.0	Gene469, Gene483	2	1
+4	Gene851 & ~Gene165	4	2	0.0	Gene165, Gene851	2	1
+5	Gene851 & ~Gene165 & ~Gene808	4	3	0.0	Gene165, Gene808, Gene851	3	1
+6	Gene469 | Gene483	4	2	0.0	Gene469, Gene483	2	1
+7	Gene469 | Gene483	4	2	0.0	Gene469, Gene483	2	1
+8	Gene614 & Gene869	4	2	0.0	Gene614, Gene869	2	1
+9	~Gene165 & ~Gene808	4	2	0.0	Gene165, Gene808	2	1
+10	Gene469 | Gene483	4	2	0.0	Gene469, Gene483	2	1
+11	Gene469 | Gene483	4	2	0.0	Gene469, Gene483	2	1
+12	Gene851 & ~Gene165 & ~Gene808	4	3	0.0	Gene165, Gene808, Gene851	3	1
+13	Gene851 & ~Gene165 & ~Gene808	4	3	0.0	Gene165, Gene808, Gene851	3	1
+14	Gene469 | Gene483	4	2	0.0	Gene469, Gene483	2	1
+15	Gene469 | Gene483	4	2	0.0	Gene469, Gene483	2	1
+16	~Gene171 & (Gene10 | ~Gene165)	4	3	0.0	Gene10, Gene165, Gene171	3	1
+17	~Gene165	4	1	0.5	Gene165	1	1
+18	~Gene165	4	1	0.5	Gene165	1	1
+19	Gene270 & Gene755	3	2	0.0	Gene270, Gene755	2	1
+20	~Gene171 & ~Gene484	3	2	0.0	Gene171, Gene484	2	1
+21	Gene469 & Gene483	3	2	0.0	Gene469, Gene483	2	1
+22	Gene209 & Gene755	3	2	0.0	Gene209, Gene755	2	1
+23	~Gene165 | ~Gene447	3	2	0.0	Gene165, Gene447	2	1
+24	Gene333 & Gene736 & Gene808	3	3	0.0	Gene333, Gene736, Gene808	3	1
+25	Gene495 & Gene915	3	2	0.0	Gene495, Gene915	2	1
+26	Gene28 | Gene483	3	2	0.0	Gene28, Gene483	2	1
+27	Gene378 & Gene469	3	2	0.0	Gene378, Gene469	2	1
+28	Gene469	3	1	0.5	Gene469	1	1
+29	Gene469	3	1	0.5	Gene469	1	1
+30	~Gene165 | ~Gene808	2	2	0.0	Gene165, Gene808	2	1
+31	Gene808 | ~Gene165 | ~Gene851	2	3	0.0	Gene165, Gene808, Gene851	3	1
+32	Gene28 | Gene469	2	2	0.0	Gene28, Gene469	2	1
+33	Gene165 & Gene808	2	2	0.0	Gene165, Gene808	2	1
+34	Gene28 | Gene469	2	2	0.0	Gene28, Gene469	2	1
+35	Gene165 & Gene171	2	2	0.0	Gene165, Gene171	2	1
+36	Gene643	2	1	0.5	Gene643	1	1
+37	Gene10	2	1	0.5	Gene10	1	1
+38	Gene851 & (Gene10 | ~Gene755) & (Gene469 | ~Gene755)	2	4	0.5	Gene10, Gene469, Gene755, Gene851	4	1
+39	~Gene851	2	1	0.5	Gene851	1	1
+40	Gene388	2	1	0.5	Gene388	1	1
+41	Gene755	2	1	0.5	Gene755	1	1
+42	Gene851	2	1	0.5	Gene851	1	1
+43	Gene483 | Gene928 | (Gene165 & Gene808)	2	4	0.5	Gene165, Gene483, Gene808, Gene928	4	1
+44	Gene851	2	1	0.5	Gene851	1	1
+45	~Gene808	2	1	0.5	Gene808	1	1
+46	Gene171 | Gene484	1	2	0.0	Gene171, Gene484	2	1
+47	Gene469 | Gene946	0	2	0.0	Gene469, Gene946	2	1
+48	~Gene483 | (~Gene270 & ~Gene755 & ~Gene946)	0	4	0.5	Gene270, Gene483, Gene755, Gene946	4	1
+49	Gene368	0	1	0.5	Gene368	1	1
+50	Gene165	0	1	0.5	Gene165	1	1

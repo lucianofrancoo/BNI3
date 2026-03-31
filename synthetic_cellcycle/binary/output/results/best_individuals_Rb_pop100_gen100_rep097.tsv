@@ -1,0 +1,101 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	Cdc20 & E2F	4	2	0.0	Cdc20, E2F	2	97
+2	Rb & ~Cdc20	4	2	0.0	Cdc20, Rb	2	97
+3	E2F & UbcH10	4	2	0.0	E2F, UbcH10	2	97
+4	Cdc20 & E2F	4	2	0.0	Cdc20, E2F	2	97
+5	Cdc20 & E2F	4	2	0.0	Cdc20, E2F	2	97
+6	~Cdh1	4	1	0.5	Cdh1	1	97
+7	UbcH10 & ~CycA	4	2	0.0	CycA, UbcH10	2	97
+8	CycA & CycD & ~Cdh1	4	3	0.0	Cdh1, CycA, CycD	3	97
+9	Cdc20 & E2F	4	2	0.0	Cdc20, E2F	2	97
+10	Cdc20 & p27 & ~Cdh1	4	3	0.0	Cdc20, Cdh1, p27	3	97
+11	CycE & UbcH10	4	2	0.0	CycE, UbcH10	2	97
+12	CycD & UbcH10	4	2	0.0	CycD, UbcH10	2	97
+13	Rb & UbcH10	4	2	0.0	Rb, UbcH10	2	97
+14	False	4	1	0.5	False	1	97
+15	CycE & UbcH10	4	2	0.0	CycE, UbcH10	2	97
+16	E2F & UbcH10	4	2	0.0	E2F, UbcH10	2	97
+17	Cdc20 & E2F	4	2	0.0	Cdc20, E2F	2	97
+18	Cdc20 & E2F	4	2	0.0	Cdc20, E2F	2	97
+19	Rb & p27	4	2	0.0	Rb, p27	2	97
+20	Rb & p27	4	2	0.0	Rb, p27	2	97
+21	E2F & UbcH10	4	2	0.0	E2F, UbcH10	2	97
+22	CycB & Rb & UbcH10	4	3	0.0	CycB, Rb, UbcH10	3	97
+23	Cdc20 & E2F	4	2	0.0	Cdc20, E2F	2	97
+24	CycD & UbcH10	4	2	0.0	CycD, UbcH10	2	97
+25	Cdc20 & E2F & UbcH10	4	3	0.0	Cdc20, E2F, UbcH10	3	97
+26	E2F & UbcH10	4	2	0.0	E2F, UbcH10	2	97
+27	CycE & UbcH10	4	2	0.0	CycE, UbcH10	2	97
+28	E2F & UbcH10	4	2	0.0	E2F, UbcH10	2	97
+29	Cdc20 & E2F	4	2	0.0	Cdc20, E2F	2	97
+30	Cdc20 & E2F	4	2	0.0	Cdc20, E2F	2	97
+31	Cdc20 & E2F	4	2	0.0	Cdc20, E2F	2	97
+32	E2F & UbcH10	4	2	0.0	E2F, UbcH10	2	97
+33	CycA & CycD & E2F	4	3	0.0	CycA, CycD, E2F	3	97
+34	E2F & Rb & UbcH10	4	3	0.0	E2F, Rb, UbcH10	3	97
+35	Cdc20 & E2F	4	2	0.0	Cdc20, E2F	2	97
+36	Cdc20 & Rb & UbcH10	4	3	0.0	Cdc20, Rb, UbcH10	3	97
+37	E2F & UbcH10	4	2	0.0	E2F, UbcH10	2	97
+38	Cdc20 & E2F	4	2	0.0	Cdc20, E2F	2	97
+39	E2F & UbcH10	4	2	0.0	E2F, UbcH10	2	97
+40	CycE & UbcH10	4	2	0.0	CycE, UbcH10	2	97
+41	CycE & UbcH10	4	2	0.0	CycE, UbcH10	2	97
+42	CycB & CycE & UbcH10 & p27	4	4	0.5	CycB, CycE, UbcH10, p27	4	97
+43	~Cdh1	4	1	0.5	Cdh1	1	97
+44	Cdc20 & CycD & E2F	4	3	0.0	Cdc20, CycD, E2F	3	97
+45	False	4	1	0.5	False	1	97
+46	Cdh1 & CycD & Rb & UbcH10	4	4	0.5	Cdh1, CycD, Rb, UbcH10	4	97
+47	Cdc20 & UbcH10	3	2	0.0	Cdc20, UbcH10	2	97
+48	CycE & Rb	3	2	0.0	CycE, Rb	2	97
+49	Cdh1 & Rb	3	2	0.0	Cdh1, Rb	2	97
+50	Cdh1 & Rb	3	2	0.0	Cdh1, Rb	2	97
+51	E2F & (CycA | UbcH10)	3	3	0.0	CycA, E2F, UbcH10	3	97
+52	CycA & UbcH10	3	2	0.0	CycA, UbcH10	2	97
+53	CycA & Rb	3	2	0.0	CycA, Rb	2	97
+54	Cdc20 & CycD	3	2	0.0	Cdc20, CycD	2	97
+55	Cdh1 & CycD & Rb	3	3	0.0	Cdh1, CycD, Rb	3	97
+56	Cdc20 & CycA & UbcH10	3	3	0.0	Cdc20, CycA, UbcH10	3	97
+57	Cdc20 & UbcH10	3	2	0.0	Cdc20, UbcH10	2	97
+58	UbcH10	3	1	0.5	UbcH10	1	97
+59	UbcH10	3	1	0.5	UbcH10	1	97
+60	CycD & (Cdh1 | UbcH10) & (Rb | UbcH10)	3	4	0.5	Cdh1, CycD, Rb, UbcH10	4	97
+61	UbcH10	3	1	0.5	UbcH10	1	97
+62	Rb	3	1	0.5	Rb	1	97
+63	UbcH10	3	1	0.5	UbcH10	1	97
+64	Rb & (CycD | UbcH10) & (CycE | UbcH10)	3	4	0.5	CycD, CycE, Rb, UbcH10	4	97
+65	Rb	3	1	0.5	Rb	1	97
+66	CycD & Rb & (Cdh1 | UbcH10)	3	4	0.5	Cdh1, CycD, Rb, UbcH10	4	97
+67	Rb	3	1	0.5	Rb	1	97
+68	UbcH10	3	1	0.5	UbcH10	1	97
+69	~p27	3	1	0.5	p27	1	97
+70	Cdh1 & CycA & Rb	3	3	0.0	Cdh1, CycA, Rb	3	97
+71	~CycA	3	1	0.5	CycA	1	97
+72	Rb	3	1	0.5	Rb	1	97
+73	Cdh1 & E2F	2	2	0.0	Cdh1, E2F	2	97
+74	CycA & p27	2	2	0.0	CycA, p27	2	97
+75	CycB & CycD	2	2	0.0	CycB, CycD	2	97
+76	Rb | UbcH10	2	2	0.0	Rb, UbcH10	2	97
+77	Cdh1 & CycD	2	2	0.0	Cdh1, CycD	2	97
+78	Cdc20 | Rb	2	2	0.0	Cdc20, Rb	2	97
+79	Cdc20	2	1	0.5	Cdc20	1	97
+80	E2F	2	1	0.5	E2F	1	97
+81	E2F	2	1	0.5	E2F	1	97
+82	Cdh1 & CycB & CycE	2	3	0.0	Cdh1, CycB, CycE	3	97
+83	~Cdc20	2	1	0.5	Cdc20	1	97
+84	CycA | (Cdc20 & E2F)	1	3	0.0	Cdc20, CycA, E2F	3	97
+85	p27	1	1	0.5	p27	1	97
+86	~Rb	1	1	0.5	Rb	1	97
+87	CycE	1	1	0.5	CycE	1	97
+88	CycE	1	1	0.5	CycE	1	97
+89	CycE	1	1	0.5	CycE	1	97
+90	~Rb	1	1	0.5	Rb	1	97
+91	~UbcH10	1	1	0.5	UbcH10	1	97
+92	CycE	1	1	0.5	CycE	1	97
+93	CycA	1	1	0.5	CycA	1	97
+94	CycE	1	1	0.5	CycE	1	97
+95	CycE	1	1	0.5	CycE	1	97
+96	Cdh1 | Rb	0	2	0.0	Cdh1, Rb	2	97
+97	Cdh1 | CycA	0	2	0.0	Cdh1, CycA	2	97
+98	Cdh1 | CycA	0	2	0.0	Cdh1, CycA	2	97
+99	Cdh1 | UbcH10	0	2	0.0	Cdh1, UbcH10	2	97
+100	True	0	1	0.5	True	1	97

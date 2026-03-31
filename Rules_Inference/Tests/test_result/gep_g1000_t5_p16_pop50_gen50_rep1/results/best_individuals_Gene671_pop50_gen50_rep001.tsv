@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	Gene195 & ~Gene735	4	2	0.0	Gene195, Gene735	2	1
+2	Gene195 & ~Gene735	4	2	0.0	Gene195, Gene735	2	1
+3	~Gene439 & ~Gene470	4	2	0.0	Gene439, Gene470	2	1
+4	Gene19 | Gene402	4	2	0.0	Gene19, Gene402	2	1
+5	Gene136 & Gene195	4	2	0.0	Gene136, Gene195	2	1
+6	Gene195 & ~Gene735	4	2	0.0	Gene195, Gene735	2	1
+7	~Gene182 | ~Gene74	4	2	0.0	Gene182, Gene74	2	1
+8	Gene273 & Gene455	4	2	0.0	Gene273, Gene455	2	1
+9	Gene195 & ~Gene40	4	2	0.0	Gene195, Gene40	2	1
+10	~Gene439 & ~Gene470	4	2	0.0	Gene439, Gene470	2	1
+11	Gene19 & Gene826	4	2	0.0	Gene19, Gene826	2	1
+12	Gene19 & Gene333 & Gene826	4	3	0.0	Gene19, Gene333, Gene826	3	1
+13	Gene333 & Gene826	4	2	0.0	Gene333, Gene826	2	1
+14	Gene195 & ~Gene675	4	2	0.0	Gene195, Gene675	2	1
+15	~Gene439 & ~Gene470	4	2	0.0	Gene439, Gene470	2	1
+16	Gene19 | Gene402	4	2	0.0	Gene19, Gene402	2	1
+17	Gene136 & ~Gene470	4	2	0.0	Gene136, Gene470	2	1
+18	Gene195	4	1	0.5	Gene195	1	1
+19	Gene195	4	1	0.5	Gene195	1	1
+20	Gene273	4	1	0.5	Gene273	1	1
+21	Gene195 & Gene553	3	2	0.0	Gene195, Gene553	2	1
+22	Gene182 & Gene195	3	2	0.0	Gene182, Gene195	2	1
+23	Gene34 & Gene553	3	2	0.0	Gene34, Gene553	2	1
+24	Gene262 & Gene34	3	2	0.0	Gene262, Gene34	2	1
+25	Gene173 & Gene195	3	2	0.0	Gene173, Gene195	2	1
+26	Gene273 & Gene897	3	2	0.0	Gene273, Gene897	2	1
+27	Gene553 & Gene978	3	2	0.0	Gene553, Gene978	2	1
+28	Gene195 & ~Gene978	3	2	0.0	Gene195, Gene978	2	1
+29	Gene550 & Gene735	3	2	0.0	Gene550, Gene735	2	1
+30	Gene19 & Gene333 & Gene34 & Gene59	3	4	0.5	Gene19, Gene333, Gene34, Gene59	4	1
+31	~Gene74	3	1	0.5	Gene74	1	1
+32	Gene735 & ~Gene195	2	2	0.0	Gene195, Gene735	2	1
+33	Gene136 | Gene195	2	2	0.0	Gene136, Gene195	2	1
+34	Gene323 & ~Gene131	2	2	0.0	Gene131, Gene323	2	1
+35	Gene850	2	1	0.5	Gene850	1	1
+36	Gene352	2	1	0.5	Gene352	1	1
+37	~Gene301	2	1	0.5	Gene301	1	1
+38	~Gene323	2	1	0.5	Gene323	1	1
+39	Gene34 & Gene59	1	2	0.0	Gene34, Gene59	2	1
+40	Gene492 & Gene59	1	2	0.0	Gene492, Gene59	2	1
+41	Gene59 | ~Gene735	1	2	0.0	Gene59, Gene735	2	1
+42	Gene136 | Gene735 | ~Gene978	1	3	0.0	Gene136, Gene735, Gene978	3	1
+43	Gene74	1	1	0.5	Gene74	1	1
+44	~Gene94	1	1	0.5	Gene94	1	1
+45	~Gene455	1	1	0.5	Gene455	1	1
+46	Gene470 | (Gene716 & ~Gene439)	0	3	0.0	Gene439, Gene470, Gene716	3	1
+47	Gene470	0	1	0.5	Gene470	1	1
+48	~Gene195	0	1	0.5	Gene195	1	1
+49	Gene470	0	1	0.5	Gene470	1	1
+50	~Gene195	0	1	0.5	Gene195	1	1

@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	~Gene345 & ~Gene411	2	2	0.0	Gene345, Gene411	2	1
+2	~Gene225 & (Gene115 | Gene258)	2	3	0.0	Gene115, Gene225, Gene258	3	1
+3	~Gene411 | ~Gene459	2	2	0.0	Gene411, Gene459	2	1
+4	Gene191 & Gene79	2	2	0.0	Gene191, Gene79	2	1
+5	Gene191 & Gene79	2	2	0.0	Gene191, Gene79	2	1
+6	Gene191 & Gene79	2	2	0.0	Gene191, Gene79	2	1
+7	Gene191 & Gene79	2	2	0.0	Gene191, Gene79	2	1
+8	Gene191 & Gene79	2	2	0.0	Gene191, Gene79	2	1
+9	Gene406 & Gene488	2	2	0.0	Gene406, Gene488	2	1
+10	Gene191 & Gene79	2	2	0.0	Gene191, Gene79	2	1
+11	Gene406 & Gene488	2	2	0.0	Gene406, Gene488	2	1
+12	Gene406 & Gene488	2	2	0.0	Gene406, Gene488	2	1
+13	Gene191 & Gene368	2	2	0.0	Gene191, Gene368	2	1
+14	Gene191 & Gene79	2	2	0.0	Gene191, Gene79	2	1
+15	Gene191 & Gene406 & Gene488	2	3	0.0	Gene191, Gene406, Gene488	3	1
+16	Gene191 & Gene79	2	2	0.0	Gene191, Gene79	2	1
+17	Gene392 & Gene498	2	2	0.0	Gene392, Gene498	2	1
+18	Gene406 & Gene488	2	2	0.0	Gene406, Gene488	2	1
+19	Gene406 & Gene488	2	2	0.0	Gene406, Gene488	2	1
+20	Gene191 & Gene79	2	2	0.0	Gene191, Gene79	2	1
+21	~Gene254 & ~Gene411	2	2	0.0	Gene254, Gene411	2	1
+22	Gene191 & Gene368	2	2	0.0	Gene191, Gene368	2	1
+23	Gene191 & Gene79	2	2	0.0	Gene191, Gene79	2	1
+24	Gene191 & Gene79	2	2	0.0	Gene191, Gene79	2	1
+25	Gene191 & Gene79	2	2	0.0	Gene191, Gene79	2	1
+26	Gene406 & Gene488	2	2	0.0	Gene406, Gene488	2	1
+27	Gene191 & Gene79	2	2	0.0	Gene191, Gene79	2	1
+28	Gene406 & Gene488	2	2	0.0	Gene406, Gene488	2	1
+29	Gene406 & Gene488	2	2	0.0	Gene406, Gene488	2	1
+30	Gene406 & Gene488	2	2	0.0	Gene406, Gene488	2	1
+31	Gene191 & Gene258	2	2	0.0	Gene191, Gene258	2	1
+32	Gene191 & Gene79	2	2	0.0	Gene191, Gene79	2	1
+33	Gene451	2	1	0.5	Gene451	1	1
+34	~Gene345	2	1	0.5	Gene345	1	1
+35	~Gene345	2	1	0.5	Gene345	1	1
+36	Gene191	2	1	0.5	Gene191	1	1
+37	Gene115	2	1	0.5	Gene115	1	1
+38	Gene165 & Gene191 & Gene488	1	3	0.0	Gene165, Gene191, Gene488	3	1
+39	Gene406 | Gene488	1	2	0.0	Gene406, Gene488	2	1
+40	Gene191 | Gene37	1	2	0.0	Gene191, Gene37	2	1
+41	Gene406 | Gene488	1	2	0.0	Gene406, Gene488	2	1
+42	Gene303 & Gene488	1	2	0.0	Gene303, Gene488	2	1
+43	~Gene488	1	1	0.5	Gene488	1	1
+44	Gene303	1	1	0.5	Gene303	1	1
+45	Gene368	1	1	0.5	Gene368	1	1
+46	Gene79	1	1	0.5	Gene79	1	1
+47	Gene191 & Gene29 & Gene406 & Gene463 & Gene51	1	5	1.0	Gene191, Gene29, Gene406, Gene463, Gene51	5	1
+48	Gene79 & (Gene256 | Gene463 | Gene57) & (Gene463 | Gene488 | Gene57)	1	5	1.0	Gene256, Gene463, Gene488, Gene57, Gene79	5	1
+49	Gene309 & Gene434	0	2	0.0	Gene309, Gene434	2	1
+50	Gene339	0	1	0.5	Gene339	1	1

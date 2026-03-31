@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	~Gene13 | ~Gene6 | ~Gene724	4	3	0.0	Gene13, Gene6, Gene724	3	1
+2	Gene425 | Gene698	4	2	0.0	Gene425, Gene698	2	1
+3	Gene368 & (Gene118 | Gene668)	4	3	0.0	Gene118, Gene368, Gene668	3	1
+4	Gene425 | Gene801	4	2	0.0	Gene425, Gene801	2	1
+5	Gene425 | Gene801	4	2	0.0	Gene425, Gene801	2	1
+6	Gene425 | Gene698	4	2	0.0	Gene425, Gene698	2	1
+7	Gene368 | (Gene680 & ~Gene668)	4	3	0.0	Gene368, Gene668, Gene680	3	1
+8	Gene368	4	1	0.5	Gene368	1	1
+9	Gene22 | Gene368	4	2	0.0	Gene22, Gene368	2	1
+10	Gene368 | (Gene118 & Gene668)	4	3	0.0	Gene118, Gene368, Gene668	3	1
+11	Gene329 | Gene368	4	2	0.0	Gene329, Gene368	2	1
+12	Gene368 | (Gene118 & Gene668)	4	3	0.0	Gene118, Gene368, Gene668	3	1
+13	Gene368 | Gene380	4	2	0.0	Gene368, Gene380	2	1
+14	Gene380 | Gene425	4	2	0.0	Gene380, Gene425	2	1
+15	Gene368	4	1	0.5	Gene368	1	1
+16	Gene118 | Gene368	4	2	0.0	Gene118, Gene368	2	1
+17	Gene368	4	1	0.5	Gene368	1	1
+18	Gene368	4	1	0.5	Gene368	1	1
+19	Gene716 | Gene751 | Gene977	3	3	0.0	Gene716, Gene751, Gene977	3	1
+20	Gene380 | Gene668	3	2	0.0	Gene380, Gene668	2	1
+21	Gene224 | Gene425 | ~Gene698	3	3	0.0	Gene224, Gene425, Gene698	3	1
+22	Gene623 | Gene804	3	2	0.0	Gene623, Gene804	2	1
+23	Gene102 | Gene412 | Gene698	3	3	0.0	Gene102, Gene412, Gene698	3	1
+24	Gene118 | Gene368 | Gene668	3	3	0.0	Gene118, Gene368, Gene668	3	1
+25	True	3	1	0.5	True	1	1
+26	Gene368 & Gene724	3	2	0.0	Gene368, Gene724	2	1
+27	Gene368 & Gene623	3	2	0.0	Gene368, Gene623	2	1
+28	Gene211 | Gene680 | Gene977	3	3	0.0	Gene211, Gene680, Gene977	3	1
+29	Gene425 | Gene458 | Gene801	3	3	0.0	Gene425, Gene458, Gene801	3	1
+30	Gene368 | (Gene371 & Gene724)	3	3	0.0	Gene368, Gene371, Gene724	3	1
+31	Gene368 | Gene668 | Gene741	3	3	0.0	Gene368, Gene668, Gene741	3	1
+32	Gene118 | Gene668	3	2	0.0	Gene118, Gene668	2	1
+33	Gene368 & Gene623	3	2	0.0	Gene368, Gene623	2	1
+34	Gene118 | Gene668	3	2	0.0	Gene118, Gene668	2	1
+35	Gene368 | (Gene120 & Gene499) | (Gene62 & Gene668)	3	5	1.0	Gene120, Gene368, Gene499, Gene62, Gene668	5	1
+36	Gene118 | Gene668 | (Gene231 & Gene479 & Gene680)	3	5	1.0	Gene118, Gene231, Gene479, Gene668, Gene680	5	1
+37	Gene353 | Gene698	2	2	0.0	Gene353, Gene698	2	1
+38	Gene623 & Gene801	2	2	0.0	Gene623, Gene801	2	1
+39	Gene568 | Gene698	2	2	0.0	Gene568, Gene698	2	1
+40	Gene29 & Gene342	2	2	0.0	Gene29, Gene342	2	1
+41	Gene368 & Gene680	2	2	0.0	Gene368, Gene680	2	1
+42	Gene307 | Gene458	2	2	0.0	Gene307, Gene458	2	1
+43	Gene698 | Gene835	2	2	0.0	Gene698, Gene835	2	1
+44	~Gene13	2	1	0.5	Gene13	1	1
+45	Gene698	2	1	0.5	Gene698	1	1
+46	~Gene202	2	1	0.5	Gene202	1	1
+47	~Gene623	2	1	0.5	Gene623	1	1
+48	~Gene380	1	1	0.5	Gene380	1	1
+49	~Gene425	0	1	0.5	Gene425	1	1
+50	~Gene368	0	1	0.5	Gene368	1	1

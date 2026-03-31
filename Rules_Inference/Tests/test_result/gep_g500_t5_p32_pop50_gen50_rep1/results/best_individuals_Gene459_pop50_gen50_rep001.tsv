@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	Gene462 & ~Gene334	4	2	0.0	Gene334, Gene462	2	1
+2	Gene192 & Gene34	4	2	0.0	Gene192, Gene34	2	1
+3	Gene350 & Gene384	4	2	0.0	Gene350, Gene384	2	1
+4	Gene489 & (~Gene334 | ~Gene389)	4	3	0.0	Gene334, Gene389, Gene489	3	1
+5	Gene15 & Gene350	4	2	0.0	Gene15, Gene350	2	1
+6	Gene462 & ~Gene334	4	2	0.0	Gene334, Gene462	2	1
+7	Gene462 & ~Gene334	4	2	0.0	Gene334, Gene462	2	1
+8	Gene350 & Gene384	4	2	0.0	Gene350, Gene384	2	1
+9	Gene192 & Gene34	4	2	0.0	Gene192, Gene34	2	1
+10	Gene15 & Gene350	4	2	0.0	Gene15, Gene350	2	1
+11	Gene15 & Gene350	4	2	0.0	Gene15, Gene350	2	1
+12	Gene389 & Gene489 & ~Gene334	4	3	0.0	Gene334, Gene389, Gene489	3	1
+13	Gene350 & Gene384	4	2	0.0	Gene350, Gene384	2	1
+14	Gene489 & ~Gene334	4	2	0.0	Gene334, Gene489	2	1
+15	Gene350 & Gene384	4	2	0.0	Gene350, Gene384	2	1
+16	Gene192 & Gene34	4	2	0.0	Gene192, Gene34	2	1
+17	Gene350 & Gene384	4	2	0.0	Gene350, Gene384	2	1
+18	Gene185 & Gene192	4	2	0.0	Gene185, Gene192	2	1
+19	Gene290 & Gene34	3	2	0.0	Gene290, Gene34	2	1
+20	Gene462 & ~Gene232	3	2	0.0	Gene232, Gene462	2	1
+21	Gene107 & Gene447	3	2	0.0	Gene107, Gene447	2	1
+22	Gene324 & Gene462 & ~Gene334	3	3	0.0	Gene324, Gene334, Gene462	3	1
+23	Gene107 & Gene447	3	2	0.0	Gene107, Gene447	2	1
+24	Gene350 & Gene409 & Gene447	3	3	0.0	Gene350, Gene409, Gene447	3	1
+25	Gene392 & Gene494	3	2	0.0	Gene392, Gene494	2	1
+26	Gene392 & Gene489 & ~Gene350	3	3	0.0	Gene350, Gene392, Gene489	3	1
+27	Gene462	3	1	0.5	Gene462	1	1
+28	Gene185 & Gene192 & Gene34 & Gene424	3	4	0.5	Gene185, Gene192, Gene34, Gene424	4	1
+29	Gene462	3	1	0.5	Gene462	1	1
+30	Gene462 & (~Gene137 | ~Gene150 | ~Gene334)	3	4	0.5	Gene137, Gene150, Gene334, Gene462	4	1
+31	Gene462 & ~Gene350	2	2	0.0	Gene350, Gene462	2	1
+32	Gene3 & Gene334	2	2	0.0	Gene3, Gene334	2	1
+33	Gene232 & Gene389	2	2	0.0	Gene232, Gene389	2	1
+34	Gene462 & (Gene3 | Gene334)	2	3	0.0	Gene3, Gene334, Gene462	3	1
+35	Gene334 & Gene489 & Gene77	2	3	0.0	Gene334, Gene489, Gene77	3	1
+36	Gene462 | (Gene3 & ~Gene334)	2	3	0.0	Gene3, Gene334, Gene462	3	1
+37	Gene185 & Gene34	2	2	0.0	Gene185, Gene34	2	1
+38	Gene107	2	1	0.5	Gene107	1	1
+39	Gene34	2	1	0.5	Gene34	1	1
+40	Gene34	2	1	0.5	Gene34	1	1
+41	Gene375	2	1	0.5	Gene375	1	1
+42	Gene384	2	1	0.5	Gene384	1	1
+43	Gene447	2	1	0.5	Gene447	1	1
+44	Gene185	1	1	0.5	Gene185	1	1
+45	~Gene462	1	1	0.5	Gene462	1	1
+46	~Gene462	1	1	0.5	Gene462	1	1
+47	Gene389	1	1	0.5	Gene389	1	1
+48	Gene334	1	1	0.5	Gene334	1	1
+49	(Gene101 | Gene384) & (Gene3 | Gene334) & (Gene384 | Gene396)	1	5	1.0	Gene101, Gene3, Gene334, Gene384, Gene396	5	1
+50	~Gene462 | (Gene33 & Gene334)	0	3	0.0	Gene33, Gene334, Gene462	3	1

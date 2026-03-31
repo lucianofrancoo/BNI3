@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	Gene123 | Gene818	4	2	0.0	Gene123, Gene818	2	1
+2	Gene400 & ~Gene152	4	2	0.0	Gene152, Gene400	2	1
+3	Gene400 & ~Gene152	4	2	0.0	Gene152, Gene400	2	1
+4	Gene400 & ~Gene152	4	2	0.0	Gene152, Gene400	2	1
+5	Gene123 | Gene455	4	2	0.0	Gene123, Gene455	2	1
+6	Gene123 | Gene455	4	2	0.0	Gene123, Gene455	2	1
+7	Gene123 | Gene455	4	2	0.0	Gene123, Gene455	2	1
+8	Gene280 & Gene455	4	2	0.0	Gene280, Gene455	2	1
+9	Gene123 | Gene455	4	2	0.0	Gene123, Gene455	2	1
+10	Gene123 | Gene818	4	2	0.0	Gene123, Gene818	2	1
+11	Gene123 | Gene818	4	2	0.0	Gene123, Gene818	2	1
+12	Gene400 & ~Gene152	4	2	0.0	Gene152, Gene400	2	1
+13	Gene238 & Gene455	4	2	0.0	Gene238, Gene455	2	1
+14	Gene280 & Gene455	4	2	0.0	Gene280, Gene455	2	1
+15	Gene123 | Gene818	4	2	0.0	Gene123, Gene818	2	1
+16	Gene400 & ~Gene152	4	2	0.0	Gene152, Gene400	2	1
+17	Gene280 & Gene455	4	2	0.0	Gene280, Gene455	2	1
+18	Gene455	4	1	0.5	Gene455	1	1
+19	Gene455	4	1	0.5	Gene455	1	1
+20	Gene455	4	1	0.5	Gene455	1	1
+21	Gene123 | Gene277 | Gene929	3	3	0.0	Gene123, Gene277, Gene929	3	1
+22	Gene334 | Gene400	3	2	0.0	Gene334, Gene400	2	1
+23	Gene152 | Gene400	3	2	0.0	Gene152, Gene400	2	1
+24	Gene277	3	1	0.5	Gene277	1	1
+25	Gene556	3	1	0.5	Gene556	1	1
+26	Gene556	3	1	0.5	Gene556	1	1
+27	Gene400	3	1	0.5	Gene400	1	1
+28	Gene280	3	1	0.5	Gene280	1	1
+29	Gene280 | (Gene380 & Gene455) | (Gene400 & Gene455)	3	4	0.5	Gene280, Gene380, Gene400, Gene455	4	1
+30	Gene280	3	1	0.5	Gene280	1	1
+31	Gene380 | Gene455	2	2	0.0	Gene380, Gene455	2	1
+32	Gene334 & Gene59 & ~Gene400	2	3	0.0	Gene334, Gene400, Gene59	3	1
+33	Gene123 & Gene380	2	2	0.0	Gene123, Gene380	2	1
+34	Gene334 & ~Gene400	2	2	0.0	Gene334, Gene400	2	1
+35	Gene424 | Gene818	2	2	0.0	Gene424, Gene818	2	1
+36	Gene400 | Gene59	2	2	0.0	Gene400, Gene59	2	1
+37	Gene380 | Gene556	2	2	0.0	Gene380, Gene556	2	1
+38	Gene152 & ~Gene400	2	2	0.0	Gene152, Gene400	2	1
+39	Gene280 & Gene380 & Gene400 & Gene455	2	4	0.5	Gene280, Gene380, Gene400, Gene455	4	1
+40	Gene123 | Gene446 | Gene929 | Gene949	2	4	0.5	Gene123, Gene446, Gene929, Gene949	4	1
+41	Gene380 | Gene455 | Gene526 | ~Gene25	2	4	0.5	Gene25, Gene380, Gene455, Gene526	4	1
+42	Gene334 | Gene59	1	2	0.0	Gene334, Gene59	2	1
+43	Gene553 | Gene910	1	2	0.0	Gene553, Gene910	2	1
+44	~Gene369	1	1	0.5	Gene369	1	1
+45	Gene537	1	1	0.5	Gene537	1	1
+46	~Gene400	1	1	0.5	Gene400	1	1
+47	Gene909	1	1	0.5	Gene909	1	1
+48	~Gene123	1	1	0.5	Gene123	1	1
+49	Gene380 | Gene526	0	2	0.0	Gene380, Gene526	2	1
+50	Gene380 & ~Gene116	0	2	0.0	Gene116, Gene380	2	1

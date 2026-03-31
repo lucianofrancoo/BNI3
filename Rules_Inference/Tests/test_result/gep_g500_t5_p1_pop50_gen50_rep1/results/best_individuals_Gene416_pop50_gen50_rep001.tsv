@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	Gene162 & Gene48 & Gene483	4	3	0.0	Gene162, Gene48, Gene483	3	1
+2	Gene162 & Gene48 & Gene483	4	3	0.0	Gene162, Gene48, Gene483	3	1
+3	Gene162 & Gene240	4	2	0.0	Gene162, Gene240	2	1
+4	Gene162 & Gene483	4	2	0.0	Gene162, Gene483	2	1
+5	Gene162 & Gene240	4	2	0.0	Gene162, Gene240	2	1
+6	Gene162 & Gene483	4	2	0.0	Gene162, Gene483	2	1
+7	Gene152 & Gene162	4	2	0.0	Gene152, Gene162	2	1
+8	Gene162 & Gene483	4	2	0.0	Gene162, Gene483	2	1
+9	Gene162 & Gene483	4	2	0.0	Gene162, Gene483	2	1
+10	Gene170 & Gene483	4	2	0.0	Gene170, Gene483	2	1
+11	Gene162 & Gene483	4	2	0.0	Gene162, Gene483	2	1
+12	Gene162 & Gene483	4	2	0.0	Gene162, Gene483	2	1
+13	Gene162 & Gene483	4	2	0.0	Gene162, Gene483	2	1
+14	Gene162 & Gene483	4	2	0.0	Gene162, Gene483	2	1
+15	Gene152 & Gene162	4	2	0.0	Gene152, Gene162	2	1
+16	Gene162 & Gene483	4	2	0.0	Gene162, Gene483	2	1
+17	Gene152 & Gene170	4	2	0.0	Gene152, Gene170	2	1
+18	Gene162 & Gene475	4	2	0.0	Gene162, Gene475	2	1
+19	Gene162 & Gene483	4	2	0.0	Gene162, Gene483	2	1
+20	Gene162 & Gene269	4	2	0.0	Gene162, Gene269	2	1
+21	Gene162 & Gene48	4	2	0.0	Gene162, Gene48	2	1
+22	Gene150 & Gene162 & Gene170	4	3	0.0	Gene150, Gene162, Gene170	3	1
+23	Gene170 & Gene240	4	2	0.0	Gene170, Gene240	2	1
+24	Gene152 & Gene162	4	2	0.0	Gene152, Gene162	2	1
+25	Gene162 & Gene170	4	2	0.0	Gene162, Gene170	2	1
+26	Gene170	4	1	0.5	Gene170	1	1
+27	Gene162	4	1	0.5	Gene162	1	1
+28	Gene162	4	1	0.5	Gene162	1	1
+29	Gene162	4	1	0.5	Gene162	1	1
+30	Gene162	4	1	0.5	Gene162	1	1
+31	Gene162 & Gene170 & Gene213 & Gene295 & Gene48	4	5	1.0	Gene162, Gene170, Gene213, Gene295, Gene48	5	1
+32	Gene170 & Gene23 & Gene240	3	3	0.0	Gene170, Gene23, Gene240	3	1
+33	Gene167 & Gene170	3	2	0.0	Gene167, Gene170	2	1
+34	Gene170 & Gene23	3	2	0.0	Gene170, Gene23	2	1
+35	Gene150 & Gene48	3	2	0.0	Gene150, Gene48	2	1
+36	Gene162 & Gene448	3	2	0.0	Gene162, Gene448	2	1
+37	Gene170 & Gene23	3	2	0.0	Gene170, Gene23	2	1
+38	Gene150 & Gene475	3	2	0.0	Gene150, Gene475	2	1
+39	Gene150 & Gene152 & Gene435 & Gene448 & Gene462 & Gene48	3	6	1.5	Gene150, Gene152, Gene435, Gene448, Gene462, Gene48	6	1
+40	Gene23 & Gene48 & Gene483	2	3	0.0	Gene23, Gene48, Gene483	3	1
+41	Gene152 & Gene240	2	2	0.0	Gene152, Gene240	2	1
+42	Gene297 | (Gene170 & Gene282)	2	3	0.0	Gene170, Gene282, Gene297	3	1
+43	Gene152 & ~Gene435	2	2	0.0	Gene152, Gene435	2	1
+44	Gene162 | Gene483	2	2	0.0	Gene162, Gene483	2	1
+45	(~Gene106 & ~Gene152) | (~Gene106 & ~Gene435) | (~Gene152 & ~Gene282) | (~Gene282 & ~Gene435)	2	4	0.5	Gene106, Gene152, Gene282, Gene435	4	1
+46	Gene483	2	1	0.5	Gene483	1	1
+47	Gene152 & (Gene106 | Gene282)	2	3	0.0	Gene106, Gene152, Gene282	3	1
+48	Gene213 & Gene87 & (Gene240 | Gene246 | Gene299 | Gene48)	2	6	1.5	Gene213, Gene240, Gene246, Gene299, Gene48, Gene87	6	1
+49	Gene435 | Gene67	1	2	0.0	Gene435, Gene67	2	1
+50	Gene150 & Gene23	1	2	0.0	Gene150, Gene23	2	1

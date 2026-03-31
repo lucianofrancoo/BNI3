@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	Gene31 & Gene384	4	2	0.0	Gene31, Gene384	2	1
+2	Gene384 & Gene404	4	2	0.0	Gene384, Gene404	2	1
+3	Gene384 & Gene404	4	2	0.0	Gene384, Gene404	2	1
+4	Gene384 & Gene404	4	2	0.0	Gene384, Gene404	2	1
+5	Gene384 & Gene404	4	2	0.0	Gene384, Gene404	2	1
+6	Gene404 & (Gene312 | Gene384)	4	3	0.0	Gene312, Gene384, Gene404	3	1
+7	Gene384 & Gene404	4	2	0.0	Gene384, Gene404	2	1
+8	Gene384 & Gene404	4	2	0.0	Gene384, Gene404	2	1
+9	Gene384 & Gene404	4	2	0.0	Gene384, Gene404	2	1
+10	Gene384 | Gene404	4	2	0.0	Gene384, Gene404	2	1
+11	Gene384 & Gene404	4	2	0.0	Gene384, Gene404	2	1
+12	Gene384 & Gene404	4	2	0.0	Gene384, Gene404	2	1
+13	Gene402 & Gene404	4	2	0.0	Gene402, Gene404	2	1
+14	Gene384 & Gene404	4	2	0.0	Gene384, Gene404	2	1
+15	Gene384 & Gene404	4	2	0.0	Gene384, Gene404	2	1
+16	Gene384 & Gene404	4	2	0.0	Gene384, Gene404	2	1
+17	Gene384 & Gene404	4	2	0.0	Gene384, Gene404	2	1
+18	Gene384 & Gene404	4	2	0.0	Gene384, Gene404	2	1
+19	Gene121 | Gene402	4	2	0.0	Gene121, Gene402	2	1
+20	Gene402 & Gene404	4	2	0.0	Gene402, Gene404	2	1
+21	Gene384 & Gene404	4	2	0.0	Gene384, Gene404	2	1
+22	Gene384	4	1	0.5	Gene384	1	1
+23	Gene384	4	1	0.5	Gene384	1	1
+24	Gene384	4	1	0.5	Gene384	1	1
+25	Gene404	4	1	0.5	Gene404	1	1
+26	Gene402	4	1	0.5	Gene402	1	1
+27	Gene404	4	1	0.5	Gene404	1	1
+28	Gene384	4	1	0.5	Gene384	1	1
+29	Gene404	4	1	0.5	Gene404	1	1
+30	Gene384	4	1	0.5	Gene384	1	1
+31	(Gene129 | Gene384) & (Gene404 | Gene441) & (Gene404 | Gene85)	4	5	1.0	Gene129, Gene384, Gene404, Gene441, Gene85	5	1
+32	Gene404 & Gene441	3	2	0.0	Gene404, Gene441	2	1
+33	Gene402 & Gene451	3	2	0.0	Gene402, Gene451	2	1
+34	Gene121 & Gene384	3	2	0.0	Gene121, Gene384	2	1
+35	Gene183	3	1	0.5	Gene183	1	1
+36	Gene281 & Gene384	2	2	0.0	Gene281, Gene384	2	1
+37	Gene121 & Gene398	2	2	0.0	Gene121, Gene398	2	1
+38	Gene209 & Gene384	2	2	0.0	Gene209, Gene384	2	1
+39	Gene166 & Gene384 & Gene425	2	3	0.0	Gene166, Gene384, Gene425	3	1
+40	Gene129 & Gene384	2	2	0.0	Gene129, Gene384	2	1
+41	Gene398	2	1	0.5	Gene398	1	1
+42	Gene121 & Gene274 & Gene384 & Gene449	2	4	0.5	Gene121, Gene274, Gene384, Gene449	4	1
+43	Gene388	2	1	0.5	Gene388	1	1
+44	Gene121 & Gene212 & Gene384 & Gene404	2	4	0.5	Gene121, Gene212, Gene384, Gene404	4	1
+45	Gene404 & ~Gene384	1	2	0.0	Gene384, Gene404	2	1
+46	Gene312	0	1	0.5	Gene312	1	1
+47	~Gene384	0	1	0.5	Gene384	1	1
+48	~Gene404	0	1	0.5	Gene404	1	1
+49	~Gene384	0	1	0.5	Gene384	1	1
+50	~Gene384	0	1	0.5	Gene384	1	1

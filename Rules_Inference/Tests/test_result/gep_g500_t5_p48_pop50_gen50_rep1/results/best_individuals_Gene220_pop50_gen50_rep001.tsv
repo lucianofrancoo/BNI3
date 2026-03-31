@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	Gene103 | Gene204	4	2	0.0	Gene103, Gene204	2	1
+2	Gene103 | Gene204	4	2	0.0	Gene103, Gene204	2	1
+3	Gene204 & Gene491	4	2	0.0	Gene204, Gene491	2	1
+4	Gene15 & Gene156	4	2	0.0	Gene15, Gene156	2	1
+5	Gene103 | Gene204	4	2	0.0	Gene103, Gene204	2	1
+6	~Gene231 & ~Gene27	4	2	0.0	Gene231, Gene27	2	1
+7	Gene103 | Gene204	4	2	0.0	Gene103, Gene204	2	1
+8	Gene103 | Gene204	4	2	0.0	Gene103, Gene204	2	1
+9	~Gene231 & ~Gene80	4	2	0.0	Gene231, Gene80	2	1
+10	Gene204	4	1	0.5	Gene204	1	1
+11	Gene103 | Gene204	4	2	0.0	Gene103, Gene204	2	1
+12	Gene204 & Gene491	4	2	0.0	Gene204, Gene491	2	1
+13	Gene204 & Gene491	4	2	0.0	Gene204, Gene491	2	1
+14	Gene15 & Gene156 & Gene204	4	3	0.0	Gene15, Gene156, Gene204	3	1
+15	Gene15 & Gene156	4	2	0.0	Gene15, Gene156	2	1
+16	Gene103 | Gene204	4	2	0.0	Gene103, Gene204	2	1
+17	Gene204 & Gene491	4	2	0.0	Gene204, Gene491	2	1
+18	Gene103 | Gene204	4	2	0.0	Gene103, Gene204	2	1
+19	Gene204	4	1	0.5	Gene204	1	1
+20	Gene204	4	1	0.5	Gene204	1	1
+21	Gene204	4	1	0.5	Gene204	1	1
+22	Gene204	4	1	0.5	Gene204	1	1
+23	Gene103 | Gene308	3	2	0.0	Gene103, Gene308	2	1
+24	Gene103 | Gene204 | Gene428	3	3	0.0	Gene103, Gene204, Gene428	3	1
+25	Gene103 | Gene140 | Gene204	3	3	0.0	Gene103, Gene140, Gene204	3	1
+26	Gene273 | Gene491	3	2	0.0	Gene273, Gene491	2	1
+27	Gene134 & Gene204	3	2	0.0	Gene134, Gene204	2	1
+28	Gene103 | Gene45	3	2	0.0	Gene103, Gene45	2	1
+29	Gene491	3	1	0.5	Gene491	1	1
+30	~Gene111	3	1	0.5	Gene111	1	1
+31	Gene103 & (Gene15 | Gene156 | Gene204)	3	4	0.5	Gene103, Gene15, Gene156, Gene204	4	1
+32	Gene103	3	1	0.5	Gene103	1	1
+33	Gene333	3	1	0.5	Gene333	1	1
+34	Gene155 & Gene491	2	2	0.0	Gene155, Gene491	2	1
+35	Gene155 | Gene204	2	2	0.0	Gene155, Gene204	2	1
+36	Gene493 & Gene55	2	2	0.0	Gene493, Gene55	2	1
+37	Gene140 & Gene15	2	2	0.0	Gene140, Gene15	2	1
+38	Gene155 | Gene491	2	2	0.0	Gene155, Gene491	2	1
+39	Gene103 | Gene47	2	2	0.0	Gene103, Gene47	2	1
+40	Gene161 & Gene204 & Gene363	2	3	0.0	Gene161, Gene204, Gene363	3	1
+41	Gene161	2	1	0.5	Gene161	1	1
+42	True	2	1	0.5	True	1	1
+43	Gene161	2	1	0.5	Gene161	1	1
+44	Gene103 | Gene155 | Gene204 | Gene491 | Gene71	2	5	1.0	Gene103, Gene155, Gene204, Gene491, Gene71	5	1
+45	Gene80 | (Gene135 & Gene27)	1	3	0.0	Gene135, Gene27, Gene80	3	1
+46	Gene25	1	1	0.5	Gene25	1	1
+47	Gene9	1	1	0.5	Gene9	1	1
+48	~Gene204	0	1	0.5	Gene204	1	1
+49	Gene231	0	1	0.5	Gene231	1	1
+50	~Gene204	0	1	0.5	Gene204	1	1

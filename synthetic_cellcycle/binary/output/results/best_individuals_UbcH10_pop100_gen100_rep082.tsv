@@ -1,0 +1,101 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	CycA & CycE	4	2	0.0	CycA, CycE	2	82
+2	CycA & CycE	4	2	0.0	CycA, CycE	2	82
+3	CycA & CycE	4	2	0.0	CycA, CycE	2	82
+4	CycA & CycE	4	2	0.0	CycA, CycE	2	82
+5	Rb | (~CycD & ~UbcH10)	4	3	0.0	CycD, Rb, UbcH10	3	82
+6	CycA & CycE	4	2	0.0	CycA, CycE	2	82
+7	CycA & CycE	4	2	0.0	CycA, CycE	2	82
+8	CycA & CycE	4	2	0.0	CycA, CycE	2	82
+9	CycA & CycE	4	2	0.0	CycA, CycE	2	82
+10	CycA & CycE	4	2	0.0	CycA, CycE	2	82
+11	Rb | (CycA & CycE)	4	3	0.0	CycA, CycE, Rb	3	82
+12	CycA & CycE	4	2	0.0	CycA, CycE	2	82
+13	CycA & CycE	4	2	0.0	CycA, CycE	2	82
+14	Rb | (~CycD & ~UbcH10)	4	3	0.0	CycD, Rb, UbcH10	3	82
+15	CycA & CycE	4	2	0.0	CycA, CycE	2	82
+16	CycA & CycE	4	2	0.0	CycA, CycE	2	82
+17	CycA & CycE	4	2	0.0	CycA, CycE	2	82
+18	CycA & CycE	4	2	0.0	CycA, CycE	2	82
+19	CycA & CycE	4	2	0.0	CycA, CycE	2	82
+20	CycA & CycE	4	2	0.0	CycA, CycE	2	82
+21	CycA & CycE	4	2	0.0	CycA, CycE	2	82
+22	Cdh1 & CycA & CycE	4	3	0.0	Cdh1, CycA, CycE	3	82
+23	CycA & CycE	4	2	0.0	CycA, CycE	2	82
+24	CycA & CycE	4	2	0.0	CycA, CycE	2	82
+25	CycA & CycE	4	2	0.0	CycA, CycE	2	82
+26	CycA & CycE	4	2	0.0	CycA, CycE	2	82
+27	CycA & CycE	4	2	0.0	CycA, CycE	2	82
+28	CycA & (CycB | CycE)	4	3	0.0	CycA, CycB, CycE	3	82
+29	CycA & (CycB | CycD | E2F) & (CycB | CycE | E2F)	4	5	1.0	CycA, CycB, CycD, CycE, E2F	5	82
+30	CycA & CycB	3	2	0.0	CycA, CycB	2	82
+31	CycA & CycD	3	2	0.0	CycA, CycD	2	82
+32	Cdc20 & CycB & CycE	3	3	0.0	Cdc20, CycB, CycE	3	82
+33	CycA & CycB & CycE	3	3	0.0	CycA, CycB, CycE	3	82
+34	CycA & CycB	3	2	0.0	CycA, CycB	2	82
+35	CycE & Rb	3	2	0.0	CycE, Rb	2	82
+36	Cdh1 & CycA	3	2	0.0	Cdh1, CycA	2	82
+37	Cdh1 & CycA	3	2	0.0	Cdh1, CycA	2	82
+38	CycA & CycB	3	2	0.0	CycA, CycB	2	82
+39	CycA & CycE & Rb	3	3	0.0	CycA, CycE, Rb	3	82
+40	CycA | (Cdc20 & CycB)	3	3	0.0	Cdc20, CycA, CycB	3	82
+41	CycA & Rb	3	2	0.0	CycA, Rb	2	82
+42	CycA & E2F	3	2	0.0	CycA, E2F	2	82
+43	CycA & Rb	3	2	0.0	CycA, Rb	2	82
+44	Cdh1 & CycA	3	2	0.0	Cdh1, CycA	2	82
+45	CycA & CycB	3	2	0.0	CycA, CycB	2	82
+46	Rb & (CycD | E2F)	3	3	0.0	CycD, E2F, Rb	3	82
+47	CycE & Rb	3	2	0.0	CycE, Rb	2	82
+48	CycB & Rb	3	2	0.0	CycB, Rb	2	82
+49	CycA & CycB	3	2	0.0	CycA, CycB	2	82
+50	CycA | Rb	3	2	0.0	CycA, Rb	2	82
+51	Cdc20 & CycB	3	2	0.0	Cdc20, CycB	2	82
+52	Cdh1 & CycA	3	2	0.0	Cdh1, CycA	2	82
+53	CycA	3	1	0.5	CycA	1	82
+54	CycA	3	1	0.5	CycA	1	82
+55	CycA	3	1	0.5	CycA	1	82
+56	CycA	3	1	0.5	CycA	1	82
+57	CycA	3	1	0.5	CycA	1	82
+58	CycA	3	1	0.5	CycA	1	82
+59	CycE	3	1	0.5	CycE	1	82
+60	CycA	3	1	0.5	CycA	1	82
+61	~UbcH10	3	1	0.5	UbcH10	1	82
+62	CycA	3	1	0.5	CycA	1	82
+63	CycE	3	1	0.5	CycE	1	82
+64	CycE	3	1	0.5	CycE	1	82
+65	CycE	3	1	0.5	CycE	1	82
+66	CycB & CycE	2	2	0.0	CycB, CycE	2	82
+67	CycB & CycE	2	2	0.0	CycB, CycE	2	82
+68	Cdh1 & CycB & CycE	2	3	0.0	Cdh1, CycB, CycE	3	82
+69	Cdh1 | CycA	2	2	0.0	Cdh1, CycA	2	82
+70	Cdc20 & CycA	2	2	0.0	Cdc20, CycA	2	82
+71	CycA & p27	2	2	0.0	CycA, p27	2	82
+72	Cdh1 | CycA	2	2	0.0	Cdh1, CycA	2	82
+73	CycB & CycE	2	2	0.0	CycB, CycE	2	82
+74	False	2	1	0.5	False	1	82
+75	False	2	1	0.5	False	1	82
+76	CycA & p27	2	2	0.0	CycA, p27	2	82
+77	CycA & p27	2	2	0.0	CycA, p27	2	82
+78	CycE & UbcH10	2	2	0.0	CycE, UbcH10	2	82
+79	CycA & p27	2	2	0.0	CycA, p27	2	82
+80	CycA & p27	2	2	0.0	CycA, p27	2	82
+81	Cdc20 | (CycA & UbcH10)	2	3	0.0	Cdc20, CycA, UbcH10	3	82
+82	CycB & UbcH10	2	2	0.0	CycB, UbcH10	2	82
+83	Cdh1 & CycB	2	2	0.0	Cdh1, CycB	2	82
+84	Cdc20 & CycA	2	2	0.0	Cdc20, CycA	2	82
+85	CycB & UbcH10	2	2	0.0	CycB, UbcH10	2	82
+86	Rb & (~Cdh1 | ~CycA)	2	3	0.0	Cdh1, CycA, Rb	3	82
+87	CycA | CycE	2	2	0.0	CycA, CycE	2	82
+88	Cdh1	2	1	0.5	Cdh1	1	82
+89	False	2	1	0.5	False	1	82
+90	CycA | (CycB & E2F)	2	3	0.0	CycA, CycB, E2F	3	82
+91	Cdh1	2	1	0.5	Cdh1	1	82
+92	CycB & E2F	1	2	0.0	CycB, E2F	2	82
+93	Cdh1 & CycB & E2F	1	3	0.0	Cdh1, CycB, E2F	3	82
+94	CycB & p27	1	2	0.0	CycB, p27	2	82
+95	Cdh1 & UbcH10	1	2	0.0	Cdh1, UbcH10	2	82
+96	E2F | p27	1	2	0.0	E2F, p27	2	82
+97	CycB & E2F	1	2	0.0	CycB, E2F	2	82
+98	CycA & UbcH10	1	2	0.0	CycA, UbcH10	2	82
+99	~CycA	1	1	0.5	CycA	1	82
+100	~CycA	1	1	0.5	CycA	1	82

@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	Gene11 & Gene15	4	2	0.0	Gene11, Gene15	2	1
+2	Gene12 & Gene15	4	2	0.0	Gene12, Gene15	2	1
+3	Gene11 & Gene15	4	2	0.0	Gene11, Gene15	2	1
+4	Gene11 & Gene15	4	2	0.0	Gene11, Gene15	2	1
+5	Gene11 & Gene15 & Gene17	4	3	0.0	Gene11, Gene15, Gene17	3	1
+6	Gene11 & Gene15 & Gene17	4	3	0.0	Gene11, Gene15, Gene17	3	1
+7	Gene11 & Gene12	4	2	0.0	Gene11, Gene12	2	1
+8	Gene12 & (Gene10 | Gene15)	4	3	0.0	Gene10, Gene12, Gene15	3	1
+9	Gene11 & Gene12	4	2	0.0	Gene11, Gene12	2	1
+10	Gene11 & Gene15 & Gene7	4	3	0.0	Gene11, Gene15, Gene7	3	1
+11	Gene15 & Gene17	4	2	0.0	Gene15, Gene17	2	1
+12	Gene11 & Gene12	4	2	0.0	Gene11, Gene12	2	1
+13	Gene12 & Gene15	4	2	0.0	Gene12, Gene15	2	1
+14	Gene11 & Gene12	4	2	0.0	Gene11, Gene12	2	1
+15	Gene12 & (Gene10 | Gene15)	4	3	0.0	Gene10, Gene12, Gene15	3	1
+16	Gene11 & Gene15	4	2	0.0	Gene11, Gene15	2	1
+17	Gene11 & Gene15	4	2	0.0	Gene11, Gene15	2	1
+18	Gene11 & Gene12	4	2	0.0	Gene11, Gene12	2	1
+19	Gene11 & Gene15	4	2	0.0	Gene11, Gene15	2	1
+20	Gene11 & Gene12	4	2	0.0	Gene11, Gene12	2	1
+21	Gene12 & Gene15	4	2	0.0	Gene12, Gene15	2	1
+22	Gene11 & Gene15 & Gene17	4	3	0.0	Gene11, Gene15, Gene17	3	1
+23	Gene12 & (Gene14 | Gene15) & (Gene15 | Gene8)	4	4	0.5	Gene12, Gene14, Gene15, Gene8	4	1
+24	Gene15	4	1	0.5	Gene15	1	1
+25	Gene15	4	1	0.5	Gene15	1	1
+26	Gene15	4	1	0.5	Gene15	1	1
+27	Gene15 & (Gene10 | Gene11 | Gene12) & (Gene10 | Gene11 | Gene7)	4	5	1.0	Gene10, Gene11, Gene12, Gene15, Gene7	5	1
+28	Gene11 & Gene13 & Gene20	3	3	0.0	Gene11, Gene13, Gene20	3	1
+29	Gene17 & Gene2	3	2	0.0	Gene17, Gene2	2	1
+30	Gene11 & Gene13 & Gene20	3	3	0.0	Gene11, Gene13, Gene20	3	1
+31	Gene12 & Gene14 & Gene15	3	3	0.0	Gene12, Gene14, Gene15	3	1
+32	Gene12 & Gene2	3	2	0.0	Gene12, Gene2	2	1
+33	Gene14 & Gene17 & Gene19	3	3	0.0	Gene14, Gene17, Gene19	3	1
+34	Gene11 & Gene12 & Gene14	3	3	0.0	Gene11, Gene12, Gene14	3	1
+35	Gene12 & Gene7	3	2	0.0	Gene12, Gene7	2	1
+36	Gene17 & Gene2	3	2	0.0	Gene17, Gene2	2	1
+37	Gene11 & Gene17	3	2	0.0	Gene11, Gene17	2	1
+38	Gene12 | Gene15	3	2	0.0	Gene12, Gene15	2	1
+39	Gene11	2	1	0.5	Gene11	1	1
+40	Gene10 & Gene11	2	2	0.0	Gene10, Gene11	2	1
+41	Gene10 & Gene11	2	2	0.0	Gene10, Gene11	2	1
+42	Gene17 & Gene7	2	2	0.0	Gene17, Gene7	2	1
+43	Gene6 & Gene8	2	2	0.0	Gene6, Gene8	2	1
+44	Gene11 & Gene20	2	2	0.0	Gene11, Gene20	2	1
+45	Gene8	2	1	0.5	Gene8	1	1
+46	Gene11	2	1	0.5	Gene11	1	1
+47	Gene11	2	1	0.5	Gene11	1	1
+48	Gene11	2	1	0.5	Gene11	1	1
+49	Gene11	2	1	0.5	Gene11	1	1
+50	Gene7	2	1	0.5	Gene7	1	1

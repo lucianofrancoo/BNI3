@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	Gene260 | Gene436	2	2	0.0	Gene260, Gene436	2	1
+2	~Gene263 & (~Gene115 | ~Gene136)	2	3	0.0	Gene115, Gene136, Gene263	3	1
+3	Gene327 | ~Gene74	2	2	0.0	Gene327, Gene74	2	1
+4	Gene260 | Gene436	2	2	0.0	Gene260, Gene436	2	1
+5	Gene327 | ~Gene74	2	2	0.0	Gene327, Gene74	2	1
+6	Gene260 | Gene436	2	2	0.0	Gene260, Gene436	2	1
+7	Gene71	2	1	0.5	Gene71	1	1
+8	Gene223 | Gene71	2	2	0.0	Gene223, Gene71	2	1
+9	Gene71 | Gene90	2	2	0.0	Gene71, Gene90	2	1
+10	Gene327 | ~Gene236	2	2	0.0	Gene236, Gene327	2	1
+11	Gene115 | Gene71	2	2	0.0	Gene115, Gene71	2	1
+12	Gene71	2	1	0.5	Gene71	1	1
+13	Gene71	2	1	0.5	Gene71	1	1
+14	Gene428 | Gene71	2	2	0.0	Gene428, Gene71	2	1
+15	Gene327 | ~Gene236	2	2	0.0	Gene236, Gene327	2	1
+16	Gene71	2	1	0.5	Gene71	1	1
+17	Gene115 | Gene424	2	2	0.0	Gene115, Gene424	2	1
+18	Gene71 & Gene90	2	2	0.0	Gene71, Gene90	2	1
+19	Gene21 | Gene71	2	2	0.0	Gene21, Gene71	2	1
+20	Gene383 | Gene428	2	2	0.0	Gene383, Gene428	2	1
+21	Gene71	2	1	0.5	Gene71	1	1
+22	Gene267	2	1	0.5	Gene267	1	1
+23	~Gene136	2	1	0.5	Gene136	1	1
+24	~Gene236	2	1	0.5	Gene236	1	1
+25	Gene260	2	1	0.5	Gene260	1	1
+26	Gene71	2	1	0.5	Gene71	1	1
+27	Gene327	2	1	0.5	Gene327	1	1
+28	~Gene236	2	1	0.5	Gene236	1	1
+29	Gene71	2	1	0.5	Gene71	1	1
+30	Gene100 & Gene399	1	2	0.0	Gene100, Gene399	2	1
+31	Gene223 | Gene434	1	2	0.0	Gene223, Gene434	2	1
+32	Gene327 & Gene74 & Gene89	1	3	0.0	Gene327, Gene74, Gene89	3	1
+33	Gene71 | (Gene398 & Gene91)	1	3	0.0	Gene398, Gene71, Gene91	3	1
+34	Gene71 | Gene74	1	2	0.0	Gene71, Gene74	2	1
+35	Gene74 | (~Gene236 & ~Gene428)	1	3	0.0	Gene236, Gene428, Gene74	3	1
+36	Gene223 | Gene236 | Gene71	1	3	0.0	Gene223, Gene236, Gene71	3	1
+37	Gene223 | Gene89	1	2	0.0	Gene223, Gene89	2	1
+38	Gene152 | Gene74 | Gene89	1	3	0.0	Gene152, Gene74, Gene89	3	1
+39	Gene263 & ~Gene145 & ~Gene360	1	3	0.0	Gene145, Gene263, Gene360	3	1
+40	Gene102 | Gene71	1	2	0.0	Gene102, Gene71	2	1
+41	~Gene449	1	1	0.5	Gene449	1	1
+42	Gene307	1	1	0.5	Gene307	1	1
+43	Gene102 | Gene152 | Gene388 | Gene71	1	4	0.5	Gene102, Gene152, Gene388, Gene71	4	1
+44	Gene84 & Gene91	0	2	0.0	Gene84, Gene91	2	1
+45	Gene236 | (Gene436 & ~Gene265)	0	3	0.0	Gene236, Gene265, Gene436	3	1
+46	~Gene228	0	1	0.5	Gene228	1	1
+47	Gene89	0	1	0.5	Gene89	1	1
+48	Gene408	0	1	0.5	Gene408	1	1
+49	~Gene173	0	1	0.5	Gene173	1	1
+50	~Gene399	0	1	0.5	Gene399	1	1

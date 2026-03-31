@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition	mlp_loss
+1	Gene11 & Gene28 & Gene80	97	3	0.0	Gene11, Gene28, Gene80	3	1	2.830902206993465
+2	Gene11 & Gene28 & Gene80	97	3	0.0	Gene11, Gene28, Gene80	3	1	2.830902206993465
+3	Gene11 & Gene28 & Gene80	97	3	0.0	Gene11, Gene28, Gene80	3	1	2.830902206993465
+4	Gene11 & Gene28 & Gene80	97	3	0.0	Gene11, Gene28, Gene80	3	1	2.830902206993465
+5	Gene11 & Gene28 & Gene80	97	3	0.0	Gene11, Gene28, Gene80	3	1	2.830902206993465
+6	Gene11 & Gene28 & Gene80	97	3	0.0	Gene11, Gene28, Gene80	3	1	2.830902206993465
+7	Gene11 & Gene28 & Gene80	97	3	0.0	Gene11, Gene28, Gene80	3	1	2.830902206993465
+8	Gene11 & Gene28 & Gene80	97	3	0.0	Gene11, Gene28, Gene80	3	1	2.830902206993465
+9	Gene11 & Gene28 & Gene80	97	3	0.0	Gene11, Gene28, Gene80	3	1	2.830902206993465
+10	Gene11 & Gene28 & Gene80	97	3	0.0	Gene11, Gene28, Gene80	3	1	2.830902206993465
+11	Gene11 & Gene28 & Gene80	97	3	0.0	Gene11, Gene28, Gene80	3	1	2.830902206993465
+12	Gene11 & Gene28 & Gene80	97	3	0.0	Gene11, Gene28, Gene80	3	1	2.830902206993465
+13	Gene11 & Gene28 & Gene80	97	3	0.0	Gene11, Gene28, Gene80	3	1	2.830902206993465
+14	Gene11 & Gene28 & Gene80	97	3	0.0	Gene11, Gene28, Gene80	3	1	2.830902206993465
+15	Gene11 & Gene28 & Gene80	97	3	0.0	Gene11, Gene28, Gene80	3	1	2.830902206993465
+16	Gene11 & Gene28 & Gene80	97	3	0.0	Gene11, Gene28, Gene80	3	1	3.5187511395376663
+17	Gene11 & Gene28 & Gene98	97	3	0.0	Gene11, Gene28, Gene98	3	1	3.6470461501592077
+18	Gene28 & Gene48	97	2	0.0	Gene28, Gene48	2	1	4.412241317631685
+19	Gene3 & Gene36 & Gene48	97	3	0.0	Gene3, Gene36, Gene48	3	1	4.807017345454144
+20	Gene39 & ~Gene3 & (~Gene11 | ~Gene98)	97	4	0.5	Gene11, Gene3, Gene39, Gene98	4	1	3.7764493783283792
+21	Gene11 & Gene28 & Gene80 & Gene98	97	4	0.5	Gene11, Gene28, Gene80, Gene98	4	1	3.7819697087618387
+22	Gene11 & Gene28 & Gene7 & Gene80	97	4	0.5	Gene11, Gene28, Gene7, Gene80	4	1	4.027444264226526
+23	Gene11 & Gene28 & Gene98 & ~Gene65	97	4	0.5	Gene11, Gene28, Gene65, Gene98	4	1	4.4995896882590545
+24	Gene11 & Gene28 & Gene3 & Gene80 & Gene98	97	5	1.0	Gene11, Gene28, Gene3, Gene80, Gene98	5	1	2.381317982467918
+25	Gene11 & Gene28 & Gene3 & Gene80 & Gene98	97	5	1.0	Gene11, Gene28, Gene3, Gene80, Gene98	5	1	2.381317982467918
+26	Gene11 & Gene28 & Gene3 & Gene80 & Gene98	97	5	1.0	Gene11, Gene28, Gene3, Gene80, Gene98	5	1	2.381317982467918
+27	Gene11 & Gene28 & Gene3 & Gene80 & Gene98	97	5	1.0	Gene11, Gene28, Gene3, Gene80, Gene98	5	1	2.381317982467918
+28	Gene11 & Gene28 & Gene48 & Gene80 & Gene98	97	5	1.0	Gene11, Gene28, Gene48, Gene80, Gene98	5	1	3.0137281489073104
+29	Gene28 & Gene3 & Gene60 & (Gene11 | Gene80)	97	5	1.0	Gene11, Gene28, Gene3, Gene60, Gene80	5	1	3.121167087175528
+30	Gene11 & Gene29 & Gene3 & Gene30 & Gene39 & Gene98	97	6	1.5	Gene11, Gene29, Gene3, Gene30, Gene39, Gene98	6	1	2.81241144684061
+31	Gene28	96	1	0.5	Gene28	1	1	3.4027679212856055
+32	Gene28 & (Gene11 | Gene98)	96	3	0.0	Gene11, Gene28, Gene98	3	1	3.861495171371339
+33	Gene28 & Gene80	96	2	0.0	Gene28, Gene80	2	1	4.2269140382185055
+34	Gene28 & Gene30 & Gene80	96	3	0.0	Gene28, Gene30, Gene80	3	1	4.604408557750306
+35	Gene28	96	1	0.5	Gene28	1	1	4.947559332921753
+36	Gene28	96	1	0.5	Gene28	1	1	4.947559332921753
+37	Gene28	96	1	0.5	Gene28	1	1	4.947559332921753
+38	Gene24 & Gene3 & Gene80 & Gene98	94	4	0.5	Gene24, Gene3, Gene80, Gene98	4	1	3.4372185587016713
+39	Gene3 & Gene80 & Gene88 & Gene98	89	4	0.5	Gene3, Gene80, Gene88, Gene98	4	1	3.088288038161872
+40	Gene11 & Gene8 & Gene80	86	3	0.0	Gene11, Gene8, Gene80	3	1	3.438985965465069
+41	Gene11 & Gene80	85	2	0.0	Gene11, Gene80	2	1	4.244300664375884
+42	Gene11 & Gene80	85	2	0.0	Gene11, Gene80	2	1	4.244300664375884
+43	Gene11 & Gene80	85	2	0.0	Gene11, Gene80	2	1	4.244300664375884
+44	Gene11 & Gene80	85	2	0.0	Gene11, Gene80	2	1	4.244300664375884
+45	Gene11 & Gene3 & Gene80 & Gene98	85	4	0.5	Gene11, Gene3, Gene80, Gene98	4	1	3.8709721597357714
+46	Gene11 & Gene3 & Gene7	83	3	0.0	Gene11, Gene3, Gene7	3	1	3.784754312848293
+47	Gene3 & Gene80 & Gene98	13	3	0.0	Gene3, Gene80, Gene98	3	1	2.7025920392903
+48	Gene80	11	1	0.5	Gene80	1	1	4.695517970302014
+49	Gene80	11	1	0.5	Gene80	1	1	4.695517970302014
+50	Gene37 & Gene98	4	2	0.0	Gene37, Gene98	2	1	4.5299845586502725

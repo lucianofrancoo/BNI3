@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	Gene415 | ~Gene398	4	2	0.0	Gene398, Gene415	2	1
+2	Gene368 | (~Gene150 & ~Gene187)	4	3	0.0	Gene150, Gene187, Gene368	3	1
+3	Gene312 | Gene84	4	2	0.0	Gene312, Gene84	2	1
+4	Gene368 | ~Gene304	4	2	0.0	Gene304, Gene368	2	1
+5	Gene344 | Gene7	4	2	0.0	Gene344, Gene7	2	1
+6	Gene3 | Gene312 | Gene84	4	3	0.0	Gene3, Gene312, Gene84	3	1
+7	Gene368 | (~Gene479 & ~Gene481)	4	3	0.0	Gene368, Gene479, Gene481	3	1
+8	Gene3 | Gene312 | Gene84	4	3	0.0	Gene3, Gene312, Gene84	3	1
+9	Gene127 | Gene271	4	2	0.0	Gene127, Gene271	2	1
+10	Gene235 | Gene3 | Gene84	4	3	0.0	Gene235, Gene3, Gene84	3	1
+11	Gene235 | Gene3 | Gene84	4	3	0.0	Gene235, Gene3, Gene84	3	1
+12	Gene235 | Gene84	4	2	0.0	Gene235, Gene84	2	1
+13	Gene312 | Gene84	4	2	0.0	Gene312, Gene84	2	1
+14	Gene235 | Gene84	4	2	0.0	Gene235, Gene84	2	1
+15	Gene235 | Gene84	4	2	0.0	Gene235, Gene84	2	1
+16	Gene192 | Gene84	4	2	0.0	Gene192, Gene84	2	1
+17	Gene415 | ~Gene398	4	2	0.0	Gene398, Gene415	2	1
+18	Gene216 | Gene368	4	2	0.0	Gene216, Gene368	2	1
+19	Gene127 | Gene271	4	2	0.0	Gene127, Gene271	2	1
+20	Gene127 | Gene271	4	2	0.0	Gene127, Gene271	2	1
+21	Gene3 | Gene84	4	2	0.0	Gene3, Gene84	2	1
+22	Gene235 | Gene368	4	2	0.0	Gene235, Gene368	2	1
+23	~Gene187	4	1	0.5	Gene187	1	1
+24	Gene84	4	1	0.5	Gene84	1	1
+25	~Gene30	4	1	0.5	Gene30	1	1
+26	Gene330 & (Gene368 | Gene479) & (Gene368 | Gene7)	4	4	0.5	Gene330, Gene368, Gene479, Gene7	4	1
+27	Gene126 | Gene84	3	2	0.0	Gene126, Gene84	2	1
+28	Gene452 | Gene84	3	2	0.0	Gene452, Gene84	2	1
+29	Gene304 | Gene452 | Gene479	3	3	0.0	Gene304, Gene452, Gene479	3	1
+30	Gene394 | Gene404	3	2	0.0	Gene394, Gene404	2	1
+31	Gene234 | Gene84	3	2	0.0	Gene234, Gene84	2	1
+32	Gene304 | ~Gene493	3	2	0.0	Gene304, Gene493	2	1
+33	Gene262 | Gene7	3	2	0.0	Gene262, Gene7	2	1
+34	Gene479 | Gene84	3	2	0.0	Gene479, Gene84	2	1
+35	Gene84 | ~Gene3	3	2	0.0	Gene3, Gene84	2	1
+36	Gene333 | Gene40	3	2	0.0	Gene333, Gene40	2	1
+37	Gene304 | ~Gene368	2	2	0.0	Gene304, Gene368	2	1
+38	Gene187 | Gene255	2	2	0.0	Gene187, Gene255	2	1
+39	~Gene304	2	1	0.5	Gene304	1	1
+40	~Gene312	2	1	0.5	Gene312	1	1
+41	Gene257	2	1	0.5	Gene257	1	1
+42	~Gene415	2	1	0.5	Gene415	1	1
+43	Gene404	2	1	0.5	Gene404	1	1
+44	Gene170	2	1	0.5	Gene170	1	1
+45	Gene187 | Gene192	1	2	0.0	Gene187, Gene192	2	1
+46	Gene208 | Gene465	1	2	0.0	Gene208, Gene465	2	1
+47	Gene479 | Gene64	0	2	0.0	Gene479, Gene64	2	1
+48	Gene486 | Gene493	0	2	0.0	Gene486, Gene493	2	1
+49	~Gene368	0	1	0.5	Gene368	1	1
+50	Gene207	0	1	0.5	Gene207	1	1

@@ -1,0 +1,508 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graph xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:cy="http://www.cytoscape.org" xmlns="http://www.cs.rpi.edu/XGMML" directed="1" label="Boolean Gene Regulatory Network">
+  <att name="documentVersion" value="1.1" />
+  <att name="networkMetadata" />
+  <att name="backgroundColor" value="#FFFFFF" />
+  <node id="CIS" label="CIS">
+    <att name="name" value="CIS" />
+    <att name="node_type" value="gene" />
+    <att name="position" value="1" />
+    <att name="rule" value="(Cgmp &amp; cADPR) | (InsP3 &amp; InsP6)" />
+    <att name="score" value="N/A" />
+    <att name="n_correct" value="0" />
+    <att name="n_regulators" value="0" />
+    <att name="mse" value="N/A" />
+    <graphics type="ELLIPSE" x="109.3" y="74.2" w="75.0" h="50.0" fill="#7BCCC4" outline="#000000">
+      <att name="node_border_width" value="2.0" />
+      <att name="NODE_LABEL_FONT_FACE" value="Arial Black" />
+      <att name="NODE_LABEL_FONT_SIZE" value="12" />
+    </graphics>
+  </node>
+  <node id="AnionEM" label="AnionEM">
+    <att name="name" value="AnionEM" />
+    <att name="node_type" value="gene" />
+    <att name="position" value="1" />
+    <att name="rule" value="((Ca2 | pH) &amp; ~ABI1) | (Ca2 &amp; pH)" />
+    <att name="score" value="N/A" />
+    <att name="n_correct" value="0" />
+    <att name="n_regulators" value="0" />
+    <att name="mse" value="N/A" />
+    <graphics type="ELLIPSE" x="43.0" y="-142.1" w="75.0" h="50.0" fill="#7BCCC4" outline="#000000">
+      <att name="node_border_width" value="2.0" />
+      <att name="NODE_LABEL_FONT_FACE" value="Arial Black" />
+      <att name="NODE_LABEL_FONT_SIZE" value="12" />
+    </graphics>
+  </node>
+  <node id="Closure" label="Closure">
+    <att name="name" value="Closure" />
+    <att name="node_type" value="gene" />
+    <att name="position" value="1" />
+    <att name="rule" value="(KOUT | KAP) &amp; AnionEM &amp; Actin &amp; ~Malate" />
+    <att name="score" value="N/A" />
+    <att name="n_correct" value="0" />
+    <att name="n_regulators" value="0" />
+    <att name="mse" value="N/A" />
+    <graphics type="ELLIPSE" x="-103.8" y="-155.2" w="75.0" h="50.0" fill="#7BCCC4" outline="#000000">
+      <att name="node_border_width" value="2.0" />
+      <att name="NODE_LABEL_FONT_FACE" value="Arial Black" />
+      <att name="NODE_LABEL_FONT_SIZE" value="12" />
+    </graphics>
+  </node>
+  <node id="HATPase" label="HATPase">
+    <att name="name" value="HATPase" />
+    <att name="node_type" value="gene" />
+    <att name="position" value="1" />
+    <att name="rule" value="~ROS &amp; ~pH &amp; ~Ca2" />
+    <att name="score" value="N/A" />
+    <att name="n_correct" value="0" />
+    <att name="n_regulators" value="0" />
+    <att name="mse" value="N/A" />
+    <graphics type="ELLIPSE" x="-110.9" y="57.3" w="75.0" h="50.0" fill="#7BCCC4" outline="#000000">
+      <att name="node_border_width" value="2.0" />
+      <att name="NODE_LABEL_FONT_FACE" value="Arial Black" />
+      <att name="NODE_LABEL_FONT_SIZE" value="12" />
+    </graphics>
+  </node>
+  <node id="Malate" label="Malate">
+    <att name="name" value="Malate" />
+    <att name="node_type" value="gene" />
+    <att name="position" value="1" />
+    <att name="rule" value="PEPC &amp; ~ABA &amp; ~AnionEM" />
+    <att name="score" value="N/A" />
+    <att name="n_correct" value="0" />
+    <att name="n_regulators" value="0" />
+    <att name="mse" value="N/A" />
+    <graphics type="ELLIPSE" x="68.8" y="-103.0" w="75.0" h="50.0" fill="#7BCCC4" outline="#000000">
+      <att name="node_border_width" value="2.0" />
+      <att name="NODE_LABEL_FONT_FACE" value="Arial Black" />
+      <att name="NODE_LABEL_FONT_SIZE" value="12" />
+    </graphics>
+  </node>
+  <node id="Atrboh" label="Atrboh">
+    <att name="name" value="Atrboh" />
+    <att name="node_type" value="gene" />
+    <att name="position" value="1" />
+    <att name="rule" value="pH &amp; OST1 &amp; ROP2 &amp; ~ABI1" />
+    <att name="score" value="N/A" />
+    <att name="n_correct" value="0" />
+    <att name="n_regulators" value="0" />
+    <att name="mse" value="N/A" />
+    <graphics type="ELLIPSE" x="-89.3" y="300.0" w="75.0" h="50.0" fill="#7BCCC4" outline="#000000">
+      <att name="node_border_width" value="2.0" />
+      <att name="NODE_LABEL_FONT_FACE" value="Arial Black" />
+      <att name="NODE_LABEL_FONT_SIZE" value="12" />
+    </graphics>
+  </node>
+  <node id="PLC" label="PLC">
+    <att name="name" value="PLC" />
+    <att name="node_type" value="gene" />
+    <att name="position" value="1" />
+    <att name="rule" value="ABA &amp; Ca2" />
+    <att name="score" value="N/A" />
+    <att name="n_correct" value="0" />
+    <att name="n_regulators" value="0" />
+    <att name="mse" value="N/A" />
+    <graphics type="ELLIPSE" x="297.8" y="-12.5" w="75.0" h="50.0" fill="#7BCCC4" outline="#000000">
+      <att name="node_border_width" value="2.0" />
+      <att name="NODE_LABEL_FONT_FACE" value="Arial Black" />
+      <att name="NODE_LABEL_FONT_SIZE" value="12" />
+    </graphics>
+  </node>
+  <node id="KOUT" label="KOUT">
+    <att name="name" value="KOUT" />
+    <att name="node_type" value="gene" />
+    <att name="position" value="1" />
+    <att name="rule" value="(pH | ~ROS | ~NO) &amp; Depolar" />
+    <att name="score" value="N/A" />
+    <att name="n_correct" value="0" />
+    <att name="n_regulators" value="0" />
+    <att name="mse" value="N/A" />
+    <graphics type="ELLIPSE" x="-146.1" y="-119.3" w="75.0" h="50.0" fill="#7BCCC4" outline="#000000">
+      <att name="node_border_width" value="2.0" />
+      <att name="NODE_LABEL_FONT_FACE" value="Arial Black" />
+      <att name="NODE_LABEL_FONT_SIZE" value="12" />
+    </graphics>
+  </node>
+  <node id="KAP" label="KAP">
+    <att name="name" value="KAP" />
+    <att name="node_type" value="gene" />
+    <att name="position" value="1" />
+    <att name="rule" value="(~pH | ~Ca2) &amp; Depolar" />
+    <att name="score" value="N/A" />
+    <att name="n_correct" value="0" />
+    <att name="n_regulators" value="0" />
+    <att name="mse" value="N/A" />
+    <graphics type="ELLIPSE" x="-146.9" y="-13.5" w="75.0" h="50.0" fill="#7BCCC4" outline="#000000">
+      <att name="node_border_width" value="2.0" />
+      <att name="NODE_LABEL_FONT_FACE" value="Arial Black" />
+      <att name="NODE_LABEL_FONT_SIZE" value="12" />
+    </graphics>
+  </node>
+  <node id="CaIM" label="CaIM">
+    <att name="name" value="CaIM" />
+    <att name="node_type" value="gene" />
+    <att name="position" value="1" />
+    <att name="rule" value="(ROS | ~ERA1 | ~ABH1) &amp; ~Depolar" />
+    <att name="score" value="N/A" />
+    <att name="n_correct" value="0" />
+    <att name="n_regulators" value="0" />
+    <att name="mse" value="N/A" />
+    <graphics type="ELLIPSE" x="153.0" y="-64.8" w="75.0" h="50.0" fill="#7BCCC4" outline="#000000">
+      <att name="node_border_width" value="2.0" />
+      <att name="NODE_LABEL_FONT_FACE" value="Arial Black" />
+      <att name="NODE_LABEL_FONT_SIZE" value="12" />
+    </graphics>
+  </node>
+  <node id="Ca2" label="Ca2">
+    <att name="name" value="Ca2" />
+    <att name="node_type" value="gene" />
+    <att name="position" value="1" />
+    <att name="rule" value="(CaIM | CIS) &amp; ~Ca2ATPase" />
+    <att name="score" value="N/A" />
+    <att name="n_correct" value="0" />
+    <att name="n_regulators" value="0" />
+    <att name="mse" value="N/A" />
+    <graphics type="ELLIPSE" x="41.8" y="-28.1" w="75.0" h="50.0" fill="#7BCCC4" outline="#000000">
+      <att name="node_border_width" value="2.0" />
+      <att name="NODE_LABEL_FONT_FACE" value="Arial Black" />
+      <att name="NODE_LABEL_FONT_SIZE" value="12" />
+    </graphics>
+  </node>
+  <node id="Actin" label="Actin">
+    <att name="name" value="Actin" />
+    <att name="node_type" value="gene" />
+    <att name="position" value="1" />
+    <att name="rule" value="Ca2 | ~RAC1" />
+    <att name="score" value="N/A" />
+    <att name="n_correct" value="0" />
+    <att name="n_regulators" value="0" />
+    <att name="mse" value="N/A" />
+    <graphics type="ELLIPSE" x="-24.4" y="-176.1" w="75.0" h="50.0" fill="#7BCCC4" outline="#000000">
+      <att name="node_border_width" value="2.0" />
+      <att name="NODE_LABEL_FONT_FACE" value="Arial Black" />
+      <att name="NODE_LABEL_FONT_SIZE" value="12" />
+    </graphics>
+  </node>
+  <node id="GPA1" label="GPA1">
+    <att name="name" value="GPA1" />
+    <att name="node_type" value="gene" />
+    <att name="position" value="1" />
+    <att name="rule" value="(S1P | ~GCR1) &amp; AGB1" />
+    <att name="score" value="N/A" />
+    <att name="n_correct" value="0" />
+    <att name="n_regulators" value="0" />
+    <att name="mse" value="N/A" />
+    <graphics type="ELLIPSE" x="182.8" y="281.2" w="75.0" h="50.0" fill="#7BCCC4" outline="#000000">
+      <att name="node_border_width" value="2.0" />
+      <att name="NODE_LABEL_FONT_FACE" value="Arial Black" />
+      <att name="NODE_LABEL_FONT_SIZE" value="12" />
+    </graphics>
+  </node>
+  <node id="RAC1" label="RAC1">
+    <att name="name" value="RAC1" />
+    <att name="node_type" value="gene" />
+    <att name="position" value="1" />
+    <att name="rule" value="~ABA &amp; ~ABI1" />
+    <att name="score" value="N/A" />
+    <att name="n_correct" value="0" />
+    <att name="n_regulators" value="0" />
+    <att name="mse" value="N/A" />
+    <graphics type="ELLIPSE" x="-132.1" y="-53.9" w="75.0" h="50.0" fill="#7BCCC4" outline="#000000">
+      <att name="node_border_width" value="2.0" />
+      <att name="NODE_LABEL_FONT_FACE" value="Arial Black" />
+      <att name="NODE_LABEL_FONT_SIZE" value="12" />
+    </graphics>
+  </node>
+  <node id="ABI1" label="ABI1">
+    <att name="name" value="ABI1" />
+    <att name="node_type" value="gene" />
+    <att name="position" value="1" />
+    <att name="rule" value="pH &amp; ~PA &amp; ~ROS" />
+    <att name="score" value="N/A" />
+    <att name="n_correct" value="0" />
+    <att name="n_regulators" value="0" />
+    <att name="mse" value="N/A" />
+    <graphics type="ELLIPSE" x="-69.6" y="87.1" w="75.0" h="50.0" fill="#7BCCC4" outline="#000000">
+      <att name="node_border_width" value="2.0" />
+      <att name="NODE_LABEL_FONT_FACE" value="Arial Black" />
+      <att name="NODE_LABEL_FONT_SIZE" value="12" />
+    </graphics>
+  </node>
+  <node id="ROS" label="ROS">
+    <att name="name" value="ROS" />
+    <att name="node_type" value="gene" />
+    <att name="position" value="1" />
+    <att name="rule" value="ABA &amp; PA &amp; pH" />
+    <att name="score" value="N/A" />
+    <att name="n_correct" value="0" />
+    <att name="n_regulators" value="0" />
+    <att name="mse" value="N/A" />
+    <graphics type="ELLIPSE" x="-23.2" y="-51.6" w="75.0" h="50.0" fill="#7BCCC4" outline="#000000">
+      <att name="node_border_width" value="2.0" />
+      <att name="NODE_LABEL_FONT_FACE" value="Arial Black" />
+      <att name="NODE_LABEL_FONT_SIZE" value="12" />
+    </graphics>
+  </node>
+  <node id="Depolar" label="Depolar">
+    <att name="name" value="Depolar" />
+    <att name="node_type" value="gene" />
+    <att name="position" value="1" />
+    <att name="rule" value="KEV | AnionEM | ~HATPase | ~KOUT | Ca2" />
+    <att name="score" value="N/A" />
+    <att name="n_correct" value="0" />
+    <att name="n_regulators" value="0" />
+    <att name="mse" value="N/A" />
+    <graphics type="ELLIPSE" x="-19.1" y="-88.8" w="75.0" h="50.0" fill="#7BCCC4" outline="#000000">
+      <att name="node_border_width" value="2.0" />
+      <att name="NODE_LABEL_FONT_FACE" value="Arial Black" />
+      <att name="NODE_LABEL_FONT_SIZE" value="12" />
+    </graphics>
+  </node>
+  <node id="NO" label="NO">
+    <att name="name" value="NO" />
+    <att name="node_type" value="gene" />
+    <att name="position" value="1" />
+    <att name="rule" value="NIA12 &amp; NOS" />
+    <att name="score" value="N/A" />
+    <att name="n_correct" value="0" />
+    <att name="n_regulators" value="0" />
+    <att name="mse" value="N/A" />
+    <graphics type="ELLIPSE" x="-14.3" y="45.3" w="75.0" h="50.0" fill="#7BCCC4" outline="#000000">
+      <att name="node_border_width" value="2.0" />
+      <att name="NODE_LABEL_FONT_FACE" value="Arial Black" />
+      <att name="NODE_LABEL_FONT_SIZE" value="12" />
+    </graphics>
+  </node>
+  <edge id="0" source="CIS" target="Ca2" label="CIS -&gt; Ca2">
+    <att name="regulation_type" value="positive" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="activation" />
+    <att name="rule" value="(CaIM | CIS) &amp; ~Ca2ATPase" />
+    <att name="score" value="N/A" />
+    <graphics width="2.0" style="SOLID" fill="#3690C0" targetArrow="DELTA" targetArrowColor="#3690C0" />
+  </edge>
+  <edge id="1" source="AnionEM" target="Closure" label="AnionEM -&gt; Closure">
+    <att name="regulation_type" value="positive" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="activation" />
+    <att name="rule" value="(KOUT | KAP) &amp; AnionEM &amp; Actin &amp; ~Malate" />
+    <att name="score" value="N/A" />
+    <graphics width="2.0" style="SOLID" fill="#3690C0" targetArrow="DELTA" targetArrowColor="#3690C0" />
+  </edge>
+  <edge id="2" source="AnionEM" target="Depolar" label="AnionEM -&gt; Depolar">
+    <att name="regulation_type" value="positive" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="activation" />
+    <att name="rule" value="KEV | AnionEM | ~HATPase | ~KOUT | Ca2" />
+    <att name="score" value="N/A" />
+    <graphics width="2.0" style="SOLID" fill="#3690C0" targetArrow="DELTA" targetArrowColor="#3690C0" />
+  </edge>
+  <edge id="3" source="AnionEM" target="Malate" label="AnionEM -&gt; Malate">
+    <att name="regulation_type" value="negative" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="inhibition" />
+    <att name="rule" value="PEPC &amp; ~ABA &amp; ~AnionEM" />
+    <att name="score" value="N/A" />
+    <graphics width="2.0" style="SOLID" fill="#D7301F" targetArrow="T" targetArrowColor="#D7301F" />
+  </edge>
+  <edge id="4" source="HATPase" target="Depolar" label="HATPase -&gt; Depolar">
+    <att name="regulation_type" value="negative" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="inhibition" />
+    <att name="rule" value="KEV | AnionEM | ~HATPase | ~KOUT | Ca2" />
+    <att name="score" value="N/A" />
+    <graphics width="2.0" style="SOLID" fill="#D7301F" targetArrow="T" targetArrowColor="#D7301F" />
+  </edge>
+  <edge id="5" source="Malate" target="Closure" label="Malate -&gt; Closure">
+    <att name="regulation_type" value="negative" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="inhibition" />
+    <att name="rule" value="(KOUT | KAP) &amp; AnionEM &amp; Actin &amp; ~Malate" />
+    <att name="score" value="N/A" />
+    <graphics width="2.0" style="SOLID" fill="#D7301F" targetArrow="T" targetArrowColor="#D7301F" />
+  </edge>
+  <edge id="6" source="KOUT" target="Closure" label="KOUT -&gt; Closure">
+    <att name="regulation_type" value="positive" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="activation" />
+    <att name="rule" value="(KOUT | KAP) &amp; AnionEM &amp; Actin &amp; ~Malate" />
+    <att name="score" value="N/A" />
+    <graphics width="2.0" style="SOLID" fill="#3690C0" targetArrow="DELTA" targetArrowColor="#3690C0" />
+  </edge>
+  <edge id="7" source="KOUT" target="Depolar" label="KOUT -&gt; Depolar">
+    <att name="regulation_type" value="negative" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="inhibition" />
+    <att name="rule" value="KEV | AnionEM | ~HATPase | ~KOUT | Ca2" />
+    <att name="score" value="N/A" />
+    <graphics width="2.0" style="SOLID" fill="#D7301F" targetArrow="T" targetArrowColor="#D7301F" />
+  </edge>
+  <edge id="8" source="KAP" target="Closure" label="KAP -&gt; Closure">
+    <att name="regulation_type" value="positive" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="activation" />
+    <att name="rule" value="(KOUT | KAP) &amp; AnionEM &amp; Actin &amp; ~Malate" />
+    <att name="score" value="N/A" />
+    <graphics width="2.0" style="SOLID" fill="#3690C0" targetArrow="DELTA" targetArrowColor="#3690C0" />
+  </edge>
+  <edge id="9" source="CaIM" target="Ca2" label="CaIM -&gt; Ca2">
+    <att name="regulation_type" value="positive" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="activation" />
+    <att name="rule" value="(CaIM | CIS) &amp; ~Ca2ATPase" />
+    <att name="score" value="N/A" />
+    <graphics width="2.0" style="SOLID" fill="#3690C0" targetArrow="DELTA" targetArrowColor="#3690C0" />
+  </edge>
+  <edge id="10" source="Ca2" target="Actin" label="Ca2 -&gt; Actin">
+    <att name="regulation_type" value="positive" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="activation" />
+    <att name="rule" value="Ca2 | ~RAC1" />
+    <att name="score" value="N/A" />
+    <graphics width="2.0" style="SOLID" fill="#3690C0" targetArrow="DELTA" targetArrowColor="#3690C0" />
+  </edge>
+  <edge id="11" source="Ca2" target="AnionEM" label="Ca2 -&gt; AnionEM">
+    <att name="regulation_type" value="positive" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="activation" />
+    <att name="rule" value="((Ca2 | pH) &amp; ~ABI1) | (Ca2 &amp; pH)" />
+    <att name="score" value="N/A" />
+    <graphics width="2.0" style="SOLID" fill="#3690C0" targetArrow="DELTA" targetArrowColor="#3690C0" />
+  </edge>
+  <edge id="12" source="Ca2" target="Depolar" label="Ca2 -&gt; Depolar">
+    <att name="regulation_type" value="positive" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="activation" />
+    <att name="rule" value="KEV | AnionEM | ~HATPase | ~KOUT | Ca2" />
+    <att name="score" value="N/A" />
+    <graphics width="2.0" style="SOLID" fill="#3690C0" targetArrow="DELTA" targetArrowColor="#3690C0" />
+  </edge>
+  <edge id="13" source="Ca2" target="HATPase" label="Ca2 -&gt; HATPase">
+    <att name="regulation_type" value="negative" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="inhibition" />
+    <att name="rule" value="~ROS &amp; ~pH &amp; ~Ca2" />
+    <att name="score" value="N/A" />
+    <graphics width="2.0" style="SOLID" fill="#D7301F" targetArrow="T" targetArrowColor="#D7301F" />
+  </edge>
+  <edge id="14" source="Ca2" target="KAP" label="Ca2 -&gt; KAP">
+    <att name="regulation_type" value="negative" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="inhibition" />
+    <att name="rule" value="(~pH | ~Ca2) &amp; Depolar" />
+    <att name="score" value="N/A" />
+    <graphics width="2.0" style="SOLID" fill="#D7301F" targetArrow="T" targetArrowColor="#D7301F" />
+  </edge>
+  <edge id="15" source="Ca2" target="PLC" label="Ca2 -&gt; PLC">
+    <att name="regulation_type" value="positive" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="activation" />
+    <att name="rule" value="ABA &amp; Ca2" />
+    <att name="score" value="N/A" />
+    <graphics width="2.0" style="SOLID" fill="#3690C0" targetArrow="DELTA" targetArrowColor="#3690C0" />
+  </edge>
+  <edge id="16" source="Actin" target="Closure" label="Actin -&gt; Closure">
+    <att name="regulation_type" value="positive" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="activation" />
+    <att name="rule" value="(KOUT | KAP) &amp; AnionEM &amp; Actin &amp; ~Malate" />
+    <att name="score" value="N/A" />
+    <graphics width="2.0" style="SOLID" fill="#3690C0" targetArrow="DELTA" targetArrowColor="#3690C0" />
+  </edge>
+  <edge id="17" source="RAC1" target="Actin" label="RAC1 -&gt; Actin">
+    <att name="regulation_type" value="negative" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="inhibition" />
+    <att name="rule" value="Ca2 | ~RAC1" />
+    <att name="score" value="N/A" />
+    <graphics width="2.0" style="SOLID" fill="#D7301F" targetArrow="T" targetArrowColor="#D7301F" />
+  </edge>
+  <edge id="18" source="ABI1" target="AnionEM" label="ABI1 -&gt; AnionEM">
+    <att name="regulation_type" value="negative" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="inhibition" />
+    <att name="rule" value="((Ca2 | pH) &amp; ~ABI1) | (Ca2 &amp; pH)" />
+    <att name="score" value="N/A" />
+    <graphics width="2.0" style="SOLID" fill="#D7301F" targetArrow="T" targetArrowColor="#D7301F" />
+  </edge>
+  <edge id="19" source="ABI1" target="Atrboh" label="ABI1 -&gt; Atrboh">
+    <att name="regulation_type" value="negative" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="inhibition" />
+    <att name="rule" value="pH &amp; OST1 &amp; ROP2 &amp; ~ABI1" />
+    <att name="score" value="N/A" />
+    <graphics width="2.0" style="SOLID" fill="#D7301F" targetArrow="T" targetArrowColor="#D7301F" />
+  </edge>
+  <edge id="20" source="ABI1" target="RAC1" label="ABI1 -&gt; RAC1">
+    <att name="regulation_type" value="negative" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="inhibition" />
+    <att name="rule" value="~ABA &amp; ~ABI1" />
+    <att name="score" value="N/A" />
+    <graphics width="2.0" style="SOLID" fill="#D7301F" targetArrow="T" targetArrowColor="#D7301F" />
+  </edge>
+  <edge id="21" source="ROS" target="ABI1" label="ROS -&gt; ABI1">
+    <att name="regulation_type" value="negative" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="inhibition" />
+    <att name="rule" value="pH &amp; ~PA &amp; ~ROS" />
+    <att name="score" value="N/A" />
+    <graphics width="2.0" style="SOLID" fill="#D7301F" targetArrow="T" targetArrowColor="#D7301F" />
+  </edge>
+  <edge id="22" source="ROS" target="CaIM" label="ROS -&gt; CaIM">
+    <att name="regulation_type" value="positive" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="activation" />
+    <att name="rule" value="(ROS | ~ERA1 | ~ABH1) &amp; ~Depolar" />
+    <att name="score" value="N/A" />
+    <graphics width="2.0" style="SOLID" fill="#3690C0" targetArrow="DELTA" targetArrowColor="#3690C0" />
+  </edge>
+  <edge id="23" source="ROS" target="HATPase" label="ROS -&gt; HATPase">
+    <att name="regulation_type" value="negative" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="inhibition" />
+    <att name="rule" value="~ROS &amp; ~pH &amp; ~Ca2" />
+    <att name="score" value="N/A" />
+    <graphics width="2.0" style="SOLID" fill="#D7301F" targetArrow="T" targetArrowColor="#D7301F" />
+  </edge>
+  <edge id="24" source="ROS" target="KOUT" label="ROS -&gt; KOUT">
+    <att name="regulation_type" value="negative" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="inhibition" />
+    <att name="rule" value="(pH | ~ROS | ~NO) &amp; Depolar" />
+    <att name="score" value="N/A" />
+    <graphics width="2.0" style="SOLID" fill="#D7301F" targetArrow="T" targetArrowColor="#D7301F" />
+  </edge>
+  <edge id="25" source="Depolar" target="CaIM" label="Depolar -&gt; CaIM">
+    <att name="regulation_type" value="negative" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="inhibition" />
+    <att name="rule" value="(ROS | ~ERA1 | ~ABH1) &amp; ~Depolar" />
+    <att name="score" value="N/A" />
+    <graphics width="2.0" style="SOLID" fill="#D7301F" targetArrow="T" targetArrowColor="#D7301F" />
+  </edge>
+  <edge id="26" source="Depolar" target="KAP" label="Depolar -&gt; KAP">
+    <att name="regulation_type" value="positive" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="activation" />
+    <att name="rule" value="(~pH | ~Ca2) &amp; Depolar" />
+    <att name="score" value="N/A" />
+    <graphics width="2.0" style="SOLID" fill="#3690C0" targetArrow="DELTA" targetArrowColor="#3690C0" />
+  </edge>
+  <edge id="27" source="Depolar" target="KOUT" label="Depolar -&gt; KOUT">
+    <att name="regulation_type" value="positive" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="activation" />
+    <att name="rule" value="(pH | ~ROS | ~NO) &amp; Depolar" />
+    <att name="score" value="N/A" />
+    <graphics width="2.0" style="SOLID" fill="#3690C0" targetArrow="DELTA" targetArrowColor="#3690C0" />
+  </edge>
+  <edge id="28" source="NO" target="KOUT" label="NO -&gt; KOUT">
+    <att name="regulation_type" value="negative" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="inhibition" />
+    <att name="rule" value="(pH | ~ROS | ~NO) &amp; Depolar" />
+    <att name="score" value="N/A" />
+    <graphics width="2.0" style="SOLID" fill="#D7301F" targetArrow="T" targetArrowColor="#D7301F" />
+  </edge>
+</graph>

@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	~Gene58 & (Gene159 | Gene369)	2	3	0.0	Gene159, Gene369, Gene58	3	1
+2	Gene434 & Gene442	2	2	0.0	Gene434, Gene442	2	1
+3	Gene463 | (Gene430 & Gene497)	2	3	0.0	Gene430, Gene463, Gene497	3	1
+4	Gene373 & (Gene435 | Gene84)	2	3	0.0	Gene373, Gene435, Gene84	3	1
+5	Gene139 | ~Gene124	2	2	0.0	Gene124, Gene139	2	1
+6	Gene136 & Gene84	2	2	0.0	Gene136, Gene84	2	1
+7	Gene394 & (~Gene442 | ~Gene65)	2	3	0.0	Gene394, Gene442, Gene65	3	1
+8	Gene189 | Gene2	2	2	0.0	Gene189, Gene2	2	1
+9	Gene434 & Gene442	2	2	0.0	Gene434, Gene442	2	1
+10	Gene69 & Gene84	2	2	0.0	Gene69, Gene84	2	1
+11	Gene313 | ~Gene58	2	2	0.0	Gene313, Gene58	2	1
+12	Gene373 | Gene435	2	2	0.0	Gene373, Gene435	2	1
+13	Gene373 & Gene84	2	2	0.0	Gene373, Gene84	2	1
+14	Gene240 | Gene373	2	2	0.0	Gene240, Gene373	2	1
+15	Gene373 | (Gene69 & Gene84)	2	3	0.0	Gene373, Gene69, Gene84	3	1
+16	Gene418 & Gene435	2	2	0.0	Gene418, Gene435	2	1
+17	Gene136 | Gene84	2	2	0.0	Gene136, Gene84	2	1
+18	~Gene58 & (Gene287 | Gene369)	2	3	0.0	Gene287, Gene369, Gene58	3	1
+19	Gene434 & Gene442	2	2	0.0	Gene434, Gene442	2	1
+20	Gene2 | (Gene373 & Gene38)	2	3	0.0	Gene2, Gene373, Gene38	3	1
+21	Gene189 & Gene373	2	2	0.0	Gene189, Gene373	2	1
+22	Gene240 & Gene38 & Gene411	2	3	0.0	Gene240, Gene38, Gene411	3	1
+23	Gene373 & Gene38	2	2	0.0	Gene373, Gene38	2	1
+24	Gene189 | Gene2	2	2	0.0	Gene189, Gene2	2	1
+25	Gene297 & Gene352	2	2	0.0	Gene297, Gene352	2	1
+26	Gene394	2	1	0.5	Gene394	1	1
+27	Gene394	2	1	0.5	Gene394	1	1
+28	Gene84	2	1	0.5	Gene84	1	1
+29	Gene481	2	1	0.5	Gene481	1	1
+30	Gene84	2	1	0.5	Gene84	1	1
+31	~Gene59	2	1	0.5	Gene59	1	1
+32	Gene442	2	1	0.5	Gene442	1	1
+33	Gene435	2	1	0.5	Gene435	1	1
+34	Gene361 | (Gene373 & Gene435) | (Gene373 & Gene49) | (Gene415 & Gene435) | (Gene415 & Gene49)	2	5	1.0	Gene361, Gene373, Gene415, Gene435, Gene49	5	1
+35	Gene321 & Gene418	1	2	0.0	Gene321, Gene418	2	1
+36	Gene494 & Gene74	1	2	0.0	Gene494, Gene74	2	1
+37	True	1	1	0.5	True	1	1
+38	Gene139 | Gene75	1	2	0.0	Gene139, Gene75	2	1
+39	Gene139 | Gene75	1	2	0.0	Gene139, Gene75	2	1
+40	Gene424 & Gene69 & Gene84	1	3	0.0	Gene424, Gene69, Gene84	3	1
+41	Gene65 & Gene84	1	2	0.0	Gene65, Gene84	2	1
+42	Gene39 & Gene84	1	2	0.0	Gene39, Gene84	2	1
+43	Gene139 & Gene65 & Gene75	1	3	0.0	Gene139, Gene65, Gene75	3	1
+44	Gene211 & Gene435	1	2	0.0	Gene211, Gene435	2	1
+45	Gene430 | Gene463	1	2	0.0	Gene430, Gene463	2	1
+46	Gene129 & Gene69	1	2	0.0	Gene129, Gene69	2	1
+47	Gene129 | Gene69	1	2	0.0	Gene129, Gene69	2	1
+48	Gene287 | Gene373	1	2	0.0	Gene287, Gene373	2	1
+49	Gene434 & Gene65	1	2	0.0	Gene434, Gene65	2	1
+50	~Gene434	0	1	0.5	Gene434	1	1

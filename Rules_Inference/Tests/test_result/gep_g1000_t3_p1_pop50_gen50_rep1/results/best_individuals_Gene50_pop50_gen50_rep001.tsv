@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	Gene391 & ~Gene302	2	2	0.0	Gene302, Gene391	2	1
+2	Gene138 | Gene578	2	2	0.0	Gene138, Gene578	2	1
+3	Gene160 & Gene391 & Gene48	2	3	0.0	Gene160, Gene391, Gene48	3	1
+4	Gene138 | Gene578	2	2	0.0	Gene138, Gene578	2	1
+5	Gene160 & Gene391	2	2	0.0	Gene160, Gene391	2	1
+6	Gene138 | Gene578	2	2	0.0	Gene138, Gene578	2	1
+7	Gene90 & ~Gene110	2	2	0.0	Gene110, Gene90	2	1
+8	Gene138 | Gene578	2	2	0.0	Gene138, Gene578	2	1
+9	Gene48 & ~Gene302	2	2	0.0	Gene302, Gene48	2	1
+10	Gene716 | Gene870	2	2	0.0	Gene716, Gene870	2	1
+11	Gene138 | Gene578 | Gene935	2	3	0.0	Gene138, Gene578, Gene935	3	1
+12	Gene578 & Gene613	2	2	0.0	Gene578, Gene613	2	1
+13	Gene90 & ~Gene380	2	2	0.0	Gene380, Gene90	2	1
+14	Gene613 & Gene873	2	2	0.0	Gene613, Gene873	2	1
+15	Gene613 & Gene873	2	2	0.0	Gene613, Gene873	2	1
+16	Gene987 | Gene994	2	2	0.0	Gene987, Gene994	2	1
+17	Gene578 | Gene635	2	2	0.0	Gene578, Gene635	2	1
+18	Gene391 & ~Gene302	2	2	0.0	Gene302, Gene391	2	1
+19	Gene48 & Gene613	2	2	0.0	Gene48, Gene613	2	1
+20	Gene578 | Gene635	2	2	0.0	Gene578, Gene635	2	1
+21	Gene31 | Gene955	2	2	0.0	Gene31, Gene955	2	1
+22	Gene868	2	1	0.5	Gene868	1	1
+23	Gene578	2	1	0.5	Gene578	1	1
+24	Gene935	2	1	0.5	Gene935	1	1
+25	Gene578	2	1	0.5	Gene578	1	1
+26	Gene873	2	1	0.5	Gene873	1	1
+27	Gene868	2	1	0.5	Gene868	1	1
+28	Gene513	2	1	0.5	Gene513	1	1
+29	~Gene380	2	1	0.5	Gene380	1	1
+30	Gene138 | (Gene110 & Gene302 & Gene868)	2	4	0.5	Gene110, Gene138, Gene302, Gene868	4	1
+31	Gene138	2	1	0.5	Gene138	1	1
+32	Gene110 & Gene288 & Gene391	1	3	0.0	Gene110, Gene288, Gene391	3	1
+33	Gene700 | Gene810	1	2	0.0	Gene700, Gene810	2	1
+34	Gene110 & Gene492	1	2	0.0	Gene110, Gene492	2	1
+35	Gene288 & Gene294	1	2	0.0	Gene288, Gene294	2	1
+36	Gene160 & Gene48	1	2	0.0	Gene160, Gene48	2	1
+37	Gene888 & (Gene358 | ~Gene92)	1	3	0.0	Gene358, Gene888, Gene92	3	1
+38	Gene138 | Gene51	1	2	0.0	Gene138, Gene51	2	1
+39	Gene138 | Gene380	1	2	0.0	Gene138, Gene380	2	1
+40	Gene110 & Gene380 & Gene391	1	3	0.0	Gene110, Gene380, Gene391	3	1
+41	Gene110 & Gene288 & Gene391	1	3	0.0	Gene110, Gene288, Gene391	3	1
+42	Gene110 | Gene138 | Gene808	1	3	0.0	Gene110, Gene138, Gene808	3	1
+43	Gene301 & Gene637 & Gene66 & Gene966	1	4	0.5	Gene301, Gene637, Gene66, Gene966	4	1
+44	Gene959	1	1	0.5	Gene959	1	1
+45	True	1	1	0.5	True	1	1
+46	Gene48 & ~Gene868	0	2	0.0	Gene48, Gene868	2	1
+47	~Gene152	0	1	0.5	Gene152	1	1
+48	~Gene138	0	1	0.5	Gene138	1	1
+49	Gene186	0	1	0.5	Gene186	1	1
+50	Gene380	0	1	0.5	Gene380	1	1

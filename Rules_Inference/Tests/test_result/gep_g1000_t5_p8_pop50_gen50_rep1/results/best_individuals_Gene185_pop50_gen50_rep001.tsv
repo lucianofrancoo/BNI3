@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	Gene86 & (~Gene292 | ~Gene424)	4	3	0.0	Gene292, Gene424, Gene86	3	1
+2	Gene447 & Gene86	4	2	0.0	Gene447, Gene86	2	1
+3	Gene86 | (Gene292 & Gene424)	4	3	0.0	Gene292, Gene424, Gene86	3	1
+4	Gene86 & ~Gene239	4	2	0.0	Gene239, Gene86	2	1
+5	Gene86 & (~Gene292 | ~Gene424)	4	3	0.0	Gene292, Gene424, Gene86	3	1
+6	Gene86 & (~Gene292 | ~Gene424)	4	3	0.0	Gene292, Gene424, Gene86	3	1
+7	Gene86	4	1	0.5	Gene86	1	1
+8	Gene845 & (Gene498 | Gene86)	4	3	0.0	Gene498, Gene845, Gene86	3	1
+9	Gene86 & (Gene831 | Gene897)	4	3	0.0	Gene831, Gene86, Gene897	3	1
+10	Gene86	4	1	0.5	Gene86	1	1
+11	Gene86 & ~Gene239	4	2	0.0	Gene239, Gene86	2	1
+12	Gene86 & (Gene292 | Gene51)	4	3	0.0	Gene292, Gene51, Gene86	3	1
+13	Gene86	4	1	0.5	Gene86	1	1
+14	Gene59 & Gene86	4	2	0.0	Gene59, Gene86	2	1
+15	Gene86 | (Gene292 & Gene424)	4	3	0.0	Gene292, Gene424, Gene86	3	1
+16	Gene86 & ~Gene239	4	2	0.0	Gene239, Gene86	2	1
+17	Gene86 | (Gene14 & Gene292)	4	3	0.0	Gene14, Gene292, Gene86	3	1
+18	Gene86 & (~Gene292 | ~Gene424)	4	3	0.0	Gene292, Gene424, Gene86	3	1
+19	Gene888	4	1	0.5	Gene888	1	1
+20	Gene86	4	1	0.5	Gene86	1	1
+21	Gene86	4	1	0.5	Gene86	1	1
+22	Gene86	4	1	0.5	Gene86	1	1
+23	Gene86	4	1	0.5	Gene86	1	1
+24	Gene630 & Gene86	3	2	0.0	Gene630, Gene86	2	1
+25	Gene292 & (Gene498 | Gene86)	3	3	0.0	Gene292, Gene498, Gene86	3	1
+26	Gene239 & Gene86	3	2	0.0	Gene239, Gene86	2	1
+27	Gene218 & Gene86	3	2	0.0	Gene218, Gene86	2	1
+28	Gene292 & Gene424	3	2	0.0	Gene292, Gene424	2	1
+29	Gene86 & ~Gene206 & ~Gene279	3	3	0.0	Gene206, Gene279, Gene86	3	1
+30	Gene292 & Gene424	3	2	0.0	Gene292, Gene424	2	1
+31	Gene292 & Gene424	3	2	0.0	Gene292, Gene424	2	1
+32	Gene239 & Gene546 & Gene86	3	3	0.0	Gene239, Gene546, Gene86	3	1
+33	Gene206 | Gene656	3	2	0.0	Gene206, Gene656	2	1
+34	Gene206 | Gene424	3	2	0.0	Gene206, Gene424	2	1
+35	Gene86 & (Gene292 | Gene424 | ~Gene983)	3	4	0.5	Gene292, Gene424, Gene86, Gene983	4	1
+36	False	3	1	0.5	False	1	1
+37	False	3	1	0.5	False	1	1
+38	Gene546 & Gene656 & (Gene364 | Gene86 | Gene913)	3	5	1.0	Gene364, Gene546, Gene656, Gene86, Gene913	5	1
+39	(Gene14 | Gene86) & (Gene272 | Gene28) & (Gene748 | Gene86)	3	5	1.0	Gene14, Gene272, Gene28, Gene748, Gene86	5	1
+40	Gene206 & (Gene318 | Gene974)	2	3	0.0	Gene206, Gene318, Gene974	3	1
+41	Gene330 & ~Gene292	2	2	0.0	Gene292, Gene330	2	1
+42	Gene913 & Gene940	2	2	0.0	Gene913, Gene940	2	1
+43	Gene292 | ~Gene424	2	2	0.0	Gene292, Gene424	2	1
+44	Gene239 | Gene710	2	2	0.0	Gene239, Gene710	2	1
+45	~Gene292	2	1	0.5	Gene292	1	1
+46	~Gene43	2	1	0.5	Gene43	1	1
+47	Gene292	2	1	0.5	Gene292	1	1
+48	Gene996	2	1	0.5	Gene996	1	1
+49	~Gene239 | ~Gene546	1	2	0.0	Gene239, Gene546	2	1
+50	~Gene292 | ~Gene424 | (Gene443 & Gene748)	1	4	0.5	Gene292, Gene424, Gene443, Gene748	4	1

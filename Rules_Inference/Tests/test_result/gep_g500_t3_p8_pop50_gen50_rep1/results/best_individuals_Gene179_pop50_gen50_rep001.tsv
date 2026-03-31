@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	Gene448 | Gene8	2	2	0.0	Gene448, Gene8	2	1
+2	Gene461 & ~Gene259	2	2	0.0	Gene259, Gene461	2	1
+3	Gene293 | (Gene113 & Gene350)	2	3	0.0	Gene113, Gene293, Gene350	3	1
+4	Gene176 & Gene41	2	2	0.0	Gene176, Gene41	2	1
+5	Gene3 | Gene328	2	2	0.0	Gene3, Gene328	2	1
+6	Gene141 | Gene412	2	2	0.0	Gene141, Gene412	2	1
+7	Gene141 & Gene412	2	2	0.0	Gene141, Gene412	2	1
+8	Gene189 | Gene208	2	2	0.0	Gene189, Gene208	2	1
+9	Gene104 | Gene41 | ~Gene174	2	3	0.0	Gene104, Gene174, Gene41	3	1
+10	~Gene181 & ~Gene306 & ~Gene367	2	3	0.0	Gene181, Gene306, Gene367	3	1
+11	Gene3 | Gene400	2	2	0.0	Gene3, Gene400	2	1
+12	Gene104 & Gene3	2	2	0.0	Gene104, Gene3	2	1
+13	Gene328 | Gene412 | Gene73	2	3	0.0	Gene328, Gene412, Gene73	3	1
+14	Gene141 | Gene412	2	2	0.0	Gene141, Gene412	2	1
+15	Gene131 | Gene412	2	2	0.0	Gene131, Gene412	2	1
+16	Gene104 & Gene482	2	2	0.0	Gene104, Gene482	2	1
+17	Gene131 | Gene412	2	2	0.0	Gene131, Gene412	2	1
+18	Gene104 & Gene482	2	2	0.0	Gene104, Gene482	2	1
+19	Gene176 | Gene412	2	2	0.0	Gene176, Gene412	2	1
+20	Gene104 & Gene482	2	2	0.0	Gene104, Gene482	2	1
+21	Gene104 & Gene3	2	2	0.0	Gene104, Gene3	2	1
+22	Gene104 | Gene272	2	2	0.0	Gene104, Gene272	2	1
+23	Gene141 | Gene355	2	2	0.0	Gene141, Gene355	2	1
+24	Gene17 | Gene3	2	2	0.0	Gene17, Gene3	2	1
+25	Gene141 | Gene412	2	2	0.0	Gene141, Gene412	2	1
+26	Gene141 | Gene412	2	2	0.0	Gene141, Gene412	2	1
+27	Gene189 | Gene3	2	2	0.0	Gene189, Gene3	2	1
+28	Gene141 | Gene412	2	2	0.0	Gene141, Gene412	2	1
+29	Gene141	2	1	0.5	Gene141	1	1
+30	Gene141	2	1	0.5	Gene141	1	1
+31	Gene433	2	1	0.5	Gene433	1	1
+32	Gene412	2	1	0.5	Gene412	1	1
+33	Gene141	2	1	0.5	Gene141	1	1
+34	~Gene174	2	1	0.5	Gene174	1	1
+35	~Gene328 & ~Gene467 & ~Gene8	1	3	0.0	Gene328, Gene467, Gene8	3	1
+36	Gene104 & Gene217 & ~Gene3	1	3	0.0	Gene104, Gene217, Gene3	3	1
+37	Gene329 & Gene482	1	2	0.0	Gene329, Gene482	2	1
+38	Gene104 | Gene174	1	2	0.0	Gene104, Gene174	2	1
+39	Gene441 | ~Gene448	1	2	0.0	Gene441, Gene448	2	1
+40	Gene3 | (~Gene189 & ~Gene433)	1	3	0.0	Gene189, Gene3, Gene433	3	1
+41	True	1	1	0.5	True	1	1
+42	Gene141 | Gene412 | Gene491	1	3	0.0	Gene141, Gene412, Gene491	3	1
+43	Gene141 | Gene429 | Gene480 | Gene491	1	4	0.5	Gene141, Gene429, Gene480, Gene491	4	1
+44	~Gene141 & ~Gene412	0	2	0.0	Gene141, Gene412	2	1
+45	Gene55 | Gene77	0	2	0.0	Gene55, Gene77	2	1
+46	~Gene176	0	1	0.5	Gene176	1	1
+47	~Gene412	0	1	0.5	Gene412	1	1
+48	~Gene412	0	1	0.5	Gene412	1	1
+49	~Gene41	0	1	0.5	Gene41	1	1
+50	Gene491	0	1	0.5	Gene491	1	1

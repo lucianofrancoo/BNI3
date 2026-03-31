@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	Gene42 & Gene43 & ~Gene86	4	3	0.0	Gene42, Gene43, Gene86	3	1
+2	Gene42 & (Gene43 | Gene86)	4	3	0.0	Gene42, Gene43, Gene86	3	1
+3	Gene32 | Gene42	4	2	0.0	Gene32, Gene42	2	1
+4	Gene32 | Gene42	4	2	0.0	Gene32, Gene42	2	1
+5	Gene32 | Gene42	4	2	0.0	Gene32, Gene42	2	1
+6	Gene28 | Gene42	4	2	0.0	Gene28, Gene42	2	1
+7	Gene42 & ~Gene30 & ~Gene86	4	3	0.0	Gene30, Gene42, Gene86	3	1
+8	Gene42 & (Gene43 | ~Gene86)	4	3	0.0	Gene42, Gene43, Gene86	3	1
+9	Gene42	4	1	0.5	Gene42	1	1
+10	Gene32 | Gene42	4	2	0.0	Gene32, Gene42	2	1
+11	Gene32 | Gene42	4	2	0.0	Gene32, Gene42	2	1
+12	Gene32 | Gene42	4	2	0.0	Gene32, Gene42	2	1
+13	Gene32 | Gene42	4	2	0.0	Gene32, Gene42	2	1
+14	Gene32 | Gene59	4	2	0.0	Gene32, Gene59	2	1
+15	Gene28 | Gene32	4	2	0.0	Gene28, Gene32	2	1
+16	Gene42 & Gene72 & ~Gene23	4	3	0.0	Gene23, Gene42, Gene72	3	1
+17	Gene32 & Gene34	4	2	0.0	Gene32, Gene34	2	1
+18	Gene32 | Gene42	4	2	0.0	Gene32, Gene42	2	1
+19	Gene32 & Gene42	4	2	0.0	Gene32, Gene42	2	1
+20	Gene42	4	1	0.5	Gene42	1	1
+21	Gene32	4	1	0.5	Gene32	1	1
+22	Gene42	4	1	0.5	Gene42	1	1
+23	Gene32	4	1	0.5	Gene32	1	1
+24	Gene42	4	1	0.5	Gene42	1	1
+25	Gene42 | Gene86	3	2	0.0	Gene42, Gene86	2	1
+26	Gene23 & Gene43	3	2	0.0	Gene23, Gene43	2	1
+27	Gene43 & Gene86	3	2	0.0	Gene43, Gene86	2	1
+28	Gene28 & ~Gene36	3	2	0.0	Gene28, Gene36	2	1
+29	Gene33 & Gene71	3	2	0.0	Gene33, Gene71	2	1
+30	Gene32 | Gene61	3	2	0.0	Gene32, Gene61	2	1
+31	Gene23 & Gene42	3	2	0.0	Gene23, Gene42	2	1
+32	Gene28	3	1	0.5	Gene28	1	1
+33	Gene28 | Gene32 | Gene68	2	3	0.0	Gene28, Gene32, Gene68	3	1
+34	Gene80 & Gene85	2	2	0.0	Gene80, Gene85	2	1
+35	Gene28 | Gene36	2	2	0.0	Gene28, Gene36	2	1
+36	Gene86 | ~Gene43	2	2	0.0	Gene43, Gene86	2	1
+37	Gene28 | Gene36	2	2	0.0	Gene28, Gene36	2	1
+38	~Gene86	2	1	0.5	Gene86	1	1
+39	Gene99 & (Gene23 | Gene80) & (Gene43 | Gene80)	2	4	0.5	Gene23, Gene43, Gene80, Gene99	4	1
+40	~Gene23	2	1	0.5	Gene23	1	1
+41	~Gene86	2	1	0.5	Gene86	1	1
+42	Gene45	2	1	0.5	Gene45	1	1
+43	Gene59 | Gene88	1	2	0.0	Gene59, Gene88	2	1
+44	Gene32 | Gene88	1	2	0.0	Gene32, Gene88	2	1
+45	Gene42 | Gene72	1	2	0.0	Gene42, Gene72	2	1
+46	Gene42 | Gene54	1	2	0.0	Gene42, Gene54	2	1
+47	Gene65	1	1	0.5	Gene65	1	1
+48	Gene65	1	1	0.5	Gene65	1	1
+49	~Gene42	0	1	0.5	Gene42	1	1
+50	~Gene42	0	1	0.5	Gene42	1	1

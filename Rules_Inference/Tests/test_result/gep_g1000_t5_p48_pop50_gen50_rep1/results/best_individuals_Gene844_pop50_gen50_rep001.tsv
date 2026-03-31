@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	Gene290 & Gene490	4	2	0.0	Gene290, Gene490	2	1
+2	Gene290 & Gene490	4	2	0.0	Gene290, Gene490	2	1
+3	Gene490 & (Gene34 | Gene510)	4	3	0.0	Gene34, Gene490, Gene510	3	1
+4	Gene290 & Gene490	4	2	0.0	Gene290, Gene490	2	1
+5	Gene34 & Gene490 & Gene763	4	3	0.0	Gene34, Gene490, Gene763	3	1
+6	Gene290 & Gene490	4	2	0.0	Gene290, Gene490	2	1
+7	Gene490 & (Gene34 | Gene510)	4	3	0.0	Gene34, Gene490, Gene510	3	1
+8	Gene34 | Gene490	4	2	0.0	Gene34, Gene490	2	1
+9	Gene290 & Gene608	4	2	0.0	Gene290, Gene608	2	1
+10	Gene290 & Gene490	4	2	0.0	Gene290, Gene490	2	1
+11	Gene34 & (Gene290 | Gene474)	4	3	0.0	Gene290, Gene34, Gene474	3	1
+12	Gene490 & (Gene34 | Gene510)	4	3	0.0	Gene34, Gene490, Gene510	3	1
+13	Gene490 & (Gene220 | Gene290)	4	3	0.0	Gene220, Gene290, Gene490	3	1
+14	Gene34	4	1	0.5	Gene34	1	1
+15	Gene490	4	1	0.5	Gene490	1	1
+16	Gene34	4	1	0.5	Gene34	1	1
+17	Gene34	4	1	0.5	Gene34	1	1
+18	Gene34	4	1	0.5	Gene34	1	1
+19	Gene34	4	1	0.5	Gene34	1	1
+20	Gene490	4	1	0.5	Gene490	1	1
+21	Gene34	4	1	0.5	Gene34	1	1
+22	Gene89 | Gene899	3	2	0.0	Gene89, Gene899	2	1
+23	Gene290 & (~Gene228 | ~Gene490)	3	3	0.0	Gene228, Gene290, Gene490	3	1
+24	Gene106 | Gene490 | (Gene290 & Gene882)	3	4	0.5	Gene106, Gene290, Gene490, Gene882	4	1
+25	Gene302	3	1	0.5	Gene302	1	1
+26	Gene351	3	1	0.5	Gene351	1	1
+27	Gene290	3	1	0.5	Gene290	1	1
+28	Gene290 & Gene323	2	2	0.0	Gene290, Gene323	2	1
+29	Gene490 & Gene702	2	2	0.0	Gene490, Gene702	2	1
+30	Gene34 & Gene510	2	2	0.0	Gene34, Gene510	2	1
+31	Gene34 & Gene882	2	2	0.0	Gene34, Gene882	2	1
+32	Gene490 & Gene667	2	2	0.0	Gene490, Gene667	2	1
+33	Gene332 & Gene720	2	2	0.0	Gene332, Gene720	2	1
+34	Gene135 & Gene246 & Gene882	2	3	0.0	Gene135, Gene246, Gene882	3	1
+35	Gene290 & Gene911	2	2	0.0	Gene290, Gene911	2	1
+36	Gene290 & Gene591	2	2	0.0	Gene290, Gene591	2	1
+37	Gene490 & Gene882	2	2	0.0	Gene490, Gene882	2	1
+38	Gene608 & ~Gene490	2	2	0.0	Gene490, Gene608	2	1
+39	Gene220 & Gene490	2	2	0.0	Gene220, Gene490	2	1
+40	Gene133 & Gene21 & Gene220 & Gene490 & Gene569	2	5	1.0	Gene133, Gene21, Gene220, Gene490, Gene569	5	1
+41	Gene220 & Gene334	1	2	0.0	Gene220, Gene334	2	1
+42	Gene133 & Gene882	1	2	0.0	Gene133, Gene882	2	1
+43	Gene133 & Gene882	1	2	0.0	Gene133, Gene882	2	1
+44	Gene882 | Gene945	1	2	0.0	Gene882, Gene945	2	1
+45	Gene441 & Gene882	1	2	0.0	Gene441, Gene882	2	1
+46	~Gene763	1	1	0.5	Gene763	1	1
+47	Gene5	1	1	0.5	Gene5	1	1
+48	Gene510	1	1	0.5	Gene510	1	1
+49	Gene864	1	1	0.5	Gene864	1	1
+50	~Gene490	0	1	0.5	Gene490	1	1

@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	Gene229 & (Gene104 | Gene361)	4	3	0.0	Gene104, Gene229, Gene361	3	1
+2	Gene229 & (Gene104 | Gene416)	4	3	0.0	Gene104, Gene229, Gene416	3	1
+3	Gene229 & (Gene104 | Gene416)	4	3	0.0	Gene104, Gene229, Gene416	3	1
+4	Gene229 & (Gene104 | Gene416)	4	3	0.0	Gene104, Gene229, Gene416	3	1
+5	Gene104 & Gene229	4	2	0.0	Gene104, Gene229	2	1
+6	Gene229 & Gene361	4	2	0.0	Gene229, Gene361	2	1
+7	Gene229 & (Gene104 | Gene416)	4	3	0.0	Gene104, Gene229, Gene416	3	1
+8	Gene118 | Gene465	4	2	0.0	Gene118, Gene465	2	1
+9	Gene229 & Gene361	4	2	0.0	Gene229, Gene361	2	1
+10	Gene104 & Gene20	4	2	0.0	Gene104, Gene20	2	1
+11	Gene10 & Gene104 & Gene20	4	3	0.0	Gene10, Gene104, Gene20	3	1
+12	Gene104 & Gene20	4	2	0.0	Gene104, Gene20	2	1
+13	Gene229 & Gene361	4	2	0.0	Gene229, Gene361	2	1
+14	Gene229 & Gene361	4	2	0.0	Gene229, Gene361	2	1
+15	Gene229 & (Gene104 | Gene416)	4	3	0.0	Gene104, Gene229, Gene416	3	1
+16	Gene346 | Gene466	3	2	0.0	Gene346, Gene466	2	1
+17	Gene35 & Gene370	3	2	0.0	Gene35, Gene370	2	1
+18	Gene229 | Gene416	3	2	0.0	Gene229, Gene416	2	1
+19	Gene104 | Gene361	3	2	0.0	Gene104, Gene361	2	1
+20	Gene104 & Gene466	3	2	0.0	Gene104, Gene466	2	1
+21	Gene20 & Gene229	3	2	0.0	Gene20, Gene229	2	1
+22	Gene151 & Gene20	3	2	0.0	Gene151, Gene20	2	1
+23	Gene380 & Gene88	3	2	0.0	Gene380, Gene88	2	1
+24	Gene229	3	1	0.5	Gene229	1	1
+25	Gene34 & (Gene229 | Gene416)	3	3	0.0	Gene229, Gene34, Gene416	3	1
+26	Gene20 & Gene346	3	2	0.0	Gene20, Gene346	2	1
+27	Gene361 & Gene479	3	2	0.0	Gene361, Gene479	2	1
+28	Gene361 & Gene466	3	2	0.0	Gene361, Gene466	2	1
+29	Gene20 | Gene229	3	2	0.0	Gene20, Gene229	2	1
+30	Gene346 & Gene466	3	2	0.0	Gene346, Gene466	2	1
+31	Gene229	3	1	0.5	Gene229	1	1
+32	Gene118	3	1	0.5	Gene118	1	1
+33	Gene361	3	1	0.5	Gene361	1	1
+34	Gene79	3	1	0.5	Gene79	1	1
+35	Gene370	3	1	0.5	Gene370	1	1
+36	Gene104 & (Gene197 | Gene45 | Gene83)	3	4	0.5	Gene104, Gene197, Gene45, Gene83	4	1
+37	Gene361	3	1	0.5	Gene361	1	1
+38	(Gene20 & Gene229) | (Gene20 & Gene401) | (Gene20 & Gene437) | (Gene229 & Gene244) | (Gene244 & Gene401) | (Gene244 & Gene437)	3	5	1.0	Gene20, Gene229, Gene244, Gene401, Gene437	5	1
+39	Gene10 & Gene117 & Gene229	2	3	0.0	Gene10, Gene117, Gene229	3	1
+40	Gene401 & Gene437	2	2	0.0	Gene401, Gene437	2	1
+41	Gene20 & Gene45	2	2	0.0	Gene20, Gene45	2	1
+42	Gene10 & Gene117 & Gene229	2	3	0.0	Gene10, Gene117, Gene229	3	1
+43	Gene104 | (Gene20 & Gene45)	2	3	0.0	Gene104, Gene20, Gene45	3	1
+44	Gene104 | Gene448 | Gene45	2	3	0.0	Gene104, Gene448, Gene45	3	1
+45	Gene20 & Gene45	2	2	0.0	Gene20, Gene45	2	1
+46	Gene106 | Gene118 | Gene20 | Gene60	2	4	0.5	Gene106, Gene118, Gene20, Gene60	4	1
+47	Gene416	2	1	0.5	Gene416	1	1
+48	Gene45 & Gene488	1	2	0.0	Gene45, Gene488	2	1
+49	~Gene229 & ~Gene416	1	2	0.0	Gene229, Gene416	2	1
+50	Gene229 & ~Gene361	1	2	0.0	Gene229, Gene361	2	1

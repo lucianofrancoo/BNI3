@@ -1,0 +1,9 @@
+attractor_id	type	cycle_length	step_in_cycle	basin_size	basin_percentage	Cdc20	Cdh1	CycA	CycB	CycD	CycE	E2F	Rb	UbcH10	p27	binary_state
+1	fixed_point	1	1	512	50.0	0	1	0	0	0	0	0	1	0	1	0100000101
+2	cycle	7	1	512	50.0	0	0	1	0	1	1	0	0	0	0	0010110000
+2	cycle	7	2	512	50.0	0	0	1	1	1	0	0	0	1	0	0011100010
+2	cycle	7	3	512	50.0	1	0	1	1	1	0	0	0	1	0	1011100010
+2	cycle	7	4	512	50.0	1	1	0	0	1	0	0	0	1	0	1100100010
+2	cycle	7	5	512	50.0	0	1	0	0	1	0	1	0	1	0	0100101010
+2	cycle	7	6	512	50.0	0	1	0	0	1	1	1	0	0	0	0100111000
+2	cycle	7	7	512	50.0	0	1	1	0	1	1	1	0	0	0	0110111000

@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	Gene506 | (~Gene73 & ~Gene85)	4	3	0.0	Gene506, Gene73, Gene85	3	1
+2	~Gene980 | (Gene581 & ~Gene566)	4	3	0.0	Gene566, Gene581, Gene980	3	1
+3	Gene732	4	1	0.5	Gene732	1	1
+4	Gene732	4	1	0.5	Gene732	1	1
+5	Gene732	4	1	0.5	Gene732	1	1
+6	~Gene980 | (Gene581 & ~Gene566)	4	3	0.0	Gene566, Gene581, Gene980	3	1
+7	Gene605 | ~Gene980	4	2	0.0	Gene605, Gene980	2	1
+8	Gene732	4	1	0.5	Gene732	1	1
+9	Gene506 | Gene715	4	2	0.0	Gene506, Gene715	2	1
+10	Gene732	4	1	0.5	Gene732	1	1
+11	Gene732 & Gene753	4	2	0.0	Gene732, Gene753	2	1
+12	Gene732 & (Gene496 | Gene767)	4	3	0.0	Gene496, Gene732, Gene767	3	1
+13	Gene506 & Gene732	4	2	0.0	Gene506, Gene732	2	1
+14	Gene732	4	1	0.5	Gene732	1	1
+15	Gene506	4	1	0.5	Gene506	1	1
+16	Gene496 & Gene732	4	2	0.0	Gene496, Gene732	2	1
+17	Gene496 | Gene715	4	2	0.0	Gene496, Gene715	2	1
+18	Gene496 & Gene732	4	2	0.0	Gene496, Gene732	2	1
+19	Gene55 | Gene732	4	2	0.0	Gene55, Gene732	2	1
+20	Gene732	4	1	0.5	Gene732	1	1
+21	Gene732	4	1	0.5	Gene732	1	1
+22	Gene506	4	1	0.5	Gene506	1	1
+23	Gene496	4	1	0.5	Gene496	1	1
+24	Gene732	4	1	0.5	Gene732	1	1
+25	Gene732	4	1	0.5	Gene732	1	1
+26	Gene506 | Gene885	3	2	0.0	Gene506, Gene885	2	1
+27	Gene302 & Gene732	3	2	0.0	Gene302, Gene732	2	1
+28	Gene302 | Gene732	3	2	0.0	Gene302, Gene732	2	1
+29	Gene302 | Gene732	3	2	0.0	Gene302, Gene732	2	1
+30	Gene496 | Gene724	3	2	0.0	Gene496, Gene724	2	1
+31	Gene605 | ~Gene440	3	2	0.0	Gene440, Gene605	2	1
+32	Gene159 | Gene732	3	2	0.0	Gene159, Gene732	2	1
+33	Gene302 & Gene732	3	2	0.0	Gene302, Gene732	2	1
+34	Gene302 | Gene732	3	2	0.0	Gene302, Gene732	2	1
+35	Gene732 & Gene848	3	2	0.0	Gene732, Gene848	2	1
+36	Gene980 | ~Gene4 | (Gene190 & Gene715)	3	4	0.5	Gene190, Gene4, Gene715, Gene980	4	1
+37	Gene732 & (Gene178 | Gene302 | Gene55)	3	4	0.5	Gene178, Gene302, Gene55, Gene732	4	1
+38	~Gene4	3	1	0.5	Gene4	1	1
+39	Gene732 & (Gene333 | Gene715 | ~Gene302)	3	4	0.5	Gene302, Gene333, Gene715, Gene732	4	1
+40	Gene178 & Gene55	2	2	0.0	Gene178, Gene55	2	1
+41	Gene302 & Gene715	2	2	0.0	Gene302, Gene715	2	1
+42	Gene4 & Gene715 & Gene732	2	3	0.0	Gene4, Gene715, Gene732	3	1
+43	Gene49	2	1	0.5	Gene49	1	1
+44	Gene398 & Gene496 & Gene732	2	3	0.0	Gene398, Gene496, Gene732	3	1
+45	Gene512 | Gene715	2	2	0.0	Gene512, Gene715	2	1
+46	Gene55 & Gene73	2	2	0.0	Gene55, Gene73	2	1
+47	Gene85	2	1	0.5	Gene85	1	1
+48	~Gene844	2	1	0.5	Gene844	1	1
+49	Gene328 & ~Gene871	1	2	0.0	Gene328, Gene871	2	1
+50	Gene732 & Gene980	1	2	0.0	Gene732, Gene980	2	1

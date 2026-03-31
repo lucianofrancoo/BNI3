@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	Gene856 | Gene954	4	2	0.0	Gene856, Gene954	2	1
+2	Gene856 | Gene954	4	2	0.0	Gene856, Gene954	2	1
+3	Gene856 & (Gene291 | ~Gene792)	4	3	0.0	Gene291, Gene792, Gene856	3	1
+4	Gene856 | Gene954	4	2	0.0	Gene856, Gene954	2	1
+5	Gene291 & Gene792	4	2	0.0	Gene291, Gene792	2	1
+6	Gene856	4	1	0.5	Gene856	1	1
+7	Gene291 & Gene792	4	2	0.0	Gene291, Gene792	2	1
+8	Gene856 | Gene954	4	2	0.0	Gene856, Gene954	2	1
+9	Gene856 & (Gene291 | ~Gene792)	4	3	0.0	Gene291, Gene792, Gene856	3	1
+10	Gene856 | Gene954	4	2	0.0	Gene856, Gene954	2	1
+11	Gene856 | Gene954	4	2	0.0	Gene856, Gene954	2	1
+12	Gene291 & Gene856	4	2	0.0	Gene291, Gene856	2	1
+13	Gene60 | Gene856	4	2	0.0	Gene60, Gene856	2	1
+14	Gene299 & Gene856	4	2	0.0	Gene299, Gene856	2	1
+15	Gene856 | Gene954	4	2	0.0	Gene856, Gene954	2	1
+16	Gene434 & Gene856	4	2	0.0	Gene434, Gene856	2	1
+17	Gene856	4	1	0.5	Gene856	1	1
+18	Gene856 & (Gene291 | ~Gene792)	4	3	0.0	Gene291, Gene792, Gene856	3	1
+19	Gene291	4	1	0.5	Gene291	1	1
+20	Gene291	4	1	0.5	Gene291	1	1
+21	Gene291	4	1	0.5	Gene291	1	1
+22	Gene856	4	1	0.5	Gene856	1	1
+23	(Gene291 & Gene434) | (Gene291 & Gene950) | (Gene434 & ~Gene837) | (Gene950 & ~Gene837)	4	4	0.5	Gene291, Gene434, Gene837, Gene950	4	1
+24	Gene256 | Gene299	3	2	0.0	Gene256, Gene299	2	1
+25	Gene328 | Gene779	3	2	0.0	Gene328, Gene779	2	1
+26	Gene328 | Gene954	3	2	0.0	Gene328, Gene954	2	1
+27	Gene256 & Gene856	3	2	0.0	Gene256, Gene856	2	1
+28	Gene328	3	1	0.5	Gene328	1	1
+29	Gene328	3	1	0.5	Gene328	1	1
+30	Gene856 & Gene954	2	2	0.0	Gene856, Gene954	2	1
+31	Gene291 | Gene434 | Gene792	2	3	0.0	Gene291, Gene434, Gene792	3	1
+32	Gene631	2	1	0.5	Gene631	1	1
+33	Gene41 & Gene556	2	2	0.0	Gene41, Gene556	2	1
+34	Gene291 & Gene599	2	2	0.0	Gene291, Gene599	2	1
+35	Gene693 | Gene954	2	2	0.0	Gene693, Gene954	2	1
+36	~Gene792 | (Gene434 & Gene837)	2	3	0.0	Gene434, Gene792, Gene837	3	1
+37	Gene256 | Gene779	2	2	0.0	Gene256, Gene779	2	1
+38	Gene434 | Gene792	2	2	0.0	Gene434, Gene792	2	1
+39	Gene792 | Gene808	2	2	0.0	Gene792, Gene808	2	1
+40	Gene954	2	1	0.5	Gene954	1	1
+41	Gene954	2	1	0.5	Gene954	1	1
+42	Gene209	2	1	0.5	Gene209	1	1
+43	Gene256	2	1	0.5	Gene256	1	1
+44	Gene513 | Gene954	1	2	0.0	Gene513, Gene954	2	1
+45	Gene142 & Gene41	1	2	0.0	Gene142, Gene41	2	1
+46	Gene513 | Gene954	1	2	0.0	Gene513, Gene954	2	1
+47	Gene256 | (Gene434 & ~Gene620) | (Gene792 & ~Gene620)	1	4	0.5	Gene256, Gene434, Gene620, Gene792	4	1
+48	~Gene792	1	1	0.5	Gene792	1	1
+49	~Gene291 & ~Gene856	0	2	0.0	Gene291, Gene856	2	1
+50	~Gene291	0	1	0.5	Gene291	1	1

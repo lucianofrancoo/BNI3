@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	Gene22 | Gene29 | Gene39	2	3	0.0	Gene22, Gene29, Gene39	3	1
+2	Gene16 & ~Gene35	2	2	0.0	Gene16, Gene35	2	1
+3	Gene40 & (~Gene42 | ~Gene6)	2	3	0.0	Gene40, Gene42, Gene6	3	1
+4	Gene22 | Gene29	2	2	0.0	Gene22, Gene29	2	1
+5	Gene26 | Gene35	2	2	0.0	Gene26, Gene35	2	1
+6	Gene23 & ~Gene6	2	2	0.0	Gene23, Gene6	2	1
+7	Gene36 | ~Gene2	2	2	0.0	Gene2, Gene36	2	1
+8	Gene16 & ~Gene35	2	2	0.0	Gene16, Gene35	2	1
+9	Gene47 | Gene8	2	2	0.0	Gene47, Gene8	2	1
+10	Gene22 | Gene29	2	2	0.0	Gene22, Gene29	2	1
+11	Gene15 | (Gene26 & Gene42)	2	3	0.0	Gene15, Gene26, Gene42	3	1
+12	Gene9	2	1	0.5	Gene9	1	1
+13	Gene26 | Gene8	2	2	0.0	Gene26, Gene8	2	1
+14	Gene22 | Gene29 | Gene3	2	3	0.0	Gene22, Gene29, Gene3	3	1
+15	Gene22 | Gene3	2	2	0.0	Gene22, Gene3	2	1
+16	Gene29 | Gene3	2	2	0.0	Gene29, Gene3	2	1
+17	Gene22 | Gene29	2	2	0.0	Gene22, Gene29	2	1
+18	Gene29 | Gene46	2	2	0.0	Gene29, Gene46	2	1
+19	Gene26 | Gene35	2	2	0.0	Gene26, Gene35	2	1
+20	Gene22 | Gene29 | Gene39	2	3	0.0	Gene22, Gene29, Gene39	3	1
+21	Gene15 | Gene9	2	2	0.0	Gene15, Gene9	2	1
+22	Gene3 | (Gene1 & Gene47)	2	3	0.0	Gene1, Gene3, Gene47	3	1
+23	Gene22 | Gene29 | Gene46	2	3	0.0	Gene22, Gene29, Gene46	3	1
+24	Gene22 & (Gene3 | Gene34)	2	3	0.0	Gene22, Gene3, Gene34	3	1
+25	Gene22 | Gene29	2	2	0.0	Gene22, Gene29	2	1
+26	Gene29 | Gene8	2	2	0.0	Gene29, Gene8	2	1
+27	Gene16 & ~Gene35	2	2	0.0	Gene16, Gene35	2	1
+28	Gene22 | Gene47	2	2	0.0	Gene22, Gene47	2	1
+29	Gene26 | Gene35	2	2	0.0	Gene26, Gene35	2	1
+30	Gene26 | Gene35	2	2	0.0	Gene26, Gene35	2	1
+31	Gene10 | Gene26	2	2	0.0	Gene10, Gene26	2	1
+32	Gene29 | Gene3	2	2	0.0	Gene29, Gene3	2	1
+33	Gene15 | Gene3	2	2	0.0	Gene15, Gene3	2	1
+34	Gene3 | Gene39	2	2	0.0	Gene3, Gene39	2	1
+35	Gene22	2	1	0.5	Gene22	1	1
+36	Gene40	2	1	0.5	Gene40	1	1
+37	Gene47	2	1	0.5	Gene47	1	1
+38	Gene47	2	1	0.5	Gene47	1	1
+39	Gene47	2	1	0.5	Gene47	1	1
+40	Gene29 & Gene47	1	2	0.0	Gene29, Gene47	2	1
+41	Gene13 | Gene47	1	2	0.0	Gene13, Gene47	2	1
+42	Gene15 | Gene29	1	2	0.0	Gene15, Gene29	2	1
+43	Gene22 | Gene23	1	2	0.0	Gene22, Gene23	2	1
+44	Gene12 | Gene46	1	2	0.0	Gene12, Gene46	2	1
+45	Gene20 | Gene47 | (Gene22 & Gene29)	1	4	0.5	Gene20, Gene22, Gene29, Gene47	4	1
+46	Gene15 | Gene19 | Gene29 | Gene3	1	4	0.5	Gene15, Gene19, Gene29, Gene3	4	1
+47	Gene1 | Gene29 | Gene3 | Gene38	1	4	0.5	Gene1, Gene29, Gene3, Gene38	4	1
+48	~Gene29	1	1	0.5	Gene29	1	1
+49	Gene1 | Gene15 | Gene29	0	3	0.0	Gene1, Gene15, Gene29	3	1
+50	~Gene47	0	1	0.5	Gene47	1	1

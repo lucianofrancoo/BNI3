@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	Gene234 | Gene29	4	2	0.0	Gene234, Gene29	2	1
+2	Gene572 & Gene714	4	2	0.0	Gene572, Gene714	2	1
+3	Gene234 | Gene29	4	2	0.0	Gene234, Gene29	2	1
+4	Gene572 & Gene714	4	2	0.0	Gene572, Gene714	2	1
+5	Gene234 | Gene29	4	2	0.0	Gene234, Gene29	2	1
+6	Gene234 | Gene29	4	2	0.0	Gene234, Gene29	2	1
+7	Gene67 & Gene714	4	2	0.0	Gene67, Gene714	2	1
+8	Gene572 & Gene714	4	2	0.0	Gene572, Gene714	2	1
+9	Gene234 | Gene29	4	2	0.0	Gene234, Gene29	2	1
+10	Gene67 & Gene714	4	2	0.0	Gene67, Gene714	2	1
+11	Gene234	4	1	0.5	Gene234	1	1
+12	Gene572 & Gene714	4	2	0.0	Gene572, Gene714	2	1
+13	Gene234	4	1	0.5	Gene234	1	1
+14	Gene714 & Gene879	4	2	0.0	Gene714, Gene879	2	1
+15	Gene234 | (Gene706 & Gene832)	4	3	0.0	Gene234, Gene706, Gene832	3	1
+16	Gene572 & (Gene234 | Gene714)	4	3	0.0	Gene234, Gene572, Gene714	3	1
+17	Gene714 & Gene879	4	2	0.0	Gene714, Gene879	2	1
+18	Gene234	4	1	0.5	Gene234	1	1
+19	Gene67 & Gene714	4	2	0.0	Gene67, Gene714	2	1
+20	Gene234 | Gene29	4	2	0.0	Gene234, Gene29	2	1
+21	Gene564 & Gene714	4	2	0.0	Gene564, Gene714	2	1
+22	Gene714 & Gene879	4	2	0.0	Gene714, Gene879	2	1
+23	Gene234	4	1	0.5	Gene234	1	1
+24	Gene714	4	1	0.5	Gene714	1	1
+25	Gene234	4	1	0.5	Gene234	1	1
+26	Gene714	4	1	0.5	Gene714	1	1
+27	Gene67 | Gene714	3	2	0.0	Gene67, Gene714	2	1
+28	Gene572 | Gene714	3	2	0.0	Gene572, Gene714	2	1
+29	Gene714 | (Gene601 & Gene706)	3	3	0.0	Gene601, Gene706, Gene714	3	1
+30	Gene618 | Gene687	3	2	0.0	Gene618, Gene687	2	1
+31	Gene234 & (Gene706 | Gene832)	3	3	0.0	Gene234, Gene706, Gene832	3	1
+32	Gene234 | Gene879	3	2	0.0	Gene234, Gene879	2	1
+33	Gene879	3	1	0.5	Gene879	1	1
+34	Gene29 & (Gene234 | Gene687) & (Gene234 | Gene832)	3	4	0.5	Gene234, Gene29, Gene687, Gene832	4	1
+35	Gene67	3	1	0.5	Gene67	1	1
+36	Gene879	3	1	0.5	Gene879	1	1
+37	Gene417 & Gene832	2	2	0.0	Gene417, Gene832	2	1
+38	Gene120 & Gene879	2	2	0.0	Gene120, Gene879	2	1
+39	Gene234 & Gene687 & ~Gene832	2	3	0.0	Gene234, Gene687, Gene832	3	1
+40	Gene832 | ~Gene29	2	2	0.0	Gene29, Gene832	2	1
+41	Gene69	2	1	0.5	Gene69	1	1
+42	Gene29 | ~Gene234	1	2	0.0	Gene234, Gene29	2	1
+43	Gene30 | ~Gene234	1	2	0.0	Gene234, Gene30	2	1
+44	~Gene879	1	1	0.5	Gene879	1	1
+45	~Gene29	1	1	0.5	Gene29	1	1
+46	~Gene29	1	1	0.5	Gene29	1	1
+47	~Gene29	1	1	0.5	Gene29	1	1
+48	~Gene572	1	1	0.5	Gene572	1	1
+49	~Gene572	1	1	0.5	Gene572	1	1
+50	~Gene714	0	1	0.5	Gene714	1	1

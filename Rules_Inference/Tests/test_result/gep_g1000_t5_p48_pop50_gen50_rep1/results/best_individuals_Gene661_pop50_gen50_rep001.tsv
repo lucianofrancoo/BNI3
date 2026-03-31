@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	Gene778 & (~Gene166 | ~Gene222)	4	3	0.0	Gene166, Gene222, Gene778	3	1
+2	Gene870 & ~Gene153	4	2	0.0	Gene153, Gene870	2	1
+3	Gene717 | ~Gene153	4	2	0.0	Gene153, Gene717	2	1
+4	Gene587 | Gene778	4	2	0.0	Gene587, Gene778	2	1
+5	Gene597 | Gene777 | Gene956	4	3	0.0	Gene597, Gene777, Gene956	3	1
+6	Gene402 | Gene966	4	2	0.0	Gene402, Gene966	2	1
+7	Gene778 & (Gene777 | ~Gene222)	4	3	0.0	Gene222, Gene777, Gene778	3	1
+8	Gene587 | Gene778	4	2	0.0	Gene587, Gene778	2	1
+9	Gene717 | ~Gene153	4	2	0.0	Gene153, Gene717	2	1
+10	Gene870 & ~Gene153	4	2	0.0	Gene153, Gene870	2	1
+11	Gene587 & Gene842	4	2	0.0	Gene587, Gene842	2	1
+12	Gene587 | Gene966	4	2	0.0	Gene587, Gene966	2	1
+13	Gene769 | Gene966	4	2	0.0	Gene769, Gene966	2	1
+14	Gene763 | Gene777	4	2	0.0	Gene763, Gene777	2	1
+15	Gene527 | Gene587 | Gene778	4	3	0.0	Gene527, Gene587, Gene778	3	1
+16	Gene717 | ~Gene153	4	2	0.0	Gene153, Gene717	2	1
+17	Gene717 | ~Gene153	4	2	0.0	Gene153, Gene717	2	1
+18	Gene587 | Gene778	4	2	0.0	Gene587, Gene778	2	1
+19	Gene717 | Gene966	4	2	0.0	Gene717, Gene966	2	1
+20	Gene717 | ~Gene153	4	2	0.0	Gene153, Gene717	2	1
+21	Gene763	4	1	0.5	Gene763	1	1
+22	Gene587	4	1	0.5	Gene587	1	1
+23	Gene763	4	1	0.5	Gene763	1	1
+24	Gene966	4	1	0.5	Gene966	1	1
+25	Gene587	4	1	0.5	Gene587	1	1
+26	~Gene897	4	1	0.5	Gene897	1	1
+27	~Gene82	4	1	0.5	Gene82	1	1
+28	Gene587	4	1	0.5	Gene587	1	1
+29	Gene587	4	1	0.5	Gene587	1	1
+30	~Gene239 | ~Gene777	3	2	0.0	Gene239, Gene777	2	1
+31	Gene239 | Gene778	3	2	0.0	Gene239, Gene778	2	1
+32	Gene4 | Gene763	3	2	0.0	Gene4, Gene763	2	1
+33	Gene151 | Gene299	3	2	0.0	Gene151, Gene299	2	1
+34	Gene153 | Gene649	3	2	0.0	Gene153, Gene649	2	1
+35	Gene777 | Gene897	3	2	0.0	Gene777, Gene897	2	1
+36	Gene62 | Gene816	3	2	0.0	Gene62, Gene816	2	1
+37	Gene153 | Gene769	3	2	0.0	Gene153, Gene769	2	1
+38	Gene649 | Gene842	3	2	0.0	Gene649, Gene842	2	1
+39	True	3	1	0.5	True	1	1
+40	(Gene147 & Gene299) | (Gene147 & Gene842) | (Gene299 & Gene813) | (Gene813 & Gene842)	3	4	0.5	Gene147, Gene299, Gene813, Gene842	4	1
+41	True	3	1	0.5	True	1	1
+42	Gene870 & ~Gene528	2	2	0.0	Gene528, Gene870	2	1
+43	Gene166 & Gene778 & ~Gene222	2	3	0.0	Gene166, Gene222, Gene778	3	1
+44	Gene731 | ~Gene62	2	2	0.0	Gene62, Gene731	2	1
+45	Gene692	2	1	0.5	Gene692	1	1
+46	Gene540	2	1	0.5	Gene540	1	1
+47	~Gene655	2	1	0.5	Gene655	1	1
+48	Gene166 & Gene222 & Gene778	1	3	0.0	Gene166, Gene222, Gene778	3	1
+49	Gene380	1	1	0.5	Gene380	1	1
+50	Gene222 & Gene731 & Gene777 & ~Gene778	1	4	0.5	Gene222, Gene731, Gene777, Gene778	4	1

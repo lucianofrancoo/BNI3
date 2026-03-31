@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	Gene23 & ~Gene231	4	2	0.0	Gene23, Gene231	2	1
+2	Gene6 | Gene87	4	2	0.0	Gene6, Gene87	2	1
+3	Gene23 & ~Gene231	4	2	0.0	Gene23, Gene231	2	1
+4	Gene6 | Gene87	4	2	0.0	Gene6, Gene87	2	1
+5	Gene6 | Gene87	4	2	0.0	Gene6, Gene87	2	1
+6	Gene23 & ~Gene231	4	2	0.0	Gene23, Gene231	2	1
+7	Gene323 & Gene483	4	2	0.0	Gene323, Gene483	2	1
+8	Gene6 | Gene87	4	2	0.0	Gene6, Gene87	2	1
+9	Gene6 | Gene87	4	2	0.0	Gene6, Gene87	2	1
+10	Gene323 | Gene6	4	2	0.0	Gene323, Gene6	2	1
+11	Gene323 | Gene87	4	2	0.0	Gene323, Gene87	2	1
+12	Gene6 | Gene87	4	2	0.0	Gene6, Gene87	2	1
+13	Gene323 | Gene6	4	2	0.0	Gene323, Gene6	2	1
+14	Gene6 | Gene87	4	2	0.0	Gene6, Gene87	2	1
+15	Gene6 & Gene87	4	2	0.0	Gene6, Gene87	2	1
+16	Gene6 | Gene87	4	2	0.0	Gene6, Gene87	2	1
+17	Gene6 | Gene87	4	2	0.0	Gene6, Gene87	2	1
+18	Gene6 | Gene87	4	2	0.0	Gene6, Gene87	2	1
+19	Gene6 & Gene87	4	2	0.0	Gene6, Gene87	2	1
+20	Gene323 | Gene6	4	2	0.0	Gene323, Gene6	2	1
+21	Gene323 | Gene87	4	2	0.0	Gene323, Gene87	2	1
+22	Gene87	4	1	0.5	Gene87	1	1
+23	Gene323	4	1	0.5	Gene323	1	1
+24	Gene87	4	1	0.5	Gene87	1	1
+25	Gene87	4	1	0.5	Gene87	1	1
+26	Gene6	4	1	0.5	Gene6	1	1
+27	Gene289 & Gene324	3	2	0.0	Gene289, Gene324	2	1
+28	Gene470 | Gene87	3	2	0.0	Gene470, Gene87	2	1
+29	Gene470 | Gene87	3	2	0.0	Gene470, Gene87	2	1
+30	Gene458 | Gene6	3	2	0.0	Gene458, Gene6	2	1
+31	~Gene3	3	1	0.5	Gene3	1	1
+32	~Gene3	3	1	0.5	Gene3	1	1
+33	Gene137 | Gene443 | Gene87	2	3	0.0	Gene137, Gene443, Gene87	3	1
+34	Gene299 & Gene3 & ~Gene23	2	3	0.0	Gene23, Gene299, Gene3	3	1
+35	Gene19 & Gene3	2	2	0.0	Gene19, Gene3	2	1
+36	Gene3 | Gene87	2	2	0.0	Gene3, Gene87	2	1
+37	Gene3 | Gene87	2	2	0.0	Gene3, Gene87	2	1
+38	Gene19 & (Gene23 | ~Gene248)	2	3	0.0	Gene19, Gene23, Gene248	3	1
+39	Gene87 | ~Gene470	2	2	0.0	Gene470, Gene87	2	1
+40	Gene172 | Gene6 | Gene87	2	3	0.0	Gene172, Gene6, Gene87	3	1
+41	Gene23 & Gene289	2	2	0.0	Gene23, Gene289	2	1
+42	Gene470	2	1	0.5	Gene470	1	1
+43	~Gene23	2	1	0.5	Gene23	1	1
+44	Gene470	2	1	0.5	Gene470	1	1
+45	Gene180	2	1	0.5	Gene180	1	1
+46	Gene16 | Gene470	1	2	0.0	Gene16, Gene470	2	1
+47	Gene23 & Gene231	1	2	0.0	Gene23, Gene231	2	1
+48	Gene415 | Gene59	1	2	0.0	Gene415, Gene59	2	1
+49	Gene231	1	1	0.5	Gene231	1	1
+50	Gene240 | Gene3 | Gene323 | Gene467 | Gene470	1	5	1.0	Gene240, Gene3, Gene323, Gene467, Gene470	5	1

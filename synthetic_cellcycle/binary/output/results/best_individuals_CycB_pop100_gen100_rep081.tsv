@@ -1,0 +1,101 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	Cdc20 & CycA & ~CycB	4	3	0.0	Cdc20, CycA, CycB	3	81
+2	~CycE & ~E2F	4	2	0.0	CycE, E2F	2	81
+3	~CycD & ~E2F	4	2	0.0	CycD, E2F	2	81
+4	Cdh1 & UbcH10	4	2	0.0	Cdh1, UbcH10	2	81
+5	Cdh1 & UbcH10	4	2	0.0	Cdh1, UbcH10	2	81
+6	Cdc20 & Cdh1 & p27	4	3	0.0	Cdc20, Cdh1, p27	3	81
+7	Cdc20 & UbcH10	4	2	0.0	Cdc20, UbcH10	2	81
+8	Cdc20 & CycA & ~CycB	4	3	0.0	Cdc20, CycA, CycB	3	81
+9	Cdc20 & UbcH10	4	2	0.0	Cdc20, UbcH10	2	81
+10	Cdc20 & UbcH10 & p27	4	3	0.0	Cdc20, UbcH10, p27	3	81
+11	Cdh1 & UbcH10	4	2	0.0	Cdh1, UbcH10	2	81
+12	Cdh1 & UbcH10	4	2	0.0	Cdh1, UbcH10	2	81
+13	Cdh1 & CycA & UbcH10	4	3	0.0	Cdh1, CycA, UbcH10	3	81
+14	Cdh1 & UbcH10	4	2	0.0	Cdh1, UbcH10	2	81
+15	Cdc20 & p27	4	2	0.0	Cdc20, p27	2	81
+16	CycA & UbcH10 & p27	4	3	0.0	CycA, UbcH10, p27	3	81
+17	CycA & UbcH10	4	2	0.0	CycA, UbcH10	2	81
+18	Cdh1 & UbcH10	4	2	0.0	Cdh1, UbcH10	2	81
+19	Cdc20 & Cdh1 & UbcH10	4	3	0.0	Cdc20, Cdh1, UbcH10	3	81
+20	Cdc20 & p27	4	2	0.0	Cdc20, p27	2	81
+21	~CycB & ~E2F	4	2	0.0	CycB, E2F	2	81
+22	Cdh1 & UbcH10	4	2	0.0	Cdh1, UbcH10	2	81
+23	CycA & UbcH10 & p27	4	3	0.0	CycA, UbcH10, p27	3	81
+24	~CycD & ~E2F	4	2	0.0	CycD, E2F	2	81
+25	Cdc20 & UbcH10	4	2	0.0	Cdc20, UbcH10	2	81
+26	Cdc20 & UbcH10	4	2	0.0	Cdc20, UbcH10	2	81
+27	Cdh1 & UbcH10	4	2	0.0	Cdh1, UbcH10	2	81
+28	Cdh1 & UbcH10	4	2	0.0	Cdh1, UbcH10	2	81
+29	Cdc20 & (E2F | UbcH10)	4	3	0.0	Cdc20, E2F, UbcH10	3	81
+30	Cdc20 & UbcH10	4	2	0.0	Cdc20, UbcH10	2	81
+31	Cdc20 & UbcH10	4	2	0.0	Cdc20, UbcH10	2	81
+32	Cdc20 & UbcH10	4	2	0.0	Cdc20, UbcH10	2	81
+33	UbcH10 & p27 & ~CycB	4	3	0.0	CycB, UbcH10, p27	3	81
+34	UbcH10	4	1	0.5	UbcH10	1	81
+35	CycA & UbcH10	4	2	0.0	CycA, UbcH10	2	81
+36	UbcH10	4	1	0.5	UbcH10	1	81
+37	UbcH10	4	1	0.5	UbcH10	1	81
+38	UbcH10	4	1	0.5	UbcH10	1	81
+39	UbcH10	4	1	0.5	UbcH10	1	81
+40	UbcH10	4	1	0.5	UbcH10	1	81
+41	~CycB & ~E2F & ~UbcH10	3	3	0.0	CycB, E2F, UbcH10	3	81
+42	~CycD & (CycA | CycE)	3	3	0.0	CycA, CycD, CycE	3	81
+43	~CycA & ~E2F	3	2	0.0	CycA, E2F	2	81
+44	UbcH10 | (CycA & CycB)	3	3	0.0	CycA, CycB, UbcH10	3	81
+45	CycE & UbcH10	3	2	0.0	CycE, UbcH10	2	81
+46	Cdc20 & E2F	3	2	0.0	Cdc20, E2F	2	81
+47	E2F & UbcH10	3	2	0.0	E2F, UbcH10	2	81
+48	E2F & UbcH10	3	2	0.0	E2F, UbcH10	2	81
+49	CycA & p27	3	2	0.0	CycA, p27	2	81
+50	~E2F	3	1	0.5	E2F	1	81
+51	Cdc20	3	1	0.5	Cdc20	1	81
+52	Cdc20	3	1	0.5	Cdc20	1	81
+53	~E2F	3	1	0.5	E2F	1	81
+54	CycA & CycB & CycD & E2F	3	4	0.5	CycA, CycB, CycD, E2F	4	81
+55	E2F & UbcH10 & (Cdc20 | p27)	3	4	0.5	Cdc20, E2F, UbcH10, p27	4	81
+56	~Cdh1	3	1	0.5	Cdh1	1	81
+57	Cdh1 & p27	2	2	0.0	Cdh1, p27	2	81
+58	Cdh1 & Rb	2	2	0.0	Cdh1, Rb	2	81
+59	CycA & CycB	2	2	0.0	CycA, CycB	2	81
+60	CycA & CycB	2	2	0.0	CycA, CycB	2	81
+61	Cdc20 & CycE	2	2	0.0	Cdc20, CycE	2	81
+62	CycE & ~E2F	2	2	0.0	CycE, E2F	2	81
+63	Cdc20 & CycB	2	2	0.0	Cdc20, CycB	2	81
+64	CycA | UbcH10	2	2	0.0	CycA, UbcH10	2	81
+65	CycA	2	1	0.5	CycA	1	81
+66	CycA	2	1	0.5	CycA	1	81
+67	CycA & ~p27 & (Cdc20 | CycB)	2	4	0.5	Cdc20, CycA, CycB, p27	4	81
+68	Cdc20 & CycB	2	2	0.0	Cdc20, CycB	2	81
+69	~Rb	2	1	0.5	Rb	1	81
+70	~p27	2	1	0.5	p27	1	81
+71	~CycA	2	1	0.5	CycA	1	81
+72	~p27	2	1	0.5	p27	1	81
+73	Rb	2	1	0.5	Rb	1	81
+74	p27	2	1	0.5	p27	1	81
+75	~CycA	2	1	0.5	CycA	1	81
+76	~p27	2	1	0.5	p27	1	81
+77	CycA	2	1	0.5	CycA	1	81
+78	CycA	2	1	0.5	CycA	1	81
+79	Cdc20 | p27	1	2	0.0	Cdc20, p27	2	81
+80	CycA & ~UbcH10	1	2	0.0	CycA, UbcH10	2	81
+81	Cdh1 & CycD	1	2	0.0	Cdh1, CycD	2	81
+82	Cdh1 & CycD	1	2	0.0	Cdh1, CycD	2	81
+83	CycE & p27	1	2	0.0	CycE, p27	2	81
+84	CycA | CycD | ~CycB	1	3	0.0	CycA, CycB, CycD	3	81
+85	CycB & (Cdc20 | p27)	1	3	0.0	Cdc20, CycB, p27	3	81
+86	True	1	1	0.5	True	1	81
+87	E2F	1	1	0.5	E2F	1	81
+88	CycB	1	1	0.5	CycB	1	81
+89	Cdh1	1	1	0.5	Cdh1	1	81
+90	E2F	1	1	0.5	E2F	1	81
+91	Cdc20 | CycE | Rb | p27	1	4	0.5	Cdc20, CycE, Rb, p27	4	81
+92	Cdh1	1	1	0.5	Cdh1	1	81
+93	Cdh1	1	1	0.5	Cdh1	1	81
+94	CycD	1	1	0.5	CycD	1	81
+95	CycD	1	1	0.5	CycD	1	81
+96	Cdh1	1	1	0.5	Cdh1	1	81
+97	Cdh1	1	1	0.5	Cdh1	1	81
+98	Cdh1	1	1	0.5	Cdh1	1	81
+99	E2F	1	1	0.5	E2F	1	81
+100	CycB | E2F	0	2	0.0	CycB, E2F	2	81

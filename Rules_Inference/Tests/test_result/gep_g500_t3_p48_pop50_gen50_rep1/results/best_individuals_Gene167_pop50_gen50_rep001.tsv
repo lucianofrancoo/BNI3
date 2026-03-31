@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	Gene420 | ~Gene459	2	2	0.0	Gene420, Gene459	2	1
+2	Gene261 | Gene50	2	2	0.0	Gene261, Gene50	2	1
+3	Gene217 & Gene70 & Gene75	2	3	0.0	Gene217, Gene70, Gene75	3	1
+4	~Gene5 & (Gene53 | ~Gene107)	2	3	0.0	Gene107, Gene5, Gene53	3	1
+5	Gene261 | Gene439	2	2	0.0	Gene261, Gene439	2	1
+6	Gene261 | Gene50	2	2	0.0	Gene261, Gene50	2	1
+7	Gene193 | Gene290 | ~Gene427	2	3	0.0	Gene193, Gene290, Gene427	3	1
+8	Gene287 & Gene459	2	2	0.0	Gene287, Gene459	2	1
+9	Gene456 | Gene57	2	2	0.0	Gene456, Gene57	2	1
+10	Gene162 | Gene21 | Gene95	2	3	0.0	Gene162, Gene21, Gene95	3	1
+11	Gene289 | Gene50	2	2	0.0	Gene289, Gene50	2	1
+12	Gene99 & (Gene210 | Gene293)	2	3	0.0	Gene210, Gene293, Gene99	3	1
+13	Gene162 | Gene95	2	2	0.0	Gene162, Gene95	2	1
+14	Gene193 | Gene344	2	2	0.0	Gene193, Gene344	2	1
+15	Gene459 & Gene67	2	2	0.0	Gene459, Gene67	2	1
+16	Gene261 | Gene439	2	2	0.0	Gene261, Gene439	2	1
+17	Gene21 | Gene261 | Gene50	2	3	0.0	Gene21, Gene261, Gene50	3	1
+18	Gene50 | Gene99	2	2	0.0	Gene50, Gene99	2	1
+19	Gene108 | Gene289	2	2	0.0	Gene108, Gene289	2	1
+20	Gene75 & Gene99	2	2	0.0	Gene75, Gene99	2	1
+21	Gene261 | Gene50	2	2	0.0	Gene261, Gene50	2	1
+22	Gene459 & Gene67	2	2	0.0	Gene459, Gene67	2	1
+23	Gene428	2	1	0.5	Gene428	1	1
+24	Gene261	2	1	0.5	Gene261	1	1
+25	Gene21 | Gene287 | (Gene293 & Gene99)	2	4	0.5	Gene21, Gene287, Gene293, Gene99	4	1
+26	Gene289 & ~Gene290 & ~Gene50	1	3	0.0	Gene289, Gene290, Gene50	3	1
+27	Gene171 & Gene410	1	2	0.0	Gene171, Gene410	2	1
+28	Gene420 & ~Gene305	1	2	0.0	Gene305, Gene420	2	1
+29	Gene293 | Gene99	1	2	0.0	Gene293, Gene99	2	1
+30	Gene410 & Gene75 & ~Gene99	1	3	0.0	Gene410, Gene75, Gene99	3	1
+31	Gene440 | Gene454	1	2	0.0	Gene440, Gene454	2	1
+32	Gene293 | Gene365	1	2	0.0	Gene293, Gene365	2	1
+33	Gene241 | Gene456	1	2	0.0	Gene241, Gene456	2	1
+34	Gene366 | Gene75	1	2	0.0	Gene366, Gene75	2	1
+35	Gene261 & Gene293 & Gene50	1	3	0.0	Gene261, Gene293, Gene50	3	1
+36	Gene293 | Gene99	1	2	0.0	Gene293, Gene99	2	1
+37	Gene162 | Gene293 | Gene50 | Gene83	1	4	0.5	Gene162, Gene293, Gene50, Gene83	4	1
+38	Gene95	1	1	0.5	Gene95	1	1
+39	~Gene368	1	1	0.5	Gene368	1	1
+40	Gene303 & Gene410 & Gene70 & Gene75	1	4	0.5	Gene303, Gene410, Gene70, Gene75	4	1
+41	Gene21 & Gene459 & (Gene303 | Gene49)	1	4	0.5	Gene21, Gene303, Gene459, Gene49	4	1
+42	Gene459	1	1	0.5	Gene459	1	1
+43	Gene108 | (Gene366 & Gene99) | (Gene411 & Gene478)	1	5	1.0	Gene108, Gene366, Gene411, Gene478, Gene99	5	1
+44	Gene108 & Gene136 & Gene298 & Gene391 & Gene410 & Gene478	1	6	1.5	Gene108, Gene136, Gene298, Gene391, Gene410, Gene478	6	1
+45	Gene478 | Gene83	0	2	0.0	Gene478, Gene83	2	1
+46	Gene237 | Gene242	0	2	0.0	Gene237, Gene242	2	1
+47	Gene5	0	1	0.5	Gene5	1	1
+48	~Gene420	0	1	0.5	Gene420	1	1
+49	~Gene491	0	1	0.5	Gene491	1	1
+50	~Gene53	0	1	0.5	Gene53	1	1

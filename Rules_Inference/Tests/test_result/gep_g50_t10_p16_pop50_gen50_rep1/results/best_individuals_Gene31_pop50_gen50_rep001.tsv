@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition	mlp_loss
+1	Gene22 & (Gene19 | Gene37) & (Gene3 | Gene37)	9	4	0.5	Gene19, Gene22, Gene3, Gene37	4	1	0.004347131430116039
+2	Gene22 & (Gene19 | Gene37) & (Gene3 | Gene37)	9	4	0.5	Gene19, Gene22, Gene3, Gene37	4	1	0.004347131430116039
+3	Gene22 & (Gene19 | Gene37) & (Gene3 | Gene37)	9	4	0.5	Gene19, Gene22, Gene3, Gene37	4	1	0.004347131430116039
+4	Gene22 & (Gene19 | Gene37) & (Gene3 | Gene37)	9	4	0.5	Gene19, Gene22, Gene3, Gene37	4	1	0.004347131430116039
+5	Gene22 & (Gene19 | Gene37) & (Gene3 | Gene37)	9	4	0.5	Gene19, Gene22, Gene3, Gene37	4	1	0.004347131430116039
+6	Gene22 & (Gene19 | Gene37) & (Gene3 | Gene37)	9	4	0.5	Gene19, Gene22, Gene3, Gene37	4	1	0.004347131430116039
+7	Gene22 & (Gene19 | Gene37) & (Gene3 | Gene37)	9	4	0.5	Gene19, Gene22, Gene3, Gene37	4	1	0.004347131430116039
+8	Gene22 & (Gene19 | Gene37) & (Gene3 | Gene37)	9	4	0.5	Gene19, Gene22, Gene3, Gene37	4	1	0.004347131430116039
+9	Gene22 & (Gene19 | Gene37) & (Gene3 | Gene37)	9	4	0.5	Gene19, Gene22, Gene3, Gene37	4	1	0.004347131430116039
+10	Gene22 & (Gene19 | Gene37) & (Gene3 | Gene37)	9	4	0.5	Gene19, Gene22, Gene3, Gene37	4	1	0.004347131430116039
+11	Gene22 & Gene37	8	2	0.0	Gene22, Gene37	2	1	0.7100133360227414
+12	Gene22 & Gene37 & (Gene19 | Gene3)	8	4	0.5	Gene19, Gene22, Gene3, Gene37	4	1	0.004347131430116039
+13	Gene22 & Gene37 & (Gene19 | Gene3)	8	4	0.5	Gene19, Gene22, Gene3, Gene37	4	1	0.004347131430116039
+14	Gene19 & Gene22	7	2	0.0	Gene19, Gene22	2	1	0.984737729140656
+15	Gene22 & (Gene18 | Gene37) & (Gene37 | Gene49)	7	4	0.5	Gene18, Gene22, Gene37, Gene49	4	1	0.3529843425906626
+16	Gene19 & Gene3 & (Gene22 | Gene37) & (Gene37 | Gene49)	7	5	1.0	Gene19, Gene22, Gene3, Gene37, Gene49	5	1	0.0042854454688265155
+17	~Gene22 & (Gene24 | ~Gene3)	6	3	0.0	Gene22, Gene24, Gene3	3	1	0.020140204360132488
+18	Gene22 & (Gene19 | Gene3)	6	3	0.0	Gene19, Gene22, Gene3	3	1	0.09868175618826781
+19	Gene22	6	1	0.5	Gene22	1	1	0.09868175618826781
+20	Gene3 & Gene37	6	2	0.0	Gene3, Gene37	2	1	0.34380476795766585
+21	Gene37	6	1	0.5	Gene37	1	1	0.40990627616960584
+22	Gene37 | Gene41	6	2	0.0	Gene37, Gene41	2	1	0.40990627616960584
+23	Gene37	6	1	0.5	Gene37	1	1	0.44951042129041663
+24	Gene41 & Gene49	6	2	0.0	Gene41, Gene49	2	1	0.4675040893363511
+25	Gene3 & Gene39	6	2	0.0	Gene3, Gene39	2	1	0.570875213819691
+26	Gene19 & Gene9	6	2	0.0	Gene19, Gene9	2	1	0.7149392327476938
+27	Gene22 & Gene6	6	2	0.0	Gene22, Gene6	2	1	0.7491638490739569
+28	Gene22 & Gene6	6	2	0.0	Gene22, Gene6	2	1	0.7491638490739569
+29	Gene22 | Gene39	6	2	0.0	Gene22, Gene39	2	1	0.8562195104300029
+30	Gene10 & Gene22	6	2	0.0	Gene10, Gene22	2	1	0.887900144537326
+31	Gene10 & Gene22	6	2	0.0	Gene10, Gene22	2	1	0.887900144537326
+32	Gene22 & Gene3	6	2	0.0	Gene22, Gene3	2	1	1.0672521543354747
+33	Gene37 | (Gene13 & Gene19 & Gene22)	6	4	0.5	Gene13, Gene19, Gene22, Gene37	4	1	0.0897728612073045
+34	Gene37 & Gene6 & (Gene19 | Gene3)	6	4	0.5	Gene19, Gene3, Gene37, Gene6	4	1	0.42592489829671015
+35	(Gene19 | Gene22) & (Gene19 | Gene6) & (Gene22 | Gene3) & (Gene3 | Gene6)	6	4	0.5	Gene19, Gene22, Gene3, Gene6	4	1	0.7639452864455931
+36	Gene22	6	1	0.5	Gene22	1	1	1.1351027943354086
+37	Gene19 & Gene22 & Gene3 & Gene37 & Gene49	6	5	1.0	Gene19, Gene22, Gene3, Gene37, Gene49	5	1	0.0042854454688265155
+38	~Gene3 | (Gene22 & Gene39) | (Gene22 & Gene6) | (Gene23 & Gene39) | (Gene23 & Gene6)	6	5	1.0	Gene22, Gene23, Gene3, Gene39, Gene6	5	1	0.5661986813374064
+39	Gene21 & Gene5	5	2	0.0	Gene21, Gene5	2	1	0.14260647507542634
+40	Gene3 & Gene44	5	2	0.0	Gene3, Gene44	2	1	0.37031745964569085
+41	Gene22 & Gene49 & (Gene19 | Gene3)	5	4	0.5	Gene19, Gene22, Gene3, Gene49	4	1	0.9518251080535146
+42	Gene22 & Gene38 & Gene50 & (Gene19 | Gene3)	5	5	1.0	Gene19, Gene22, Gene3, Gene38, Gene50	5	1	0.011852867068242795
+43	Gene50	4	1	0.5	Gene50	1	1	0.6933155910161461
+44	Gene3	3	1	0.5	Gene3	1	1	0.09868175618826781
+45	Gene19 | Gene3 | Gene37	3	3	0.0	Gene19, Gene3, Gene37	3	1	0.34380476795766585
+46	Gene20 | ~Gene19 | ~Gene26	3	3	0.0	Gene19, Gene20, Gene26	3	1	0.6617410012275902
+47	Gene22 | Gene3	3	2	0.0	Gene22, Gene3	2	1	1.0672521543354747
+48	Gene22 | Gene3	3	2	0.0	Gene22, Gene3	2	1	1.0672521543354747
+49	Gene22 | Gene37 | (Gene19 & Gene3)	3	4	0.5	Gene19, Gene22, Gene3, Gene37	4	1	0.004347131430116039
+50	Gene3 & Gene49	2	2	0.0	Gene3, Gene49	2	1	0.9555936005214043

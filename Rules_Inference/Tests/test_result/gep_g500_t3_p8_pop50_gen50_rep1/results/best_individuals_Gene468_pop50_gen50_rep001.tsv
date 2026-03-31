@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	Gene465 | Gene87	2	2	0.0	Gene465, Gene87	2	1
+2	Gene465 | Gene87	2	2	0.0	Gene465, Gene87	2	1
+3	Gene347 | Gene78	2	2	0.0	Gene347, Gene78	2	1
+4	Gene465 | ~Gene136 | ~Gene90	2	3	0.0	Gene136, Gene465, Gene90	3	1
+5	Gene278 | Gene308	2	2	0.0	Gene278, Gene308	2	1
+6	Gene101 | Gene124	2	2	0.0	Gene101, Gene124	2	1
+7	Gene374 | Gene451	2	2	0.0	Gene374, Gene451	2	1
+8	Gene392 | (Gene110 & Gene402)	2	3	0.0	Gene110, Gene392, Gene402	3	1
+9	Gene289 | Gene78	2	2	0.0	Gene289, Gene78	2	1
+10	Gene101 | ~Gene124	2	2	0.0	Gene101, Gene124	2	1
+11	Gene289 | Gene78	2	2	0.0	Gene289, Gene78	2	1
+12	Gene374 | Gene90	2	2	0.0	Gene374, Gene90	2	1
+13	Gene117 | Gene305	2	2	0.0	Gene117, Gene305	2	1
+14	Gene465 | Gene87	2	2	0.0	Gene465, Gene87	2	1
+15	Gene124 | Gene305	2	2	0.0	Gene124, Gene305	2	1
+16	Gene128 | Gene68	2	2	0.0	Gene128, Gene68	2	1
+17	Gene101 | Gene124	2	2	0.0	Gene101, Gene124	2	1
+18	Gene133 | Gene190 | Gene411	2	3	0.0	Gene133, Gene190, Gene411	3	1
+19	Gene347 | Gene78	2	2	0.0	Gene347, Gene78	2	1
+20	Gene269 | Gene347	2	2	0.0	Gene269, Gene347	2	1
+21	Gene269 | Gene459	2	2	0.0	Gene269, Gene459	2	1
+22	Gene425 | Gene439 | Gene90	2	3	0.0	Gene425, Gene439, Gene90	3	1
+23	Gene117 | Gene87	2	2	0.0	Gene117, Gene87	2	1
+24	Gene278 | Gene308	2	2	0.0	Gene278, Gene308	2	1
+25	Gene347 | Gene78	2	2	0.0	Gene347, Gene78	2	1
+26	Gene278 | Gene308	2	2	0.0	Gene278, Gene308	2	1
+27	Gene117 | Gene305	2	2	0.0	Gene117, Gene305	2	1
+28	Gene245 | Gene392	2	2	0.0	Gene245, Gene392	2	1
+29	Gene133 | Gene190 | Gene411	2	3	0.0	Gene133, Gene190, Gene411	3	1
+30	Gene101 | Gene346	2	2	0.0	Gene101, Gene346	2	1
+31	Gene380 | Gene431	2	2	0.0	Gene380, Gene431	2	1
+32	Gene124 | (Gene329 & Gene68)	2	3	0.0	Gene124, Gene329, Gene68	3	1
+33	Gene289 | Gene78	2	2	0.0	Gene289, Gene78	2	1
+34	Gene101 | Gene68	2	2	0.0	Gene101, Gene68	2	1
+35	Gene374 | Gene386	2	2	0.0	Gene374, Gene386	2	1
+36	Gene117 | Gene305	2	2	0.0	Gene117, Gene305	2	1
+37	Gene136 | Gene222	2	2	0.0	Gene136, Gene222	2	1
+38	Gene288 | Gene413	2	2	0.0	Gene288, Gene413	2	1
+39	Gene347 | Gene78	2	2	0.0	Gene347, Gene78	2	1
+40	Gene117 | Gene146 | Gene305 | Gene54 | ~Gene425	2	5	1.0	Gene117, Gene146, Gene305, Gene425, Gene54	5	1
+41	Gene425 | Gene78	1	2	0.0	Gene425, Gene78	2	1
+42	Gene176 | Gene78	1	2	0.0	Gene176, Gene78	2	1
+43	Gene289 | Gene296	1	2	0.0	Gene289, Gene296	2	1
+44	Gene110	1	1	0.5	Gene110	1	1
+45	Gene16	1	1	0.5	Gene16	1	1
+46	Gene289	1	1	0.5	Gene289	1	1
+47	Gene305	1	1	0.5	Gene305	1	1
+48	Gene344 | (Gene288 & Gene413)	0	3	0.0	Gene288, Gene344, Gene413	3	1
+49	Gene101 & ~Gene124	0	2	0.0	Gene101, Gene124	2	1
+50	~Gene124	0	1	0.5	Gene124	1	1

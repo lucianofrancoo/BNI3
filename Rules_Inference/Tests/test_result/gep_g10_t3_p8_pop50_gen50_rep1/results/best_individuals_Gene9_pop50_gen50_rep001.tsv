@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	Gene6 | ~Gene3 | ~Gene9	2	3	0.0	Gene3, Gene6, Gene9	3	1
+2	Gene2 | Gene6	2	2	0.0	Gene2, Gene6	2	1
+3	Gene3 | Gene9 | ~Gene8	2	3	0.0	Gene3, Gene8, Gene9	3	1
+4	Gene2 | Gene3	2	2	0.0	Gene2, Gene3	2	1
+5	Gene3 | Gene9 | ~Gene8	2	3	0.0	Gene3, Gene8, Gene9	3	1
+6	Gene2 | Gene6	2	2	0.0	Gene2, Gene6	2	1
+7	True	2	1	0.5	True	1	1
+8	Gene3 | Gene4	2	2	0.0	Gene3, Gene4	2	1
+9	Gene1 | Gene2 | Gene5	2	3	0.0	Gene1, Gene2, Gene5	3	1
+10	Gene2 | Gene6	2	2	0.0	Gene2, Gene6	2	1
+11	Gene2 | Gene6	2	2	0.0	Gene2, Gene6	2	1
+12	Gene2 | Gene6	2	2	0.0	Gene2, Gene6	2	1
+13	Gene4 | Gene9	2	2	0.0	Gene4, Gene9	2	1
+14	Gene2 | Gene5	2	2	0.0	Gene2, Gene5	2	1
+15	Gene3 | Gene9 | ~Gene8	2	3	0.0	Gene3, Gene8, Gene9	3	1
+16	Gene2 | Gene5	2	2	0.0	Gene2, Gene5	2	1
+17	Gene2 | Gene3	2	2	0.0	Gene2, Gene3	2	1
+18	Gene6 | ~Gene9	2	2	0.0	Gene6, Gene9	2	1
+19	Gene1 | Gene2 | Gene3 | Gene7	2	4	0.5	Gene1, Gene2, Gene3, Gene7	4	1
+20	Gene2 | Gene3 | Gene4 | Gene6	2	4	0.5	Gene2, Gene3, Gene4, Gene6	4	1
+21	Gene3 | Gene4 | ~Gene6 | ~Gene9	2	4	0.5	Gene3, Gene4, Gene6, Gene9	4	1
+22	Gene2 | Gene3 | Gene5 | Gene9	2	4	0.5	Gene2, Gene3, Gene5, Gene9	4	1
+23	Gene1 | Gene2 | Gene7	1	3	0.0	Gene1, Gene2, Gene7	3	1
+24	Gene8 | Gene9	1	2	0.0	Gene8, Gene9	2	1
+25	Gene8 | Gene9	1	2	0.0	Gene8, Gene9	2	1
+26	Gene8 | Gene9	1	2	0.0	Gene8, Gene9	2	1
+27	Gene2 | Gene4	1	2	0.0	Gene2, Gene4	2	1
+28	Gene3 | Gene6	1	2	0.0	Gene3, Gene6	2	1
+29	Gene3 | Gene6	1	2	0.0	Gene3, Gene6	2	1
+30	Gene10 | Gene3	1	2	0.0	Gene10, Gene3	2	1
+31	Gene5 | Gene9	1	2	0.0	Gene5, Gene9	2	1
+32	Gene3 | Gene6	1	2	0.0	Gene3, Gene6	2	1
+33	Gene2 | Gene7	1	2	0.0	Gene2, Gene7	2	1
+34	Gene1 | Gene5	1	2	0.0	Gene1, Gene5	2	1
+35	Gene2 | Gene7	1	2	0.0	Gene2, Gene7	2	1
+36	Gene3 | Gene9	1	2	0.0	Gene3, Gene9	2	1
+37	Gene1 | Gene3 | Gene9	1	3	0.0	Gene1, Gene3, Gene9	3	1
+38	Gene10 | Gene2	1	2	0.0	Gene10, Gene2	2	1
+39	Gene1 | Gene3	1	2	0.0	Gene1, Gene3	2	1
+40	Gene3 | Gene6 | Gene9	1	3	0.0	Gene3, Gene6, Gene9	3	1
+41	Gene4	1	1	0.5	Gene4	1	1
+42	Gene6	1	1	0.5	Gene6	1	1
+43	Gene6	1	1	0.5	Gene6	1	1
+44	Gene6	1	1	0.5	Gene6	1	1
+45	Gene4	1	1	0.5	Gene4	1	1
+46	~Gene3	1	1	0.5	Gene3	1	1
+47	~Gene9	1	1	0.5	Gene9	1	1
+48	Gene2	1	1	0.5	Gene2	1	1
+49	Gene6	1	1	0.5	Gene6	1	1
+50	~Gene2 & ~Gene6	0	2	0.0	Gene2, Gene6	2	1

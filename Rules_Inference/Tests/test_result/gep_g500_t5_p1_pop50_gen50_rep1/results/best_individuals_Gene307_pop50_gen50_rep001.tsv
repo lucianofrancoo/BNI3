@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	Gene95 & (Gene51 | ~Gene304)	4	3	0.0	Gene304, Gene51, Gene95	3	1
+2	~Gene303 & ~Gene306	4	2	0.0	Gene303, Gene306	2	1
+3	Gene95 & (Gene150 | Gene51)	4	3	0.0	Gene150, Gene51, Gene95	3	1
+4	Gene95 & (Gene51 | ~Gene304)	4	3	0.0	Gene304, Gene51, Gene95	3	1
+5	~Gene303 & ~Gene306	4	2	0.0	Gene303, Gene306	2	1
+6	~Gene303 & ~Gene306	4	2	0.0	Gene303, Gene306	2	1
+7	~Gene35 & ~Gene435	4	2	0.0	Gene35, Gene435	2	1
+8	Gene95 & (Gene35 | Gene59)	4	3	0.0	Gene35, Gene59, Gene95	3	1
+9	Gene95 | (Gene190 & ~Gene304)	4	3	0.0	Gene190, Gene304, Gene95	3	1
+10	Gene95 & (Gene51 | ~Gene304)	4	3	0.0	Gene304, Gene51, Gene95	3	1
+11	Gene95 & (Gene150 | Gene51)	4	3	0.0	Gene150, Gene51, Gene95	3	1
+12	Gene389 & Gene406 & Gene95	4	3	0.0	Gene389, Gene406, Gene95	3	1
+13	Gene95	4	1	0.5	Gene95	1	1
+14	Gene95	4	1	0.5	Gene95	1	1
+15	Gene95	4	1	0.5	Gene95	1	1
+16	Gene95	4	1	0.5	Gene95	1	1
+17	Gene95	4	1	0.5	Gene95	1	1
+18	Gene392	4	1	0.5	Gene392	1	1
+19	Gene95 | (Gene135 & Gene2 & Gene414) | (Gene135 & Gene35 & Gene414)	4	5	1.0	Gene135, Gene2, Gene35, Gene414, Gene95	5	1
+20	Gene95 | (Gene186 & Gene337 & Gene347) | (Gene186 & Gene347 & Gene35)	4	5	1.0	Gene186, Gene337, Gene347, Gene35, Gene95	5	1
+21	Gene435 & ~Gene119	3	2	0.0	Gene119, Gene435	2	1
+22	Gene406 & Gene425 & Gene48	3	3	0.0	Gene406, Gene425, Gene48	3	1
+23	Gene239 & Gene476	3	2	0.0	Gene239, Gene476	2	1
+24	Gene254	3	1	0.5	Gene254	1	1
+25	~Gene35	3	1	0.5	Gene35	1	1
+26	Gene333 | Gene95	2	2	0.0	Gene333, Gene95	2	1
+27	Gene43 & ~Gene303 & ~Gene476	2	3	0.0	Gene303, Gene43, Gene476	3	1
+28	Gene319 & Gene412	2	2	0.0	Gene319, Gene412	2	1
+29	Gene333 & (Gene436 | ~Gene304)	2	3	0.0	Gene304, Gene333, Gene436	3	1
+30	Gene303 | ~Gene306	2	2	0.0	Gene303, Gene306	2	1
+31	Gene304 | Gene54	2	2	0.0	Gene304, Gene54	2	1
+32	~Gene337	2	1	0.5	Gene337	1	1
+33	~Gene476	2	1	0.5	Gene476	1	1
+34	~Gene476	2	1	0.5	Gene476	1	1
+35	~Gene414	2	1	0.5	Gene414	1	1
+36	Gene50	2	1	0.5	Gene50	1	1
+37	~Gene304 & (Gene135 | Gene54 | ~Gene406)	2	4	0.5	Gene135, Gene304, Gene406, Gene54	4	1
+38	Gene190	2	1	0.5	Gene190	1	1
+39	Gene476	2	1	0.5	Gene476	1	1
+40	Gene306 | ~Gene186	1	2	0.0	Gene186, Gene306	2	1
+41	Gene476 | Gene485	1	2	0.0	Gene476, Gene485	2	1
+42	Gene135 | Gene51	1	2	0.0	Gene135, Gene51	2	1
+43	Gene59	1	1	0.5	Gene59	1	1
+44	Gene303 & (Gene407 | Gene476 | ~Gene414)	1	4	0.5	Gene303, Gene407, Gene414, Gene476	4	1
+45	Gene135	1	1	0.5	Gene135	1	1
+46	Gene119 | Gene476	0	2	0.0	Gene119, Gene476	2	1
+47	~Gene95	0	1	0.5	Gene95	1	1
+48	~Gene95	0	1	0.5	Gene95	1	1
+49	~Gene95	0	1	0.5	Gene95	1	1
+50	~Gene95	0	1	0.5	Gene95	1	1

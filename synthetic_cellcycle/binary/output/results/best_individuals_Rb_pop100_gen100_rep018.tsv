@@ -1,0 +1,101 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	False	4	1	0.5	False	1	18
+2	Rb & p27	4	2	0.0	Rb, p27	2	18
+3	Cdc20 & Cdh1 & E2F	4	3	0.0	Cdc20, Cdh1, E2F	3	18
+4	~Cdh1 & ~Rb & ~UbcH10	4	3	0.0	Cdh1, Rb, UbcH10	3	18
+5	CycB & UbcH10	4	2	0.0	CycB, UbcH10	2	18
+6	~Cdh1 & ~CycE & ~p27	4	3	0.0	Cdh1, CycE, p27	3	18
+7	False	4	1	0.5	False	1	18
+8	CycA & CycD & E2F	4	3	0.0	CycA, CycD, E2F	3	18
+9	False	4	1	0.5	False	1	18
+10	CycD & UbcH10	4	2	0.0	CycD, UbcH10	2	18
+11	Rb & UbcH10	4	2	0.0	Rb, UbcH10	2	18
+12	E2F & Rb & p27	4	3	0.0	E2F, Rb, p27	3	18
+13	Rb & UbcH10	4	2	0.0	Rb, UbcH10	2	18
+14	Rb & UbcH10	4	2	0.0	Rb, UbcH10	2	18
+15	CycD & UbcH10	4	2	0.0	CycD, UbcH10	2	18
+16	Rb & p27	4	2	0.0	Rb, p27	2	18
+17	CycE & Rb & UbcH10	4	3	0.0	CycE, Rb, UbcH10	3	18
+18	CycE & UbcH10	4	2	0.0	CycE, UbcH10	2	18
+19	CycB & UbcH10	4	2	0.0	CycB, UbcH10	2	18
+20	CycD & UbcH10 & ~Rb	4	3	0.0	CycD, Rb, UbcH10	3	18
+21	E2F & Rb	4	2	0.0	E2F, Rb	2	18
+22	E2F & UbcH10	4	2	0.0	E2F, UbcH10	2	18
+23	CycA & CycB & UbcH10	4	3	0.0	CycA, CycB, UbcH10	3	18
+24	~Cdc20 & ~E2F	4	2	0.0	Cdc20, E2F	2	18
+25	E2F & UbcH10	4	2	0.0	E2F, UbcH10	2	18
+26	CycD & ~Cdh1 & ~E2F	4	3	0.0	Cdh1, CycD, E2F	3	18
+27	Rb & UbcH10	4	2	0.0	Rb, UbcH10	2	18
+28	E2F & Rb & ~UbcH10	4	3	0.0	E2F, Rb, UbcH10	3	18
+29	E2F & UbcH10	4	2	0.0	E2F, UbcH10	2	18
+30	CycE & UbcH10 & ~CycD	4	3	0.0	CycD, CycE, UbcH10	3	18
+31	CycB & Rb & p27	4	3	0.0	CycB, Rb, p27	3	18
+32	UbcH10 & ~p27	4	2	0.0	UbcH10, p27	2	18
+33	Rb & p27	4	2	0.0	Rb, p27	2	18
+34	E2F & UbcH10 & p27	4	3	0.0	E2F, UbcH10, p27	3	18
+35	CycB & UbcH10	4	2	0.0	CycB, UbcH10	2	18
+36	CycB & CycE & Rb & p27	4	4	0.5	CycB, CycE, Rb, p27	4	18
+37	CycB & CycE & Rb & UbcH10	4	4	0.5	CycB, CycE, Rb, UbcH10	4	18
+38	Cdc20 & Rb & UbcH10 & ~E2F	4	4	0.5	Cdc20, E2F, Rb, UbcH10	4	18
+39	~Cdh1 & (CycD | E2F | Rb)	4	4	0.5	Cdh1, CycD, E2F, Rb	4	18
+40	(Rb | ~CycA) & (Rb | ~p27) & (UbcH10 | ~CycA) & (UbcH10 | ~p27)	4	4	0.5	CycA, Rb, UbcH10, p27	4	18
+41	Cdc20 & CycB & Rb & UbcH10	4	4	0.5	Cdc20, CycB, Rb, UbcH10	4	18
+42	Cdc20 & UbcH10 & ~E2F	3	3	0.0	Cdc20, E2F, UbcH10	3	18
+43	Cdc20 & CycE	3	2	0.0	Cdc20, CycE	2	18
+44	Cdc20 & p27	3	2	0.0	Cdc20, p27	2	18
+45	CycB & Rb	3	2	0.0	CycB, Rb	2	18
+46	Cdh1 & Rb	3	2	0.0	Cdh1, Rb	2	18
+47	Cdc20 & Rb	3	2	0.0	Cdc20, Rb	2	18
+48	CycD & Rb	3	2	0.0	CycD, Rb	2	18
+49	CycB & E2F	3	2	0.0	CycB, E2F	2	18
+50	UbcH10 & p27 & ~E2F	3	3	0.0	E2F, UbcH10, p27	3	18
+51	CycB & E2F & p27	3	3	0.0	CycB, E2F, p27	3	18
+52	UbcH10 & p27	3	2	0.0	UbcH10, p27	2	18
+53	Cdc20 & p27	3	2	0.0	Cdc20, p27	2	18
+54	CycB & E2F	3	2	0.0	CycB, E2F	2	18
+55	CycB & ~p27	3	2	0.0	CycB, p27	2	18
+56	CycA & CycD	3	2	0.0	CycA, CycD	2	18
+57	UbcH10 & p27	3	2	0.0	UbcH10, p27	2	18
+58	UbcH10 & (p27 | ~Cdh1)	3	3	0.0	Cdh1, UbcH10, p27	3	18
+59	~CycA	3	1	0.5	CycA	1	18
+60	Rb	3	1	0.5	Rb	1	18
+61	~p27	3	1	0.5	p27	1	18
+62	~p27	3	1	0.5	p27	1	18
+63	UbcH10	3	1	0.5	UbcH10	1	18
+64	Rb	3	1	0.5	Rb	1	18
+65	UbcH10	3	1	0.5	UbcH10	1	18
+66	UbcH10	3	1	0.5	UbcH10	1	18
+67	~p27	3	1	0.5	p27	1	18
+68	UbcH10	3	1	0.5	UbcH10	1	18
+69	UbcH10	3	1	0.5	UbcH10	1	18
+70	CycB & ~UbcH10	2	2	0.0	CycB, UbcH10	2	18
+71	CycB & CycE	2	2	0.0	CycB, CycE	2	18
+72	Cdh1 & ~E2F	2	2	0.0	Cdh1, E2F	2	18
+73	Cdc20 & Cdh1	2	2	0.0	Cdc20, Cdh1	2	18
+74	~E2F	2	1	0.5	E2F	1	18
+75	~CycB	2	1	0.5	CycB	1	18
+76	CycB	2	1	0.5	CycB	1	18
+77	CycB	2	1	0.5	CycB	1	18
+78	E2F	2	1	0.5	E2F	1	18
+79	~Cdc20	2	1	0.5	Cdc20	1	18
+80	CycD	2	1	0.5	CycD	1	18
+81	CycA | Rb	1	2	0.0	CycA, Rb	2	18
+82	Cdh1 & p27	1	2	0.0	Cdh1, p27	2	18
+83	CycB | UbcH10 | ~E2F	1	3	0.0	CycB, E2F, UbcH10	3	18
+84	~Cdh1 | ~Rb	1	2	0.0	Cdh1, Rb	2	18
+85	CycE	1	1	0.5	CycE	1	18
+86	p27	1	1	0.5	p27	1	18
+87	CycE | (Cdc20 & Cdh1 & E2F)	1	4	0.5	Cdc20, Cdh1, CycE, E2F	4	18
+88	~Rb	1	1	0.5	Rb	1	18
+89	CycE	1	1	0.5	CycE	1	18
+90	~Rb	1	1	0.5	Rb	1	18
+91	~UbcH10	1	1	0.5	UbcH10	1	18
+92	p27	1	1	0.5	p27	1	18
+93	~Rb	1	1	0.5	Rb	1	18
+94	CycA	1	1	0.5	CycA	1	18
+95	p27	1	1	0.5	p27	1	18
+96	~UbcH10	1	1	0.5	UbcH10	1	18
+97	~Rb	1	1	0.5	Rb	1	18
+98	~UbcH10	1	1	0.5	UbcH10	1	18
+99	Cdh1 | Rb | UbcH10	0	3	0.0	Cdh1, Rb, UbcH10	3	18
+100	True	0	1	0.5	True	1	18

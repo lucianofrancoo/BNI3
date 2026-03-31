@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	Gene465 | Gene89	4	2	0.0	Gene465, Gene89	2	1
+2	Gene29 & ~Gene181	4	2	0.0	Gene181, Gene29	2	1
+3	Gene465 | Gene89	4	2	0.0	Gene465, Gene89	2	1
+4	Gene465 & (Gene23 | Gene40)	4	3	0.0	Gene23, Gene40, Gene465	3	1
+5	Gene465 | Gene89	4	2	0.0	Gene465, Gene89	2	1
+6	Gene465 & (Gene23 | ~Gene458)	4	3	0.0	Gene23, Gene458, Gene465	3	1
+7	Gene465 | Gene89	4	2	0.0	Gene465, Gene89	2	1
+8	Gene23 & Gene465	4	2	0.0	Gene23, Gene465	2	1
+9	Gene465 | Gene89	4	2	0.0	Gene465, Gene89	2	1
+10	Gene465 | Gene89	4	2	0.0	Gene465, Gene89	2	1
+11	Gene465	4	1	0.5	Gene465	1	1
+12	Gene431 & Gene439	4	2	0.0	Gene431, Gene439	2	1
+13	Gene465 | Gene89	4	2	0.0	Gene465, Gene89	2	1
+14	Gene439 & (Gene27 | Gene465)	4	3	0.0	Gene27, Gene439, Gene465	3	1
+15	Gene465 & Gene93	4	2	0.0	Gene465, Gene93	2	1
+16	Gene439 & (Gene27 | Gene465)	4	3	0.0	Gene27, Gene439, Gene465	3	1
+17	Gene23 & Gene465	4	2	0.0	Gene23, Gene465	2	1
+18	Gene465 | Gene89	4	2	0.0	Gene465, Gene89	2	1
+19	Gene465	4	1	0.5	Gene465	1	1
+20	Gene465	4	1	0.5	Gene465	1	1
+21	Gene465	4	1	0.5	Gene465	1	1
+22	Gene465	4	1	0.5	Gene465	1	1
+23	Gene29 | Gene465	3	2	0.0	Gene29, Gene465	2	1
+24	Gene439 | Gene89	3	2	0.0	Gene439, Gene89	2	1
+25	Gene27 & Gene363	3	2	0.0	Gene27, Gene363	2	1
+26	Gene27 & Gene439	3	2	0.0	Gene27, Gene439	2	1
+27	Gene439 | Gene465	3	2	0.0	Gene439, Gene465	2	1
+28	Gene27 & Gene465	3	2	0.0	Gene27, Gene465	2	1
+29	Gene313 | Gene465	3	2	0.0	Gene313, Gene465	2	1
+30	Gene181 & Gene27 & Gene439 & Gene465	3	4	0.5	Gene181, Gene27, Gene439, Gene465	4	1
+31	Gene381	3	1	0.5	Gene381	1	1
+32	Gene89 & (Gene27 | Gene396 | Gene439)	3	4	0.5	Gene27, Gene396, Gene439, Gene89	4	1
+33	Gene363	3	1	0.5	Gene363	1	1
+34	Gene439	3	1	0.5	Gene439	1	1
+35	Gene192 & Gene394 & Gene431 & Gene472 & Gene476	3	5	1.0	Gene192, Gene394, Gene431, Gene472, Gene476	5	1
+36	Gene40 | (Gene458 & Gene465)	2	3	0.0	Gene40, Gene458, Gene465	3	1
+37	~Gene27 & ~Gene363	2	2	0.0	Gene27, Gene363	2	1
+38	Gene284 & Gene38 & Gene439	2	3	0.0	Gene284, Gene38, Gene439	3	1
+39	Gene27 | Gene439	2	2	0.0	Gene27, Gene439	2	1
+40	Gene464 | (Gene27 & Gene458 & Gene465)	2	4	0.5	Gene27, Gene458, Gene464, Gene465	4	1
+41	Gene23	2	1	0.5	Gene23	1	1
+42	~Gene242	2	1	0.5	Gene242	1	1
+43	~Gene436	2	1	0.5	Gene436	1	1
+44	Gene439 | Gene465 | (Gene27 & Gene396)	2	4	0.5	Gene27, Gene396, Gene439, Gene465	4	1
+45	Gene27	2	1	0.5	Gene27	1	1
+46	Gene27	2	1	0.5	Gene27	1	1
+47	Gene139 | Gene439 | Gene465 | Gene89	2	4	0.5	Gene139, Gene439, Gene465, Gene89	4	1
+48	Gene281	2	1	0.5	Gene281	1	1
+49	Gene385 | Gene394 | Gene465	1	3	0.0	Gene385, Gene394, Gene465	3	1
+50	Gene118 | Gene394	1	2	0.0	Gene118, Gene394	2	1

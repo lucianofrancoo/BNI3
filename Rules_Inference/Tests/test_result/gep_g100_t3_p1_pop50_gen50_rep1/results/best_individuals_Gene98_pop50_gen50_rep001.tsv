@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	Gene79 & (~Gene27 | ~Gene51)	2	3	0.0	Gene27, Gene51, Gene79	3	1
+2	Gene96 | ~Gene30	2	2	0.0	Gene30, Gene96	2	1
+3	Gene75 | Gene89	2	2	0.0	Gene75, Gene89	2	1
+4	Gene39 | Gene51	2	2	0.0	Gene39, Gene51	2	1
+5	Gene79 & (~Gene27 | ~Gene51)	2	3	0.0	Gene27, Gene51, Gene79	3	1
+6	Gene75 | Gene89	2	2	0.0	Gene75, Gene89	2	1
+7	Gene73 | Gene89	2	2	0.0	Gene73, Gene89	2	1
+8	Gene60 | Gene91	2	2	0.0	Gene60, Gene91	2	1
+9	Gene89 & (Gene73 | ~Gene5)	2	3	0.0	Gene5, Gene73, Gene89	3	1
+10	Gene14 & Gene26	2	2	0.0	Gene14, Gene26	2	1
+11	Gene39 | Gene89	2	2	0.0	Gene39, Gene89	2	1
+12	Gene22 & Gene49	2	2	0.0	Gene22, Gene49	2	1
+13	Gene12 & Gene49	2	2	0.0	Gene12, Gene49	2	1
+14	Gene89 | Gene9	2	2	0.0	Gene89, Gene9	2	1
+15	Gene60 | Gene91	2	2	0.0	Gene60, Gene91	2	1
+16	Gene21 | ~Gene30	2	2	0.0	Gene21, Gene30	2	1
+17	Gene51 | (Gene22 & Gene50)	2	3	0.0	Gene22, Gene50, Gene51	3	1
+18	Gene49 & Gene73	2	2	0.0	Gene49, Gene73	2	1
+19	Gene79 & (~Gene27 | ~Gene51)	2	3	0.0	Gene27, Gene51, Gene79	3	1
+20	Gene51 | Gene75	2	2	0.0	Gene51, Gene75	2	1
+21	Gene39 & Gene89	2	2	0.0	Gene39, Gene89	2	1
+22	Gene57 | Gene89	2	2	0.0	Gene57, Gene89	2	1
+23	Gene79 & (~Gene27 | ~Gene9)	2	3	0.0	Gene27, Gene79, Gene9	3	1
+24	Gene13 & Gene49	2	2	0.0	Gene13, Gene49	2	1
+25	Gene89	2	1	0.5	Gene89	1	1
+26	Gene49 & (Gene51 | Gene89) & (Gene86 | Gene89)	2	4	0.5	Gene49, Gene51, Gene86, Gene89	4	1
+27	Gene51	2	1	0.5	Gene51	1	1
+28	Gene10 & Gene48 & Gene79 & ~Gene74	2	4	0.5	Gene10, Gene48, Gene74, Gene79	4	1
+29	Gene73	2	1	0.5	Gene73	1	1
+30	Gene73 | (Gene42 & Gene57 & Gene91)	2	4	0.5	Gene42, Gene57, Gene73, Gene91	4	1
+31	Gene25 & Gene86	1	2	0.0	Gene25, Gene86	2	1
+32	Gene88 | Gene91	1	2	0.0	Gene88, Gene91	2	1
+33	Gene51 & Gene66 & Gene86	1	3	0.0	Gene51, Gene66, Gene86	3	1
+34	Gene66 & Gene86 & Gene89	1	3	0.0	Gene66, Gene86, Gene89	3	1
+35	Gene88 | Gene89	1	2	0.0	Gene88, Gene89	2	1
+36	Gene83 | Gene88 | Gene89	1	3	0.0	Gene83, Gene88, Gene89	3	1
+37	Gene73 | Gene74	1	2	0.0	Gene73, Gene74	2	1
+38	Gene89 | ~Gene22	1	2	0.0	Gene22, Gene89	2	1
+39	Gene88 | Gene89	1	2	0.0	Gene88, Gene89	2	1
+40	Gene75	1	1	0.5	Gene75	1	1
+41	Gene36 & Gene50 & Gene79 & Gene86	1	4	0.5	Gene36, Gene50, Gene79, Gene86	4	1
+42	Gene30 | ~Gene96	0	2	0.0	Gene30, Gene96	2	1
+43	Gene30 | ~Gene96	0	2	0.0	Gene30, Gene96	2	1
+44	Gene44 & Gene77	0	2	0.0	Gene44, Gene77	2	1
+45	Gene50 & Gene88	0	2	0.0	Gene50, Gene88	2	1
+46	Gene83 | Gene88	0	2	0.0	Gene83, Gene88	2	1
+47	Gene88	0	1	0.5	Gene88	1	1
+48	~Gene91	0	1	0.5	Gene91	1	1
+49	~Gene89	0	1	0.5	Gene89	1	1
+50	~Gene79	0	1	0.5	Gene79	1	1

@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	Gene200 & Gene767 & Gene97	4	3	0.0	Gene200, Gene767, Gene97	3	1
+2	Gene200 & Gene767 & Gene97	4	3	0.0	Gene200, Gene767, Gene97	3	1
+3	~Gene448 & ~Gene918 & ~Gene943	4	3	0.0	Gene448, Gene918, Gene943	3	1
+4	Gene200 & Gene767 & Gene97	4	3	0.0	Gene200, Gene767, Gene97	3	1
+5	~Gene184 & ~Gene918	4	2	0.0	Gene184, Gene918	2	1
+6	Gene200 & Gene767 & Gene97	4	3	0.0	Gene200, Gene767, Gene97	3	1
+7	Gene703 & Gene767	4	2	0.0	Gene703, Gene767	2	1
+8	Gene200 & Gene767	4	2	0.0	Gene200, Gene767	2	1
+9	Gene200 & Gene767	4	2	0.0	Gene200, Gene767	2	1
+10	Gene200 & Gene767 & Gene97	4	3	0.0	Gene200, Gene767, Gene97	3	1
+11	Gene767 & Gene97	4	2	0.0	Gene767, Gene97	2	1
+12	Gene200 & Gene767	4	2	0.0	Gene200, Gene767	2	1
+13	Gene200 & Gene767	4	2	0.0	Gene200, Gene767	2	1
+14	Gene767 & Gene97	4	2	0.0	Gene767, Gene97	2	1
+15	Gene703 & Gene767	4	2	0.0	Gene703, Gene767	2	1
+16	Gene200 & Gene767 & Gene97	4	3	0.0	Gene200, Gene767, Gene97	3	1
+17	~Gene918 & ~Gene943	4	2	0.0	Gene918, Gene943	2	1
+18	Gene200 & Gene767	4	2	0.0	Gene200, Gene767	2	1
+19	~Gene184 & (Gene767 | Gene943)	4	3	0.0	Gene184, Gene767, Gene943	3	1
+20	Gene767 & Gene795	4	2	0.0	Gene767, Gene795	2	1
+21	~Gene448	4	1	0.5	Gene448	1	1
+22	Gene200 | ~Gene767	3	2	0.0	Gene200, Gene767	2	1
+23	Gene918 | ~Gene943	3	2	0.0	Gene918, Gene943	2	1
+24	Gene767	3	1	0.5	Gene767	1	1
+25	Gene97	3	1	0.5	Gene97	1	1
+26	Gene200 & Gene58 & Gene767 & Gene795	3	4	0.5	Gene200, Gene58, Gene767, Gene795	4	1
+27	Gene918 & Gene943	2	2	0.0	Gene918, Gene943	2	1
+28	Gene795 & Gene918	2	2	0.0	Gene795, Gene918	2	1
+29	Gene133 & Gene458	2	2	0.0	Gene133, Gene458	2	1
+30	False	2	1	0.5	False	1	1
+31	Gene767 & Gene86 & ~Gene795	2	3	0.0	Gene767, Gene795, Gene86	3	1
+32	Gene767 & ~Gene58 & (~Gene200 | ~Gene795)	2	4	0.5	Gene200, Gene58, Gene767, Gene795	4	1
+33	Gene200 | ~Gene255 | ~Gene447 | ~Gene795	2	4	0.5	Gene200, Gene255, Gene447, Gene795	4	1
+34	Gene200 & Gene255 & Gene767 & Gene795	2	4	0.5	Gene200, Gene255, Gene767, Gene795	4	1
+35	Gene184 & Gene774	1	2	0.0	Gene184, Gene774	2	1
+36	~Gene767	1	1	0.5	Gene767	1	1
+37	Gene184	1	1	0.5	Gene184	1	1
+38	Gene448 & (Gene689 | ~Gene184) & (Gene918 | ~Gene184)	1	4	0.5	Gene184, Gene448, Gene689, Gene918	4	1
+39	~Gene767	1	1	0.5	Gene767	1	1
+40	~Gene97	1	1	0.5	Gene97	1	1
+41	~Gene878	1	1	0.5	Gene878	1	1
+42	~Gene97	1	1	0.5	Gene97	1	1
+43	~Gene97	1	1	0.5	Gene97	1	1
+44	~Gene767	1	1	0.5	Gene767	1	1
+45	~Gene767	1	1	0.5	Gene767	1	1
+46	Gene815	1	1	0.5	Gene815	1	1
+47	~Gene200	1	1	0.5	Gene200	1	1
+48	~Gene200	1	1	0.5	Gene200	1	1
+49	~Gene200	1	1	0.5	Gene200	1	1
+50	~Gene795 | (~Gene184 & ~Gene767) | (~Gene200 & ~Gene767)	0	4	0.5	Gene184, Gene200, Gene767, Gene795	4	1

@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	Gene450 | Gene88	4	2	0.0	Gene450, Gene88	2	1
+2	Gene88 | (Gene200 & Gene474)	4	3	0.0	Gene200, Gene474, Gene88	3	1
+3	Gene197 | Gene211	4	2	0.0	Gene197, Gene211	2	1
+4	Gene450 | Gene88	4	2	0.0	Gene450, Gene88	2	1
+5	Gene381 | Gene417	4	2	0.0	Gene381, Gene417	2	1
+6	Gene450 | Gene88	4	2	0.0	Gene450, Gene88	2	1
+7	Gene435 | (Gene448 & Gene78)	4	3	0.0	Gene435, Gene448, Gene78	3	1
+8	Gene88	4	1	0.5	Gene88	1	1
+9	Gene12 | Gene336 | Gene489	4	3	0.0	Gene12, Gene336, Gene489	3	1
+10	Gene200 | Gene88	4	2	0.0	Gene200, Gene88	2	1
+11	Gene200 | Gene211	4	2	0.0	Gene200, Gene211	2	1
+12	Gene200 | Gene211	4	2	0.0	Gene200, Gene211	2	1
+13	Gene450 | Gene88	4	2	0.0	Gene450, Gene88	2	1
+14	Gene88	4	1	0.5	Gene88	1	1
+15	Gene23 | Gene336	4	2	0.0	Gene23, Gene336	2	1
+16	Gene23 | Gene336	4	2	0.0	Gene23, Gene336	2	1
+17	Gene450 | Gene473	4	2	0.0	Gene450, Gene473	2	1
+18	Gene381 | Gene417	4	2	0.0	Gene381, Gene417	2	1
+19	Gene197 | Gene88	4	2	0.0	Gene197, Gene88	2	1
+20	Gene23 | Gene283	4	2	0.0	Gene23, Gene283	2	1
+21	Gene476 | Gene88	4	2	0.0	Gene476, Gene88	2	1
+22	Gene88 & (Gene435 | Gene50)	3	3	0.0	Gene435, Gene50, Gene88	3	1
+23	Gene394 | Gene40	3	2	0.0	Gene394, Gene40	2	1
+24	Gene64 | Gene78	3	2	0.0	Gene64, Gene78	2	1
+25	Gene88 & ~Gene435	3	2	0.0	Gene435, Gene88	2	1
+26	Gene200 | Gene25	3	2	0.0	Gene200, Gene25	2	1
+27	Gene23 | Gene496	3	2	0.0	Gene23, Gene496	2	1
+28	Gene103 | Gene88	3	2	0.0	Gene103, Gene88	2	1
+29	Gene482 | Gene88	3	2	0.0	Gene482, Gene88	2	1
+30	Gene496 | Gene88	3	2	0.0	Gene496, Gene88	2	1
+31	Gene163 | Gene88	3	2	0.0	Gene163, Gene88	2	1
+32	Gene200 | Gene25	3	2	0.0	Gene200, Gene25	2	1
+33	Gene200 | Gene219 | Gene336	3	3	0.0	Gene200, Gene219, Gene336	3	1
+34	Gene61	3	1	0.5	Gene61	1	1
+35	Gene395	3	1	0.5	Gene395	1	1
+36	Gene121 | Gene17 | Gene197 | Gene283	3	4	0.5	Gene121, Gene17, Gene197, Gene283	4	1
+37	Gene78	3	1	0.5	Gene78	1	1
+38	Gene88 & (Gene200 | Gene430) & (Gene200 | Gene496) & (Gene430 | Gene474) & (Gene474 | Gene496)	3	5	1.0	Gene200, Gene430, Gene474, Gene496, Gene88	5	1
+39	Gene435 | Gene448 | Gene471 | Gene50 | Gene88	3	5	1.0	Gene435, Gene448, Gene471, Gene50, Gene88	5	1
+40	Gene197 | Gene241	2	2	0.0	Gene197, Gene241	2	1
+41	Gene219 | Gene226	2	2	0.0	Gene219, Gene226	2	1
+42	Gene450 & Gene66	2	2	0.0	Gene450, Gene66	2	1
+43	Gene200 | Gene474	2	2	0.0	Gene200, Gene474	2	1
+44	Gene17 | Gene476	2	2	0.0	Gene17, Gene476	2	1
+45	Gene269 | Gene417	2	2	0.0	Gene269, Gene417	2	1
+46	Gene435 | Gene50	2	2	0.0	Gene435, Gene50	2	1
+47	~Gene66	2	1	0.5	Gene66	1	1
+48	Gene435 & Gene493	1	2	0.0	Gene435, Gene493	2	1
+49	Gene12 | Gene180	1	2	0.0	Gene12, Gene180	2	1
+50	Gene219 & Gene336	1	2	0.0	Gene219, Gene336	2	1

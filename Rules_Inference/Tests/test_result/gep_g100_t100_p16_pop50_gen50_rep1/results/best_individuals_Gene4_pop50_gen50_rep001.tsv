@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition	mlp_loss
+1	Gene43 & (Gene10 | Gene24) & (Gene18 | Gene24)	81	4	0.5	Gene10, Gene18, Gene24, Gene43	4	1	5.801747209425274
+2	Gene10 & Gene18 & (Gene24 | Gene43)	81	4	0.5	Gene10, Gene18, Gene24, Gene43	4	1	7.26162999068153
+3	Gene10 & Gene18 & (Gene24 | Gene43)	81	4	0.5	Gene10, Gene18, Gene24, Gene43	4	1	7.26162999068153
+4	Gene10 & Gene18 & (Gene24 | Gene43)	81	4	0.5	Gene10, Gene18, Gene24, Gene43	4	1	7.26162999068153
+5	Gene10 & Gene18 & (Gene24 | Gene43)	81	4	0.5	Gene10, Gene18, Gene24, Gene43	4	1	7.26162999068153
+6	Gene10 & Gene18 & (Gene24 | Gene43)	81	4	0.5	Gene10, Gene18, Gene24, Gene43	4	1	7.26162999068153
+7	Gene10 & Gene18 & (Gene24 | Gene43)	81	4	0.5	Gene10, Gene18, Gene24, Gene43	4	1	7.26162999068153
+8	Gene10 & Gene18 & (Gene24 | Gene43)	81	4	0.5	Gene10, Gene18, Gene24, Gene43	4	1	7.26162999068153
+9	Gene10 & Gene18 & (Gene24 | Gene43)	81	4	0.5	Gene10, Gene18, Gene24, Gene43	4	1	7.26162999068153
+10	Gene10 & (Gene38 | Gene43)	80	3	0.0	Gene10, Gene38, Gene43	3	1	4.0367681733588
+11	Gene38 | (Gene10 & Gene43)	80	3	0.0	Gene10, Gene38, Gene43	3	1	4.0367681733588
+12	Gene10 & (Gene42 | Gene43)	80	3	0.0	Gene10, Gene42, Gene43	3	1	4.68172305044879
+13	Gene10 & (Gene42 | Gene43)	80	3	0.0	Gene10, Gene42, Gene43	3	1	4.68172305044879
+14	Gene10 & Gene18	80	2	0.0	Gene10, Gene18	2	1	8.345361306690508
+15	Gene10 & Gene18	80	2	0.0	Gene10, Gene18	2	1	8.345361306690508
+16	Gene18 & (Gene10 | Gene24) & (Gene10 | Gene43)	80	4	0.5	Gene10, Gene18, Gene24, Gene43	4	1	7.26162999068153
+17	Gene10 & (Gene42 | Gene43 | Gene58)	80	4	0.5	Gene10, Gene42, Gene43, Gene58	4	1	7.972281079187245
+18	Gene10 | Gene24	79	2	0.0	Gene10, Gene24	2	1	7.291982419124871
+19	Gene10 & Gene18 & (Gene42 | Gene7)	79	4	0.5	Gene10, Gene18, Gene42, Gene7	4	1	7.221268779114776
+20	Gene10	79	1	0.5	Gene10	1	1	8.46407190350436
+21	Gene10	79	1	0.5	Gene10	1	1	8.46407190350436
+22	Gene10	79	1	0.5	Gene10	1	1	8.46407190350436
+23	Gene10	79	1	0.5	Gene10	1	1	8.46407190350436
+24	Gene18 | Gene24	78	2	0.0	Gene18, Gene24	2	1	7.956573964661645
+25	Gene18 | Gene24	78	2	0.0	Gene18, Gene24	2	1	7.956573964661645
+26	(Gene10 | Gene23) & (Gene10 | Gene75) & (Gene18 | Gene23) & (Gene18 | Gene75)	78	4	0.5	Gene10, Gene18, Gene23, Gene75	4	1	6.556471959486572
+27	Gene43	78	1	0.5	Gene43	1	1	8.57231496072231
+28	Gene18	78	1	0.5	Gene18	1	1	8.646054182109788
+29	Gene10 | Gene57	77	2	0.0	Gene10, Gene57	2	1	6.479420385326669
+30	Gene10 | Gene57	77	2	0.0	Gene10, Gene57	2	1	6.479420385326669
+31	Gene43 & Gene75	77	2	0.0	Gene43, Gene75	2	1	7.438667178910678
+32	Gene18 & Gene7	77	2	0.0	Gene18, Gene7	2	1	8.18735756177154
+33	Gene10 | Gene18	77	2	0.0	Gene10, Gene18	2	1	8.345361306690508
+34	Gene43 | (Gene10 & Gene18)	77	3	0.0	Gene10, Gene18, Gene43	3	1	5.801747209425274
+35	Gene57 & (Gene10 | Gene43)	76	3	0.0	Gene10, Gene43, Gene57	3	1	6.4109401729063045
+36	Gene57	76	1	0.5	Gene57	1	1	8.714959204224545
+37	Gene4 & (Gene10 | Gene48)	65	3	0.0	Gene10, Gene4, Gene48	3	1	6.422582529934838
+38	Gene13	37	1	0.5	Gene13	1	1	8.618365234306205
+39	Gene24 | Gene42	31	2	0.0	Gene24, Gene42	2	1	7.576168604447689
+40	Gene24 | Gene42	31	2	0.0	Gene24, Gene42	2	1	7.576168604447689
+41	Gene10 & (Gene18 | Gene24 | Gene42) & (Gene24 | Gene42 | Gene44)	30	5	1.0	Gene10, Gene18, Gene24, Gene42, Gene44	5	1	4.386452218644751
+42	Gene18 & Gene64	28	2	0.0	Gene18, Gene64	2	1	7.737804668106137
+43	Gene42 | Gene48	28	2	0.0	Gene42, Gene48	2	1	8.314633208553934
+44	Gene24 & Gene43 & (Gene10 | Gene18)	27	4	0.5	Gene10, Gene18, Gene24, Gene43	4	1	7.26162999068153
+45	Gene42	27	1	0.5	Gene42	1	1	8.69378533390429
+46	Gene24 & (Gene42 | Gene97)	26	3	0.0	Gene24, Gene42, Gene97	3	1	6.714049291256641
+47	Gene24 & Gene42	23	2	0.0	Gene24, Gene42	2	1	7.576168604447689
+48	Gene38 & Gene42 & Gene43 & Gene7	22	4	0.5	Gene38, Gene42, Gene43, Gene7	4	1	7.926325513677683
+49	Gene18 & Gene24 & Gene43 & Gene6 & Gene66	22	5	1.0	Gene18, Gene24, Gene43, Gene6, Gene66	5	1	4.263826883484467
+50	Gene24 & Gene42 & Gene9 & (Gene18 | Gene30)	22	5	1.0	Gene18, Gene24, Gene30, Gene42, Gene9	5	1	6.782184406671339

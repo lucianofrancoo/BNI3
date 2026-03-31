@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	Gene415 | Gene8	4	2	0.0	Gene415, Gene8	2	1
+2	Gene269 | Gene305	4	2	0.0	Gene269, Gene305	2	1
+3	Gene271 | (Gene104 & ~Gene133)	4	3	0.0	Gene104, Gene133, Gene271	3	1
+4	Gene415 | Gene8	4	2	0.0	Gene415, Gene8	2	1
+5	~Gene479 | (~Gene399 & ~Gene411)	4	3	0.0	Gene399, Gene411, Gene479	3	1
+6	Gene269 | Gene305	4	2	0.0	Gene269, Gene305	2	1
+7	Gene363 | Gene5	4	2	0.0	Gene363, Gene5	2	1
+8	Gene271 | (Gene104 & ~Gene133)	4	3	0.0	Gene104, Gene133, Gene271	3	1
+9	Gene415 | Gene8	4	2	0.0	Gene415, Gene8	2	1
+10	~Gene133 | (Gene104 & Gene271)	4	3	0.0	Gene104, Gene133, Gene271	3	1
+11	Gene415 | Gene8	4	2	0.0	Gene415, Gene8	2	1
+12	Gene271 | (Gene374 & ~Gene133)	4	3	0.0	Gene133, Gene271, Gene374	3	1
+13	Gene271 | (Gene374 & ~Gene133)	4	3	0.0	Gene133, Gene271, Gene374	3	1
+14	Gene21 | Gene415	4	2	0.0	Gene21, Gene415	2	1
+15	Gene269 | Gene305	4	2	0.0	Gene269, Gene305	2	1
+16	Gene415 | Gene8	4	2	0.0	Gene415, Gene8	2	1
+17	Gene21 | Gene415	4	2	0.0	Gene21, Gene415	2	1
+18	Gene415 | Gene8	4	2	0.0	Gene415, Gene8	2	1
+19	Gene415 | Gene8	4	2	0.0	Gene415, Gene8	2	1
+20	Gene271 | (Gene104 & ~Gene242)	4	3	0.0	Gene104, Gene242, Gene271	3	1
+21	~Gene242	4	1	0.5	Gene242	1	1
+22	Gene271	4	1	0.5	Gene271	1	1
+23	Gene8	4	1	0.5	Gene8	1	1
+24	Gene271	4	1	0.5	Gene271	1	1
+25	~Gene242	4	1	0.5	Gene242	1	1
+26	Gene271 | (Gene226 & Gene242 & Gene417) | (Gene226 & Gene417 & Gene93)	4	5	1.0	Gene226, Gene242, Gene271, Gene417, Gene93	5	1
+27	Gene23 | Gene287	3	2	0.0	Gene23, Gene287	2	1
+28	Gene374 | Gene98	3	2	0.0	Gene374, Gene98	2	1
+29	Gene133 | Gene8	3	2	0.0	Gene133, Gene8	2	1
+30	Gene160 | Gene492	3	2	0.0	Gene160, Gene492	2	1
+31	Gene271 | (Gene133 & Gene374)	3	3	0.0	Gene133, Gene271, Gene374	3	1
+32	Gene23 | Gene287	3	2	0.0	Gene23, Gene287	2	1
+33	Gene393 | Gene415	3	2	0.0	Gene393, Gene415	2	1
+34	Gene21 | Gene40 | Gene415	3	3	0.0	Gene21, Gene40, Gene415	3	1
+35	Gene155 | Gene295 | Gene354 | Gene377	3	4	0.5	Gene155, Gene295, Gene354, Gene377	4	1
+36	Gene242 | Gene415 | Gene93	2	3	0.0	Gene242, Gene415, Gene93	3	1
+37	Gene23 & Gene91	2	2	0.0	Gene23, Gene91	2	1
+38	Gene133 | Gene374	2	2	0.0	Gene133, Gene374	2	1
+39	Gene374 | ~Gene133	2	2	0.0	Gene133, Gene374	2	1
+40	Gene104 | ~Gene271	2	2	0.0	Gene104, Gene271	2	1
+41	Gene104 | ~Gene271	2	2	0.0	Gene104, Gene271	2	1
+42	Gene361 | Gene417	2	2	0.0	Gene361, Gene417	2	1
+43	Gene14 | Gene387	2	2	0.0	Gene14, Gene387	2	1
+44	Gene133 | Gene374	2	2	0.0	Gene133, Gene374	2	1
+45	Gene133 | Gene242	2	2	0.0	Gene133, Gene242	2	1
+46	Gene133 & (Gene361 | Gene374)	2	3	0.0	Gene133, Gene361, Gene374	3	1
+47	~Gene133	2	1	0.5	Gene133	1	1
+48	Gene269	2	1	0.5	Gene269	1	1
+49	~Gene104	2	1	0.5	Gene104	1	1
+50	Gene399 & (Gene242 | Gene93)	1	3	0.0	Gene242, Gene399, Gene93	3	1

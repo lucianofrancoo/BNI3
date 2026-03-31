@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	Gene198 | Gene309	4	2	0.0	Gene198, Gene309	2	1
+2	Gene198 | ~Gene13	4	2	0.0	Gene13, Gene198	2	1
+3	Gene198 | ~Gene13	4	2	0.0	Gene13, Gene198	2	1
+4	Gene198 | Gene340	4	2	0.0	Gene198, Gene340	2	1
+5	Gene198 | Gene309	4	2	0.0	Gene198, Gene309	2	1
+6	~Gene13 | ~Gene18	4	2	0.0	Gene13, Gene18	2	1
+7	~Gene13 | ~Gene18	4	2	0.0	Gene13, Gene18	2	1
+8	Gene382 | (~Gene306 & ~Gene461)	4	3	0.0	Gene306, Gene382, Gene461	3	1
+9	Gene198 | Gene309	4	2	0.0	Gene198, Gene309	2	1
+10	~Gene13 | ~Gene18	4	2	0.0	Gene13, Gene18	2	1
+11	~Gene10 | (Gene340 & Gene404)	4	3	0.0	Gene10, Gene340, Gene404	3	1
+12	Gene198 | Gene309	4	2	0.0	Gene198, Gene309	2	1
+13	Gene198 | Gene309	4	2	0.0	Gene198, Gene309	2	1
+14	Gene198 | Gene309	4	2	0.0	Gene198, Gene309	2	1
+15	Gene198 | Gene309	4	2	0.0	Gene198, Gene309	2	1
+16	Gene198 | Gene309	4	2	0.0	Gene198, Gene309	2	1
+17	Gene198 | Gene309	4	2	0.0	Gene198, Gene309	2	1
+18	Gene198 | Gene309	4	2	0.0	Gene198, Gene309	2	1
+19	Gene198 | Gene309	4	2	0.0	Gene198, Gene309	2	1
+20	Gene198 | Gene309	4	2	0.0	Gene198, Gene309	2	1
+21	~Gene13	4	1	0.5	Gene13	1	1
+22	Gene309 | (Gene176 & Gene198) | (Gene198 & Gene349)	4	4	0.5	Gene176, Gene198, Gene309, Gene349	4	1
+23	~Gene13	4	1	0.5	Gene13	1	1
+24	True	3	1	0.5	True	1	1
+25	Gene306 | Gene311	3	2	0.0	Gene306, Gene311	2	1
+26	Gene309 | Gene467	3	2	0.0	Gene309, Gene467	2	1
+27	Gene391 | ~Gene141	3	2	0.0	Gene141, Gene391	2	1
+28	Gene198 | Gene229	3	2	0.0	Gene198, Gene229	2	1
+29	Gene256 | Gene309	3	2	0.0	Gene256, Gene309	2	1
+30	Gene340	3	1	0.5	Gene340	1	1
+31	Gene309	3	1	0.5	Gene309	1	1
+32	Gene309	3	1	0.5	Gene309	1	1
+33	Gene143	3	1	0.5	Gene143	1	1
+34	Gene198	3	1	0.5	Gene198	1	1
+35	Gene13 | Gene198	2	2	0.0	Gene13, Gene198	2	1
+36	~Gene306 & ~Gene461	2	2	0.0	Gene306, Gene461	2	1
+37	Gene244 & Gene309	2	2	0.0	Gene244, Gene309	2	1
+38	Gene176 | Gene230	2	2	0.0	Gene176, Gene230	2	1
+39	Gene309 | ~Gene198	2	2	0.0	Gene198, Gene309	2	1
+40	Gene382 | (~Gene198 & ~Gene256)	2	3	0.0	Gene198, Gene256, Gene382	3	1
+41	Gene13 | Gene461	2	2	0.0	Gene13, Gene461	2	1
+42	Gene13 | Gene198	2	2	0.0	Gene13, Gene198	2	1
+43	Gene306	2	1	0.5	Gene306	1	1
+44	~Gene306	2	1	0.5	Gene306	1	1
+45	Gene202	2	1	0.5	Gene202	1	1
+46	~Gene382	1	1	0.5	Gene382	1	1
+47	~Gene198	1	1	0.5	Gene198	1	1
+48	Gene198 & Gene309 & (Gene176 | Gene230)	1	4	0.5	Gene176, Gene198, Gene230, Gene309	4	1
+49	~Gene198	1	1	0.5	Gene198	1	1
+50	Gene13	0	1	0.5	Gene13	1	1

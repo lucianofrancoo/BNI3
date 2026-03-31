@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	Gene10 | (Gene121 & Gene453)	4	3	0.0	Gene10, Gene121, Gene453	3	1
+2	Gene10 | (Gene121 & Gene453)	4	3	0.0	Gene10, Gene121, Gene453	3	1
+3	Gene443 | ~Gene681 | ~Gene732	4	3	0.0	Gene443, Gene681, Gene732	3	1
+4	Gene888 | Gene989	4	2	0.0	Gene888, Gene989	2	1
+5	Gene888 | Gene989	4	2	0.0	Gene888, Gene989	2	1
+6	Gene185 | Gene453	4	2	0.0	Gene185, Gene453	2	1
+7	Gene339 | (Gene681 & Gene888)	4	3	0.0	Gene339, Gene681, Gene888	3	1
+8	Gene888 | Gene989	4	2	0.0	Gene888, Gene989	2	1
+9	Gene888 | Gene989	4	2	0.0	Gene888, Gene989	2	1
+10	Gene888 | Gene989	4	2	0.0	Gene888, Gene989	2	1
+11	Gene466 | Gene888	4	2	0.0	Gene466, Gene888	2	1
+12	Gene443 | Gene453 | ~Gene681	4	3	0.0	Gene443, Gene453, Gene681	3	1
+13	Gene888 | Gene989	4	2	0.0	Gene888, Gene989	2	1
+14	Gene888 | Gene989	4	2	0.0	Gene888, Gene989	2	1
+15	Gene888 | Gene905	4	2	0.0	Gene888, Gene905	2	1
+16	Gene466	3	1	0.5	Gene466	1	1
+17	Gene466 | ~Gene681	3	2	0.0	Gene466, Gene681	2	1
+18	Gene743 | Gene905	3	2	0.0	Gene743, Gene905	2	1
+19	Gene10 & Gene739	3	2	0.0	Gene10, Gene739	2	1
+20	Gene466 | Gene989	3	2	0.0	Gene466, Gene989	2	1
+21	Gene466 | Gene478	3	2	0.0	Gene466, Gene478	2	1
+22	Gene466 | Gene607 | Gene989	3	3	0.0	Gene466, Gene607, Gene989	3	1
+23	Gene478 | Gene849	3	2	0.0	Gene478, Gene849	2	1
+24	Gene466 | Gene989 | ~Gene842	3	3	0.0	Gene466, Gene842, Gene989	3	1
+25	Gene12 | (Gene478 & Gene584)	3	3	0.0	Gene12, Gene478, Gene584	3	1
+26	Gene185 | Gene466 | Gene989	3	3	0.0	Gene185, Gene466, Gene989	3	1
+27	Gene10 | Gene955	3	2	0.0	Gene10, Gene955	2	1
+28	Gene704 | Gene729	3	2	0.0	Gene704, Gene729	2	1
+29	Gene478 | Gene944	3	2	0.0	Gene478, Gene944	2	1
+30	Gene185 | Gene989	3	2	0.0	Gene185, Gene989	2	1
+31	Gene453 | Gene888	3	2	0.0	Gene453, Gene888	2	1
+32	Gene466 | Gene989	3	2	0.0	Gene466, Gene989	2	1
+33	Gene112 | Gene989	3	2	0.0	Gene112, Gene989	2	1
+34	Gene339 | ~Gene681	3	2	0.0	Gene339, Gene681	2	1
+35	Gene466 | (Gene286 & Gene3)	3	3	0.0	Gene286, Gene3, Gene466	3	1
+36	Gene453	3	1	0.5	Gene453	1	1
+37	Gene583	3	1	0.5	Gene583	1	1
+38	Gene888	3	1	0.5	Gene888	1	1
+39	Gene466	3	1	0.5	Gene466	1	1
+40	Gene478	3	1	0.5	Gene478	1	1
+41	Gene286 | Gene3	2	2	0.0	Gene286, Gene3	2	1
+42	Gene10 | Gene802	2	2	0.0	Gene10, Gene802	2	1
+43	Gene293 & Gene772	2	2	0.0	Gene293, Gene772	2	1
+44	Gene478 | Gene928	2	2	0.0	Gene478, Gene928	2	1
+45	Gene293 | Gene989	2	2	0.0	Gene293, Gene989	2	1
+46	Gene314 | Gene989	2	2	0.0	Gene314, Gene989	2	1
+47	Gene569	2	1	0.5	Gene569	1	1
+48	Gene453 | Gene681	1	2	0.0	Gene453, Gene681	2	1
+49	Gene681	1	1	0.5	Gene681	1	1
+50	~Gene453	1	1	0.5	Gene453	1	1

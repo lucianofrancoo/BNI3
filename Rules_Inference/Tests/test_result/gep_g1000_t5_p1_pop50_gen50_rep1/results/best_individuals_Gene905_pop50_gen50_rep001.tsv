@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	Gene272 & ~Gene217	4	2	0.0	Gene217, Gene272	2	1
+2	Gene453 | (Gene108 & Gene595)	4	3	0.0	Gene108, Gene453, Gene595	3	1
+3	Gene272 & ~Gene217	4	2	0.0	Gene217, Gene272	2	1
+4	Gene272 & ~Gene217	4	2	0.0	Gene217, Gene272	2	1
+5	Gene222 | Gene453	4	2	0.0	Gene222, Gene453	2	1
+6	Gene222 | Gene453	4	2	0.0	Gene222, Gene453	2	1
+7	Gene453	4	1	0.5	Gene453	1	1
+8	Gene453	4	1	0.5	Gene453	1	1
+9	Gene453 & ~Gene108	4	2	0.0	Gene108, Gene453	2	1
+10	Gene272 & ~Gene217	4	2	0.0	Gene217, Gene272	2	1
+11	Gene272 & ~Gene217	4	2	0.0	Gene217, Gene272	2	1
+12	Gene222 & Gene453 & Gene980	4	3	0.0	Gene222, Gene453, Gene980	3	1
+13	Gene108 | Gene453	4	2	0.0	Gene108, Gene453	2	1
+14	Gene222 | ~Gene217	4	2	0.0	Gene217, Gene222	2	1
+15	Gene453 & ~Gene108	4	2	0.0	Gene108, Gene453	2	1
+16	Gene453 & (Gene276 | Gene745)	4	3	0.0	Gene276, Gene453, Gene745	3	1
+17	Gene108 | Gene222	4	2	0.0	Gene108, Gene222	2	1
+18	Gene272 & ~Gene217	4	2	0.0	Gene217, Gene272	2	1
+19	Gene222 | Gene453	4	2	0.0	Gene222, Gene453	2	1
+20	Gene453	4	1	0.5	Gene453	1	1
+21	Gene453	4	1	0.5	Gene453	1	1
+22	Gene453	4	1	0.5	Gene453	1	1
+23	Gene301 & (Gene108 | Gene453) & (Gene453 | Gene595)	4	4	0.5	Gene108, Gene301, Gene453, Gene595	4	1
+24	Gene453	4	1	0.5	Gene453	1	1
+25	Gene340 & Gene393	3	2	0.0	Gene340, Gene393	2	1
+26	Gene479 & Gene957 & ~Gene108	3	3	0.0	Gene108, Gene479, Gene957	3	1
+27	Gene764 & ~Gene867	3	2	0.0	Gene764, Gene867	2	1
+28	~Gene217 & ~Gene272	3	2	0.0	Gene217, Gene272	2	1
+29	Gene217 & ~Gene272	3	2	0.0	Gene217, Gene272	2	1
+30	Gene25 & Gene562	3	2	0.0	Gene25, Gene562	2	1
+31	~Gene272	3	1	0.5	Gene272	1	1
+32	~Gene662	3	1	0.5	Gene662	1	1
+33	Gene438 | Gene562	2	2	0.0	Gene438, Gene562	2	1
+34	Gene272 & ~Gene978	2	2	0.0	Gene272, Gene978	2	1
+35	Gene346 | Gene438	2	2	0.0	Gene346, Gene438	2	1
+36	Gene201 & ~Gene978	2	2	0.0	Gene201, Gene978	2	1
+37	Gene459 & Gene562	2	2	0.0	Gene459, Gene562	2	1
+38	Gene322 | Gene918	2	2	0.0	Gene322, Gene918	2	1
+39	Gene108 | Gene595	2	2	0.0	Gene108, Gene595	2	1
+40	~Gene351	2	1	0.5	Gene351	1	1
+41	Gene978	2	1	0.5	Gene978	1	1
+42	Gene978	2	1	0.5	Gene978	1	1
+43	~Gene918	2	1	0.5	Gene918	1	1
+44	Gene108 | Gene276 | Gene453 | Gene595 | Gene647	2	5	1.0	Gene108, Gene276, Gene453, Gene595, Gene647	5	1
+45	Gene438 | Gene974	1	2	0.0	Gene438, Gene974	2	1
+46	Gene272 | ~Gene222	1	2	0.0	Gene222, Gene272	2	1
+47	Gene13 | Gene135	1	2	0.0	Gene13, Gene135	2	1
+48	Gene434	1	1	0.5	Gene434	1	1
+49	Gene217	0	1	0.5	Gene217	1	1
+50	~Gene453	0	1	0.5	Gene453	1	1

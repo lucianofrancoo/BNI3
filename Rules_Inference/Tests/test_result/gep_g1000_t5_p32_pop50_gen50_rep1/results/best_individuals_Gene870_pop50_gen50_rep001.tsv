@@ -1,0 +1,51 @@
+rank	expression	n_correct	n_regulators	regulator_penalty	regulators	n_unique_regulators	repetition
+1	Gene326 & (Gene866 | Gene955)	4	3	0.0	Gene326, Gene866, Gene955	3	1
+2	Gene768 | ~Gene558	4	2	0.0	Gene558, Gene768	2	1
+3	Gene866 | Gene955	4	2	0.0	Gene866, Gene955	2	1
+4	Gene479 | ~Gene178	4	2	0.0	Gene178, Gene479	2	1
+5	Gene866 | Gene955	4	2	0.0	Gene866, Gene955	2	1
+6	Gene866 | Gene955	4	2	0.0	Gene866, Gene955	2	1
+7	Gene326 & Gene395	4	2	0.0	Gene326, Gene395	2	1
+8	Gene326 & (Gene866 | Gene955)	4	3	0.0	Gene326, Gene866, Gene955	3	1
+9	Gene955 | (Gene911 & ~Gene394)	4	3	0.0	Gene394, Gene911, Gene955	3	1
+10	Gene866 | Gene955	4	2	0.0	Gene866, Gene955	2	1
+11	Gene466 | Gene955	4	2	0.0	Gene466, Gene955	2	1
+12	Gene177 | Gene955	4	2	0.0	Gene177, Gene955	2	1
+13	Gene17 | Gene743	4	2	0.0	Gene17, Gene743	2	1
+14	Gene866 | Gene955	4	2	0.0	Gene866, Gene955	2	1
+15	Gene466 | Gene955	4	2	0.0	Gene466, Gene955	2	1
+16	Gene866 | Gene955	4	2	0.0	Gene866, Gene955	2	1
+17	Gene326 & Gene955	4	2	0.0	Gene326, Gene955	2	1
+18	Gene866 | Gene955	4	2	0.0	Gene866, Gene955	2	1
+19	Gene326 & Gene395	4	2	0.0	Gene326, Gene395	2	1
+20	Gene177 | Gene955	4	2	0.0	Gene177, Gene955	2	1
+21	~Gene394 | (Gene911 & Gene955)	4	3	0.0	Gene394, Gene911, Gene955	3	1
+22	Gene955	4	1	0.5	Gene955	1	1
+23	~Gene178	4	1	0.5	Gene178	1	1
+24	Gene421	4	1	0.5	Gene421	1	1
+25	Gene955	4	1	0.5	Gene955	1	1
+26	Gene955	4	1	0.5	Gene955	1	1
+27	Gene955	4	1	0.5	Gene955	1	1
+28	Gene394 | Gene955	3	2	0.0	Gene394, Gene955	2	1
+29	Gene955 & (~Gene394 | ~Gene972)	3	3	0.0	Gene394, Gene955, Gene972	3	1
+30	Gene654 | Gene866	3	2	0.0	Gene654, Gene866	2	1
+31	Gene466 | Gene759	3	2	0.0	Gene466, Gene759	2	1
+32	Gene217 | Gene394	3	2	0.0	Gene217, Gene394	2	1
+33	~Gene390 | ~Gene875	3	2	0.0	Gene390, Gene875	2	1
+34	Gene390 | Gene395 | Gene739	3	3	0.0	Gene390, Gene395, Gene739	3	1
+35	Gene326	3	1	0.5	Gene326	1	1
+36	Gene745 | Gene972	2	2	0.0	Gene745, Gene972	2	1
+37	Gene866 & ~Gene254 & ~Gene629	2	3	0.0	Gene254, Gene629, Gene866	3	1
+38	Gene629 | Gene875	2	2	0.0	Gene629, Gene875	2	1
+39	Gene278 | Gene394	2	2	0.0	Gene278, Gene394	2	1
+40	Gene955 & (Gene538 | Gene866)	2	3	0.0	Gene538, Gene866, Gene955	3	1
+41	Gene394 | Gene972	2	2	0.0	Gene394, Gene972	2	1
+42	Gene394 | Gene972	2	2	0.0	Gene394, Gene972	2	1
+43	Gene972	2	1	0.5	Gene972	1	1
+44	~Gene394	2	1	0.5	Gene394	1	1
+45	~Gene911	2	1	0.5	Gene911	1	1
+46	Gene605	2	1	0.5	Gene605	1	1
+47	Gene394	2	1	0.5	Gene394	1	1
+48	Gene594	2	1	0.5	Gene594	1	1
+49	Gene972	2	1	0.5	Gene972	1	1
+50	~Gene226	2	1	0.5	Gene226	1	1
