@@ -33,26 +33,27 @@ Boolean networks eventually settle into steady states or cycles known as *attrac
 BNI3/
 ├── 1.Binarization/          # Stage 1: Discretization of continuous data
 ├── 2.Rules_Inference/       # Stage 2: Boolean network rule inference
-├── Atracttors/              # Stage 3: Attractor mapping and visualization
-├── BoolNet_comparison/      # Benchmarks against the BoolNet R package
-├── DREAM4/                  # Evaluation using standard DREAM4 in silico network challenges
-└── ...                      # Additional datasets and specific network tests (guardCells, etc.)
+├── 3.Attractors/            # Stage 3: Attractor mapping and visualization
+├── bni3_launcher.sh         # Interactive CLI wrapper for the complete pipeline
+└── README.md                # Project documentation
 ```
 
 ## Getting Started
 
-### Prerequisites
-Make sure you have the following installed:
-* **Python 3.x**: Required for the core pipeline (inference, python-based binarization, and attractors).
-* **R**: Required for running the comparison scripts (BoolNet) and some binarization/validation scripts (`.r` files).
+### Interactive Wrapper (Recommended for standard usage)
+We provide an interactive bash launcher designed to simplify the execution of the entire pipeline using robust default settings. 
 
-### Usage Pipeline
-1. **Binarize your data**: Navigate to the `1.Binarization/` directory and run your continuous data through the WCSS or SSD Python/R scripts.
-2. **Infer Rules**: Move the binary output to the `2.Rules_Inference/` module and run `BNI3_Boolean_Rules_Inference.py` to generate the logical rules.
-3. **Analyze Post-Inference**: Use the scripts inside `Atracttors/` to find the stable steady states of your inferred network.
+To start the interactive CLI:
+```bash
+./bni3_launcher.sh
+```
+> **Note**: The interactive launcher is a simplified wrapper. If you require highly detailed, granular control over every possible algorithm hyperparameter, please invoke the underlying Python scripts inside each folder directly.
 
-## Benchmarks & Comparisons
-The pipeline includes modules (`BoolNet_comparison/` and `DREAM4/`) that benchmark the BNI3 inference methodology against established tools like the BoolNet R package and the DREAM4 *in silico* network challenges.
+### Manual & Advanced Pipeline
+If you need full parameter control, navigate to each module's directory and run the scripts directly from your terminal:
+1. **Binarize your data**: Navigate to the `1.Binarization/` directory and run your continuous data through the `BNI3_WCSS.py` or `BNI3_SSD.py` scripts.
+2. **Infer Rules**: Feed the binary output to the `2.Rules_Inference/` module and run `1.BNI3_Boolean_Rules_Inference.py` to generate the logical rules.
+3. **Analyze Post-Inference**: Use the scripts inside `3.Attractors/` to discover and map the steady states of your inferred network.
 
 ## Contributing
 Contributions, issues, and feature requests are welcome!
