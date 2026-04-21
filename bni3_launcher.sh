@@ -105,6 +105,16 @@ run_rules_inference() {
     printf "This module infers logic transition rules among your genes using Gene Expression Programming.\n"
     printf "It automatically runs Inference, Analysis, and Evaluation.\n\n"
 
+    printf "${YELLOW}Input Formats Example:${NC}\n"
+    printf "1. Continuous Matrix (Genes as rows, Timepoints as columns):\n"
+    printf "ID      T1      T2\nGeneA   0.5     2.1\nGeneB   1.2     0.3\n\n"
+    printf "2. Binarized Matrix (Transposed - Genes as columns, Timepoints as rows):\n"
+    printf "GeneA   GeneB\n0       1\n1       0\n\n"
+
+    printf "${CYAN}Note on Advanced Control:${NC}\n"
+    printf "This launcher uses stable defaults. If you need fine-grained control to change the number of processors (-p), repetitions (-n_rep), population size (-pop), or generations (-gen), please run the script directly from the terminal via:\n"
+    printf "  ${YELLOW}python3 2.Rules_Inference/1.BNI3_Boolean_Rules_Inference.py -h${NC}\n\n"
+
     printf "${YELLOW}Mandatory parameters:${NC}\n"
     prompt_for_file "Enter path to original continuous TSV: " eval_raw
     prompt_for_file "Enter path to binarized TSV: " eval_bin
@@ -113,23 +123,25 @@ run_rules_inference() {
     read -r -p "Optimal regulators K penalty? [default: 2]: " penalty_k
     penalty_k=${penalty_k:-2}
 
-    read -r -p "Enter output DIRECTORY [default: 2.Rules_Inference/output/]: " out_dir
-    out_dir=${out_dir:-"2.Rules_Inference/output/"}
+    # Generate default output directory dynamically based on binarized input file
+    bin_dir=$(dirname "$eval_bin")
+    bin_name=$(basename "$eval_bin")
+    default_out_dir="${bin_dir}/${bin_name%.*}_Inferred_rules/"
+
+    read -r -p "Enter output DIRECTORY [default: $default_out_dir]: " out_dir
+    out_dir=${out_dir:-"$default_out_dir"}
 
     mkdir -p "$out_dir"
     
     printf "\n${CYAN}>> Running Rule Inference...${NC}\n"
-    if python3 "$ROOT_DIR/2.Rules_Inference/1.BNI3_Boolean_Rules_Inference.py" -i "$eval_raw" -i_binary "$eval_bin" -o "$out_dir" -reg_optimal "$penalty_k"; then
+    if python3 "$ROOT_DIR/2.Rules_Inference/1.BNI3_Boolean_Rules_Inference.py" -i "$eval_raw" -i_binary "$eval_bin" -o "$out_dir" -reg_optimal "$penalty_k" -p $(nproc); then
         
         printf "\n${CYAN}>> Running Rule Combinations Evaluator...${NC}\n"
-        if python3 "$ROOT_DIR/2.Rules_Inference/3.BNI3_Evaluate_rules.py" -r "$out_dir/rules_by_gene.tsv" -m "$eval_bin" -o "$out_dir/evaluation_results.tsv"; then
+        if python3 "$ROOT_DIR/2.Rules_Inference/3.BNI3_Evaluate_rules.py" -i "$out_dir/rules_by_gene.tsv" -m "$eval_bin" -o "$out_dir/evaluation_results.tsv" -n $(nproc) -v; then
             
-            printf "\n${YELLOW}Do you want to generate the Network Topology Graphic? (y/n):${NC} "
-            read -r wants_network
-            if [[ "$wants_network" =~ ^[Yy]$ ]]; then
-                python3 "$ROOT_DIR/2.Rules_Inference/4.BNI3_Boolean_network_visualizer.py" -i "$out_dir/rules_by_gene_evaluated.tsv" -o "$out_dir/network_topology.png"
-                printf "Topology graphic saved at $out_dir/network_topology.png\n"
-            fi
+            printf "\n${CYAN}>> Generating Network Topology Graphic...${NC}\n"
+            python3 "$ROOT_DIR/2.Rules_Inference/4.BNI3_Boolean_network_visualizer.py" -i "$out_dir/rules_by_gene_evaluated.tsv" -o "$out_dir/network_topology.png"
+            printf "Topology graphic saved at $out_dir/network_topology.png\n"
             printf "\n${GREEN}✓ Rules Inference pipeline completed successfully!${NC}\n"
         else
             printf "\n${RED}✗ Evaluation failed!${NC}\n"

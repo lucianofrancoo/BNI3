@@ -11,6 +11,7 @@ import argparse
 import pandas as pd
 import numpy as np
 import itertools
+import math
 from collections import defaultdict
 from typing import Dict, List, Tuple, Set
 import sys
@@ -393,11 +394,8 @@ def calculate_intelligent_defaults(rules_by_gene: Dict[str, List],
     
     # Calculate total possible combinations (with overflow protection)
     try:
-        total_combinations = np.prod(rules_counts)
-        # Check for overflow (negative numbers or unreasonably large)
-        if total_combinations < 0 or total_combinations > 1e18:
-            total_combinations = float('inf')
-    except (OverflowError, ValueError):
+        total_combinations = math.prod(rules_counts)
+    except Exception:
         total_combinations = float('inf')
     
     # Estimate throughput (combinations per second)
@@ -655,7 +653,7 @@ def evaluate_rule_combinations(rules_file: str,
                 print(f"   - {gene}: {n_rules} rule")
     
     # Calculate total possible combinations
-    total_combinations = np.prod([len(rules_by_gene[gene]) for gene in genes])
+    total_combinations = math.prod([len(rules_by_gene[gene]) for gene in genes])
     
     if verbose:
         print(f"\n5. Total possible combinations: {total_combinations:,}")
