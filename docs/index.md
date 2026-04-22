@@ -8,8 +8,26 @@ BNI3 is designed to abstract away the complexity of mathematical modeling, provi
 
 ## 1. Getting Started
 
-To ensure reproducibility across different operating systems, we highly recommend using `conda` to resolve all the Python dependencies required for BNI3.
+You can install the required dependencies using either **pip** (faster) or **Conda**.
 
+#### Option A: Pip Virtual Environment (Recommended for speed)
+```bash
+# 1. Clone the repository
+git clone https://github.com/lucianofrancoo/BNI3.git
+cd BNI3
+
+# 2. Create and activate a virtual environment
+python3 -m venv bni3_env
+source bni3_env/bin/activate
+
+# 3. Install dependencies
+pip install -r requirements.txt
+
+# 4. Launch the Interactive Pipeline
+./bni3_launcher.sh
+```
+
+#### Option B: Conda
 ```bash
 # 1. Clone the repository
 git clone https://github.com/lucianofrancoo/BNI3.git
