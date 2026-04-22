@@ -92,15 +92,25 @@ The module will scan the state-space and output `attractors.tsv`:
 |---|---|---|---|---|---|
 | 1 | fixed_point | 1 | 8192 | 100.0% | 0011011010101 |
 
+The pipeline automatically renders two vital visualizations for your publications. Below is the steady state map for our network:
+
+<div style="display: flex; justify-content: space-around; align-items: center;">
+  <img src="../3.Attractors/Example/attractors_visualization_network.png" alt="Attractors Landscape" width="48%">
+  <img src="../3.Attractors/Example/attractors_visualization_heatmap.png" alt="Attractors Heatmap" width="48%">
+</div>
+
+*(Left: The topological basin network. Right: The steady-state expression heatmap).*
+
+---
+
 ### Biological Perturbations (In-Silico Mutations)
 BNI3 allows you to simulate Overexpression (Gene:1) or Knockouts (Gene:0). By doing this, you can observe how the topological landscape shifts, potentially discovering new attractors or destroying existing ones.
 
-The pipeline automatically renders two vital visualizations for your publications:
+For instance, if we run the perturbation module simulating a Knockout of **MYB44:0**, the entire network structure changes and shifts towards a new steady state paradigm:
 
-#### 1. Attractors Heatmap
-Shows the active (red) and inactive (blue) genes across different steady states.
-![Attractors Heatmap](../3.Attractors/Example/attractors_visualization_heatmap.png)
+<div style="display: flex; justify-content: space-around; align-items: center;">
+  <img src="../3.Attractors/Example/attractors_visualization_MYB44_0_network.png" alt="MYB44 Knockout Landscape" width="48%">
+  <img src="../3.Attractors/Example/attractors_visualization_MYB44_0_heatmap.png" alt="MYB44 Knockout Heatmap" width="48%">
+</div>
 
-#### 2. Attractors Basin Network
-Visualizes the proportional size of the basins of attraction (how many initial states converge into a specific phenotype).
-![Attractors Landscape](../3.Attractors/Example/attractors_visualization_network.png)
+*(Notice how shutting down the MYB44 node restructures the hierarchy of the remaining active attractors).*
