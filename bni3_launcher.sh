@@ -46,8 +46,8 @@ run_binarization() {
     printf "${GREEN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}\n\n"
     printf "This module converts your raw continuous gene expression data into binary states (0/1).\n\n"
     printf "${YELLOW}Available algorithms:${NC}\n"
-    printf " - ${CYAN}1) SSD (StepMiner):${NC} Identifies expression step transitions, excellent for time-series.\n"
-    printf " - ${CYAN}2) WCSS (k-means):${NC} Minimizes within-cluster sum of squares for robust clustering.\n\n"
+    printf " - ${CYAN}1) SSD (Short Series Discretization):${NC} Identifies expression step transitions, excellent for time-series.\n"
+    printf " - ${CYAN}2) WCSS (Within Cluster Sum of Squares):${NC} Minimizes within-cluster sum of squares for robust clustering.\n\n"
     
     printf "${YELLOW}Input Format Example:${NC}\n"
     printf "The input file must be a tab-separated (.tsv) containing Gene IDs as rows and timepoints as columns.\n"

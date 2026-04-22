@@ -27,7 +27,7 @@ conda activate bni3_env
 
 ## 2. Module 1: Binarization
 
-Continuous gene expression data (e.g., RNA-Seq) needs to be discretized. BNI3 natively supports **SSD** (StepMiner) and **WCSS** (K-Means).
+Continuous gene expression data (e.g., RNA-Seq) needs to be discretized. BNI3 natively supports **SSD** (Short Series Discretization) and **WCSS** (Within Cluster Sum of Squares).
 
 ### Input Formatting
 Your initial continuous matrix should have **Genes as rows** and **Timepoints/Samples as columns**. Let's look at a snippet from our `Counts_lite.tsv` example:
