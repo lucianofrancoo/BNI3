@@ -168,7 +168,10 @@ run_attractors() {
     if [ "$att_opt" == "1" ]; then
         prompt_for_file "Path to rules table (e.g. rules_by_gene_evaluated.tsv): " rules_tsv
         read -r -p "Simulate Overexpression/Knockout? (e.g. ABF4:1,MYB44:0) [Press enter for none]: " mutation
-        read -r -p "Enter output DIRECTORY: " out_dir
+        
+        default_out=$(dirname "$rules_tsv")
+        read -r -p "Enter output DIRECTORY [default: $default_out]: " out_dir
+        out_dir=${out_dir:-"$default_out"}
         mkdir -p "$out_dir"
         
         printf "\n${CYAN}>> Finding Attractors...${NC}\n"
@@ -183,7 +186,10 @@ run_attractors() {
         prompt_for_file "Path to attractors.tsv: " att_tsv
         prompt_for_file "Path to selected_rules.tsv: " sel_rules
         read -r -p "Initial Binary State (e.g. 1010010): " init_state
-        read -r -p "Enter output DIRECTORY: " out_dir
+        
+        default_out=$(dirname "$att_tsv")
+        read -r -p "Enter output DIRECTORY [default: $default_out]: " out_dir
+        out_dir=${out_dir:-"$default_out"}
         mkdir -p "$out_dir"
         
         printf "\n${CYAN}>> Simulating Path...${NC}\n"

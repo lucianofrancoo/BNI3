@@ -1,0 +1,13 @@
+# Trajectory simulation results
+# Target attractor: 1
+# Steps to attractor: 5
+# Converged: True
+# Found at step in cycle: 1
+# Total trajectory length: 5
+#
+step	binary_state	ABA4	ABCG31	ABF3	ABF4	CYP707A3	DREB2A	FBH3	HB5	HB6	HB7	MYB44	PP2C5	ZAT6	phase
+0	0000000000000	0	0	0	0	0	0	0	0	0	0	0	0	0	initial
+1	1000000101000	1	0	0	0	0	0	0	1	0	1	0	0	0	transient
+2	1000100111000	1	0	0	0	1	0	0	1	1	1	0	0	0	transient
+3	1010100111100	1	0	1	0	1	0	0	1	1	1	1	0	0	transient
+4	0011011010101	0	0	1	1	0	1	1	0	1	0	1	0	1	attractor_reached
