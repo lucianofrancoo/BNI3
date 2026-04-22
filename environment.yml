@@ -1,0 +1,17 @@
+name: bni3_env
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python>=3.9
+  - pip
+  - pandas
+  - numpy
+  - matplotlib
+  - seaborn
+  - networkx
+  - scikit-learn
+  - psutil
+  - deap
+  - pip:
+    - geppy
