@@ -23,23 +23,6 @@ conda activate bni3_env
 ./bni3_launcher.sh
 ```
 
-Upon executing the launcher, you will be greeted by the Main Menu:
-
-```text
-╔═══════════════════════════════════════════════════════════════╗
-║                                                               ║
-║                    🧬 BNI3 PIPELINE LAUNCHER                  ║
-║                                                               ║
-╚═══════════════════════════════════════════════════════════════╝
-
-Please select the pipeline step you want to execute:
-
-  1) Binarization Module
-  2) Rules Inference Module
-  3) Attractors Analysis Module
-  4) Exit
-```
-
 ---
 
 ## 2. Module 1: Binarization
@@ -47,15 +30,25 @@ Please select the pipeline step you want to execute:
 Continuous gene expression data (e.g., RNA-Seq) needs to be discretized. BNI3 natively supports **SSD** (StepMiner) and **WCSS** (K-Means).
 
 ### Input Formatting
-Your initial continuous matrix should have **Genes as rows** and **Timepoints/Samples as columns**:
+Your initial continuous matrix should have **Genes as rows** and **Timepoints/Samples as columns**. Let's look at a snippet from our `Counts_lite.tsv` example:
 
-| ID    | T1  | T2  | T3  |
-|-------|-----|-----|-----|
-| GeneA | 0.5 | 2.1 | 1.8 |
-| GeneB | 1.2 | 0.3 | 0.4 |
+| ID | 0d | 5d | 11d | 14d |
+|---|---|---|---|---|
+| **HB7** | 310.66 | 197.00 | 186.66 | 47.33 |
+| **ZAT6** | 157.00 | 92.00 | 414.00 | 3217.33 |
+| **CYP707A3** | 472.66 | 165.33 | 717.66 | 154.66 |
 
-### Interactive Execution
-Select `1` in the Main Menu and follow the prompts. You simply drag and drop the path to your raw `.tsv`. The pipeline will automatically generate the corresponding **Binarized Matrix** and a **Behavior Review Summary** indicating how many unique patterns were found.
+### Output: Binarized Matrix
+Select `1` in the Main Menu and provide your `Counts_lite.tsv`. The pipeline will calculate the optimal transition thresholds and generate a Binarized Matrix (`Counts_lite_binarized_SSD.tsv`). 
+
+**Crucially, BNI3 transposes this matrix** automatically (Genes as Columns, Timepoints as Rows) to prepare it for evolutionary inference:
+
+| HB7 | ZAT6 | CYP707A3 | ABCG31 | PP2C5 | DREB2A | HB6 | MYB44 |
+|---|---|---|---|---|---|---|---|
+| 1 | 0 | 1 | 1 | 1 | 0 | 0 | 0 |
+| 1 | 0 | 0 | 0 | 0 | 0 | 1 | 0 |
+| 1 | 0 | 1 | 0 | 0 | 0 | 1 | 1 |
+| 0 | 1 | 0 | 0 | 0 | 1 | 1 | 1 |
 
 ---
 
@@ -63,31 +56,51 @@ Select `1` in the Main Menu and follow the prompts. You simply drag and drop the
 
 This is the core of BNI3. Using Gene Expression Programming, the module searches millions of possible Boolean logic combinations (`AND`, `OR`, `NOT`) to find the mathematical equations that best describe how your genes transition from one timepoint to the next.
 
-### Input Formatting
-The inference engine expects the **Binarized Matrix** to be transposed compared to the original input (Genes as Columns, Timepoints as Rows):
+### 3.1 Inference (`rules_by_gene.tsv`)
+Select `2` in the Main Menu. Provide the path to **BOTH** your Continuous Matrix and Binarized Matrix. The system will dedicate 100% of your CPU cores `$(nproc)` to evolve logical rules independently for each gene.
 
-| GeneA | GeneB |
-|-------|-------|
-| 0     | 1     |
-| 1     | 0     |
+Here is an example of the rules inferred just for the gene **HB7**:
 
-### Interactive Execution
-Select `2` in the Main Menu. Provide the path to your *Continuous Matrix* and your newly generated *Binarized Matrix*.
+| Gene | Position | Rule Inferred | Correct Transitions | N_Regulators | Score |
+|---|---|---|---|---|---|
+| HB7 | 1 | `~ABF3 & ~MYB44` | 3 | 2 | 1.9375 |
+| HB7 | 2 | `~ABF3 \| ~CYP707A3` | 3 | 2 | 1.9375 |
+| HB7 | 3 | `~MYB44 \| (ABF4 & ~ZAT6)` | 3 | 3 | 1.9375 |
+| HB7 | 4 | `~ABF3 \| ~HB6 \| ~HB7` | 3 | 3 | 1.9375 |
 
-> **Note on Multithreading**: BNI3 automatically detects your CPU hardware through `$(nproc)` and will distribute the evolutionary workload across 100% of your available cores, drastically reducing computational time.
+### 3.2 Evaluation & Scoring (`evaluation_results.tsv`)
+Because BNI3 infers *multiple* valid rules per gene, the Evaluator tests thousands of network combinations to find the ultimate topology. It calculates a `composite_score` based on:
+- `avg_cycle_length` (penalty for long unstable cycles)
+- `fixed_point_ratio` (reward for biological stability)
+- `final_state_concordance`
 
-The orchestrator will output the best rules per gene:
-`rules_by_gene_evaluated.tsv`
+The winning topology is then saved as `rules_by_gene_evaluated.tsv` and automatically plotted as a high-resolution topological network!
+
+![Inferred Network Topology](../2.Rules_Inference/Example/network/rules_by_gene_network.png)
 
 ---
 
 ## 4. Module 3: Attractors & Visualization
 
-Once the rules are established, we can calculate the **Attractors**. Attractors are the steady states (fixed points or cycles) where the network eventually settles, often representing biological phenotypes like cell death, proliferation, or steady homeostasis.
+Once the rules are established, we can calculate the **Attractors**. Attractors are the steady states (fixed points or cycles) where the network eventually settles, often representing biological phenotypes like cell proliferation, differentiation, or homeostasis.
 
 Select `3` in the Main Menu and choose `Find Attractors` and then `Visualize Attractors Landscape`.
 
-The pipeline will use the `rules_by_gene_evaluated.tsv` generated in the previous step and will render the topological network mapping the basins of attraction.
+The module will scan the state-space and output `attractors.tsv`:
 
-### Output
-BNI3 will automatically generate high-resolution Vector (`.svg`) and Pixel (`.png`) images of your network's topology.
+| attractor_id | type | cycle_length | basin_size | basin_percentage | binary_state |
+|---|---|---|---|---|---|
+| 1 | fixed_point | 1 | 8192 | 100.0% | 0011011010101 |
+
+### Biological Perturbations (In-Silico Mutations)
+BNI3 allows you to simulate Overexpression (Gene:1) or Knockouts (Gene:0). By doing this, you can observe how the topological landscape shifts, potentially discovering new attractors or destroying existing ones.
+
+The pipeline automatically renders two vital visualizations for your publications:
+
+#### 1. Attractors Heatmap
+Shows the active (red) and inactive (blue) genes across different steady states.
+![Attractors Heatmap](../3.Attractors/Example/attractors_visualization_heatmap.png)
+
+#### 2. Attractors Basin Network
+Visualizes the proportional size of the basins of attraction (how many initial states converge into a specific phenotype).
+![Attractors Landscape](../3.Attractors/Example/attractors_visualization_network.png)
