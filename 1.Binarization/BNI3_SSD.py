@@ -174,7 +174,8 @@ def discretize_row_ssd(row, gene_name, verbose):
     distance_matrix = squareform(pdist(ordered_row.reshape(-1, 1)))
     
     separator = None
-    
+    isolated_elements = []
+
     while separator is None:
         # Find maximum distance
         valid_distances = distance_matrix[~np.isnan(distance_matrix)]
