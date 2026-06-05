@@ -35,6 +35,56 @@ python3 3.BNI3_Evaluate_rules.py -r Example/rules_by_gene.tsv -m ../1.Binarizati
 *   `evaluation_results.tsv`: The full ranking and attractor metrics for all evaluated combinations.
 *   `rules_by_gene_evaluated.tsv`: The definitive winning ruleset, ready to be passed to the Attractor stage.
 
+#### Performance update (2026-06-04)
+
+The attractor-search engine was rewritten to eliminate the main bottleneck. Previously, for each rule combination the code iterated over all $2^N$ network states one by one, calling Python `eval()` with string replacement **$N \times 2^N$ times** per combination (~106,000 calls for a 13-gene network). This made large evaluations take several hours.
+
+**What changed:**
+
+| Component | Before | After |
+|---|---|---|
+| State transition | Per-state Python `eval()` loop | Vectorized numpy: `eval()` called once per rule over all $2^N$ states as boolean arrays |
+| Attractor finding | Re-evaluates rules at every simulation step | O(1) array-lookup traversal of a precomputed transition table |
+| Basin size counting | Undercounted: states absorbed into earlier trajectories were silently skipped | Correct: all $2^N$ states assigned to their attractor via `np.unique` |
+| Process pool | `imap_unordered` with default chunksize | `chunksize` tuned to reduce IPC round-trips |
+
+**Measured speedup (13 genes, 20,000 combinations, 8 processes):**
+
+| | Time per combination | Total wall time |
+|---|---|---|
+| Before | ~4,479 ms | ~186 min |
+| After | ~34 ms | ~1.4 min |
+| **Speedup** | **~133×** | |
+
+The public API (`evaluate_rule_combinations`, output file format, all CLI flags) is unchanged. The old `find_attractors_for_ruleset` function is kept in the file for reference.
+
+#### Auto-parallelization update (2026-06-05)
+
+Previously the default number of worker processes was hardcoded to `8`. The script now auto-detects the number of available CPU cores (`mp.cpu_count()`) and uses all of them by default, maximizing throughput without any manual tuning.
+
+| | Before | After |
+|---|---|---|
+| Default `-n` / `--processes` | `8` (hardcoded) | `None` → `mp.cpu_count()` at runtime |
+| Example on a 32-core machine | 8 workers | 32 workers (~4× more parallelism) |
+
+The `-n` / `--processes` flag still works to override manually if needed:
+```bash
+python3 3.BNI3_Evaluate_rules.py -r Example/rules_by_gene.tsv -m ../1.Binarization/Example/bin_SSD.tsv -n 16
+```
+
+#### Output column update (2026-06-05)
+
+The `rules_by_gene_evaluated.tsv` file gained a new column **`n_top_combos`**, replacing the previous `EvalScore` column.
+
+| Column | Description |
+|---|---|
+| `Score` | GEP fitness score — how well the rule reproduces observed transitions |
+| `n_top_combos` | How many of the best-ranked combinations used this rule for this gene |
+
+`EvalScore` (the combined evaluation score) was the same value for every row in the file — all entries come from combinations that tied for the best score — so it carried no per-gene information. `n_top_combos` is genuinely gene-level: a rule with a higher count was used more consistently across the top combinations, making it the more robust choice when multiple rules tie for a gene.
+
+Rows within each gene are now sorted by `n_top_combos` descending, so the most-consensus rule appears first. The full `final_score` per combination is still available in `evaluation_results.tsv`.
+
 ### 4. Network Visualizer (`4.BNI3_Boolean_network_visualizer.py`)
 Once you have the evaluated unified ruleset, this tool allows you to visually render the boolean network topology to formally inspect the interactions among regulators and genes.
 

@@ -186,13 +186,108 @@ def calculate_parsimony_metrics(gene_rules: Dict[str, str]) -> Dict[str, float]:
     }
 
 
-def state_to_tuple(state: List[bool]) -> Tuple[bool, ...]:
-    """Convert state list to hashable tuple"""
-    return tuple(state)
+def _build_transition_table(gene_rules: Dict[str, str], genes: List[str]) -> np.ndarray:
+    """
+    Build full Boolean network transition table for all 2^N states at once.
+
+    Instead of simulating each state individually with Python eval(), this evaluates
+    every rule across all 2^N states simultaneously using numpy boolean arrays.
+    Gene i occupies bit i in the integer state representation.
+
+    Returns array T of shape (2^N,) where T[s] = next state integer.
+    """
+    N = len(genes)
+    total = 1 << N  # 2^N
+    states = np.arange(total, dtype=np.int64)
+
+    # For each gene, extract its bit value across all states → shape (total,) bool array
+    gene_vals = {
+        gene: ((states >> i) & 1).astype(np.bool_)
+        for i, gene in enumerate(genes)
+    }
+
+    # Evaluate each rule over all states simultaneously
+    next_bits = []
+    for gene in genes:
+        rule = gene_rules.get(gene, gene)
+        rule_stripped = rule.strip()
+
+        if rule_stripped in ('True', 'true'):
+            bit = np.ones(total, dtype=np.bool_)
+        elif rule_stripped in ('False', 'false'):
+            bit = np.zeros(total, dtype=np.bool_)
+        else:
+            # eval() is called ONCE per rule (not per state).
+            # gene_vals provides numpy bool arrays as local variables,
+            # so &, |, ~ operate element-wise over all states at once.
+            result = eval(rule_stripped, {'__builtins__': {}}, gene_vals)
+            result = np.asarray(result, dtype=np.bool_)
+            if result.shape == ():
+                result = np.full(total, bool(result), dtype=np.bool_)
+            bit = result
+
+        next_bits.append(bit)
+
+    # Assemble next-state integers: next_state = Σ next_bits[i] * 2^i
+    bit_matrix = np.stack(next_bits, axis=1)           # (total, N) bool
+    powers = np.int64(1) << np.arange(N, dtype=np.int64)  # [1, 2, 4, ...]
+    T = bit_matrix.astype(np.int64) @ powers             # (total,) int64
+    return T.astype(np.int32)
 
 
-def find_attractors_for_ruleset(gene_rules: Dict[str, str], 
-                                 genes: List[str], 
+def _find_attractors_from_table(T: np.ndarray, N_genes: int) -> Tuple[List, Dict]:
+    """
+    Find all attractors given a precomputed transition table.
+
+    Each state in T is visited at most twice, giving O(2^N) total work
+    with O(1) per-step cost (array lookup + dict lookup).
+
+    Returns attractors in the same list-of-bool-lists format used by the
+    rest of the pipeline, plus a basin-size dict keyed by attractor index.
+    """
+    N_states = len(T)
+    state_attractor = np.full(N_states, -1, dtype=np.int32)
+    attractors: List[List[List[bool]]] = []
+
+    for start in range(N_states):
+        if state_attractor[start] >= 0:
+            continue
+
+        path: List[int] = []
+        path_idx: Dict[int, int] = {}
+        s = int(start)
+
+        while s not in path_idx and state_attractor[s] < 0:
+            path_idx[s] = len(path)
+            path.append(s)
+            s = int(T[s])
+
+        if state_attractor[s] >= 0:
+            aid = int(state_attractor[s])
+        else:
+            # New cycle detected — convert integer states to bool lists
+            cycle_start_idx = path_idx[s]
+            cycle_states = path[cycle_start_idx:]
+            aid = len(attractors)
+            cycle_bools = [
+                [(cs >> i) & 1 == 1 for i in range(N_genes)]
+                for cs in cycle_states
+            ]
+            attractors.append(cycle_bools)
+            for cs in cycle_states:
+                state_attractor[cs] = aid
+
+        for ps in path:
+            if state_attractor[ps] < 0:
+                state_attractor[ps] = aid
+
+    unique, counts = np.unique(state_attractor, return_counts=True)
+    basins = {int(u): int(c) for u, c in zip(unique, counts)}
+    return attractors, basins
+
+
+def find_attractors_for_ruleset(gene_rules: Dict[str, str],
+                                 genes: List[str],
                                  max_iterations: int = 1000) -> Tuple[List[List[List[bool]]], Dict]:
     """
     Find all attractors for a given ruleset without parallelization
@@ -368,39 +463,41 @@ def load_binarized_matrix(matrix_file: str) -> pd.DataFrame:
     return df
 
 
-def calculate_intelligent_defaults(rules_by_gene: Dict[str, List], 
+def calculate_intelligent_defaults(rules_by_gene: Dict[str, List],
                                   target_time_minutes: int = 10,
-                                  n_processes: int = 8) -> Dict[str, int]:
+                                  n_processes: int = None) -> Dict[str, int]:
     """
     Calculate intelligent default values for top_n and max_combinations
     based on the problem size and desired execution time.
-    
+
     Args:
         rules_by_gene: Dictionary with rules per gene
         target_time_minutes: Target execution time in minutes (default: 10)
-        n_processes: Number of processes (default: 8, conservative)
-        
+        n_processes: Number of processes (default: None = auto-detect all available cores)
+
     Returns:
         Dictionary with recommended 'top_n' and 'max_combinations'
     """
     # Get number of rules per gene
     rules_counts = [len(rules) for rules in rules_by_gene.values()]
     n_genes = len(rules_by_gene)
-    
+
     # ===== LÍMITES ABSOLUTOS CONSERVADORES =====
     MAX_COMBINATIONS_ABSOLUTE = 50_000  # Límite máximo absoluto
     MAX_RULES_PER_GENE_ABSOLUTE = 30    # Máximo de reglas por gen
     TARGET_COMBINATIONS_FOR_SAMPLING = 20_000  # Target preferido para muestreo
-    
+
     # Calculate total possible combinations (with overflow protection)
     try:
         total_combinations = math.prod(rules_counts)
     except Exception:
         total_combinations = float('inf')
-    
+
     # Estimate throughput (combinations per second)
     # Conservative estimate: 3 combinations/second/core
     throughput_per_core = 3
+    if n_processes is None:
+        n_processes = mp.cpu_count()
     total_throughput = throughput_per_core * n_processes
     
     # Calculate how many combinations we can evaluate in target time
@@ -535,21 +632,23 @@ def evaluate_single_combination(combo_indices: List[int],
         rule_idx = combo_indices[i]
         position, rule = rules_by_gene[gene][rule_idx]
         gene_rules[gene] = rule
-    
-    # Find attractors
-    attractors, basins = find_attractors_for_ruleset(gene_rules, genes, max_iterations)
-    
+
+    # Build transition table for all 2^N states at once (vectorized), then find attractors.
+    # This replaces the per-state Python eval() loop and gives a large speedup.
+    T = _build_transition_table(gene_rules, genes)
+    attractors, basins = _find_attractors_from_table(T, len(genes))
+
     # Calculate attractor-based metrics
     metrics = calculate_attractor_metrics(attractors, basins, genes, binarized_matrix)
-    
-    # Calculate parsimony-based metrics (NEW)
+
+    # Calculate parsimony-based metrics
     parsimony_metrics = calculate_parsimony_metrics(gene_rules)
     metrics.update(parsimony_metrics)
-    
+
     # Add position information to metrics
-    metrics['positions'] = [rules_by_gene[gene][combo_indices[i]][0] 
-                           for i, gene in enumerate(genes)]
-    
+    metrics['positions'] = [rules_by_gene[gene][combo_indices[i]][0]
+                            for i, gene in enumerate(genes)]
+
     return combo_indices, metrics
 
 
@@ -559,25 +658,29 @@ def evaluate_rule_combinations(rules_file: str,
                                top_n: int = None,
                                max_combinations: int = None,
                                max_iterations: int = 1000,
-                               n_processes: int = 8,
+                               n_processes: int = None,
                                score_column: str = 'Score',
                                verbose: bool = True):
     """
     Main function to evaluate rule combinations
-    
+
     Args:
         rules_file: Path to rules TSV file
         output_file: Path to output results file (default: same dir as rules_file)
         binarized_matrix_file: Optional path to binarized expression matrix
-        top_n: Number of top rules to consider per gene. 
+        top_n: Number of top rules to consider per gene.
                If None (default), uses all rules with maximum score (tied for best).
         max_combinations: Maximum number of combinations to evaluate.
                          If None (default), evaluates ALL possible combinations.
         max_iterations: Maximum iterations for attractor search
-        n_processes: Number of processes for parallelization (default: 8)
+        n_processes: Number of processes for parallelization (default: None = auto-detect all available cores)
         score_column: Column to use for rule ranking
         verbose: Print progress information
     """
+    # Resolve process count before any downstream use
+    if n_processes is None:
+        n_processes = mp.cpu_count()
+
     if verbose:
         print("="*80)
         print("BOOLEAN RULES EVALUATION WITH INTEGRATED SCORE")
@@ -696,10 +799,6 @@ def evaluate_rule_combinations(rules_file: str,
     if verbose:
         print(f"   Ready to evaluate {len(combinations):,} unique combinations")
     
-    # Set up parallelization
-    if n_processes is None:
-        n_processes = mp.cpu_count()
-    
     if verbose:
         print(f"\n6. Starting evaluation with {n_processes} processes...")
     
@@ -715,11 +814,15 @@ def evaluate_rule_combinations(rules_file: str,
     combinations_list = list(combinations)  # Convert to list for iteration
     
     if n_processes > 1:
+        # chunksize balances IPC overhead vs granularity; larger = fewer round-trips
+        chunksize = max(1, len(combinations_list) // (n_processes * 20))
         with mp.Pool(processes=n_processes) as pool:
-            for i, result in enumerate(pool.imap_unordered(eval_func, combinations_list), 1):
+            for i, result in enumerate(
+                pool.imap_unordered(eval_func, combinations_list, chunksize=chunksize), 1
+            ):
                 results.append(result)
                 if verbose and i % 100 == 0:
-                    print(f"   Progress: {i}/{len(combinations_list)} combinations evaluated", 
+                    print(f"   Progress: {i}/{len(combinations_list)} combinations evaluated",
                           end='\r')
     else:
         for i, combo in enumerate(combinations_list, 1):
@@ -836,59 +939,54 @@ def evaluate_rule_combinations(rules_file: str,
     
     # Create a new dataframe with the winning rules
     winning_rules_data = []
-    
+
     for gene in genes:
-        # Get the position(s) and rule(s) from best combination(s)
-        positions_in_best = set()
-        rules_in_best = set()
-        
+        # Count how many top combinations used each (pos, rule) for this gene
+        rule_counts: Dict[tuple, int] = {}
         for _, row in best_combinations.iterrows():
-            pos = row[f'{gene}_position']
-            rule = row[f'{gene}_rule']
-            positions_in_best.add(pos)
-            rules_in_best.add((pos, rule))
-        
-        # Look up original scores for these positions in the original dataframe
-        for pos, rule in rules_in_best:
-            # Find this rule in the original dataframe
-            original_row = df[(df['Gene'] == gene) & 
-                            (df['Position'] == pos) & 
-                            (df['Rule'] == rule)]
-            
+            key = (row[f'{gene}_position'], row[f'{gene}_rule'])
+            rule_counts[key] = rule_counts.get(key, 0) + 1
+
+        # Look up original GEP scores for each winning rule
+        for (pos, rule), count in rule_counts.items():
+            original_row = df[(df['Gene'] == gene) &
+                              (df['Position'] == pos) &
+                              (df['Rule'] == rule)]
+
             if not original_row.empty:
-                # Get the first match (should be unique)
                 orig = original_row.iloc[0]
-                
-                # Create entry for winning rules file maintaining original column order
-                # Original order: Gene, Position, Rule, Correct, N_Regulators, MSE, Score
+
                 entry = {
                     'Gene': gene,
                     'Position': int(pos),
                     'Rule': rule,
                 }
-                
-                # Add columns in the original order if they exist
+
+                # Add GEP columns in the original order
                 for col in df.columns:
                     if col not in ['Gene', 'Position', 'Rule']:
                         entry[col] = orig[col]
-                
+
+                # How many of the best combinations used this rule for this gene
+                entry['n_top_combos'] = count
+
                 winning_rules_data.append(entry)
-    
-    # Create dataframe and sort
+
+    # Create dataframe and sort by gene, then descending consensus (most used rule first)
     winning_rules_df = pd.DataFrame(winning_rules_data)
-    winning_rules_df = winning_rules_df.sort_values(['Gene', 'Position'])
-    
-    # Reorder columns to match original file format
-    # Standard order: Gene, Position, Rule, Correct, N_Regulators, MSE, Score
-    # But preserve whatever columns exist in the original file
+    winning_rules_df = winning_rules_df.sort_values(
+        ['Gene', 'n_top_combos', 'Position'], ascending=[True, False, True]
+    )
+
+    # Reorder columns: GEP columns first (original order), then n_top_combos last
     original_columns = ['Gene', 'Position', 'Rule']
-    
-    # Add remaining columns in the order they appear in the original dataframe
+
     for col in df.columns:
         if col not in original_columns and col in winning_rules_df.columns:
             original_columns.append(col)
-    
-    # Reorder dataframe columns
+
+    original_columns.append('n_top_combos')
+
     winning_rules_df = winning_rules_df[original_columns]
     
     # Save to file in same directory as output_file
@@ -1026,8 +1124,8 @@ Output format:
                               'Default: None (AUTOMATIC - calculates intelligent default, typically ~20,000)')
     optional.add_argument('--max-iter', type=int, default=1000,
                          help='Maximum iterations for attractor search (default: 1000)')
-    optional.add_argument('-n', '--processes', type=int, default=8,
-                         help='Number of parallel processes (default: 8, conservative and optimal)')
+    optional.add_argument('-n', '--processes', type=int, default=None,
+                         help='Number of parallel processes (default: None = auto-detect all available cores)')
     optional.add_argument('--score-col', type=str, default='Score',
                          help='Column name for rule ranking (default: Score)')
     optional.add_argument('-v', '--verbose', action='store_true',
@@ -1058,5 +1156,3 @@ Output format:
 
 if __name__ == "__main__":
     main()
-
-print(f"   WARNING: Combination overflow detected. Total would be > 1e18")
