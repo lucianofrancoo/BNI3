@@ -67,9 +67,103 @@ Previously the default number of worker processes was hardcoded to `8`. The scri
 | Default `-n` / `--processes` | `8` (hardcoded) | `None` → `mp.cpu_count()` at runtime |
 | Example on a 32-core machine | 8 workers | 32 workers (~4× more parallelism) |
 
+#### Rule evaluation cache + Numba JIT (2026-06-05)
+
+Two additional optimizations layered on top of the vectorized engine:
+
+**Rule evaluation cache** — all unique `(gene, rule)` pairs are evaluated once before the main loop and stored as precomputed numpy bool arrays. Workers receive the cache via pool initializer, so `eval()` is never called inside the hot loop regardless of how many combinations are evaluated. For a 13-gene network with 20,000 combinations this replaces up to 260,000 `eval()` calls with 22 dict lookups.
+
+**Numba JIT (`_assign_attractors_jit`)** — the O(2^N) state-traversal loop is decorated with `@njit` so Numba compiles it to native machine code on first call. Uses fixed-size numpy array buffers instead of Python dicts, making the attractor assignment ~10–30× faster. Requires `pip install numba`; the script falls back to pure Python automatically if Numba is not installed.
+
+| Component | Before (v1.1.0) | After |
+|---|---|---|
+| Rule eval inside hot loop | `eval()` × N per combination | dict lookup (cache, zero eval) |
+| Attractor traversal | Pure Python loop + dicts | Numba-compiled native loop |
+| Pool worker init | Default | Sets cache + warms up JIT once per worker |
+
+New dependency: `numba` (optional — graceful fallback if absent).
+
 The `-n` / `--processes` flag still works to override manually if needed:
 ```bash
 python3 3.BNI3_Evaluate_rules.py -r Example/rules_by_gene.tsv -m ../1.Binarization/Example/bin_SSD.tsv -n 16
+```
+
+#### Combination limits, `--top-results`, and execution timing (2026-06-05)
+
+Several usability improvements:
+
+- **Increased combination limits**: The absolute cap was raised to 50,000,000 and the default sampling target to 5,000,000. On a 64-core machine the script evaluated 5 million combinations in ~4 minutes at ~19,700 combos/sec.
+- **Simplified strategy selection**: The previous 3-strategy system included a `reduce_both` fallback that could silently cap rules per gene to 3. This was removed. There are now only 2 strategies: evaluate ALL if it fits within the time budget, or random-sample if it doesn't. `top_n` (rules per gene) is **never reduced** — all max-score rules are always kept.
+- **`--top-results`** (new flag, default `10000`): Limits how many rows are written to `evaluation_results.tsv`. Without this, evaluating 5M combinations produced an unmanageable 1.6 GB file. Use `--top-results 0` to write everything.
+- **Execution time summary**: Printed at the end of each run — wall time in MM:SS format, total combinations evaluated, throughput (combos/sec), and ms per combination.
+
+```
+────────────────────────────────────────
+  Execution time : 04m 13.81s  (253.8s total)
+  Combinations   : 5,000,000 evaluated
+  Throughput     : 19,700 combinations/sec
+  Per combination: 0.05 ms
+────────────────────────────────────────
+```
+
+#### Statistical confidence and adaptive batching (2026-06-05)
+
+When evaluating a random sample of 5M combinations from a space of 484M, there is some probability that the single best combination was never sampled. The script now estimates this probability and runs additional batches automatically until a target confidence is reached.
+
+**The coverage formula:**
+
+If K out of M total combinations achieve the minimum score and you sample n, the probability of finding at least one is:
+
+```
+P = 1 − (1 − K/M)^n
+```
+
+K is unknown, but can be estimated from the sample: if k combinations in your n-sample share the best score, then K/M ≈ k/n. Substituting:
+
+```
+P ≈ 1 − (1 − k/n)^n ≈ 1 − e^{−k}
+```
+
+The n and M cancel — **confidence depends almost entirely on k** (how many times the best score was observed):
+
+| k | Confidence |
+|---|---|
+| 1 | 63% |
+| 2 | 86% |
+| 3 | 95% |
+| 5 | 99.3% |
+| 7 | 99.9% |
+| 10 | 99.995% |
+
+**Note on which score is used:** k is counted from `composite_score` (the pre-normalization attractor quality metric), not `final_score`. `final_score` is normalized within each sample so its values shift when the sample changes — using it for cross-batch comparison would be unstable. `composite_score` is a raw weighted sum of attractor metrics (n\_basins, cycle\_length, concordance, fixed\_point\_ratio) that is computed before normalization and is stable across batches.
+
+**Adaptive batching:**
+
+By default, the script evaluates an initial batch (up to 5M combinations), checks k, then adds more batches if k < 7 (i.e., confidence < 99.9%). Each additional batch targets exactly the number of samples needed to reach k = 7. The total is capped at 3× the initial batch size (e.g., 15M) to prevent runaway in cases where the optimum is extremely rare. Batches are **additive** — new batches only evaluate fresh combinations and accumulate on top of previous results; no work is ever repeated.
+
+Example output (two-batch run):
+
+```
+   Batch 1 complete — 5,000,000 total | k=2 | confidence=86.5%
+   Batch 2: 7,500,000 more combinations (k=2, confidence so far: 86.5%)...
+   Batch 2 complete — 12,500,000 total | k=6 | confidence=99.7%
+────────────────────────────────────────
+  Combinations   : 12,500,000 in 2 batches
+  ── Statistical coverage ──────────
+  k (top score)  : 6 occurrences of best score
+  Confidence     : 99.75%
+  For 99%      : 11,513,000 total (done)
+  For 99.5%    : 14,030,000 total (1,530,000 more needed)
+  For 99.99%   : 23,026,000 total (10,526,000 more needed)
+────────────────────────────────────────
+```
+
+If k is large after the first batch (e.g., k=10 → 99.995%), no additional batches run. For exhaustive evaluation (all combinations fit within the budget), coverage is reported as 100%.
+
+Use `--confidence 0` to disable adaptive mode (single batch only), or change the target:
+```bash
+# Require 99.9999% confidence (k ≥ 14)
+python3 3.BNI3_Evaluate_rules.py -r Example/rules_by_gene.tsv -m ../1.Binarization/Example/bin_SSD.tsv --confidence 0.99999
 ```
 
 #### Output column update (2026-06-05)

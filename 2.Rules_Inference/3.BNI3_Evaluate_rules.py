@@ -8,6 +8,7 @@ Author: Luciano
 """
 
 import argparse
+import time
 import pandas as pd
 import numpy as np
 import itertools
@@ -18,6 +19,16 @@ import sys
 import os
 import multiprocessing as mp
 from functools import partial
+
+try:
+    from numba import njit as _njit
+    _NUMBA_AVAILABLE = True
+except ImportError:
+    def _njit(func):          # transparent no-op when numba is absent
+        return func
+    _NUMBA_AVAILABLE = False
+
+_RULE_CACHE: Dict = None      # set per-process by _worker_init; None falls back to eval()
 
 
 def evaluate_rule(rule: str, gene_state: Dict[str, bool]) -> bool:
@@ -186,40 +197,82 @@ def calculate_parsimony_metrics(gene_rules: Dict[str, str]) -> Dict[str, float]:
     }
 
 
-def _build_transition_table(gene_rules: Dict[str, str], genes: List[str]) -> np.ndarray:
+def _precompute_rule_cache(rules_by_gene: Dict[str, List], genes: List[str]) -> Dict:
     """
-    Build full Boolean network transition table for all 2^N states at once.
+    Evaluate every unique (gene, rule) pair once across all 2^N states.
 
-    Instead of simulating each state individually with Python eval(), this evaluates
-    every rule across all 2^N states simultaneously using numpy boolean arrays.
-    Gene i occupies bit i in the integer state representation.
-
-    Returns array T of shape (2^N,) where T[s] = next state integer.
+    Returns {(gene, rule_str): np.ndarray(2^N, bool)} so _build_transition_table
+    can skip eval() entirely for the whole run.
+    Called once in the main process; forwarded to each worker via pool initializer.
     """
     N = len(genes)
-    total = 1 << N  # 2^N
+    total = 1 << N
     states = np.arange(total, dtype=np.int64)
-
-    # For each gene, extract its bit value across all states → shape (total,) bool array
     gene_vals = {
         gene: ((states >> i) & 1).astype(np.bool_)
         for i, gene in enumerate(genes)
     }
 
-    # Evaluate each rule over all states simultaneously
+    cache: Dict[tuple, np.ndarray] = {}
+    for gene in genes:
+        for _pos, rule in rules_by_gene[gene]:
+            rule_stripped = rule.strip()
+            key = (gene, rule_stripped)
+            if key in cache:
+                continue
+            if rule_stripped in ('True', 'true'):
+                cache[key] = np.ones(total, dtype=np.bool_)
+            elif rule_stripped in ('False', 'false'):
+                cache[key] = np.zeros(total, dtype=np.bool_)
+            else:
+                result = eval(rule_stripped, {'__builtins__': {}}, gene_vals)
+                result = np.asarray(result, dtype=np.bool_)
+                if result.shape == ():
+                    result = np.full(total, bool(result), dtype=np.bool_)
+                cache[key] = result
+    return cache
+
+
+def _build_transition_table(gene_rules: Dict[str, str], genes: List[str],
+                            rule_cache: Dict = None) -> np.ndarray:
+    """
+    Build full Boolean network transition table for all 2^N states at once.
+
+    When rule_cache is provided (normal case after precomputation), each gene's
+    bool array is a direct dict lookup — no eval() call needed.
+    gene_vals is built lazily only on a cache miss (fallback path).
+
+    Returns array T of shape (2^N,) where T[s] = next state integer.
+    """
+    N = len(genes)
+    total = 1 << N
+
+    gene_vals = None  # lazily initialised on first cache miss
+
     next_bits = []
     for gene in genes:
         rule = gene_rules.get(gene, gene)
         rule_stripped = rule.strip()
 
+        # Fast path: use precomputed bool array
+        if rule_cache is not None:
+            key = (gene, rule_stripped)
+            if key in rule_cache:
+                next_bits.append(rule_cache[key])
+                continue
+
+        # Fallback: evaluate on the fly (cache miss or no cache)
         if rule_stripped in ('True', 'true'):
             bit = np.ones(total, dtype=np.bool_)
         elif rule_stripped in ('False', 'false'):
             bit = np.zeros(total, dtype=np.bool_)
         else:
-            # eval() is called ONCE per rule (not per state).
-            # gene_vals provides numpy bool arrays as local variables,
-            # so &, |, ~ operate element-wise over all states at once.
+            if gene_vals is None:
+                states = np.arange(total, dtype=np.int64)
+                gene_vals = {
+                    g: ((states >> i) & 1).astype(np.bool_)
+                    for i, g in enumerate(genes)
+                }
             result = eval(rule_stripped, {'__builtins__': {}}, gene_vals)
             result = np.asarray(result, dtype=np.bool_)
             if result.shape == ():
@@ -229,57 +282,75 @@ def _build_transition_table(gene_rules: Dict[str, str], genes: List[str]) -> np.
         next_bits.append(bit)
 
     # Assemble next-state integers: next_state = Σ next_bits[i] * 2^i
-    bit_matrix = np.stack(next_bits, axis=1)           # (total, N) bool
-    powers = np.int64(1) << np.arange(N, dtype=np.int64)  # [1, 2, 4, ...]
-    T = bit_matrix.astype(np.int64) @ powers             # (total,) int64
+    bit_matrix = np.stack(next_bits, axis=1)
+    powers = np.int64(1) << np.arange(N, dtype=np.int64)
+    T = bit_matrix.astype(np.int64) @ powers
     return T.astype(np.int32)
+
+
+@_njit
+def _assign_attractors_jit(T):
+    """
+    Assign every state to an attractor using fixed-size array buffers instead of
+    Python dicts — allows Numba to compile this to native code.
+
+    Returns:
+        state_attractor : int32 array, state_attractor[s] = attractor index
+        in_cycle        : bool array, True for states that ARE the attractor cycle
+        n_attractors    : number of distinct attractors found
+    """
+    N = len(T)
+    state_attractor = np.full(N, -1, dtype=np.int32)
+    in_cycle        = np.zeros(N, dtype=np.bool_)
+    path            = np.empty(N, dtype=np.int32)
+    visited_at      = np.full(N, -1, dtype=np.int32)  # step index in current path
+    n_attractors    = 0
+
+    for start in range(N):
+        if state_attractor[start] >= 0:
+            continue
+
+        path_len = 0
+        s = start
+
+        while state_attractor[s] < 0 and visited_at[s] < 0:
+            visited_at[s] = path_len
+            path[path_len] = s
+            path_len += 1
+            s = T[s]
+
+        if state_attractor[s] >= 0:
+            aid = state_attractor[s]
+        else:
+            # s was already visited in this traversal: new cycle
+            aid = n_attractors
+            n_attractors += 1
+            cycle_begin = visited_at[s]
+            for i in range(cycle_begin, path_len):
+                in_cycle[path[i]] = True
+
+        for i in range(path_len):
+            state_attractor[path[i]] = aid
+            visited_at[path[i]] = -1   # reset for future traversals
+
+    return state_attractor, in_cycle, n_attractors
 
 
 def _find_attractors_from_table(T: np.ndarray, N_genes: int) -> Tuple[List, Dict]:
     """
     Find all attractors given a precomputed transition table.
 
-    Each state in T is visited at most twice, giving O(2^N) total work
-    with O(1) per-step cost (array lookup + dict lookup).
-
-    Returns attractors in the same list-of-bool-lists format used by the
-    rest of the pipeline, plus a basin-size dict keyed by attractor index.
+    Delegates the core O(2^N) traversal to _assign_attractors_jit (Numba-compiled
+    when available), then extracts cycle states and basin sizes in Python.
     """
-    N_states = len(T)
-    state_attractor = np.full(N_states, -1, dtype=np.int32)
-    attractors: List[List[List[bool]]] = []
+    state_attractor, in_cycle, n_attractors = _assign_attractors_jit(T)
 
-    for start in range(N_states):
-        if state_attractor[start] >= 0:
-            continue
-
-        path: List[int] = []
-        path_idx: Dict[int, int] = {}
-        s = int(start)
-
-        while s not in path_idx and state_attractor[s] < 0:
-            path_idx[s] = len(path)
-            path.append(s)
-            s = int(T[s])
-
-        if state_attractor[s] >= 0:
+    n_attr = int(n_attractors)
+    attractors: List[List[List[bool]]] = [[] for _ in range(n_attr)]
+    for s in range(len(T)):
+        if in_cycle[s]:
             aid = int(state_attractor[s])
-        else:
-            # New cycle detected — convert integer states to bool lists
-            cycle_start_idx = path_idx[s]
-            cycle_states = path[cycle_start_idx:]
-            aid = len(attractors)
-            cycle_bools = [
-                [(cs >> i) & 1 == 1 for i in range(N_genes)]
-                for cs in cycle_states
-            ]
-            attractors.append(cycle_bools)
-            for cs in cycle_states:
-                state_attractor[cs] = aid
-
-        for ps in path:
-            if state_attractor[ps] < 0:
-                state_attractor[ps] = aid
+            attractors[aid].append([(s >> i) & 1 == 1 for i in range(N_genes)])
 
     unique, counts = np.unique(state_attractor, return_counts=True)
     basins = {int(u): int(c) for u, c in zip(unique, counts)}
@@ -482,10 +553,10 @@ def calculate_intelligent_defaults(rules_by_gene: Dict[str, List],
     rules_counts = [len(rules) for rules in rules_by_gene.values()]
     n_genes = len(rules_by_gene)
 
-    # ===== LÍMITES ABSOLUTOS CONSERVADORES =====
-    MAX_COMBINATIONS_ABSOLUTE = 50_000  # Límite máximo absoluto
-    MAX_RULES_PER_GENE_ABSOLUTE = 30    # Máximo de reglas por gen
-    TARGET_COMBINATIONS_FOR_SAMPLING = 20_000  # Target preferido para muestreo
+    # ===== LÍMITES =====
+    MAX_COMBINATIONS_ABSOLUTE = 50_000_000  # Safety cap (50M)
+    MAX_RULES_PER_GENE_ABSOLUTE = 30        # Máximo de reglas por gen
+    TARGET_COMBINATIONS_FOR_SAMPLING = 5_000_000  # Target cuando se necesita muestreo
 
     # Calculate total possible combinations (with overflow protection)
     try:
@@ -494,8 +565,8 @@ def calculate_intelligent_defaults(rules_by_gene: Dict[str, List],
         total_combinations = float('inf')
 
     # Estimate throughput (combinations per second)
-    # Conservative estimate: 3 combinations/second/core
-    throughput_per_core = 3
+    # ~300 combinations/second/process after vectorized + cache + JIT optimizations
+    throughput_per_core = 300
     if n_processes is None:
         n_processes = mp.cpu_count()
     total_throughput = throughput_per_core * n_processes
@@ -506,55 +577,23 @@ def calculate_intelligent_defaults(rules_by_gene: Dict[str, List],
     # Apply absolute limit (no more than 50K regardless of time)
     max_feasible = min(max_feasible, MAX_COMBINATIONS_ABSOLUTE)
     
-    # Strategy 1: If total combinations is small, evaluate all
+    # Strategy 1: total fits within time budget → evaluate ALL
     if total_combinations <= max_feasible:
         return {
-            'top_n': None,  # Use all rules with max score
-            'max_combinations': None,  # Evaluate all
+            'top_n': None,
+            'max_combinations': None,
             'reason': 'small_problem',
             'estimated_time_minutes': total_combinations / total_throughput / 60 if total_combinations != float('inf') else target_time_minutes
         }
-    
-    # Strategy 2: If limiting combinations is enough (within 10x of feasible)
-    if total_combinations <= max_feasible * 10:
-        # We can sample a reasonable fraction
-        # Prefer our target of 20K if possible
-        recommended_combos = min(TARGET_COMBINATIONS_FOR_SAMPLING, total_combinations)
-        return {
-            'top_n': None,  # Use all rules with max score
-            'max_combinations': int(recommended_combos),
-            'reason': 'limit_combinations_only',
-            'estimated_time_minutes': target_time_minutes
-        }
-    
-    # Strategy 3: Need to reduce rules per gene AND limit combinations
-    # This is the most common case for large problems
-    
-    # Calculate recommended top_n to get ~20K combinations
-    # Formula: top_n^n_genes ≈ TARGET_COMBINATIONS_FOR_SAMPLING
-    if n_genes > 0:
-        recommended_top_n = int(TARGET_COMBINATIONS_FOR_SAMPLING ** (1 / n_genes))
-    else:
-        recommended_top_n = 5
-    
-    # Apply constraints on top_n
-    recommended_top_n = max(3, recommended_top_n)  # Minimum 3 rules per gene
-    recommended_top_n = min(MAX_RULES_PER_GENE_ABSOLUTE, recommended_top_n)  # Maximum 30
-    
-    # Calculate how many combinations this would generate
-    estimated_combos = recommended_top_n ** n_genes
-    
-    # If still too many, apply max_combinations limit
-    if estimated_combos > TARGET_COMBINATIONS_FOR_SAMPLING:
-        recommended_max_combos = TARGET_COMBINATIONS_FOR_SAMPLING
-    else:
-        recommended_max_combos = None  # Can evaluate all with this top_n
-    
+
+    # Strategy 2: too many to evaluate all → sample, but keep ALL max-score rules
+    # top_n is never reduced: all rules with maximum score per gene are always kept.
+    recommended_combos = min(TARGET_COMBINATIONS_FOR_SAMPLING, int(total_combinations) if total_combinations != float('inf') else TARGET_COMBINATIONS_FOR_SAMPLING)
     return {
-        'top_n': recommended_top_n,
-        'max_combinations': recommended_max_combos,
-        'reason': 'reduce_both',
-        'estimated_time_minutes': target_time_minutes
+        'top_n': None,
+        'max_combinations': int(recommended_combos),
+        'reason': 'sample_combinations',
+        'estimated_time_minutes': recommended_combos / total_throughput / 60
     }
 
 
@@ -608,6 +647,16 @@ def get_top_rules_per_gene(df: pd.DataFrame,
     return rules_by_gene
 
 
+def _worker_init(rule_cache: Dict) -> None:
+    """Set per-worker globals: rule cache + optional Numba JIT warm-up."""
+    global _RULE_CACHE
+    _RULE_CACHE = rule_cache
+    if _NUMBA_AVAILABLE:
+        _assign_attractors_jit(np.array([0, 0], dtype=np.int32))
+
+
+
+
 def evaluate_single_combination(combo_indices: List[int],
                                 genes: List[str],
                                 rules_by_gene: Dict[str, List[Tuple[int, str]]],
@@ -633,9 +682,9 @@ def evaluate_single_combination(combo_indices: List[int],
         position, rule = rules_by_gene[gene][rule_idx]
         gene_rules[gene] = rule
 
-    # Build transition table for all 2^N states at once (vectorized), then find attractors.
-    # This replaces the per-state Python eval() loop and gives a large speedup.
-    T = _build_transition_table(gene_rules, genes)
+    # Build transition table using the precomputed rule cache (zero eval() calls
+    # when the cache covers all rules in this combination).
+    T = _build_transition_table(gene_rules, genes, rule_cache=_RULE_CACHE)
     attractors, basins = _find_attractors_from_table(T, len(genes))
 
     # Calculate attractor-based metrics
@@ -659,7 +708,9 @@ def evaluate_rule_combinations(rules_file: str,
                                max_combinations: int = None,
                                max_iterations: int = 1000,
                                n_processes: int = None,
+                               top_results: int = 10000,
                                score_column: str = 'Score',
+                               confidence_target: float = 0.999,
                                verbose: bool = True):
     """
     Main function to evaluate rule combinations
@@ -674,18 +725,26 @@ def evaluate_rule_combinations(rules_file: str,
                          If None (default), evaluates ALL possible combinations.
         max_iterations: Maximum iterations for attractor search
         n_processes: Number of processes for parallelization (default: None = auto-detect all available cores)
+        top_results: Number of top-ranked combinations to write to evaluation_results.tsv.
+                     If None, writes all evaluated combinations (can be very large).
         score_column: Column to use for rule ranking
+        confidence_target: Target P(found global optimum). Adaptive batching adds batches
+                           until k ≥ ceil(-ln(1-p)) occurrences of the best composite_score
+                           are observed (confidence ≈ 1−e^{−k}). Default: 0.99 (k≥5).
+                           Set to 0 to disable adaptive batching (single batch only).
         verbose: Print progress information
     """
     # Resolve process count before any downstream use
     if n_processes is None:
         n_processes = mp.cpu_count()
 
+    t_start = time.perf_counter()
+
     if verbose:
         print("="*80)
         print("BOOLEAN RULES EVALUATION WITH INTEGRATED SCORE")
         print("="*80)
-    
+
     # Load data
     if verbose:
         print(f"\n1. Loading rules from: {rules_file}")
@@ -725,8 +784,13 @@ def evaluate_rule_combinations(rules_file: str,
         max_combinations = defaults['max_combinations']
         
         if verbose:
+            strategy_labels = {
+                'small_problem':      'Evaluate ALL combinations (fits within time budget)',
+                'sample_combinations':'Sample combinations — all max-score rules kept, too many to evaluate all',
+            }
+            label = strategy_labels.get(defaults['reason'], defaults['reason'])
             print(f"   Problem size analysis:")
-            print(f"   - Strategy: {defaults['reason']}")
+            print(f"   - Strategy: {label}")
             if top_n is not None:
                 print(f"   - Recommended top_n: {top_n} rules per gene")
             else:
@@ -777,63 +841,133 @@ def evaluate_rule_combinations(rules_file: str,
             if verbose:
                 print(f"   Evaluating all {total_combinations:,} combinations (less than max_combinations)")
     
-    # Generate combinations to evaluate
-    if n_combos_to_eval == total_combinations:
-        # Evaluate all combinations
-        if verbose:
-            print(f"   Generating all possible combinations...")
-        combinations = list(itertools.product(*[range(len(rules_by_gene[gene])) 
-                                                for gene in genes]))
-    else:
-        # Random sampling of combinations
-        if verbose:
-            print(f"   Random sampling {n_combos_to_eval:,} combinations...")
-        np.random.seed(42)
-        combinations = []
-        for _ in range(n_combos_to_eval):
-            combo = [np.random.randint(0, len(rules_by_gene[gene])) 
-                    for gene in genes]
-            combinations.append(tuple(combo))
-        combinations = list(set(combinations))  # Remove duplicates
-    
+    # Precompute all unique (gene, rule) → bool array mappings once for the whole run.
     if verbose:
-        print(f"   Ready to evaluate {len(combinations):,} unique combinations")
-    
+        print(f"\n6. Precomputing rule evaluation cache...")
+    rule_cache = _precompute_rule_cache(rules_by_gene, genes)
     if verbose:
-        print(f"\n6. Starting evaluation with {n_processes} processes...")
-    
-    # Create partial function with fixed parameters
+        print(f"   {len(rule_cache)} unique rules cached")
+
+    # Set cache in main process for single-process fallback
+    global _RULE_CACHE
+    _RULE_CACHE = rule_cache
+
+    # Warm up Numba JIT on single-process runs (avoids first-call latency mid-evaluation)
+    if _NUMBA_AVAILABLE and n_processes == 1:
+        _assign_attractors_jit(np.array([0, 0], dtype=np.int32))
+
+    # Create partial function
     eval_func = partial(evaluate_single_combination,
-                       genes=genes,
-                       rules_by_gene=rules_by_gene,
-                       binarized_matrix=binarized_matrix,
-                       max_iterations=max_iterations)
-    
-    # Evaluate combinations in parallel
-    results = []
-    combinations_list = list(combinations)  # Convert to list for iteration
-    
-    if n_processes > 1:
-        # chunksize balances IPC overhead vs granularity; larger = fewer round-trips
-        chunksize = max(1, len(combinations_list) // (n_processes * 20))
-        with mp.Pool(processes=n_processes) as pool:
-            for i, result in enumerate(
-                pool.imap_unordered(eval_func, combinations_list, chunksize=chunksize), 1
-            ):
-                results.append(result)
-                if verbose and i % 100 == 0:
-                    print(f"   Progress: {i}/{len(combinations_list)} combinations evaluated",
-                          end='\r')
-    else:
-        for i, combo in enumerate(combinations_list, 1):
-            result = eval_func(combo)
-            results.append(result)
-            if verbose and i % 100 == 0:
-                print(f"   Progress: {i}/{len(combinations_list)} combinations evaluated", 
-                      end='\r')
-    
+                        genes=genes,
+                        rules_by_gene=rules_by_gene,
+                        binarized_matrix=binarized_matrix,
+                        max_iterations=max_iterations)
+
+    # ── Adaptive evaluation loop ────────────────────────────────────────────────────
+    # Adds batches until k ≥ target_k, where confidence ≈ 1−e^{−k} ≥ confidence_target.
+    # k = number of evaluated combos sharing the best composite_score (pre-normalization,
+    # stable across batches). The n and M cancel in the coverage formula, leaving only k.
+    is_exhaustive       = (n_combos_to_eval >= total_combinations)
+    adaptive_cap        = (min(n_combos_to_eval * 3, 50_000_000)
+                           if not is_exhaustive else total_combinations)
+    target_k            = math.ceil(-math.log(1.0 - min(confidence_target, 0.9999)))
+    all_results:        list  = []
+    batch_num:          int   = 0
+    k_converged:        int   = 0
+    confidence_achieved: float = 0.0
+
     if verbose:
-        print(f"\n   Completed: {len(results)} combinations evaluated")
+        if is_exhaustive:
+            print(f"\n7. Starting evaluation with {n_processes} CPU processes...")
+        else:
+            print(f"\n7. Starting adaptive evaluation — "
+                  f"target confidence: {confidence_target:.1%} (need k ≥ {target_k})...")
+
+    while True:
+        batch_num += 1
+
+        # ── Generate this batch's combinations ───────────────────────────────────
+        if batch_num == 1:
+            if is_exhaustive:
+                if verbose:
+                    print(f"   Generating all {total_combinations:,} combinations...")
+                batch_combos = list(itertools.product(
+                    *[range(len(rules_by_gene[gene])) for gene in genes]
+                ))
+            else:
+                np.random.seed(42)
+                seen: set = set()
+                for _ in range(int(n_combos_to_eval * 1.05) + 100):
+                    seen.add(tuple(np.random.randint(0, len(rules_by_gene[gene]))
+                                   for gene in genes))
+                    if len(seen) >= n_combos_to_eval:
+                        break
+                batch_combos = list(seen)
+                if verbose:
+                    print(f"   Batch 1: {len(batch_combos):,} unique combinations")
+        else:
+            n_total_needed = math.ceil(target_k * len(all_results) / k_converged)
+            n_additional   = min(n_total_needed - len(all_results),
+                                 adaptive_cap - len(all_results))
+            if n_additional <= 0:
+                break
+            if verbose:
+                print(f"\n   Batch {batch_num}: {n_additional:,} more combinations "
+                      f"(k={k_converged}, confidence so far: {confidence_achieved:.1%})...")
+            seen = set()
+            for _ in range(int(n_additional * 1.05) + 100):
+                seen.add(tuple(np.random.randint(0, len(rules_by_gene[gene]))
+                               for gene in genes))
+                if len(seen) >= n_additional:
+                    break
+            batch_combos = list(seen)
+
+        # ── Evaluate this batch ──────────────────────────────────────────────────
+        batch_results:  list = []
+        offset:         int  = len(all_results)
+        print_interval: int  = max(100, len(batch_combos) // 50)
+        chunksize = max(1, len(batch_combos) // (n_processes * 5))
+
+        if n_processes > 1:
+            with mp.Pool(processes=n_processes,
+                         initializer=_worker_init, initargs=(rule_cache,)) as pool:
+                for i, result in enumerate(
+                    pool.imap_unordered(eval_func, batch_combos, chunksize=chunksize), 1
+                ):
+                    batch_results.append(result)
+                    if verbose and i % print_interval == 0:
+                        print(f"   Progress: {offset + i:,} combinations evaluated",
+                              end='\r')
+        else:
+            for i, combo in enumerate(batch_combos, 1):
+                batch_results.append(eval_func(combo))
+                if verbose and i % print_interval == 0:
+                    print(f"   Progress: {offset + i:,} combinations evaluated",
+                          end='\r')
+
+        all_results.extend(batch_results)
+
+        # ── Compute k and confidence ─────────────────────────────────────────────
+        # composite_score is pre-normalization → values are stable across batches
+        best_composite      = min(m['composite_score'] for _, m in all_results)
+        k_converged         = sum(1 for _, m in all_results
+                                  if abs(m['composite_score'] - best_composite) < 1e-9)
+        confidence_achieved = 1.0 if is_exhaustive else 1.0 - math.exp(-k_converged)
+
+        if verbose:
+            print(f"\n   Batch {batch_num} complete — "
+                  f"{len(all_results):,} total | k={k_converged} | "
+                  f"confidence={confidence_achieved:.1%}")
+
+        # ── Stopping conditions ──────────────────────────────────────────────────
+        if (is_exhaustive or confidence_achieved >= confidence_target
+                or len(all_results) >= adaptive_cap):
+            break
+
+    results = all_results
+    if verbose:
+        batches_label = f" in {batch_num} batch(es)" if batch_num > 1 else ""
+        print(f"\n   Total: {len(results):,} combinations evaluated{batches_label}")
     
     # Process results
     if verbose:
@@ -924,14 +1058,21 @@ def evaluate_rule_combinations(rules_file: str,
     cols.insert(1, 'final_score')  # After combination_id
     results_df = results_df[cols]
     
-    # Save results
+    # Save results — truncate to top_results rows to keep file manageable
     if verbose:
-        print(f"\n8. Saving results to: {output_file}")
-    results_df.to_csv(output_file, sep='\t', index=False)
+        print(f"\n9. Saving results to: {output_file}")
+    if top_results is not None and len(results_df) > top_results:
+        if verbose:
+            print(f"   Saving top {top_results:,} of {len(results_df):,} combinations evaluated")
+        results_df.head(top_results).to_csv(output_file, sep='\t', index=False)
+    else:
+        if verbose:
+            print(f"   Saving all {len(results_df):,} combinations evaluated")
+        results_df.to_csv(output_file, sep='\t', index=False)
     
     # Generate rules_by_gene_evaluated.tsv with winning rules
     if verbose:
-        print(f"\n9. Generating rules_by_gene_evaluated.tsv with winning rules...")
+        print(f"\n10. Generating rules_by_gene_evaluated.tsv with winning rules...")
     
     # Get the best combination(s)
     best_final_score = results_df['final_score'].min()
@@ -1034,31 +1175,56 @@ def evaluate_rule_combinations(rules_file: str,
         
         print(f"\nAll {len(results_df)} combinations saved to output file")
         print(f"Sorted by final_score (single unified metric)")
+
+        elapsed = time.perf_counter() - t_start
+        n_evaluated = len(results)
+        combos_per_sec = n_evaluated / elapsed if elapsed > 0 else 0
+        mins, secs = divmod(elapsed, 60)
+        print(f"\n{'─'*40}")
+        print(f"  Execution time : {int(mins):02d}m {secs:05.2f}s  ({elapsed:.1f}s total)")
+        batches_str = f" in {batch_num} batches" if batch_num > 1 else ""
+        print(f"  Combinations   : {n_evaluated:,} evaluated{batches_str}")
+        print(f"  Throughput     : {combos_per_sec:,.0f} combinations/sec")
+        if combos_per_sec > 0:
+            print(f"  Per combination: {1000/combos_per_sec:.2f} ms")
+        if is_exhaustive:
+            print(f"  Coverage       : 100% (exhaustive search)")
+        else:
+            print(f"  ── Statistical coverage ──────────")
+            print(f"  k (top score)  : {k_converged} occurrences of best score")
+            print(f"  Confidence     : {confidence_achieved:.2%}")
+            if k_converged > 0:
+                for label, p in [("99%  ", 0.99), ("99.5%", 0.995), ("99.99%", 0.9999)]:
+                    n_need = math.ceil(-math.log(1.0 - p) * n_evaluated / k_converged)
+                    extra  = max(0, n_need - n_evaluated)
+                    status = "(done)" if extra == 0 else f"({extra:,} more needed)"
+                    print(f"  For {label}    : {n_need:,} total {status}")
+        print(f"{'─'*40}")
         print("="*80)
 
 
 def main():
     """Main function with argument parsing"""
     parser = argparse.ArgumentParser(
-        description='Evaluate Boolean rule combinations using attractor metrics',
+        description='Evaluate Boolean rule combinations using attractor metrics.',
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
   # Default: Evaluate ALL rules with max score, ALL combinations
   python3 3.BNI3_Evaluate_rules.py -i rules_by_gene.tsv -m binarized_matrix.tsv -v
-  
+
   # Limit to top 5 rules per gene (instead of all tied for best)
   python3 3.BNI3_Evaluate_rules.py -i rules_by_gene.tsv --top-n 5 -v
-  
+
   # Limit to 500 combinations max (instead of all)
   python3 3.BNI3_Evaluate_rules.py -i rules_by_gene.tsv --max-combos 500 -v
-  
+
   # Both limits combined
   python3 3.BNI3_Evaluate_rules.py -i rules_by_gene.tsv --top-n 3 --max-combos 200 -v
-  
+
   # Custom output directory
   python3 3.BNI3_Evaluate_rules.py -i rules_by_gene.tsv -o /path/to/results.tsv -v
-  
+
   # Use custom score column for ranking
   python3 3.BNI3_Evaluate_rules.py -i rules_by_gene.tsv --score-col MSE -v
 
@@ -1090,13 +1256,13 @@ Metrics calculated:
 
 Output format:
   Two TSV files are generated:
-  
+
   1. evaluation_results.tsv:
      - Sorted by final_score (ascending)
      - First row is the overall best combination
      - All metrics normalized and integrated into single ranking
-     - Contains all evaluated combinations
-  
+     - Truncated to --top-results rows (default 10,000) to keep file manageable
+
   2. rules_by_gene_evaluated.tsv:
      - Contains the winning rules (one per gene, or more if tied)
      - Same format as input rules_by_gene.tsv
@@ -1121,13 +1287,20 @@ Output format:
                               'Default: None (AUTOMATIC - calculates intelligent default based on problem size, typically 3-30)')
     optional.add_argument('--max-combos', type=int, default=None,
                          help='Maximum number of combinations to evaluate. '
-                              'Default: None (AUTOMATIC - calculates intelligent default, typically ~20,000)')
+                              'Default: None (AUTOMATIC - calculates intelligent default, up to 1,000,000)')
     optional.add_argument('--max-iter', type=int, default=1000,
                          help='Maximum iterations for attractor search (default: 1000)')
     optional.add_argument('-n', '--processes', type=int, default=None,
-                         help='Number of parallel processes (default: None = auto-detect all available cores)')
+                         help='Number of parallel worker processes (default: None = all available cores)')
+    optional.add_argument('--top-results', type=int, default=10000,
+                         help='Number of top-ranked combinations to write to evaluation_results.tsv '
+                              '(default: 10000). Use 0 to save all.')
     optional.add_argument('--score-col', type=str, default='Score',
                          help='Column name for rule ranking (default: Score)')
+    optional.add_argument('--confidence', type=float, default=0.999,
+                         help='Target statistical confidence for finding the global optimum '
+                              '(default: 0.99). Adaptive batching adds samples until this '
+                              'confidence is reached. Set to 0 to disable. Range: 0.0–1.0.')
     optional.add_argument('-v', '--verbose', action='store_true',
                          help='Print detailed progress information')
     
@@ -1143,7 +1316,9 @@ Output format:
             max_combinations=args.max_combos,
             max_iterations=args.max_iter,
             n_processes=args.processes,
+            top_results=args.top_results if args.top_results != 0 else None,
             score_column=args.score_col,
+            confidence_target=args.confidence,
             verbose=args.verbose
         )
     except KeyboardInterrupt:
