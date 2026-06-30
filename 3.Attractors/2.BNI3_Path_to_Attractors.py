@@ -2,6 +2,7 @@
 """
 Boolean Network Path to Attractor Tool
 Simulates trajectories from initial states to attractors in Boolean networks.
+Also maps every state in a binarized expression matrix to its attractor basin.
 Part of the Boolean Network Inference (BNI) pipeline.
 """
 
@@ -216,6 +217,159 @@ def state_to_string(state):
     return ''.join(['1' if x else '0' for x in state])
 
 
+def read_binarized_matrix(matrix_file, gene_cols, verbose):
+    """
+    Read binarized matrix TSV and align gene order with the network's gene list.
+
+    Args:
+        matrix_file (str): Path to binarized matrix TSV (genes as columns, samples as rows)
+        gene_cols (list): Ordered gene names from the attractors file
+        verbose (bool): Enable verbose output
+
+    Returns:
+        tuple: (list of boolean state vectors, list of sample name strings)
+    """
+    try:
+        log_message(f"Reading binarized matrix: {matrix_file}", verbose)
+        df = pd.read_csv(matrix_file, sep='\t')
+
+        # Detect optional sample-name column (first column non-numeric)
+        first_col = df.columns[0]
+        if not pd.api.types.is_numeric_dtype(df[first_col]):
+            sample_names = df[first_col].astype(str).tolist()
+            df = df.drop(columns=[first_col])
+        else:
+            sample_names = [f"Sample_{i + 1}" for i in range(len(df))]
+
+        matrix_genes = list(df.columns)
+        log_message(f"Matrix: {len(matrix_genes)} genes, {len(df)} samples", verbose)
+
+        missing_in_matrix = set(gene_cols) - set(matrix_genes)
+        extra_in_matrix = set(matrix_genes) - set(gene_cols)
+        if missing_in_matrix:
+            log_message(
+                f"Warning: {len(missing_in_matrix)} network genes absent from matrix "
+                f"(will default to 0): {', '.join(sorted(missing_in_matrix))}", verbose
+            )
+        if extra_in_matrix:
+            log_message(
+                f"Warning: {len(extra_in_matrix)} matrix genes not in network (ignored): "
+                f"{', '.join(sorted(extra_in_matrix))}", verbose
+            )
+
+        states = []
+        for _, row in df.iterrows():
+            state = [bool(int(row[g])) if g in matrix_genes else False for g in gene_cols]
+            states.append(state)
+
+        log_message(f"Loaded {len(states)} states from binarized matrix", verbose)
+        return states, sample_names
+
+    except Exception as e:
+        raise ValueError(f"Error reading binarized matrix: {str(e)}")
+
+
+def analyze_matrix_states(matrix_states, sample_names, gene_rules, genes,
+                           attractors_dict, max_steps, verbose):
+    """
+    For every state in the binarized matrix determine whether it lies inside a
+    known attractor or, if not, which attractor it converges to.
+
+    Args:
+        matrix_states (list): List of boolean state vectors (one per sample)
+        sample_names (list): Corresponding sample labels
+        gene_rules (dict): Boolean rules per gene
+        genes (list): Ordered gene names
+        attractors_dict (dict): Known attractors from the attractors file
+        max_steps (int): Maximum simulation steps per state
+        verbose (bool): Enable verbose output
+
+    Returns:
+        list of dicts with per-sample results
+    """
+    log_message(f"Mapping {len(matrix_states)} matrix states to attractors...", verbose)
+    results = []
+
+    for i, state in enumerate(matrix_states):
+        sample = sample_names[i]
+        state_str = state_to_string(state)
+
+        att_id, step_in_cycle = find_matching_attractor(state, attractors_dict)
+
+        if att_id is not None:
+            entry = {
+                'sample': sample,
+                'binary_state': state_str,
+                'status': 'in_attractor',
+                'attractor_id': att_id,
+                'attractor_type': attractors_dict[att_id]['type'],
+                'step_in_cycle': step_in_cycle,
+                'steps_to_attractor': 0,
+                'basin_size': attractors_dict[att_id]['basin_size'],
+                'basin_percentage': attractors_dict[att_id]['basin_percentage'],
+            }
+        else:
+            sim = simulate_trajectory_to_attractor(
+                state, gene_rules, genes, attractors_dict, max_steps, verbose=False
+            )
+            if sim['converged']:
+                att_id = sim['target_attractor_id']
+                entry = {
+                    'sample': sample,
+                    'binary_state': state_str,
+                    'status': 'transient_to_attractor',
+                    'attractor_id': att_id,
+                    'attractor_type': attractors_dict[att_id]['type'],
+                    'step_in_cycle': sim['found_at_step'],
+                    'steps_to_attractor': sim['steps_to_attractor'],
+                    'basin_size': attractors_dict[att_id]['basin_size'],
+                    'basin_percentage': attractors_dict[att_id]['basin_percentage'],
+                }
+            else:
+                entry = {
+                    'sample': sample,
+                    'binary_state': state_str,
+                    'status': 'did_not_converge',
+                    'attractor_id': None,
+                    'attractor_type': None,
+                    'step_in_cycle': None,
+                    'steps_to_attractor': max_steps,
+                    'basin_size': None,
+                    'basin_percentage': None,
+                }
+
+        log_message(
+            f"  {sample}: {entry['status']} -> attractor {entry['attractor_id']} "
+            f"({entry['steps_to_attractor']} steps)", verbose
+        )
+        results.append(entry)
+
+    return results
+
+
+def save_matrix_attractor_analysis(results, output_path, filename, verbose=False):
+    """
+    Save binarized matrix attractor mapping to TSV.
+
+    Args:
+        results (list): Per-sample dicts from analyze_matrix_states
+        output_path (str): Output directory
+        filename (str): Output filename
+        verbose (bool): Enable verbose output
+
+    Returns:
+        pd.DataFrame
+    """
+    df = pd.DataFrame(results, columns=[
+        'sample', 'binary_state', 'status', 'attractor_id', 'attractor_type',
+        'step_in_cycle', 'steps_to_attractor', 'basin_size', 'basin_percentage'
+    ])
+    full_path = os.path.join(output_path, filename)
+    df.to_csv(full_path, sep='\t', index=False)
+    log_message(f"Matrix attractor mapping saved to: {filename}", verbose)
+    return df
+
+
 def find_matching_attractor(current_state, attractors_dict):
     """
     Check if current state matches any known attractor
@@ -365,156 +519,209 @@ def save_trajectory_tsv(trajectory, genes, result, output_path, filename, verbos
     return df
 
 
-def visualize_trajectory(trajectory, genes, result, attractors_dict, output_path, verbose=False):
+def visualize_trajectory(trajectory, genes, result, attractors_dict, output_path,
+                          final_matrix_state=None, final_matrix_label=None, verbose=False):
     """
-    Create visualization of the trajectory
-    
+    Create visualization of the trajectory.
+
     Args:
         trajectory (list): List of states
         genes (list): Gene names
         result (dict): Simulation results
         attractors_dict (dict): Known attractors
         output_path (str): Output file path (without extension)
+        final_matrix_state (list|None): Boolean state vector of the last binarized matrix row
+        final_matrix_label (str|None): Label for that sample (e.g. "Sample_4")
         verbose (bool): Enable verbose output
     """
     log_message("Creating trajectory visualization...", verbose)
-    
+
     n_genes = len(genes)
     n_steps = len(trajectory)
-    
-    # Create figure
+
     fig_width = max(10, min(20, n_steps * 0.3 + 4))
     fig_height = max(6, min(12, n_genes * 0.4 + 3))
-    
+
     fig, ax1 = plt.subplots(1, 1, figsize=(fig_width, fig_height))
-    
-    # Prepare data for heatmap
+
     trajectory_matrix = np.array([[int(state[i]) for i in range(n_genes)] for state in trajectory])
-    
-    # Create colored trajectory based on phases
+
     colors = ['#f0f0f0', '#404040']
     cmap = ListedColormap(colors)
-    
-    # Main trajectory heatmap
+
     im = ax1.imshow(trajectory_matrix, cmap=cmap, aspect='auto', interpolation='nearest', origin='upper')
-    
-    # Add vertical line at attractor entry point
+
+    legend_elements = [
+        mpatches.Patch(color='#f0f0f0', label='Inactive'),
+        mpatches.Patch(color='#404040', label='Active'),
+    ]
+
+    # Red rectangle: attractor entry row
     if result['converged'] and result['steps_to_attractor'] > 0:
-        if result['converged'] and result['steps_to_attractor'] > 0:
-            rect = Rectangle((-0.5, result['steps_to_attractor']-1.5), n_genes, 1, 
-                            linewidth=4, edgecolor='red', facecolor='none', alpha=0.8)
-            ax1.add_patch(rect)
-    
-    # Set labels and ticks
+        attractor_row = result['steps_to_attractor'] - 1
+        rect_red = Rectangle((-0.5, attractor_row - 0.5), n_genes, 1,
+                             linewidth=4, edgecolor='red', facecolor='none', alpha=0.8)
+        ax1.add_patch(rect_red)
+        att_info = attractors_dict[result['target_attractor_id']]
+        legend_elements.append(
+            mpatches.Patch(color='red', alpha=0.8,
+                           label=f"Attractor {result['target_attractor_id']} ({att_info['type']})")
+        )
+
+    # Blue rectangle: final binarized matrix state (if it appears in the trajectory)
+    if final_matrix_state is not None:
+        final_str = state_to_string(final_matrix_state)
+        final_row = next(
+            (i for i, s in enumerate(trajectory) if state_to_string(s) == final_str),
+            None
+        )
+        if final_row is not None:
+            label = final_matrix_label or "Final matrix state"
+            rect_blue = Rectangle((-0.5, final_row - 0.5), n_genes, 1,
+                                  linewidth=3, edgecolor='royalblue', facecolor='none', alpha=0.9)
+            ax1.add_patch(rect_blue)
+            legend_elements.append(
+                mpatches.Patch(color='royalblue', alpha=0.9, label=f"{label} (final matrix state)")
+            )
+            log_message(f"Final matrix state found at trajectory row {final_row}", verbose)
+        else:
+            log_message("Final matrix state does not appear in this trajectory path", verbose)
+
+    # Ticks and labels
     ax1.set_xticks(range(n_genes))
     ax1.set_xticklabels(genes, rotation=45, ha='right')
-    ax1.set_yticks(range(0, n_steps, max(1, n_steps//10)))
-    ax1.set_yticklabels(range(0, n_steps, max(1, n_steps//10)))
+    ax1.set_yticks(range(0, n_steps, max(1, n_steps // 10)))
+    ax1.set_yticklabels(range(0, n_steps, max(1, n_steps // 10)))
     ax1.set_xlabel('Genes')
     ax1.set_ylabel('Time Steps')
     ax1.set_title('Boolean Network Trajectory to Attractor')
-    
-    # Add grid
+
     ax1.set_xticks(np.arange(-0.5, n_genes, 1), minor=True)
     ax1.set_yticks(np.arange(-0.5, n_steps, 1), minor=True)
     ax1.grid(which='minor', color='white', linestyle='-', linewidth=0.5)
-    
-    # Create legend for main plot
-    legend_elements = [
-        mpatches.Patch(color='#f0f0f0', label='Inactive'),
-        mpatches.Patch(color='#404040', label='Active')
-    ]
-    
-    if result['converged']:
-        att_info = attractors_dict[result['target_attractor_id']]
-        legend_elements.append(
-            mpatches.Patch(color='red', alpha=0.8, 
-                          label=f"Attractor {result['target_attractor_id']} ({att_info['type']})")
-        )
-    
+
     fig.legend(handles=legend_elements, loc='upper right', bbox_to_anchor=(0.98, 0.98))
-    
-    # Save plot
+
     plt.savefig(f"{output_path}_trajectory.png", dpi=300, bbox_inches='tight')
     plt.savefig(f"{output_path}_trajectory.svg", bbox_inches='tight')
     plt.close()
-    
+
     log_message(f"Trajectory visualization saved as {output_path}_trajectory.png and .svg", verbose)
 
 
 def path_to_attractor_analysis(args):
     """
-    Main function for path to attractor analysis
-    
+    Main function for path to attractor analysis.
+
     Args:
         args: Parsed command line arguments
     """
-    # Validate input files
     if not os.path.exists(args.attractors_file):
         print(f"ERROR: Attractors file not found: {args.attractors_file}", file=sys.stderr)
         sys.exit(1)
-    
     if not os.path.exists(args.rules_file):
         print(f"ERROR: Rules file not found: {args.rules_file}", file=sys.stderr)
         sys.exit(1)
-    
-    # Create output directory
-    if args.output_dir:
-        output_dir = args.output_dir
-    else:
-        output_dir = os.path.dirname(args.attractors_file)
-    
+    if not os.path.exists(args.binarized_matrix):
+        print(f"ERROR: Binarized matrix file not found: {args.binarized_matrix}", file=sys.stderr)
+        sys.exit(1)
+
+    output_dir = args.output_dir if args.output_dir else os.path.dirname(args.attractors_file)
     os.makedirs(output_dir, exist_ok=True)
-    
+
     try:
-        # Read attractors and rules
+        # Read network components
         df_attractors, gene_cols, attractors_dict = read_attractors_file(args.attractors_file, args.verbose)
         gene_rules = read_rules_file(args.rules_file, args.verbose)
-        
-        # Parse initial state
-        initial_state = parse_initial_state(args.initial_state, gene_cols, args.verbose)
-        
-        # Simulate trajectory
+
+        # Read binarized matrix and map all its states to attractors
+        matrix_states, sample_names = read_binarized_matrix(args.binarized_matrix, gene_cols, args.verbose)
+
+        # Resolve initial state: explicit flag overrides default (first matrix row)
+        if args.initial_state:
+            initial_state = parse_initial_state(args.initial_state, gene_cols, args.verbose)
+            initial_state_label = args.initial_state
+        else:
+            initial_state = matrix_states[0]
+            initial_state_label = f"{sample_names[0]} (first row of binarized matrix)"
+            log_message(f"No initial state provided — using first matrix row: {sample_names[0]}", args.verbose)
+
+        # ── Trajectory from initial state ─────────────────────────────────────
         result = simulate_trajectory_to_attractor(
-            initial_state, gene_rules, gene_cols, attractors_dict, 
+            initial_state, gene_rules, gene_cols, attractors_dict,
             args.max_steps, args.verbose
         )
-        
-        # Create output base path
-        if args.output_base:
-            output_base = os.path.join(output_dir, args.output_base)
-        else:
-            output_base = os.path.join(output_dir, "trajectory")
-        
-        # Save results
-        trajectory_file = f"{args.output_base or 'trajectory'}.tsv"
+
+        output_base_name = args.output_base or 'trajectory'
+        output_base = os.path.join(output_dir, output_base_name)
+        trajectory_file = f"{output_base_name}.tsv"
+
         save_trajectory_tsv(result['trajectory'], gene_cols, result, output_dir, trajectory_file, args.verbose)
-        
-        # Create visualization
-        visualize_trajectory(result['trajectory'], gene_cols, result, attractors_dict, output_base, args.verbose)
-        
-        # Print summary
+        visualize_trajectory(
+            result['trajectory'], gene_cols, result, attractors_dict, output_base,
+            final_matrix_state=matrix_states[-1],
+            final_matrix_label=sample_names[-1],
+            verbose=args.verbose
+        )
+
+        # ── Attractor mapping for every state in the binarized matrix ─────────
+        matrix_results = analyze_matrix_states(
+            matrix_states, sample_names, gene_rules, gene_cols,
+            attractors_dict, args.max_steps, args.verbose
+        )
+        matrix_mapping_file = f"{output_base_name}_matrix_attractor_mapping.tsv"
+        save_matrix_attractor_analysis(matrix_results, output_dir, matrix_mapping_file, args.verbose)
+
+        # ── Console summary ───────────────────────────────────────────────────
         print(f"\n{'='*60}")
         print("TRAJECTORY ANALYSIS COMPLETED")
         print('='*60)
-        print(f"Initial state: {args.initial_state}")
+        print(f"Initial state : {initial_state_label}")
         print(f"Steps to attractor: {result['steps_to_attractor']}")
-        
+
         if result['converged']:
             att_info = attractors_dict[result['target_attractor_id']]
-            print(f"Target attractor: {result['target_attractor_id']} ({att_info['type']})")
-            print(f"Attractor basin size: {att_info['basin_size']} states ({att_info['basin_percentage']:.2f}%)")
+            print(f"Target attractor  : {result['target_attractor_id']} ({att_info['type']})")
+            print(f"Basin size        : {att_info['basin_size']} states ({att_info['basin_percentage']:.2f}%)")
             if result['found_at_step']:
-                print(f"Entered at step: {result['found_at_step']} of cycle")
+                print(f"Entered at cycle step: {result['found_at_step']}")
         else:
-            print("Target attractor: Did not converge to known attractor")
-        
-        print(f"Trajectory length: {len(result['trajectory'])} states")
-        print(f"Output files:")
-        print(f"- {trajectory_file} (trajectory data)")
-        print(f"- {os.path.basename(output_base)}_trajectory.png/svg (visualization)")
+            print("Target attractor  : Did not converge to a known attractor")
+
+        print(f"Trajectory length : {len(result['trajectory'])} states")
+
+        print(f"\n── Binarized matrix attractor mapping ({len(matrix_results)} samples) ──")
+        for r in matrix_results:
+            att_label = (
+                f"Attractor {r['attractor_id']} ({r['attractor_type']})"
+                if r['attractor_id'] is not None else "did not converge"
+            )
+            status_tag = {
+                'in_attractor': 'IN attractor',
+                'transient_to_attractor': f"→ attractor in {r['steps_to_attractor']} steps",
+                'did_not_converge': 'did not converge',
+            }.get(r['status'], r['status'])
+            print(f"  {r['sample']:20s}  {att_label:30s}  [{status_tag}]")
+
+        # Explicit summary for the final state of the binarized matrix
+        final = matrix_results[-1]
+        print(f"\n── Final matrix state: {final['sample']} ──")
+        print(f"  Binary state : {final['binary_state']}")
+        if final['status'] == 'in_attractor':
+            print(f"  Result       : IS Attractor {final['attractor_id']} ({final['attractor_type']})"
+                  + (f", step {final['step_in_cycle']} of cycle" if final['step_in_cycle'] else ""))
+        elif final['status'] == 'transient_to_attractor':
+            print(f"  Result       : In transit → Attractor {final['attractor_id']} ({final['attractor_type']})"
+                  f" — {final['steps_to_attractor']} steps remaining")
+        else:
+            print(f"  Result       : Did not converge to any known attractor within {args.max_steps} steps")
+
+        print(f"\nOutput files:")
+        print(f"  {trajectory_file} (trajectory data)")
+        print(f"  {os.path.basename(output_base)}_trajectory.png/svg (visualization)")
+        print(f"  {matrix_mapping_file} (binarized matrix attractor mapping)")
         print('='*60)
-        
+
     except Exception as e:
         print(f"ERROR: {str(e)}", file=sys.stderr)
         if args.verbose:
@@ -530,66 +737,84 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  python3 2.BNI3_Path_to_Attractors.py -a attractors.tsv -r selected_rules.tsv -s "1010110010110"
-  python3 2.BNI3_Path_to_Attractors.py -a attractors.tsv -r selected_rules.tsv -s "ABF3,NRT2_1,TGA4" -v
-  python3 2.BNI3_Path_to_Attractors.py -a attractors.tsv -r rules_by_gene.tsv -s "0000000000000" -o output/
+  # Use first row of binarized matrix as initial state (default)
+  python3 2.BNI3_Path_to_Attractors.py \\
+      -a Example/attractors.tsv -r Example/selected_rules.tsv \\
+      -b ../1.Binarization/Example/Counts_lite_binarized_SSD.tsv -o Example/
+
+  # Override initial state with explicit binary string
+  python3 2.BNI3_Path_to_Attractors.py \\
+      -a Example/attractors.tsv -r Example/selected_rules.tsv \\
+      -b ../1.Binarization/Example/Counts_lite_binarized_SSD.tsv \\
+      -s "1010110010110" -o Example/
+
+  # Override initial state with comma-separated active gene names
+  python3 2.BNI3_Path_to_Attractors.py \\
+      -a Example/attractors.tsv -r Example/selected_rules.tsv \\
+      -b ../1.Binarization/Example/Counts_lite_binarized_SSD.tsv \\
+      -s "ABF3,ABF4,DREB2A" -v
 
 Input Files:
-  Preferred: selected_rules.tsv (generated by 1.BNI3_Attractors.py)
-  Legacy:    full rules table with Position column (slower, uses Position=1)
+  -a  attractors.tsv      : from 1.BNI3_Attractors.py
+  -r  selected_rules.tsv  : from 1.BNI3_Attractors.py (preferred) or full rules table
+  -b  binarized matrix    : TSV with genes as columns and samples as rows
+                            (output of 1.Binarization/BNI3_SSD.py or BNI3_WCSS.py)
 
-Initial State Formats:
-  Binary string    : "1010110010110" (length must match number of genes)
-  Gene list        : "ABF3,NRT2_1,TGA4" (comma-separated active gene names)
+Initial State Formats (optional -s):
+  Binary string  : "1010110010110"  (length must match number of genes)
+  Gene list      : "ABF3,ABF4"      (comma-separated active gene names)
+  Default        : first row of the binarized matrix
 
 Output:
-  - TSV file with complete trajectory (step, gene states, phase)
-  - PNG/SVG visualization showing gene activity over time
-  - Summary information about convergence and target attractor
+  - <base>.tsv                          : full trajectory from initial state
+  - <base>_trajectory.png/svg           : heatmap visualization of the trajectory
+  - <base>_matrix_attractor_mapping.tsv : attractor assignment for every sample
+                                          in the binarized matrix
 
 Notes:
   - Requires attractors.tsv from 1.BNI3_Attractors.py
-  - Requires rules file from ../2.Rules_Inference/2.BNI3_Analyze_results.py  
-  - Uses same rule selection criteria as 1.BNI3_Attractors.py
-  - Simulation stops when known attractor is reached or max steps exceeded
-  - Detects cycles that don't match known attractors
+  - Requires rules file from 2.Rules_Inference/2.BNI3_Analyze_results.py
+  - Simulation stops when a known attractor is reached or max_steps is exceeded
+  - Detects cycles not matching any known attractor
         """
     )
-    
+
     # Required parameters
     required = parser.add_argument_group('Required parameters')
     required.add_argument('-a', '--attractors_file', type=str, required=True,
-                         help='Input attractors TSV file (from 1.BNI3_Attractors.py)')
-    required.add_argument('-s', '--initial_state', type=str, required=True,
-                         help='Initial state as binary string or comma-separated gene list')
+                          help='Input attractors TSV file (from 1.BNI3_Attractors.py)')
     required.add_argument('-r', '--rules_file', type=str, required=True,
-                     help='Input rules file: selected_rules.tsv (from 1.BNI3_Attractors.py) or full rules table')
-    
+                          help='Rules file: selected_rules.tsv (from 1.BNI3_Attractors.py) or full rules table')
+    required.add_argument('-b', '--binarized_matrix', type=str, required=True,
+                          help='Binarized expression matrix TSV (genes as columns, samples as rows)')
+
     # Optional parameters
     optional = parser.add_argument_group('Optional parameters')
+    optional.add_argument('-s', '--initial_state', type=str, default=None,
+                          help='Initial state as binary string or comma-separated active gene names '
+                               '(default: first row of binarized matrix)')
     optional.add_argument('-o', '--output_dir', type=str, default=None,
-                         help='Output directory (default: same as attractors file)')
+                          help='Output directory (default: same directory as attractors file)')
     optional.add_argument('-ob', '--output_base', type=str, default=None,
-                         help='Base name for output files (default: trajectory)')
+                          help='Base name for output files (default: trajectory)')
     optional.add_argument('--max-steps', type=int, default=1000,
-                         help='Maximum simulation steps (default: 1000)')
+                          help='Maximum simulation steps per trajectory (default: 1000)')
     optional.add_argument('-v', '--verbose', action='store_true',
-                         help='Show detailed processing information')
-    
-    parser.add_argument('--version', action='version', version='Boolean Network Path to Attractor v1.0')
-    
+                          help='Show detailed processing information')
+
+    parser.add_argument('--version', action='version', version='Boolean Network Path to Attractor v1.1')
+
     args = parser.parse_args()
-    
-    # Validate input files exist
-    if not os.path.exists(args.attractors_file):
-        print(f"ERROR: Attractors file '{args.attractors_file}' does not exist.", file=sys.stderr)
-        sys.exit(1)
-    
-    if not os.path.exists(args.rules_file):
-        print(f"ERROR: Rules file '{args.rules_file}' does not exist.", file=sys.stderr)
-        sys.exit(1)
-    
-    # Run analysis
+
+    for label, path in [
+        ('Attractors file', args.attractors_file),
+        ('Rules file', args.rules_file),
+        ('Binarized matrix', args.binarized_matrix),
+    ]:
+        if not os.path.exists(path):
+            print(f"ERROR: {label} '{path}' does not exist.", file=sys.stderr)
+            sys.exit(1)
+
     try:
         path_to_attractor_analysis(args)
     except KeyboardInterrupt:

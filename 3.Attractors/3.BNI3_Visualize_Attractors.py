@@ -45,6 +45,132 @@ def extract_mutation_suffix(filename):
     
     return ""
 
+def read_final_matrix_state(matrix_file, gene_cols, verbose):
+    """
+    Read binarized matrix and return the last row as a boolean state vector,
+    aligned to the gene order defined by gene_cols.
+
+    Args:
+        matrix_file (str): Path to binarized matrix TSV
+        gene_cols (list): Ordered gene names from attractors file
+        verbose (bool): Enable verbose output
+
+    Returns:
+        tuple: (boolean state vector, sample label string)
+    """
+    df = pd.read_csv(matrix_file, sep='\t')
+    first_col = df.columns[0]
+    if not pd.api.types.is_numeric_dtype(df[first_col]):
+        sample_name = str(df[first_col].iloc[-1])
+        df = df.drop(columns=[first_col])
+    else:
+        sample_name = f"Sample_{len(df)}"
+
+    matrix_genes = list(df.columns)
+    last_row = df.iloc[-1]
+    state = [bool(int(last_row[g])) if g in matrix_genes else False for g in gene_cols]
+    log_message(f"Final matrix state: {sample_name}", verbose)
+    return state, sample_name
+
+
+def build_attractors_dict(df, gene_cols):
+    """Build a simple attractors lookup dict from the attractors dataframe."""
+    attractors_dict = {}
+    for att_id in df['attractor_id'].unique():
+        att_data = df[df['attractor_id'] == att_id].sort_values('step_in_cycle')
+        states = [[bool(row[g]) for g in gene_cols] for _, row in att_data.iterrows()]
+        attractors_dict[att_id] = {'states': states}
+    return attractors_dict
+
+
+def find_target_attractor_id(final_state, attractors_dict, gene_cols,
+                              gene_rules=None, max_steps=1000, verbose=False):
+    """
+    Determine which attractor the final matrix state belongs to or converges to.
+
+    Args:
+        final_state (list): Boolean state vector of the last matrix row
+        attractors_dict (dict): Attractor states keyed by attractor_id
+        gene_cols (list): Ordered gene names
+        gene_rules (dict|None): Boolean rules per gene (required for transient states)
+        max_steps (int): Maximum simulation steps
+        verbose (bool): Enable verbose output
+
+    Returns:
+        int|None: attractor_id if found, else None
+    """
+    def to_str(s):
+        return ''.join('1' if x else '0' for x in s)
+
+    target_str = to_str(final_state)
+
+    # Direct membership check
+    for att_id, info in attractors_dict.items():
+        if any(to_str(s) == target_str for s in info['states']):
+            log_message(f"Final matrix state IS attractor {att_id}", verbose)
+            return att_id
+
+    if gene_rules is None:
+        log_message("Final state not in any attractor; no rules provided — cannot simulate.", verbose)
+        return None
+
+    # Simulate forward
+    current = final_state[:]
+    visited = set()
+    for step in range(max_steps):
+        s = to_str(current)
+        for att_id, info in attractors_dict.items():
+            if any(to_str(a) == s for a in info['states']):
+                log_message(f"Final matrix state → attractor {att_id} in {step} steps", verbose)
+                return att_id
+        if s in visited:
+            log_message("Final matrix state enters an unknown cycle.", verbose)
+            return None
+        visited.add(s)
+
+        next_state = {}
+        for gene in gene_cols:
+            if gene in gene_rules:
+                state_dict = {gene_cols[i]: current[i] for i in range(len(gene_cols))}
+                rule = (gene_rules[gene]
+                        .replace('&', ' and ')
+                        .replace('|', ' or ')
+                        .replace('~', ' not '))
+                for g, v in state_dict.items():
+                    rule = rule.replace(g, str(v))
+                try:
+                    next_state[gene] = bool(eval(rule))
+                except Exception:
+                    next_state[gene] = False
+            else:
+                next_state[gene] = current[gene_cols.index(gene)]
+        current = [next_state[g] for g in gene_cols]
+
+    log_message(f"Final matrix state did not converge within {max_steps} steps.", verbose)
+    return None
+
+
+def read_rules_simple(rules_file, verbose):
+    """
+    Minimal rules reader that returns a gene→rule dict.
+    Supports both selected_rules.tsv (Gene/Rule columns) and full rules table (with Position).
+    """
+    df = pd.read_csv(rules_file, sep='\t', encoding='utf-8')
+    if 'Position' in df.columns:
+        selected = {}
+        for gene in df['Gene'].unique():
+            sub = df[df['Gene'] == gene]
+            top = sub[sub['Position'] == 1]
+            row = top.iloc[0] if not top.empty else sub.loc[sub['Position'].idxmin()]
+            selected[str(row['Gene'])] = str(row['Rule'])
+        log_message(f"Rules loaded from full table ({len(selected)} genes)", verbose)
+        return selected
+    else:
+        rules = {str(r['Gene']): str(r['Rule']) for _, r in df.iterrows()}
+        log_message(f"Rules loaded from selected rules file ({len(rules)} genes)", verbose)
+        return rules
+
+
 def generate_attractor_colors(n_attractors):
     """
     Generate distinctive colors for each attractor
@@ -135,10 +261,12 @@ def get_basin_sizes_from_df(df, verbose):
     return basin_sizes
 
 
-def create_attractor_heatmap(df, gene_cols, basin_sizes, output_path, verbose=False, svg_output=False):
+def create_attractor_heatmap(df, gene_cols, basin_sizes, output_path,
+                             verbose=False, svg_output=False,
+                             target_attractor_id=None, target_label=None):
     """
-    Create a heatmap visualization of attractor states with color-coded attractors
-    
+    Create a heatmap visualization of attractor states with color-coded attractors.
+
     Args:
         df (pd.DataFrame): Attractors dataframe
         gene_cols (list): List of gene column names
@@ -146,6 +274,8 @@ def create_attractor_heatmap(df, gene_cols, basin_sizes, output_path, verbose=Fa
         output_path (str): Output file path (without extension)
         verbose (bool): Enable verbose output
         svg_output (bool): Also save SVG format
+        target_attractor_id: Attractor the system converges to (highlighted in blue)
+        target_label (str|None): Label for the blue marker in the legend
     """
     log_message("Creating attractor states heatmap with color-coded attractors...", verbose)
     
@@ -278,11 +408,29 @@ def create_attractor_heatmap(df, gene_cols, basin_sizes, output_path, verbose=Fa
     ax_legend.legend(handles=legend_elements, loc='upper left', 
                     bbox_to_anchor=(0, 1), title='Attractors', title_fontsize=12)
     
+    # Blue border: mark the rows of the target attractor (final matrix state destination)
+    if target_attractor_id is not None:
+        target_rows = [i for i, a in enumerate(attractor_assignments) if a == target_attractor_id]
+        if target_rows:
+            row_start = min(target_rows)
+            row_end = max(target_rows)
+            from matplotlib.patches import Rectangle as _Rect
+            border = _Rect((-0.5, row_start - 0.5), n_genes, row_end - row_start + 1,
+                           linewidth=3, edgecolor='royalblue', facecolor='none', alpha=0.9)
+            ax.add_patch(border)
+            blue_label = target_label or f"System → Attractor {target_attractor_id}"
+            legend_elements.append(
+                mpatches.Patch(color='royalblue', alpha=0.9, label=blue_label)
+            )
+            ax_legend.legend(handles=legend_elements, loc='upper left',
+                             bbox_to_anchor=(0, 1), title='Attractors', title_fontsize=12)
+            log_message(f"Highlighted target attractor {target_attractor_id} rows {target_rows} in heatmap", verbose)
+
     # Set title and labels
     ax.set_title('Boolean Network Attractor States', fontsize=14, fontweight='bold', pad=20)
     ax.set_xlabel('Genes', fontsize=12)
     ax.set_ylabel('Attractor States', fontsize=12)
-    
+
     # Save plot
     plt.savefig(f"{output_path}_heatmap.png", dpi=300, bbox_inches='tight')
     if svg_output:
@@ -296,10 +444,12 @@ def create_attractor_heatmap(df, gene_cols, basin_sizes, output_path, verbose=Fa
         log_message(f"Heatmap saved as {output_path}_heatmap.png", verbose)
 
 
-def create_attractor_network(df, gene_cols, basin_sizes, output_path, verbose=False, svg_output=False):
+def create_attractor_network(df, gene_cols, basin_sizes, output_path,
+                             verbose=False, svg_output=False,
+                             target_attractor_id=None, target_label=None):
     """
-    Create a network diagram of attractor transitions with color-coded attractors
-    
+    Create a network diagram of attractor transitions with color-coded attractors.
+
     Args:
         df (pd.DataFrame): Attractors dataframe
         gene_cols (list): List of gene column names
@@ -307,6 +457,8 @@ def create_attractor_network(df, gene_cols, basin_sizes, output_path, verbose=Fa
         output_path (str): Output file path (without extension)
         verbose (bool): Enable verbose output
         svg_output (bool): Also save SVG format
+        target_attractor_id: Attractor the system converges to (highlighted in blue)
+        target_label (str|None): Label for the blue marker in the legend
     """
     log_message("Creating attractor transition network with color-coded attractors...", verbose)
     
@@ -428,23 +580,26 @@ def create_attractor_network(df, gene_cols, basin_sizes, output_path, verbose=Fa
     
     node_sizes = []
     node_colors = []
+    node_edge_colors = []
+    node_linewidths = []
 
-    # Fixed size for all nodes
     fixed_node_size = 800
 
     for node_id in G.nodes():
         info = node_info[node_id]
         att_id = info['attractor_id']
-        
-        # All nodes same size
         node_sizes.append(fixed_node_size)
-        
-        # Color by attractor
-        node_color = attractor_color_map[att_id]
-        node_colors.append(node_color)
-    
+        node_colors.append(attractor_color_map[att_id])
+        if target_attractor_id is not None and att_id == target_attractor_id:
+            node_edge_colors.append('royalblue')
+            node_linewidths.append(3.5)
+        else:
+            node_edge_colors.append('black')
+            node_linewidths.append(1)
+
     # Draw the network
-    nx.draw_networkx_nodes(G, pos, node_color=node_colors, node_size=node_sizes, alpha=0.8, edgecolors='black', linewidths=1)
+    nx.draw_networkx_nodes(G, pos, node_color=node_colors, node_size=node_sizes,
+                           alpha=0.8, edgecolors=node_edge_colors, linewidths=node_linewidths)
 
     # Import for fancy arrows
     from matplotlib.patches import FancyArrowPatch
@@ -509,17 +664,23 @@ def create_attractor_network(df, gene_cols, basin_sizes, output_path, verbose=Fa
     # Create legend with attractor colors and basin information
     legend_elements = []
     total_basin = sum(basin_sizes.values())
-    
+
     for att_id in sorted(attractors):
         color = attractor_color_map[att_id]
         basin_size = basin_sizes.get(att_id, 0)
         percentage = (basin_size / total_basin) * 100 if total_basin > 0 else 0
         att_type = df[df['attractor_id'] == att_id].iloc[0]['type']
-        
         legend_elements.append(
             mpatches.Patch(color=color, label=f'A{att_id} ({att_type}): {basin_size} states ({percentage:.1f}%)')
         )
-    
+
+    if target_attractor_id is not None:
+        blue_label = target_label or f"System → Attractor {target_attractor_id}"
+        legend_elements.append(
+            mpatches.Patch(color='royalblue', alpha=0.9, label=blue_label)
+        )
+        log_message(f"Highlighted target attractor {target_attractor_id} node(s) in network", verbose)
+
     plt.legend(handles=legend_elements, loc='upper right', bbox_to_anchor=(1, 1))
     
     plt.title('Boolean Network Attractor Transitions', fontsize=14, fontweight='bold')
@@ -571,31 +732,49 @@ def visualize_attractors(args):
     try:
         # Read attractors data
         df, gene_cols = read_attractors_file(args.input_file, args.verbose)
-        
+
         # Get basin sizes from dataframe
         basin_sizes = get_basin_sizes_from_df(df, args.verbose)
-        
+
         # Create output base path
         input_path = Path(args.input_file)
         if args.output_base:
             output_base = os.path.join(output_dir, args.output_base)
         else:
-            # Detect mutation suffix from input filename
             mutation_suffix = extract_mutation_suffix(input_path.name)
             if mutation_suffix:
-                # If mutations detected, add suffix to output
                 output_base = os.path.join(output_dir, f"attractors_visualization{mutation_suffix}")
             else:
-                # Standard output name
                 output_base = os.path.join(output_dir, "attractors_visualization")
 
-        
+        # Resolve target attractor from binarized matrix (optional)
+        target_attractor_id = None
+        target_label = None
+        if args.binarized_matrix:
+            final_state, sample_name = read_final_matrix_state(
+                args.binarized_matrix, gene_cols, args.verbose
+            )
+            gene_rules = None
+            if args.rules_file:
+                gene_rules = read_rules_simple(args.rules_file, args.verbose)
+            attractors_dict = build_attractors_dict(df, gene_cols)
+            target_attractor_id = find_target_attractor_id(
+                final_state, attractors_dict, gene_cols,
+                gene_rules=gene_rules, verbose=args.verbose
+            )
+            if target_attractor_id is not None:
+                target_label = f"{sample_name} → Attractor {target_attractor_id}"
+            else:
+                print("Warning: could not determine target attractor for final matrix state.", file=sys.stderr)
+
         # Generate visualizations
         if args.heatmap:
-            create_attractor_heatmap(df, gene_cols, basin_sizes, output_base, args.verbose, args.svg)
+            create_attractor_heatmap(df, gene_cols, basin_sizes, output_base, args.verbose, args.svg,
+                                     target_attractor_id=target_attractor_id, target_label=target_label)
 
         if args.network:
-            create_attractor_network(df, gene_cols, basin_sizes, output_base, args.verbose, args.svg)
+            create_attractor_network(df, gene_cols, basin_sizes, output_base, args.verbose, args.svg,
+                                     target_attractor_id=target_attractor_id, target_label=target_label)
         
         # Print summary
         print(f"\n{'='*60}")
@@ -675,6 +854,12 @@ Notes:
                          help='Output directory (default: same as input file)')
     optional.add_argument('-ob', '--output_base', type=str, default=None,
                          help='Base name for output files (default: auto-generated)')
+    optional.add_argument('-b', '--binarized_matrix', type=str, default=None,
+                          help='Binarized expression matrix TSV — last row is used to mark '
+                               'the target attractor in both heatmap and network')
+    optional.add_argument('-r', '--rules_file', type=str, default=None,
+                          help='Rules file (selected_rules.tsv or full table) — required only '
+                               'if the final matrix state is not already an attractor state')
     
     # Visualization options
     viz_group = parser.add_argument_group('Visualization options')
