@@ -4,6 +4,43 @@ This directory contains the necessary scripts and tools to discretize continuous
 
 We provide two primary algorithms for binarization: **SSD** (Short Series Discretization) and **WCSS** (Within-Cluster Sum of Squares).
 
+## 0. Binarizator (recommended entry point)
+
+`BNI3_Binarizator.py` runs the whole stage from one command: it binarizes a counts matrix with **both** SSD and WCSS, then hands the results to the behavior reviewer. The individual scripts described below still work standalone — this one only saves you from launching all three by hand.
+
+```bash
+python3 BNI3_Binarizator.py -i Example/Counts_lite.tsv
+```
+
+For an input named `Counts_lite.tsv` this produces:
+
+| File | Content |
+|---|---|
+| `Counts_lite_binarized_SSD.tsv` | Binarized matrix, SSD |
+| `Counts_lite_binarized_WCSS.tsv` | Binarized matrix, WCSS |
+| `Counts_lite_binarized_*_pattern.tsv` | Per-gene patterns, one per method |
+| `Counts_lite_reviewer_summary.tsv` | SSD vs WCSS comparison in a single table |
+
+Note the summary is now **one table covering both methods**, which is what makes the head-to-head comparison readable; running the reviewer separately per method produced one summary each.
+
+**Options:**
+
+| Flag | Effect |
+|---|---|
+| `-O`, `--output_dir` | Directory for all generated files (default: next to the input matrix) |
+| `--methods` | Comma-separated methods to run (default: `SSD,WCSS`) |
+| `-p`, `--processors` | Forwarded to each method (default: 1) |
+| `--no_review` | Binarize only, skip the behavior reviewer |
+| `-s`, `--summary` | Custom path for the summary TSV |
+| `-v`, `--verbose` | Detailed processing information |
+
+Methods run one after another, each using all `-p` processors.
+
+**Two caveats worth knowing:**
+
+- The behavior reviewer scans the output directory **recursively**, so binarized matrices left by earlier runs — including ones sitting in subdirectories — are also picked up and included in the comparison. Give each run its own `-O` directory when that matters.
+- A relative `-O` resolves against your current directory, **not** against the input matrix. Running from one folder with an input in another puts the results next to neither. The script prints the resolved absolute path in its header and in the final summary; trust that over the string you typed.
+
 ## 1. SSD (Short Series Discretization)
 The **SSD** algorithm (`BNI3_SSD.py`) binarizes gene expression data by iteratively evaluating the distance between contiguous expression values to find the most natural biological separation point.
 
