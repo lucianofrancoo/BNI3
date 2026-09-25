@@ -134,7 +134,10 @@ run_rules_inference() {
     mkdir -p "$out_dir"
     
     printf "\n${CYAN}>> Running Rule Inference...${NC}\n"
-    if python3 "$ROOT_DIR/2.Rules_Inference/1.BNI3_Boolean_Rules_Inference.py" -i "$eval_raw" -i_binary "$eval_bin" -o "$out_dir" -reg_optimal "$penalty_k" -p $(nproc); then
+    # --no_evaluation: the inference script now chains the evaluator itself. This menu
+    # runs it explicitly below with its own -o and -n, so the chain is cut here to
+    # avoid evaluating every rule combination twice.
+    if python3 "$ROOT_DIR/2.Rules_Inference/1.BNI3_Boolean_Rules_Inference.py" -i "$eval_raw" -i_binary "$eval_bin" -o "$out_dir" -reg_optimal "$penalty_k" -p $(nproc) --no_evaluation; then
         
         printf "\n${CYAN}>> Running Rule Combinations Evaluator...${NC}\n"
         if python3 "$ROOT_DIR/2.Rules_Inference/3.BNI3_Evaluate_rules.py" -i "$out_dir/rules_by_gene.tsv" -m "$eval_bin" -o "$out_dir/evaluation_results.tsv" -n $(nproc) -v; then
