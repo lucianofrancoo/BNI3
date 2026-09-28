@@ -41,6 +41,21 @@ Methods run one after another, each using all `-p` processors.
 - The behavior reviewer scans the output directory **recursively**, so binarized matrices left by earlier runs — including ones sitting in subdirectories — are also picked up and included in the comparison. Give each run its own `-O` directory when that matters.
 - A relative `-O` resolves against your current directory, **not** against the input matrix. Running from one folder with an input in another puts the results next to neither. The script prints the resolved absolute path in its header and in the final summary; trust that over the string you typed.
 
+**Run log and the next command.** Each run writes `<input_name>_binarizator_log.txt` next to its outputs, recording the inputs, the methods, the settings and every file produced. It ends with the rule-inference command for what it just made, with both paths already filled in — this script was given the counts matrix and it knows which binarized matrix it wrote:
+
+```
+Next step - rule inference
+------------------------------------------------------------
+python3 /path/to/2.Rules_Inference/1.BNI3_Boolean_Rules_Inference.py \
+    -i /path/to/Counts_lite.tsv \
+    -i_binary /path/to/Counts_lite_binarized_SSD.tsv \
+    -o /path/to/output/Boolean_Rules_Inference/
+```
+
+The same command is printed to the console at the end of the run. Paths are absolute so it can be pasted from any directory. It names the SSD matrix when both methods ran; swap in the WCSS one if the behavior reviewer favours it.
+
+One thing the command cannot know: the evaluator later enumerates 2^N states, so the network has to be cut to roughly 15–20 genes first. If you have not selected genes yet, point `-i_binary` at that subset instead. Both the log and the console say so.
+
 ## 1. SSD (Short Series Discretization)
 The **SSD** algorithm (`BNI3_SSD.py`) binarizes gene expression data by iteratively evaluating the distance between contiguous expression values to find the most natural biological separation point.
 

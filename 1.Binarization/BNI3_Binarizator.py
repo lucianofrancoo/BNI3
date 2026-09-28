@@ -141,6 +141,59 @@ def run_behavior_review(review_path, summary_file, verbose):
         return False
 
 
+def sibling_script(*parts):
+    """Absolute path to another pipeline script, relative to this one."""
+    root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    return os.path.join(root, *parts)
+
+
+def next_step_command(counts_matrix, binarized_matrix, output_dir):
+    """
+    The rule-inference command for what this run just produced.
+
+    Written with absolute paths so it can be pasted from any directory, and with
+    the two inputs already filled in: this script was given the counts matrix and
+    it knows which binarized matrix it wrote.
+    """
+    return (
+        f"python3 {sibling_script('2.Rules_Inference', '1.BNI3_Boolean_Rules_Inference.py')} \\\n"
+        f"    -i {os.path.abspath(counts_matrix)} \\\n"
+        f"    -i_binary {binarized_matrix} \\\n"
+        f"    -o {os.path.join(output_dir, 'Boolean_Rules_Inference')}/"
+    )
+
+
+def write_run_log(path, args, output_dir, produced, failed, summary_file,
+                  review_ok, total_time, command):
+    """Record what this run did and how to continue it."""
+    with open(path, 'w', encoding='utf-8') as handle:
+        handle.write("BNI3 Binarizator run log\n")
+        handle.write("=" * 60 + "\n")
+        handle.write(f"generated       : {time.strftime('%Y-%m-%d %H:%M:%S')}\n")
+        handle.write(f"counts matrix   : {os.path.abspath(args.input)}\n")
+        handle.write(f"output directory: {output_dir}\n")
+        handle.write(f"methods         : {', '.join(produced) if produced else 'none'}\n")
+        handle.write(f"processors      : {args.processors}\n")
+        handle.write(f"behavior review : {'skipped' if args.no_review else 'enabled'}\n")
+        handle.write(f"total time      : {total_time:.2f} s\n")
+        handle.write("\nFiles produced\n")
+        handle.write("-" * 60 + "\n")
+        for method, produced_path in produced.items():
+            handle.write(f"  {method:<6} -> {produced_path}\n")
+        if review_ok:
+            handle.write(f"  review -> {summary_file}\n")
+            handle.write("            (plus one *_pattern.tsv per binarized matrix)\n")
+        if failed:
+            handle.write(f"  failed: {', '.join(failed)}\n")
+        handle.write("\nNext step - rule inference\n")
+        handle.write("-" * 60 + "\n")
+        handle.write(command + "\n")
+        handle.write(
+            "\nNote: the evaluator enumerates 2^N states, so the network has to be\n"
+            "cut down to roughly 15-20 genes first. Point -i_binary at the selected\n"
+            "subset rather than the full matrix if you have not already.\n")
+
+
 def run_binarizator(args):
     """Run the full binarization stage and report what was produced."""
     start_time = time.time()
@@ -223,11 +276,21 @@ def run_binarizator(args):
         sys.exit(1)
 
     print("STATUS: BINARIZATION COMPLETED SUCCESSFULLY")
-    print(f"\nNext step — rule inference, e.g.:")
-    print(f"python3 ../2.Rules_Inference/1.BNI3_Boolean_Rules_Inference.py \\")
-    print(f"    -i {args.input} \\")
-    print(f"    -i_binary {produced.get('SSD', list(produced.values())[0])} \\")
-    print(f"    -o <output_directory>/")
+
+    command = next_step_command(
+        args.input,
+        produced.get('SSD', list(produced.values())[0]),
+        output_dir)
+
+    log_path = os.path.join(output_dir, f"{input_stem}_binarizator_log.txt")
+    write_run_log(log_path, args, output_dir, produced, failed, summary_file,
+                  review_ok, total_time, command)
+    print(f"  Log    -> {log_path}")
+
+    print(f"\nNext step — rule inference:")
+    print(command)
+    print("\nNote: the evaluator enumerates 2^N states, so cut the network down to")
+    print("roughly 15-20 genes first and point -i_binary at that subset.")
 
 
 def main():

@@ -718,6 +718,65 @@ def save_best_individuals(population, output_dir, target_gene, args, use_mlp, us
             log_message(fitness_str, verbose)
 
 
+def sibling_script(*parts):
+    """Absolute path to another pipeline script, relative to this one."""
+    root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    return os.path.join(root, *parts)
+
+
+def next_step_command(output_dir, binarized_matrix):
+    """
+    The attractor command for what this run just produced.
+
+    Both inputs are already known here: the rules table is whichever of the two
+    this stage wrote, and the binarized matrix is the -i_binary it was given.
+    Absolute paths so the line can be pasted from any directory.
+    """
+    evaluated = os.path.join(output_dir, 'rules_by_gene_evaluated.tsv')
+    plain = os.path.join(output_dir, 'rules_by_gene.tsv')
+    # The evaluated table is the disambiguated one and is what the attractor
+    # stage should read; it only exists when the evaluation ran.
+    rules = evaluated if os.path.exists(evaluated) else plain
+
+    return (
+        f"python3 {sibling_script('3.Attractors', 'BNI3_Attractorator.py')} \\\n"
+        f"    -i {rules} \\\n"
+        f"    -b {os.path.abspath(binarized_matrix)} \\\n"
+        f"    -O {output_dir} --predecessors 2"
+    )
+
+
+def write_run_log(path, args, target_genes, total_experiments, successful,
+                  failed_experiments, total_time, command):
+    """Record what this run did and how to continue it."""
+    with open(path, 'w', encoding='utf-8') as handle:
+        handle.write("BNI3 rule inference run log\n")
+        handle.write("=" * 60 + "\n")
+        handle.write(f"generated        : {time.strftime('%Y-%m-%d %H:%M:%S')}\n")
+        handle.write(f"counts matrix    : {os.path.abspath(args.input)}\n")
+        handle.write(f"binarized matrix : {os.path.abspath(args.input_binary)}\n")
+        handle.write(f"output directory : {os.path.abspath(args.output)}\n")
+        handle.write(f"target genes     : "
+                     f"{', '.join(target_genes) if target_genes else 'all'}\n")
+        handle.write(f"repetitions      : {args.n_repetitions}\n")
+        handle.write(f"processes        : {args.processes}\n")
+        handle.write(f"optimal K        : {args.reg_optimal}\n")
+        handle.write(f"analysis         : "
+                     f"{'skipped' if args.no_analysis else 'enabled'}\n")
+        handle.write(f"evaluation       : "
+                     f"{'skipped' if args.no_evaluation else 'enabled'}\n")
+        handle.write(f"experiments      : {successful}/{total_experiments} succeeded"
+                     f"{f', {failed_experiments} failed' if failed_experiments else ''}\n")
+        handle.write(f"total time       : {total_time:.2f} s\n")
+        handle.write("\nNext step - attractor analysis\n")
+        handle.write("-" * 60 + "\n")
+        handle.write(command + "\n")
+        handle.write(
+            "\nThat one command runs all three attractor steps: the attractors\n"
+            "themselves, the path the observed data takes into them, and both\n"
+            "figures. Drop --predecessors to leave the upstream states out.\n")
+
+
 def run_automatic_analysis(args, target_genes):
     """
     Run automatic analysis after inference experiments complete
@@ -1056,6 +1115,23 @@ def run_gep_experiment(args):
         else:
             print("\nAutomatic analysis skipped. You can run it manually with:")
             print(f"python3 2.BNI3_Analyze_results.py -i {args.output} -m {args.input_binary}")
+
+        # Written after the chain, so the command points at whichever rules table
+        # actually exists by then — the evaluated one when the evaluation ran.
+        output_dir = os.path.abspath(args.output)
+        command = next_step_command(output_dir, args.input_binary)
+        log_path = os.path.join(output_dir, 'rules_inference_log.txt')
+        write_run_log(log_path, args, target_genes, total_experiments,
+                      successful_experiments, failed_experiments, total_time,
+                      command)
+
+        print(f"\n{'='*60}")
+        print(f"Log -> {log_path}")
+        print(f"\nNext step — attractor analysis:")
+        print(command)
+        print("\nThat one command runs all three attractor steps. Drop")
+        print("--predecessors to leave the upstream states out.")
+        print('='*60)
             
     else:
         print(f"STATUS: {failed_experiments} EXPERIMENTS FAILED")
