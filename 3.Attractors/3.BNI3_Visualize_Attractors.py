@@ -781,6 +781,13 @@ def create_attractor_heatmap(df, gene_cols, basin_sizes, output_path,
         log_message(f"Heatmap saved as {output_path}_heatmap.png", verbose)
 
 
+# Inches of figure per data unit of layout, and the blank margin around the
+# nominal boxes. Fixing the scale is what makes an attractor occupy the same area
+# in every figure, whatever else is in it.
+DATA_UNIT_INCHES = 0.55
+PLOT_PAD = 0.5
+
+
 def create_attractor_network(df, gene_cols, basin_sizes, output_path,
                              verbose=False, svg_output=False,
                              target_attractor_id=None, target_label=None,
@@ -906,6 +913,11 @@ def create_attractor_network(df, gene_cols, basin_sizes, output_path,
     # Laid out as a radial tree around each attractor: layer d sits on a ring of
     # radius base + d*RING, and every node's angular wedge is subdivided among its
     # own predecessors, so children stay next to the state they feed.
+    # Every attractor is laid out inside a box of its own, and these are its
+    # bounds. The axes are set from them rather than from where the nodes happened
+    # to land, so an attractor takes up the same space whether it is alone in the
+    # figure or one of five — which is what makes two runs comparable side by side.
+    pred_bounds = None
     pred_nodes = {}
     # Placeholders standing for the predecessors that exist but were not drawn.
     # Without them the figure would imply that the handful of states shown is all
@@ -919,6 +931,7 @@ def create_attractor_network(df, gene_cols, basin_sizes, output_path,
 
         # Redo the horizontal placement: the attractors now need room for their rings.
         attractor_slots = {}
+        boxes = []
         x_offset = 0
         for att_id in sorted(attractors):
             att_data = df[df['attractor_id'] == att_id].sort_values('step_in_cycle')
@@ -935,7 +948,13 @@ def create_attractor_network(df, gene_cols, basin_sizes, output_path,
             # drifts into the neighbouring attractor's space.
             reach = base_radius + (pred_depth + 1.15) * RING
             attractor_slots[att_id] = (x_offset + reach, base_radius)
+            boxes.append((x_offset, x_offset + 2 * reach, reach))
             x_offset += 2 * reach + 2.5
+
+        if boxes:
+            half = max(b[2] for b in boxes)
+            pred_bounds = (min(b[0] for b in boxes), max(b[1] for b in boxes),
+                           -half, half)
 
         for att_id in sorted(attractors):
             centre_x, base_radius = attractor_slots[att_id]
@@ -1118,13 +1137,23 @@ def create_attractor_network(df, gene_cols, basin_sizes, output_path,
         y_range = max(y_coords) - min(y_coords)
         
         # Set figure size based on content
-        cap_w, cap_h = (22, 18) if pred_nodes or ghost_nodes else (16, 12)
-        fig_width = min(cap_w, max(8, x_range + 2))
-        if (pred_nodes or ghost_nodes) and x_range > 0:
-            # The aspect is locked to equal further down, so a height chosen
-            # independently of the width just pads the drawing with blank canvas.
-            fig_height = min(cap_h, max(5, fig_width * (y_range + 2) / (x_range + 2)))
+        if pred_bounds:
+            # A fixed number of inches per data unit, applied to the nominal boxes
+            # rather than to wherever the nodes ended up. Deriving the width and
+            # the height independently and then locking the aspect to equal let
+            # the scale drift with the number of attractors and with which way a
+            # fan happened to point: one attractor came out tall and narrow with
+            # small nodes, two came out wide and short. At a fixed scale an
+            # attractor is the same size in every figure, so panels from different
+            # runs can sit side by side.
+            bx0, bx1, by0, by1 = pred_bounds
+            plot_w = (bx1 - bx0) + 2 * PLOT_PAD
+            plot_h = (by1 - by0) + 2 * PLOT_PAD
+            fig_width = min(40, plot_w * DATA_UNIT_INCHES)
+            fig_height = min(40, plot_h * DATA_UNIT_INCHES)
         else:
+            cap_w, cap_h = (16, 12)
+            fig_width = min(cap_w, max(8, x_range + 2))
             fig_height = min(cap_h, max(6, y_range + 2))
         
         plt.figure(figsize=(fig_width, fig_height))
@@ -1138,21 +1167,14 @@ def create_attractor_network(df, gene_cols, basin_sizes, output_path,
 
     fixed_node_size = 800
 
-    # Node area is given in points, which are physical, while the layout is in data
-    # units — and the predecessor rings stretch the drawing to tens of data units
-    # against a capped figure width. A constant size therefore means a node covers
-    # a few hundredths of the plot in one figure and half a ring in another, which
-    # is what made the states of a long cycle overlap and swallowed the arrows
-    # between them. Tie the size to the scale instead: a node is always the same
-    # fraction of the spacing between rings.
-    if (pred_nodes or ghost_nodes) and pos:
-        span = max(max(p[0] for p in pos.values()) - min(p[0] for p in pos.values()),
-                   1e-6)
-        points_per_data = fig_width * 72.0 / (span + 2 * 1.5)
-        # The cap matters: tight cropping and the equal aspect both shrink the
-        # axes below the requested figure width, so the estimate above runs high.
-        fixed_node_size = float(np.clip(
-            np.pi * (0.30 * 1.5 * points_per_data) ** 2, 110, 460))
+    # Node area is in points, which are physical, while the layout is in data
+    # units. Deriving the conversion from the figure's own extent made a node a
+    # few hundredths of the plot in one figure and half a ring in another. At a
+    # fixed scale it follows directly: a node is always the same fraction of the
+    # ring spacing, and therefore the same physical size in every figure.
+    if pred_bounds:
+        radius_points = 0.30 * 1.5 * DATA_UNIT_INCHES * 72.0
+        fixed_node_size = float(np.pi * radius_points ** 2)
 
     node_alphas = []
 
@@ -1330,11 +1352,15 @@ def create_attractor_network(df, gene_cols, basin_sizes, output_path,
     if pos:
         x_coords = [p[0] for p in pos.values()]
         y_coords = [p[1] for p in pos.values()]
-        margin = 1.5 if (pred_nodes or ghost_nodes) else 1
-        plt.xlim(min(x_coords) - margin, max(x_coords) + margin)
-        # No headroom needed any more: with predecessors the legend sits below the
-        # axes instead of inside them.
-        plt.ylim(min(y_coords) - margin, max(y_coords) + margin)
+        if pred_bounds:
+            bx0, bx1, by0, by1 = pred_bounds
+            plt.xlim(bx0 - PLOT_PAD, bx1 + PLOT_PAD)
+            plt.ylim(by0 - PLOT_PAD, by1 + PLOT_PAD)
+        else:
+            margin = 1
+            plt.xlim(min(x_coords) - margin, max(x_coords) + margin)
+            # No headroom needed: with predecessors the legend sits below the axes.
+            plt.ylim(min(y_coords) - margin, max(y_coords) + margin)
     
     plt.tight_layout()
 

@@ -199,6 +199,21 @@ A self-loop is sized from the node's radius, which is given in points, so it is 
 
 **Node size follows the drawing's scale.** Node area is in points, which are physical, while the layout is in data units, and the predecessor rings stretch the drawing to tens of data units against a capped figure width. A constant size therefore covers a few hundredths of the plot in one figure and half a ring in another — which is what let the states of a long cycle overlap and swallowed the arrows between them. The size is now a fixed fraction of the ring spacing, and a cycle's radius is set by arc length per state rather than by a flat multiple of its length.
 
+**One attractor, one fixed-size box.** The axes used to be set from wherever the nodes happened to land, and the width and height were chosen independently before the aspect was locked to equal. Two runs of the same pipeline therefore came out on wildly different canvases — the one-attractor Control network at 2370 x 4282, the two-attractor Drought network at 3394 x 1597 — which is unusable for panels meant to sit side by side.
+
+Each attractor now gets a nominal box of its own, and the axes are set from those boxes rather than from the node positions. The figure is then sized at a fixed `DATA_UNIT_INCHES` per data unit in both directions, so the scale never drifts and the node size follows from it as a constant instead of being estimated from the figure's extent and clamped.
+
+| | before | after |
+|---|---|---|
+| Control (1 attractor) | 2370 x 4282 | 1523 x 1692 |
+| Drought (2 attractors) | 3394 x 1597 | 3072 x 1689 |
+
+Same height, width proportional to the number of attractors, and the attractor node measures 49–50 px in both. Measured across one, two and three attractors the node stays within a couple of pixels; the leftover variation is the black rim eating into the fill, not the scale.
+
+The cost is deliberate whitespace: the box is square around each attractor, and a sparse fan does not fill it. That is what keeps an attractor the same size whether it is alone or one of five.
+
+`DATA_UNIT_INCHES` and `PLOT_PAD` sit at the top of the script if a figure needs to be scaled as a whole. Runs without `--predecessors` keep the old sizing untouched.
+
 **The legend names the attractors and nothing else** — `Attractor 1 (fixed point): 28,672 states (87.5%)` — and the title is just `Boolean Network Attractors`. Everything drawn around them is labelled on the canvas itself (each hollow node carries its own count) or belongs in the figure caption; spelling it all out in the legend crowded the plot more than it explained it.
 
 The legend sits below the axes whenever predecessors are drawn: slots are reserved against other *nodes*, which cannot see a legend box, so a legend inside the axes ends up with a node on top of it.
