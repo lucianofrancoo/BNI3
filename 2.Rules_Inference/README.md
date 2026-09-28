@@ -466,3 +466,18 @@ Once you have the evaluated unified ruleset, this tool allows you to visually re
 ```bash
 python3 4.BNI3_Boolean_network_visualizer.py -i Example/rules_by_gene_evaluated.tsv -o Example/network_visualization.png
 ```
+
+#### `-p` now reaches the evaluator (2026-09-25)
+
+`-p/--processes` sized the GEP inference pool only. The chained evaluator has its own `--eval_processes`, and when that was absent it fell back to `mp.cpu_count()` — so on a machine with more logical cores than the user asked for, an explicit `-p` was silently overridden halfway through the pipeline. Running `-p 32` on a 32-core / 64-thread Threadripper produced `Starting hill-climbing search with 64 CPU processes`, which was accurate: the evaluator really did spawn 64 workers.
+
+An explicit `-p` now carries over to the evaluator. The bare default (4) does not, so a run that never mentions `-p` still lets the evaluator use the whole machine rather than crawling on four workers. `--eval_processes` overrides both.
+
+| Invocation | Evaluator workers |
+|---|---|
+| `-p 32` | 32 |
+| `-p 32 --eval_processes 8` | 8 |
+| no `-p` | all logical cores |
+| `--eval_processes 16` | 16 |
+
+Note that `mp.cpu_count()` counts *logical* cores. The evaluator's inner loop is CPU-bound bitwise work over 2^N states, which gains little from SMT and can lose to it through cache pressure; on a 32-core / 64-thread machine, `-p 32` is worth benchmarking against the 64-worker default rather than assuming more is faster.

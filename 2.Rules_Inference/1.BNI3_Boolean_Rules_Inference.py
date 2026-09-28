@@ -23,6 +23,10 @@ import time
 from pathlib import Path
 import psutil
 
+# Default worker count for the GEP inference. Kept as a named constant so the
+# chained evaluation can tell "the user asked for this many" from "nobody said".
+DEFAULT_PROCESSES = 4
+
 
 def log_message(message, verbose):
     """Print message only if verbose is enabled"""
@@ -760,8 +764,16 @@ def run_automatic_analysis(args, target_genes):
         cmd.append("--no_evaluation")
     if args.eval_confidence is not None:
         cmd.extend(["--eval_confidence", str(args.eval_confidence)])
-    if args.eval_processes is not None:
-        cmd.extend(["--eval_processes", str(args.eval_processes)])
+    # -p sizes the GEP pool; the evaluator has its own --eval_processes and otherwise
+    # falls back to every logical core. On a machine with more cores than the user asked
+    # for, that silently overrides an explicit -p halfway through the pipeline. So an
+    # explicit -p carries over, while the bare default does not — leaving the evaluator
+    # free to use the whole machine when nobody expressed a preference.
+    eval_processes = args.eval_processes
+    if eval_processes is None and args.processes != DEFAULT_PROCESSES:
+        eval_processes = args.processes
+    if eval_processes is not None:
+        cmd.extend(["--eval_processes", str(eval_processes)])
     if args.eval_search:
         cmd.extend(["--eval_search", args.eval_search])
     if args.eval_restarts is not None:
@@ -1104,8 +1116,11 @@ Notes:
     flexible = parser.add_argument_group('Flexible parameters')
     flexible.add_argument('-targets', '--target_genes', type=str, default=None,
                          help='Target genes to model (comma-separated). Default: all genes from input matrix')
-    flexible.add_argument('-p', '--processes', type=int, default=4,
-                         help='Number of processes for parallel computation (default: 4)')
+    flexible.add_argument('-p', '--processes', type=int, default=DEFAULT_PROCESSES,
+                         help=f'Number of processes for parallel computation '
+                              f'(default: {DEFAULT_PROCESSES}). When given explicitly it '
+                              f'also becomes the default for --eval_processes, so one '
+                              f'flag sets the worker count for the whole pipeline')
     flexible.add_argument('-n_rep', '--n_repetitions', type=int, default=10,
                          help='Number of evolution repetitions. For small datasets (3-4 timepoints) consider 50+ (default: 10)')
     flexible.add_argument('-v', '--verbose', action='store_true',
@@ -1123,7 +1138,8 @@ Notes:
                            help='Forwarded to the evaluator as --confidence. Use 0 for a single '
                                 'sampling batch (much faster). Default: the evaluator default')
     evaluation.add_argument('--eval_processes', type=int, default=None,
-                           help='Forwarded to the evaluator as -n. Default: all available cores')
+                           help='Forwarded to the evaluator as -n. Default: the value of '
+                                '-p when given explicitly, otherwise all available cores')
     evaluation.add_argument('--eval_search', choices=['auto', 'sample', 'hill'], default=None,
                            help="Forwarded to the evaluator as --search. The evaluator "
                                 "defaults to 'auto': enumerate when the space fits, "
