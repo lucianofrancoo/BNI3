@@ -7,6 +7,7 @@ Part of the Boolean Network Inference (BNI) pipeline.
 
 import argparse
 import os
+import re
 import sys
 import pandas as pd
 import numpy as np
@@ -45,6 +46,38 @@ def extract_mutation_suffix(filename):
     
     return ""
 
+# Same expression the inference and evaluation scripts use: any character that is not
+# a letter, digit or underscore becomes "_", and a leading digit gets an "_" prefix.
+# The attractors file carries sanitized names, a binarized matrix does not, so without
+# this "SnRK2.8" never matches the network gene "SnRK2_8" and reads as 0.
+_GENE_NAME_RE = r'\W|^(?=\d)'
+
+
+def sanitize_gene_name(name):
+    """Turn one gene name into a valid Python identifier (idempotent)."""
+    return re.sub(_GENE_NAME_RE, '_', str(name))
+
+
+def sanitize_gene_names(names, source):
+    """Sanitize gene names, refusing silently ambiguous results."""
+    clean = [sanitize_gene_name(n) for n in names]
+
+    groups = {}
+    for original, cleaned in zip(names, clean):
+        groups.setdefault(cleaned, set()).add(str(original))
+    collisions = {k: v for k, v in groups.items() if len(v) > 1}
+
+    if collisions:
+        print(f"\nERROR: gene names in {source} become ambiguous once sanitized to "
+              f"Python identifiers.", file=sys.stderr)
+        for cleaned, originals in list(collisions.items())[:10]:
+            print(f"  {sorted(originals)} all become '{cleaned}'", file=sys.stderr)
+        print("  Rename them upstream so they stay distinct.", file=sys.stderr)
+        sys.exit(1)
+
+    return clean
+
+
 def read_final_matrix_state(matrix_file, gene_cols, verbose):
     """
     Read binarized matrix and return the last row as a boolean state vector,
@@ -66,7 +99,18 @@ def read_final_matrix_state(matrix_file, gene_cols, verbose):
     else:
         sample_name = f"Sample_{len(df)}"
 
+    # Match the sanitization used everywhere else; otherwise a column named
+    # "SnRK2.8" never matches the network gene "SnRK2_8" and silently reads as 0.
+    df.columns = sanitize_gene_names(df.columns, os.path.basename(matrix_file))
+
     matrix_genes = list(df.columns)
+    missing = sorted(set(gene_cols) - set(matrix_genes))
+    if missing:
+        # Defaulting to 0 corrupts the state vector, so this is never silent.
+        print(f"\nWARNING: {len(missing)} network gene(s) absent from "
+              f"{os.path.basename(matrix_file)} and defaulted to 0: "
+              f"{', '.join(missing)}", file=sys.stderr)
+
     last_row = df.iloc[-1]
     state = [bool(int(last_row[g])) if g in matrix_genes else False for g in gene_cols]
     log_message(f"Final matrix state: {sample_name}", verbose)
@@ -169,6 +213,299 @@ def read_rules_simple(rules_file, verbose):
         rules = {str(r['Gene']): str(r['Rule']) for _, r in df.iterrows()}
         log_message(f"Rules loaded from selected rules file ({len(rules)} genes)", verbose)
         return rules
+
+
+# ---------------------------------------------------------------------------
+# Predecessor states around the attractors
+#
+# BoolNet-style figures draw the whole state transition graph. That is 2^N nodes
+# and is unreadable past ~10 genes, so instead a few representative predecessors
+# are drawn per attractor node: states that map INTO it in one update.
+#
+# The fan-in is the problem, not the cost. On a 15-gene network the Control fixed
+# point has 2,559 direct predecessors and 24,576 within three steps — essentially
+# the whole space. So the predecessors are SELECTED, not enumerated:
+#
+#   1. states observed in the binarized matrix are always kept (they are the only
+#      predecessors that are actual measurements rather than possibilities);
+#   2. the remaining slots go to the states closest to their successor in Hamming
+#      distance, which read as "flip these few genes and the system still returns".
+#
+# Ties break on the state code, so the figure is deterministic.
+# ---------------------------------------------------------------------------
+
+_MAX_PREDECESSOR_GENES = 24     # 2^24 states; beyond this the table stops being cheap
+
+
+def _popcount(values):
+    """Vectorized bit count, for Hamming distances between packed states."""
+    v = np.asarray(values).astype(np.uint32)
+    v = v - ((v >> 1) & np.uint32(0x55555555))
+    v = (v & np.uint32(0x33333333)) + ((v >> 2) & np.uint32(0x33333333))
+    v = (v + (v >> 4)) & np.uint32(0x0F0F0F0F)
+    return ((v * np.uint32(0x01010101)) >> 24).astype(np.int64)
+
+
+def state_to_code(state, n_genes):
+    """Pack a boolean state vector into an integer, first gene in the high bit."""
+    code = 0
+    for i, value in enumerate(state):
+        if value:
+            code |= 1 << (n_genes - 1 - i)
+    return code
+
+
+def code_to_state(code, n_genes):
+    """Unpack an integer state code back into a boolean vector."""
+    return [bool((code >> (n_genes - 1 - i)) & 1) for i in range(n_genes)]
+
+
+def _rule_to_numpy_expr(rule):
+    """Rewrite a rule so it evaluates element-wise over numpy boolean arrays."""
+    expr = str(rule)
+    expr = re.sub(r'\bnot\b', ' ~ ', expr)
+    expr = re.sub(r'\band\b', ' & ', expr)
+    expr = re.sub(r'\bor\b', ' | ', expr)
+    return expr
+
+
+def build_transition_table(genes, gene_rules, verbose=False):
+    """
+    Evaluate the synchronous update of every one of the 2^N states.
+
+    Each rule is evaluated once against numpy boolean arrays spanning the whole
+    state space rather than once per state, so the cost is N vectorized ops
+    instead of N * 2^N interpreted ones.
+
+    Returns:
+        np.ndarray: nxt[s] is the state code reached from state code s.
+    """
+    n_genes = len(genes)
+    if n_genes > _MAX_PREDECESSOR_GENES:
+        raise ValueError(
+            f"Predecessor states need the full 2^{n_genes} transition table "
+            f"({2 ** n_genes:,} states), which is beyond the {_MAX_PREDECESSOR_GENES}-gene "
+            f"limit. Drop --predecessors for this network."
+        )
+
+    missing = [g for g in genes if g not in gene_rules]
+    if missing:
+        raise ValueError(f"No rule for {len(missing)} gene(s): {', '.join(missing)}")
+
+    total = 1 << n_genes
+    log_message(f"Building transition table over {total:,} states...", verbose)
+
+    index = np.arange(total, dtype=np.int64)
+    env = {g: ((index >> (n_genes - 1 - i)) & 1).astype(bool)
+           for i, g in enumerate(genes)}
+
+    nxt = np.zeros(total, dtype=np.int64)
+    for i, gene in enumerate(genes):
+        rule = str(gene_rules[gene]).strip()
+        if rule in ('True', 'true', '1'):
+            values = np.ones(total, dtype=bool)
+        elif rule in ('False', 'false', '0'):
+            values = np.zeros(total, dtype=bool)
+        else:
+            values = eval(_rule_to_numpy_expr(rule), {'__builtins__': {}}, env)
+            values = np.broadcast_to(np.asarray(values, dtype=bool), (total,))
+        nxt |= values.astype(np.int64) << (n_genes - 1 - i)
+
+    return nxt
+
+
+def clamped_state_mask(genes, gene_rules, total_states):
+    """
+    States consistent with every gene that a constant rule pins to a value.
+
+    A mutation is encoded as a constant rule ("MYB44 -> 0"), and
+    1.BNI3_Attractors.py enumerates only the states where the clamped gene already
+    holds that value: 2^12 rather than 2^13 for one knockout. Counting the other
+    half here would make the basin sizes in this figure disagree with the ones in
+    the attractors file, which is exactly the kind of mismatch the counts are
+    meant to resolve.
+
+    Returns:
+        np.ndarray of bool, or None when no gene is clamped.
+    """
+    n_genes = len(genes)
+    clamped = {}
+    for i, gene in enumerate(genes):
+        rule = str(gene_rules.get(gene, '')).strip()
+        if rule in ('1', 'True', 'true', 'TRUE'):
+            clamped[i] = 1
+        elif rule in ('0', 'False', 'false', 'FALSE'):
+            clamped[i] = 0
+
+    if not clamped:
+        return None
+
+    index = np.arange(total_states, dtype=np.int64)
+    mask = np.ones(total_states, dtype=bool)
+    for i, value in clamped.items():
+        bit = (index >> (n_genes - 1 - i)) & 1
+        mask &= (bit == value)
+    return mask
+
+
+def entry_point_counts(nxt, drawn_codes, valid_mask=None):
+    """
+    Split every state the figure does not draw by where it enters the figure.
+
+    Dynamics are deterministic, so each state has exactly one forward path, and
+    that path must eventually reach the attractor — which is drawn. Every state
+    therefore has exactly one *first* drawn state it lands on, and grouping by it
+    partitions the undrawn remainder with no overlap:
+
+        sum(counts.values()) + len(drawn_codes) == basin size
+
+    This is what per-node "+N" placeholders could not do. Those counted direct
+    predecessors, which are nested inside each other's upstream sets, so adding
+    them up overshot the basin.
+
+    Returns:
+        {drawn_code: how many undrawn states enter the figure there}
+    """
+    total = nxt.size
+    drawn = np.asarray(sorted(set(int(c) for c in drawn_codes)), dtype=np.int64)
+
+    in_drawn = np.zeros(total, dtype=bool)
+    in_drawn[drawn] = True
+    owner = np.full(total, -1, dtype=np.int64)
+    owner[drawn] = drawn               # a drawn state is its own entry point
+
+    frontier = drawn
+    while frontier.size:
+        candidates = np.flatnonzero(np.isin(nxt, frontier))
+        candidates = candidates[(owner[candidates] < 0) & ~in_drawn[candidates]]
+        if valid_mask is not None:
+            candidates = candidates[valid_mask[candidates]]
+        if candidates.size == 0:
+            break
+        # The successor is already resolved, so its entry point is this one's too.
+        owner[candidates] = owner[nxt[candidates]]
+        frontier = candidates
+
+    outside = np.flatnonzero((owner >= 0) & ~in_drawn)
+    return {int(code): int(np.count_nonzero(owner[outside] == code))
+            for code in drawn}
+
+
+def basin_layer_sizes(nxt, seed_codes, total_states, valid_mask=None):
+    """
+    Size of every backward layer of one attractor's basin, walked to exhaustion.
+
+    This is the unconditioned count, and it is NOT what build_predecessor_layers
+    reports. That function expands only the handful of states the figure kept, so
+    its "available at step 2" means "predecessors of the three states I drew", not
+    "states two steps from the attractor". Summing those reconciles with nothing.
+
+    Here every state of a layer is expanded, so the layers partition the basin:
+    len(seed_codes) + sum(layers) == basin size.
+
+    Returns:
+        (layers, reachable) with layers[d-1] the number of states exactly d steps
+        upstream, and reachable the total including the attractor itself.
+    """
+    seen = np.zeros(total_states, dtype=bool)
+    seeds = np.asarray(sorted(set(seed_codes)), dtype=np.int64)
+    seen[seeds] = True
+
+    frontier = seeds
+    layers = []
+    while frontier.size:
+        candidates = np.flatnonzero(np.isin(nxt, frontier))
+        candidates = candidates[~seen[candidates]]
+        if valid_mask is not None:
+            candidates = candidates[valid_mask[candidates]]
+        if candidates.size == 0:
+            break
+        layers.append(int(candidates.size))
+        seen[candidates] = True
+        frontier = candidates
+
+    return layers, int(seen.sum())
+
+
+def build_predecessor_layers(nxt, seed_codes, depth, breadth,
+                             pinned=None, verbose=False, valid_mask=None):
+    """
+    Walk backwards from the attractor, keeping a few predecessors per state.
+
+    Args:
+        nxt: transition table from build_transition_table
+        seed_codes: state codes of one attractor (one for a fixed point, k for a cycle)
+        depth: how many update steps to walk back
+        breadth: how many predecessors to keep per state per step
+        pinned: state codes that are kept regardless of Hamming distance
+        valid_mask: bool array of states a constant (mutation) rule allows. A
+            knockout figure must not show states where the knocked-out gene is ON:
+            step 1 never counted them, so drawing them puts states in the figure
+            that are outside the state space it reports.
+
+    Returns:
+        (layers, stats). layers[d] is {'chosen': [(code, successor_code)],
+        'omitted': {successor_code: how many of its predecessors were left out}}
+        for states d steps upstream; stats carries the totals before selection.
+        The omitted counts are what lets the figure state its own scale instead of
+        implying that the few states drawn are all there are.
+    """
+    pinned = set(pinned or ())
+    claimed = set(seed_codes)          # never draw a state twice
+    frontier = list(seed_codes)
+    layers = []
+    stats = {'available': [], 'drawn': [], 'total_available': 0, 'total_drawn': 0}
+
+    for _ in range(depth):
+        if not frontier:
+            break
+
+        targets = np.asarray(frontier, dtype=np.int64)
+        # One pass over the table finds every predecessor of the whole frontier.
+        candidates = np.flatnonzero(np.isin(nxt, targets))
+        candidates = candidates[~np.isin(candidates, np.asarray(sorted(claimed),
+                                                                dtype=np.int64))]
+        if valid_mask is not None:
+            candidates = candidates[valid_mask[candidates]]
+        stats['available'].append(int(candidates.size))
+        if candidates.size == 0:
+            break
+
+        successors = nxt[candidates]
+
+        chosen = []
+        omitted = {}
+        for target in frontier:
+            mine = candidates[successors == target]
+            if mine.size == 0:
+                continue
+            mine_pinned = [int(c) for c in mine if int(c) in pinned]
+            rest = [int(c) for c in mine if int(c) not in pinned]
+            rest.sort(key=lambda c: (int(_popcount(np.array([c ^ target]))[0]), c))
+            keep = mine_pinned + rest[:max(0, breadth - len(mine_pinned))]
+            kept_here = 0
+            for code in keep:
+                if code not in claimed:
+                    claimed.add(code)
+                    chosen.append((code, int(target)))
+                    kept_here += 1
+            left = int(mine.size) - kept_here
+            if left > 0:
+                omitted[int(target)] = left
+
+        stats['drawn'].append(len(chosen))
+        if not chosen:
+            # Nothing kept, but the count of what was passed over still matters.
+            if omitted:
+                layers.append({'chosen': [], 'omitted': omitted})
+                stats['total_available'] += sum(omitted.values())
+            break
+        layers.append({'chosen': chosen, 'omitted': omitted})
+        frontier = [code for code, _ in chosen]
+
+    stats['total_available'] = sum(stats['available'])
+    stats['total_drawn'] = sum(stats['drawn'])
+    return layers, stats
 
 
 def generate_attractor_colors(n_attractors):
@@ -446,7 +783,9 @@ def create_attractor_heatmap(df, gene_cols, basin_sizes, output_path,
 
 def create_attractor_network(df, gene_cols, basin_sizes, output_path,
                              verbose=False, svg_output=False,
-                             target_attractor_id=None, target_label=None):
+                             target_attractor_id=None, target_label=None,
+                             transition_table=None, pred_depth=0, pred_breadth=3,
+                             pinned_codes=None, clamp_mask=None):
     """
     Create a network diagram of attractor transitions with color-coded attractors.
 
@@ -459,6 +798,12 @@ def create_attractor_network(df, gene_cols, basin_sizes, output_path,
         svg_output (bool): Also save SVG format
         target_attractor_id: Attractor the system converges to (highlighted in blue)
         target_label (str|None): Label for the blue marker in the legend
+        transition_table: Full 2^N transition table, required for predecessor states
+        pred_depth (int): Update steps to walk back from each attractor node (0 = off)
+        pred_breadth (int): Predecessors kept per state per step
+        pinned_codes (set|None): State codes always kept (the observed samples)
+        clamp_mask: Bool array of states consistent with constant (mutation) rules,
+            so the basin counts match the ones in the attractors file
     """
     log_message("Creating attractor transition network with color-coded attractors...", verbose)
     
@@ -557,6 +902,208 @@ def create_attractor_network(df, gene_cols, basin_sizes, output_path,
             
             x_offset += (radius * 2.5)  # Move to next position
 
+    # ---- Predecessor states -------------------------------------------------
+    # Laid out as a radial tree around each attractor: layer d sits on a ring of
+    # radius base + d*RING, and every node's angular wedge is subdivided among its
+    # own predecessors, so children stay next to the state they feed.
+    pred_nodes = {}
+    # Placeholders standing for the predecessors that exist but were not drawn.
+    # Without them the figure would imply that the handful of states shown is all
+    # there is, when a single attractor can have thousands.
+    ghost_nodes = {}
+    pred_stats = {}
+    if pred_depth and transition_table is not None:
+        RING = 1.5
+        pinned_codes = set(pinned_codes or ())
+        n_genes = len(gene_cols)
+
+        # Redo the horizontal placement: the attractors now need room for their rings.
+        attractor_slots = {}
+        x_offset = 0
+        for att_id in sorted(attractors):
+            att_data = df[df['attractor_id'] == att_id].sort_values('step_in_cycle')
+            att_type = att_data.iloc[0]['type']
+            cycle_length = int(att_data.iloc[0]['cycle_length'])
+            # Predecessor rings stretch the drawing to tens of data units while the
+            # figure width is capped, so a node takes up far more data space than it
+            # does in the plain diagram and the old cycle radius let the states of a
+            # long cycle overlap. Size the ring by arc length per state instead.
+            base_radius = (0.0 if att_type == 'fixed_point'
+                           else max(0.9, cycle_length * 1.6 / (2 * np.pi)))
+            # A receiver with no drawn predecessors puts its hollow node one ring
+            # past itself, so the slot has to allow for that extra ring or the node
+            # drifts into the neighbouring attractor's space.
+            reach = base_radius + (pred_depth + 1.15) * RING
+            attractor_slots[att_id] = (x_offset + reach, base_radius)
+            x_offset += 2 * reach + 2.5
+
+        for att_id in sorted(attractors):
+            centre_x, base_radius = attractor_slots[att_id]
+            att_data = df[df['attractor_id'] == att_id].sort_values('step_in_cycle')
+            att_type = att_data.iloc[0]['type']
+            cycle_length = int(att_data.iloc[0]['cycle_length'])
+
+            # Reposition the attractor nodes around their own centre and give each
+            # one the angular wedge its predecessors will grow into.
+            seeds = []
+            spans = {}
+            if att_type == 'fixed_point':
+                node_id = f"A{att_id}"
+                pos[node_id] = (centre_x, 0.0)
+                code = state_to_code([bool(att_data.iloc[0][g]) for g in gene_cols], n_genes)
+                seeds.append((node_id, code))
+                spans[node_id] = (0.0, np.pi)            # the whole circle
+            else:
+                for i, (_, row) in enumerate(att_data.iterrows()):
+                    node_id = f"A{att_id}_S{row['step_in_cycle']}"
+                    angle = 2 * np.pi * i / cycle_length - np.pi / 2
+                    pos[node_id] = (centre_x + base_radius * np.cos(angle),
+                                    base_radius * np.sin(angle))
+                    code = state_to_code([bool(row[g]) for g in gene_cols], n_genes)
+                    seeds.append((node_id, code))
+                    spans[node_id] = (angle, np.pi / cycle_length)
+
+            layers, stats = build_predecessor_layers(
+                transition_table, [c for _, c in seeds],
+                pred_depth, pred_breadth, pinned=pinned_codes, verbose=verbose,
+                valid_mask=clamp_mask)
+
+            # The true layer sizes, so the figure can say how much of the basin it
+            # is leaving out. These partition the basin and therefore reconcile
+            # with the basin size in the legend; the counts inside `stats` do not,
+            # because they only ever expanded the few states that were kept.
+            true_layers, reachable = basin_layer_sizes(
+                transition_table, [c for _, c in seeds], transition_table.size,
+                valid_mask=clamp_mask)
+            stats['basin_layers'] = true_layers
+            stats['basin_total'] = reachable
+            stats['attractor_states'] = len(seeds)
+            pred_stats[att_id] = stats
+
+            # Which drawn states the rest of the basin flows through. Computed
+            # before anything is positioned, because a receiver needs a slot of its
+            # own in the fan and that changes how the fan is spread.
+            #
+            # Every undrawn state has exactly one first drawn state on its forward
+            # path, so these counts partition the remainder: they sum to it, and
+            # remainder + drawn == basin size.
+            seed_codes = {c for _, c in seeds}
+            drawn_codes = [c for L in layers for c, _ in L['chosen']]
+            entries = entry_point_counts(transition_table,
+                                         list(seed_codes) + drawn_codes,
+                                         valid_mask=clamp_mask)
+            receivers = {code: n for code, n in entries.items() if n > 0}
+            stats['entry_points'] = receivers
+
+            def add_hollow(code, count, parent_node, x, y, angle):
+                """A hollow node standing for the states that enter at parent_node."""
+                node_id = f"B{att_id}_{code}"
+                G.add_node(node_id)
+                G.add_edge(node_id, parent_node)
+                pos[node_id] = (x, y)
+                ghost_nodes[node_id] = {
+                    'count': count, 'attractor_id': att_id, 'angle': angle,
+                    'basin_remainder': True, 'centre_x': centre_x,
+                }
+
+            code_to_node = {c: n for n, c in seeds}
+            placed_hollow = set()
+            for depth_index, layer in enumerate(layers, start=1):
+                by_parent = {}
+                for code, successor in layer['chosen']:
+                    by_parent.setdefault(successor, []).append(code)
+
+                radius = base_radius + depth_index * RING
+                for successor, children in by_parent.items():
+                    parent_node = code_to_node.get(successor)
+                    if parent_node is None:
+                        continue
+
+                    # A receiver gets a slot beside its own children rather than a
+                    # position found by searching for free space. Anything placed
+                    # outside the fan has to reach its target across the rings, and
+                    # on a cycle every such line crosses the fan it came from.
+                    wants_hollow = (successor in receivers
+                                    and successor not in placed_hollow)
+                    slots = len(children) + (1 if wants_hollow else 0)
+                    if not slots:
+                        continue
+
+                    angle_centre, half = spans[parent_node]
+                    # Subdividing the parent's wedge by angle alone makes a handful of
+                    # children fan across it. Capping the spread by arc length instead
+                    # keeps each child visibly attached to the state it feeds.
+                    spread = min(2 * half, slots * 1.15 / max(radius, 1e-6))
+                    step = spread / slots
+                    for k, code in enumerate(sorted(children)):
+                        child_angle = angle_centre - spread / 2 + step * (k + 0.5)
+                        node_id = f"P{att_id}_D{depth_index}_{code}"
+                        G.add_node(node_id)
+                        G.add_edge(node_id, parent_node)
+                        pos[node_id] = (centre_x + radius * np.cos(child_angle),
+                                        radius * np.sin(child_angle))
+                        spans[node_id] = (child_angle, step / 2)
+                        code_to_node[code] = node_id
+                        pred_nodes[node_id] = {
+                            'code': code, 'depth': depth_index,
+                            'attractor_id': att_id, 'pinned': code in pinned_codes,
+                        }
+
+                    if wants_hollow:
+                        hollow_angle = angle_centre - spread / 2 + step * (slots - 0.5)
+                        add_hollow(successor, receivers[successor], parent_node,
+                                   centre_x + radius * np.cos(hollow_angle),
+                                   radius * np.sin(hollow_angle), hollow_angle)
+                        placed_hollow.add(successor)
+
+            # Receivers with no drawn predecessors of their own never came up in the
+            # loop above, so they get a slot one ring further out, still inside their
+            # own wedge — the line stays short and crosses nothing.
+            for code, count in receivers.items():
+                if code in placed_hollow:
+                    continue
+                parent_node = code_to_node.get(code)
+                if parent_node is None:
+                    continue
+                px_, py_ = pos[parent_node]
+                node_radius = float(np.hypot(px_ - centre_x, py_))
+                angle_centre, _ = spans.get(parent_node,
+                                            (np.arctan2(py_, px_ - centre_x), 0.3))
+                out = node_radius + RING
+                add_hollow(code, count, parent_node,
+                           centre_x + out * np.cos(angle_centre),
+                           out * np.sin(angle_centre), angle_centre)
+                placed_hollow.add(code)
+
+
+        for att_id, stats in pred_stats.items():
+            for d, (avail, drawn) in enumerate(zip(stats['available'],
+                                                   stats['drawn']), start=1):
+                log_message(f"  A{att_id} step {d} back: {drawn} drawn of "
+                            f"{avail:,} predecessors of the states already drawn",
+                            verbose)
+            # The unconditioned layers, which are the ones that sum to the basin.
+            shown = ' · '.join(f"{n:,} at {d}" for d, n
+                               in enumerate(stats.get('basin_layers', []), start=1))
+            log_message(f"  A{att_id} basin: {stats.get('basin_total', 0):,} states "
+                        f"({stats.get('attractor_states', 0)} in the attractor) — "
+                        f"steps back: {shown}", verbose)
+
+        # The drawn states are the figure's claim, so they are written out too.
+        pred_file = f"{output_path}_network_predecessors.tsv"
+        with open(pred_file, 'w', encoding='utf-8') as handle:
+            handle.write("node\tattractor_id\tsteps_upstream\tobserved_sample\t"
+                         "binary_state\t" + "\t".join(gene_cols) + "\n")
+            for node_id, info in sorted(pred_nodes.items(),
+                                        key=lambda kv: (kv[1]['attractor_id'],
+                                                        kv[1]['depth'], kv[0])):
+                bits = code_to_state(info['code'], n_genes)
+                handle.write(f"{node_id}\t{info['attractor_id']}\t{info['depth']}\t"
+                             f"{'yes' if info['pinned'] else 'no'}\t"
+                             + ''.join('1' if b else '0' for b in bits) + "\t"
+                             + "\t".join('1' if b else '0' for b in bits) + "\n")
+        log_message(f"Predecessor states written to {pred_file}", verbose)
+
     # Debug: print positions
     if verbose:
         print("Node positions:")
@@ -571,8 +1118,14 @@ def create_attractor_network(df, gene_cols, basin_sizes, output_path,
         y_range = max(y_coords) - min(y_coords)
         
         # Set figure size based on content
-        fig_width = min(16, max(8, x_range + 2))
-        fig_height = min(12, max(6, y_range + 2))
+        cap_w, cap_h = (22, 18) if pred_nodes or ghost_nodes else (16, 12)
+        fig_width = min(cap_w, max(8, x_range + 2))
+        if (pred_nodes or ghost_nodes) and x_range > 0:
+            # The aspect is locked to equal further down, so a height chosen
+            # independently of the width just pads the drawing with blank canvas.
+            fig_height = min(cap_h, max(5, fig_width * (y_range + 2) / (x_range + 2)))
+        else:
+            fig_height = min(cap_h, max(6, y_range + 2))
         
         plt.figure(figsize=(fig_width, fig_height))
     else:
@@ -585,11 +1138,61 @@ def create_attractor_network(df, gene_cols, basin_sizes, output_path,
 
     fixed_node_size = 800
 
+    # Node area is given in points, which are physical, while the layout is in data
+    # units — and the predecessor rings stretch the drawing to tens of data units
+    # against a capped figure width. A constant size therefore means a node covers
+    # a few hundredths of the plot in one figure and half a ring in another, which
+    # is what made the states of a long cycle overlap and swallowed the arrows
+    # between them. Tie the size to the scale instead: a node is always the same
+    # fraction of the spacing between rings.
+    if (pred_nodes or ghost_nodes) and pos:
+        span = max(max(p[0] for p in pos.values()) - min(p[0] for p in pos.values()),
+                   1e-6)
+        points_per_data = fig_width * 72.0 / (span + 2 * 1.5)
+        # The cap matters: tight cropping and the equal aspect both shrink the
+        # axes below the requested figure width, so the estimate above runs high.
+        fixed_node_size = float(np.clip(
+            np.pi * (0.30 * 1.5 * points_per_data) ** 2, 110, 460))
+
+    node_alphas = []
+
     for node_id in G.nodes():
+        if node_id in ghost_nodes:
+            # Hollow and dashed so it reads as "more of these" rather than as a
+            # state in its own right. Sized by its count on a log scale, since the
+            # counts span three orders of magnitude across one figure.
+            info = ghost_nodes[node_id]
+            # Outlined in its attractor's colour, and sized by how many states it
+            # stands for on a log scale, since one figure mixes counts of tens and
+            # counts of tens of thousands.
+            node_sizes.append(150 + 105 * np.log10(max(info['count'], 1) + 1))
+            node_edge_colors.append(attractor_color_map[info['attractor_id']])
+            node_linewidths.append(1.8)
+            node_colors.append('white')
+            node_alphas.append(1.0)
+            continue
+
+        if node_id in pred_nodes:
+            # Upstream states: same hue as the attractor they drain into, but smaller
+            # and fainter the further back they sit, so the attractor stays dominant.
+            info = pred_nodes[node_id]
+            att_id = info['attractor_id']
+            node_sizes.append(max(90, fixed_node_size * (0.42 ** info['depth'])))
+            node_colors.append(attractor_color_map[att_id])
+            node_alphas.append(max(0.30, 0.75 - 0.15 * (info['depth'] - 1)))
+            if info['pinned']:
+                node_edge_colors.append('royalblue')   # an observed sample
+                node_linewidths.append(2.5)
+            else:
+                node_edge_colors.append('dimgray')
+                node_linewidths.append(0.8)
+            continue
+
         info = node_info[node_id]
         att_id = info['attractor_id']
         node_sizes.append(fixed_node_size)
         node_colors.append(attractor_color_map[att_id])
+        node_alphas.append(0.9)
         if target_attractor_id is not None and att_id == target_attractor_id:
             node_edge_colors.append('royalblue')
             node_linewidths.append(3.5)
@@ -598,104 +1201,200 @@ def create_attractor_network(df, gene_cols, basin_sizes, output_path,
             node_linewidths.append(1)
 
     # Draw the network
-    nx.draw_networkx_nodes(G, pos, node_color=node_colors, node_size=node_sizes,
-                           alpha=0.8, edgecolors=node_edge_colors, linewidths=node_linewidths)
+    node_order = list(G.nodes())
+    size_of = dict(zip(node_order, node_sizes))
+    width_of = dict(zip(node_order, node_linewidths))
 
-    # Import for fancy arrows
+    nx.draw_networkx_nodes(G, pos, node_color=node_colors, node_size=node_sizes,
+                           alpha=node_alphas if (pred_nodes or ghost_nodes) else 0.8,
+                           edgecolors=node_edge_colors, linewidths=node_linewidths)
+
     from matplotlib.patches import FancyArrowPatch
+
+    # Length of the separately drawn arrowhead on a dotted route, in points. The
+    # connector stops this far short of the rim so the two meet instead of overlap.
+    GHOST_HEAD_POINTS = 11.0
+
+    def margin_for(node_id):
+        """
+        How far an arrow must stop short of a node, in points.
+
+        networkx takes one margin for a whole edgelist, but the nodes here differ
+        by a factor of six in area: a margin that clears a depth-2 state leaves the
+        arrowhead buried inside the attractor. So edges are grouped by the size of
+        the node they point at and each group gets its own margin.
+        """
+        radius = float(np.sqrt(max(size_of.get(node_id, 300), 1) / np.pi))
+        return radius + width_of.get(node_id, 1.0) / 2.0 + 3.0
+
+    def draw_edges(edgelist, extra_target=0.0, **kwargs):
+        """
+        Draw edges in groups that share a target margin.
+
+        extra_target reserves room at the far end for an arrowhead drawn
+        separately; without it the connector runs the whole way to the rim, under
+        the head and out through its tip.
+        """
+        groups = {}
+        for u, v in edgelist:
+            key = (round(margin_for(u)), round(margin_for(v) + extra_target))
+            groups.setdefault(key, []).append((u, v))
+        for (source_margin, target_margin), edges in groups.items():
+            nx.draw_networkx_edges(G, pos, edgelist=edges,
+                                   min_source_margin=source_margin,
+                                   min_target_margin=target_margin, **kwargs)
 
     # Separate self-loops from regular edges
     self_loops = [(u, v) for u, v in G.edges() if u == v]
-    regular_edges = [(u, v) for u, v in G.edges() if u != v]
+    regular_edges = [(u, v) for u, v in G.edges()
+                     if u != v and u not in pred_nodes and u not in ghost_nodes]
+    ghost_edges = [(u, v) for u, v in G.edges() if u in ghost_nodes]
+    # Upstream edges carry the same meaning but must not compete with the attractor
+    # for attention, so they are drawn thin and grey underneath it.
+    pred_edges = [(u, v) for u, v in G.edges() if u != v and u in pred_nodes]
 
-    # Draw regular edges first
+    if ghost_edges:
+        # The connector only. A dotted linestyle applies to the arrowhead too and
+        # breaks it into chevrons, so the head is drawn separately and solid once
+        # the axes scale is known.
+        # arrows=True even though this draws no head: with arrows=False networkx
+        # falls back to a LineCollection, which ignores min_target_margin outright
+        # and runs the dotted line from centre to centre, straight through the head
+        # drawn below. arrowstyle='-' keeps it headless while honouring the margins.
+        draw_edges(ghost_edges, edge_color='gray', arrows=True, arrowstyle='-',
+                   width=1.0, alpha=0.6, style='dotted',
+                   extra_target=GHOST_HEAD_POINTS)
+
+    if pred_edges:
+        draw_edges(pred_edges, edge_color='gray', arrows=True, arrowsize=11,
+                   arrowstyle='-|>', width=0.9, alpha=0.6)
+
     if regular_edges:
-        # Calculate dynamic margins based on node sizes
-        base_margin = 15
-        margin = base_margin + (fixed_node_size / 2000) * 10
-        
-        nx.draw_networkx_edges(G, pos, edgelist=regular_edges, edge_color='black', 
-                            arrows=True, arrowsize=15, arrowstyle='->', 
-                            width=2, alpha=0.7,
-                            min_source_margin=margin, min_target_margin=margin)
+        # A filled head at the old size swamps the short hop between two states of
+        # a cycle, which can be barely longer than the heads at each end.
+        draw_edges(regular_edges, edge_color='black', arrows=True, arrowsize=10,
+                   arrowstyle='-|>', width=1.8, alpha=0.75)
 
-   # Draw self-loops with FancyArrowPatch for better control
-    if self_loops:
-        # Check if we only have fixed points (no cycles)
-        only_fixed_points = all(df[df['attractor_id'] == att_id].iloc[0]['type'] == 'fixed_point' 
-                            for att_id in attractors)
-        
-        # Scale factor for single fixed point vs multiple attractors
-        if len(attractors) == 1 and only_fixed_points:
-            scale_factor = 0.5  # Much smaller for single fixed point
-        elif only_fixed_points:
-            scale_factor = 0.5  # Smaller for multiple fixed points
-        else:
-            scale_factor = 1.0  # Normal size when there are cycles
-        
-        for u, v in self_loops:
-            x, y = pos[u]
-            
-            # Calculate node radius with scaling
-            node_radius = np.sqrt(fixed_node_size / np.pi) / 100
-            
-            # Position loop above and to the side of node with adaptive sizing
-            loop_radius = node_radius * 0.8 * scale_factor
-            start_angle = np.pi/4  # 45 degrees
-            end_angle = 3*np.pi/4  # 135 degrees
-            
-            start_x = x + loop_radius * np.cos(start_angle)
-            start_y = y + loop_radius * np.sin(start_angle) + node_radius * 0.3 * scale_factor
-            end_x = x + loop_radius * np.cos(end_angle)
-            end_y = y + loop_radius * np.sin(end_angle) + node_radius * 0.3 * scale_factor
-            
-            # Create self-loop with FancyArrowPatch
-            loop = FancyArrowPatch(
-                (start_x, start_y), (end_x, end_y),
-                connectionstyle=f"arc3,rad={3 * scale_factor}",
-                arrowstyle='->',
-                mutation_scale=15 * scale_factor,
-                color='black',
-                linewidth=2,
-                alpha=0.7
-            )
-            plt.gca().add_patch(loop)
-    
-    # Create legend with attractor colors and basin information
+    # The count is the whole point of a placeholder, so it is written on it.
+    # Placed just outside the node along its own radius, which keeps it clear of
+    # the ring it sits on.
+    for node_id, info in ghost_nodes.items():
+        x, y = pos[node_id]
+        angle = info['angle']
+        # Written just beyond the node, continuing the direction it was placed in,
+        # so the label never falls back onto the state it hangs off.
+        plt.text(x + 0.55 * np.cos(angle), y + 0.55 * np.sin(angle),
+                 f"{info['count']:,}", fontsize=8, color='dimgray',
+                 ha='center', va='center', zorder=6,
+                 bbox=dict(boxstyle='round,pad=0.2', facecolor='white',
+                           edgecolor='none', alpha=0.85))
+
+    # The legend names the attractors and nothing else. Everything the figure
+    # draws around them — upstream states, hollow entry-point nodes, the observed
+    # sample — is labelled on the canvas itself or belongs in the caption, and
+    # spelling it all out here crowded the plot more than it explained it.
     legend_elements = []
     total_basin = sum(basin_sizes.values())
 
     for att_id in sorted(attractors):
-        color = attractor_color_map[att_id]
         basin_size = basin_sizes.get(att_id, 0)
         percentage = (basin_size / total_basin) * 100 if total_basin > 0 else 0
-        att_type = df[df['attractor_id'] == att_id].iloc[0]['type']
+        att_type = str(df[df['attractor_id'] == att_id].iloc[0]['type']).replace('_', ' ')
         legend_elements.append(
-            mpatches.Patch(color=color, label=f'A{att_id} ({att_type}): {basin_size} states ({percentage:.1f}%)')
+            mpatches.Patch(color=attractor_color_map[att_id],
+                           label=f'Attractor {att_id} ({att_type}): '
+                                 f'{basin_size:,} states ({percentage:.1f}%)')
         )
 
     if target_attractor_id is not None:
-        blue_label = target_label or f"System → Attractor {target_attractor_id}"
-        legend_elements.append(
-            mpatches.Patch(color='royalblue', alpha=0.9, label=blue_label)
-        )
-        log_message(f"Highlighted target attractor {target_attractor_id} node(s) in network", verbose)
+        log_message(f"Highlighted target attractor {target_attractor_id} node(s) in network",
+                    verbose)
 
-    plt.legend(handles=legend_elements, loc='upper right', bbox_to_anchor=(1, 1))
+    if pred_nodes or ghost_nodes:
+        # Moved out from under the drawing. The hollow nodes are placed by
+        # clearance from other NODES, which cannot see the legend box, so a legend
+        # sitting inside the axes ends up with a node on top of it.
+        plt.legend(handles=legend_elements, loc='upper center',
+                   bbox_to_anchor=(0.5, -0.01), frameon=True, fontsize=9)
+    else:
+        plt.legend(handles=legend_elements, loc='upper right', bbox_to_anchor=(1, 1))
     
-    plt.title('Boolean Network Attractor Transitions', fontsize=14, fontweight='bold')
+    plt.title('Boolean Network Attractors', fontsize=14, fontweight='bold')
     plt.axis('off')
+    if pred_nodes or ghost_nodes:
+        # The layers are concentric rings; without an equal aspect they render as
+        # ellipses and "one step back" looks like a different distance up than across.
+        plt.gca().set_aspect('equal', adjustable='box')
     
     # Set axis limits to fit content tightly
     if pos:
         x_coords = [p[0] for p in pos.values()]
         y_coords = [p[1] for p in pos.values()]
-        margin = 1
+        margin = 1.5 if (pred_nodes or ghost_nodes) else 1
         plt.xlim(min(x_coords) - margin, max(x_coords) + margin)
+        # No headroom needed any more: with predecessors the legend sits below the
+        # axes instead of inside them.
         plt.ylim(min(y_coords) - margin, max(y_coords) + margin)
     
     plt.tight_layout()
-    
+
+    # Self-loops last: their size is a node radius, which is given in points, and
+    # converting that to data units needs the axes scale — which only exists once
+    # the limits and the aspect are settled. Sizing them off a hardcoded divisor
+    # beforehand made the loop vanish on wide figures and swamp the node on narrow
+    # ones.
+    if self_loops:
+        ax = plt.gca()
+        fig = plt.gcf()
+        fig.canvas.draw()
+        box = ax.get_window_extent()
+        x_lo, x_hi = ax.get_xlim()
+        points_per_data = (box.width * 72.0 / fig.dpi) / max(x_hi - x_lo, 1e-9)
+        data_per_point = 1.0 / max(points_per_data, 1e-9)
+
+        for u, _ in self_loops:
+            x, y = pos[u]
+            radius = float(np.sqrt(max(size_of.get(u, 800), 1) / np.pi)) * data_per_point
+            # Start and end on the node's own rim, a sixth of a turn apart, with the
+            # arc bulging up and away. A negative rad curls the loop back inside the
+            # node, where it reads as a scribble rather than a return to self.
+            # Both ends sit on the node's rim near the top, and the arc bulges up
+            # and over between them. The sign of rad is what decides whether it
+            # goes over the node or dips down inside it, where it reads as a
+            # scribble; checked against all four combinations before settling here.
+            a0, a1 = np.deg2rad(65), np.deg2rad(115)
+            start = (x + radius * np.cos(a0), y + radius * np.sin(a0))
+            finish = (x + radius * np.cos(a1), y + radius * np.sin(a1))
+            ax.add_patch(FancyArrowPatch(
+                start, finish, connectionstyle="arc3,rad=1.9",
+                arrowstyle='-|>', mutation_scale=13, color='black',
+                linewidth=1.8, alpha=0.85, zorder=4))
+
+    # Solid heads for the dotted routes, now that points convert to data units.
+    if ghost_edges:
+        ax = plt.gca()
+        fig = plt.gcf()
+        fig.canvas.draw()
+        box = ax.get_window_extent()
+        x_lo, x_hi = ax.get_xlim()
+        points_per_data = (box.width * 72.0 / fig.dpi) / max(x_hi - x_lo, 1e-9)
+        data_per_point = 1.0 / max(points_per_data, 1e-9)
+
+        for u, v in ghost_edges:
+            ux, uy = pos[u]
+            vx, vy = pos[v]
+            length = float(np.hypot(vx - ux, vy - uy))
+            if length <= 0:
+                continue
+            dx, dy = (vx - ux) / length, (vy - uy) / length
+            stop = margin_for(v) * data_per_point          # the target's rim
+            head = GHOST_HEAD_POINTS * data_per_point
+            tip = (vx - dx * stop, vy - dy * stop)
+            tail = (vx - dx * (stop + head), vy - dy * (stop + head))
+            ax.add_patch(FancyArrowPatch(
+                tail, tip, arrowstyle='-|>', mutation_scale=11,
+                color='gray', linewidth=1.0, alpha=0.75, zorder=4))
+
     # Save plot
     plt.savefig(f"{output_path}_network.png", dpi=300, bbox_inches='tight')
     if svg_output:
@@ -750,11 +1449,11 @@ def visualize_attractors(args):
         # Resolve target attractor from binarized matrix (optional)
         target_attractor_id = None
         target_label = None
+        gene_rules = None
         if args.binarized_matrix:
             final_state, sample_name = read_final_matrix_state(
                 args.binarized_matrix, gene_cols, args.verbose
             )
-            gene_rules = None
             if args.rules_file:
                 gene_rules = read_rules_simple(args.rules_file, args.verbose)
             attractors_dict = build_attractors_dict(df, gene_cols)
@@ -767,6 +1466,44 @@ def visualize_attractors(args):
             else:
                 print("Warning: could not determine target attractor for final matrix state.", file=sys.stderr)
 
+        # Predecessor states need the rules: the attractors file records where the
+        # system ends up, not how any state maps onto the next one.
+        transition_table = None
+        clamp_mask = None
+        pinned_codes = set()
+        pred_depth = max(0, int(getattr(args, 'predecessors', 0) or 0))
+        if pred_depth:
+            if gene_rules is None:
+                if not args.rules_file:
+                    print("ERROR: --predecessors needs -r/--rules_file to know the "
+                          "network's update function.", file=sys.stderr)
+                    sys.exit(1)
+                gene_rules = read_rules_simple(args.rules_file, args.verbose)
+            transition_table = build_transition_table(gene_cols, gene_rules, args.verbose)
+            # A constant rule is how a knockout or overexpression is encoded, and
+            # step 1 counts only the states that respect it.
+            clamp_mask = clamped_state_mask(gene_cols, gene_rules,
+                                            transition_table.size)
+            if clamp_mask is not None:
+                log_message(f"Constant rules clamp the state space to "
+                            f"{int(clamp_mask.sum()):,} of {transition_table.size:,} "
+                            f"states", args.verbose)
+
+            # Observed samples are the only upstream states that are measurements
+            # rather than possibilities, so they outrank the Hamming selection.
+            if args.binarized_matrix:
+                matrix_df = pd.read_csv(args.binarized_matrix, sep='\t')
+                first_col = matrix_df.columns[0]
+                if not pd.api.types.is_numeric_dtype(matrix_df[first_col]):
+                    matrix_df = matrix_df.drop(columns=[first_col])
+                matrix_df.columns = sanitize_gene_names(
+                    matrix_df.columns, os.path.basename(args.binarized_matrix))
+                present = set(matrix_df.columns)
+                for _, row in matrix_df.iterrows():
+                    pinned_codes.add(state_to_code(
+                        [bool(int(row[g])) if g in present else False for g in gene_cols],
+                        len(gene_cols)))
+
         # Generate visualizations
         if args.heatmap:
             create_attractor_heatmap(df, gene_cols, basin_sizes, output_base, args.verbose, args.svg,
@@ -774,7 +1511,12 @@ def visualize_attractors(args):
 
         if args.network:
             create_attractor_network(df, gene_cols, basin_sizes, output_base, args.verbose, args.svg,
-                                     target_attractor_id=target_attractor_id, target_label=target_label)
+                                     target_attractor_id=target_attractor_id, target_label=target_label,
+                                     transition_table=transition_table,
+                                     pred_depth=pred_depth,
+                                     pred_breadth=max(1, int(args.predecessors_per_state)),
+                                     pinned_codes=pinned_codes,
+                                     clamp_mask=clamp_mask)
         
         # Print summary
         print(f"\n{'='*60}")
@@ -873,6 +1615,15 @@ Notes:
                           help='Generate only network diagram (shortcut for --network)')
     viz_group.add_argument('-v', '--verbose', action='store_true',
                           help='Show detailed processing information')
+    viz_group.add_argument('--predecessors', type=int, default=0, metavar='STEPS',
+                           help='Also draw states that lead INTO each attractor, walking '
+                                'this many update steps back (0 = off, 2 is a good start). '
+                                'Requires -r/--rules_file')
+    viz_group.add_argument('--predecessors-per-state', type=int, default=3, metavar='K',
+                           help='How many predecessors to keep per state per step '
+                                '(default: 3). A 15-gene attractor can have thousands, '
+                                'so the closest ones in Hamming distance are kept; any '
+                                'state observed in -b/--binarized_matrix is always kept')
     viz_group.add_argument('--svg', action='store_true',
                       help='Also generate SVG format (vector graphics)')
     
