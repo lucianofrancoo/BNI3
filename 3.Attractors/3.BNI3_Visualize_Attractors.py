@@ -14,6 +14,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 from matplotlib.colors import ListedColormap
+from matplotlib.lines import Line2D
 import seaborn as sns
 import networkx as nx
 from pathlib import Path
@@ -599,8 +600,7 @@ def get_basin_sizes_from_df(df, verbose):
 
 
 def create_attractor_heatmap(df, gene_cols, basin_sizes, output_path,
-                             verbose=False, svg_output=False,
-                             target_attractor_id=None, target_label=None):
+                             verbose=False, svg_output=False):
     """
     Create a heatmap visualization of attractor states with color-coded attractors.
 
@@ -611,8 +611,11 @@ def create_attractor_heatmap(df, gene_cols, basin_sizes, output_path,
         output_path (str): Output file path (without extension)
         verbose (bool): Enable verbose output
         svg_output (bool): Also save SVG format
-        target_attractor_id: Attractor the system converges to (highlighted in blue)
-        target_label (str|None): Label for the blue marker in the legend
+
+    The heatmap shows the attractor states and nothing else: the trajectory's
+    destination is marked on the network and trajectory figures, where it is the
+    point of the plot. Here it only added a blue box and a legend row to a panel
+    whose job is to let the states be read off and compared.
     """
     log_message("Creating attractor states heatmap with color-coded attractors...", verbose)
     
@@ -656,25 +659,42 @@ def create_attractor_heatmap(df, gene_cols, basin_sizes, output_path,
         
         attractor_boundaries.append(current_row - 0.5)
     
-    # Check if we have only one attractor with one state (single fixed point)
-    single_fixed_point = (len(heatmap_data) == 1 and 
-                         len(attractors) == 1 and 
-                         df.iloc[0]['type'] == 'fixed_point')
-    
-    # Calculate figure size based on data
-    fig_width = max(10, min(22, n_genes * 0.5 + 6))
-    
-    # Adjust height for single fixed point case
-    if single_fixed_point:
-        fig_height = max(4, min(8, n_genes * 0.3 + 2))  # Más compacto para punto fijo único
-    else:
-        fig_height = max(6, min(16, len(df) * 0.3 + 3))
-    
-    # Create figure with gridspec for main plot and attractor color bar
-    fig = plt.figure(figsize=(fig_width, fig_height), constrained_layout=True)
-    gs = fig.add_gridspec(1, 2, width_ratios=[20, 3], wspace=0.05)
-    ax = fig.add_subplot(gs[0])
-    ax_legend = fig.add_subplot(gs[1])
+    # ── Layout: one fixed cell size for every heatmap ────────────────────────────
+    # The grid is placed in absolute inches rather than stretched to fill the figure,
+    # so a cell is the same square whether the network has one attractor or five.
+    # Panels from different runs can then be set side by side and compared directly.
+    n_rows = len(heatmap_data)
+    grid_w = n_genes * HEATMAP_CELL_INCHES
+    grid_h = n_rows * HEATMAP_CELL_INCHES
+
+    # Margins are sized from the text that has to fit inside them
+    longest_gene = max((len(g) for g in gene_cols), default=0)
+    longest_row = max((len(lbl) for lbl in row_labels), default=0)
+    longest_legend = max([len('Inactive gene')] +
+                         [len(f'A{a}: {basin_sizes.get(a, 0):,} states (100.0%)')
+                          for a in attractors])
+    n_legend_rows = 1 + n_attractors
+
+    margin_left = 0.95 + 0.068 * longest_row        # row labels + y axis title
+    margin_bottom = 0.70 + 0.050 * longest_gene     # gene names rotated 45 degrees
+    margin_top = 0.55                               # title
+    margin_right = max(2.3, 0.75 + 0.075 * longest_legend)   # legend panel
+
+    # With few rows the legend is taller than the grid, so the band that holds both
+    # is the taller of the two and the grid is centred inside it.
+    legend_h = 0.45 + 0.27 * n_legend_rows
+    content_h = max(grid_h, legend_h)
+
+    fig_w = margin_left + grid_w + margin_right
+    fig_h = margin_bottom + content_h + margin_top
+
+    fig = plt.figure(figsize=(fig_w, fig_h))
+    ax = fig.add_axes([margin_left / fig_w,
+                       (margin_bottom + (content_h - grid_h) / 2.0) / fig_h,
+                       grid_w / fig_w, grid_h / fig_h])
+    ax_legend = fig.add_axes([(margin_left + grid_w + 0.2) / fig_w,
+                              margin_bottom / fig_h,
+                              (margin_right - 0.35) / fig_w, content_h / fig_h])
     
     # Convert to numpy array
     heatmap_matrix = np.array(heatmap_data)
@@ -697,13 +717,9 @@ def create_attractor_heatmap(df, gene_cols, basin_sizes, output_path,
             else:  # Inactive gene
                 colored_matrix[i, j] = [0.94, 0.94, 0.94]  # Light gray (#f0f0f0)
 
-    # Display the colored matrix with aspect control
-    if single_fixed_point:
-        # For single fixed point, control aspect ratio to make it square-like
-        im = ax.imshow(colored_matrix, aspect='equal', interpolation='nearest')
-    else:
-        # Normal behavior for multiple states/attractors
-        im = ax.imshow(colored_matrix, aspect='auto', interpolation='nearest')
+    # The axes box is already exactly grid_w x grid_h inches for an n_rows x n_genes
+    # matrix, so 'equal' keeps every cell square without resizing the box.
+    im = ax.imshow(colored_matrix, aspect='equal', interpolation='nearest')
     
     # Set ticks and labels for main heatmap
     ax.set_xticks(range(n_genes))
@@ -745,24 +761,6 @@ def create_attractor_heatmap(df, gene_cols, basin_sizes, output_path,
     ax_legend.legend(handles=legend_elements, loc='upper left', 
                     bbox_to_anchor=(0, 1), title='Attractors', title_fontsize=12)
     
-    # Blue border: mark the rows of the target attractor (final matrix state destination)
-    if target_attractor_id is not None:
-        target_rows = [i for i, a in enumerate(attractor_assignments) if a == target_attractor_id]
-        if target_rows:
-            row_start = min(target_rows)
-            row_end = max(target_rows)
-            from matplotlib.patches import Rectangle as _Rect
-            border = _Rect((-0.5, row_start - 0.5), n_genes, row_end - row_start + 1,
-                           linewidth=3, edgecolor='royalblue', facecolor='none', alpha=0.9)
-            ax.add_patch(border)
-            blue_label = target_label or f"System → Attractor {target_attractor_id}"
-            legend_elements.append(
-                mpatches.Patch(color='royalblue', alpha=0.9, label=blue_label)
-            )
-            ax_legend.legend(handles=legend_elements, loc='upper left',
-                             bbox_to_anchor=(0, 1), title='Attractors', title_fontsize=12)
-            log_message(f"Highlighted target attractor {target_attractor_id} rows {target_rows} in heatmap", verbose)
-
     # Set title and labels
     ax.set_title('Boolean Network Attractor States', fontsize=14, fontweight='bold', pad=20)
     ax.set_xlabel('Genes', fontsize=12)
@@ -787,6 +785,10 @@ def create_attractor_heatmap(df, gene_cols, basin_sizes, output_path,
 DATA_UNIT_INCHES = 0.55
 PLOT_PAD = 0.5
 
+# Side of one heatmap cell, in inches. Fixed so the grid never stretches to fill the
+# figure: the canvas grows with the number of genes and attractor states instead.
+HEATMAP_CELL_INCHES = 0.34
+
 
 def create_attractor_network(df, gene_cols, basin_sizes, output_path,
                              verbose=False, svg_output=False,
@@ -803,8 +805,8 @@ def create_attractor_network(df, gene_cols, basin_sizes, output_path,
         output_path (str): Output file path (without extension)
         verbose (bool): Enable verbose output
         svg_output (bool): Also save SVG format
-        target_attractor_id: Attractor the system converges to (highlighted in blue)
-        target_label (str|None): Label for the blue marker in the legend
+        target_attractor_id: Attractor the system converges to (reported in the log)
+        target_label (str|None): Retained for callers; not drawn on this figure
         transition_table: Full 2^N transition table, required for predecessor states
         pred_depth (int): Update steps to walk back from each attractor node (0 = off)
         pred_breadth (int): Predecessors kept per state per step
@@ -813,7 +815,15 @@ def create_attractor_network(df, gene_cols, basin_sizes, output_path,
             so the basin counts match the ones in the attractors file
     """
     log_message("Creating attractor transition network with color-coded attractors...", verbose)
-    
+
+    # Every state read from the binarized matrix. A royal-blue ring means exactly
+    # this and nothing else, wherever it appears: an attractor state that was
+    # measured gets one, an upstream state that was measured gets one, and a state
+    # that was only inferred never does. The ring used to double as a marker for
+    # the attractor the system converges to, which made it unlabelable — the same
+    # colour stood for "observed" on one node and "destination" on another.
+    observed_codes = set(pinned_codes or ())
+
     # Create network graph
     G = nx.DiGraph()
     
@@ -846,7 +856,10 @@ def create_attractor_network(df, gene_cols, basin_sizes, output_path,
                 'active_genes': active_genes,
                 'basin_size': basin_sizes.get(att_id, 0),
                 'step': 1,
-                'cycle_length': 1
+                'cycle_length': 1,
+                # Kept so the node can be checked against the observed states
+                'code': state_to_code([bool(att_data.iloc[0][g]) for g in gene_cols],
+                                      len(gene_cols))
             }
             
             # Self-loop for fixed point
@@ -871,7 +884,9 @@ def create_attractor_network(df, gene_cols, basin_sizes, output_path,
                     'active_genes': active_genes,
                     'basin_size': basin_sizes.get(att_id, 0),  # Same for all nodes in cycle
                     'step': step,
-                    'cycle_length': cycle_length
+                    'cycle_length': cycle_length,
+                    'code': state_to_code([bool(row[g]) for g in gene_cols],
+                                          len(gene_cols))
                 }
             
             # Add edges for cycle
@@ -926,7 +941,7 @@ def create_attractor_network(df, gene_cols, basin_sizes, output_path,
     pred_stats = {}
     if pred_depth and transition_table is not None:
         RING = 1.5
-        pinned_codes = set(pinned_codes or ())
+        pinned_codes = observed_codes
         n_genes = len(gene_cols)
 
         # Redo the horizontal placement: the attractors now need room for their rings.
@@ -1163,6 +1178,7 @@ def create_attractor_network(df, gene_cols, basin_sizes, output_path,
     node_sizes = []
     node_colors = []
     node_edge_colors = []
+    drew_observed = False      # whether any blue ring made it onto the canvas
     node_linewidths = []
 
     fixed_node_size = 800
@@ -1205,6 +1221,7 @@ def create_attractor_network(df, gene_cols, basin_sizes, output_path,
             if info['pinned']:
                 node_edge_colors.append('royalblue')   # an observed sample
                 node_linewidths.append(2.5)
+                drew_observed = True
             else:
                 node_edge_colors.append('dimgray')
                 node_linewidths.append(0.8)
@@ -1215,9 +1232,10 @@ def create_attractor_network(df, gene_cols, basin_sizes, output_path,
         node_sizes.append(fixed_node_size)
         node_colors.append(attractor_color_map[att_id])
         node_alphas.append(0.9)
-        if target_attractor_id is not None and att_id == target_attractor_id:
+        if info.get('code') in observed_codes:
             node_edge_colors.append('royalblue')
             node_linewidths.append(3.5)
+            drew_observed = True
         else:
             node_edge_colors.append('black')
             node_linewidths.append(1)
@@ -1311,10 +1329,10 @@ def create_attractor_network(df, gene_cols, basin_sizes, output_path,
                  bbox=dict(boxstyle='round,pad=0.2', facecolor='white',
                            edgecolor='none', alpha=0.85))
 
-    # The legend names the attractors and nothing else. Everything the figure
-    # draws around them — upstream states, hollow entry-point nodes, the observed
-    # sample — is labelled on the canvas itself or belongs in the caption, and
-    # spelling it all out here crowded the plot more than it explained it.
+    # The legend names the attractors and the blue ring. The rest of what the
+    # figure draws — upstream states, hollow entry-point nodes — is labelled on the
+    # canvas itself or belongs in the caption, and spelling it all out here crowded
+    # the plot more than it explained it.
     legend_elements = []
     total_basin = sum(basin_sizes.values())
 
@@ -1328,9 +1346,18 @@ def create_attractor_network(df, gene_cols, basin_sizes, output_path,
                                  f'{basin_size:,} states ({percentage:.1f}%)')
         )
 
+    # Only claimed when a ring was actually drawn: with no -b there are no observed
+    # states, and a legend row for a symbol absent from the canvas is noise.
+    if drew_observed:
+        legend_elements.append(
+            Line2D([0], [0], marker='o', linestyle='none',
+                   markerfacecolor='none', markeredgecolor='royalblue',
+                   markeredgewidth=2.2, markersize=11,
+                   label='States in the binarized matrix')
+        )
+
     if target_attractor_id is not None:
-        log_message(f"Highlighted target attractor {target_attractor_id} node(s) in network",
-                    verbose)
+        log_message(f"Target attractor is {target_attractor_id}", verbose)
 
     if pred_nodes or ghost_nodes:
         # Moved out from under the drawing. The hollow nodes are placed by
@@ -1515,25 +1542,29 @@ def visualize_attractors(args):
                             f"{int(clamp_mask.sum()):,} of {transition_table.size:,} "
                             f"states", args.verbose)
 
-            # Observed samples are the only upstream states that are measurements
-            # rather than possibilities, so they outrank the Hamming selection.
-            if args.binarized_matrix:
-                matrix_df = pd.read_csv(args.binarized_matrix, sep='\t')
-                first_col = matrix_df.columns[0]
-                if not pd.api.types.is_numeric_dtype(matrix_df[first_col]):
-                    matrix_df = matrix_df.drop(columns=[first_col])
-                matrix_df.columns = sanitize_gene_names(
-                    matrix_df.columns, os.path.basename(args.binarized_matrix))
-                present = set(matrix_df.columns)
-                for _, row in matrix_df.iterrows():
-                    pinned_codes.add(state_to_code(
-                        [bool(int(row[g])) if g in present else False for g in gene_cols],
-                        len(gene_cols)))
+
+        # Every row of the binarized matrix. These states are measurements rather
+        # than possibilities, so they outrank the Hamming selection when upstream
+        # states are chosen, and they are the ones the figure rings in blue — which
+        # it can do whether or not predecessors are drawn.
+        if args.binarized_matrix:
+            matrix_df = pd.read_csv(args.binarized_matrix, sep='\t')
+            first_col = matrix_df.columns[0]
+            if not pd.api.types.is_numeric_dtype(matrix_df[first_col]):
+                matrix_df = matrix_df.drop(columns=[first_col])
+            matrix_df.columns = sanitize_gene_names(
+                matrix_df.columns, os.path.basename(args.binarized_matrix))
+            present = set(matrix_df.columns)
+            for _, row in matrix_df.iterrows():
+                pinned_codes.add(state_to_code(
+                    [bool(int(row[g])) if g in present else False for g in gene_cols],
+                    len(gene_cols)))
+            log_message(f"{len(pinned_codes)} distinct state(s) read from the "
+                        f"binarized matrix", args.verbose)
 
         # Generate visualizations
         if args.heatmap:
-            create_attractor_heatmap(df, gene_cols, basin_sizes, output_base, args.verbose, args.svg,
-                                     target_attractor_id=target_attractor_id, target_label=target_label)
+            create_attractor_heatmap(df, gene_cols, basin_sizes, output_base, args.verbose, args.svg)
 
         if args.network:
             create_attractor_network(df, gene_cols, basin_sizes, output_base, args.verbose, args.svg,

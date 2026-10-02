@@ -214,7 +214,19 @@ The cost is deliberate whitespace: the box is square around each attractor, and 
 
 `DATA_UNIT_INCHES` and `PLOT_PAD` sit at the top of the script if a figure needs to be scaled as a whole. Runs without `--predecessors` keep the old sizing untouched.
 
-**The legend names the attractors and nothing else** — `Attractor 1 (fixed point): 28,672 states (87.5%)` — and the title is just `Boolean Network Attractors`. Everything drawn around them is labelled on the canvas itself (each hollow node carries its own count) or belongs in the figure caption; spelling it all out in the legend crowded the plot more than it explained it.
+**The heatmap keeps one cell size too.** It had the same problem from the other direction: the figure height grew with the number of attractor states, and the aspect switched from `equal` to `auto` as soon as there was more than one row, so the cells stretched vertically to fill whatever height had been chosen. A one-row network came out as a strip of squares, a two-row network as a strip of tall rectangles, and the two could not be stacked in one figure.
+
+The grid is now laid out in absolute inches — `HEATMAP_CELL_INCHES` per cell in both directions — inside axes placed with `add_axes` rather than a stretched gridspec, and the aspect stays `equal` always. The canvas grows with the number of genes and states instead of the cells growing to fill it. Measured across four networks (1, 2, 8 and 8 states; 10 to 15 genes) a cell is 98 x 98 px in every one.
+
+Margins are sized from the text they have to hold: the row labels set the left margin, the rotated gene names the bottom one, and the legend's longest entry the right one. The legend gets its own vertical band, because with one or two rows it is taller than the grid, and the grid is centred against it.
+
+Its legend carries two things and no more: `Inactive gene`, and one row per attractor with its basin size and share. The blue box that used to mark where the last row of the binarized matrix ends up was dropped from this figure — the network and trajectory plots already make that their subject, and here it put an extra border and an extra legend row on a panel whose only job is to let the gene states be read off and compared between conditions.
+
+**The legend names the attractors and the blue ring** — `Attractor 1 (fixed point): 28,672 states (87.5%)` and `States in the binarized matrix` — and the title is just `Boolean Network Attractors`. The rest is labelled on the canvas itself (each hollow node carries its own count) or belongs in the figure caption; spelling it all out in the legend crowded the plot more than it explained it.
+
+A royal-blue ring means one thing anywhere in the figure: **that state was read from the binarized matrix**. An attractor state that was measured gets one, an upstream state that was measured gets one, and a state that was only inferred never does. It previously meant two things at once — "observed" on an upstream node and "this is where the system ends up" on an attractor node — which is why it could not be given a legend row without the row being false for half the nodes it described. The destination of the trajectory is the subject of the trajectory figure, and the inferred one is in `trajectory_matrix_attractor_mapping.tsv`.
+
+The ring needs only `-b/--binarized_matrix`, not `--predecessors`: in the plain diagram it marks whichever attractors were themselves observed. It is read against an attractor's own fill, so it is sharpest on the warm hues and softest on the blue one.
 
 The legend sits below the axes whenever predecessors are drawn: slots are reserved against other *nodes*, which cannot see a legend box, so a legend inside the axes ends up with a node on top of it.
 
