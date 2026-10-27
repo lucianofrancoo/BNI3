@@ -154,3 +154,7 @@ The R steps (gold-standard scoring, BoolNet, DESeq2) need R with `dplyr`, `BoolN
 - `2.Rules_Inference/4.BNI3_Boolean_network_visualizer.py`: `-o` must include a directory (`-o out/network`); a bare name fails, and `-d` is ignored when `-o` is given.
 - The header of the rule-inference log prints an example MLP configuration computed for all genes as regulators. The configuration actually used is chosen per candidate rule from its own number of regulators, so `lbfgs` convergence warnings can appear even when the header says `adam`.
 
+
+## License
+
+BNI3 is released under the [MIT License](LICENSE).
