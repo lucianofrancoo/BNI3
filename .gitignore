@@ -7,3 +7,22 @@ __pycache__/
 
 # Local Claude Code settings
 .claude/
+
+# Reruns of the paper analyses (reproducibility/*/scripts write here by default)
+reproducibility/**/rerun/
+
+# Large or raw data that never belongs in the repository
+*.fastq
+*.fastq.gz
+*.fq.gz
+*.sra
+*.bam
+*.h5
+*.rds
+*.fa
+*.fasta
+*.fa.gz
+
+# Run logs
+*.log
+nohup.out
