@@ -1,20 +1,20 @@
 #!/usr/bin/env python3
 """
-Combina tres fuentes de ortólogos Arabidopsis -> tomate (SL3.0) para los genes ABA.
+Combines three sources of Arabidopsis -> tomato (SL3.0) orthologs for the ABA genes.
 
   BLAST   : blast_fwd_ath_aba_vs_sly.tsv / blast_rev_sly_vs_tair12.tsv
-            (de blast_ath_aba_to_sly.py; tblastx, e<=1e-10)
+            (from blast_ath_aba_to_sly.py; tblastx, e<=1e-10)
   Compara : compara62_ath_sly_homologies.tsv.gz  (Ensembl Plants release 62,
-            Compara.115.protein_default, filas arabidopsis_thaliana -> solanum_lycopersicum)
+            Compara.115.protein_default, rows arabidopsis_thaliana -> solanum_lycopersicum)
             https://ftp.ensemblgenomes.ebi.ac.uk/pub/plants/release-62/tsv/ensembl-compara/homologies/arabidopsis_thaliana/Compara.115.protein_default.homologies.tsv.gz
   OrthoFinder : .../Results_sptree/Orthologues/.../
-            Arabidopsis_thaliana__v__Solanum_lycopersicum.tsv (OrthoFinder 3.1.5, 10 especies,
-            proteomas Ensembl Plants 62 + TAIR12, una isoforma por gen; -M msa, árbol de
-            especies de referencia con -s)
+            Arabidopsis_thaliana__v__Solanum_lycopersicum.tsv (OrthoFinder 3.1.5, 10 species,
+            Ensembl Plants 62 + TAIR12 proteomes, one isoform per gene; -M msa, reference
+            species tree with -s)
 
-Salida: Ath_ABA_orthologs_combined.tsv, una fila por par (gen Ath, gen Sly) propuesto por
-alguna fuente. Pares BLAST incluidos: RBH, o top BLAST_TOP por gen Ath con bitscore
->= BLAST_FRAC * el mejor bitscore de ese gen Ath.
+Output: Ath_ABA_orthologs_combined.tsv, one row per pair (Ath gene, Sly gene) proposed by
+any source. BLAST pairs included: RBH, or the top BLAST_TOP per Ath gene with bitscore
+>= BLAST_FRAC * the best bitscore of that Ath gene.
 """
 from pathlib import Path
 
@@ -23,7 +23,7 @@ import pandas as pd
 HERE = Path(__file__).resolve().parent
 GENES = HERE.parent / "NCBI_To_ITAG" / "Ath" / "Ath_ABA_genes.tsv"
 OUT = HERE / "Ath_ABA_orthologs_combined.tsv"
-# corrida con árbol de especies de referencia (-s Orthofinder/species_tree_rooted.nwk)
+# run with the reference species tree (-s Orthofinder/species_tree_rooted.nwk)
 OF_RESULTS = [HERE / "Orthofinder" / "results" / "Results_Sep24" / "WorkingDirectory"
               / "OrthoFinder" / "Results_sptree"]
 BLAST_TOP = 5
@@ -52,7 +52,7 @@ r = pd.read_csv(HERE / "blast_rev_sly_vs_tair12.tsv", sep="\t", names=COLS)
 r = r.assign(sly=sly_gene(r.qseqid), ath=ath_gene(r.sseqid))
 back = r.sort_values("bitscore", ascending=False).drop_duplicates("sly").set_index("sly").ath
 f["blast_back_to"] = f.sly.map(back)
-# RBH estricto: el mejor gen de tomate de A tiene como mejor gen Ath a A
+# strict RBH: the best tomato gene of A has A as its best Ath gene
 f["blast_RBH"] = (f.blast_rank == 1) & (f.blast_back_to == f.ath)
 blast = f[f.blast_RBH | ((f.blast_rank <= BLAST_TOP) & (f.blast_rel >= BLAST_FRAC))]
 blast = blast[["ath", "sly", "blast_rank", "bitscore", "pident", "blast_back_to", "blast_RBH"]]
@@ -66,7 +66,7 @@ c = c.rename(columns={"gene_stable_id": "ath", "homology_gene_stable_id": "sly",
                       "is_high_confidence": "compara_high_conf"})
 c = c[["ath", "sly", "compara_type", "compara_identity", "compara_high_conf"]]
 
-# --- OrthoFinder (el último Results_*)
+# --- OrthoFinder (the latest Results_*)
 of_file = next(OF_RESULTS[-1].rglob("Arabidopsis_thaliana__v__Solanum_lycopersicum.tsv"))
 o = pd.read_csv(of_file, sep="\t")
 strip = lambda x: x.str.strip().str.replace(r"^(Arabidopsis_thaliana|Solanum_lycopersicum)_", "", regex=True)
@@ -88,7 +88,7 @@ m["Compara"] = m.compara_type.notna()
 m["OrthoFinder"] = m.of_type.notna()
 SOURCES = ["OrthoFinder", "Compara", "BLAST"]
 m["n_sources"] = m[SOURCES].sum(axis=1)
-# posición del par en el BLAST aunque no haya pasado el filtro
+# rank of the pair in BLAST even if it did not pass the filter
 rank_all = f.set_index(["ath", "sly"]).blast_rank
 m["blast_rank"] = [rank_all.get((a, s)) for a, s in zip(m.ath, m.sly)]
 
@@ -100,19 +100,19 @@ cols = ["group", "Symbol", "ath", "sly", "n_sources"] + SOURCES + ["of_type", "o
         "compara_type", "compara_identity", "compara_high_conf"]
 m[cols].to_csv(OUT, sep="\t", index=False, float_format="%.1f")
 
-# --- resumen
+# --- summary
 cov = pd.DataFrame({s: genes.gene_id.isin(m[m[s]].ath) for s in SOURCES})
 cov.index = genes.Symbol
-print("genes Ath con al menos un ortólogo por fuente:", cov.sum().to_dict())
-print("sin ninguno:", cov.index[~cov.any(axis=1)].tolist())
-print("pares:", len(m), " por n_sources:", m.n_sources.value_counts().sort_index().to_dict())
-print("OrthoFinder vs Compara (pares OrthoFinder):", m[m.OrthoFinder].Compara.value_counts().to_dict())
-print("Compara vs OrthoFinder (pares Compara):", m[m.Compara].OrthoFinder.value_counts().to_dict())
-print("Compara vs BLAST (pares Compara con blast_rank):",
+print("Ath genes with at least one ortholog per source:", cov.sum().to_dict())
+print("with none:", cov.index[~cov.any(axis=1)].tolist())
+print("pairs:", len(m), " by n_sources:", m.n_sources.value_counts().sort_index().to_dict())
+print("OrthoFinder vs Compara (OrthoFinder pairs):", m[m.OrthoFinder].Compara.value_counts().to_dict())
+print("Compara vs OrthoFinder (Compara pairs):", m[m.Compara].OrthoFinder.value_counts().to_dict())
+print("Compara vs BLAST (Compara pairs with blast_rank):",
       m[m.Compara].blast_rank.fillna(-1).astype(int).clip(upper=6).value_counts().sort_index().to_dict())
 
-# --- tabla final: ortólogos = pares propuestos por OrthoFinder o Compara (métodos
-#     basados en árboles). El RBH no define ortólogos; solo se reporta como validación.
+# --- final table: orthologs = pairs proposed by OrthoFinder or Compara (tree-based
+#     methods). RBH does not define orthologs; it is reported only as validation.
 OUT_FINAL = HERE / "Ath_ABA_orthologs_final.tsv"
 tree = m[m.OrthoFinder | m.Compara].copy()
 tree["sources"] = tree.apply(lambda r: "+".join(
@@ -126,6 +126,6 @@ fin[["group", "Symbol", "ath", "has_ortholog", "sly", "sources", "of_type",
      "compara_type", "of_orthogroup"]].to_csv(OUT_FINAL, sep="\t", index=False)
 rbh = m[m.blast_RBH.eq(True)]
 print("final:", fin.drop_duplicates("ath").has_ortholog.value_counts().to_dict(), "genes;",
-      fin.sly.notna().sum(), "pares;", fin.sly.nunique(), "genes de tomate distintos")
-print(f"validación: {(rbh.OrthoFinder | rbh.Compara).sum()} de {len(rbh)} pares RBH "
-      "también los dan OrthoFinder o Compara")
+      fin.sly.notna().sum(), "pairs;", fin.sly.nunique(), "distinct tomato genes")
+print(f"validation: {(rbh.OrthoFinder | rbh.Compara).sum()} of {len(rbh)} RBH pairs "
+      "are also found by OrthoFinder or Compara")

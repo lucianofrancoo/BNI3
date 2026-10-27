@@ -1,24 +1,23 @@
 #!/usr/bin/env python3
 """
-Extrae de las matrices binarizadas (SSD) solo los 15 nodos de selected_nodes.tsv.
+Extracts only the 15 nodes of selected_nodes.tsv from the binarized (SSD) matrices.
 
-Entrada:  {Ath,Sly}_Drought_Leaves/Binarization/
+Input:    {Ath,Sly}_Drought_Leaves/Binarization/
           ConteoNormalizado_mean_{Control,Drought}_aba_genes_binarized_SSD.tsv
-          (un gen por columna, un tiempo por fila, sin nombres de fila)
-Salida:   mismo directorio, sufijo _selected_nodes.tsv, mismo formato; columnas en el
-          orden de selected_nodes.tsv, nombradas "ID (símbolo)". En tomate el símbolo es
-          el del gen de Arabidopsis del que es ortólogo. Se verifica que cada columna
-          reproduzca el patrón de selected_nodes.tsv.
+          (one gene per column, one time point per row, no row names)
+Output:   same folder, suffix _selected_nodes.tsv, same format; columns in the order of
+          selected_nodes.tsv, named "ID (symbol)". In tomato the symbol is that of the
+          Arabidopsis gene it is an ortholog of. Each column is checked to reproduce the
+          pattern in selected_nodes.tsv.
 
-También extrae el conteo normalizado promedio (vst) de esos genes, que es lo que se
-binarizó:
-Entrada:  {Ath,Sly}_Drought_Leaves/Selected_genes/ConteoNormalizado_mean_{Control,Drought}_aba_genes.tsv
-Salida:   mismo directorio, sufijo _selected_nodes.tsv; filas en el orden de
-          selected_nodes.tsv, columna ID = "ID (símbolo)".
+It also extracts the mean normalized count (vst) of those genes, which is what was
+binarized:
+Input:    {Ath,Sly}_Drought_Leaves/Selected_genes/ConteoNormalizado_mean_{Control,Drought}_aba_genes.tsv
+Output:   same folder, suffix _selected_nodes.tsv; rows in the order of
+          selected_nodes.tsv, ID column = "ID (symbol)".
 
-De cada salida se escribe además una versión *_symbol.tsv con solo el símbolo como nombre
-(en tomate, el símbolo del ortólogo de Arabidopsis), para que los nodos se llamen igual en
-las dos especies.
+Each output also gets a *_symbol.tsv version with only the symbol as name (in tomato, the
+symbol of the Arabidopsis ortholog), so the nodes have the same names in both species.
 """
 from pathlib import Path
 
@@ -39,7 +38,7 @@ for sp, col, pat in [("Ath", "arabidopsis_locus", "ath_pattern"),
              f"ConteoNormalizado_mean_{cond}_aba_genes_binarized_{METHOD}.tsv")
         m = pd.read_csv(f, sep="\t", dtype=str)
         sub = m[genes]
-        # verificación: la columna leída = mitad control / sequía del patrón de 8 bits
+        # check: the column read = control / drought half of the 8-bit pattern
         for g, p in zip(genes, nodes[pat]):
             assert "".join(sub[g]) == p.split("|")[i], (sp, cond, g)
         out = f.with_name(f.stem + "_selected_nodes.tsv")
@@ -47,9 +46,9 @@ for sp, col, pat in [("Ath", "arabidopsis_locus", "ath_pattern"),
                      axis=1).to_csv(out, sep="\t", index=False)
         sub.set_axis(nodes.arabidopsis_gene.tolist(), axis=1).to_csv(
             out.with_name(out.stem + "_symbol.tsv"), sep="\t", index=False)
-        print(f"{out.relative_to(ROOT)}: {sub.shape[1]} genes x {sub.shape[0]} tiempos")
+        print(f"{out.relative_to(ROOT)}: {sub.shape[1]} genes x {sub.shape[0]} time points")
 
-    # conteo normalizado promedio de los mismos genes
+    # mean normalized count of the same genes
     labels = {g: f"{g} ({s})" for g, s in zip(genes, nodes.arabidopsis_gene)}
     for cond in ("Control", "Drought"):
         f = (ROOT / f"{sp}_Drought_Leaves" / "Selected_genes" /
@@ -60,4 +59,4 @@ for sp, col, pat in [("Ath", "arabidopsis_locus", "ath_pattern"),
         sub.rename(index=labels).reset_index().to_csv(out, sep="\t", index=False)
         sub.set_axis(nodes.arabidopsis_gene.tolist()).rename_axis("ID").reset_index().to_csv(
             out.with_name(out.stem + "_symbol.tsv"), sep="\t", index=False)
-        print(f"{out.relative_to(ROOT)}: {len(sub)} genes x {sub.shape[1]} tiempos")
+        print(f"{out.relative_to(ROOT)}: {len(sub)} genes x {sub.shape[1]} time points")

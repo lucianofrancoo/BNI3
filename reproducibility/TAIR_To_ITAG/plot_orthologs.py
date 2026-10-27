@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
 """
-Figuras de la comparación de ortólogos Arabidopsis -> tomate (genes ABA).
+Figures of the Arabidopsis -> tomato ortholog comparison (ABA genes).
 
-Entrada: Ath_ABA_orthologs_combined.tsv (de combine_orthologs.py)
-Métodos: OrthoFinder y Ensembl Compara (ambos basados en árboles génicos).
-Universo: pares (gen Ath, gen Sly) propuestos por al menos uno de los dos métodos.
+Input:    Ath_ABA_orthologs_combined.tsv (from combine_orthologs.py)
+Methods:  OrthoFinder and Ensembl Compara (both based on gene trees).
+Universe: pairs (Ath gene, Sly gene) proposed by at least one of the two methods.
 
-Salidas (PDF vectorial + PNG):
-  fig_orthologs_summary   A: genes Ath con ortólogo según cada método (Venn)
-                          B: genes Ath con al menos un ortólogo, por grupo: unión (OR) y cada método
-  fig_orthologs_detail    matriz par a par (gen Ath -> Solyc) x método, por grupo
+Outputs (vector PDF + PNG):
+  fig_orthologs_summary   A: Ath genes with an ortholog according to each method (Venn)
+                          B: Ath genes with at least one ortholog, by group: union (OR) and each method
+  fig_orthologs_detail    pair-by-pair matrix (Ath gene -> Solyc) x method, by group
 """
 from pathlib import Path
 
@@ -50,12 +50,12 @@ def save(fig, name):
     plt.close(fig)
 
 
-# ---------------------------------------------------------------- resumen
+# ---------------------------------------------------------------- summary
 fig, (axv, axg) = plt.subplots(1, 2, figsize=(11, 4.6),
                                gridspec_kw={"width_ratios": [1, 1.25], "wspace": 0.45})
 
-# A: Venn de genes Ath con ≥1 ortólogo según cada método (círculos iguales; las áreas
-#    no son proporcionales). La unión es el total de genes con ortólogo.
+# A: Venn of Ath genes with ≥1 ortholog according to each method (equal circles; the
+#    areas are not proportional). The union is the total of genes with an ortholog.
 g_of, g_c = set(p[p.OrthoFinder].ath), set(p[p.Compara].ath)
 only_of, only_c, both = len(g_of - g_c), len(g_c - g_of), len(g_of & g_c)
 r, d = 1.0, 0.62
@@ -76,7 +76,7 @@ axv.set_ylim(-1.6, 1.6)
 axv.set_aspect("equal")
 axv.axis("off")
 
-# B: genes Ath con ≥1 ortólogo por método, por grupo funcional
+# B: Ath genes with ≥1 ortholog per method, by functional group
 cov = []
 for g in group_order:
     ids = genes[genes.group == g].gene_id
@@ -107,7 +107,7 @@ for s_ in ("top", "right", "left"):
     axg.spines[s_].set_visible(False)
 axg.tick_params(length=0)
 axg.legend(frameon=False, loc="lower right", fontsize=8)
-# letras de panel a la misma altura (el Venn tiene aspecto 1:1 y queda más bajo)
+# panel letters at the same height (the Venn has a 1:1 aspect and sits lower)
 fig.canvas.draw()
 top = axg.get_position().y1 + 0.04
 for ax, letter in [(axv, "A"), (axg, "B")]:
@@ -115,7 +115,7 @@ for ax, letter in [(axv, "A"), (axg, "B")]:
              color=INK, ha="left", va="bottom")
 save(fig, "fig_orthologs_summary")
 
-# ---------------------------------------------------------------- detalle
+# ---------------------------------------------------------------- detail
 rows = []
 for g in group_order:
     for gg in genes[genes.group == g].itertuples():
@@ -129,7 +129,7 @@ for g in group_order:
                              **{k: getattr(r_, k) for k in METHODS}))
 rows = pd.DataFrame(rows)
 
-# repartir en 3 columnas sin cortar grupos funcionales
+# split into 3 columns without breaking functional groups
 ncol = 3
 target = len(rows) / ncol
 cols, cur, acc = [[] for _ in range(ncol)], 0, 0
@@ -141,7 +141,7 @@ for g in group_order:
     acc += n
 max_rows = max(sum((rows.group == g).sum() + 1.5 for g in c) for c in cols)
 
-X0, DX = 2.1, 0.45  # posición de la primera columna de puntos y separación
+X0, DX = 2.1, 0.45  # position of the first column of dots and spacing
 fig, axes = plt.subplots(1, ncol, figsize=(14, max_rows * 0.165 + 1.2))
 for ax, gl in zip(axes, cols):
     y = 0
@@ -173,5 +173,5 @@ for ax, gl in zip(axes, cols):
     ax.axis("off")
 fig.subplots_adjust(top=0.99, bottom=0.01, left=0.02, right=0.99, wspace=0.08)
 save(fig, "fig_orthologs_detail")
-print(f"genes Ath — solo OF: {only_of}  ambos: {both}  solo Compara: {only_c}  pares: {len(p)}")
+print(f"Ath genes — OF only: {only_of}  both: {both}  Compara only: {only_c}  pairs: {len(p)}")
 print(cov.to_string(index=False))

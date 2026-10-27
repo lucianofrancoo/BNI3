@@ -1,39 +1,39 @@
-# Genes ABA seleccionados: Arabidopsis, hoja de roseta, sequía
+# Selected ABA genes: Arabidopsis, rosette leaves, drought
 
 ## Genes
 
-`aba_genes.tsv` tiene los 95 genes de la vía ABA tomados de Song et al. (2016), con estas
-columnas:
-- `geneName`: el símbolo.
-- `gene_id`: el AGI.
+`aba_genes.tsv` has the 95 ABA pathway genes taken from Song et al. (2016), with these
+columns:
+- `geneName`: the symbol.
+- `gene_id`: the AGI.
 - `hormone`.
-- `group`: el grupo funcional.
+- `group`: the functional group.
 
-89 de ellos pasan el filtro de DESeq2. Los otros 6 no tienen datos por bajo conteo: NCED6,
-PYL10, PYL11, PYL12, PYL13 y PYL2.
+89 of them pass the DESeq2 filter. The other 6 have no data because of low counts: NCED6,
+PYL10, PYL11, PYL12, PYL13 and PYL2.
 
 ## `selected_genes.R`
 
-1. **Conteo normalizado** (vst) promediado por condición, solo de los genes de la lista, a
-   partir de `../DGE/`:
-   - `ConteoNormalizado_mean_aba_genes.tsv`: todas las condiciones, con `geneName` y
-     `group`.
+1. **Normalized count** (vst) averaged per condition, for the listed genes only, from
+   `../DGE/`:
+   - `ConteoNormalizado_mean_aba_genes.tsv`: all conditions, with `geneName` and `group`.
    - `ConteoNormalizado_mean_Control_aba_genes.tsv`: `ID`, `CTRL_0`, `CTRL_7200`,
-     `CTRL_15840` y `CTRL_20160`.
+     `CTRL_15840` and `CTRL_20160`.
    - `ConteoNormalizado_mean_Drought_aba_genes.tsv`: `ID`, `CTRL_0`, `WD_7200`,
-     `WD_15840` y `WD_20160`.
-   - Las tablas de control y sequía tienen solo el ID y los valores; son las que se
-     binarizaron (`../Binarization/`).
-2. **Dotplot** del log2FC WD vs CTRL en cada tiempo, con significancia (FDR < 0,05):
-   `dotplot_aba_genes.png/.svg`. Los valores están en `dotplot_aba_genes_table.tsv`.
+     `WD_15840` and `WD_20160`.
+   - The control and drought tables have only the ID and the values; they are the ones
+     that were binarized (`../Binarization/`).
+2. **Dot plot** of the WD vs CTRL log2FC at each time point, with significance
+   (FDR < 0.05): `dotplot_aba_genes.png/.svg`. The values are in
+   `dotplot_aba_genes_table.tsv`.
 
-## Nodos de la red booleana
+## Boolean network nodes
 
-Estos archivos los genera `../Boolean_node_selection/extract_binarized.py` (ver el README
-de esa carpeta):
-- `ConteoNormalizado_mean_{Control,Drought}_aba_genes_selected_nodes.tsv`: el mismo conteo
-  normalizado, solo para los 15 nodos elegidos, con `ID` como `AGI (símbolo)`.
-- `..._selected_nodes_symbol.tsv`: la misma tabla, con solo el símbolo como `ID`.
+These files are written by `../Boolean_node_selection/extract_binarized.py` (see the README
+in that folder):
+- `ConteoNormalizado_mean_{Control,Drought}_aba_genes_selected_nodes.tsv`: the same
+  normalized count, for the 15 chosen nodes only, with `ID` as `AGI (symbol)`.
+- `..._selected_nodes_symbol.tsv`: the same table, with only the symbol as `ID`.
 
-Las filas están en el orden de `../Boolean_node_selection/selected_nodes.tsv`, que es el
-mismo que el de las matrices binarias y el de los archivos de tomate.
+The rows follow the order of `../Boolean_node_selection/selected_nodes.tsv`, which is the
+same as in the binary matrices and in the tomato files.

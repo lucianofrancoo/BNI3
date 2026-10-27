@@ -1,20 +1,20 @@
 #!/usr/bin/env python3
 """
-Figura 5 del paper BNI3: BNI3 vs BoolNet en DREAM4 size10 (resultados nuevos).
+Figure 5 of the BNI3 paper: BNI3 vs BoolNet on DREAM4 size10.
 
-Genera cada panel como archivo separado (SVG con texto editable + PNG 600 dpi),
-sin título general ni letra de panel:
+Writes each panel as a separate file (SVG with editable text + PNG at 600 dpi),
+without an overall title or panel letter:
     Figure5_A_BalancedAccuracy  Figure5_B_F1  Figure5_C_Coverage  Figure5_D_PrecisionRecall
 
-Estética: la de la Figura 5 anterior (fondo blanco con grilla suave, cajas
-#BD759C / #6CAAC4 con borde oscuro y mediana negra gruesa, puntos grises sin
-jitter, sin marcar outliers aparte porque cada serie ya es un punto).
+Style: white background with a light grid, #BD759C / #6CAAC4 boxes with a dark edge
+and a thick black median, gray points without jitter, and no separate outlier markers
+because each series is already a point.
 
-Cada punto es una serie (n = 25 por método y condición). Los tests son Wilcoxon
-signed-rank pareados por (Size, serie, condición), two-sided, zero_method='wilcox',
-con corrección de continuidad.
+Each point is one series (n = 25 per method and condition). The tests are Wilcoxon
+signed-rank, paired by (Size, series, condition), two-sided, zero_method='wilcox',
+with continuity correction.
 
-Uso: python3 make_figure5.py
+Usage: python3 make_figure5.py
 """
 
 import os
@@ -27,29 +27,29 @@ import pandas as pd
 import seaborn as sns
 from scipy.stats import wilcoxon
 
-# ==== RUTAS (relativas a reproducibility/DREAM4) ====
+# ==== PATHS (relative to reproducibility/DREAM4) ====
 DREAM4_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BNI3_TSV = os.path.join(DREAM4_DIR, "results", "BNI3_size10_complete_evaluation_results.tsv")
 BOOLNET_TSV = os.path.join(DREAM4_DIR, "results", "BoolNet_size10_complete_evaluation_results.tsv")
 OUTPUT_DIR = os.path.join(DREAM4_DIR, "figures")
 
-# ==== ESTILO (igual a BNI3_vs_Boolnet_graph.py) ====
+# ==== STYLE ====
 COLORS = {"BoolNet": "#BD759C", "BNI3": "#6CAAC4"}
 POINT_COLOR = "#808080"
 BOX_EDGE = "#333333"
 METHODS = ["BoolNet", "BNI3"]
 CONDITIONS = ["21 Time Points", "5 Time Points"]
 FIGSIZE = (6.5, 4.8)
-# Márgenes fijos e iguales en los 4 paneles (sin bbox_inches="tight", que recorta
-# cada panel distinto): mismo tamaño de imagen y misma área de ejes.
+# Fixed margins, the same for the 4 panels (no bbox_inches="tight", which crops each
+# panel differently): same image size and same axes area.
 MARGINS = dict(left=0.13, right=0.97, top=0.95, bottom=0.14)
 FS_TICKS, FS_LABEL, FS_LEGEND, FS_STARS = 12, 14, 11, 18
-BOX_WIDTH = 0.8        # ancho del par de cajas de cada grupo (mismo dodge que stripplot)
-BOX_GAP = 0.35         # separación entre las dos cajas de un grupo
+BOX_WIDTH = 0.8        # width of each group's pair of boxes (same dodge as stripplot)
+BOX_GAP = 0.35         # gap between the two boxes of a group
 
 sns.set_style("whitegrid", {"grid.color": "#E6E6E6"})
 plt.rcParams.update({
-    "svg.fonttype": "none",          # texto como texto en el SVG
+    "svg.fonttype": "none",          # text as text in the SVG
     "font.size": FS_TICKS,
     "xtick.labelsize": FS_TICKS,
     "ytick.labelsize": FS_TICKS,
@@ -59,7 +59,7 @@ plt.rcParams.update({
 })
 
 
-# ==== DATOS ====
+# ==== DATA ====
 def load(path, method):
     df = pd.read_csv(path, sep="\t")
     df["Rep"] = df["Rep"].astype(str)
@@ -85,10 +85,10 @@ def stars(p):
     return "***" if p < 0.001 else "**" if p < 0.01 else "*" if p < 0.05 else "ns"
 
 
-# ==== TABLA DE VERIFICACIÓN ====
+# ==== CHECK TABLE ====
 def print_table():
-    print(f"{'Panel':<20}{'Condición':<16}{'n':>4}  {'BoolNet media/mediana':>22}  "
-          f"{'BNI3 media/mediana':>20}  {'p Wilcoxon':>11}")
+    print(f"{'Panel':<20}{'Condition':<16}{'n':>4}  {'BoolNet mean/median':>22}  "
+          f"{'BNI3 mean/median':>20}  {'p Wilcoxon':>11}")
     for panel, metric in [("A Balanced Acc.", "Balanced_Accuracy"), ("B F1-Score", "F1_score"),
                           ("C Coverage", "Coverage_Ratio"), ("D Precision", "Precision"),
                           ("D Recall", "Recall")]:
@@ -99,7 +99,7 @@ def print_table():
                   f"{b3.mean():>9.3f} / {b3.median():<8.3f}  {paired_p(metric, cond):>11.4g}")
 
 
-# ==== COMPONENTES ====
+# ==== COMPONENTS ====
 def save(fig, name):
     fig.subplots_adjust(**MARGINS)
     for ext, kw in (("svg", {}), ("png", {"dpi": 600})):
@@ -113,12 +113,12 @@ def boxplot_panel(metric, ylabel, ylim, name, hline=None, hline_color="#555555",
     fig, ax = plt.subplots(figsize=FIGSIZE)
 
     if hline is not None:
-        # zorder 1: sobre la línea de grilla del mismo valor, bajo las cajas
+        # zorder 1: above the grid line at the same value, below the boxes
         ax.axhline(hline, color=hline_color, linestyle="--", linewidth=1.5, zorder=1)
 
     sns.boxplot(data=data, x="Condition", y=metric, hue="Tool", order=CONDITIONS,
                 hue_order=METHODS, palette=COLORS, saturation=1, width=BOX_WIDTH,
-                gap=BOX_GAP, showfliers=False,  # outliers ya están como puntos
+                gap=BOX_GAP, showfliers=False,  # outliers are already shown as points
                 boxprops=dict(edgecolor=BOX_EDGE, linewidth=1.5),
                 medianprops=dict(color="black", linewidth=2),
                 whiskerprops=dict(color="black", linewidth=1.5),
@@ -129,7 +129,7 @@ def boxplot_panel(metric, ylabel, ylim, name, hline=None, hline_color="#555555",
                   legend=False, clip_on=False, zorder=3, ax=ax)
 
     if significance:
-        half = BOX_WIDTH / 4  # centro de cada caja respecto del centro del grupo
+        half = BOX_WIDTH / 4  # center of each box relative to the group center
         span = ylim[1] - ylim[0]
         for ci, cond in enumerate(CONDITIONS):
             p = paired_p(metric, cond)
@@ -141,7 +141,7 @@ def boxplot_panel(metric, ylabel, ylim, name, hline=None, hline_color="#555555",
                     fontweight="bold")
 
     ax.set_xlabel("")
-    ax.xaxis.grid(True)  # línea vertical suave en el centro de cada grupo, como la referencia
+    ax.xaxis.grid(True)  # light vertical line at the center of each group
     ax.set_ylabel(ylabel, fontsize=FS_LABEL, fontweight="bold")
     ax.set_ylim(*ylim)
 
@@ -157,12 +157,12 @@ def boxplot_panel(metric, ylabel, ylim, name, hline=None, hline_color="#555555",
 
 def precision_recall_panel(name):
     fig, ax = plt.subplots(figsize=FIGSIZE)
-    # Límites algo bajo 0 para que los marcadores en el origen no queden cortados
+    # Limits slightly below 0 so markers at the origin are not clipped
     xlim, ylim = (-0.015, 0.6), (-0.015, 0.7)
 
-    # Curvas iso-F1: R = F·P / (2P − F)
+    # Iso-F1 curves: R = F·P / (2P − F)
     for f in (0.1, 0.2, 0.3, 0.4):
-        p = np.linspace(f / 2 + 1e-3, xlim[1], 400)  # R ≥ 0 solo para P > F/2
+        p = np.linspace(f / 2 + 1e-3, xlim[1], 400)  # R ≥ 0 only for P > F/2
         r = f * p / (2 * p - f)
         keep = (r >= 0) & (r <= ylim[1])
         ax.plot(p[keep], r[keep], linestyle=":", color="#AAAAAA", linewidth=1.2, zorder=1)
@@ -175,7 +175,7 @@ def precision_recall_panel(name):
     for method in METHODS:
         for cond in CONDITIONS:
             g = data[(data["Tool"] == method) & (data["Condition"] == cond)]
-            # clip_on=False: hay series con precisión y recall 0 justo en la esquina
+            # clip_on=False: some series have precision and recall 0, right in the corner
             ax.scatter(g["Precision"], g["Recall"], s=50, marker=markers[cond],
                        color=COLORS[method], edgecolor="#333333", linewidth=0.6,
                        alpha=0.85, zorder=3, clip_on=False, label=f"{method} {short[cond]}")
@@ -186,24 +186,24 @@ def precision_recall_panel(name):
     ax.set_yticks(np.arange(0, 0.71, 0.1))
     ax.set_xlabel("Precision", fontsize=FS_LABEL, fontweight="bold")
     ax.set_ylabel("Recall", fontsize=FS_LABEL, fontweight="bold")
-    # Arriba a la derecha: es la única zona sin datos (sobre la curva F1 = 0.4);
-    # arriba a la izquierda la leyenda tapa series de BoolNet 21 TP.
+    # Upper right: the only area without data (above the F1 = 0.4 curve);
+    # in the upper left the legend would cover BoolNet 21 TP series.
     ax.legend(loc="upper right", frameon=True)
     save(fig, name)
 
 
 # ==== MAIN ====
 if __name__ == "__main__":
-    print(f"BNI3:    {len(bni3)} filas | BoolNet: {len(boolnet)} filas | pares: {len(paired)}\n")
+    print(f"BNI3:    {len(bni3)} rows | BoolNet: {len(boolnet)} rows | pairs: {len(paired)}\n")
     print_table()
     origin = data[(data["Precision"] == 0) & (data["Recall"] == 0)]
-    print("\nPanel D - puntos en (0, 0) por grupo:")
+    print("\nPanel D - points at (0, 0) per group:")
     print(origin.groupby(["Tool", "Condition"]).size().to_string())
-    print("\nGenerando paneles en", OUTPUT_DIR)
+    print("\nWriting panels to", OUTPUT_DIR)
     boxplot_panel("Balanced_Accuracy", "Balanced Accuracy", (0.0, 0.8),
                   "Figure5_A_BalancedAccuracy", hline=0.5, legend=True)
     boxplot_panel("F1_score", "F1-Score", (0.0, 0.5), "Figure5_B_F1")
-    # 3.5 en vez de 3.2: con 3.2 los asteriscos de 21 Time Points quedan fuera del eje
+    # 3.5 instead of 3.2: with 3.2 the 21 Time Points asterisks fall outside the axis
     boxplot_panel("Coverage_Ratio", "Coverage Ratio", (0.0, 3.5), "Figure5_C_Coverage",
                   hline=1.0, hline_color="#7B6FD0", significance=True)
     precision_recall_panel("Figure5_D_PrecisionRecall")

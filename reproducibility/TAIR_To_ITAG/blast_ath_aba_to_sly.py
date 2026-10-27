@@ -1,27 +1,27 @@
 #!/usr/bin/env python3
 """
-Ortólogos en tomate (SL3.0) de genes ABA de Arabidopsis por mejor hit recíproco (RBH).
+Tomato (SL3.0) orthologs of Arabidopsis ABA genes by reciprocal best hit (RBH).
 
-Entradas (en este directorio salvo la lista de genes):
-  Ath_ABA_genes_cdna.fa   cDNA de los genes ABA (TAIR12, todas las isoformas)
-  Sly3.0_cdna.fa          cDNA de tomate SL3.0 (Ensembl Plants)
-  TAIR12_cdna.fa          cDNA completo de Arabidopsis (para la búsqueda recíproca)
+Inputs (in this folder except the gene list; not included in the repository):
+  Ath_ABA_genes_cdna.fa   cDNA of the ABA genes (TAIR12, all isoforms)
+  Sly3.0_cdna.fa          tomato SL3.0 cDNA (Ensembl Plants)
+  TAIR12_cdna.fa          full Arabidopsis cDNA (for the reciprocal search)
   ../NCBI_To_ITAG/Ath/Ath_ABA_genes.tsv  Symbol, gene_id, hormone, group
 
-Método:
-  1. tblastx (traducción en los 6 marcos de query y subject; más sensible que blastn
-     entre especies tan divergentes) Ath ABA -> Sly, evalue <= EVALUE.
-  2. Los hits se colapsan a nivel de gen (Ath: AT1G49720.1 -> AT1G49720;
-     Sly: Solyc01g067380.3.1 -> Solyc01g067380.3) quedándose con el HSP de mayor
-     bitscore de cada par de genes.
-  3. Recíproco: los cDNA de los TOP_N mejores genes de tomato por gen Ath se buscan
-     con tblastx contra todo TAIR12; mejor gen Ath de cada gen de tomate.
-  4. RBH = el mejor gen de tomate de A tiene como mejor gen de Arabidopsis a A.
+Method:
+  1. tblastx (translation in the 6 frames of query and subject; more sensitive than blastn
+     between species this divergent) Ath ABA -> Sly, evalue <= EVALUE.
+  2. Hits are collapsed to gene level (Ath: AT1G49720.1 -> AT1G49720;
+     Sly: Solyc01g067380.3.1 -> Solyc01g067380.3), keeping the HSP with the highest
+     bitscore of each gene pair.
+  3. Reciprocal: the cDNAs of the TOP_N best tomato genes per Ath gene are searched with
+     tblastx against all of TAIR12; best Ath gene of each tomato gene.
+  4. RBH = the best tomato gene of A has A as its best Arabidopsis gene.
 
-Salidas:
-  blast_fwd_ath_aba_vs_sly.tsv   hits crudos Ath->Sly (outfmt 6 + qlen slen)
-  blast_rev_sly_vs_tair12.tsv    hits crudos Sly->TAIR12
-  Ath_ABA_orthologs_sly.tsv      una fila por gen Ath (ver columnas en README/abajo)
+Outputs:
+  blast_fwd_ath_aba_vs_sly.tsv   raw Ath->Sly hits (outfmt 6 + qlen slen)
+  blast_rev_sly_vs_tair12.tsv    raw Sly->TAIR12 hits
+  Ath_ABA_orthologs_sly.tsv      one row per Ath gene (columns in README/below)
 """
 import subprocess
 import sys
@@ -40,7 +40,7 @@ REV = HERE / "blast_rev_sly_vs_tair12.tsv"
 OUT = HERE / "Ath_ABA_orthologs_sly.tsv"
 
 EVALUE = 1e-10
-TOP_N = 5          # genes de tomate por gen Ath que se prueban en la vuelta
+TOP_N = 5          # tomato genes per Ath gene tested in the reverse search
 THREADS = 32
 FMT = "6 qseqid sseqid pident length mismatch gapopen qstart qend sstart send evalue bitscore qlen slen"
 COLS = FMT.split()[1:]
@@ -87,9 +87,9 @@ def main():
     fwd = best_per_gene_pair(tblastx(QUERY, makedb(SLY), FWD), ath_gene, sly_gene)
     fwd["rank"] = fwd.groupby("qgene").cumcount() + 1
 
-    # vuelta: cDNA de los TOP_N genes de tomato de cada gen Ath contra todo TAIR12
+    # reverse: cDNA of the TOP_N tomato genes of each Ath gene against all of TAIR12
     top = fwd[fwd["rank"] <= TOP_N]
-    rev_ids = set(top.sseqid)  # transcrito con el mejor HSP de cada par
+    rev_ids = set(top.sseqid)  # transcript with the best HSP of each pair
     rev_q = HERE / "blast_rev_query.fa"
     run(["blastdbcmd", "-db", makedb(SLY), "-entry", ",".join(sorted(rev_ids)),
          "-out", rev_q])
@@ -120,7 +120,7 @@ def main():
         rows.append(row)
     res = pd.DataFrame(rows)
     res.to_csv(OUT, sep="\t", index=False)
-    print(f"{len(res)} genes Ath; con hit: {(res.n_sly_hits > 0).sum()}; "
+    print(f"{len(res)} Ath genes; with a hit: {(res.n_sly_hits > 0).sum()}; "
           f"RBH: {res.RBH.fillna(False).astype(bool).sum()}", file=sys.stderr)
 
 

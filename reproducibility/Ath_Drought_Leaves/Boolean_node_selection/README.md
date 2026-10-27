@@ -1,199 +1,196 @@
-# Selección de nodos para redes booleanas: respuesta ABA a sequía en Arabidopsis y tomate
+# Node selection for the Boolean networks: ABA response to drought in Arabidopsis and tomato
 
-Análisis del 24 de septiembre de 2026. Script: `select_nodes.py`.
+Analysis of 24 September 2026. Script: `select_nodes.py`.
 
-## Objetivo
+## Goal
 
-Elegir una lista corta (≤ 15) de genes de la vía ABA para construir redes booleanas en
-Arabidopsis y en tomate, y comparar la respuesta a sequía entre las dos especies. Cada nodo
-es un par formado por un gen de Arabidopsis y un ortólogo de tomate.
+Choose a short list (≤ 15) of ABA pathway genes to build Boolean networks in Arabidopsis
+and tomato, and compare the drought response between the two species. Each node is a pair
+made of an Arabidopsis gene and a tomato ortholog.
 
-Los genes de Arabidopsis son los 95 de la vía ABA tomados de Song et al. (2016). Los
-ortólogos de tomate están descritos en `../../TAIR_To_ITAG/README.md`.
+The Arabidopsis genes are the 95 ABA pathway genes taken from Song et al. (2016). The
+tomato orthologs are described in `../../TAIR_To_ITAG/README.md`.
 
-## Datos
+## Data
 
-| Qué | Archivo |
+| What | File |
 |---|---|
-| Ortólogos Arabidopsis–tomate | `../../TAIR_To_ITAG/Table_S_ABA_orthologs.tsv` (OrthoFinder o Ensembl Compara) |
-| DGE de Arabidopsis (roseta; WD vs CTRL a 7200, 15840 y 20160) | `../Selected_genes/dotplot_aba_genes_table.tsv` |
-| DGE de tomate (hoja madura; WD vs CTRL en d4, d5, d8 y d10) | `../../Sly_Drought_Leaves/Selected_genes/dotplot_aba_genes_table.tsv` |
-| Patrones binarios | `../../{Ath,Sly}_Drought_Leaves/Binarization/ConteoNormalizado_mean_{Control,Drought}_aba_genes_binarized_SSD_pattern.tsv` |
+| Arabidopsis–tomato orthologs | `../../TAIR_To_ITAG/Table_S_ABA_orthologs.tsv` (OrthoFinder or Ensembl Compara) |
+| Arabidopsis DGE (rosette; WD vs CTRL at 7200, 15840 and 20160) | `../Selected_genes/dotplot_aba_genes_table.tsv` |
+| Tomato DGE (mature leaf; WD vs CTRL at d4, d5, d8 and d10) | `../../Sly_Drought_Leaves/Selected_genes/dotplot_aba_genes_table.tsv` |
+| Binary patterns | `../../{Ath,Sly}_Drought_Leaves/Binarization/ConteoNormalizado_mean_{Control,Drought}_aba_genes_binarized_SSD_pattern.tsv` |
 
-## Criterios, en orden
+## Criteria, in order
 
-1. **F1, ortología:** el gen de Arabidopsis tiene datos de expresión y al menos un ortólogo
-   de tomate con datos. Quedan **76 de 95** genes.
-2. **F2, cambio:** padj < 0,05 (cualquier |log2FC| > 0) en al menos un tiempo, en al menos
-   una especie. En tomate cuenta cualquiera de los ortólogos. Quedan **74**: se van ABI1 y
-   AFP2.
-3. **Método de binarización: SSD.** Se eligió el método con más genes de patrón único.
+1. **F1, orthology:** the Arabidopsis gene has expression data and at least one tomato
+   ortholog with data. **76 of 95** genes remain.
+2. **F2, change:** padj < 0.05 (any |log2FC| > 0) at one time point or more, in at least
+   one species. In tomato any of the orthologs counts. **74** remain: ABI1 and AFP2 drop.
+3. **Binarization method: SSD.** The method with more unique-pattern genes was chosen.
 
-   | Tabla | SSD | WCSS |
+   | Table | SSD | WCSS |
    |---|---|---|
    | Arabidopsis, control | 3 | 1 |
-   | Arabidopsis, sequía | 3 | 3 |
-   | Tomate, control | 1 | 1 |
-   | Tomate, sequía | 2 | 1 |
+   | Arabidopsis, drought | 3 | 3 |
+   | Tomato, control | 1 | 1 |
+   | Tomato, drought | 2 | 1 |
 
-   En los empates se usa SSD.
-4. **Patrón de 8 bits: control|sequía.** Cada condición se binarizó por separado (4 tiempos
-   cada una). Se concatenan porque la red modela las dos condiciones y porque 4 bits dan
-   muy poca resolución: en la sequía de Arabidopsis, 51 de 89 genes comparten el patrón
-   `0001`. Con 8 bits hay 35 patrones distintos en Arabidopsis (21 únicos) y 51 en tomate
-   (36 únicos).
-   - La **frecuencia** es el número de genes con ese patrón entre todos los binarizados de
-     la especie: 89 en Arabidopsis y 97 en tomate.
-5. **Ortólogo representante:** uno por gen de Arabidopsis. Se prefiere, en este orden:
-   - el que cambia significativamente;
-   - el de patrón menos frecuente;
-   - el que dan OrthoFinder y Compara a la vez;
-   - el de mayor |log2FC|.
-6. **Orden de prioridad:**
-   - Primero, la frecuencia más alta de las dos especies, así se prefiere el patrón raro
-     en **ambas**.
-   - Después, la suma de las dos frecuencias.
-   - Por último, que cambie significativamente en las dos especies.
-7. **Regla de no co-inclusión:** dentro de cada especie no entran dos nodos con el mismo
-   patrón. Si dos genes comparten patrón, la red booleana no puede distinguir cuál causa un
-   cambio aguas abajo. Tampoco entran dos genes de Arabidopsis con el mismo ortólogo de
-   tomate.
-8. **Cobertura de la vía:** como máximo 2 nodos por grupo funcional, en total 15.
-   - Sin este tope, el orden por frecuencia llenaba la lista con receptores y genes de
-     síntesis y dejaba afuera a las PP2C del clado A, un eslabón central del eje
-     PYL → PP2C → SnRK2.
+   SSD is used on ties.
+4. **8-bit pattern: control|drought.** Each condition was binarized separately (4 time
+   points each). They are concatenated because the network models both conditions and
+   because 4 bits give very little resolution: in Arabidopsis drought, 51 of 89 genes share
+   the pattern `0001`. With 8 bits there are 35 distinct patterns in Arabidopsis (21 unique)
+   and 51 in tomato (36 unique).
+   - The **frequency** is the number of genes with that pattern among all the binarized
+     genes of the species: 89 in Arabidopsis and 97 in tomato.
+5. **Representative ortholog:** one per Arabidopsis gene. Preferred, in this order:
+   - the one that changes significantly;
+   - the one with the less frequent pattern;
+   - the one found by both OrthoFinder and Compara;
+   - the one with the largest |log2FC|.
+6. **Priority order:**
+   - First, the higher frequency of the two species, so the pattern that is rare in
+     **both** is preferred.
+   - Then, the sum of the two frequencies.
+   - Last, whether it changes significantly in both species.
+7. **No co-inclusion rule:** within each species, no two nodes with the same pattern are
+   included. If two genes share a pattern, the Boolean network cannot tell which one causes
+   a downstream change. Nor are two Arabidopsis genes with the same tomato ortholog included.
+8. **Pathway coverage:** at most 2 nodes per functional group, 15 in total.
+   - Without this cap, the frequency order filled the list with receptors and synthesis
+     genes and left out the clade A PP2Cs, a central link of the PYL → PP2C → SnRK2 axis.
 
-## Resultado: 15 nodos
+## Result: 15 nodes
 
-### Selección automática y curación manual
+### Automatic selection and manual curation
 
-La selección automática (criterios 1–8) dio 15 nodos. Después se hicieron dos cambios a
-mano, registrados en `MANUAL_INCLUDE` y `MANUAL_EXCLUDE` de `select_nodes.py`. El script
-verifica que la selección final siga cumpliendo la regla de no co-inclusión.
+The automatic selection (criteria 1–8) gave 15 nodes. Two manual changes were then made,
+recorded in `MANUAL_INCLUDE` and `MANUAL_EXCLUDE` in `select_nodes.py`. The script checks
+that the final selection still satisfies the no co-inclusion rule.
 
-- **Incluidos: HB7 y ABF3.** Son TF de interés para la discusión; ABF3 es la salida
-  transcripcional directa de SnRK2. Solo habían quedado afuera por el tope de 2 TF: ninguno
-  comparte patrón con los demás nodos ni ortólogo de tomate.
-  - **ABF3** cambia en las dos especies, pero su patrón es menos raro en Arabidopsis
-    (frecuencia 7).
-  - **HB7** no cambia significativamente en Arabidopsis (log2FC 0,34) y su patrón de
-    tomate lo comparten 6 genes.
-- **Excluidos: DWA2 y ABA4.**
-  - **DWA2** tenía el cambio más chico de los 15 (log2FC 0,54 en Arabidopsis y 0,19, no
-    significativo, en tomate) y casi no varía en ninguna especie: el rango de vst es de 0,5
-    en Arabidopsis y 0,4 en tomate, así que sus patrones binarios eran prácticamente ruido.
-  - **ABA4** está plano en tomate (rango 0,3, sin cambio significativo) y la síntesis sigue
-    representada por NCED5, que cambia en las dos especies.
+- **Included: HB7 and ABF3.** They are TFs of interest for the discussion; ABF3 is the
+  direct transcriptional output of SnRK2. They had been left out only by the cap of 2 TFs:
+  neither shares a pattern or a tomato ortholog with the other nodes.
+  - **ABF3** changes in both species, but its pattern is less rare in Arabidopsis
+    (frequency 7).
+  - **HB7** does not change significantly in Arabidopsis (log2FC 0.34) and its tomato
+    pattern is shared by 6 genes.
+- **Excluded: DWA2 and ABA4.**
+  - **DWA2** had the smallest change of the 15 (log2FC 0.54 in Arabidopsis and 0.19, not
+    significant, in tomato) and barely varies in either species: the vst range is 0.5 in
+    Arabidopsis and 0.4 in tomato, so its binary patterns were practically noise.
+  - **ABA4** is flat in tomato (range 0.3, no significant change), and synthesis is still
+    represented by NCED5, which changes in both species.
 
-En `candidates.tsv`, la columna `auto_selected` indica la selección automática y
-`excluded_reason` marca los cambios manuales.
+In `candidates.tsv`, the `auto_selected` column marks the automatic selection and
+`excluded_reason` records the manual changes.
 
-### Nodos finales
+### Final nodes
 
-| # | Grupo | Arabidopsis | AGI | Tomate | Patrón Ath (freq) | Patrón Sly (freq) | Cambia en |
+| # | Group | Arabidopsis | AGI | Tomato | Ath pattern (freq) | Sly pattern (freq) | Changes in |
 |---|---|---|---|---|---|---|---|
-| 1 | TF | MYB44 | AT5G67300 | Solyc02g092930.1 | 0010\|1011 (1) | 1000\|0111 (1) | ambas |
-| 2 | TF | HB6 | AT2G22430 | Solyc05g051460.3 | 0111\|0111 (2) | 1001\|0001 (1) | ambas |
+| 1 | TF | MYB44 | AT5G67300 | Solyc02g092930.1 | 0010\|1011 (1) | 1000\|0111 (1) | both |
+| 2 | TF | HB6 | AT2G22430 | Solyc05g051460.3 | 0111\|0111 (2) | 1001\|0001 (1) | both |
 | 3 | TF | HB7 | AT5G46880 | Solyc08g076370.3 | 1100\|1110 (1) | 1000\|1110 (6) | Sly |
-| 4 | TF | ABF3 | AT4G34000 | Solyc11g044560.2 | 0001\|0011 (7) | 0010\|1100 (2) | ambas |
-| 5 | Síntesis | NCED5 | AT1G30100 | Solyc07g056570.1 | 0110\|0111 (1) | 0100\|1000 (1) | ambas |
-| 6 | Degradación | CYP707A3 | AT5G45340 | Solyc08g005610.3 | 1010\|1010 (1) | 1011\|0101 (1) | ambas |
-| 7 | Degradación | CYP707A4 | AT3G19270 | Solyc01g108210.3 | 1000\|1011 (1) | 0111\|1101 (1) | Sly |
-| 8 | Transporte | AIT1 | AT1G69850 | Solyc04g005790.3 | 1001\|1110 (1) | 0011\|1001 (1) | ambas |
-| 9 | Transporte | ABCG31 | AT2G29940 | Solyc02g055530.3 | 1000\|1000 (1) | 0010\|1101 (1) | Sly |
-| 10 | Receptor | RCAR1 | AT1G01360 | Solyc01g095700.3 | 0001\|0111 (1) | 1100\|1011 (1) | ambas |
-| 11 | Receptor | PYL1 | AT5G46790 | Solyc06g061180.1 | 0110\|1110 (1) | 1101\|1110 (1) | ambas |
-| 12 | PP2C clado A | AHG1 | AT5G51760 | Solyc03g006960.3 | 0010\|0001 (2) | 0111\|0101 (1) | ambas |
-| 13 | PP2C clado A | HAI3 | AT2G29380 | Solyc06g076400.3 | 0100\|0001 (2) | 0111\|0111 (2) | ambas |
-| 14 | Quinasa | SnRK2.8 | AT1G78290 | Solyc04g074500.3 | 0001\|0110 (1) | 1011\|1011 (1) | Ath |
-| 15 | Quinasa | CPK1 | AT5G04870 | Solyc04g009800.3 | 1100\|1100 (1) | 1100\|1000 (2) | ambas |
+| 4 | TF | ABF3 | AT4G34000 | Solyc11g044560.2 | 0001\|0011 (7) | 0010\|1100 (2) | both |
+| 5 | Synthesis | NCED5 | AT1G30100 | Solyc07g056570.1 | 0110\|0111 (1) | 0100\|1000 (1) | both |
+| 6 | Degradation | CYP707A3 | AT5G45340 | Solyc08g005610.3 | 1010\|1010 (1) | 1011\|0101 (1) | both |
+| 7 | Degradation | CYP707A4 | AT3G19270 | Solyc01g108210.3 | 1000\|1011 (1) | 0111\|1101 (1) | Sly |
+| 8 | Transport | AIT1 | AT1G69850 | Solyc04g005790.3 | 1001\|1110 (1) | 0011\|1001 (1) | both |
+| 9 | Transport | ABCG31 | AT2G29940 | Solyc02g055530.3 | 1000\|1000 (1) | 0010\|1101 (1) | Sly |
+| 10 | Receptor | RCAR1 | AT1G01360 | Solyc01g095700.3 | 0001\|0111 (1) | 1100\|1011 (1) | both |
+| 11 | Receptor | PYL1 | AT5G46790 | Solyc06g061180.1 | 0110\|1110 (1) | 1101\|1110 (1) | both |
+| 12 | Clade A PP2C | AHG1 | AT5G51760 | Solyc03g006960.3 | 0010\|0001 (2) | 0111\|0101 (1) | both |
+| 13 | Clade A PP2C | HAI3 | AT2G29380 | Solyc06g076400.3 | 0100\|0001 (2) | 0111\|0111 (2) | both |
+| 14 | Kinase | SnRK2.8 | AT1G78290 | Solyc04g074500.3 | 0001\|0110 (1) | 1011\|1011 (1) | Ath |
+| 15 | Kinase | CPK1 | AT5G04870 | Solyc04g009800.3 | 1100\|1100 (1) | 1100\|1000 (2) | both |
 
-Los 15 patrones son distintos entre sí en cada especie. Todos tienen frecuencia 1 o 2,
-salvo ABF3 en Arabidopsis (7) y HB7 en tomate (6).
+The 15 patterns are all distinct within each species. All have frequency 1 or 2, except
+ABF3 in Arabidopsis (7) and HB7 in tomato (6).
 
-Patrón = control|sequía.
+Pattern = control|drought.
 - Arabidopsis: CTRL_0, 7200, 15840, 20160 | CTRL_0, WD 7200, 15840, 20160.
-- Tomate: d4, d5, d8, d10 | d4, d5, d8, d10.
+- Tomato: d4, d5, d8, d10 | d4, d5, d8, d10.
 
-El detalle de cada nodo (tiempos significativos, |log2FC| máximo, número de ortólogos) está
-en `selected_nodes.tsv`. Los 74 candidatos, con el motivo de exclusión de cada uno, están en
+The details of each node (significant time points, maximum |log2FC|, number of orthologs)
+are in `selected_nodes.tsv`. The 74 candidates, each with its exclusion reason, are in
 `candidates.tsv`.
 
-## Qué queda afuera y por qué
+## What is left out and why
 
-- **ABF1, ABF2, ABF4, OST1, ABI2, HAB1 y HAB2** no entran porque sus patrones son muy
-  frecuentes, sobre todo en Arabidopsis (freq 31) o en tomate (OST1, freq 14). Son nodos
-  canónicos, pero en estos datos su dinámica binaria es indistinguible de la de muchos
-  otros genes.
-- **PYR1** comparte ortólogo de tomate con PYL1 (`Solyc06g061180.1`), y **HB5** con HB6
+- **ABF1, ABF2, ABF4, OST1, ABI2, HAB1 and HAB2** are not included because their patterns
+  are very frequent, especially in Arabidopsis (freq 31) or in tomato (OST1, freq 14). They
+  are canonical nodes, but in these data their binary dynamics cannot be told apart from
+  those of many other genes.
+- **PYR1** shares a tomato ortholog with PYL1 (`Solyc06g061180.1`), and **HB5** with HB6
   (`Solyc05g051460.3`).
-- **SnRK2.2 y SnRK2.3** quedan fuera por el tope de 2 quinasas; SnRK2.8 y CPK1 tienen
-  patrones más raros.
-- **DWA2 y ABA4** los eligió la selección automática, pero se sacaron a mano (ver arriba).
+- **SnRK2.2 and SnRK2.3** are left out by the cap of 2 kinases; SnRK2.8 and CPK1 have rarer
+  patterns.
+- **DWA2 and ABA4** were picked by the automatic selection, but removed by hand (see above).
 
-## Advertencias sobre nodos de la red
+## Caveats about network nodes
 
-- **AHG1 y HAI3:** en Arabidopsis casi no se expresan en control (vst entre 4,2 y 5,4). Su
-  patrón de control sale de diferencias chicas, cercanas al ruido. Su patrón de sequía sí
-  refleja un aumento real al final (log2FC 9 y 10).
-- **ABF3:** su patrón de Arabidopsis lo comparten 7 genes de la lista completa, aunque
-  ninguno de los otros 14 nodos. Si aparece como regulador en el modelo, esos genes podrían
-  cumplir el mismo papel.
-- **HB7:** no cambia significativamente en Arabidopsis, y su patrón de tomate lo comparten
+- **AHG1 and HAI3:** in Arabidopsis they are barely expressed in control (vst between 4.2
+  and 5.4). Their control pattern comes from small differences, close to noise. Their
+  drought pattern does reflect a real increase at the end (log2FC 9 and 10).
+- **ABF3:** its Arabidopsis pattern is shared by 7 genes of the full list, though by none of
+  the other 14 nodes. If it shows up as a regulator in the model, those genes could play the
+  same role.
+- **HB7:** does not change significantly in Arabidopsis, and its tomato pattern is shared by
   6 genes.
-- **Nodos que cambian significativamente en una sola especie:** SnRK2.8 (solo en
-  Arabidopsis), CYP707A4 y ABCG31 (solo en tomate). En la otra especie, su patrón binario
-  refleja variaciones no significativas.
+- **Nodes that change significantly in one species only:** SnRK2.8 (Arabidopsis only),
+  CYP707A4 and ABCG31 (tomato only). In the other species, their binary pattern reflects
+  non-significant variation.
 
-## Figura
+## Figure
 
-`fig_boolean_nodes.pdf/.png` (script `plot_nodes.py`) muestra, para cada nodo:
-- el grupo funcional;
-- los genes de Arabidopsis y de tomate;
-- el patrón binario SSD control|sequía de cada especie (celda oscura = 1);
-- el log2FC máximo (WD vs CTRL) de cada especie.
+`fig_boolean_nodes.pdf/.png` (script `plot_nodes.py`) shows, for each node:
+- the functional group;
+- the Arabidopsis and tomato genes;
+- the control|drought SSD binary pattern of each species (dark cell = 1);
+- the maximum log2FC (WD vs CTRL) of each species.
 
-Para el log2FC máximo se toma el tiempo con mayor |log2FC| entre los significativos. Si
-ninguno es significativo, se usa el mayor |log2FC| y la barra se dibuja solo con contorno.
-El eje está truncado en ±6 y los valores fuera de rango van anotados (MYB44 en tomate: 24,6;
-AHG1 y HAI3 en Arabidopsis: 9,1 y 10,7). Los valores y el tiempo de cada uno están en
-`fig_boolean_nodes_lfc.tsv`.
+For the maximum log2FC, the time point with the largest |log2FC| among the significant ones
+is taken. If none is significant, the largest |log2FC| is used and the bar is drawn as an
+outline only. The axis is truncated at ±6 and out-of-range values are annotated (MYB44 in
+tomato: 24.6; AHG1 and HAI3 in Arabidopsis: 9.1 and 10.7). The values and the time point of
+each are in `fig_boolean_nodes_lfc.tsv`.
 
-## Archivos para la red booleana
+## Files for the Boolean network
 
-`extract_binarized.py` guarda, para los 15 nodos, la matriz binarizada SSD y el conteo
-normalizado promedio (vst, que es lo que se binarizó), para control y sequía en cada
-especie:
+`extract_binarized.py` saves, for the 15 nodes, the SSD binarized matrix and the mean
+normalized count (vst, which is what was binarized), for control and drought in each
+species:
 
-| Tipo | Carpeta | Archivo |
+| Type | Folder | File |
 |---|---|---|
-| Binaria | `{Ath,Sly}_Drought_Leaves/Binarization/` | `ConteoNormalizado_mean_{Control,Drought}_aba_genes_binarized_SSD_selected_nodes.tsv` |
-| Continua | `{Ath,Sly}_Drought_Leaves/Selected_genes/` | `ConteoNormalizado_mean_{Control,Drought}_aba_genes_selected_nodes.tsv` |
+| Binary | `{Ath,Sly}_Drought_Leaves/Binarization/` | `ConteoNormalizado_mean_{Control,Drought}_aba_genes_binarized_SSD_selected_nodes.tsv` |
+| Continuous | `{Ath,Sly}_Drought_Leaves/Selected_genes/` | `ConteoNormalizado_mean_{Control,Drought}_aba_genes_selected_nodes.tsv` |
 
-- **Formato:** el mismo que las tablas de origen.
-  - En la binaria, un nodo por columna y un tiempo por fila (4 filas, sin nombre de fila).
-  - En la continua, un nodo por fila (columna `ID`) y los 4 tiempos en columnas.
-- **Nombres:** `ID (símbolo)`, por ejemplo `AT1G01360 (RCAR1)` o `Solyc01g095700.3 (RCAR1)`.
-  En tomate el símbolo es el del gen de Arabidopsis ortólogo.
-- **Versión `*_symbol.tsv`:** de cada archivo hay una con solo el símbolo (`RCAR1`,
-  `NCED5`, …). Así los nodos se llaman igual en las dos especies.
-- **Orden de los nodos:** es el mismo en los 16 archivos y en las dos especies, así que la
-  posición *i* es el mismo par de ortólogos:
+- **Format:** the same as the source tables.
+  - Binary: one node per column and one time point per row (4 rows, no row names).
+  - Continuous: one node per row (`ID` column) and the 4 time points in columns.
+- **Names:** `ID (symbol)`, for example `AT1G01360 (RCAR1)` or `Solyc01g095700.3 (RCAR1)`.
+  In tomato the symbol is that of the orthologous Arabidopsis gene.
+- **`*_symbol.tsv` version:** each file also comes with only the symbol (`RCAR1`,
+  `NCED5`, …), so the nodes have the same names in both species.
+- **Node order:** the same in the 16 files and in both species, so position *i* is the same
+  ortholog pair:
   RCAR1, NCED5, AIT1, CYP707A3, PYL1, MYB44, SnRK2.8, ABCG31, CYP707A4, HB6, CPK1, AHG1, HAI3, HB7, ABF3.
-  Es el orden de `selected_nodes.tsv`, no el de la tabla de arriba, que está agrupada por
-  función.
-- **Verificación:** el script comprueba que cada columna binaria reproduzca el patrón usado
-  en la selección.
+  This is the order of `selected_nodes.tsv`, not that of the table above, which is grouped
+  by function.
+- **Check:** the script verifies that each binary column reproduces the pattern used in the
+  selection.
 
-## Cómo reproducir
+## Reproduce
 
 ```bash
-python3 select_nodes.py        # candidates.tsv y selected_nodes.tsv
-python3 plot_nodes.py          # figura y fig_boolean_nodes_lfc.tsv
-python3 extract_binarized.py   # matrices binarias y continuas de los 15 nodos
+python3 select_nodes.py        # candidates.tsv and selected_nodes.tsv
+python3 plot_nodes.py          # figure and fig_boolean_nodes_lfc.tsv
+python3 extract_binarized.py   # binary and continuous matrices of the 15 nodes
 ```
 
-- Los parámetros están al principio de `select_nodes.py`: `MAX_NODES`, `MAX_PER_GROUP`,
-  `MANUAL_INCLUDE` y `MANUAL_EXCLUDE`.
-- La carpeta está en `Ath_Drought_Leaves/`; los scripts ubican las demás carpetas del
-  proyecto a partir de su propia posición.
+- The parameters are at the top of `select_nodes.py`: `MAX_NODES`, `MAX_PER_GROUP`,
+  `MANUAL_INCLUDE` and `MANUAL_EXCLUDE`.
+- The folder is in `Ath_Drought_Leaves/`; the scripts locate the other project folders from
+  their own position.

@@ -148,13 +148,6 @@ bash reproducibility/DREAM4/scripts/run_bni3_dream4.sh          # full rerun (ab
 
 The R steps (gold-standard scoring, BoolNet, DESeq2) need R with `dplyr`, `BoolNet`, `DESeq2`, `ggplot2`, `BiocParallel` and `patchwork`.
 
-## Known issues
-
-- `3.Attractors/BNI3_Attractorator.py`: with `-m`, the trajectory files do not get the mutation suffix, so runs of several conditions into the same folder overwrite `trajectory*`. Give each condition its own `-ob`.
-- `2.Rules_Inference/4.BNI3_Boolean_network_visualizer.py`: `-o` must include a directory (`-o out/network`); a bare name fails, and `-d` is ignored when `-o` is given.
-- The header of the rule-inference log prints an example MLP configuration computed for all genes as regulators. The configuration actually used is chosen per candidate rule from its own number of regulators, so `lbfgs` convergence warnings can appear even when the header says `adam`.
-
-
 ## License
 
 BNI3 is released under the [MIT License](LICENSE).

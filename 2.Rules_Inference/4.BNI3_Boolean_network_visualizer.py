@@ -911,18 +911,15 @@ def visualize_boolean_network(args):
     input_name = input_file_path.stem
     input_dir = input_file_path.parent.absolute()
     
-    if args.output:
-        # User specified custom output path
-        output_base = args.output
-        network_dir = os.path.dirname(output_base)
+    # Directory: the one in -o if it has one, else -d, else network/ next to the input
+    if args.output and os.path.dirname(args.output):
+        network_dir = os.path.dirname(args.output)
     elif args.output_dir:
-        # User specified custom output directory
         network_dir = args.output_dir
-        output_base = os.path.join(network_dir, f"{input_name}_network")
     else:
-        # Default: create 'network' subdirectory in the same folder as input file
         network_dir = os.path.join(input_dir, "network")
-        output_base = os.path.join(network_dir, f"{input_name}_network")
+    base_name = os.path.basename(args.output) if args.output else f"{input_name}_network"
+    output_base = os.path.join(network_dir, base_name)
     
     # Create output directory
     log_message(f"Creating output directory: {network_dir}", args.verbose)
@@ -1006,7 +1003,7 @@ Notes:
     optional.add_argument('-p', '--positions', type=str, default=None,
                          help='Comma-separated list of positions for custom_positions criteria (e.g., "1,1,2,3,1")')
     optional.add_argument('-o', '--output', type=str, default=None,
-                         help='Output base name for files (default: auto-generated from input)')
+                         help='Output base name, optionally with a directory (default: <input>_network). A bare name goes into the -d directory')
     optional.add_argument('-d', '--output_dir', type=str, default=None,
                          help='Output directory for generated files (default: network/ subdirectory in input file location)')
     optional.add_argument('--show', action='store_true',

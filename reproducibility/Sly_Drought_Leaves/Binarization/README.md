@@ -1,32 +1,31 @@
-# Binarización de la expresión: genes ABA, tomate (hoja madura, sequía; PRJNA1125861)
+# Expression binarization: ABA genes, tomato (mature leaves, drought; PRJNA1125861)
 
-## Archivos de entrada
+## Input and output files
 
-Provistos por el usuario; el script de binarización no está en esta carpeta.
+- **What was binarized:** the mean normalized count (vst) in
+  `../Selected_genes/ConteoNormalizado_mean_{Control,Drought}_aba_genes.tsv`. That is
+  97 genes, with 4 time points per condition: d4, d5, d8 and d10.
+- **Methods:** two, SSD and WCSS (BNI3 binarization, with the behavior reviewer). Each
+  condition was binarized separately.
+  - `*_binarized_{SSD,WCSS}.tsv`: the binary matrix, one gene per column and one time point
+    per row (no row names).
+  - `*_binarized_{SSD,WCSS}_pattern.tsv`: each gene's 4-bit pattern and its frequency,
+    that is, how many genes share that pattern.
+  - `*_reviewer_summary.tsv`: the summary per method. It includes how many genes have a
+    unique pattern, how many distinct patterns there are and the maximum frequency.
 
-- **Qué se binarizó:** el conteo normalizado promedio (vst) de
-  `../Selected_genes/ConteoNormalizado_mean_{Control,Drought}_aba_genes.tsv`. Son
-  97 genes, con 4 tiempos por condición: d4, d5, d8 y d10.
-- **Métodos:** hay dos, SSD y WCSS. Cada condición se binarizó por separado.
-  - `*_binarized_{SSD,WCSS}.tsv`: la matriz binaria, con un gen por columna y un tiempo
-    por fila (sin nombres de fila).
-  - `*_binarized_{SSD,WCSS}_pattern.tsv`: el patrón de 4 bits de cada gen y su frecuencia,
-    es decir, cuántos genes comparten ese patrón.
-  - `*_reviewer_summary.tsv`: el resumen por método. Incluye cuántos genes tienen un patrón
-    único, cuántos patrones distintos hay y la frecuencia máxima.
+## Boolean network nodes
 
-## Nodos de la red booleana
-
-Para la red se eligió **SSD**, el método con más genes de patrón único, usando SSD en los
-empates. La selección de nodos está documentada en
+**SSD** was chosen for the network: the method with more unique-pattern genes, with SSD on
+ties. The node selection is documented in
 `../../Ath_Drought_Leaves/Boolean_node_selection/README.md`.
 
-`../../Ath_Drought_Leaves/Boolean_node_selection/extract_binarized.py` genera:
+`../../Ath_Drought_Leaves/Boolean_node_selection/extract_binarized.py` writes:
 - `ConteoNormalizado_mean_{Control,Drought}_aba_genes_binarized_SSD_selected_nodes.tsv`:
-  la matriz binaria SSD solo de los 15 nodos, con columnas `Solyc (símbolo)`.
-- `..._selected_nodes_symbol.tsv`: la misma matriz, con solo el símbolo como nombre de
-  columna. El símbolo es el del gen de Arabidopsis ortólogo, así que los nodos se llaman
-  igual en las dos especies.
+  the SSD binary matrix of the 15 nodes only, with `Solyc (symbol)` columns.
+- `..._selected_nodes_symbol.tsv`: the same matrix, with only the symbol as column name.
+  The symbol is that of the orthologous Arabidopsis gene, so the nodes have the same names
+  in both species.
 
-Las columnas están en el orden de `selected_nodes.tsv`, que es el mismo en las dos especies
-y el mismo que el de las tablas continuas `../Selected_genes/*_selected_nodes*.tsv`.
+The columns follow the order of `selected_nodes.tsv`, which is the same in both species and
+the same as in the continuous tables `../Selected_genes/*_selected_nodes*.tsv`.

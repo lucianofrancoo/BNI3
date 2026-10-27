@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
 """
-Figura de los nodos seleccionados para las redes booleanas (selected_nodes.tsv).
+Figure of the nodes selected for the Boolean networks (selected_nodes.tsv).
 
-Por nodo (gen Ath + ortólogo de tomate):
-  - grupo funcional
-  - patrón binario SSD control|sequía en Arabidopsis y en tomate (1 = celda llena)
-  - log2FC máximo (WD vs CTRL) de cada especie: el tiempo con mayor |log2FC| entre los
-    significativos (padj < 0.05); si no hay ninguno significativo, el mayor |log2FC|
-    global. Barra llena = significativo, contorno = no significativo. Eje truncado en
-    ±LFC_LIM; los valores fuera de rango se anotan.
-Salida: fig_boolean_nodes.pdf / .png
+Per node (Ath gene + tomato ortholog):
+  - functional group
+  - SSD control|drought binary pattern in Arabidopsis and in tomato (1 = filled cell)
+  - maximum log2FC (WD vs CTRL) of each species: the time point with the largest |log2FC|
+    among the significant ones (padj < 0.05); if none is significant, the largest overall
+    |log2FC|. Filled bar = significant, outline = not significant. Axis truncated at
+    ±LFC_LIM; out-of-range values are annotated.
+Output: fig_boolean_nodes.pdf / .png
 """
 from pathlib import Path
 
@@ -23,7 +23,7 @@ LFC_LIM = 6
 
 INK, INK2, MUTED, GRID, SURFACE = "#0b0b0b", "#52514e", "#8a8984", "#e4e3df", "#fcfcfb"
 ON, OFF = "#3d3d3a", "#e9e8e4"
-UP, DOWN = "#D73027", "#4575B4"   # mismos colores que los dotplots de DGE
+UP, DOWN = "#D73027", "#4575B4"   # same colors as the DGE dot plots
 GROUP_ORDER = ["TF", "Metabolic", "Catabolic", "Transport", "Receptor",
                "Phosphatase clade A", "Phosphatase clade B", "Kinase", "Ligase", "Targets"]
 TIMES = {"Ath": ["0", "7200", "15840", "20160"], "Sly": ["d4", "d5", "d8", "d10"]}
@@ -60,7 +60,7 @@ for sp, col in [("Ath", "arabidopsis_locus"), ("Sly", "tomato_gene")]:
     nodes[f"{sp}_sig"] = [v[1] for v in vals]
     nodes[f"{sp}_time"] = [v[2] for v in vals]
 
-# posiciones verticales: un espacio extra entre grupos
+# vertical positions: an extra gap between groups
 ys, y, prev = [], 0.0, None
 for g in nodes.functional_group:
     if prev is not None and g != prev:
@@ -77,7 +77,7 @@ ax_lab, ax_pa, ax_ps, ax_la, ax_ls = [fig.add_subplot(gs[0, i]) for i in range(5
 for ax in (ax_lab, ax_pa, ax_ps, ax_la, ax_ls):
     ax.set_ylim(ymax + 0.7, -2.9)
 
-# etiquetas: grupo, gen Ath (cursiva), gen de tomate
+# labels: group, Ath gene (italics), tomato gene
 ax_lab.set_xlim(0, 1)
 ax_lab.axis("off")
 for g, d in nodes.groupby("functional_group", sort=False):
@@ -94,7 +94,7 @@ ax_lab.text(0.66, -1.2, "Tomato ortholog", ha="left", va="bottom", fontsize=8.5,
 
 
 def draw_patterns(ax, sp, col):
-    # 8 celdas: 4 control + hueco + 4 sequía
+    # 8 cells: 4 control + gap + 4 drought
     xs = [0, 1, 2, 3, 4.5, 5.5, 6.5, 7.5]
     for r in nodes.itertuples():
         bits = getattr(r, col).replace("|", "")
@@ -142,7 +142,7 @@ def draw_lfc(ax, sp):
 draw_lfc(ax_la, "Ath")
 draw_lfc(ax_ls, "Sly")
 
-# leyenda
+# legend
 leg = [Rectangle((0, 0), 1, 1, facecolor=ON), Rectangle((0, 0), 1, 1, facecolor=OFF),
        Rectangle((0, 0), 1, 1, facecolor=UP), Rectangle((0, 0), 1, 1, facecolor=DOWN),
        Rectangle((0, 0), 1, 1, facecolor=SURFACE, edgecolor=INK2)]
