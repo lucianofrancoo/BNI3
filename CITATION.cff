@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use BNI3, please cite it as below."
+title: "BNI3: three-stage Boolean network inference from sparse transcriptomic time series"
+abstract: >-
+  BNI3 infers Boolean gene regulatory networks from sparse transcriptomic time
+  series in three stages: binarization of expression, rule inference and
+  evaluation, and attractor analysis with in-silico perturbations.
+type: software
+authors:
+  - given-names: Luciano
+    family-names: Ahumada-Langer
+    orcid: "https://orcid.org/0009-0002-6400-3449"
+    affiliation: "Centro de Biotecnología Vegetal (CBV), Facultad de Ciencias de la Vida, Universidad Andrés Bello (UNAB), Santiago, Chile; ANID - Millennium Institute for Integrative Biology (iBio), Santiago, Chile; ANID - Millennium Nucleus in Data Science for Plant Resilience (PhytoLearning), Santiago, Chile; Center for Advancing Agri-food System Transformation, Santiago, Chile"
+  - given-names: Gonzalo A.
+    family-names: Ruz
+    orcid: "https://orcid.org/0000-0001-7740-9865"
+    affiliation: "ANID - Millennium Nucleus in Data Science for Plant Resilience (PhytoLearning), Santiago, Chile; Facultad de Ingeniería y Ciencias, Universidad Adolfo Ibáñez (UAI), Santiago, Chile; Millennium Nucleus for Social Data Science (SODAS), Santiago, Chile"
+  - given-names: José M.
+    family-names: Álvarez
+    orcid: "https://orcid.org/0000-0002-5073-7751"
+    affiliation: "Centro de Biotecnología Vegetal (CBV), Facultad de Ciencias de la Vida, Universidad Andrés Bello (UNAB), Santiago, Chile; ANID - Millennium Institute for Integrative Biology (iBio), Santiago, Chile; ANID - Millennium Nucleus in Data Science for Plant Resilience (PhytoLearning), Santiago, Chile; Center for Advancing Agri-food System Transformation, Santiago, Chile"
+repository-code: "https://github.com/lucianofrancoo/BNI3"
+license: MIT
+version: 1.3.2
+date-released: "2026-10-27"
+keywords:
+  - Boolean networks
+  - gene regulatory networks
+  - network inference
+  - attractors
+  - gene expression programming
+  - time series

@@ -148,6 +148,14 @@ bash reproducibility/DREAM4/scripts/run_bni3_dream4.sh          # full rerun (ab
 
 The R steps (gold-standard scoring, BoolNet, DESeq2) need R with `dplyr`, `BoolNet`, `DESeq2`, `ggplot2`, `BiocParallel` and `patchwork`.
 
+## Citation
+
+If you use BNI3, please cite:
+
+> Ahumada-Langer L, Ruz GA, Álvarez JM. *BNI3: three-stage Boolean network inference from sparse transcriptomic time series.*
+
+Citation metadata is in [`CITATION.cff`](CITATION.cff); GitHub's "Cite this repository" button uses it.
+
 ## License
 
 BNI3 is released under the [MIT License](LICENSE).
