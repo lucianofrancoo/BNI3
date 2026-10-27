@@ -181,18 +181,18 @@ def run_attractorator(args):
             print(f"WARNING: {PATH_SCRIPT} not found next to this script.")
             failed.append('path to attractors')
         else:
+            # Same mutation suffix as the other outputs, so conditions run into one
+            # folder do not overwrite each other's trajectory files
+            base = args.output_base or f"trajectory{suffix}"
             cmd = ["python3", script, "-a", attractors_file, "-r", rules_file,
-                   "-b", matrix, "-o", output_dir,
+                   "-b", matrix, "-o", output_dir, "-ob", base,
                    "--max-steps", str(args.max_iterations)]
-            if args.output_base:
-                cmd.extend(["-ob", args.output_base])
             if args.initial_state:
                 cmd.extend(["-s", args.initial_state])
             if args.verbose:
                 cmd.append("-v")
 
             if run_step("Step 2/3 — tracing the path into the attractors", cmd):
-                base = args.output_base or 'trajectory'
                 produced.extend([
                     os.path.join(output_dir, f"{base}.tsv"),
                     os.path.join(output_dir, f"{base}_matrix_attractor_mapping.tsv"),
@@ -338,7 +338,7 @@ Notes:
                            help='Initial state as a binary string or comma-separated '
                                 'active gene names (default: first row of the matrix)')
     path_group.add_argument('-ob', '--output_base', type=str, default=None,
-                           help='Base name for the trajectory files (default: trajectory)')
+                           help='Base name for the trajectory files (default: trajectory, plus the mutation suffix with -m)')
 
     viz_group = parser.add_argument_group('Visualization parameters')
     viz_group.add_argument('--no_visualization', action='store_true',

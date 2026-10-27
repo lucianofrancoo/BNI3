@@ -1006,13 +1006,13 @@ def run_gep_experiment(args):
     # Get target genes
     target_genes = get_target_genes(args, all_genes, args.verbose)
 
-    # Calculate example MLP config for display (if MLP is enabled)
+    # MLP config for display (if MLP is enabled). The architecture depends only on the
+    # number of transitions, the same for every rule; the solver and alpha depend on
+    # each candidate rule's regulators, so the typical case (<= 30 regulators) is shown.
     example_mlp_config = None
     if use_mlp and args.mlp_layers is None and args.mlp_alpha is None:
-        # Use median number of genes as estimate for g
-        example_g = len(all_genes)
-        example_t = len(raw_data_in) + 1
-        example_mlp_config = auto_mlp_config(example_g, example_t)
+        example_t = len(raw_data_in)
+        example_mlp_config = auto_mlp_config(1, example_t)
     
     total_experiments = len(target_genes) * args.n_repetitions
     
@@ -1034,11 +1034,11 @@ def run_gep_experiment(args):
     print(f"MLP validation:    {'Enabled' if use_mlp else 'Disabled'}")
     if use_mlp:
         if args.mlp_layers is None and args.mlp_alpha is None:
-            print(f"MLP configuration: AUTO (adaptive)")
+            print(f"MLP configuration: AUTO (per candidate rule)")
             if example_mlp_config:
-                print(f"  - architecture:  {example_mlp_config['hidden_layer_sizes']} (Automatic for {example_g} genes and {example_t} time points)")
-                print(f"  - solver:        {example_mlp_config['solver']}")
-                print(f"  - alpha:         {example_mlp_config['alpha']}")
+                print(f"  - architecture:  {example_mlp_config['hidden_layer_sizes']} (for {example_t} transitions)")
+                print(f"  - solver:        {example_mlp_config['solver']} for rules with <= 30 regulators, adam above")
+                print(f"  - alpha:         {example_mlp_config['alpha']} for rules with <= 30 regulators, higher above")
                 print(f"  - max_iter:      {example_mlp_config['max_iter']}")
                 print(f"  - tol:           {example_mlp_config['tol']}")
         else:
