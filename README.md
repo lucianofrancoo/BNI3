@@ -1,5 +1,7 @@
 # BNI3: Boolean Network Inference and Analysis
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23694040.svg)](https://doi.org/10.5281/zenodo.23694040)
+
 Welcome to the **BNI3** project! BNI3 is a comprehensive pipeline designed for the binarization of gene expression data, inference of Boolean network rules, and the analysis of their dynamic attractors. This toolkit is well-suited for systems biology research, gene regulatory network (GRN) modeling, and dynamic state analysis.
 
 ## Overview
@@ -153,6 +155,12 @@ The R steps (gold-standard scoring, BoolNet, DESeq2) need R with `dplyr`, `BoolN
 If you use BNI3, please cite:
 
 > Ahumada-Langer L, Ruz GA, Álvarez JM. *BNI3: three-stage Boolean network inference from sparse transcriptomic time series.*
+
+The software is archived on Zenodo. To cite the code, use the DOI of the version you ran; the analyses in the paper used v1.3.2:
+
+> Ahumada-Langer, L., Ruz, G. A., & Álvarez, J. M. (2026). *BNI3: three-stage Boolean network inference from sparse transcriptomic time series* (v1.3.2). Zenodo. https://doi.org/10.5281/zenodo.23694042
+
+The DOI [10.5281/zenodo.23694040](https://doi.org/10.5281/zenodo.23694040) covers all versions and always resolves to the latest one.
 
 Citation metadata is in [`CITATION.cff`](CITATION.cff); GitHub's "Cite this repository" button uses it.
 
