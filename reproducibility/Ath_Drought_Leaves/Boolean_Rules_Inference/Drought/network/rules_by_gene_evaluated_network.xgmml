@@ -1,0 +1,503 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graph xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:cy="http://www.cytoscape.org" xmlns="http://www.cs.rpi.edu/XGMML" directed="1" label="Boolean Gene Regulatory Network">
+  <att name="documentVersion" value="1.1" />
+  <att name="networkMetadata" />
+  <att name="backgroundColor" value="#FFFFFF" />
+  <node id="AIT1" label="AIT1">
+    <att name="name" value="AIT1" />
+    <att name="node_type" value="gene" />
+    <att name="position" value="26" />
+    <att name="rule" value="HB7 &amp; ~ABF3" />
+    <att name="score" value="1.9375" />
+    <att name="n_correct" value="3" />
+    <att name="n_regulators" value="2" />
+    <att name="mse" value="nan" />
+    <graphics type="ELLIPSE" x="146.4" y="-105.9" w="75.0" h="50.0" fill="#7BCCC4" outline="#000000">
+      <att name="node_border_width" value="2.0" />
+      <att name="NODE_LABEL_FONT_FACE" value="Arial Black" />
+      <att name="NODE_LABEL_FONT_SIZE" value="12" />
+    </graphics>
+  </node>
+  <node id="HB7" label="HB7">
+    <att name="name" value="HB7" />
+    <att name="node_type" value="gene" />
+    <att name="position" value="6" />
+    <att name="rule" value="CPK1 &amp; HB7" />
+    <att name="score" value="1.9375" />
+    <att name="n_correct" value="3" />
+    <att name="n_regulators" value="2" />
+    <att name="mse" value="nan" />
+    <graphics type="ELLIPSE" x="144.2" y="85.2" w="75.0" h="50.0" fill="#7BCCC4" outline="#000000">
+      <att name="node_border_width" value="2.0" />
+      <att name="NODE_LABEL_FONT_FACE" value="Arial Black" />
+      <att name="NODE_LABEL_FONT_SIZE" value="12" />
+    </graphics>
+  </node>
+  <node id="ABCG31" label="ABCG31">
+    <att name="name" value="ABCG31" />
+    <att name="node_type" value="gene" />
+    <att name="position" value="54" />
+    <att name="rule" value="ABF3 &amp; ~HB6" />
+    <att name="score" value="1.9375" />
+    <att name="n_correct" value="3" />
+    <att name="n_regulators" value="2" />
+    <att name="mse" value="nan" />
+    <graphics type="ELLIPSE" x="-25.2" y="166.2" w="75.0" h="50.0" fill="#7BCCC4" outline="#000000">
+      <att name="node_border_width" value="2.0" />
+      <att name="NODE_LABEL_FONT_FACE" value="Arial Black" />
+      <att name="NODE_LABEL_FONT_SIZE" value="12" />
+    </graphics>
+  </node>
+  <node id="CYP707A4" label="CYP707A4">
+    <att name="name" value="CYP707A4" />
+    <att name="node_type" value="gene" />
+    <att name="position" value="59" />
+    <att name="rule" value="ABF3 | HB6" />
+    <att name="score" value="1.9375" />
+    <att name="n_correct" value="3" />
+    <att name="n_regulators" value="2" />
+    <att name="mse" value="nan" />
+    <graphics type="ELLIPSE" x="-25.2" y="166.2" w="75.0" h="50.0" fill="#7BCCC4" outline="#000000">
+      <att name="node_border_width" value="2.0" />
+      <att name="NODE_LABEL_FONT_FACE" value="Arial Black" />
+      <att name="NODE_LABEL_FONT_SIZE" value="12" />
+    </graphics>
+  </node>
+  <node id="AHG1" label="AHG1">
+    <att name="name" value="AHG1" />
+    <att name="node_type" value="gene" />
+    <att name="position" value="7" />
+    <att name="rule" value="ABF3 &amp; MYB44" />
+    <att name="score" value="1.9375" />
+    <att name="n_correct" value="3" />
+    <att name="n_regulators" value="2" />
+    <att name="mse" value="nan" />
+    <graphics type="ELLIPSE" x="28.7" y="-199.7" w="75.0" h="50.0" fill="#7BCCC4" outline="#000000">
+      <att name="node_border_width" value="2.0" />
+      <att name="NODE_LABEL_FONT_FACE" value="Arial Black" />
+      <att name="NODE_LABEL_FONT_SIZE" value="12" />
+    </graphics>
+  </node>
+  <node id="CYP707A3" label="CYP707A3">
+    <att name="name" value="CYP707A3" />
+    <att name="node_type" value="gene" />
+    <att name="position" value="7" />
+    <att name="rule" value="HB7 &amp; ~MYB44" />
+    <att name="score" value="1.9375" />
+    <att name="n_correct" value="3" />
+    <att name="n_regulators" value="2" />
+    <att name="mse" value="nan" />
+    <graphics type="ELLIPSE" x="82.1" y="-139.3" w="75.0" h="50.0" fill="#7BCCC4" outline="#000000">
+      <att name="node_border_width" value="2.0" />
+      <att name="NODE_LABEL_FONT_FACE" value="Arial Black" />
+      <att name="NODE_LABEL_FONT_SIZE" value="12" />
+    </graphics>
+  </node>
+  <node id="CPK1" label="CPK1">
+    <att name="name" value="CPK1" />
+    <att name="node_type" value="gene" />
+    <att name="position" value="34" />
+    <att name="rule" value="HB7 &amp; ~HB6" />
+    <att name="score" value="1.9375" />
+    <att name="n_correct" value="3" />
+    <att name="n_regulators" value="2" />
+    <att name="mse" value="nan" />
+    <graphics type="ELLIPSE" x="-17.2" y="229.5" w="75.0" h="50.0" fill="#7BCCC4" outline="#000000">
+      <att name="node_border_width" value="2.0" />
+      <att name="NODE_LABEL_FONT_FACE" value="Arial Black" />
+      <att name="NODE_LABEL_FONT_SIZE" value="12" />
+    </graphics>
+  </node>
+  <node id="HB6" label="HB6">
+    <att name="name" value="HB6" />
+    <att name="node_type" value="gene" />
+    <att name="position" value="28" />
+    <att name="rule" value="ABF3 | HB6 | MYB44" />
+    <att name="score" value="1.9375" />
+    <att name="n_correct" value="3" />
+    <att name="n_regulators" value="3" />
+    <att name="mse" value="nan" />
+    <graphics type="ELLIPSE" x="-200.1" y="78.1" w="75.0" h="50.0" fill="#7BCCC4" outline="#000000">
+      <att name="node_border_width" value="2.0" />
+      <att name="NODE_LABEL_FONT_FACE" value="Arial Black" />
+      <att name="NODE_LABEL_FONT_SIZE" value="12" />
+    </graphics>
+  </node>
+  <node id="MYB44" label="MYB44">
+    <att name="name" value="MYB44" />
+    <att name="node_type" value="gene" />
+    <att name="position" value="5" />
+    <att name="rule" value="HB6 | ~MYB44" />
+    <att name="score" value="1.9375" />
+    <att name="n_correct" value="3" />
+    <att name="n_regulators" value="2" />
+    <att name="mse" value="nan" />
+    <graphics type="ELLIPSE" x="-163.9" y="-164.9" w="75.0" h="50.0" fill="#7BCCC4" outline="#000000">
+      <att name="node_border_width" value="2.0" />
+      <att name="NODE_LABEL_FONT_FACE" value="Arial Black" />
+      <att name="NODE_LABEL_FONT_SIZE" value="12" />
+    </graphics>
+  </node>
+  <node id="HAI3" label="HAI3">
+    <att name="name" value="HAI3" />
+    <att name="node_type" value="gene" />
+    <att name="position" value="40" />
+    <att name="rule" value="ABF3 &amp; HB6 &amp; MYB44" />
+    <att name="score" value="1.9375" />
+    <att name="n_correct" value="3" />
+    <att name="n_regulators" value="3" />
+    <att name="mse" value="nan" />
+    <graphics type="ELLIPSE" x="-300.0" y="-61.1" w="75.0" h="50.0" fill="#7BCCC4" outline="#000000">
+      <att name="node_border_width" value="2.0" />
+      <att name="NODE_LABEL_FONT_FACE" value="Arial Black" />
+      <att name="NODE_LABEL_FONT_SIZE" value="12" />
+    </graphics>
+  </node>
+  <node id="PYL1" label="PYL1">
+    <att name="name" value="PYL1" />
+    <att name="node_type" value="gene" />
+    <att name="position" value="5" />
+    <att name="rule" value="CPK1 &amp; HB7" />
+    <att name="score" value="1.9375" />
+    <att name="n_correct" value="3" />
+    <att name="n_regulators" value="2" />
+    <att name="mse" value="nan" />
+    <graphics type="ELLIPSE" x="171.6" y="289.5" w="75.0" h="50.0" fill="#7BCCC4" outline="#000000">
+      <att name="node_border_width" value="2.0" />
+      <att name="NODE_LABEL_FONT_FACE" value="Arial Black" />
+      <att name="NODE_LABEL_FONT_SIZE" value="12" />
+    </graphics>
+  </node>
+  <node id="ABF3" label="ABF3">
+    <att name="name" value="ABF3" />
+    <att name="node_type" value="gene" />
+    <att name="position" value="37" />
+    <att name="rule" value="ABF3 | ~MYB44" />
+    <att name="score" value="1.9375" />
+    <att name="n_correct" value="3" />
+    <att name="n_regulators" value="2" />
+    <att name="mse" value="nan" />
+    <graphics type="ELLIPSE" x="-75.6" y="-28.2" w="75.0" h="50.0" fill="#7BCCC4" outline="#000000">
+      <att name="node_border_width" value="2.0" />
+      <att name="NODE_LABEL_FONT_FACE" value="Arial Black" />
+      <att name="NODE_LABEL_FONT_SIZE" value="12" />
+    </graphics>
+  </node>
+  <node id="RCAR1" label="RCAR1">
+    <att name="name" value="RCAR1" />
+    <att name="node_type" value="gene" />
+    <att name="position" value="105" />
+    <att name="rule" value="ABF3 | HB7 | MYB44" />
+    <att name="score" value="1.9375" />
+    <att name="n_correct" value="3" />
+    <att name="n_regulators" value="3" />
+    <att name="mse" value="nan" />
+    <graphics type="ELLIPSE" x="67.0" y="-128.4" w="75.0" h="50.0" fill="#7BCCC4" outline="#000000">
+      <att name="node_border_width" value="2.0" />
+      <att name="NODE_LABEL_FONT_FACE" value="Arial Black" />
+      <att name="NODE_LABEL_FONT_SIZE" value="12" />
+    </graphics>
+  </node>
+  <node id="SnRK2_8" label="SnRK2_8">
+    <att name="name" value="SnRK2_8" />
+    <att name="node_type" value="gene" />
+    <att name="position" value="4" />
+    <att name="rule" value="HB7 &amp; ~ABF3" />
+    <att name="score" value="1.9375" />
+    <att name="n_correct" value="3" />
+    <att name="n_regulators" value="2" />
+    <att name="mse" value="nan" />
+    <graphics type="ELLIPSE" x="146.4" y="-105.9" w="75.0" h="50.0" fill="#7BCCC4" outline="#000000">
+      <att name="node_border_width" value="2.0" />
+      <att name="NODE_LABEL_FONT_FACE" value="Arial Black" />
+      <att name="NODE_LABEL_FONT_SIZE" value="12" />
+    </graphics>
+  </node>
+  <node id="NCED5" label="NCED5">
+    <att name="name" value="NCED5" />
+    <att name="node_type" value="gene" />
+    <att name="position" value="146" />
+    <att name="rule" value="HB6 | HB7 | MYB44" />
+    <att name="score" value="1.9375" />
+    <att name="n_correct" value="3" />
+    <att name="n_regulators" value="3" />
+    <att name="mse" value="nan" />
+    <graphics type="ELLIPSE" x="20.9" y="-81.3" w="75.0" h="50.0" fill="#7BCCC4" outline="#000000">
+      <att name="node_border_width" value="2.0" />
+      <att name="NODE_LABEL_FONT_FACE" value="Arial Black" />
+      <att name="NODE_LABEL_FONT_SIZE" value="12" />
+    </graphics>
+  </node>
+  <edge id="0" source="HB7" target="AIT1" label="HB7 -&gt; AIT1">
+    <att name="regulation_type" value="positive" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="activation" />
+    <att name="rule" value="HB7 &amp; ~ABF3" />
+    <att name="score" value="1.9375" />
+    <graphics width="2.0" style="SOLID" fill="#3690C0" targetArrow="DELTA" targetArrowColor="#3690C0" />
+  </edge>
+  <edge id="1" source="HB7" target="CPK1" label="HB7 -&gt; CPK1">
+    <att name="regulation_type" value="positive" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="activation" />
+    <att name="rule" value="HB7 &amp; ~HB6" />
+    <att name="score" value="1.9375" />
+    <graphics width="2.0" style="SOLID" fill="#3690C0" targetArrow="DELTA" targetArrowColor="#3690C0" />
+  </edge>
+  <edge id="2" source="HB7" target="CYP707A3" label="HB7 -&gt; CYP707A3">
+    <att name="regulation_type" value="positive" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="activation" />
+    <att name="rule" value="HB7 &amp; ~MYB44" />
+    <att name="score" value="1.9375" />
+    <graphics width="2.0" style="SOLID" fill="#3690C0" targetArrow="DELTA" targetArrowColor="#3690C0" />
+  </edge>
+  <edge id="3" source="HB7" target="HB7" label="HB7 -&gt; HB7">
+    <att name="regulation_type" value="positive" />
+    <att name="is_autoregulation" value="True" />
+    <att name="interaction_type" value="activation" />
+    <att name="rule" value="CPK1 &amp; HB7" />
+    <att name="score" value="1.9375" />
+    <graphics width="2.0" style="SOLID" fill="#3690C0" targetArrow="DELTA" targetArrowColor="#3690C0" />
+  </edge>
+  <edge id="4" source="HB7" target="NCED5" label="HB7 -&gt; NCED5">
+    <att name="regulation_type" value="positive" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="activation" />
+    <att name="rule" value="HB6 | HB7 | MYB44" />
+    <att name="score" value="1.9375" />
+    <graphics width="2.0" style="SOLID" fill="#3690C0" targetArrow="DELTA" targetArrowColor="#3690C0" />
+  </edge>
+  <edge id="5" source="HB7" target="PYL1" label="HB7 -&gt; PYL1">
+    <att name="regulation_type" value="positive" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="activation" />
+    <att name="rule" value="CPK1 &amp; HB7" />
+    <att name="score" value="1.9375" />
+    <graphics width="2.0" style="SOLID" fill="#3690C0" targetArrow="DELTA" targetArrowColor="#3690C0" />
+  </edge>
+  <edge id="6" source="HB7" target="RCAR1" label="HB7 -&gt; RCAR1">
+    <att name="regulation_type" value="positive" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="activation" />
+    <att name="rule" value="ABF3 | HB7 | MYB44" />
+    <att name="score" value="1.9375" />
+    <graphics width="2.0" style="SOLID" fill="#3690C0" targetArrow="DELTA" targetArrowColor="#3690C0" />
+  </edge>
+  <edge id="7" source="HB7" target="SnRK2_8" label="HB7 -&gt; SnRK2_8">
+    <att name="regulation_type" value="positive" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="activation" />
+    <att name="rule" value="HB7 &amp; ~ABF3" />
+    <att name="score" value="1.9375" />
+    <graphics width="2.0" style="SOLID" fill="#3690C0" targetArrow="DELTA" targetArrowColor="#3690C0" />
+  </edge>
+  <edge id="8" source="CPK1" target="HB7" label="CPK1 -&gt; HB7">
+    <att name="regulation_type" value="positive" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="activation" />
+    <att name="rule" value="CPK1 &amp; HB7" />
+    <att name="score" value="1.9375" />
+    <graphics width="2.0" style="SOLID" fill="#3690C0" targetArrow="DELTA" targetArrowColor="#3690C0" />
+  </edge>
+  <edge id="9" source="CPK1" target="PYL1" label="CPK1 -&gt; PYL1">
+    <att name="regulation_type" value="positive" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="activation" />
+    <att name="rule" value="CPK1 &amp; HB7" />
+    <att name="score" value="1.9375" />
+    <graphics width="2.0" style="SOLID" fill="#3690C0" targetArrow="DELTA" targetArrowColor="#3690C0" />
+  </edge>
+  <edge id="10" source="HB6" target="ABCG31" label="HB6 -&gt; ABCG31">
+    <att name="regulation_type" value="negative" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="inhibition" />
+    <att name="rule" value="ABF3 &amp; ~HB6" />
+    <att name="score" value="1.9375" />
+    <graphics width="2.0" style="SOLID" fill="#D7301F" targetArrow="T" targetArrowColor="#D7301F" />
+  </edge>
+  <edge id="11" source="HB6" target="CPK1" label="HB6 -&gt; CPK1">
+    <att name="regulation_type" value="negative" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="inhibition" />
+    <att name="rule" value="HB7 &amp; ~HB6" />
+    <att name="score" value="1.9375" />
+    <graphics width="2.0" style="SOLID" fill="#D7301F" targetArrow="T" targetArrowColor="#D7301F" />
+  </edge>
+  <edge id="12" source="HB6" target="CYP707A4" label="HB6 -&gt; CYP707A4">
+    <att name="regulation_type" value="positive" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="activation" />
+    <att name="rule" value="ABF3 | HB6" />
+    <att name="score" value="1.9375" />
+    <graphics width="2.0" style="SOLID" fill="#3690C0" targetArrow="DELTA" targetArrowColor="#3690C0" />
+  </edge>
+  <edge id="13" source="HB6" target="HAI3" label="HB6 -&gt; HAI3">
+    <att name="regulation_type" value="positive" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="activation" />
+    <att name="rule" value="ABF3 &amp; HB6 &amp; MYB44" />
+    <att name="score" value="1.9375" />
+    <graphics width="2.0" style="SOLID" fill="#3690C0" targetArrow="DELTA" targetArrowColor="#3690C0" />
+  </edge>
+  <edge id="14" source="HB6" target="HB6" label="HB6 -&gt; HB6">
+    <att name="regulation_type" value="positive" />
+    <att name="is_autoregulation" value="True" />
+    <att name="interaction_type" value="activation" />
+    <att name="rule" value="ABF3 | HB6 | MYB44" />
+    <att name="score" value="1.9375" />
+    <graphics width="2.0" style="SOLID" fill="#3690C0" targetArrow="DELTA" targetArrowColor="#3690C0" />
+  </edge>
+  <edge id="15" source="HB6" target="MYB44" label="HB6 -&gt; MYB44">
+    <att name="regulation_type" value="positive" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="activation" />
+    <att name="rule" value="HB6 | ~MYB44" />
+    <att name="score" value="1.9375" />
+    <graphics width="2.0" style="SOLID" fill="#3690C0" targetArrow="DELTA" targetArrowColor="#3690C0" />
+  </edge>
+  <edge id="16" source="HB6" target="NCED5" label="HB6 -&gt; NCED5">
+    <att name="regulation_type" value="positive" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="activation" />
+    <att name="rule" value="HB6 | HB7 | MYB44" />
+    <att name="score" value="1.9375" />
+    <graphics width="2.0" style="SOLID" fill="#3690C0" targetArrow="DELTA" targetArrowColor="#3690C0" />
+  </edge>
+  <edge id="17" source="MYB44" target="ABF3" label="MYB44 -&gt; ABF3">
+    <att name="regulation_type" value="negative" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="inhibition" />
+    <att name="rule" value="ABF3 | ~MYB44" />
+    <att name="score" value="1.9375" />
+    <graphics width="2.0" style="SOLID" fill="#D7301F" targetArrow="T" targetArrowColor="#D7301F" />
+  </edge>
+  <edge id="18" source="MYB44" target="AHG1" label="MYB44 -&gt; AHG1">
+    <att name="regulation_type" value="positive" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="activation" />
+    <att name="rule" value="ABF3 &amp; MYB44" />
+    <att name="score" value="1.9375" />
+    <graphics width="2.0" style="SOLID" fill="#3690C0" targetArrow="DELTA" targetArrowColor="#3690C0" />
+  </edge>
+  <edge id="19" source="MYB44" target="CYP707A3" label="MYB44 -&gt; CYP707A3">
+    <att name="regulation_type" value="negative" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="inhibition" />
+    <att name="rule" value="HB7 &amp; ~MYB44" />
+    <att name="score" value="1.9375" />
+    <graphics width="2.0" style="SOLID" fill="#D7301F" targetArrow="T" targetArrowColor="#D7301F" />
+  </edge>
+  <edge id="20" source="MYB44" target="HAI3" label="MYB44 -&gt; HAI3">
+    <att name="regulation_type" value="positive" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="activation" />
+    <att name="rule" value="ABF3 &amp; HB6 &amp; MYB44" />
+    <att name="score" value="1.9375" />
+    <graphics width="2.0" style="SOLID" fill="#3690C0" targetArrow="DELTA" targetArrowColor="#3690C0" />
+  </edge>
+  <edge id="21" source="MYB44" target="HB6" label="MYB44 -&gt; HB6">
+    <att name="regulation_type" value="positive" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="activation" />
+    <att name="rule" value="ABF3 | HB6 | MYB44" />
+    <att name="score" value="1.9375" />
+    <graphics width="2.0" style="SOLID" fill="#3690C0" targetArrow="DELTA" targetArrowColor="#3690C0" />
+  </edge>
+  <edge id="22" source="MYB44" target="MYB44" label="MYB44 -&gt; MYB44">
+    <att name="regulation_type" value="negative" />
+    <att name="is_autoregulation" value="True" />
+    <att name="interaction_type" value="inhibition" />
+    <att name="rule" value="HB6 | ~MYB44" />
+    <att name="score" value="1.9375" />
+    <graphics width="2.0" style="SOLID" fill="#D7301F" targetArrow="T" targetArrowColor="#D7301F" />
+  </edge>
+  <edge id="23" source="MYB44" target="NCED5" label="MYB44 -&gt; NCED5">
+    <att name="regulation_type" value="positive" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="activation" />
+    <att name="rule" value="HB6 | HB7 | MYB44" />
+    <att name="score" value="1.9375" />
+    <graphics width="2.0" style="SOLID" fill="#3690C0" targetArrow="DELTA" targetArrowColor="#3690C0" />
+  </edge>
+  <edge id="24" source="MYB44" target="RCAR1" label="MYB44 -&gt; RCAR1">
+    <att name="regulation_type" value="positive" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="activation" />
+    <att name="rule" value="ABF3 | HB7 | MYB44" />
+    <att name="score" value="1.9375" />
+    <graphics width="2.0" style="SOLID" fill="#3690C0" targetArrow="DELTA" targetArrowColor="#3690C0" />
+  </edge>
+  <edge id="25" source="ABF3" target="ABCG31" label="ABF3 -&gt; ABCG31">
+    <att name="regulation_type" value="positive" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="activation" />
+    <att name="rule" value="ABF3 &amp; ~HB6" />
+    <att name="score" value="1.9375" />
+    <graphics width="2.0" style="SOLID" fill="#3690C0" targetArrow="DELTA" targetArrowColor="#3690C0" />
+  </edge>
+  <edge id="26" source="ABF3" target="ABF3" label="ABF3 -&gt; ABF3">
+    <att name="regulation_type" value="positive" />
+    <att name="is_autoregulation" value="True" />
+    <att name="interaction_type" value="activation" />
+    <att name="rule" value="ABF3 | ~MYB44" />
+    <att name="score" value="1.9375" />
+    <graphics width="2.0" style="SOLID" fill="#3690C0" targetArrow="DELTA" targetArrowColor="#3690C0" />
+  </edge>
+  <edge id="27" source="ABF3" target="AHG1" label="ABF3 -&gt; AHG1">
+    <att name="regulation_type" value="positive" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="activation" />
+    <att name="rule" value="ABF3 &amp; MYB44" />
+    <att name="score" value="1.9375" />
+    <graphics width="2.0" style="SOLID" fill="#3690C0" targetArrow="DELTA" targetArrowColor="#3690C0" />
+  </edge>
+  <edge id="28" source="ABF3" target="AIT1" label="ABF3 -&gt; AIT1">
+    <att name="regulation_type" value="negative" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="inhibition" />
+    <att name="rule" value="HB7 &amp; ~ABF3" />
+    <att name="score" value="1.9375" />
+    <graphics width="2.0" style="SOLID" fill="#D7301F" targetArrow="T" targetArrowColor="#D7301F" />
+  </edge>
+  <edge id="29" source="ABF3" target="CYP707A4" label="ABF3 -&gt; CYP707A4">
+    <att name="regulation_type" value="positive" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="activation" />
+    <att name="rule" value="ABF3 | HB6" />
+    <att name="score" value="1.9375" />
+    <graphics width="2.0" style="SOLID" fill="#3690C0" targetArrow="DELTA" targetArrowColor="#3690C0" />
+  </edge>
+  <edge id="30" source="ABF3" target="HAI3" label="ABF3 -&gt; HAI3">
+    <att name="regulation_type" value="positive" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="activation" />
+    <att name="rule" value="ABF3 &amp; HB6 &amp; MYB44" />
+    <att name="score" value="1.9375" />
+    <graphics width="2.0" style="SOLID" fill="#3690C0" targetArrow="DELTA" targetArrowColor="#3690C0" />
+  </edge>
+  <edge id="31" source="ABF3" target="HB6" label="ABF3 -&gt; HB6">
+    <att name="regulation_type" value="positive" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="activation" />
+    <att name="rule" value="ABF3 | HB6 | MYB44" />
+    <att name="score" value="1.9375" />
+    <graphics width="2.0" style="SOLID" fill="#3690C0" targetArrow="DELTA" targetArrowColor="#3690C0" />
+  </edge>
+  <edge id="32" source="ABF3" target="RCAR1" label="ABF3 -&gt; RCAR1">
+    <att name="regulation_type" value="positive" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="activation" />
+    <att name="rule" value="ABF3 | HB7 | MYB44" />
+    <att name="score" value="1.9375" />
+    <graphics width="2.0" style="SOLID" fill="#3690C0" targetArrow="DELTA" targetArrowColor="#3690C0" />
+  </edge>
+  <edge id="33" source="ABF3" target="SnRK2_8" label="ABF3 -&gt; SnRK2_8">
+    <att name="regulation_type" value="negative" />
+    <att name="is_autoregulation" value="False" />
+    <att name="interaction_type" value="inhibition" />
+    <att name="rule" value="HB7 &amp; ~ABF3" />
+    <att name="score" value="1.9375" />
+    <graphics width="2.0" style="SOLID" fill="#D7301F" targetArrow="T" targetArrowColor="#D7301F" />
+  </edge>
+</graph>

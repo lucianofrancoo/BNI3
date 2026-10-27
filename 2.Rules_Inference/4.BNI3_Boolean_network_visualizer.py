@@ -141,6 +141,65 @@ def select_rules_by_criteria(df, criteria, custom_positions, verbose):
     return selected_rules
 
 
+def regulation_signs_from_truth_table(rule_str, available_genes):
+    """
+    Determine each regulator's sign from the Boolean function itself.
+
+    Every regulator is flipped 0 -> 1 under every assignment of the other genes
+    in the rule. If the output only ever rises it is positive, if it only ever
+    falls it is negative; a non-monotone regulator takes the sign of the
+    majority of the changes it causes (ties count as positive).
+
+    Reading the sign from the text instead misses negations applied to a group,
+    e.g. Cdh1 and UbcH10 in "CycA & ~(Cdh1 & UbcH10)" are inhibitors.
+
+    Args:
+        rule_str (str): Boolean rule using ~, &, | and parentheses
+        available_genes (set): Set of available gene names
+
+    Returns:
+        dict or None: gene -> 'positive' / 'negative', or None if the rule
+                      cannot be evaluated (caller falls back to the heuristic)
+    """
+    # Longest names first so a gene never matches inside a longer one
+    genes = [g for g in sorted(available_genes, key=len, reverse=True)
+             if re.search(r'\b' + re.escape(g) + r'\b', rule_str)]
+    if not genes or len(genes) > 16:
+        return None
+
+    expr = rule_str
+    for idx, gene in enumerate(genes):
+        expr = re.sub(r'\b' + re.escape(gene) + r'\b', f'__g{idx}__', expr)
+    expr = expr.replace('~', ' not ').replace('!', ' not ')
+    expr = expr.replace('&', ' and ').replace('|', ' or ')
+    if re.search(r'[A-Za-z]', re.sub(r'__g\d+__|\bnot\b|\band\b|\bor\b', '', expr)):
+        return None  # tokens that are not genes or operators
+
+    try:
+        code = compile(expr, '<rule>', 'eval')
+    except SyntaxError:
+        return None
+
+    def evaluate(values):
+        env = {f'__g{i}__': v for i, v in enumerate(values)}
+        return bool(eval(code, {'__builtins__': {}}, env))
+
+    n = len(genes)
+    signs = {}
+    for i, gene in enumerate(genes):
+        rises = falls = 0
+        for mask in range(2 ** (n - 1)):
+            others = [bool(mask >> b & 1) for b in range(n - 1)]
+            off = others[:i] + [False] + others[i:]
+            on = others[:i] + [True] + others[i:]
+            delta = int(evaluate(on)) - int(evaluate(off))
+            rises += delta > 0
+            falls += delta < 0
+        if rises or falls:  # genes with no effect are not regulators
+            signs[gene] = 'negative' if falls > rises else 'positive'
+    return signs
+
+
 def extract_genes_from_rule(rule_str, available_genes):
     """
     Extract genes from rule string and determine regulation type
@@ -152,8 +211,13 @@ def extract_genes_from_rule(rule_str, available_genes):
     Returns:
         dict: Dictionary mapping gene names to regulation type ('positive' or 'negative')
     """
+    functional = regulation_signs_from_truth_table(rule_str, available_genes)
+    if functional is not None:
+        return functional
+
     genes_in_rule = {}
-    
+
+    # Fallback for rules that cannot be evaluated: textual heuristic.
     # Search for all available genes in the rule
     for gene in available_genes:
         # Search for gene as complete word (avoid sub-strings)

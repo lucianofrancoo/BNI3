@@ -23,6 +23,10 @@ import time
 from pathlib import Path
 import psutil
 
+# Default worker count for the GEP inference. Kept as a named constant so the
+# chained evaluation can tell "the user asked for this many" from "nobody said".
+DEFAULT_PROCESSES = 4
+
 
 def log_message(message, verbose):
     """Print message only if verbose is enabled"""
@@ -714,58 +718,145 @@ def save_best_individuals(population, output_dir, target_gene, args, use_mlp, us
             log_message(fitness_str, verbose)
 
 
-def run_automatic_analysis(output_dir, target_genes, verbose):
+def sibling_script(*parts):
+    """Absolute path to another pipeline script, relative to this one."""
+    root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    return os.path.join(root, *parts)
+
+
+def next_step_command(output_dir, binarized_matrix):
+    """
+    The attractor command for what this run just produced.
+
+    Both inputs are already known here: the rules table is whichever of the two
+    this stage wrote, and the binarized matrix is the -i_binary it was given.
+    Absolute paths so the line can be pasted from any directory.
+    """
+    evaluated = os.path.join(output_dir, 'rules_by_gene_evaluated.tsv')
+    plain = os.path.join(output_dir, 'rules_by_gene.tsv')
+    # The evaluated table is the disambiguated one and is what the attractor
+    # stage should read; it only exists when the evaluation ran.
+    rules = evaluated if os.path.exists(evaluated) else plain
+
+    return (
+        f"python3 {sibling_script('3.Attractors', 'BNI3_Attractorator.py')} \\\n"
+        f"    -i {rules} \\\n"
+        f"    -b {os.path.abspath(binarized_matrix)} \\\n"
+        f"    -O {output_dir} --predecessors 2"
+    )
+
+
+def write_run_log(path, args, target_genes, total_experiments, successful,
+                  failed_experiments, total_time, command):
+    """Record what this run did and how to continue it."""
+    with open(path, 'w', encoding='utf-8') as handle:
+        handle.write("BNI3 rule inference run log\n")
+        handle.write("=" * 60 + "\n")
+        handle.write(f"generated        : {time.strftime('%Y-%m-%d %H:%M:%S')}\n")
+        handle.write(f"counts matrix    : {os.path.abspath(args.input)}\n")
+        handle.write(f"binarized matrix : {os.path.abspath(args.input_binary)}\n")
+        handle.write(f"output directory : {os.path.abspath(args.output)}\n")
+        handle.write(f"target genes     : "
+                     f"{', '.join(target_genes) if target_genes else 'all'}\n")
+        handle.write(f"repetitions      : {args.n_repetitions}\n")
+        handle.write(f"processes        : {args.processes}\n")
+        handle.write(f"optimal K        : {args.reg_optimal}\n")
+        handle.write(f"analysis         : "
+                     f"{'skipped' if args.no_analysis else 'enabled'}\n")
+        handle.write(f"evaluation       : "
+                     f"{'skipped' if args.no_evaluation else 'enabled'}\n")
+        handle.write(f"experiments      : {successful}/{total_experiments} succeeded"
+                     f"{f', {failed_experiments} failed' if failed_experiments else ''}\n")
+        handle.write(f"total time       : {total_time:.2f} s\n")
+        handle.write("\nNext step - attractor analysis\n")
+        handle.write("-" * 60 + "\n")
+        handle.write(command + "\n")
+        handle.write(
+            "\nThat one command runs all three attractor steps: the attractors\n"
+            "themselves, the path the observed data takes into them, and both\n"
+            "figures. Drop --predecessors to leave the upstream states out.\n")
+
+
+def run_automatic_analysis(args, target_genes):
     """
     Run automatic analysis after inference experiments complete
-    
+
+    The analysis script in turn chains the rule combination evaluator, so this
+    call covers steps 2 and 3 of the pipeline. Output is streamed instead of
+    captured and no timeout is applied: the evaluator samples millions of rule
+    combinations and legitimately runs for tens of minutes on large networks.
+    (It used to be captured with a 5 minute timeout, which was fine for the
+    analysis alone but would kill the chained evaluation.)
+
     Args:
-        output_dir (str): Output directory containing results
+        args: Parsed arguments (uses output, input_binary, verbose and the
+              eval_* forwarding options)
         target_genes (list): List of target genes (None for auto-detect)
-        verbose (bool): Enable verbose output
     """
+    verbose = args.verbose
     log_message("Starting automatic results analysis...", verbose)
-    
+
     # Look for the analysis script in the same directory
     script_dir = os.path.dirname(os.path.abspath(__file__))
     analysis_script = os.path.join(script_dir, "2.BNI3_Analyze_results.py")
-    
+
     if not os.path.exists(analysis_script):
         print(f"WARNING: Analysis script not found at {analysis_script}")
         print("Please run analysis manually with: python3 2.BNI3_Analyze_results.py -i <output_directory>")
         return False
-    
+
     # Prepare command
     cmd = [
         "python3", analysis_script,
-        "-i", output_dir
+        "-i", args.output
     ]
-    
+
     # Add target genes if specific ones were used
     if target_genes:
         cmd.extend(["-targets", ",".join(target_genes)])
-    
+
+    # Forward the binarized matrix so the evaluator can score data concordance
+    cmd.extend(["-m", args.input_binary])
+
+    # Forward evaluation options
+    if args.no_evaluation:
+        cmd.append("--no_evaluation")
+    if args.eval_confidence is not None:
+        cmd.extend(["--eval_confidence", str(args.eval_confidence)])
+    # -p sizes the GEP pool; the evaluator has its own --eval_processes and otherwise
+    # falls back to every logical core. On a machine with more cores than the user asked
+    # for, that silently overrides an explicit -p halfway through the pipeline. So an
+    # explicit -p carries over, while the bare default does not — leaving the evaluator
+    # free to use the whole machine when nobody expressed a preference.
+    eval_processes = args.eval_processes
+    if eval_processes is None and args.processes != DEFAULT_PROCESSES:
+        eval_processes = args.processes
+    if eval_processes is not None:
+        cmd.extend(["--eval_processes", str(eval_processes)])
+    if args.eval_search:
+        cmd.extend(["--eval_search", args.eval_search])
+    if args.eval_restarts is not None:
+        cmd.extend(["--eval_restarts", str(args.eval_restarts)])
+    if args.priority_regulators:
+        cmd.extend(["--priority_regulators", args.priority_regulators])
+
     # Add verbose flag if enabled
     if verbose:
         cmd.append("-v")
 
     try:
         print(f"\nRunning automatic analysis...")
-        result = subprocess.run(cmd, capture_output=True, text=True, timeout=300)  # 5 minute timeout
-        
+        result = subprocess.run(cmd)
+
         if result.returncode == 0:
             print("Automatic analysis completed successfully!")
-            # Print the analysis output
-            if result.stdout:
-                print(result.stdout)
             return True
         else:
             print(f"Analysis failed with return code {result.returncode}")
-            if result.stderr:
-                print(f"Error: {result.stderr}")
             return False
-            
-    except subprocess.TimeoutExpired:
-        print("Analysis timed out after 5 minutes")
+
+    except KeyboardInterrupt:
+        print("\nAnalysis interrupted by user.")
         return False
     except Exception as e:
         print(f"Error running analysis: {str(e)}")
@@ -1015,15 +1106,32 @@ def run_gep_experiment(args):
     if failed_experiments == 0:
         print("STATUS: ALL EXPERIMENTS COMPLETED SUCCESSFULLY")
         
-        # Run automatic analysis unless disabled
+        # Run automatic analysis unless disabled (which chains the evaluator too)
         if not args.no_analysis:
-            analysis_success = run_automatic_analysis(args.output, target_genes, args.verbose)
+            analysis_success = run_automatic_analysis(args, target_genes)
             if not analysis_success:
                 print("\nAutomatic analysis failed. You can run it manually with:")
-                print(f"python3 2.BNI3_Analyze_results.py -i {args.output}")
+                print(f"python3 2.BNI3_Analyze_results.py -i {args.output} -m {args.input_binary}")
         else:
             print("\nAutomatic analysis skipped. You can run it manually with:")
-            print(f"python3 2.BNI3_Analyze_results.py -i {args.output}")
+            print(f"python3 2.BNI3_Analyze_results.py -i {args.output} -m {args.input_binary}")
+
+        # Written after the chain, so the command points at whichever rules table
+        # actually exists by then — the evaluated one when the evaluation ran.
+        output_dir = os.path.abspath(args.output)
+        command = next_step_command(output_dir, args.input_binary)
+        log_path = os.path.join(output_dir, 'rules_inference_log.txt')
+        write_run_log(log_path, args, target_genes, total_experiments,
+                      successful_experiments, failed_experiments, total_time,
+                      command)
+
+        print(f"\n{'='*60}")
+        print(f"Log -> {log_path}")
+        print(f"\nNext step — attractor analysis:")
+        print(command)
+        print("\nThat one command runs all three attractor steps. Drop")
+        print("--predecessors to leave the upstream states out.")
+        print('='*60)
             
     else:
         print(f"STATUS: {failed_experiments} EXPERIMENTS FAILED")
@@ -1084,15 +1192,43 @@ Notes:
     flexible = parser.add_argument_group('Flexible parameters')
     flexible.add_argument('-targets', '--target_genes', type=str, default=None,
                          help='Target genes to model (comma-separated). Default: all genes from input matrix')
-    flexible.add_argument('-p', '--processes', type=int, default=4,
-                         help='Number of processes for parallel computation (default: 4)')
+    flexible.add_argument('-p', '--processes', type=int, default=DEFAULT_PROCESSES,
+                         help=f'Number of processes for parallel computation '
+                              f'(default: {DEFAULT_PROCESSES}). When given explicitly it '
+                              f'also becomes the default for --eval_processes, so one '
+                              f'flag sets the worker count for the whole pipeline')
     flexible.add_argument('-n_rep', '--n_repetitions', type=int, default=10,
                          help='Number of evolution repetitions. For small datasets (3-4 timepoints) consider 50+ (default: 10)')
     flexible.add_argument('-v', '--verbose', action='store_true',
                          help='Show detailed processing information')
     flexible.add_argument('--no_analysis', action='store_true',
-                         help='Skip automatic analysis after inference completion')
-    
+                         help='Skip automatic analysis after inference completion '
+                              '(also skips the chained evaluation)')
+
+    # Chained rule combination evaluation (3.BNI3_Evaluate_rules.py, via the analyzer)
+    evaluation = parser.add_argument_group('Chained evaluation parameters')
+    evaluation.add_argument('--no_evaluation', action='store_true',
+                           help='Run the analysis but skip the rule combination evaluation '
+                                'that normally follows it')
+    evaluation.add_argument('--eval_confidence', type=float, default=None,
+                           help='Forwarded to the evaluator as --confidence. Use 0 for a single '
+                                'sampling batch (much faster). Default: the evaluator default')
+    evaluation.add_argument('--eval_processes', type=int, default=None,
+                           help='Forwarded to the evaluator as -n. Default: the value of '
+                                '-p when given explicitly, otherwise all available cores')
+    evaluation.add_argument('--eval_search', choices=['auto', 'sample', 'hill'], default=None,
+                           help="Forwarded to the evaluator as --search. The evaluator "
+                                "defaults to 'auto': enumerate when the space fits, "
+                                "otherwise hill climbing")
+    evaluation.add_argument('--eval_restarts', type=int, default=None,
+                           help='Forwarded to the evaluator as --restarts (only used '
+                                'with --eval_search hill)')
+    evaluation.add_argument('--priority_regulators', type=str, default=None,
+                           help='Comma-separated gene names to prefer as regulators '
+                                '(e.g. transcription factors): HB6,MYB44,ABF3. Adds a '
+                                'tie-break that ranks below data fit and attractor '
+                                'structure, so it is a preference, never a requirement')
+
     # Regulator penalty parameters
     reg_params = parser.add_argument_group('Regulator penalty parameters')
     reg_params.add_argument('--no_reg_penalty', dest='reg_penalty', action='store_false',

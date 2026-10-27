@@ -6,6 +6,7 @@ Analyzes results from GEP Boolean network inference and creates summary of best 
 
 import argparse
 import os
+import subprocess
 import glob
 import re
 import pandas as pd
@@ -345,6 +346,86 @@ def analyze_results(args):
     # Save summary
     save_summary(summary_data, output_file, args, args.verbose)
 
+    # Chain the rule combination evaluator unless disabled
+    if not getattr(args, 'no_evaluation', False):
+        success = run_automatic_evaluation(output_file, args)
+        if not success:
+            print("\nAutomatic evaluation failed. You can run it manually with:")
+            print(f"python3 3.BNI3_Evaluate_rules.py -i {output_file}")
+    else:
+        print("\nAutomatic evaluation skipped. You can run it manually with:")
+        print(f"python3 3.BNI3_Evaluate_rules.py -i {output_file}")
+
+
+def run_automatic_evaluation(rules_file, args):
+    """
+    Run the rule combination evaluator on the rules table just produced.
+
+    Output is streamed rather than captured, and no timeout is applied: the
+    evaluator samples millions of rule combinations and legitimately runs for
+    tens of minutes on large networks.
+
+    Args:
+        rules_file (str): Path to the rules_by_gene.tsv just written
+        args: Parsed arguments (uses matrix, verbose, eval_confidence, eval_processes)
+
+    Returns:
+        bool: True if the evaluator completed successfully
+    """
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    evaluation_script = os.path.join(script_dir, "3.BNI3_Evaluate_rules.py")
+
+    if not os.path.exists(evaluation_script):
+        print(f"WARNING: Evaluation script not found at {evaluation_script}")
+        print(f"Please run evaluation manually with: "
+              f"python3 3.BNI3_Evaluate_rules.py -i {rules_file}")
+        return False
+
+    cmd = ["python3", evaluation_script, "-i", rules_file]
+
+    # The binarized matrix feeds final_state_concordance, the first criterion of the
+    # evaluator's tie-break cascade. Without it that criterion is 0 for every
+    # combination and the ranking falls through to the attractor metrics.
+    matrix = getattr(args, 'matrix', None)
+    if matrix:
+        cmd.extend(["-m", matrix])
+    else:
+        print("\nNOTE: no binarized matrix given (-m). The evaluator will rank "
+              "combinations without the data-concordance criterion.")
+
+    if getattr(args, 'eval_confidence', None) is not None:
+        cmd.extend(["--confidence", str(args.eval_confidence)])
+    if getattr(args, 'eval_processes', None) is not None:
+        cmd.extend(["-n", str(args.eval_processes)])
+    if getattr(args, 'eval_search', None):
+        cmd.extend(["--search", args.eval_search])
+    if getattr(args, 'eval_restarts', None) is not None:
+        cmd.extend(["--restarts", str(args.eval_restarts)])
+    if getattr(args, 'priority_regulators', None):
+        cmd.extend(["--priority-regulators", args.priority_regulators])
+    if getattr(args, 'verbose', False):
+        cmd.append("-v")
+
+    try:
+        print(f"\nRunning automatic rule combination evaluation...")
+        print(f"(this can take tens of minutes on large networks — "
+              f"use --no_evaluation to skip, or --eval_confidence 0 for a single batch)")
+        result = subprocess.run(cmd)
+
+        if result.returncode == 0:
+            print("Automatic evaluation completed successfully!")
+            return True
+
+        print(f"Evaluation failed with return code {result.returncode}")
+        return False
+
+    except KeyboardInterrupt:
+        print("\nEvaluation interrupted by user.")
+        return False
+    except Exception as e:
+        print(f"Error running evaluation: {str(e)}")
+        return False
+
 
 def main():
     """Main function with argument parsing"""
@@ -365,6 +446,9 @@ Notes:
   - Use -n 3 to show max, max-1, and max-2 n_correct rules
   - If target genes not specified, auto-detects from result file names
   - Creates rules_by_gene.tsv in input directory by default
+  - After writing the rules table, automatically chains
+    3.BNI3_Evaluate_rules.py on it (disable with --no_evaluation).
+    Pass -m so the evaluator can score data concordance.
         """
     )
     
@@ -383,8 +467,35 @@ Notes:
                          help='Number of n_correct levels to include from maximum downward (default: 2, meaning max and max-1)')
     optional.add_argument('-v', '--verbose', action='store_true',
                          help='Show detailed processing information')
-    
-    parser.add_argument('--version', action='version', version='GEP Results Analyzer v1.0')
+
+    # Chained rule combination evaluation (3.BNI3_Evaluate_rules.py)
+    evaluation = parser.add_argument_group('Chained evaluation parameters')
+    evaluation.add_argument('-m', '--matrix', type=str, default=None,
+                           help='Binarized expression matrix TSV, forwarded to the evaluator '
+                                'as -m. Feeds the data-concordance criterion; without it that '
+                                'criterion is 0 for every combination')
+    evaluation.add_argument('--no_evaluation', action='store_true',
+                           help='Skip the automatic rule combination evaluation that normally '
+                                'runs after the rules table is written')
+    evaluation.add_argument('--eval_confidence', type=float, default=None,
+                           help='Forwarded to the evaluator as --confidence. Use 0 for a single '
+                                'sampling batch (much faster). Default: the evaluator default')
+    evaluation.add_argument('--eval_processes', type=int, default=None,
+                           help='Forwarded to the evaluator as -n. Default: all available cores')
+    evaluation.add_argument('--eval_search', choices=['auto', 'sample', 'hill'], default=None,
+                           help="Forwarded to the evaluator as --search. The evaluator "
+                                "defaults to 'auto': enumerate when the space fits, "
+                                "otherwise hill climbing")
+    evaluation.add_argument('--eval_restarts', type=int, default=None,
+                           help='Forwarded to the evaluator as --restarts (only used '
+                                'with --eval_search hill)')
+    evaluation.add_argument('--priority_regulators', type=str, default=None,
+                           help='Comma-separated gene names to prefer as regulators '
+                                '(e.g. transcription factors): HB6,MYB44,ABF3. '
+                                'Forwarded to the evaluator as --priority-regulators. '
+                                'A preference, never a requirement')
+
+    parser.add_argument('--version', action='version', version='GEP Results Analyzer v1.1')
     
     args = parser.parse_args()
     

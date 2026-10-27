@@ -1,0 +1,1527 @@
+Gene	Position	Rule	Correct	N_Regulators	MSE	Score
+CycD	1	CycD	4	3	N/A	1.9375
+CycD	2	~CycA & (CycE | ~CycD)	4	3	N/A	1.9375
+CycD	3	~CycD & ~E2F	4	2	N/A	1.9375
+CycD	4	~CycD | (~CycB & ~E2F)	4	3	N/A	1.9375
+CycD	5	Cdh1 & ~E2F	4	2	N/A	1.9375
+CycD	6	~CycB & ~CycD	4	2	N/A	1.9375
+CycD	7	~CycA & ~CycD	4	2	N/A	1.9375
+CycD	8	~CycD & (~E2F | ~p27)	4	3	N/A	1.9375
+CycD	9	Cdh1 & ~CycD	4	2	N/A	1.9375
+CycD	10	~CycD | ~Rb	4	2	N/A	1.9375
+CycD	11	Cdh1 & ~CycB & ~CycD	4	3	N/A	1.9375
+CycD	12	~Cdc20 & (~Cdh1 | ~E2F)	4	3	N/A	1.9375
+CycD	13	~Cdc20 & (UbcH10 | ~CycD)	4	3	N/A	1.9375
+CycD	14	~Cdc20 & ~E2F	4	2	N/A	1.9375
+CycD	15	~CycD | (Cdh1 & CycB)	4	3	N/A	1.9375
+CycD	16	~Rb | (CycE & ~CycD)	4	3	N/A	1.9375
+CycD	17	UbcH10 | (CycE & p27)	4	3	N/A	1.9375
+CycD	18	~CycD & (~Rb | ~UbcH10)	4	3	N/A	1.9375
+CycD	19	~CycD | (CycB & UbcH10)	4	3	N/A	1.9375
+CycD	20	~CycA & ~E2F	4	2	N/A	1.9375
+CycD	21	UbcH10 | (~CycA & ~CycD)	4	3	N/A	1.9375
+CycD	22	UbcH10 | ~CycD	4	2	N/A	1.9375
+CycD	23	~CycD & (~UbcH10 | ~p27)	4	3	N/A	1.9375
+CycD	24	~CycD & (Cdh1 | UbcH10)	4	3	N/A	1.9375
+CycD	25	~CycD | (~E2F & ~Rb)	4	3	N/A	1.9375
+CycD	26	~CycD & (~CycE | ~E2F)	4	3	N/A	1.9375
+CycD	27	~CycD | (CycE & E2F)	4	3	N/A	1.9375
+CycD	28	~CycD | (CycE & ~Rb)	4	3	N/A	1.9375
+CycD	29	~CycD | (Cdc20 & ~Rb)	4	3	N/A	1.9375
+CycD	30	~CycB & (~CycD | ~E2F)	4	3	N/A	1.9375
+CycD	31	UbcH10 | (CycE & ~CycA)	4	3	N/A	1.9375
+CycD	32	~E2F & (~CycB | ~CycD)	4	3	N/A	1.9375
+CycD	33	~CycA | (~CycB & ~Rb)	3	3	N/A	1.6875
+CycD	34	~Cdh1 | ~CycD	3	2	N/A	1.6875
+CycD	35	UbcH10 & (CycE | ~p27)	3	3	N/A	1.6875
+CycD	36	~CycB & ~CycD & ~p27	3	3	N/A	1.6875
+CycD	37	~CycD | ~E2F	3	2	N/A	1.6875
+CycD	38	p27 & ~CycD	3	2	N/A	1.6875
+CycD	39	Cdh1 | p27	3	2	N/A	1.6875
+CycD	40	CycA | ~CycD	3	2	N/A	1.6875
+CycD	41	CycA | ~Cdh1 | ~E2F	3	3	N/A	1.6875
+CycD	42	~CycD & ~CycE	3	2	N/A	1.6875
+CycD	43	~CycA | ~CycB	3	2	N/A	1.6875
+CycD	44	p27 | ~Cdc20	3	2	N/A	1.6875
+CycD	45	Cdh1 & UbcH10	3	2	N/A	1.6875
+CycD	46	Cdh1 & ~CycB	3	2	N/A	1.6875
+CycD	47	E2F | ~CycD | ~Rb	3	3	N/A	1.6875
+CycD	48	Cdh1 & CycE	3	2	N/A	1.6875
+CycD	49	~p27 | (~CycD & ~E2F)	3	3	N/A	1.6875
+CycD	50	UbcH10 | (Cdh1 & CycA)	3	3	N/A	1.6875
+CycD	51	CycE & p27	3	2	N/A	1.6875
+CycD	52	E2F | ~CycB	3	2	N/A	1.6875
+CycD	53	CycE | UbcH10	3	2	N/A	1.6875
+CycD	54	Cdh1 & ~p27	3	2	N/A	1.6875
+CycD	55	~CycD | (Cdh1 & E2F)	3	3	N/A	1.6875
+CycD	56	CycE | ~CycD	3	2	N/A	1.6875
+CycD	57	UbcH10 & ~CycD	3	2	N/A	1.6875
+CycD	58	Rb & ~CycD	3	2	N/A	1.6875
+CycD	59	Cdh1 | (CycB & p27)	3	3	N/A	1.6875
+CycD	60	~CycD & ~Rb	3	2	N/A	1.6875
+CycD	61	~CycA | ~Rb	3	2	N/A	1.6875
+CycD	62	Cdh1 | (p27 & ~UbcH10)	3	3	N/A	1.6875
+CycD	63	~Rb | (CycB & UbcH10)	3	3	N/A	1.6875
+CycD	64	~E2F | ~Rb	3	2	N/A	1.6875
+CycD	65	~CycB | ~CycD	3	2	N/A	1.6875
+CycD	66	UbcH10 | p27	3	2	N/A	1.6875
+CycD	67	UbcH10 & ~Rb	3	2	N/A	1.6875
+CycD	68	p27 | ~CycD	3	2	N/A	1.6875
+CycD	69	~CycA & ~Rb	3	2	N/A	1.6875
+CycD	70	Cdh1 | UbcH10 | ~CycD	3	3	N/A	1.6875
+CycD	71	~CycD | ~p27	3	2	N/A	1.6875
+CycD	72	~Cdc20 & ~Rb	3	2	N/A	1.6875
+CycD	73	p27 & ~E2F	3	2	N/A	1.6875
+CycD	74	UbcH10 | ~Cdc20	3	2	N/A	1.6875
+CycD	75	Cdh1 | UbcH10	3	2	N/A	1.6875
+CycD	76	Cdh1 | (E2F & ~Rb)	3	3	N/A	1.6875
+CycD	77	Cdh1 & ~CycD & ~UbcH10	3	3	N/A	1.6875
+CycD	78	UbcH10 | ~E2F	3	2	N/A	1.6875
+CycD	79	UbcH10 & ~CycA	3	2	N/A	1.6875
+CycD	80	CycA | (~Cdc20 & ~E2F)	3	3	N/A	1.6875
+CycD	81	CycE & Rb & p27	3	3	N/A	1.6875
+CycD	82	~CycD | (E2F & p27)	3	3	N/A	1.6875
+CycD	83	Cdh1 | (CycD & ~CycA)	3	3	N/A	1.6875
+CycD	84	~CycD & ~UbcH10	3	2	N/A	1.6875
+CycD	85	~CycA | (CycE & UbcH10)	3	3	N/A	1.6875
+CycD	86	~CycD	4	1	N/A	1.4375
+CycD	87	Cdh1 & ~CycA & ~CycB & ~E2F	4	4	N/A	1.4375
+CycD	88	~CycD | (~CycE & ~Rb) | (~Rb & ~p27)	4	4	N/A	1.4375
+CycD	89	~CycB	3	1	N/A	1.1875
+CycD	90	Cdh1	3	1	N/A	1.1875
+CycD	91	~Cdc20	3	1	N/A	1.1875
+CycD	92	UbcH10	3	1	N/A	1.1875
+CycD	93	~E2F	3	1	N/A	1.1875
+CycD	94	~Cdc20 & (CycD | UbcH10 | ~E2F)	3	4	N/A	1.1875
+CycD	95	~Rb	3	1	N/A	1.1875
+CycD	96	~CycA	3	1	N/A	1.1875
+CycD	97	~Cdc20 & (~Cdh1 | ~CycB | ~E2F)	3	4	N/A	1.1875
+CycD	98	Cdh1 | (CycE & Rb & p27)	3	4	N/A	1.1875
+CycD	99	UbcH10 | (Cdh1 & CycA & CycB) | (Cdh1 & CycB & CycE)	3	5	N/A	0.7500
+Rb	1	(~CycD & ~CycE & ~CycA & ~CycB) | (p27 & ~CycD & ~CycB)	4	2	N/A	1.9375
+Rb	2	~CycB | (UbcH10 & p27)	4	3	N/A	1.9375
+Rb	3	p27 | (Cdh1 & UbcH10)	4	3	N/A	1.9375
+Rb	4	Cdh1 & (~Cdc20 | ~CycD)	4	3	N/A	1.9375
+Rb	5	~CycA | ~Rb	4	2	N/A	1.9375
+Rb	6	p27 | ~Cdc20	4	2	N/A	1.9375
+Rb	7	UbcH10 | ~Cdc20	4	2	N/A	1.9375
+Rb	8	Cdh1 | UbcH10	4	2	N/A	1.9375
+Rb	9	Cdh1 | p27	4	2	N/A	1.9375
+Rb	10	UbcH10 | p27	4	2	N/A	1.9375
+Rb	11	Cdh1 | p27 | ~CycB	4	3	N/A	1.9375
+Rb	12	p27 | ~Rb	4	2	N/A	1.9375
+Rb	13	UbcH10 | ~CycB	4	2	N/A	1.9375
+Rb	14	Cdh1 | E2F | UbcH10	4	3	N/A	1.9375
+Rb	15	Cdh1 | ~Rb	4	2	N/A	1.9375
+Rb	16	Cdh1 | ~Cdc20	4	2	N/A	1.9375
+Rb	17	Cdh1 | ~CycD	4	2	N/A	1.9375
+Rb	18	E2F | ~CycD	4	2	N/A	1.9375
+Rb	19	Cdh1 & (UbcH10 | p27)	4	3	N/A	1.9375
+Rb	20	~CycA | (Rb & p27)	4	3	N/A	1.9375
+Rb	21	E2F | ~CycB	4	2	N/A	1.9375
+Rb	22	~CycB | (Cdh1 & E2F)	4	3	N/A	1.9375
+Rb	23	E2F | UbcH10 | p27	4	3	N/A	1.9375
+Rb	24	E2F | ~Cdc20	4	2	N/A	1.9375
+Rb	25	Cdh1 | UbcH10 | p27	4	3	N/A	1.9375
+Rb	26	~Cdc20 | ~CycE	4	2	N/A	1.9375
+Rb	27	Cdh1 & (E2F | ~CycD)	4	3	N/A	1.9375
+Rb	28	Cdh1 & (~UbcH10 | ~p27)	4	3	N/A	1.9375
+Rb	29	Cdh1 | UbcH10 | ~CycD	4	3	N/A	1.9375
+Rb	30	Cdh1 | (E2F & UbcH10)	4	3	N/A	1.9375
+Rb	31	~Cdc20 | (CycE & p27)	4	3	N/A	1.9375
+Rb	32	E2F | p27 | ~CycD	4	3	N/A	1.9375
+Rb	33	~CycD | ~CycE | ~Rb	4	3	N/A	1.9375
+Rb	34	E2F | (~Cdc20 & ~CycD)	4	3	N/A	1.9375
+Rb	35	E2F | ~CycB | ~CycD	4	3	N/A	1.9375
+Rb	36	E2F | p27 | ~CycA	4	3	N/A	1.9375
+Rb	37	~Cdc20 & ~CycA	4	2	N/A	1.9375
+Rb	38	~CycB | ~CycD	4	2	N/A	1.9375
+Rb	39	~CycA & (p27 | ~E2F)	4	3	N/A	1.9375
+Rb	40	Cdh1 & ~CycA	4	2	N/A	1.9375
+Rb	41	Cdh1 | (Rb & UbcH10)	4	3	N/A	1.9375
+Rb	42	E2F | UbcH10 | ~CycA	4	3	N/A	1.9375
+Rb	43	Cdh1 | (~CycE & ~E2F)	4	3	N/A	1.9375
+Rb	44	Cdh1 | ~CycA	4	2	N/A	1.9375
+Rb	45	~Cdc20 & ~CycB	4	2	N/A	1.9375
+Rb	46	~CycA | ~CycD	4	2	N/A	1.9375
+Rb	47	Cdh1 | (~CycB & ~E2F)	4	3	N/A	1.9375
+Rb	48	Cdh1 | E2F | p27	4	3	N/A	1.9375
+Rb	49	Cdh1 | (UbcH10 & ~CycA)	4	3	N/A	1.9375
+Rb	50	~Cdc20 & (~CycE | ~UbcH10)	4	3	N/A	1.9375
+Rb	51	~CycB & (~Cdc20 | ~Cdh1)	4	3	N/A	1.9375
+Rb	52	~CycA | ~CycE	4	2	N/A	1.9375
+Rb	53	Cdh1 & ~Cdc20	4	2	N/A	1.9375
+Rb	54	~Cdc20 | ~CycD	4	2	N/A	1.9375
+Rb	55	~Cdc20 | (~CycA & ~CycD)	4	3	N/A	1.9375
+Rb	56	~Cdc20 | (~CycA & ~UbcH10)	4	3	N/A	1.9375
+Rb	57	p27 | ~CycE | ~Rb	4	3	N/A	1.9375
+Rb	58	~Cdc20 | ~CycB	4	2	N/A	1.9375
+Rb	59	p27 | ~CycD	4	2	N/A	1.9375
+Rb	60	Cdh1 & ~Cdc20 & ~CycB	4	3	N/A	1.9375
+Rb	61	p27 | ~CycE	4	2	N/A	1.9375
+Rb	62	~Cdc20 | ~CycA	4	2	N/A	1.9375
+Rb	63	Cdh1 & ~CycB	4	2	N/A	1.9375
+Rb	64	Cdh1 & (~CycD | ~CycE)	4	3	N/A	1.9375
+Rb	65	E2F | ~CycA	4	2	N/A	1.9375
+Rb	66	~CycA & ~CycB	4	2	N/A	1.9375
+Rb	67	Cdh1 | ~CycE	4	2	N/A	1.9375
+Rb	68	~CycA | ~CycB	4	2	N/A	1.9375
+Rb	69	Cdh1 & (~CycA | ~p27)	4	3	N/A	1.9375
+Rb	70	Cdh1 | (CycA & p27)	4	3	N/A	1.9375
+Rb	71	Cdc20 | Cdh1	3	2	N/A	1.6875
+Rb	72	Cdh1 | CycB | CycE	3	3	N/A	1.6875
+Rb	73	Cdc20 | Cdh1 | CycA	3	3	N/A	1.6875
+Rb	74	Cdh1 | Rb	3	2	N/A	1.6875
+Rb	75	Cdh1 | CycB	3	2	N/A	1.6875
+Rb	76	Cdh1 | CycA | UbcH10	3	3	N/A	1.6875
+Rb	77	Cdc20 | Cdh1 | CycB	3	3	N/A	1.6875
+Rb	78	Cdh1 | CycA	3	2	N/A	1.6875
+Rb	79	CycE | E2F | UbcH10	3	3	N/A	1.6875
+Rb	80	E2F | UbcH10	3	2	N/A	1.6875
+Rb	81	Rb | UbcH10	3	2	N/A	1.6875
+Rb	82	E2F | Rb | UbcH10	3	3	N/A	1.6875
+Rb	83	Cdh1 | CycD | E2F	3	3	N/A	1.6875
+Rb	84	UbcH10 | (E2F & p27)	3	3	N/A	1.6875
+Rb	85	Cdh1 | CycD	3	2	N/A	1.6875
+Rb	86	Cdc20 | Cdh1 | ~CycB	3	3	N/A	1.6875
+Rb	87	~CycB | ~UbcH10	3	2	N/A	1.6875
+Rb	88	E2F | ~Cdc20 | ~p27	3	3	N/A	1.6875
+Rb	89	CycD | ~CycA	3	2	N/A	1.6875
+Rb	90	Cdh1 | ~UbcH10	3	2	N/A	1.6875
+Rb	91	Cdh1 | ~CycE | ~E2F	3	3	N/A	1.6875
+Rb	92	p27 | (E2F & ~Cdc20)	3	3	N/A	1.6875
+Rb	93	Cdh1 | CycE	3	2	N/A	1.6875
+Rb	94	CycD | E2F | ~CycA	3	3	N/A	1.6875
+Rb	95	Cdh1 & (CycD | CycE)	3	3	N/A	1.6875
+Rb	96	Cdh1 & (E2F | p27)	3	3	N/A	1.6875
+Rb	97	Cdh1 | ~CycD | ~E2F	3	3	N/A	1.6875
+Rb	98	Cdc20 | Cdh1 | E2F	3	3	N/A	1.6875
+Rb	99	E2F | p27	3	2	N/A	1.6875
+Rb	100	Cdh1 | CycE | UbcH10	3	3	N/A	1.6875
+Rb	101	Cdh1 | CycD | CycE	3	3	N/A	1.6875
+Rb	102	Cdh1 | CycD | UbcH10	3	3	N/A	1.6875
+Rb	103	Cdh1 | CycB | E2F	3	3	N/A	1.6875
+Rb	104	Cdh1 | CycA | CycD	3	3	N/A	1.6875
+Rb	105	Cdh1 & p27	3	2	N/A	1.6875
+Rb	106	CycE | ~Cdc20 | ~E2F	3	3	N/A	1.6875
+Rb	107	~Cdc20 & ~CycA & ~UbcH10	3	3	N/A	1.6875
+Rb	108	CycD | ~Cdc20 | ~E2F	3	3	N/A	1.6875
+Rb	109	~CycB & ~UbcH10	3	2	N/A	1.6875
+Rb	110	CycE | ~Cdc20	3	2	N/A	1.6875
+Rb	111	Cdh1 | CycA | ~Cdc20	3	3	N/A	1.6875
+Rb	112	Cdh1 & (CycD | ~Rb)	3	3	N/A	1.6875
+Rb	113	Cdc20 | Cdh1 | UbcH10	3	3	N/A	1.6875
+Rb	114	Cdh1 | CycE | E2F	3	3	N/A	1.6875
+Rb	115	~Cdc20 | ~Cdh1	3	2	N/A	1.6875
+Rb	116	Cdc20 | Cdh1 | CycE	3	3	N/A	1.6875
+Rb	117	CycB | Rb | UbcH10	3	3	N/A	1.6875
+Rb	118	Cdc20 | Cdh1 | p27	3	3	N/A	1.6875
+Rb	119	~CycA | ~E2F	3	2	N/A	1.6875
+Rb	120	p27 | (CycE & E2F)	3	3	N/A	1.6875
+Rb	121	Cdh1 | CycB | ~Cdc20	3	3	N/A	1.6875
+Rb	122	Cdh1 | CycE | p27	3	3	N/A	1.6875
+Rb	123	~CycE | ~Rb	3	2	N/A	1.6875
+Rb	124	Cdh1 | ~E2F	3	2	N/A	1.6875
+Rb	125	~CycA & ~CycD	3	2	N/A	1.6875
+Rb	126	Cdh1 | (CycB & CycE)	3	3	N/A	1.6875
+Rb	127	~CycB & ~CycE	3	2	N/A	1.6875
+Rb	128	Cdh1	4	1	N/A	1.4375
+Rb	129	~CycA	4	1	N/A	1.4375
+Rb	130	Cdh1 | (CycB & CycD & E2F)	4	4	N/A	1.4375
+Rb	131	Cdh1 | E2F | UbcH10 | p27	4	4	N/A	1.4375
+Rb	132	~Cdc20	4	1	N/A	1.4375
+Rb	133	~CycB	4	1	N/A	1.4375
+Rb	134	Cdh1 | UbcH10 | (CycA & p27)	4	4	N/A	1.4375
+Rb	135	(p27 & ~CycE) | (p27 & ~E2F) | (~Cdc20 & ~CycE) | (~Cdc20 & ~E2F)	4	4	N/A	1.4375
+Rb	136	Cdh1 & (Cdc20 | ~CycA) & (CycE | ~CycA)	4	4	N/A	1.4375
+Rb	137	Cdh1 & (CycD | CycE | ~Rb)	4	4	N/A	1.4375
+Rb	138	p27	3	1	N/A	1.1875
+Rb	139	True	3	1	N/A	1.1875
+Rb	140	CycB | CycD | UbcH10 | p27	3	4	N/A	1.1875
+Rb	141	Cdh1 & (CycD | UbcH10) & (UbcH10 | p27)	3	4	N/A	1.1875
+Rb	142	Cdc20 | Cdh1 | (CycD & p27)	3	4	N/A	1.1875
+Rb	143	Cdh1 | CycA | CycE | p27	3	4	N/A	1.1875
+Rb	144	CycB | UbcH10 | p27 | ~Rb	3	4	N/A	1.1875
+Rb	145	CycA | CycE | E2F | UbcH10	3	4	N/A	1.1875
+Rb	146	Cdh1 | CycA | CycE | E2F	3	4	N/A	1.1875
+Rb	147	Cdh1 | p27 | (Cdc20 & CycB)	3	4	N/A	1.1875
+Rb	148	Cdh1 | CycB | E2F | UbcH10	3	4	N/A	1.1875
+Rb	149	~CycE	3	1	N/A	1.1875
+Rb	150	~CycD	3	1	N/A	1.1875
+Rb	151	p27 | (Cdc20 & Cdh1) | (Cdh1 & E2F)	3	4	N/A	1.1875
+Rb	152	Rb & (~Cdc20 | ~Cdh1) & (~Cdc20 | ~CycE)	3	4	N/A	1.1875
+Rb	153	Cdh1 | Rb | p27 | ~Cdc20	3	4	N/A	1.1875
+Rb	154	p27 & ~UbcH10 & (CycB | Rb)	3	4	N/A	1.1875
+Rb	155	Cdh1 | ~UbcH10 | (CycD & CycE)	3	4	N/A	1.1875
+Rb	156	Cdc20 | E2F | p27 | (Cdh1 & UbcH10)	3	5	N/A	0.7500
+Rb	157	Cdh1 | CycD | CycE | UbcH10 | p27	3	5	N/A	0.7500
+Rb	158	Cdh1 | CycE | E2F | Rb | p27	3	5	N/A	0.7500
+Rb	159	Cdh1 | CycB | CycD | CycE | E2F	3	5	N/A	0.7500
+E2F	1	(~Rb & ~CycA & ~CycB) | (p27 & ~Rb & ~CycB)	4	2	N/A	1.9375
+E2F	2	~CycA & ~CycB & ~p27	4	3	N/A	1.9375
+E2F	3	~CycA & ~Rb	4	2	N/A	1.9375
+E2F	4	~Rb & ~p27	4	2	N/A	1.9375
+E2F	5	~CycE & ~E2F	4	2	N/A	1.9375
+E2F	6	~CycB & ~Rb	4	2	N/A	1.9375
+E2F	7	~E2F & ~Rb	4	2	N/A	1.9375
+E2F	8	~CycB & ~p27	4	2	N/A	1.9375
+E2F	9	UbcH10 & ~CycA	4	2	N/A	1.9375
+E2F	10	UbcH10 | (CycE & E2F)	4	3	N/A	1.9375
+E2F	11	UbcH10 & ~CycB & ~E2F	4	3	N/A	1.9375
+E2F	12	UbcH10 & ~CycB & ~CycE	4	3	N/A	1.9375
+E2F	13	UbcH10 & (CycA | ~CycB)	4	3	N/A	1.9375
+E2F	14	UbcH10 & ~CycB	4	2	N/A	1.9375
+E2F	15	UbcH10 & ~E2F	4	2	N/A	1.9375
+E2F	16	UbcH10 & (~CycD | ~CycE)	4	3	N/A	1.9375
+E2F	17	Cdh1 & (Cdc20 | UbcH10)	4	3	N/A	1.9375
+E2F	18	Cdh1 & UbcH10	4	2	N/A	1.9375
+E2F	19	~Cdc20 & ~Rb	4	2	N/A	1.9375
+E2F	20	UbcH10 & ~Cdc20	4	2	N/A	1.9375
+E2F	21	UbcH10 | (Cdc20 & Cdh1)	4	3	N/A	1.9375
+E2F	22	UbcH10 & ~CycE	4	2	N/A	1.9375
+E2F	23	UbcH10 | (~Cdc20 & ~p27)	4	3	N/A	1.9375
+E2F	24	Cdh1 & ~Rb	4	2	N/A	1.9375
+E2F	25	UbcH10 & (~CycB | ~p27)	4	3	N/A	1.9375
+E2F	26	~Cdc20 & ~CycE & ~E2F	4	3	N/A	1.9375
+E2F	27	~CycD & ~CycE	4	2	N/A	1.9375
+E2F	28	Cdh1 & ~p27	4	2	N/A	1.9375
+E2F	29	UbcH10 & (Cdh1 | E2F)	4	3	N/A	1.9375
+E2F	30	~CycD & ~Rb	4	2	N/A	1.9375
+E2F	31	~CycD & ~p27	4	2	N/A	1.9375
+E2F	32	UbcH10 & (~Cdh1 | ~CycB)	4	3	N/A	1.9375
+E2F	33	UbcH10 | ~Rb	4	2	N/A	1.9375
+E2F	34	UbcH10 & ~Rb	4	2	N/A	1.9375
+E2F	35	~Rb | (CycB & UbcH10)	4	3	N/A	1.9375
+E2F	36	UbcH10 | (CycB & ~Rb)	4	3	N/A	1.9375
+E2F	37	UbcH10 | (~Rb & ~p27)	4	3	N/A	1.9375
+E2F	38	UbcH10 | (CycA & p27)	4	3	N/A	1.9375
+E2F	39	UbcH10 | (~Cdh1 & ~CycB)	4	3	N/A	1.9375
+E2F	40	~Cdh1 & ~E2F & ~Rb	3	3	N/A	1.6875
+E2F	41	~p27 & (~Rb | ~UbcH10)	3	3	N/A	1.6875
+E2F	42	~Cdh1 & ~CycE	3	2	N/A	1.6875
+E2F	43	~E2F & ~p27	3	2	N/A	1.6875
+E2F	44	Cdc20 | UbcH10	3	2	N/A	1.6875
+E2F	45	CycA | UbcH10	3	2	N/A	1.6875
+E2F	46	UbcH10 & p27	3	2	N/A	1.6875
+E2F	47	CycD & UbcH10	3	2	N/A	1.6875
+E2F	48	UbcH10 & (CycA | CycB)	3	3	N/A	1.6875
+E2F	49	CycB | UbcH10	3	2	N/A	1.6875
+E2F	50	CycB & UbcH10	3	2	N/A	1.6875
+E2F	51	E2F & UbcH10	3	2	N/A	1.6875
+E2F	52	CycB & ~CycD	3	2	N/A	1.6875
+E2F	53	CycB & CycE & E2F	3	3	N/A	1.6875
+E2F	54	Cdc20 & UbcH10	3	2	N/A	1.6875
+E2F	55	CycB & ~Rb	3	2	N/A	1.6875
+E2F	56	CycA & UbcH10	3	2	N/A	1.6875
+E2F	57	CycB & E2F & ~CycE	3	3	N/A	1.6875
+E2F	58	E2F & ~Cdh1	3	2	N/A	1.6875
+E2F	59	CycA & CycD & UbcH10	3	3	N/A	1.6875
+E2F	60	Cdh1 & CycA	3	2	N/A	1.6875
+E2F	61	CycE & UbcH10	3	2	N/A	1.6875
+E2F	62	Cdh1 & E2F & UbcH10	3	3	N/A	1.6875
+E2F	63	Cdc20 & Cdh1	3	2	N/A	1.6875
+E2F	64	CycE & E2F	3	2	N/A	1.6875
+E2F	65	UbcH10 & (Cdc20 | CycA)	3	3	N/A	1.6875
+E2F	66	~Cdc20 & ~CycD	3	2	N/A	1.6875
+E2F	67	Cdc20 & p27	3	2	N/A	1.6875
+E2F	68	Cdc20 & CycA & p27	3	3	N/A	1.6875
+E2F	69	Cdh1 & CycB & UbcH10	3	3	N/A	1.6875
+E2F	70	~CycE & ~Rb & ~UbcH10	3	3	N/A	1.6875
+E2F	71	UbcH10 | (Cdc20 & CycE)	3	3	N/A	1.6875
+E2F	72	Cdh1 & CycB & CycE	3	3	N/A	1.6875
+E2F	73	Cdh1 & CycB	3	2	N/A	1.6875
+E2F	74	Cdc20 | ~Rb	3	2	N/A	1.6875
+E2F	75	CycA | CycB | ~p27	3	3	N/A	1.6875
+E2F	76	CycE & ~Rb & ~p27	3	3	N/A	1.6875
+E2F	77	Rb & UbcH10	3	2	N/A	1.6875
+E2F	78	Cdc20 & E2F	3	2	N/A	1.6875
+E2F	79	CycA & E2F	3	2	N/A	1.6875
+E2F	80	Cdh1 & ~CycE	3	2	N/A	1.6875
+E2F	81	~CycE & (~CycB | ~E2F)	3	3	N/A	1.6875
+E2F	82	CycB & p27	3	2	N/A	1.6875
+E2F	83	CycA & E2F & UbcH10	3	3	N/A	1.6875
+E2F	84	CycA & UbcH10 & p27	3	3	N/A	1.6875
+E2F	85	Cdc20 & Cdh1 & p27	3	3	N/A	1.6875
+E2F	86	Cdh1 & CycA & UbcH10	3	3	N/A	1.6875
+E2F	87	Cdh1 & CycD & UbcH10	3	3	N/A	1.6875
+E2F	88	Cdc20 & CycA & UbcH10	3	3	N/A	1.6875
+E2F	89	UbcH10 & ~Cdh1	3	2	N/A	1.6875
+E2F	90	CycA & ~Cdc20	3	2	N/A	1.6875
+E2F	91	CycA & CycE & UbcH10	3	3	N/A	1.6875
+E2F	92	UbcH10 | (CycB & Rb)	3	3	N/A	1.6875
+E2F	93	Cdc20 & Cdh1 & UbcH10	3	3	N/A	1.6875
+E2F	94	~Rb | (~CycB & ~CycE)	3	3	N/A	1.6875
+E2F	95	Cdh1 & CycA & E2F	3	3	N/A	1.6875
+E2F	96	~Cdh1 | ~Rb	3	2	N/A	1.6875
+E2F	97	CycD & Rb & UbcH10	3	3	N/A	1.6875
+E2F	98	~Rb & ~UbcH10	3	2	N/A	1.6875
+E2F	99	UbcH10 | ~Rb | ~p27	3	3	N/A	1.6875
+E2F	100	Rb & UbcH10 & ~CycE	3	3	N/A	1.6875
+E2F	101	Cdc20 & UbcH10 & p27	3	3	N/A	1.6875
+E2F	102	CycA & CycB & UbcH10	3	3	N/A	1.6875
+E2F	103	CycE & Rb & UbcH10	3	3	N/A	1.6875
+E2F	104	~Rb	4	1	N/A	1.4375
+E2F	105	UbcH10	4	1	N/A	1.4375
+E2F	106	False	3	1	N/A	1.1875
+E2F	107	~p27	3	1	N/A	1.1875
+E2F	108	~CycE	3	1	N/A	1.1875
+E2F	109	CycE & UbcH10 & (CycB | E2F)	3	4	N/A	1.1875
+E2F	110	UbcH10 | (Cdc20 & CycD) | (Cdc20 & CycE)	3	4	N/A	1.1875
+E2F	111	Cdh1 & CycE & E2F & UbcH10	3	4	N/A	1.1875
+E2F	112	~CycD	3	1	N/A	1.1875
+E2F	113	CycE & E2F & UbcH10 & p27	3	4	N/A	1.1875
+E2F	114	Cdh1 & UbcH10 & (CycB | CycD)	3	4	N/A	1.1875
+E2F	115	Cdc20 & E2F & UbcH10 & p27	3	4	N/A	1.1875
+E2F	116	Cdc20 & Cdh1 & CycB & Rb	3	4	N/A	1.1875
+E2F	117	CycB & E2F & UbcH10 & p27	3	4	N/A	1.1875
+E2F	118	UbcH10 | (E2F & Rb) | (E2F & p27)	3	4	N/A	1.1875
+E2F	119	Cdh1 & CycA & E2F & UbcH10	3	4	N/A	1.1875
+E2F	120	Cdc20 & Cdh1 & E2F & UbcH10 & p27	3	5	N/A	0.7500
+E2F	121	Cdc20 & Cdh1 & Rb & UbcH10 & p27	3	5	N/A	0.7500
+E2F	122	Cdh1 & CycB & CycD & UbcH10 & p27	3	5	N/A	0.7500
+E2F	123	Cdc20 & Cdh1 & CycB & CycE & E2F	3	5	N/A	0.7500
+CycE	1	E2F & ~Rb	4	3	N/A	1.9375
+CycE	2	~CycB & ~UbcH10	4	2	N/A	1.9375
+CycE	3	~UbcH10 & (Cdh1 | ~CycB)	4	3	N/A	1.9375
+CycE	4	Rb & p27	4	2	N/A	1.9375
+CycE	5	E2F | p27	4	2	N/A	1.9375
+CycE	6	Cdh1 & Rb	4	2	N/A	1.9375
+CycE	7	p27 & ~CycB	4	2	N/A	1.9375
+CycE	8	Cdh1 & p27	4	2	N/A	1.9375
+CycE	9	Rb & ~CycB	4	2	N/A	1.9375
+CycE	10	p27 | (CycE & ~CycA)	4	3	N/A	1.9375
+CycE	11	~Cdc20 & ~CycA & ~UbcH10	4	3	N/A	1.9375
+CycE	12	Rb & ~Cdc20	4	2	N/A	1.9375
+CycE	13	Rb & (Cdh1 | E2F)	4	3	N/A	1.9375
+CycE	14	Rb & ~CycA	4	2	N/A	1.9375
+CycE	15	p27 & (Cdh1 | CycD)	4	3	N/A	1.9375
+CycE	16	E2F | (~Cdc20 & ~UbcH10)	4	3	N/A	1.9375
+CycE	17	~CycB & (p27 | ~Cdh1)	4	3	N/A	1.9375
+CycE	18	p27 & (CycD | ~UbcH10)	4	3	N/A	1.9375
+CycE	19	Cdh1 & Rb & p27	4	3	N/A	1.9375
+CycE	20	~CycA & (CycB | Rb)	4	3	N/A	1.9375
+CycE	21	Cdh1 & ~UbcH10	4	2	N/A	1.9375
+CycE	22	Cdh1 & Rb & ~UbcH10	4	3	N/A	1.9375
+CycE	23	p27 | (CycB & UbcH10)	4	3	N/A	1.9375
+CycE	24	Cdh1 & (CycE | p27)	4	3	N/A	1.9375
+CycE	25	~CycA & ~UbcH10	4	2	N/A	1.9375
+CycE	26	p27 | (~CycB & ~UbcH10)	4	3	N/A	1.9375
+CycE	27	p27 | (CycB & E2F)	4	3	N/A	1.9375
+CycE	28	p27 | (E2F & Rb)	4	3	N/A	1.9375
+CycE	29	Cdh1 & E2F	3	2	N/A	1.6875
+CycE	30	CycD & E2F	3	2	N/A	1.6875
+CycE	31	CycE | E2F	3	2	N/A	1.6875
+CycE	32	UbcH10 | p27	3	2	N/A	1.6875
+CycE	33	E2F & p27	3	2	N/A	1.6875
+CycE	34	Rb | (CycE & p27)	3	3	N/A	1.6875
+CycE	35	Cdh1 | E2F	3	2	N/A	1.6875
+CycE	36	Cdh1 & (~Cdc20 | ~UbcH10)	3	3	N/A	1.6875
+CycE	37	E2F & Rb & p27	3	3	N/A	1.6875
+CycE	38	CycE & Rb & p27	3	3	N/A	1.6875
+CycE	39	CycD & Rb & p27	3	3	N/A	1.6875
+CycE	40	CycE | p27	3	2	N/A	1.6875
+CycE	41	Rb | p27	3	2	N/A	1.6875
+CycE	42	E2F & Rb	3	2	N/A	1.6875
+CycE	43	CycA | (Rb & p27)	3	3	N/A	1.6875
+CycE	44	CycB | p27	3	2	N/A	1.6875
+CycE	45	CycB | Rb	3	2	N/A	1.6875
+CycE	46	E2F | (CycA & p27)	3	3	N/A	1.6875
+CycE	47	E2F & (Rb | p27)	3	3	N/A	1.6875
+CycE	48	CycD & p27	3	2	N/A	1.6875
+CycE	49	CycE & p27	3	2	N/A	1.6875
+CycE	50	E2F | ~CycA	3	2	N/A	1.6875
+CycE	51	CycA | p27	3	2	N/A	1.6875
+CycE	52	E2F | Rb	3	2	N/A	1.6875
+CycE	53	Rb & (E2F | UbcH10)	3	3	N/A	1.6875
+CycE	54	Cdh1 & CycD	3	2	N/A	1.6875
+CycE	55	Rb & (Cdh1 | CycE)	3	3	N/A	1.6875
+CycE	56	p27 | (CycA & Rb)	3	3	N/A	1.6875
+CycE	57	Cdh1 | p27	3	2	N/A	1.6875
+CycE	58	Cdh1 & CycE	3	2	N/A	1.6875
+CycE	59	Cdh1 & CycE & p27	3	3	N/A	1.6875
+CycE	60	Cdh1 & (CycA | CycE)	3	3	N/A	1.6875
+CycE	61	E2F & (Cdh1 | Rb)	3	3	N/A	1.6875
+CycE	62	Cdh1 | (E2F & p27)	3	3	N/A	1.6875
+CycE	63	Cdh1 & (CycE | ~CycB)	3	3	N/A	1.6875
+CycE	64	~CycA | ~Rb	3	2	N/A	1.6875
+CycE	65	Cdh1 | (Rb & p27)	3	3	N/A	1.6875
+CycE	66	Rb & ~CycD	3	2	N/A	1.6875
+CycE	67	p27 & (CycA | CycD)	3	3	N/A	1.6875
+CycE	68	CycA | Rb | p27	3	3	N/A	1.6875
+CycE	69	UbcH10 | ~Cdc20	3	2	N/A	1.6875
+CycE	70	Cdh1 & ~CycA	3	2	N/A	1.6875
+CycE	71	CycA | Rb	3	2	N/A	1.6875
+CycE	72	p27 & ~CycD	3	2	N/A	1.6875
+CycE	73	Rb | (Cdh1 & CycD)	3	3	N/A	1.6875
+CycE	74	E2F | (UbcH10 & ~Cdh1)	3	3	N/A	1.6875
+CycE	75	CycB | E2F | p27	3	3	N/A	1.6875
+CycE	76	CycE | Rb	3	2	N/A	1.6875
+CycE	77	Cdh1 | ~Rb	3	2	N/A	1.6875
+CycE	78	~CycA & ~CycB	3	2	N/A	1.6875
+CycE	79	Rb & ~CycA & ~CycE	3	3	N/A	1.6875
+CycE	80	CycA | CycD | p27	3	3	N/A	1.6875
+CycE	81	Cdh1 & CycE & Rb	3	3	N/A	1.6875
+CycE	82	Cdh1 & E2F & Rb	3	3	N/A	1.6875
+CycE	83	Cdc20 | p27	3	2	N/A	1.6875
+CycE	84	E2F | UbcH10 | p27	3	3	N/A	1.6875
+CycE	85	p27 & (Cdc20 | CycD)	3	3	N/A	1.6875
+CycE	86	CycD | p27	3	2	N/A	1.6875
+CycE	87	p27	4	1	N/A	1.4375
+CycE	88	Rb & (Cdh1 | CycD) & (Cdh1 | UbcH10)	4	4	N/A	1.4375
+CycE	89	Cdh1 & (CycB | Rb | p27)	4	4	N/A	1.4375
+CycE	90	E2F | (Cdh1 & CycB) | (Cdh1 & Rb)	4	4	N/A	1.4375
+CycE	91	Cdh1 & (CycA | CycD | p27)	4	4	N/A	1.4375
+CycE	92	p27 & (Cdc20 | Cdh1 | CycD)	4	4	N/A	1.4375
+CycE	93	Cdh1 & Rb & (Cdc20 | p27)	4	4	N/A	1.4375
+CycE	94	~UbcH10	3	1	N/A	1.1875
+CycE	95	Rb	3	1	N/A	1.1875
+CycE	96	E2F	3	1	N/A	1.1875
+CycE	97	Cdh1	3	1	N/A	1.1875
+CycE	98	~CycB	3	1	N/A	1.1875
+CycE	99	~CycA	3	1	N/A	1.1875
+CycE	100	Cdh1 | (CycA & CycD & E2F)	3	4	N/A	1.1875
+CycE	101	~Cdc20	3	1	N/A	1.1875
+CycE	102	p27 | (Cdc20 & Cdh1) | (Cdc20 & CycA)	3	4	N/A	1.1875
+CycE	103	Rb | p27 | (Cdh1 & CycA)	3	4	N/A	1.1875
+CycE	104	Cdh1 & Rb & (E2F | UbcH10)	3	4	N/A	1.1875
+CycE	105	Cdh1 & CycD & Rb & p27	3	4	N/A	1.1875
+CycE	106	p27 | (CycB & CycD) | (CycB & Rb) | (CycD & UbcH10) | (Rb & UbcH10)	3	5	N/A	0.7500
+CycA	1	(E2F & ~Rb & ~Cdc20 & ~(Cdh1 & UbcH10)) | (CycA & ~Rb & ~Cdc20 & ~(Cdh1 & UbcH10))	4	3	N/A	1.9375
+CycA	2	Cdh1 & CycE	4	2	N/A	1.9375
+CycA	3	Cdh1 & CycE & ~CycD	4	3	N/A	1.9375
+CycA	4	CycE & p27	4	2	N/A	1.9375
+CycA	5	Cdh1 & CycE & Rb	4	3	N/A	1.9375
+CycA	6	~CycA & ~CycD & ~UbcH10	4	3	N/A	1.9375
+CycA	7	~Cdc20 & ~CycD & ~UbcH10	4	3	N/A	1.9375
+CycA	8	CycE & Rb & p27	4	3	N/A	1.9375
+CycA	9	Cdh1 & CycE & p27	4	3	N/A	1.9375
+CycA	10	CycE & Rb & ~CycA	4	3	N/A	1.9375
+CycA	11	CycE & ~CycA	4	2	N/A	1.9375
+CycA	12	p27 & ~CycD & ~E2F	4	3	N/A	1.9375
+CycA	13	p27 & ~E2F	4	2	N/A	1.9375
+CycA	14	CycE & ~CycB	4	2	N/A	1.9375
+CycA	15	Rb & (UbcH10 | ~CycD)	4	3	N/A	1.9375
+CycA	16	p27 & (CycE | UbcH10)	4	3	N/A	1.9375
+CycA	17	CycE & ~Cdc20	4	2	N/A	1.9375
+CycA	18	p27 & (Cdc20 | CycE)	4	3	N/A	1.9375
+CycA	19	CycE & (E2F | p27)	4	3	N/A	1.9375
+CycA	20	CycE & (Cdh1 | p27)	4	3	N/A	1.9375
+CycA	21	~CycA & (CycB | CycE)	4	3	N/A	1.9375
+CycA	22	p27 & (CycA | ~CycD)	4	3	N/A	1.9375
+CycA	23	CycE & Rb & ~Cdc20	4	3	N/A	1.9375
+CycA	24	CycE & (~Cdc20 | ~CycA)	4	3	N/A	1.9375
+CycA	25	~CycD & ~UbcH10	4	2	N/A	1.9375
+CycA	26	CycE & E2F & UbcH10	3	3	N/A	1.6875
+CycA	27	CycE & E2F	3	2	N/A	1.6875
+CycA	28	Cdh1 & CycE & E2F	3	3	N/A	1.6875
+CycA	29	Cdc20 & Cdh1	3	2	N/A	1.6875
+CycA	30	CycE & E2F & ~Cdh1	3	3	N/A	1.6875
+CycA	31	Cdc20 & Cdh1 & CycE	3	3	N/A	1.6875
+CycA	32	Cdh1 & CycA & Rb	3	3	N/A	1.6875
+CycA	33	CycE & UbcH10	3	2	N/A	1.6875
+CycA	34	Cdh1 & Rb	3	2	N/A	1.6875
+CycA	35	Rb & UbcH10	3	2	N/A	1.6875
+CycA	36	CycE & Rb	3	2	N/A	1.6875
+CycA	37	CycE & UbcH10 & ~Cdh1	3	3	N/A	1.6875
+CycA	38	CycA & UbcH10	3	2	N/A	1.6875
+CycA	39	CycD & CycE & E2F	3	3	N/A	1.6875
+CycA	40	Cdh1 & CycD & CycE	3	3	N/A	1.6875
+CycA	41	CycE & UbcH10 & p27	3	3	N/A	1.6875
+CycA	42	Cdh1 & CycA & CycE	3	3	N/A	1.6875
+CycA	43	CycA & p27	3	2	N/A	1.6875
+CycA	44	Cdh1 & p27	3	2	N/A	1.6875
+CycA	45	CycB & p27	3	2	N/A	1.6875
+CycA	46	Cdh1 & Rb & UbcH10	3	3	N/A	1.6875
+CycA	47	Cdc20 & p27	3	2	N/A	1.6875
+CycA	48	Cdc20 & E2F	3	2	N/A	1.6875
+CycA	49	Rb & p27	3	2	N/A	1.6875
+CycA	50	CycA & ~Rb	3	2	N/A	1.6875
+CycA	51	CycD & UbcH10	3	2	N/A	1.6875
+CycA	52	CycA & E2F	3	2	N/A	1.6875
+CycA	53	UbcH10 & p27	3	2	N/A	1.6875
+CycA	54	Cdh1 & CycB	3	2	N/A	1.6875
+CycA	55	Cdh1 & CycA	3	2	N/A	1.6875
+CycA	56	CycB & E2F	3	2	N/A	1.6875
+CycA	57	Cdc20 & UbcH10 & p27	3	3	N/A	1.6875
+CycA	58	p27 & ~Cdh1	3	2	N/A	1.6875
+CycA	59	Cdh1 & UbcH10 & p27	3	3	N/A	1.6875
+CycA	60	CycB & UbcH10 & p27	3	3	N/A	1.6875
+CycA	61	Cdc20 & UbcH10	3	2	N/A	1.6875
+CycA	62	CycB & E2F & p27	3	3	N/A	1.6875
+CycA	63	CycD & UbcH10 & p27	3	3	N/A	1.6875
+CycA	64	CycA & CycD & UbcH10	3	3	N/A	1.6875
+CycA	65	CycB & CycE & p27	3	3	N/A	1.6875
+CycA	66	Cdh1 & CycB & Rb	3	3	N/A	1.6875
+CycA	67	CycE & ~E2F	3	2	N/A	1.6875
+CycA	68	CycA & UbcH10 & p27	3	3	N/A	1.6875
+CycA	69	Cdh1 & CycD & UbcH10	3	3	N/A	1.6875
+CycA	70	Cdc20 & Cdh1 & CycB	3	3	N/A	1.6875
+CycA	71	p27 | (CycE & UbcH10)	3	3	N/A	1.6875
+CycA	72	CycE & E2F & p27	3	3	N/A	1.6875
+CycA	73	CycA & CycE & E2F	3	3	N/A	1.6875
+CycA	74	Cdc20 | CycE	3	2	N/A	1.6875
+CycA	75	CycE & UbcH10 & ~p27	3	3	N/A	1.6875
+CycA	76	CycE & (Cdc20 | p27)	3	3	N/A	1.6875
+CycA	77	Cdh1 & CycA & CycD	3	3	N/A	1.6875
+CycA	78	Cdc20 & Cdh1 & p27	3	3	N/A	1.6875
+CycA	79	~Cdh1 & ~CycE	3	2	N/A	1.6875
+CycA	80	CycE & E2F & Rb	3	3	N/A	1.6875
+CycA	81	Cdh1 & CycA & UbcH10	3	3	N/A	1.6875
+CycA	82	Cdh1 & CycB & p27	3	3	N/A	1.6875
+CycA	83	CycB & UbcH10	3	2	N/A	1.6875
+CycA	84	Cdc20 & (Cdh1 | p27)	3	3	N/A	1.6875
+CycA	85	CycA & ~CycE	3	2	N/A	1.6875
+CycA	86	p27 | (E2F & UbcH10)	3	3	N/A	1.6875
+CycA	87	CycE & ~Rb	3	2	N/A	1.6875
+CycA	88	CycA & E2F & UbcH10	3	3	N/A	1.6875
+CycA	89	Cdh1 & CycE & UbcH10	3	3	N/A	1.6875
+CycA	90	UbcH10 & (CycE | E2F)	3	3	N/A	1.6875
+CycA	91	Rb & (~CycA | ~CycE)	3	3	N/A	1.6875
+CycA	92	Cdc20 & CycB & E2F	3	3	N/A	1.6875
+CycA	93	CycE & (~Cdc20 | ~p27)	3	3	N/A	1.6875
+CycA	94	p27 & ~Cdc20	3	2	N/A	1.6875
+CycA	95	Cdh1 & (Cdc20 | p27)	3	3	N/A	1.6875
+CycA	96	Cdh1 & CycB & E2F	3	3	N/A	1.6875
+CycA	97	E2F & (CycE | UbcH10)	3	3	N/A	1.6875
+CycA	98	CycD & CycE & UbcH10	3	3	N/A	1.6875
+CycA	99	Cdh1 & CycA & p27	3	3	N/A	1.6875
+CycA	100	Cdh1 & Rb & ~CycB	3	3	N/A	1.6875
+CycA	101	CycE & Rb & UbcH10	3	3	N/A	1.6875
+CycA	102	CycE & ~Cdh1 & ~CycD	3	3	N/A	1.6875
+CycA	103	Cdc20 & Cdh1 & UbcH10	3	3	N/A	1.6875
+CycA	104	Cdc20 & Cdh1 & CycA	3	3	N/A	1.6875
+CycA	105	Cdc20 & CycE & p27	3	3	N/A	1.6875
+CycA	106	CycA & Rb & UbcH10	3	3	N/A	1.6875
+CycA	107	CycB | CycE	3	2	N/A	1.6875
+CycA	108	CycA & CycE & UbcH10	3	3	N/A	1.6875
+CycA	109	p27 & ~E2F & (~CycD | ~UbcH10)	4	4	N/A	1.4375
+CycA	110	Rb & p27 & (Cdc20 | CycE)	4	4	N/A	1.4375
+CycA	111	False	3	1	N/A	1.1875
+CycA	112	CycE	3	1	N/A	1.1875
+CycA	113	Cdc20 & Cdh1 & CycA & CycE	3	4	N/A	1.1875
+CycA	114	Cdh1 & CycD & CycE & p27	3	4	N/A	1.1875
+CycA	115	p27	3	1	N/A	1.1875
+CycA	116	p27 | (CycA & CycB & UbcH10)	3	4	N/A	1.1875
+CycA	117	Cdc20 & CycE & UbcH10 & p27	3	4	N/A	1.1875
+CycA	118	CycA & (Cdh1 | E2F | p27)	3	4	N/A	1.1875
+CycA	119	UbcH10 | (Cdh1 & CycE & Rb)	3	4	N/A	1.1875
+CycA	120	Cdc20 & Cdh1 & CycE & p27	3	4	N/A	1.1875
+CycA	121	CycA & CycE & E2F & p27	3	4	N/A	1.1875
+CycA	122	Cdc20 & CycE & Rb & p27	3	4	N/A	1.1875
+CycA	123	Cdh1 & CycD & CycE & Rb	3	4	N/A	1.1875
+CycA	124	~CycD	3	1	N/A	1.1875
+CycA	125	Cdh1 & CycB & CycD & CycE	3	4	N/A	1.1875
+CycA	126	Rb & (Cdh1 | CycE) & (Cdh1 | UbcH10)	3	4	N/A	1.1875
+CycA	127	CycE | (Rb & UbcH10 & p27)	3	4	N/A	1.1875
+CycA	128	Cdc20 & Cdh1 & CycE & Rb	3	4	N/A	1.1875
+CycA	129	CycE & (Cdc20 | Cdh1) & (Cdh1 | CycB)	3	4	N/A	1.1875
+CycA	130	CycB & CycE & Rb & UbcH10	3	4	N/A	1.1875
+CycA	131	Cdh1 & CycE & E2F & UbcH10 & p27	3	5	N/A	0.7500
+CycA	132	Cdh1 & Rb & UbcH10 & (CycB | CycE)	3	5	N/A	0.7500
+CycA	133	Cdh1 & (CycA | CycB | CycE | Rb)	3	5	N/A	0.7500
+CycA	134	Cdh1 & CycA & CycD & E2F & UbcH10	3	5	N/A	0.7500
+CycA	135	Cdc20 & CycA & CycE & E2F & p27	3	5	N/A	0.7500
+CycA	136	Cdh1 & CycB & CycE & (Cdc20 | CycD)	3	5	N/A	0.7500
+CycA	137	Cdh1 & CycA & CycE & E2F & UbcH10	3	5	N/A	0.7500
+CycA	138	Cdh1 & CycA & CycE & Rb & UbcH10	3	5	N/A	0.7500
+CycA	139	Cdc20 & Cdh1 & CycA & CycD & Rb	3	5	N/A	0.7500
+p27	1	(~CycD & ~CycE & ~CycA & ~CycB) | (p27 & ~(CycE & CycA) & ~CycB & ~CycD)	4	2	N/A	1.9375
+p27	2	Cdh1 | ~Rb	4	2	N/A	1.9375
+p27	3	Cdh1 | (CycA & p27)	4	3	N/A	1.9375
+p27	4	UbcH10 | ~CycB	4	2	N/A	1.9375
+p27	5	Cdh1 | E2F | UbcH10	4	3	N/A	1.9375
+p27	6	Cdh1 | E2F	4	2	N/A	1.9375
+p27	7	Cdh1 | UbcH10	4	2	N/A	1.9375
+p27	8	Cdh1 | (CycA & UbcH10)	4	3	N/A	1.9375
+p27	9	UbcH10 | p27	4	2	N/A	1.9375
+p27	10	UbcH10 | p27 | ~CycB	4	3	N/A	1.9375
+p27	11	Cdh1 | E2F | p27	4	3	N/A	1.9375
+p27	12	Cdh1 | p27	4	2	N/A	1.9375
+p27	13	Cdh1 | (~CycA & ~E2F)	4	3	N/A	1.9375
+p27	14	~CycA | ~CycB	4	2	N/A	1.9375
+p27	15	~Rb | (p27 & ~UbcH10)	4	3	N/A	1.9375
+p27	16	Cdh1 | (~Cdc20 & ~Rb)	4	3	N/A	1.9375
+p27	17	Cdh1 | UbcH10 | p27	4	3	N/A	1.9375
+p27	18	Cdh1 | ~Cdc20	4	2	N/A	1.9375
+p27	19	UbcH10 | p27 | ~Cdc20	4	3	N/A	1.9375
+p27	20	Cdh1 & (CycA | ~CycB)	4	3	N/A	1.9375
+p27	21	~CycB | (~CycE & ~E2F)	4	3	N/A	1.9375
+p27	22	~Cdc20 | ~CycA | ~CycE	4	3	N/A	1.9375
+p27	23	Cdh1 | ~CycE	4	2	N/A	1.9375
+p27	24	UbcH10 | (p27 & ~CycA)	4	3	N/A	1.9375
+p27	25	p27 | ~Rb	4	2	N/A	1.9375
+p27	26	Cdh1 | (CycD & UbcH10)	4	3	N/A	1.9375
+p27	27	E2F | ~CycA	4	2	N/A	1.9375
+p27	28	Cdh1 & ~CycA	4	2	N/A	1.9375
+p27	29	Cdh1 | (CycD & p27)	4	3	N/A	1.9375
+p27	30	UbcH10 | ~Cdc20	4	2	N/A	1.9375
+p27	31	~CycD | ~CycE	4	2	N/A	1.9375
+p27	32	~Cdc20 & (p27 | ~CycE)	4	3	N/A	1.9375
+p27	33	Cdh1 | (CycD & ~CycB)	4	3	N/A	1.9375
+p27	34	~CycB & (~CycD | ~CycE)	4	3	N/A	1.9375
+p27	35	Cdh1 | UbcH10 | ~CycB	4	3	N/A	1.9375
+p27	36	~CycB | ~CycE	4	2	N/A	1.9375
+p27	37	E2F | ~Cdc20	4	2	N/A	1.9375
+p27	38	~CycA | ~CycE	4	2	N/A	1.9375
+p27	39	~Cdc20 | ~CycE	4	2	N/A	1.9375
+p27	40	Cdh1 & (CycE | ~CycA)	4	3	N/A	1.9375
+p27	41	Cdh1 & ~CycB	4	2	N/A	1.9375
+p27	42	Cdh1 & ~Cdc20	4	2	N/A	1.9375
+p27	43	~Cdc20 | (~CycD & ~CycE)	4	3	N/A	1.9375
+p27	44	~Cdc20 | ~Rb	4	2	N/A	1.9375
+p27	45	p27 | (~Cdc20 & ~CycE)	4	3	N/A	1.9375
+p27	46	E2F | ~CycD	4	2	N/A	1.9375
+p27	47	p27 | ~CycB	4	2	N/A	1.9375
+p27	48	UbcH10 | (Rb & p27)	4	3	N/A	1.9375
+p27	49	UbcH10 | ~CycA	4	2	N/A	1.9375
+p27	50	p27 | ~CycA	4	2	N/A	1.9375
+p27	51	Cdh1 | (UbcH10 & p27)	4	3	N/A	1.9375
+p27	52	Cdh1 | UbcH10 | ~Cdc20	4	3	N/A	1.9375
+p27	53	p27 | ~CycE | ~Rb	4	3	N/A	1.9375
+p27	54	p27 | ~CycE	4	2	N/A	1.9375
+p27	55	p27 | ~CycD	4	2	N/A	1.9375
+p27	56	p27 | ~Cdc20	4	2	N/A	1.9375
+p27	57	(Rb & p27) | (~Cdc20 & ~Rb)	4	3	N/A	1.9375
+p27	58	Cdh1 | (CycB & E2F)	4	3	N/A	1.9375
+p27	59	Cdh1 | (Rb & p27)	4	3	N/A	1.9375
+p27	60	~Cdc20 & ~CycB	4	2	N/A	1.9375
+p27	61	Cdh1 | (~CycA & ~p27)	4	3	N/A	1.9375
+p27	62	Cdh1 | CycD	3	2	N/A	1.6875
+p27	63	Cdh1 & p27	3	2	N/A	1.6875
+p27	64	Cdh1 | Rb	3	2	N/A	1.6875
+p27	65	CycA | Rb | UbcH10	3	3	N/A	1.6875
+p27	66	Rb | UbcH10	3	2	N/A	1.6875
+p27	67	E2F | UbcH10	3	2	N/A	1.6875
+p27	68	Cdc20 | Cdh1 | E2F	3	3	N/A	1.6875
+p27	69	E2F | p27	3	2	N/A	1.6875
+p27	70	Cdh1 | ~p27	3	2	N/A	1.6875
+p27	71	Cdc20 | Cdh1 | CycB	3	3	N/A	1.6875
+p27	72	Cdh1 | CycA	3	2	N/A	1.6875
+p27	73	Cdc20 | Rb | UbcH10	3	3	N/A	1.6875
+p27	74	Rb & (Cdh1 | UbcH10)	3	3	N/A	1.6875
+p27	75	Cdh1 | CycB	3	2	N/A	1.6875
+p27	76	Cdc20 | UbcH10 | p27	3	3	N/A	1.6875
+p27	77	Rb | UbcH10 | p27	3	3	N/A	1.6875
+p27	78	Cdc20 | Cdh1	3	2	N/A	1.6875
+p27	79	Cdh1 | CycB | E2F	3	3	N/A	1.6875
+p27	80	Cdh1 | E2F | Rb	3	3	N/A	1.6875
+p27	81	Rb & p27	3	2	N/A	1.6875
+p27	82	Cdh1 | CycB | p27	3	3	N/A	1.6875
+p27	83	Cdh1 | CycE	3	2	N/A	1.6875
+p27	84	Rb | ~E2F	3	2	N/A	1.6875
+p27	85	Cdh1 & (CycD | Rb)	3	3	N/A	1.6875
+p27	86	E2F | (Cdh1 & CycE)	3	3	N/A	1.6875
+p27	87	Cdc20 | Cdh1 | ~CycA	3	3	N/A	1.6875
+p27	88	Cdh1 | CycB | ~CycD	3	3	N/A	1.6875
+p27	89	Cdh1 | CycD | CycE	3	3	N/A	1.6875
+p27	90	Cdh1 | ~UbcH10	3	2	N/A	1.6875
+p27	91	UbcH10 | ~CycD	3	2	N/A	1.6875
+p27	92	Cdh1 | CycA | CycD	3	3	N/A	1.6875
+p27	93	Cdh1 & Rb	3	2	N/A	1.6875
+p27	94	Cdh1 | CycE | Rb	3	3	N/A	1.6875
+p27	95	CycE | ~CycB	3	2	N/A	1.6875
+p27	96	Cdh1 | CycB | ~CycE	3	3	N/A	1.6875
+p27	97	CycB | UbcH10 | p27	3	3	N/A	1.6875
+p27	98	UbcH10 | ~CycE	3	2	N/A	1.6875
+p27	99	~Cdc20 & ~E2F	3	2	N/A	1.6875
+p27	100	Cdh1 & ~CycB & ~CycD	3	3	N/A	1.6875
+p27	101	Cdh1 | CycA | CycE	3	3	N/A	1.6875
+p27	102	p27 | (CycD & UbcH10)	3	3	N/A	1.6875
+p27	103	p27 | ~E2F	3	2	N/A	1.6875
+p27	104	Cdh1 | CycD | E2F	3	3	N/A	1.6875
+p27	105	E2F | Rb | UbcH10	3	3	N/A	1.6875
+p27	106	p27 & (CycD | Rb)	3	3	N/A	1.6875
+p27	107	CycE | Rb | ~CycB	3	3	N/A	1.6875
+p27	108	Cdh1 | CycB | UbcH10	3	3	N/A	1.6875
+p27	109	Rb | p27 | ~CycE	3	3	N/A	1.6875
+p27	110	Cdh1 | Rb | p27	3	3	N/A	1.6875
+p27	111	~Cdh1 | ~CycB	3	2	N/A	1.6875
+p27	112	~CycB	4	1	N/A	1.4375
+p27	113	Cdh1	4	1	N/A	1.4375
+p27	114	~CycA	4	1	N/A	1.4375
+p27	115	~Cdc20	4	1	N/A	1.4375
+p27	116	Cdh1 | ~Cdc20 | (~CycA & ~CycE)	4	4	N/A	1.4375
+p27	117	Cdh1 | CycA | E2F | UbcH10	3	4	N/A	1.1875
+p27	118	True	3	1	N/A	1.1875
+p27	119	p27	3	1	N/A	1.1875
+p27	120	Cdh1 | CycE | UbcH10 | p27	3	4	N/A	1.1875
+p27	121	~CycD	3	1	N/A	1.1875
+p27	122	Cdc20 | Cdh1 | CycE | E2F	3	4	N/A	1.1875
+p27	123	Cdh1 | CycD | CycE | E2F	3	4	N/A	1.1875
+p27	124	Cdh1 | E2F | Rb | p27	3	4	N/A	1.1875
+p27	125	~CycE	3	1	N/A	1.1875
+p27	126	Cdh1 | (Cdc20 & CycB) | (CycB & CycE)	3	4	N/A	1.1875
+p27	127	Cdc20 | Cdh1 | CycA | Rb	3	4	N/A	1.1875
+p27	128	Cdh1 | CycB | CycD | UbcH10	3	4	N/A	1.1875
+p27	129	Cdh1 | CycB | Rb | p27	3	4	N/A	1.1875
+p27	130	Cdh1 | CycA | CycB | CycE	3	4	N/A	1.1875
+p27	131	Cdh1 | CycA | CycD | p27	3	4	N/A	1.1875
+p27	132	Cdh1 | CycA | CycD | UbcH10	3	4	N/A	1.1875
+p27	133	E2F | Rb | p27 | ~Cdc20	3	4	N/A	1.1875
+p27	134	Rb & (Cdh1 | CycA) & (Cdh1 | E2F)	3	4	N/A	1.1875
+p27	135	(Cdh1 & CycB) | (Cdh1 & E2F) | (Cdh1 & p27) | (CycB & UbcH10) | (E2F & UbcH10)	3	5	N/A	0.7500
+p27	136	Cdh1 | CycB | CycD | CycE | p27	3	5	N/A	0.7500
+Cdc20	1	CycB	4	3	N/A	1.9375
+Cdc20	2	Cdh1 & CycB	4	2	N/A	1.9375
+Cdc20	3	Cdc20 & Cdh1 & E2F	4	3	N/A	1.9375
+Cdc20	4	Cdh1 & CycB & Rb	4	3	N/A	1.9375
+Cdc20	5	CycA & ~Cdc20	4	2	N/A	1.9375
+Cdc20	6	Cdc20 & p27	4	2	N/A	1.9375
+Cdc20	7	CycA & CycB & E2F	4	3	N/A	1.9375
+Cdc20	8	p27 & ~Cdh1	4	2	N/A	1.9375
+Cdc20	9	CycA & CycE & UbcH10	4	3	N/A	1.9375
+Cdc20	10	Cdc20 & CycB & p27	4	3	N/A	1.9375
+Cdc20	11	Cdc20 & Cdh1	4	2	N/A	1.9375
+Cdc20	12	E2F & UbcH10	4	2	N/A	1.9375
+Cdc20	13	CycB & E2F	4	2	N/A	1.9375
+Cdc20	14	Cdc20 & Cdh1 & CycE	4	3	N/A	1.9375
+Cdc20	15	Rb & UbcH10 & p27	4	3	N/A	1.9375
+Cdc20	16	CycA & E2F & UbcH10	4	3	N/A	1.9375
+Cdc20	17	Cdc20 & CycB & E2F	4	3	N/A	1.9375
+Cdc20	18	Cdc20 & Cdh1 & ~UbcH10	4	3	N/A	1.9375
+Cdc20	19	CycA & UbcH10	4	2	N/A	1.9375
+Cdc20	20	CycB & p27	4	2	N/A	1.9375
+Cdc20	21	Rb & UbcH10	4	2	N/A	1.9375
+Cdc20	22	CycE & UbcH10	4	2	N/A	1.9375
+Cdc20	23	CycA & p27	4	2	N/A	1.9375
+Cdc20	24	Cdc20 & Cdh1 & p27	4	3	N/A	1.9375
+Cdc20	25	CycB & Rb & UbcH10	4	3	N/A	1.9375
+Cdc20	26	Cdc20 & Rb & UbcH10	4	3	N/A	1.9375
+Cdc20	27	Cdh1 & CycA	4	2	N/A	1.9375
+Cdc20	28	CycA & E2F	4	2	N/A	1.9375
+Cdc20	29	CycA & CycB & p27	4	3	N/A	1.9375
+Cdc20	30	CycD & CycE & ~CycB	4	3	N/A	1.9375
+Cdc20	31	CycE & E2F & UbcH10	4	3	N/A	1.9375
+Cdc20	32	CycB & UbcH10	4	2	N/A	1.9375
+Cdc20	33	CycD & ~Rb	4	2	N/A	1.9375
+Cdc20	34	Cdc20 & UbcH10	4	2	N/A	1.9375
+Cdc20	35	Cdc20 & Cdh1 & CycB	4	3	N/A	1.9375
+Cdc20	36	Cdh1 & CycB & CycE	4	3	N/A	1.9375
+Cdc20	37	Cdc20 & CycB & UbcH10	4	3	N/A	1.9375
+Cdc20	38	CycE & E2F	4	2	N/A	1.9375
+Cdc20	39	CycD & Rb & UbcH10	4	3	N/A	1.9375
+Cdc20	40	CycD & UbcH10	4	2	N/A	1.9375
+Cdc20	41	UbcH10 & p27 & ~Cdc20	4	3	N/A	1.9375
+Cdc20	42	E2F & ~CycD	4	2	N/A	1.9375
+Cdc20	43	Cdc20 & ~CycD & ~p27	4	3	N/A	1.9375
+Cdc20	44	CycA & E2F & ~UbcH10	4	3	N/A	1.9375
+Cdc20	45	CycA & CycD & ~CycE	4	3	N/A	1.9375
+Cdc20	46	CycE & E2F & ~p27	4	3	N/A	1.9375
+Cdc20	47	CycA & CycE & E2F	4	3	N/A	1.9375
+Cdc20	48	Cdh1 & CycA & E2F	4	3	N/A	1.9375
+Cdc20	49	Cdc20 & E2F	4	2	N/A	1.9375
+Cdc20	50	CycA & E2F & p27	4	3	N/A	1.9375
+Cdc20	51	CycA & CycD & E2F	4	3	N/A	1.9375
+Cdc20	52	CycE & E2F & p27	4	3	N/A	1.9375
+Cdc20	53	CycD & CycE & E2F	4	3	N/A	1.9375
+Cdc20	54	UbcH10 & p27	4	2	N/A	1.9375
+Cdc20	55	CycA & CycD & p27	4	3	N/A	1.9375
+Cdc20	56	Cdh1 & E2F & UbcH10	4	3	N/A	1.9375
+Cdc20	57	CycD & ~CycA & ~E2F	4	3	N/A	1.9375
+Cdc20	58	CycA & Rb & p27	4	3	N/A	1.9375
+Cdc20	59	CycA & CycE & p27	4	3	N/A	1.9375
+Cdc20	60	Cdh1 & CycB & E2F	4	3	N/A	1.9375
+Cdc20	61	CycB & ~CycA & ~Rb	4	3	N/A	1.9375
+Cdc20	62	CycB & ~Cdc20	4	2	N/A	1.9375
+Cdc20	63	CycB & ~CycE	4	2	N/A	1.9375
+Cdc20	64	Cdc20 & E2F & p27	4	3	N/A	1.9375
+Cdc20	65	Cdc20 & CycE & p27	4	3	N/A	1.9375
+Cdc20	66	CycB & CycE & UbcH10	4	3	N/A	1.9375
+Cdc20	67	UbcH10 & p27 & ~CycA	4	3	N/A	1.9375
+Cdc20	68	~Cdh1 & ~CycE	4	2	N/A	1.9375
+Cdc20	69	E2F & ~Rb	4	2	N/A	1.9375
+Cdc20	70	p27 & ~Rb	4	2	N/A	1.9375
+Cdc20	71	CycA & CycB & UbcH10	4	3	N/A	1.9375
+Cdc20	72	UbcH10 & ~Cdh1 & ~Rb	4	3	N/A	1.9375
+Cdc20	73	Cdc20 & CycB & ~Rb	4	3	N/A	1.9375
+Cdc20	74	Cdh1 & UbcH10 & p27	4	3	N/A	1.9375
+Cdc20	75	Cdh1 & CycB & UbcH10	4	3	N/A	1.9375
+Cdc20	76	CycA & (E2F | p27)	4	3	N/A	1.9375
+Cdc20	77	Cdc20 & ~Rb	4	2	N/A	1.9375
+Cdc20	78	Cdc20 & E2F & ~p27	4	3	N/A	1.9375
+Cdc20	79	Cdc20 & CycD & p27	4	3	N/A	1.9375
+Cdc20	80	E2F & UbcH10 & p27	4	3	N/A	1.9375
+Cdc20	81	CycB & CycD & p27	4	3	N/A	1.9375
+Cdc20	82	CycA & p27 & ~UbcH10	4	3	N/A	1.9375
+Cdc20	83	~Cdc20 & ~Rb & ~UbcH10	4	3	N/A	1.9375
+Cdc20	84	CycB & (~CycD | ~Rb)	4	3	N/A	1.9375
+Cdc20	85	CycA & CycB & ~Cdc20	4	3	N/A	1.9375
+Cdc20	86	CycB & ~Rb	4	2	N/A	1.9375
+Cdc20	87	Cdc20 & ~CycA	4	2	N/A	1.9375
+Cdc20	88	Cdc20 & (~CycA | ~CycB)	4	3	N/A	1.9375
+Cdc20	89	CycD & UbcH10 & p27	4	3	N/A	1.9375
+Cdc20	90	CycA & ~CycD	4	2	N/A	1.9375
+Cdc20	91	CycB & E2F & UbcH10	4	3	N/A	1.9375
+Cdc20	92	Cdc20 & CycA & ~CycD	4	3	N/A	1.9375
+Cdc20	93	~Cdh1 & ~CycA & ~Rb	4	3	N/A	1.9375
+Cdc20	94	E2F & UbcH10 & ~CycD	4	3	N/A	1.9375
+Cdc20	95	CycB & ~CycD	4	2	N/A	1.9375
+Cdc20	96	CycB & E2F & p27	4	3	N/A	1.9375
+Cdc20	97	Cdc20 & UbcH10 & p27	4	3	N/A	1.9375
+Cdc20	98	CycB & CycD & E2F	4	3	N/A	1.9375
+Cdc20	99	Cdc20 & E2F & ~Cdh1	4	3	N/A	1.9375
+Cdc20	100	Cdc20 & CycE & E2F	4	3	N/A	1.9375
+Cdc20	101	Cdh1 & ~Rb & ~UbcH10	4	3	N/A	1.9375
+Cdc20	102	CycA & Rb & UbcH10	4	3	N/A	1.9375
+Cdc20	103	Cdc20 & Cdh1 & Rb	4	3	N/A	1.9375
+Cdc20	104	E2F & Rb & UbcH10	4	3	N/A	1.9375
+Cdc20	105	Cdh1 & Rb & UbcH10	4	3	N/A	1.9375
+Cdc20	106	Cdc20 & Cdh1 & UbcH10	4	3	N/A	1.9375
+Cdc20	107	Cdc20 & CycE & UbcH10	4	3	N/A	1.9375
+Cdc20	108	Cdc20 & (Cdh1 | ~CycB)	4	3	N/A	1.9375
+Cdc20	109	E2F & UbcH10 & ~CycB	4	3	N/A	1.9375
+Cdc20	110	Cdh1 & CycD & CycE	4	3	N/A	1.9375
+Cdc20	111	CycE & Rb & UbcH10	4	3	N/A	1.9375
+Cdc20	112	Cdh1 & CycB & CycD	4	3	N/A	1.9375
+Cdc20	113	Cdh1 & CycA & UbcH10	4	3	N/A	1.9375
+Cdc20	114	Cdh1 & UbcH10	3	2	N/A	1.6875
+Cdc20	115	Cdh1 & CycD & E2F	3	3	N/A	1.6875
+Cdc20	116	CycD & p27	3	2	N/A	1.6875
+Cdc20	117	Cdc20 & CycD	3	2	N/A	1.6875
+Cdc20	118	E2F & p27	3	2	N/A	1.6875
+Cdc20	119	Cdh1 & E2F	3	2	N/A	1.6875
+Cdc20	120	CycB & Rb	3	2	N/A	1.6875
+Cdc20	121	Cdc20 & Rb	3	2	N/A	1.6875
+Cdc20	122	CycA & Rb	3	2	N/A	1.6875
+Cdc20	123	E2F & Rb	3	2	N/A	1.6875
+Cdc20	124	Cdc20 & CycB	3	2	N/A	1.6875
+Cdc20	125	CycB & CycE	3	2	N/A	1.6875
+Cdc20	126	Cdc20 & CycE & Rb	3	3	N/A	1.6875
+Cdc20	127	~Rb & ~p27	3	2	N/A	1.6875
+Cdc20	128	CycD & E2F	3	2	N/A	1.6875
+Cdc20	129	Cdc20 & CycA	3	2	N/A	1.6875
+Cdc20	130	Rb & ~CycD	3	2	N/A	1.6875
+Cdc20	131	Cdh1 & p27 & ~CycD	3	3	N/A	1.6875
+Cdc20	132	CycA & CycB	3	2	N/A	1.6875
+Cdc20	133	Cdh1 & CycD	3	2	N/A	1.6875
+Cdc20	134	CycA & CycB & CycD	3	3	N/A	1.6875
+Cdc20	135	CycB & CycD	3	2	N/A	1.6875
+Cdc20	136	CycB & CycD & CycE	3	3	N/A	1.6875
+Cdc20	137	CycA & CycB & CycE	3	3	N/A	1.6875
+Cdc20	138	CycA & CycE	3	2	N/A	1.6875
+Cdc20	139	Cdh1 & ~CycD & ~p27	3	3	N/A	1.6875
+Cdc20	140	CycE & p27	3	2	N/A	1.6875
+Cdc20	141	p27 & ~CycE	3	2	N/A	1.6875
+Cdc20	142	Cdc20 & CycE	3	2	N/A	1.6875
+Cdc20	143	CycA & ~p27	3	2	N/A	1.6875
+Cdc20	144	UbcH10 & ~CycB	3	2	N/A	1.6875
+Cdc20	145	CycA & CycD	3	2	N/A	1.6875
+Cdc20	146	CycB & ~E2F	3	2	N/A	1.6875
+Cdc20	147	E2F & ~CycA	3	2	N/A	1.6875
+Cdc20	148	CycD & E2F & Rb	3	3	N/A	1.6875
+Cdc20	149	E2F & ~UbcH10	3	2	N/A	1.6875
+Cdc20	150	E2F & (~CycB | ~UbcH10)	3	3	N/A	1.6875
+Cdc20	151	CycA & ~UbcH10	3	2	N/A	1.6875
+Cdc20	152	UbcH10 & (Cdh1 | p27)	3	3	N/A	1.6875
+Cdc20	153	CycB & CycD & Rb	3	3	N/A	1.6875
+Cdc20	154	Cdc20 & CycA & CycE	3	3	N/A	1.6875
+Cdc20	155	CycA & CycB & Rb	3	3	N/A	1.6875
+Cdc20	156	CycD & E2F & p27	3	3	N/A	1.6875
+Cdc20	157	Cdc20 & CycA & CycB	3	3	N/A	1.6875
+Cdc20	158	~Cdc20 & ~Rb	3	2	N/A	1.6875
+Cdc20	159	CycE & Rb & p27	3	3	N/A	1.6875
+Cdc20	160	Cdc20 & (~Rb | ~p27)	3	3	N/A	1.6875
+Cdc20	161	CycD & ~E2F	3	2	N/A	1.6875
+Cdc20	162	E2F & p27 & ~CycA	3	3	N/A	1.6875
+Cdc20	163	CycD & CycE	3	2	N/A	1.6875
+Cdc20	164	CycB & (UbcH10 | ~p27)	3	3	N/A	1.6875
+Cdc20	165	p27 & ~CycD	3	2	N/A	1.6875
+Cdc20	166	Cdh1 & CycE	3	2	N/A	1.6875
+Cdc20	167	CycA & (CycE | p27)	3	3	N/A	1.6875
+Cdc20	168	UbcH10 & (Cdh1 | Rb)	3	3	N/A	1.6875
+Cdc20	169	CycB & ~UbcH10	3	2	N/A	1.6875
+Cdc20	170	Cdh1 & Rb & UbcH10 & p27	4	4	N/A	1.4375
+Cdc20	171	Cdh1 & CycA & CycD & E2F	4	4	N/A	1.4375
+Cdc20	172	False	4	1	N/A	1.4375
+Cdc20	173	CycA & CycE & Rb & UbcH10	4	4	N/A	1.4375
+Cdc20	174	Cdc20 & E2F & Rb & UbcH10	4	4	N/A	1.4375
+Cdc20	175	Cdc20 & CycE & Rb & UbcH10	4	4	N/A	1.4375
+Cdc20	176	Cdc20 & CycD & E2F & Rb	4	4	N/A	1.4375
+Cdc20	177	CycA & CycD & CycE & p27	4	4	N/A	1.4375
+Cdc20	178	E2F & Rb & ~Cdc20 & ~p27	4	4	N/A	1.4375
+Cdc20	179	Cdh1 & CycD & CycE & UbcH10	4	4	N/A	1.4375
+Cdc20	180	Cdc20 & Cdh1 & CycA & E2F	4	4	N/A	1.4375
+Cdc20	181	Cdh1 & CycA & CycB & UbcH10	4	4	N/A	1.4375
+Cdc20	182	Cdc20 & CycA & CycD & p27	4	4	N/A	1.4375
+Cdc20	183	CycA & CycB & CycD & UbcH10	4	4	N/A	1.4375
+Cdc20	184	Cdh1 & CycB & CycD & UbcH10	4	4	N/A	1.4375
+Cdc20	185	CycB & E2F & UbcH10 & p27	4	4	N/A	1.4375
+Cdc20	186	Cdc20 & CycA & CycE & E2F	4	4	N/A	1.4375
+Cdc20	187	Cdh1 & CycB & Rb & UbcH10	4	4	N/A	1.4375
+Cdc20	188	Cdc20 & CycA & CycB & E2F	4	4	N/A	1.4375
+Cdc20	189	CycA & (CycE | p27) & (E2F | p27)	4	4	N/A	1.4375
+Cdc20	190	Cdc20 & CycA & E2F & ~CycB	4	4	N/A	1.4375
+Cdc20	191	CycB & CycD & CycE & p27	4	4	N/A	1.4375
+Cdc20	192	Cdc20 & CycA & CycB & UbcH10	4	4	N/A	1.4375
+Cdc20	193	Cdc20 & Cdh1 & CycA & p27	4	4	N/A	1.4375
+Cdc20	194	Cdc20 & CycD & UbcH10 & p27	4	4	N/A	1.4375
+Cdc20	195	Cdh1 & CycB & CycD & p27	4	4	N/A	1.4375
+Cdc20	196	Cdc20 & Cdh1 & CycD & p27	4	4	N/A	1.4375
+Cdc20	197	Cdc20 & CycB & E2F & UbcH10	4	4	N/A	1.4375
+Cdc20	198	CycD & CycE & E2F & UbcH10	4	4	N/A	1.4375
+Cdc20	199	CycB & CycE & E2F & UbcH10	4	4	N/A	1.4375
+Cdc20	200	Cdc20 & E2F & (CycD | Rb)	4	4	N/A	1.4375
+Cdc20	201	Cdh1 & (CycB | CycE) & (CycB | E2F)	4	4	N/A	1.4375
+Cdc20	202	Cdc20	3	1	N/A	1.1875
+Cdc20	203	Cdh1 & (CycB | CycD) & (CycB | E2F)	3	4	N/A	1.1875
+Cdc20	204	CycA	3	1	N/A	1.1875
+Cdc20	205	E2F	3	1	N/A	1.1875
+Cdc20	206	~Cdh1	3	1	N/A	1.1875
+Cdc20	207	UbcH10	3	1	N/A	1.1875
+Cdc20	208	CycB & CycE & (CycD | Rb)	3	4	N/A	1.1875
+Cdc20	209	Rb & (UbcH10 | ~CycD) & (p27 | ~CycD)	3	4	N/A	1.1875
+Cdc20	210	CycA & CycB & (Rb | p27)	3	4	N/A	1.1875
+Cdc20	211	CycD & CycE & (CycB | UbcH10)	3	4	N/A	1.1875
+Cdc20	212	~Rb	3	1	N/A	1.1875
+Cdc20	213	CycB	3	1	N/A	1.1875
+Cdc20	214	Cdc20 & CycB & (CycE | E2F)	3	4	N/A	1.1875
+Cdc20	215	CycB & CycD & CycE & Rb	3	4	N/A	1.1875
+Cdc20	216	CycB & (~Cdc20 | ~Cdh1 | ~p27)	3	4	N/A	1.1875
+Cdc20	217	CycA & CycB & CycD & Rb	3	4	N/A	1.1875
+Cdc20	218	Cdc20 & CycA & CycB & CycE	3	4	N/A	1.1875
+Cdc20	219	Cdc20 & CycB & CycD & Rb & p27	4	5	N/A	1.0000
+Cdc20	220	Cdc20 & Cdh1 & CycD & E2F & p27	4	5	N/A	1.0000
+Cdc20	221	Cdh1 & CycA & CycD & CycE & p27	4	5	N/A	1.0000
+Cdc20	222	Cdh1 & CycB & E2F & UbcH10 & p27	4	5	N/A	1.0000
+Cdc20	223	CycA & CycB & CycE & E2F & ~Cdh1	4	5	N/A	1.0000
+Cdc20	224	Cdc20 & CycA & CycD & E2F & Rb	4	5	N/A	1.0000
+Cdc20	225	Cdc20 & CycB & Rb & UbcH10 & p27	4	5	N/A	1.0000
+Cdc20	226	Cdc20 & CycD & Rb & UbcH10 & p27	4	5	N/A	1.0000
+Cdc20	227	Cdh1 & CycD & CycE & E2F & UbcH10 & p27	4	6	N/A	1.0000
+Cdh1	1	(~CycA & ~CycB) | Cdc20 | (p27 & ~CycB)	4	2	N/A	1.9375
+Cdh1	2	CycB | CycD | UbcH10	4	3	N/A	1.9375
+Cdh1	3	CycD | E2F | UbcH10	4	3	N/A	1.9375
+Cdh1	4	CycA | CycD | UbcH10	4	3	N/A	1.9375
+Cdh1	5	Cdc20 | E2F | ~CycE	4	3	N/A	1.9375
+Cdh1	6	E2F | ~p27	4	2	N/A	1.9375
+Cdh1	7	Cdc20 | ~CycE	4	2	N/A	1.9375
+Cdh1	8	CycB | ~CycE	4	2	N/A	1.9375
+Cdh1	9	CycD | ~Rb	4	2	N/A	1.9375
+Cdh1	10	CycB | E2F | UbcH10	4	3	N/A	1.9375
+Cdh1	11	Cdc20 | CycD | UbcH10	4	3	N/A	1.9375
+Cdh1	12	Cdc20 | E2F | UbcH10	4	3	N/A	1.9375
+Cdh1	13	Cdc20 | CycD | ~CycE	4	3	N/A	1.9375
+Cdh1	14	~Cdh1 | ~CycE	4	2	N/A	1.9375
+Cdh1	15	Cdc20 | ~Cdh1 | ~CycE	4	3	N/A	1.9375
+Cdh1	16	CycD | ~Cdh1 | ~CycE	4	3	N/A	1.9375
+Cdh1	17	CycB | E2F | ~p27	4	3	N/A	1.9375
+Cdh1	18	E2F | ~Cdh1 | ~CycE	4	3	N/A	1.9375
+Cdh1	19	Cdc20 | ~CycE | ~Rb	4	3	N/A	1.9375
+Cdh1	20	CycB | (Cdh1 & ~CycE)	4	3	N/A	1.9375
+Cdh1	21	CycD | ~CycE	4	2	N/A	1.9375
+Cdh1	22	CycA | ~CycE	4	2	N/A	1.9375
+Cdh1	23	CycD | (~CycB & ~Rb)	4	3	N/A	1.9375
+Cdh1	24	Cdc20 | CycA | ~CycE	4	3	N/A	1.9375
+Cdh1	25	~CycE | ~p27	4	2	N/A	1.9375
+Cdh1	26	CycA | CycD | ~CycE	4	3	N/A	1.9375
+Cdh1	27	CycD | UbcH10 | ~CycE	4	3	N/A	1.9375
+Cdh1	28	CycD | ~p27	4	2	N/A	1.9375
+Cdh1	29	CycD | (~CycE & ~Rb)	4	3	N/A	1.9375
+Cdh1	30	E2F | UbcH10 | ~Cdh1	4	3	N/A	1.9375
+Cdh1	31	CycB | CycD	3	2	N/A	1.6875
+Cdh1	32	CycB | UbcH10	3	2	N/A	1.6875
+Cdh1	33	UbcH10 | ~p27	3	2	N/A	1.6875
+Cdh1	34	CycA | UbcH10	3	2	N/A	1.6875
+Cdh1	35	CycE | E2F | UbcH10	3	3	N/A	1.6875
+Cdh1	36	CycD | UbcH10 | p27	3	3	N/A	1.6875
+Cdh1	37	CycD | E2F	3	2	N/A	1.6875
+Cdh1	38	CycB | UbcH10 | p27	3	3	N/A	1.6875
+Cdh1	39	Rb | UbcH10	3	2	N/A	1.6875
+Cdh1	40	Cdc20 | CycD	3	2	N/A	1.6875
+Cdh1	41	E2F | UbcH10	3	2	N/A	1.6875
+Cdh1	42	CycD | (UbcH10 & p27)	3	3	N/A	1.6875
+Cdh1	43	Cdh1 | CycD | UbcH10	3	3	N/A	1.6875
+Cdh1	44	CycE | Rb | UbcH10	3	3	N/A	1.6875
+Cdh1	45	CycB | E2F	3	2	N/A	1.6875
+Cdh1	46	CycD & (Cdc20 | p27)	3	3	N/A	1.6875
+Cdh1	47	Cdh1 | CycD	3	2	N/A	1.6875
+Cdh1	48	CycA | CycB | CycD	3	3	N/A	1.6875
+Cdh1	49	Cdc20 | E2F	3	2	N/A	1.6875
+Cdh1	50	CycA | E2F	3	2	N/A	1.6875
+Cdh1	51	Cdc20 | Cdh1	3	2	N/A	1.6875
+Cdh1	52	E2F | ~Cdh1	3	2	N/A	1.6875
+Cdh1	53	Cdh1 | Rb	3	2	N/A	1.6875
+Cdh1	54	Cdc20 | UbcH10	3	2	N/A	1.6875
+Cdh1	55	Cdh1 | CycB	3	2	N/A	1.6875
+Cdh1	56	Cdh1 | CycE	3	2	N/A	1.6875
+Cdh1	57	Cdh1 | CycB | CycD	3	3	N/A	1.6875
+Cdh1	58	Cdh1 & ~CycE	3	2	N/A	1.6875
+Cdh1	59	Cdh1 | CycB | CycE	3	3	N/A	1.6875
+Cdh1	60	CycA | CycD	3	2	N/A	1.6875
+Cdh1	61	Cdh1 | CycA	3	2	N/A	1.6875
+Cdh1	62	Cdh1 | CycA | UbcH10	3	3	N/A	1.6875
+Cdh1	63	CycB | CycD | E2F	3	3	N/A	1.6875
+Cdh1	64	CycA | CycD | E2F	3	3	N/A	1.6875
+Cdh1	65	Cdc20 | CycD | E2F	3	3	N/A	1.6875
+Cdh1	66	CycD | CycE | UbcH10	3	3	N/A	1.6875
+Cdh1	67	~CycA | ~UbcH10	3	2	N/A	1.6875
+Cdh1	68	Cdh1 | CycA | E2F	3	3	N/A	1.6875
+Cdh1	69	Cdh1 | CycE | UbcH10	3	3	N/A	1.6875
+Cdh1	70	Cdh1 | CycD | ~UbcH10	3	3	N/A	1.6875
+Cdh1	71	Cdh1 | CycB | p27	3	3	N/A	1.6875
+Cdh1	72	CycB | E2F | ~Cdh1	3	3	N/A	1.6875
+Cdh1	73	CycA | ~Cdc20	3	2	N/A	1.6875
+Cdh1	74	Cdc20 | Cdh1 | UbcH10	3	3	N/A	1.6875
+Cdh1	75	Cdc20 | ~CycE | ~UbcH10	3	3	N/A	1.6875
+Cdh1	76	Cdh1 | CycB | E2F	3	3	N/A	1.6875
+Cdh1	77	Cdh1 | CycB | UbcH10	3	3	N/A	1.6875
+Cdh1	78	CycB | ~E2F | ~UbcH10	3	3	N/A	1.6875
+Cdh1	79	CycD | ~Cdh1	3	2	N/A	1.6875
+Cdh1	80	CycB | Rb | ~E2F	3	3	N/A	1.6875
+Cdh1	81	CycA | Rb | UbcH10	3	3	N/A	1.6875
+Cdh1	82	Rb | UbcH10 | p27	3	3	N/A	1.6875
+Cdh1	83	CycD | (Cdc20 & UbcH10)	3	3	N/A	1.6875
+Cdh1	84	CycA | CycB | E2F	3	3	N/A	1.6875
+Cdh1	85	CycD | Rb | UbcH10	3	3	N/A	1.6875
+Cdh1	86	CycD | ~CycB	3	2	N/A	1.6875
+Cdh1	87	Cdc20 | CycA | CycD	3	3	N/A	1.6875
+Cdh1	88	Cdh1 | CycD | Rb	3	3	N/A	1.6875
+Cdh1	89	CycD & (CycA | E2F)	3	3	N/A	1.6875
+Cdh1	90	CycA | ~Rb	3	2	N/A	1.6875
+Cdh1	91	Rb | ~Cdc20	3	2	N/A	1.6875
+Cdh1	92	CycD & Rb	3	2	N/A	1.6875
+Cdh1	93	CycD | ~CycA	3	2	N/A	1.6875
+Cdh1	94	E2F | (~CycE & ~p27)	3	3	N/A	1.6875
+Cdh1	95	CycE | UbcH10 | p27	3	3	N/A	1.6875
+Cdh1	96	CycD | Rb | ~E2F	3	3	N/A	1.6875
+Cdh1	97	CycD | Rb | ~CycE	3	3	N/A	1.6875
+Cdh1	98	E2F | UbcH10 | ~CycE	3	3	N/A	1.6875
+Cdh1	99	Cdh1 | Rb | UbcH10	3	3	N/A	1.6875
+Cdh1	100	CycA | CycD | E2F | UbcH10	4	4	N/A	1.4375
+Cdh1	101	CycD	3	1	N/A	1.1875
+Cdh1	102	CycD | Rb | UbcH10 | p27	3	4	N/A	1.1875
+Cdh1	103	CycA | CycD | UbcH10 | p27	3	4	N/A	1.1875
+Cdh1	104	Cdh1 | CycE | E2F | p27	3	4	N/A	1.1875
+Cdh1	105	CycD | CycE | Rb | UbcH10	3	4	N/A	1.1875
+Cdh1	106	True	3	1	N/A	1.1875
+Cdh1	107	~p27	3	1	N/A	1.1875
+Cdh1	108	~CycE	3	1	N/A	1.1875
+Cdh1	109	Cdc20 | Cdh1 | E2F | UbcH10	3	4	N/A	1.1875
+Cdh1	110	Cdh1 | CycD | E2F | UbcH10	3	4	N/A	1.1875
+Cdh1	111	Cdh1 | CycA | E2F | UbcH10	3	4	N/A	1.1875
+Cdh1	112	Cdh1 | CycA | CycD | UbcH10	3	4	N/A	1.1875
+Cdh1	113	CycD & (CycB | UbcH10 | p27)	3	4	N/A	1.1875
+Cdh1	114	Cdc20 | Cdh1 | CycA | CycB	3	4	N/A	1.1875
+Cdh1	115	CycD | (CycB & Rb) | (E2F & Rb)	3	4	N/A	1.1875
+Cdh1	116	Cdc20 | CycD | (~Cdh1 & ~p27)	3	4	N/A	1.1875
+Cdh1	117	CycD | (Cdc20 & UbcH10) | (CycA & UbcH10)	3	4	N/A	1.1875
+Cdh1	118	Cdc20 | CycE | UbcH10 | p27	3	4	N/A	1.1875
+Cdh1	119	CycA | ~UbcH10 | (~CycB & ~CycE)	3	4	N/A	1.1875
+Cdh1	120	CycA | CycD | CycE | UbcH10	3	4	N/A	1.1875
+Cdh1	121	Cdc20 | E2F | UbcH10 | p27	3	4	N/A	1.1875
+Cdh1	122	CycB | Rb | UbcH10 | p27	3	4	N/A	1.1875
+Cdh1	123	CycD | E2F | UbcH10 | p27	3	4	N/A	1.1875
+Cdh1	124	CycD | CycE | E2F | UbcH10	3	4	N/A	1.1875
+Cdh1	125	Cdc20 | Cdh1 | CycD | Rb	3	4	N/A	1.1875
+Cdh1	126	CycA | CycB | CycD | E2F | UbcH10	4	5	N/A	1.0000
+Cdh1	127	Cdc20 | CycA | CycB | E2F | UbcH10	4	5	N/A	1.0000
+Cdh1	128	Cdh1 | CycA | UbcH10 | (CycB & Rb)	3	5	N/A	0.7500
+Cdh1	129	UbcH10 | (Cdc20 & CycA & CycE) | (Cdc20 & CycD & CycE)	3	5	N/A	0.7500
+Cdh1	130	Cdh1 | CycA | CycD | CycE | UbcH10	3	5	N/A	0.7500
+Cdh1	131	UbcH10 | (Cdh1 & CycD) | (Cdh1 & CycE) | (CycA & CycD) | (CycA & CycE)	3	5	N/A	0.7500
+Cdh1	132	Cdh1 | CycB | CycD | CycE | UbcH10	3	5	N/A	0.7500
+Cdh1	133	CycA | CycD | CycE | Rb | UbcH10	3	5	N/A	0.7500
+Cdh1	134	CycB | CycE | E2F | UbcH10 | p27	3	5	N/A	0.7500
+Cdh1	135	CycA | CycD | CycE | E2F | UbcH10	3	5	N/A	0.7500
+UbcH10	1	~Cdh1 | (Cdh1 & UbcH10 & (Cdc20 | CycA | CycB))	4	3	N/A	1.9375
+UbcH10	2	CycB & ~p27	4	2	N/A	1.9375
+UbcH10	3	CycB & Rb	4	2	N/A	1.9375
+UbcH10	4	CycD & ~p27	4	2	N/A	1.9375
+UbcH10	5	CycA & CycB & CycD	4	3	N/A	1.9375
+UbcH10	6	CycA & CycD	4	2	N/A	1.9375
+UbcH10	7	CycB & CycD	4	2	N/A	1.9375
+UbcH10	8	CycA & ~E2F	4	2	N/A	1.9375
+UbcH10	9	Cdc20 & CycD	4	2	N/A	1.9375
+UbcH10	10	Cdc20 & CycA	4	2	N/A	1.9375
+UbcH10	11	Cdc20 | CycB	4	2	N/A	1.9375
+UbcH10	12	CycE & ~Cdh1	4	2	N/A	1.9375
+UbcH10	13	CycA & CycE	4	2	N/A	1.9375
+UbcH10	14	Cdc20 & CycB	4	2	N/A	1.9375
+UbcH10	15	CycA & Rb	4	2	N/A	1.9375
+UbcH10	16	CycA & CycB	4	2	N/A	1.9375
+UbcH10	17	Cdc20 & Rb	4	2	N/A	1.9375
+UbcH10	18	Cdc20 & CycB & Rb	4	3	N/A	1.9375
+UbcH10	19	CycA & (Cdc20 | CycB)	4	3	N/A	1.9375
+UbcH10	20	CycA & CycB & CycE	4	3	N/A	1.9375
+UbcH10	21	CycB & CycE	4	2	N/A	1.9375
+UbcH10	22	~Cdh1 & ~E2F	4	2	N/A	1.9375
+UbcH10	23	CycD & CycE	4	2	N/A	1.9375
+UbcH10	24	CycA | (~Cdh1 & ~UbcH10)	4	3	N/A	1.9375
+UbcH10	25	Cdc20 & CycE	4	2	N/A	1.9375
+UbcH10	26	Cdc20 & CycD & CycE	4	3	N/A	1.9375
+UbcH10	27	Cdc20 & CycA & CycE	4	3	N/A	1.9375
+UbcH10	28	Cdc20 & CycB & CycE	4	3	N/A	1.9375
+UbcH10	29	Cdc20 & (CycD | CycE)	4	3	N/A	1.9375
+UbcH10	30	CycD & (Cdc20 | CycB)	4	3	N/A	1.9375
+UbcH10	31	Cdc20 & CycB & CycD	4	3	N/A	1.9375
+UbcH10	32	CycD & (CycB | ~p27)	4	3	N/A	1.9375
+UbcH10	33	CycD & ~Cdh1	4	2	N/A	1.9375
+UbcH10	34	CycA | CycB	4	2	N/A	1.9375
+UbcH10	35	CycA & ~p27	4	2	N/A	1.9375
+UbcH10	36	Rb & ~p27	4	2	N/A	1.9375
+UbcH10	37	Cdc20 | CycA	4	2	N/A	1.9375
+UbcH10	38	CycD & ~E2F	4	2	N/A	1.9375
+UbcH10	39	Cdc20 & (CycB | CycE)	4	3	N/A	1.9375
+UbcH10	40	Cdc20 & CycA & CycB	4	3	N/A	1.9375
+UbcH10	41	CycA & CycD & CycE	4	3	N/A	1.9375
+UbcH10	42	CycA & (Cdc20 | CycD)	4	3	N/A	1.9375
+UbcH10	43	Cdc20 & CycA & CycD	4	3	N/A	1.9375
+UbcH10	44	CycB & (Rb | p27)	4	3	N/A	1.9375
+UbcH10	45	CycA & (Rb | UbcH10)	4	3	N/A	1.9375
+UbcH10	46	CycD & (CycB | UbcH10)	4	3	N/A	1.9375
+UbcH10	47	CycB & (CycD | p27)	4	3	N/A	1.9375
+UbcH10	48	Rb & (CycA | CycB)	4	3	N/A	1.9375
+UbcH10	49	CycD & (CycA | CycB)	4	3	N/A	1.9375
+UbcH10	50	CycA & (CycB | CycE)	4	3	N/A	1.9375
+UbcH10	51	Cdc20 | ~Cdh1	4	2	N/A	1.9375
+UbcH10	52	~E2F & (Cdc20 | CycD)	4	3	N/A	1.9375
+UbcH10	53	CycA & (Cdc20 | p27)	4	3	N/A	1.9375
+UbcH10	54	CycB & CycD & Rb	4	3	N/A	1.9375
+UbcH10	55	Cdc20 | CycA | CycB	4	3	N/A	1.9375
+UbcH10	56	CycB | (Cdc20 & CycA)	4	3	N/A	1.9375
+UbcH10	57	CycA & CycD & Rb	4	3	N/A	1.9375
+UbcH10	58	CycB & (CycA | UbcH10)	4	3	N/A	1.9375
+UbcH10	59	CycB & ~E2F	4	2	N/A	1.9375
+UbcH10	60	CycB & (Cdh1 | CycA)	4	3	N/A	1.9375
+UbcH10	61	CycB & (Rb | ~Cdh1)	4	3	N/A	1.9375
+UbcH10	62	CycA & (Cdc20 | E2F)	4	3	N/A	1.9375
+UbcH10	63	Cdc20 & ~E2F	4	2	N/A	1.9375
+UbcH10	64	Cdc20 & (CycB | E2F)	4	3	N/A	1.9375
+UbcH10	65	CycB & (Rb | UbcH10)	4	3	N/A	1.9375
+UbcH10	66	CycB & (CycD | CycE)	4	3	N/A	1.9375
+UbcH10	67	CycB & (CycE | Rb)	4	3	N/A	1.9375
+UbcH10	68	CycD & Rb & ~p27	4	3	N/A	1.9375
+UbcH10	69	Cdc20 & (CycB | Rb)	4	3	N/A	1.9375
+UbcH10	70	Cdc20 & CycE & Rb	4	3	N/A	1.9375
+UbcH10	71	Cdc20 & CycD & ~UbcH10	4	3	N/A	1.9375
+UbcH10	72	CycB & UbcH10	3	2	N/A	1.6875
+UbcH10	73	CycE & UbcH10 & ~Cdh1	3	3	N/A	1.6875
+UbcH10	74	CycB & CycE & ~CycA	3	3	N/A	1.6875
+UbcH10	75	CycA & p27	3	2	N/A	1.6875
+UbcH10	76	CycA & CycB & p27	3	3	N/A	1.6875
+UbcH10	77	Cdc20 & CycB & E2F	3	3	N/A	1.6875
+UbcH10	78	CycB & E2F	3	2	N/A	1.6875
+UbcH10	79	Cdc20 & E2F	3	2	N/A	1.6875
+UbcH10	80	CycA & E2F	3	2	N/A	1.6875
+UbcH10	81	Cdc20 | CycE	3	2	N/A	1.6875
+UbcH10	82	Rb & UbcH10	3	2	N/A	1.6875
+UbcH10	83	CycB & Rb & UbcH10	3	3	N/A	1.6875
+UbcH10	84	CycD & Rb	3	2	N/A	1.6875
+UbcH10	85	Cdc20 & p27	3	2	N/A	1.6875
+UbcH10	86	Cdc20 & E2F & ~CycA	3	3	N/A	1.6875
+UbcH10	87	CycA & CycB & ~CycD	3	3	N/A	1.6875
+UbcH10	88	CycB & ~CycA	3	2	N/A	1.6875
+UbcH10	89	CycB & p27	3	2	N/A	1.6875
+UbcH10	90	CycE & Rb	3	2	N/A	1.6875
+UbcH10	91	CycB & ~Cdc20	3	2	N/A	1.6875
+UbcH10	92	Cdh1 & CycB	3	2	N/A	1.6875
+UbcH10	93	Cdc20 & Cdh1	3	2	N/A	1.6875
+UbcH10	94	Cdc20 | (Cdh1 & ~p27)	3	3	N/A	1.6875
+UbcH10	95	CycB | UbcH10	3	2	N/A	1.6875
+UbcH10	96	Cdh1 & CycB & CycE	3	3	N/A	1.6875
+UbcH10	97	CycA | CycD	3	2	N/A	1.6875
+UbcH10	98	Cdh1 & CycA	3	2	N/A	1.6875
+UbcH10	99	CycD & UbcH10	3	2	N/A	1.6875
+UbcH10	100	Rb & ~CycA & ~p27	3	3	N/A	1.6875
+UbcH10	101	Cdc20 | CycD	3	2	N/A	1.6875
+UbcH10	102	CycB & CycD & UbcH10	3	3	N/A	1.6875
+UbcH10	103	CycA | CycE	3	2	N/A	1.6875
+UbcH10	104	CycB & CycD & p27	3	3	N/A	1.6875
+UbcH10	105	CycA & p27 & ~CycB	3	3	N/A	1.6875
+UbcH10	106	Cdc20 & ~CycD	3	2	N/A	1.6875
+UbcH10	107	Cdh1 & E2F & UbcH10	3	3	N/A	1.6875
+UbcH10	108	CycB | (CycE & p27)	3	3	N/A	1.6875
+UbcH10	109	CycA & UbcH10	3	2	N/A	1.6875
+UbcH10	110	CycE & E2F & UbcH10	3	3	N/A	1.6875
+UbcH10	111	Cdc20 | CycA | CycE	3	3	N/A	1.6875
+UbcH10	112	CycE & UbcH10	3	2	N/A	1.6875
+UbcH10	113	Cdh1 & CycB & CycD	3	3	N/A	1.6875
+UbcH10	114	CycA | E2F	3	2	N/A	1.6875
+UbcH10	115	Cdc20 & UbcH10	3	2	N/A	1.6875
+UbcH10	116	CycD & ~CycA & ~E2F	3	3	N/A	1.6875
+UbcH10	117	CycB | CycD	3	2	N/A	1.6875
+UbcH10	118	CycA & ~Cdc20	3	2	N/A	1.6875
+UbcH10	119	Cdc20 & E2F & Rb	3	3	N/A	1.6875
+UbcH10	120	CycB | E2F	3	2	N/A	1.6875
+UbcH10	121	CycB & CycD & E2F	3	3	N/A	1.6875
+UbcH10	122	~E2F & (Cdc20 | p27)	3	3	N/A	1.6875
+UbcH10	123	CycD | (Cdc20 & CycB)	3	3	N/A	1.6875
+UbcH10	124	Cdc20 | CycB | CycD	3	3	N/A	1.6875
+UbcH10	125	CycA | UbcH10 | ~Cdh1	3	3	N/A	1.6875
+UbcH10	126	CycD | (CycB & Rb)	3	3	N/A	1.6875
+UbcH10	127	CycE & E2F	3	2	N/A	1.6875
+UbcH10	128	CycA | UbcH10	3	2	N/A	1.6875
+UbcH10	129	CycB & E2F & p27	3	3	N/A	1.6875
+UbcH10	130	CycB & CycE & E2F	3	3	N/A	1.6875
+UbcH10	131	CycB & CycE & UbcH10	3	3	N/A	1.6875
+UbcH10	132	CycB & E2F & UbcH10	3	3	N/A	1.6875
+UbcH10	133	CycB & E2F & ~Rb	3	3	N/A	1.6875
+UbcH10	134	UbcH10 & p27	3	2	N/A	1.6875
+UbcH10	135	Cdc20 | E2F	3	2	N/A	1.6875
+UbcH10	136	CycA & CycD & p27	3	3	N/A	1.6875
+UbcH10	137	Cdc20 & CycB & p27	3	3	N/A	1.6875
+UbcH10	138	Cdc20 & Rb & p27	3	3	N/A	1.6875
+UbcH10	139	Cdc20 & CycE & UbcH10	3	3	N/A	1.6875
+UbcH10	140	CycD & CycE & p27	3	3	N/A	1.6875
+UbcH10	141	Cdc20 & CycB & UbcH10	3	3	N/A	1.6875
+UbcH10	142	CycB	4	1	N/A	1.4375
+UbcH10	143	CycA	4	1	N/A	1.4375
+UbcH10	144	Cdc20	4	1	N/A	1.4375
+UbcH10	145	Cdc20 & (Cdh1 | CycD | ~p27)	4	4	N/A	1.4375
+UbcH10	146	CycA & CycB & CycE & ~Cdh1	4	4	N/A	1.4375
+UbcH10	147	Cdc20 | (CycB & E2F & UbcH10)	4	4	N/A	1.4375
+UbcH10	148	Cdc20 & (CycB | CycD | UbcH10)	4	4	N/A	1.4375
+UbcH10	149	~Cdh1	4	1	N/A	1.4375
+UbcH10	150	Cdc20 & CycA & CycD & CycE	4	4	N/A	1.4375
+UbcH10	151	Cdc20 & CycA & CycB & CycE	4	4	N/A	1.4375
+UbcH10	152	CycA & CycD & (Cdc20 | CycB)	4	4	N/A	1.4375
+UbcH10	153	CycB & (Cdh1 | CycA) & (CycA | CycE)	4	4	N/A	1.4375
+UbcH10	154	CycB | (Cdc20 & Rb & UbcH10)	4	4	N/A	1.4375
+UbcH10	155	~p27	3	1	N/A	1.1875
+UbcH10	156	CycD	3	1	N/A	1.1875
+UbcH10	157	Cdh1 & CycA & (CycB | E2F)	3	4	N/A	1.1875
+UbcH10	158	CycE	3	1	N/A	1.1875
+UbcH10	159	CycA & CycE & Rb & p27	3	4	N/A	1.1875
+UbcH10	160	CycB & UbcH10 & (Cdc20 | CycE)	3	4	N/A	1.1875
+UbcH10	161	Cdc20 & CycA & UbcH10 & p27	3	4	N/A	1.1875
+UbcH10	162	False	3	1	N/A	1.1875
+UbcH10	163	CycB & CycD & E2F & p27	3	4	N/A	1.1875
+UbcH10	164	Cdh1 & CycA & E2F & Rb	3	4	N/A	1.1875
+UbcH10	165	Rb & (Cdh1 | CycA) & (CycA | CycE)	3	4	N/A	1.1875
+UbcH10	166	Cdc20 & CycB & CycD & E2F	3	4	N/A	1.1875
+UbcH10	167	CycA & CycD & CycE & UbcH10	3	4	N/A	1.1875
+UbcH10	168	Cdh1 & CycB & (Cdc20 | CycA)	3	4	N/A	1.1875
+UbcH10	169	Cdc20 & CycA & CycE & E2F	3	4	N/A	1.1875
+UbcH10	170	Cdh1 & CycB & (CycA | UbcH10)	3	4	N/A	1.1875
+UbcH10	171	Cdc20 & CycA & CycB & E2F	3	4	N/A	1.1875
+UbcH10	172	(CycA & CycB) | (CycA & CycE) | (CycB & p27) | (CycE & p27)	3	4	N/A	1.1875
+UbcH10	173	Cdh1 & CycD & CycE & Rb	3	4	N/A	1.1875
+UbcH10	174	CycD & (E2F | Rb) & (Rb | UbcH10)	3	4	N/A	1.1875
+UbcH10	175	Cdc20 & CycD & Rb & UbcH10	3	4	N/A	1.1875
+UbcH10	176	CycB & CycD & Rb & UbcH10	3	4	N/A	1.1875
+UbcH10	177	Cdc20 & CycA & CycB & CycD & Rb	4	5	N/A	1.0000
+UbcH10	178	Cdc20 & CycB & CycE & (CycA | p27)	4	5	N/A	1.0000
+UbcH10	179	CycA & CycB & CycD & E2F & UbcH10	3	5	N/A	0.7500
+UbcH10	180	CycA | CycB | CycE | (Rb & UbcH10)	3	5	N/A	0.7500
+UbcH10	181	Cdh1 & CycA & CycB & CycD & Rb & UbcH10	3	6	N/A	0.7500
+CycB	1	~Cdc20 & ~Cdh1	4	2	N/A	1.9375
+CycB	2	CycB & E2F	4	2	N/A	1.9375
+CycB	3	E2F & UbcH10 & ~CycB	4	3	N/A	1.9375
+CycB	4	~Cdh1 & ~CycA	4	2	N/A	1.9375
+CycB	5	CycB & CycD & UbcH10	4	3	N/A	1.9375
+CycB	6	CycA & (Cdh1 | ~CycD)	4	3	N/A	1.9375
+CycB	7	Cdh1 & CycB	4	2	N/A	1.9375
+CycB	8	CycA & E2F	4	2	N/A	1.9375
+CycB	9	CycB & ~CycE	4	2	N/A	1.9375
+CycB	10	CycB & p27	4	2	N/A	1.9375
+CycB	11	CycA & UbcH10	4	2	N/A	1.9375
+CycB	12	Cdc20 & p27	4	2	N/A	1.9375
+CycB	13	CycD & UbcH10	4	2	N/A	1.9375
+CycB	14	Rb & UbcH10	4	2	N/A	1.9375
+CycB	15	E2F & UbcH10 & p27	4	3	N/A	1.9375
+CycB	16	UbcH10 & p27	4	2	N/A	1.9375
+CycB	17	E2F & UbcH10	4	2	N/A	1.9375
+CycB	18	CycE & UbcH10	4	2	N/A	1.9375
+CycB	19	Cdc20 & E2F & UbcH10	4	3	N/A	1.9375
+CycB	20	CycA & CycD & E2F	4	3	N/A	1.9375
+CycB	21	Cdc20 & E2F	4	2	N/A	1.9375
+CycB	22	Cdh1 & CycA & CycB	4	3	N/A	1.9375
+CycB	23	CycB & UbcH10	4	2	N/A	1.9375
+CycB	24	CycE & E2F	4	2	N/A	1.9375
+CycB	25	UbcH10 & ~Cdh1	4	2	N/A	1.9375
+CycB	26	Rb & UbcH10 & ~CycD	4	3	N/A	1.9375
+CycB	27	~Cdh1 & ~CycB	4	2	N/A	1.9375
+CycB	28	CycE & ~Rb	4	2	N/A	1.9375
+CycB	29	Cdc20 & UbcH10 & ~E2F	4	3	N/A	1.9375
+CycB	30	CycB & ~Cdc20	4	2	N/A	1.9375
+CycB	31	CycA & p27	4	2	N/A	1.9375
+CycB	32	CycD & CycE & E2F	4	3	N/A	1.9375
+CycB	33	Cdc20 & Cdh1	4	2	N/A	1.9375
+CycB	34	CycA & ~CycE	4	2	N/A	1.9375
+CycB	35	UbcH10 & (CycD | E2F)	4	3	N/A	1.9375
+CycB	36	~Cdc20 & ~Cdh1 & ~CycD	4	3	N/A	1.9375
+CycB	37	Cdc20 & p27 & ~Rb	4	3	N/A	1.9375
+CycB	38	Cdc20 & E2F & Rb	4	3	N/A	1.9375
+CycB	39	Cdc20 & UbcH10	4	2	N/A	1.9375
+CycB	40	CycA & CycE & p27	4	3	N/A	1.9375
+CycB	41	CycA & ~Rb	4	2	N/A	1.9375
+CycB	42	Cdh1 & CycA	4	2	N/A	1.9375
+CycB	43	E2F & (CycE | UbcH10)	4	3	N/A	1.9375
+CycB	44	CycB & Rb & p27	4	3	N/A	1.9375
+CycB	45	Cdh1 & CycB & Rb	4	3	N/A	1.9375
+CycB	46	Cdh1 & CycE & E2F	4	3	N/A	1.9375
+CycB	47	CycE & E2F & Rb	4	3	N/A	1.9375
+CycB	48	CycB & ~CycA & ~CycD	4	3	N/A	1.9375
+CycB	49	Cdc20 & Cdh1 & CycE	4	3	N/A	1.9375
+CycB	50	CycB & ~CycA	4	2	N/A	1.9375
+CycB	51	CycB & ~CycD & ~p27	4	3	N/A	1.9375
+CycB	52	Cdh1 & CycB & E2F	4	3	N/A	1.9375
+CycB	53	Cdc20 & Cdh1 & UbcH10	4	3	N/A	1.9375
+CycB	54	Cdh1 & CycD & CycE	4	3	N/A	1.9375
+CycB	55	E2F & ~CycD	4	2	N/A	1.9375
+CycB	56	CycE & UbcH10 & ~CycD	4	3	N/A	1.9375
+CycB	57	E2F & p27 & ~CycD	4	3	N/A	1.9375
+CycB	58	CycD & ~Rb	4	2	N/A	1.9375
+CycB	59	CycA & E2F & ~Cdc20	4	3	N/A	1.9375
+CycB	60	Cdc20 & CycB & UbcH10	4	3	N/A	1.9375
+CycB	61	CycD & UbcH10 & p27	4	3	N/A	1.9375
+CycB	62	CycB & UbcH10 & ~Rb	4	3	N/A	1.9375
+CycB	63	Cdc20 & Cdh1 & E2F	4	3	N/A	1.9375
+CycB	64	Cdc20 & Cdh1 & CycA	4	3	N/A	1.9375
+CycB	65	CycB & Rb & UbcH10	4	3	N/A	1.9375
+CycB	66	CycA & CycE & UbcH10	4	3	N/A	1.9375
+CycB	67	CycD & E2F & UbcH10	4	3	N/A	1.9375
+CycB	68	Cdc20 & Rb & UbcH10	4	3	N/A	1.9375
+CycB	69	CycB & UbcH10 & ~E2F	4	3	N/A	1.9375
+CycB	70	CycB & ~CycA & ~E2F	4	3	N/A	1.9375
+CycB	71	Cdc20 & CycA & p27	4	3	N/A	1.9375
+CycB	72	CycA & CycB & p27	4	3	N/A	1.9375
+CycB	73	CycA & CycE & E2F	4	3	N/A	1.9375
+CycB	74	E2F & ~Cdh1	4	2	N/A	1.9375
+CycB	75	CycA & CycB & E2F	4	3	N/A	1.9375
+CycB	76	CycB & E2F & ~CycA	4	3	N/A	1.9375
+CycB	77	CycA & CycD & UbcH10	4	3	N/A	1.9375
+CycB	78	Cdc20 & ~CycA	4	2	N/A	1.9375
+CycB	79	Cdh1 & CycE & UbcH10	4	3	N/A	1.9375
+CycB	80	CycA & CycB & UbcH10	4	3	N/A	1.9375
+CycB	81	Cdh1 & E2F & UbcH10	4	3	N/A	1.9375
+CycB	82	Cdh1 & CycA & UbcH10	4	3	N/A	1.9375
+CycB	83	CycB & E2F & UbcH10	4	3	N/A	1.9375
+CycB	84	UbcH10 & (Cdc20 | p27)	4	3	N/A	1.9375
+CycB	85	UbcH10 & (CycB | E2F)	4	3	N/A	1.9375
+CycB	86	UbcH10 & (CycD | p27)	4	3	N/A	1.9375
+CycB	87	CycD & ~CycA & ~Rb	4	3	N/A	1.9375
+CycB	88	Cdc20 & ~CycB	4	2	N/A	1.9375
+CycB	89	CycA & ~CycB	4	2	N/A	1.9375
+CycB	90	CycE & E2F & UbcH10	4	3	N/A	1.9375
+CycB	91	Cdc20 & CycA & E2F	4	3	N/A	1.9375
+CycB	92	CycA & E2F & Rb	4	3	N/A	1.9375
+CycB	93	CycB & CycE & E2F	4	3	N/A	1.9375
+CycB	94	CycB & E2F & Rb	4	3	N/A	1.9375
+CycB	95	Cdc20 & CycD & UbcH10	4	3	N/A	1.9375
+CycB	96	E2F & Rb & UbcH10	4	3	N/A	1.9375
+CycB	97	CycB & UbcH10 & p27	4	3	N/A	1.9375
+CycB	98	Rb & UbcH10 & p27	4	3	N/A	1.9375
+CycB	99	Cdh1 & CycD & ~Rb	4	3	N/A	1.9375
+CycB	100	E2F & Rb & ~CycD	4	3	N/A	1.9375
+CycB	101	CycB & p27 & ~CycD	4	3	N/A	1.9375
+CycB	102	CycD & CycE & ~Rb	4	3	N/A	1.9375
+CycB	103	~Cdh1 & ~CycD	4	2	N/A	1.9375
+CycB	104	CycA & Rb & UbcH10	4	3	N/A	1.9375
+CycB	105	CycB & CycD & E2F	4	3	N/A	1.9375
+CycB	106	UbcH10 & (Cdc20 | CycB)	4	3	N/A	1.9375
+CycB	107	CycB & CycD & p27	4	3	N/A	1.9375
+CycB	108	Cdh1 & Rb & UbcH10	4	3	N/A	1.9375
+CycB	109	CycD & Rb & UbcH10	4	3	N/A	1.9375
+CycB	110	Cdh1 & CycA & E2F	4	3	N/A	1.9375
+CycB	111	CycB & E2F & p27	4	3	N/A	1.9375
+CycB	112	Cdc20 & Cdh1 & CycB	4	3	N/A	1.9375
+CycB	113	Cdc20 & Cdh1 & p27	4	3	N/A	1.9375
+CycB	114	Cdc20 & Cdh1 & ~CycD	4	3	N/A	1.9375
+CycB	115	Cdh1 & CycB & CycD	4	3	N/A	1.9375
+CycB	116	CycA & CycB & Rb	3	3	N/A	1.6875
+CycB	117	Cdh1 & E2F	3	2	N/A	1.6875
+CycB	118	E2F & ~UbcH10	3	2	N/A	1.6875
+CycB	119	Cdc20 & CycB	3	2	N/A	1.6875
+CycB	120	CycA & CycB	3	2	N/A	1.6875
+CycB	121	CycE & p27	3	2	N/A	1.6875
+CycB	122	CycD & p27	3	2	N/A	1.6875
+CycB	123	Cdc20 & Rb	3	2	N/A	1.6875
+CycB	124	E2F & p27	3	2	N/A	1.6875
+CycB	125	Cdh1 & CycD	3	2	N/A	1.6875
+CycB	126	CycB & CycD	3	2	N/A	1.6875
+CycB	127	Cdc20 & CycD	3	2	N/A	1.6875
+CycB	128	CycB & ~UbcH10	3	2	N/A	1.6875
+CycB	129	CycB & CycE	3	2	N/A	1.6875
+CycB	130	CycB & ~Cdh1	3	2	N/A	1.6875
+CycB	131	CycB & Rb	3	2	N/A	1.6875
+CycB	132	CycD & ~Cdc20	3	2	N/A	1.6875
+CycB	133	CycD & E2F	3	2	N/A	1.6875
+CycB	134	CycA & CycD	3	2	N/A	1.6875
+CycB	135	CycD & ~Cdh1	3	2	N/A	1.6875
+CycB	136	CycD & CycE	3	2	N/A	1.6875
+CycB	137	CycA & CycE	3	2	N/A	1.6875
+CycB	138	E2F & Rb	3	2	N/A	1.6875
+CycB	139	Cdc20 & CycA	3	2	N/A	1.6875
+CycB	140	CycE & ~CycA	3	2	N/A	1.6875
+CycB	141	CycB & (Cdc20 | E2F)	3	3	N/A	1.6875
+CycB	142	Cdc20 & ~E2F	3	2	N/A	1.6875
+CycB	143	UbcH10 & ~p27	3	2	N/A	1.6875
+CycB	144	Cdh1 & E2F & p27	3	3	N/A	1.6875
+CycB	145	Cdc20 & CycE	3	2	N/A	1.6875
+CycB	146	Cdh1 & CycE	3	2	N/A	1.6875
+CycB	147	CycB & CycE & ~Cdh1	3	3	N/A	1.6875
+CycB	148	~Cdc20 & ~CycB & ~p27	3	3	N/A	1.6875
+CycB	149	CycD & ~p27	3	2	N/A	1.6875
+CycB	150	CycA & CycE & Rb	3	3	N/A	1.6875
+CycB	151	Cdh1 & UbcH10	3	2	N/A	1.6875
+CycB	152	~CycD & ~p27	3	2	N/A	1.6875
+CycB	153	E2F & ~CycA	3	2	N/A	1.6875
+CycB	154	CycD & E2F & Rb	3	3	N/A	1.6875
+CycB	155	CycA & CycB & CycE	3	3	N/A	1.6875
+CycB	156	Rb & ~Cdh1	3	2	N/A	1.6875
+CycB	157	CycA & (Rb | ~CycD)	3	3	N/A	1.6875
+CycB	158	Cdc20 & CycB & CycE	3	3	N/A	1.6875
+CycB	159	CycA & Rb	3	2	N/A	1.6875
+CycB	160	UbcH10 & ~CycD	3	2	N/A	1.6875
+CycB	161	Cdc20 & CycD & Rb	3	3	N/A	1.6875
+CycB	162	CycD & E2F & p27	3	3	N/A	1.6875
+CycB	163	CycB & ~p27	3	2	N/A	1.6875
+CycB	164	E2F & (~CycB | ~UbcH10)	3	3	N/A	1.6875
+CycB	165	False	4	1	N/A	1.4375
+CycB	166	CycA & CycB & UbcH10 & p27	4	4	N/A	1.4375
+CycB	167	Cdc20 & Cdh1 & CycE & p27	4	4	N/A	1.4375
+CycB	168	CycA & CycD & E2F & UbcH10	4	4	N/A	1.4375
+CycB	169	Cdc20 & E2F & Rb & UbcH10	4	4	N/A	1.4375
+CycB	170	CycB & E2F & Rb & p27	4	4	N/A	1.4375
+CycB	171	CycB & CycD & CycE & E2F	4	4	N/A	1.4375
+CycB	172	Cdh1 & CycB & CycE & E2F	4	4	N/A	1.4375
+CycB	173	CycA & CycD & E2F & Rb	4	4	N/A	1.4375
+CycB	174	CycB & CycD & UbcH10 & p27	4	4	N/A	1.4375
+CycB	175	Cdc20 & CycE & E2F & p27	4	4	N/A	1.4375
+CycB	176	Cdc20 & UbcH10 & (Cdh1 | Rb)	4	4	N/A	1.4375
+CycB	177	CycA & CycE & Rb & UbcH10	4	4	N/A	1.4375
+CycB	178	Cdh1 & E2F & UbcH10 & ~Cdc20	4	4	N/A	1.4375
+CycB	179	CycA & E2F & (Cdc20 | CycD)	4	4	N/A	1.4375
+CycB	180	CycD & Rb & UbcH10 & p27	4	4	N/A	1.4375
+CycB	181	CycA & CycB & Rb & UbcH10	4	4	N/A	1.4375
+CycB	182	Cdc20 & Cdh1 & CycE & Rb	4	4	N/A	1.4375
+CycB	183	Cdh1 & CycA & E2F & Rb	4	4	N/A	1.4375
+CycB	184	Cdc20 & CycA & CycB & p27	4	4	N/A	1.4375
+CycB	185	Cdc20 & CycB & CycE & p27	4	4	N/A	1.4375
+CycB	186	Cdc20 & Cdh1 & Rb & UbcH10	4	4	N/A	1.4375
+CycB	187	Cdc20 & Cdh1 & CycA & CycE	4	4	N/A	1.4375
+CycB	188	Cdc20 & CycA & E2F & UbcH10	4	4	N/A	1.4375
+CycB	189	Cdh1 & CycB & E2F & UbcH10	4	4	N/A	1.4375
+CycB	190	UbcH10 & (Cdc20 | CycB) & (CycB | Rb)	4	4	N/A	1.4375
+CycB	191	Cdh1 & CycB & CycD & E2F	4	4	N/A	1.4375
+CycB	192	Cdc20 & Cdh1 & CycD & E2F	4	4	N/A	1.4375
+CycB	193	CycD & E2F & UbcH10 & p27	4	4	N/A	1.4375
+CycB	194	CycB & E2F & UbcH10 & p27	4	4	N/A	1.4375
+CycB	195	Cdh1 & CycB & E2F & Rb	4	4	N/A	1.4375
+CycB	196	Cdc20 & Cdh1 & UbcH10 & p27	4	4	N/A	1.4375
+CycB	197	Cdc20 & CycD & UbcH10 & p27	4	4	N/A	1.4375
+CycB	198	CycA	3	1	N/A	1.1875
+CycB	199	CycB	3	1	N/A	1.1875
+CycB	200	CycA & CycB & CycE & Rb	3	4	N/A	1.1875
+CycB	201	Cdc20	3	1	N/A	1.1875
+CycB	202	UbcH10	3	1	N/A	1.1875
+CycB	203	~Cdh1	3	1	N/A	1.1875
+CycB	204	E2F	3	1	N/A	1.1875
+CycB	205	CycD & E2F & (UbcH10 | p27)	3	4	N/A	1.1875
+CycB	206	~Rb	3	1	N/A	1.1875
+CycB	207	Cdc20 & ~E2F & (CycD | Rb)	3	4	N/A	1.1875
+CycB	208	Cdc20 | (Cdh1 & CycA & Rb)	3	4	N/A	1.1875
+CycB	209	CycD & (Cdc20 | Cdh1) & (Cdh1 | E2F)	3	4	N/A	1.1875
+CycB	210	Cdc20 & (CycB | UbcH10 | p27)	3	4	N/A	1.1875
+CycB	211	Cdh1 & CycD & p27 & ~CycB	3	4	N/A	1.1875
+CycB	212	Cdc20 & Cdh1 & CycB & CycE & UbcH10	4	5	N/A	1.0000
+CycB	213	Cdh1 & CycB & CycE & E2F & Rb	4	5	N/A	1.0000
+CycB	214	Cdc20 & Cdh1 & CycA & CycE & E2F	4	5	N/A	1.0000
+CycB	215	Cdc20 & CycB & CycD & CycE & UbcH10	4	5	N/A	1.0000
+CycB	216	Cdc20 & CycB & CycD & Rb & UbcH10	4	5	N/A	1.0000
+CycB	217	Cdc20 & CycB & p27 & (~CycA | ~CycD)	4	5	N/A	1.0000
+CycB	218	Cdc20 & CycB & CycE & UbcH10 & p27	4	5	N/A	1.0000
+CycB	219	Cdh1 & CycB & CycD & E2F & p27	4	5	N/A	1.0000
+CycB	220	Cdh1 & CycA & CycD & UbcH10 & p27	4	5	N/A	1.0000
+CycB	221	E2F & (Cdh1 | CycA | UbcH10) & (CycA | Rb | UbcH10)	3	5	N/A	0.7500

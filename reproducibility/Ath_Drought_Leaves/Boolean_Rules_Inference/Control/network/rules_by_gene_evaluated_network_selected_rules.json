@@ -1,0 +1,122 @@
+{
+  "ABCG31": {
+    "position": 25,
+    "rule": "ABF3 & HB7",
+    "score": "1.9375",
+    "n_correct": 3,
+    "n_regulators": 2,
+    "mse": "nan"
+  },
+  "ABF3": {
+    "position": 29,
+    "rule": "HB6 & ~HB7",
+    "score": "1.9375",
+    "n_correct": 3,
+    "n_regulators": 2,
+    "mse": "nan"
+  },
+  "AHG1": {
+    "position": 8,
+    "rule": "HB6 & HB7",
+    "score": "1.9375",
+    "n_correct": 3,
+    "n_regulators": 2,
+    "mse": "nan"
+  },
+  "AIT1": {
+    "position": 60,
+    "rule": "ABF3 | (HB6 & MYB44)",
+    "score": "1.9375",
+    "n_correct": 3,
+    "n_regulators": 3,
+    "mse": "nan"
+  },
+  "CPK1": {
+    "position": 55,
+    "rule": "HB7 & ~HB6 & ~PYL1",
+    "score": "1.9375",
+    "n_correct": 3,
+    "n_regulators": 3,
+    "mse": "nan"
+  },
+  "CYP707A3": {
+    "position": 10,
+    "rule": "HB6 & HB7",
+    "score": "1.9375",
+    "n_correct": 3,
+    "n_regulators": 2,
+    "mse": "nan"
+  },
+  "CYP707A4": {
+    "position": 9,
+    "rule": "HB7 & MYB44",
+    "score": "1.9375",
+    "n_correct": 3,
+    "n_regulators": 2,
+    "mse": "nan"
+  },
+  "HAI3": {
+    "position": 58,
+    "rule": "ABCG31 & (ABF3 | HB7)",
+    "score": "1.9375",
+    "n_correct": 3,
+    "n_regulators": 3,
+    "mse": "nan"
+  },
+  "HB6": {
+    "position": 67,
+    "rule": "HB6 | ~ABF3",
+    "score": "1.9375",
+    "n_correct": 3,
+    "n_regulators": 2,
+    "mse": "nan"
+  },
+  "HB7": {
+    "position": 27,
+    "rule": "CPK1 & HB7 & ~HB6",
+    "score": "1.9375",
+    "n_correct": 3,
+    "n_regulators": 3,
+    "mse": "nan"
+  },
+  "MYB44": {
+    "position": 18,
+    "rule": "HB6 & HB7",
+    "score": "1.9375",
+    "n_correct": 3,
+    "n_regulators": 2,
+    "mse": "nan"
+  },
+  "NCED5": {
+    "position": 32,
+    "rule": "HB7 | (MYB44 & SnRK2_8)",
+    "score": "1.9375",
+    "n_correct": 3,
+    "n_regulators": 3,
+    "mse": "nan"
+  },
+  "PYL1": {
+    "position": 62,
+    "rule": "HB7 & ~MYB44",
+    "score": "1.9375",
+    "n_correct": 3,
+    "n_regulators": 2,
+    "mse": "nan"
+  },
+  "RCAR1": {
+    "position": 44,
+    "rule": "ABF3 | MYB44",
+    "score": "1.9375",
+    "n_correct": 3,
+    "n_regulators": 2,
+    "mse": "nan"
+  },
+  "SnRK2_8": {
+    "position": 14,
+    "rule": "ABF3 | MYB44",
+    "score": "1.9375",
+    "n_correct": 3,
+    "n_regulators": 2,
+    "mse": "nan"
+  }
+}

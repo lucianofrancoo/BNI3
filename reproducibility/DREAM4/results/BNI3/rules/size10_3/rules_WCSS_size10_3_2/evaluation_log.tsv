@@ -1,0 +1,15 @@
+# generated: 2026-10-23 12:12:06
+# rules_file: DREAM4/results/BNI3/rules/size10_3/rules_WCSS_size10_3_2/rules_by_gene.tsv
+# matrix_file: DREAM4/results/BNI3/binarized/size10_3/size10_3_2/size10_3_2_binarized_WCSS.tsv
+# genes: 10
+# strategy: exhaustive
+# search_space_before_prune: 1.000000e+00
+# search_space_after_prune: 1.000000e+00
+# prune_applied: False
+# prune_evaluations: 0
+# combinations_evaluated: 1
+# processes: 50
+# cascade: final_state_concordance(max) > n_basins(min) > avg_cycle_length(min) > fixed_point_ratio(max) > basin_entropy(min) > k_distance_from_2(min) > total_literals(min) > total_nots(min)
+# priority_regulators: none
+batch	evaluations_total	k_at_best	confidence	best_final_state_concordance	best_n_basins	best_avg_cycle_length	best_fixed_point_ratio	best_basin_entropy	best_k_distance_from_2	best_total_literals	best_total_nots
+1	1	1	1.0	0.8	5.0	1.0	1.0	1.453084	1.0	30.0	9.0

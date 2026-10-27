@@ -8,6 +8,7 @@ Part of the Boolean Network Inference (BNI) pipeline.
 
 import argparse
 import os
+import re
 import sys
 import pandas as pd
 import numpy as np
@@ -212,6 +213,46 @@ def calculate_next_state(current_state, gene_rules, genes):
     return [next_state[gene] for gene in genes]
 
 
+# Same expression the inference and evaluation scripts use: any character that is not
+# a letter, digit or underscore becomes "_", and a leading digit gets an "_" prefix.
+# Rules are evaluated with eval(), so gene names must be valid Python identifiers and
+# "SnRK2.8" becomes "SnRK2_8". The attractors file already carries sanitized names;
+# a binarized matrix written by the binarization step does not, so without this the
+# two never match and the gene silently reads as 0.
+_GENE_NAME_RE = r'\W|^(?=\d)'
+
+
+def sanitize_gene_name(name):
+    """Turn one gene name into a valid Python identifier (idempotent)."""
+    return re.sub(_GENE_NAME_RE, '_', str(name))
+
+
+def sanitize_gene_names(names, source):
+    """
+    Sanitize gene names, refusing silently ambiguous results.
+
+    Sanitization is many-to-one: "SnRK2.8", "SnRK2 8" and "SnRK2-8" all collapse to
+    "SnRK2_8", as do "GEN.1" and "GEN_1". Two distinct genes mapping to one identifier
+    would make every later lookup ambiguous, so that is an error, not a warning.
+    """
+    clean = [sanitize_gene_name(n) for n in names]
+
+    groups = {}
+    for original, cleaned in zip(names, clean):
+        groups.setdefault(cleaned, set()).add(str(original))
+    collisions = {k: v for k, v in groups.items() if len(v) > 1}
+
+    if collisions:
+        print(f"\nERROR: gene names in {source} become ambiguous once sanitized to "
+              f"Python identifiers.", file=sys.stderr)
+        for cleaned, originals in list(collisions.items())[:10]:
+            print(f"  {sorted(originals)} all become '{cleaned}'", file=sys.stderr)
+        print("  Rename them upstream so they stay distinct.", file=sys.stderr)
+        sys.exit(1)
+
+    return clean
+
+
 def state_to_string(state):
     """Convert state to binary string"""
     return ''.join(['1' if x else '0' for x in state])
@@ -241,16 +282,24 @@ def read_binarized_matrix(matrix_file, gene_cols, verbose):
         else:
             sample_names = [f"Sample_{i + 1}" for i in range(len(df))]
 
+        # The attractors file carries sanitized identifiers; the binarized matrix does
+        # not. Without this, "SnRK2.8" never matches the network gene "SnRK2_8", the
+        # gene silently reads as 0, and every sample state is wrong in that position.
+        df.columns = sanitize_gene_names(df.columns, os.path.basename(matrix_file))
+
         matrix_genes = list(df.columns)
         log_message(f"Matrix: {len(matrix_genes)} genes, {len(df)} samples", verbose)
 
         missing_in_matrix = set(gene_cols) - set(matrix_genes)
         extra_in_matrix = set(matrix_genes) - set(gene_cols)
         if missing_in_matrix:
-            log_message(
-                f"Warning: {len(missing_in_matrix)} network genes absent from matrix "
-                f"(will default to 0): {', '.join(sorted(missing_in_matrix))}", verbose
-            )
+            # Defaulting to 0 corrupts the state vector, so this is never silent:
+            # it goes to stderr whether or not -v was given.
+            print(f"\nWARNING: {len(missing_in_matrix)} network gene(s) absent from "
+                  f"{os.path.basename(matrix_file)} and defaulted to 0: "
+                  f"{', '.join(sorted(missing_in_matrix))}", file=sys.stderr)
+            print("  Every state read from this matrix is wrong in those positions.",
+                  file=sys.stderr)
         if extra_in_matrix:
             log_message(
                 f"Warning: {len(extra_in_matrix)} matrix genes not in network (ignored): "
