@@ -815,10 +815,10 @@ def calculate_intelligent_defaults(rules_by_gene: Dict[str, List],
     rules_counts = [len(rules) for rules in rules_by_gene.values()]
     n_genes = len(rules_by_gene)
 
-    # ===== LÍMITES =====
+    # ===== LIMITS =====
     MAX_COMBINATIONS_ABSOLUTE = 50_000_000  # Safety cap (50M)
-    MAX_RULES_PER_GENE_ABSOLUTE = 30        # Máximo de reglas por gen
-    TARGET_COMBINATIONS_FOR_SAMPLING = 5_000_000  # Target cuando se necesita muestreo
+    MAX_RULES_PER_GENE_ABSOLUTE = 30        # Maximum rules per gene
+    TARGET_COMBINATIONS_FOR_SAMPLING = 5_000_000  # Target when sampling is needed
 
     # Calculate total possible combinations (with overflow protection)
     try:

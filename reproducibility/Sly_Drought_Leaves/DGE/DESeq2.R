@@ -1,32 +1,32 @@
-########################################## Leer Librerías
+########################################## Load libraries
 library(DESeq2)
 library(ggplot2)
 library(BiocParallel)
 
 register(MulticoreParam(8))
 
-# PRJNA1125861: Solanum lycopersicum, hoja madura, deficit hidrico progresivo.
-# Contrastes: WD vs CTRL dentro de cada dia (d4, d5, d8, d10).
+# PRJNA1125861: Solanum lycopersicum, mature leaves, progressive water deficit.
+# Contrasts: WD vs CTRL within each day (d4, d5, d8, d10).
 # Run from this folder (DGE/); reads ../Counts/
-###################################### Leer Datos de conteo
-# Columnas del estilo SRR29464690_CTRL_d4_Mature_count (ver Counts/extraerCounts.r)
+###################################### Read count data
+# Columns like SRR29464690_CTRL_d4_Mature_count (see Counts/extraerCounts.r)
 countdata <- read.table("../Counts/Conteo_genes_Sly_Drought_Leaves.tsv",
                         sep = "\t", header = TRUE, row.names = "gene_id",
                         check.names = FALSE)
-# Dejar solo el SRR como nombre de columna para empatar con la metadata
+# Keep only the SRR as column name, to match the metadata
 colnames(countdata) <- sub("_.*$", "", colnames(countdata))
 countdata <- round(as.matrix(countdata))
 head(countdata)
-################################ Leer Información de Datos
+################################ Read sample information
 coldata <- read.table("../raw_data/samples_metadata.tsv",
                       sep = "\t",
                       header = TRUE, row.names = "Run")
 coldata
-# Ordenar las columnas de countdata según el orden de filas de coldata
+# Order the countdata columns by the row order of coldata
 order_coldata <- match(rownames(coldata), colnames(countdata))
 countdata <- countdata[, order_coldata]
 head(countdata)
-############################# Convirtiendo la clase de cada columna a factor
+############################# Convert each column to factor
 dias <- c("d4", "d5", "d8", "d10")
 coldata$Day <- factor(coldata$Day, levels = dias)
 coldata$Treatment <- factor(ifelse(coldata$Treatment == "Control", "CTRL", "WD"),
@@ -35,31 +35,31 @@ coldata$Condition <- factor(paste(coldata$Treatment, coldata$Day, sep = "_"),
                             levels = paste(rep(c("CTRL", "WD"), times = length(dias)),
                                            rep(dias, each = 2), sep = "_"))
 coldata$Name <- rownames(coldata)
-### Asegurarse que los nombres de filas en coldata
-### estén en los nombres de columnas en countData
+### Make sure the row names of coldata
+### are among the column names of countData
 all(colnames(countdata) %in% rownames(coldata))
-################################# Asegurarse que estén en el mismo orden
+################################# Make sure they are in the same order
 all(colnames(countdata) == row.names(coldata))
-####################################### Construcción del objeto DESeqDataSet
+####################################### Build the DESeqDataSet object
 dds <- DESeqDataSetFromMatrix(countData = countdata,
                               colData = coldata,
                               design = ~ Condition)
-############################ Remover conteos con menos de X reads en total
+############################ Remove genes with fewer than X reads in total
 nrow(dds)
-# d8 y d10 CTRL tienen solo 2 replicas
+# d8 and d10 CTRL have only 2 replicates
 smallestGroupSize <- 2
 keep <- rowSums(counts(dds) >= 10) >= smallestGroupSize
 dds <- dds[keep,]
 nrow(dds)
-######################################## Ejecutar DESeq2
+######################################## Run DESeq2
 de <- DESeq(dds, parallel = TRUE)
-################################################# Resultados
+################################################# Results
 contraste <- function(de, contraste_b, contraste_a) {
   resultados <- results(de, contrast = c("Condition",
                                          contraste_b,
                                          contraste_a))
   summary(resultados, alpha = 0.05)
-  ############################################### Exportar
+  ############################################### Export
   resultados <- resultados[order(resultados$padj), ]
   resultados <- cbind(ID = row.names(resultados),
                       as.data.frame(resultados))
@@ -74,14 +74,14 @@ contraste <- function(de, contraste_b, contraste_a) {
              Down = sum(sig$log2FoldChange < 0))
 }
 coldata
-# WD de cada dia vs su control del mismo dia
+# WD on each day vs the control on the same day
 resumen <- do.call(rbind, lapply(dias, function(d) {
   contraste(de, paste0("WD_", d), paste0("CTRL_", d))
 }))
 resumen
 write.table(resumen, file = "DGE_summary.tsv",
             quote = FALSE, row.names = FALSE, sep = "\t")
-################################################## Barplot resumen
+################################################## Summary barplot
 resumen$Label <- sub("^WD_(d[0-9]+) vs CTRL_d[0-9]+$", "WD \\1\nvs CTRL \\1",
                      resumen$Comparison)
 resumen$Label <- factor(resumen$Label, levels = resumen$Label)
@@ -134,7 +134,7 @@ ggplot(data = df_pca, aes(x = PC1, y = PC2, color = Condition)) +
   geom_text(label = df_pca$Condition, size = 4, vjust = -1, hjust = 0.5, show.legend = FALSE) +
   xlab(paste0("PC1: ", percentVar[1], "% variance")) +
   ylab(paste0("PC2: ", percentVar[2], "% variance")) +
-  theme_minimal() +  # Puedes cambiar "minimal" a otros temas disponibles
+  theme_minimal() +
   expand_limits(x = c(0, max(df_pca$PC1) * 1.1),
                 y = c(0, max(df_pca$PC2) * 1.1)) +
   theme(axis.title = element_text(size = 12, face = "bold"),
@@ -143,8 +143,8 @@ ggplot(data = df_pca, aes(x = PC1, y = PC2, color = Condition)) +
         legend.text = element_text(size = 10),
         panel.border = element_rect(color = "black", fill = NA, linewidth = 0.5))
 dev.off()
-################################################## Conteos normalizados
-# vst (log2, estabilizado en varianza): para PCA, heatmaps, redes
+################################################## Normalized counts
+# vst (log2, variance-stabilized): for PCA, heatmaps, networks
 conteo_normalizado <- assay(vsd)
 conteo_normalizado <- cbind(ID = row.names(conteo_normalizado),
                             conteo_normalizado)
@@ -153,7 +153,7 @@ write.table(conteo_normalizado,
             quote = FALSE,
             sep = "\t",
             row.names = FALSE)
-# vst promediado por condicion (media de las replicas)
+# vst averaged per condition (mean of the replicates)
 vst_mat <- assay(vsd)
 conteo_mean <- sapply(levels(coldata$Condition), function(cond) {
   rowMeans(vst_mat[, coldata$Condition == cond, drop = FALSE])
@@ -165,7 +165,7 @@ write.table(conteo_mean,
             quote = FALSE,
             sep = "\t",
             row.names = FALSE)
-# Mismo promedio separado en control y deficit hidrico
+# Same average split into control and water deficit
 for (grupo in c("CTRL", "WD")) {
   columnas <- c("ID", grep(paste0("^", grupo, "_"), colnames(conteo_mean), value = TRUE))
   sufijo <- if (grupo == "CTRL") "Control" else "Drought"
@@ -175,7 +175,7 @@ for (grupo in c("CTRL", "WD")) {
               sep = "\t",
               row.names = FALSE)
 }
-# Normalizados por size factors de DESeq2 (escala de conteos, sin log)
+# Normalized by the DESeq2 size factors (count scale, no log)
 conteo_sf <- counts(de, normalized = TRUE)
 conteo_sf <- cbind(ID = row.names(conteo_sf), conteo_sf)
 write.table(conteo_sf,

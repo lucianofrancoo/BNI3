@@ -1,12 +1,12 @@
 #!/usr/bin/env Rscript
 # ============================================================
-# Ortólogos en tomate de los genes ABA de Arabidopsis – hoja madura, sequía
-# (PRJNA1125861). Mismo análisis que
+# Tomato orthologs of the Arabidopsis ABA genes – mature leaves, drought
+# (PRJNA1125861). Same analysis as
 # Ath_Drought_Leaves/Selected_genes/selected_genes.R:
-# 1) Conteo normalizado (vst) promediado por condicion, solo genes seleccionados
-# 2) Dotplot de log2FC WD vs CTRL por día, con significancia
-# Los genes de tomate salen de TAIR_To_ITAG/Table_S_ABA_orthologs.tsv
-# (ortólogos por OrthoFinder o Ensembl Compara; ver TAIR_To_ITAG/README.md).
+# 1) Normalized count (vst) averaged per condition, selected genes only
+# 2) Dot plot of the WD vs CTRL log2FC per day, with significance
+# The tomato genes come from TAIR_To_ITAG/Table_S_ABA_orthologs.tsv
+# (orthologs from OrthoFinder or Ensembl Compara; see TAIR_To_ITAG/README.md).
 # ============================================================
 
 library(ggplot2)
@@ -19,12 +19,12 @@ out_dir   <- file.path(base_dir, "Selected_genes")
 orth_file <- "../../TAIR_To_ITAG/Table_S_ABA_orthologs.tsv"
 
 # -------------------------------------------------------
-# Lista de genes: un gen de tomate por fila, con sus genes de Arabidopsis
+# Gene list: one tomato gene per row, with its Arabidopsis genes
 # -------------------------------------------------------
 orth <- read.table(orth_file, header = TRUE, sep = "\t", stringsAsFactors = FALSE,
                    quote = "", comment.char = "")
 orth <- orth[orth$tomato_gene != "No ortholog", ]
-# Grupos con los nombres originales de aba_genes.tsv (los del dotplot de Arabidopsis)
+# Groups with the original names in aba_genes.tsv (those of the Arabidopsis dot plot)
 group_key <- c("TF" = "TF", "Metabolic" = "metabolic", "Catabolic" = "catabolic",
                "Transport" = "transport", "Receptor" = "receptor",
                "Phosphatase clade A" = "phosphatase_cladeA",
@@ -32,7 +32,7 @@ group_key <- c("TF" = "TF", "Metabolic" = "metabolic", "Catabolic" = "catabolic"
                "Ligase" = "ligase", "Targets" = "targets")
 orth$group <- unname(group_key[orth$functional_group])
 
-sly_ids <- unique(orth$tomato_gene)   # conserva el orden de la tabla (orden de la lista Ath)
+sly_ids <- unique(orth$tomato_gene)   # keeps the table order (order of the Ath list)
 genes <- data.frame(
   gene_id = sly_ids,
   ath_genes = sapply(sly_ids, function(s)
@@ -49,17 +49,17 @@ write.table(genes[, c("gene_id", "ath_genes", "ath_loci", "group")],
             quote = FALSE, sep = "\t", row.names = FALSE)
 
 # -------------------------------------------------------
-# Conteo normalizado promediado, solo genes seleccionados
+# Averaged normalized count, selected genes only
 # -------------------------------------------------------
 escribir_subset <- function(archivo_in, archivo_out, anotacion = TRUE) {
   mat <- read.table(file.path(dge_dir, archivo_in), header = TRUE, sep = "\t",
                     stringsAsFactors = FALSE, check.names = FALSE)
   sub <- merge(genes[, c("gene_id", "ath_genes", "group")], mat,
                by.x = "gene_id", by.y = "ID", sort = FALSE)
-  # Mantener el orden de la lista de genes
+  # Keep the order of the gene list
   sub <- sub[order(match(sub$gene_id, genes$gene_id)), ]
   colnames(sub)[1] <- "ID"
-  # anotacion = FALSE: solo ID y valores de expresion (sin ath_genes ni group)
+  # anotacion = FALSE: only ID and expression values (no ath_genes or group)
   if (!anotacion) sub <- sub[, setdiff(colnames(sub), c("ath_genes", "group"))]
   write.table(sub, file = file.path(out_dir, archivo_out),
               quote = FALSE, sep = "\t", row.names = FALSE)
@@ -73,15 +73,15 @@ invisible(escribir_subset("ConteoNormalizado_mean_Drought.tsv", "ConteoNormaliza
                           anotacion = FALSE))
 
 faltan <- genes[!genes$gene_id %in% sub_mean$ID, ]
-cat("Genes de tomate en la lista:", nrow(genes), "\n")
-cat("Genes con datos (pasaron el filtro de DESeq2):", nrow(sub_mean), "\n")
+cat("Tomato genes in the list:", nrow(genes), "\n")
+cat("Genes with data (passed the DESeq2 filter):", nrow(sub_mean), "\n")
 if (nrow(faltan) > 0) {
-  cat("Sin datos (filtrados por bajo conteo):",
+  cat("No data (filtered out for low counts):",
       paste0(faltan$gene_id, " (", faltan$ath_genes, ")", collapse = ", "), "\n")
 }
 
 # -------------------------------------------------------
-# Cargar DGE
+# Load DGE
 # -------------------------------------------------------
 comp_levels <- c("WD d4", "WD d5", "WD d8", "WD d10")
 
@@ -105,12 +105,12 @@ d$sig_status <- ifelse(is.na(d$padj), "No data",
                        ifelse(d$padj < 0.05, "FDR < 0.05", "NS"))
 d$log2FC_cap <- pmax(pmin(d$log2FoldChange, 2), -2)
 d$comparison <- factor(d$comparison, levels = comp_levels)
-# Grupos en el orden de la lista
+# Groups in the order of the list
 d$Description <- factor(d$group, levels = unique(genes$group))
-# Filas en el orden de la lista (no alfabético), para que los parálogos queden juntos
+# Rows in the order of the list (not alphabetical), so paralogs stay together
 d$display_name <- factor(d$display_name, levels = genes$display_name)
 
-# Tabla con los valores del dotplot
+# Table with the dot plot values
 tabla <- d[order(d$Description, d$display_name, d$comparison),
            c("gene_id", "ath_genes", "group", "comparison",
              "log2FoldChange", "padj", "sig_status")]
@@ -118,7 +118,7 @@ write.table(tabla, file = file.path(out_dir, "dotplot_aba_genes_table.tsv"),
             quote = FALSE, sep = "\t", row.names = FALSE)
 
 # -------------------------------------------------------
-# Escalas compartidas
+# Shared scales
 # -------------------------------------------------------
 fc_color_scale <- scale_color_gradient2(
   low = "#4575B4", mid = "white", high = "#D73027",
@@ -132,11 +132,11 @@ sig_shape_scale <- scale_shape_manual(
   name   = "Significance"
 )
 
-# Limites de tamaño fijos para que los puntos sean comparables entre paneles
+# Fixed size limits so points are comparable across panels
 size_limits <- c(0, max(abs(d$log2FoldChange[d$sig_status != "No data"])))
 
 # -------------------------------------------------------
-# Función: dot plot
+# Function: dot plot
 # -------------------------------------------------------
 make_dotplot <- function(data, title, subtitle = "",
                          facet_by_group = TRUE, width = 11) {
@@ -195,7 +195,7 @@ save_dotplot <- function(pl, filename_base) {
   cat("  → dotplot:", paste0(filename_base, "\n"))
 }
 
-# Tres paneles lado a lado en la misma figura (mismos grupos que en Arabidopsis)
+# Three panels side by side in the same figure (same groups as in Arabidopsis)
 paneles <- list(
   c("TF", "metabolic"),
   c("catabolic", "transport", "receptor", "phosphatase_cladeA", "phosphatase_cladeB"),

@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """
-Tabla suplementaria (TSV) con los datos exactos de fig_orthologs_summary / _detail.
+Supplementary table (TSV) with the exact data behind fig_orthologs_summary / _detail.
 
-Entrada: Ath_ABA_orthologs_final.tsv (de combine_orthologs.py) y el GFF de Ensembl
-Plants 62 (descripciones ITAG de los genes de tomate).
-Salida:  Table_S_ABA_orthologs.tsv — una fila por par (gen Ath, gen de tomate) y una fila
-         por cada gen Ath sin ortólogo. Un par es ortólogo si lo infiere OrthoFinder o
-         Ensembl Compara.
+Input:  Ath_ABA_orthologs_final.tsv (from combine_orthologs.py) and the Ensembl Plants 62
+        GFF (ITAG descriptions of the tomato genes).
+Output: Table_S_ABA_orthologs.tsv — one row per pair (Ath gene, tomato gene) and one row
+        per Ath gene without an ortholog. A pair is an ortholog if OrthoFinder or
+        Ensembl Compara infers it.
 """
 import gzip
 import re
@@ -59,7 +59,7 @@ t = pd.DataFrame({
     "orthofinder_orthogroup": fin.of_orthogroup.fillna(""),
     "tomato_description": fin.sly.map(desc).fillna(""),
 })
-# orden: el de la lista de genes; dentro de cada gen, pares con ambos métodos primero
+# order: that of the gene list; within each gene, pairs with both methods first
 t["_g"] = t.arabidopsis_locus.map({a: i for i, a in enumerate(genes.gene_id)})
 t["_n"] = (t.orthofinder == "Yes").astype(int) + (t.ensembl_compara == "Yes").astype(int)
 t = t.sort_values(["_g", "_n", "orthofinder"], ascending=[True, False, False])
@@ -68,6 +68,6 @@ t.drop(columns=["_g", "_n"]).to_csv(OUT, sep="\t", index=False)
 has = t[t.tomato_gene != "No ortholog"]
 g_of = set(has[has.orthofinder == "Yes"].arabidopsis_locus)
 g_c = set(has[has.ensembl_compara == "Yes"].arabidopsis_locus)
-print(f"{OUT.name}: {len(t)} filas, {len(has)} pares, {t.arabidopsis_locus.nunique()} genes Ath")
-print(f"Venn genes — solo OF {len(g_of - g_c)}, ambos {len(g_of & g_c)}, "
-      f"solo Compara {len(g_c - g_of)}, unión {len(g_of | g_c)}")
+print(f"{OUT.name}: {len(t)} rows, {len(has)} pairs, {t.arabidopsis_locus.nunique()} Ath genes")
+print(f"Venn genes — OF only {len(g_of - g_c)}, both {len(g_of & g_c)}, "
+      f"Compara only {len(g_c - g_of)}, union {len(g_of | g_c)}")

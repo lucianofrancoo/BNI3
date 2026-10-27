@@ -1,41 +1,41 @@
 #!/usr/bin/env python3
 """
-Selección de nodos para redes booleanas de la respuesta ABA a sequía en Arabidopsis y
-tomate (genes de Song et al. 2016 y sus ortólogos en tomate).
+Node selection for the Boolean networks of the ABA response to drought in Arabidopsis and
+tomato (genes from Song et al. 2016 and their tomato orthologs).
 
-Filtros y criterios (ver README.md):
-  F1  gen Ath con datos de expresión y con >=1 ortólogo de tomate con datos
-  F2  cambia significativamente (padj < 0.05, cualquier |log2FC| > 0) en algún tiempo
-      en al menos una especie (en tomate: cualquiera de sus ortólogos)
-  Representante de tomate por gen Ath: significativo > menor frecuencia de patrón >
-      apoyado por OrthoFinder y Compara > mayor |log2FC| máximo
-  Patrón: binarización SSD (más genes con patrón único que WCSS en 3 de 4 tablas y empate
-      en la otra), control|sequía concatenados (8 bits). Frecuencia calculada sobre todos
-      los genes binarizados de cada especie.
-  Orden: max(freq_Ath, freq_Sly), luego freq_Ath + freq_Sly, luego significativo en ambas.
-  Regla de no co-inclusión: en cada especie no entran dos nodos con el mismo patrón, ni
-      dos genes Ath con el mismo ortólogo de tomate.
-  Cobertura: como máximo MAX_PER_GROUP nodos por grupo funcional; total MAX_NODES.
-  Curación manual (después de la selección automática): se suman MANUAL_INCLUDE y se sacan
-      MANUAL_EXCLUDE (motivos en README.md); se verifica que se siga cumpliendo la regla de
-      no co-inclusión.
+Filters and criteria (see README.md):
+  F1  Ath gene with expression data and >=1 tomato ortholog with data
+  F2  changes significantly (padj < 0.05, any |log2FC| > 0) at some time point in at
+      least one species (in tomato: any of its orthologs)
+  Tomato representative per Ath gene: significant > lower pattern frequency >
+      supported by OrthoFinder and Compara > larger maximum |log2FC|
+  Pattern: SSD binarization (more unique-pattern genes than WCSS in 3 of 4 tables and a
+      tie in the other), control|drought concatenated (8 bits). Frequency computed over all
+      the binarized genes of each species.
+  Order: max(freq_Ath, freq_Sly), then freq_Ath + freq_Sly, then significant in both.
+  No co-inclusion rule: within each species no two nodes with the same pattern, nor two
+      Ath genes with the same tomato ortholog.
+  Coverage: at most MAX_PER_GROUP nodes per functional group; MAX_NODES in total.
+  Manual curation (after the automatic selection): MANUAL_INCLUDE are added and
+      MANUAL_EXCLUDE removed (reasons in README.md); the no co-inclusion rule is checked
+      again.
 
-Salidas:
-  candidates.tsv      los 74 candidatos (F1+F2) con patrones, frecuencias y orden
-  selected_nodes.tsv  nodos elegidos
+Outputs:
+  candidates.tsv      the 74 candidates (F1+F2) with patterns, frequencies and rank
+  selected_nodes.tsv  chosen nodes
 """
 from pathlib import Path
 
 import pandas as pd
 
-ROOT = Path(__file__).resolve().parents[2]   # BNI3_paper_backup/
+ROOT = Path(__file__).resolve().parents[2]   # reproducibility/
 OUT = Path(__file__).resolve().parent
 METHOD = "SSD"
 MAX_NODES = 15
-MAX_PER_GROUP = 2   # cobertura de toda la vía: no más de 2 nodos por grupo funcional
-# curación manual sobre la selección automática (ver README.md)
-MANUAL_INCLUDE = ["HB7", "ABF3"]   # TF de interés; solo quedaban afuera por el tope de TF
-MANUAL_EXCLUDE = ["DWA2", "ABA4"]  # patrón casi sin variación en ambas / en tomate
+MAX_PER_GROUP = 2   # cover the whole pathway: no more than 2 nodes per functional group
+# manual curation on top of the automatic selection (see README.md)
+MANUAL_INCLUDE = ["HB7", "ABF3"]   # TFs of interest; only left out by the TF cap
+MANUAL_EXCLUDE = ["DWA2", "ABA4"]  # pattern with almost no variation in both / in tomato
 
 
 def patterns(sp):
@@ -67,7 +67,7 @@ orth = orth[orth.tomato_gene != "No ortholog"]
 pa, ps = patterns("Ath"), patterns("Sly")
 da, ds = dge("Ath"), dge("Sly")
 
-# F1: pares con datos en ambas especies
+# F1: pairs with data in both species
 o = orth[orth.arabidopsis_locus.isin(pa.index) & orth.tomato_gene.isin(ps.index)].copy()
 o["both_methods"] = (o.orthofinder == "Yes") & (o.ensembl_compara == "Yes")
 o = o.join(ps.add_prefix("sly_"), on="tomato_gene").join(ds.add_prefix("sly_"), on="tomato_gene")
@@ -76,11 +76,11 @@ o = o.join(pa.add_prefix("ath_"), on="arabidopsis_locus").join(da.add_prefix("at
 o["sly_sig"] = o.sly_sig.fillna(False).astype(bool)
 o["ath_sig"] = o.ath_sig.fillna(False).astype(bool)
 
-# F2: significativo en al menos una especie (tomate: cualquier ortólogo)
+# F2: significant in at least one species (tomato: any ortholog)
 any_sly = o.groupby("arabidopsis_locus").sly_sig.transform("any")
 o = o[o.ath_sig | any_sly]
 
-# representante de tomate por gen Ath
+# tomato representative per Ath gene
 o = o.sort_values(["arabidopsis_locus", "sly_sig", "sly_freq", "both_methods",
                    "sly_max_abs_lfc"], ascending=[True, False, True, False, False])
 o["n_tomato_orthologs"] = o.groupby("arabidopsis_locus").tomato_gene.transform("size")
@@ -94,37 +94,37 @@ c = c.sort_values(["max_freq", "sum_freq", "sig_in"],
                   else s).reset_index(drop=True)
 c["rank"] = c.index + 1
 
-# selección greedy con regla de no co-inclusión
+# greedy selection with the no co-inclusion rule
 used_a, used_s, used_t, keep, reason = set(), set(), set(), [], []
 per_group = {}
 for r in c.itertuples():
     why = []
     if r.ath_pattern in used_a:
-        why.append("patrón Ath repetido")
+        why.append("repeated Ath pattern")
     if r.sly_pattern in used_s:
-        why.append("patrón Sly repetido")
+        why.append("repeated Sly pattern")
     if r.tomato_gene in used_t:
-        why.append("ortólogo de tomate ya usado")
+        why.append("tomato ortholog already used")
     if not why and per_group.get(r.functional_group, 0) >= MAX_PER_GROUP:
-        why.append(f"grupo {r.functional_group} completo ({MAX_PER_GROUP})")
+        why.append(f"group {r.functional_group} full ({MAX_PER_GROUP})")
     ok = not why and sum(keep) < MAX_NODES
     keep.append(ok)
-    reason.append("; ".join(why) if why else ("" if ok else "fuera del cupo"))
+    reason.append("; ".join(why) if why else ("" if ok else "over the node limit"))
     if ok:
         used_a.add(r.ath_pattern); used_s.add(r.sly_pattern); used_t.add(r.tomato_gene)
         per_group[r.functional_group] = per_group.get(r.functional_group, 0) + 1
 c["selected"], c["excluded_reason"] = keep, reason
 c["auto_selected"] = c.selected
 
-# curación manual
+# manual curation
 inc = c.arabidopsis_gene.isin(MANUAL_INCLUDE)
 exc = c.arabidopsis_gene.isin(MANUAL_EXCLUDE)
 assert inc.sum() == len(MANUAL_INCLUDE) and exc.sum() == len(MANUAL_EXCLUDE)
-c.loc[inc, ["selected", "excluded_reason"]] = [True, "incluido manualmente"]
-c.loc[exc, ["selected", "excluded_reason"]] = [False, "excluido manualmente"]
+c.loc[inc, ["selected", "excluded_reason"]] = [True, "included manually"]
+c.loc[exc, ["selected", "excluded_reason"]] = [False, "excluded manually"]
 fin = c[c.selected]
 for col in ("ath_pattern", "sly_pattern", "tomato_gene"):
-    assert fin[col].is_unique, f"curación manual rompe la regla de no co-inclusión ({col})"
+    assert fin[col].is_unique, f"manual curation breaks the no co-inclusion rule ({col})"
 
 cols = ["rank", "selected", "auto_selected", "excluded_reason", "functional_group", "arabidopsis_gene",
         "arabidopsis_locus", "tomato_gene", "n_tomato_orthologs", "both_methods", "sig_in",
@@ -134,4 +134,4 @@ c[cols].to_csv(OUT / "candidates.tsv", sep="\t", index=False, float_format="%.2f
 c.loc[c.selected, cols[4:]].to_csv(OUT / "selected_nodes.tsv", sep="\t", index=False,
                                     float_format="%.2f")
 print(f"F1: {orth[orth.arabidopsis_locus.isin(pa.index) & orth.tomato_gene.isin(ps.index)].arabidopsis_locus.nunique()}"
-      f"  F1+F2: {len(c)}  automáticos: {c.auto_selected.sum()}  finales: {c.selected.sum()}")
+      f"  F1+F2: {len(c)}  automatic: {c.auto_selected.sum()}  final: {c.selected.sum()}")

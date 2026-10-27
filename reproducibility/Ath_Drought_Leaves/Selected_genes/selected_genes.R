@@ -1,10 +1,8 @@
 #!/usr/bin/env Rscript
 # ============================================================
-# Genes seleccionados (aba_genes.tsv) – Arabidopsis, hoja de roseta, sequia
-# 1) Conteo normalizado (vst) promediado por condicion, solo genes de la lista
-# 2) Dotplot de log2FC WD vs CTRL por tiempo, con significancia
-# Estilo del dotplot basado en
-# colaboracion_Malcom_bennett/Pathways_analysis_06_2026/pathways_analysis_arabidopsis.r
+# Selected genes (aba_genes.tsv) – Arabidopsis, rosette leaves, drought
+# 1) Normalized count (vst) averaged per condition, listed genes only
+# 2) Dot plot of the WD vs CTRL log2FC per time point, with significance
 # ============================================================
 
 library(ggplot2)
@@ -20,17 +18,17 @@ genes <- read.table(file.path(out_dir, "aba_genes.tsv"), header = TRUE, sep = "\
 genes$display_name <- make.unique(genes$geneName, sep = ".")
 
 # -------------------------------------------------------
-# Conteo normalizado promediado, solo genes seleccionados
+# Averaged normalized count, selected genes only
 # -------------------------------------------------------
 escribir_subset <- function(archivo_in, archivo_out, anotacion = TRUE) {
   mat <- read.table(file.path(dge_dir, archivo_in), header = TRUE, sep = "\t",
                     stringsAsFactors = FALSE, check.names = FALSE)
   sub <- merge(genes[, c("gene_id", "geneName", "group")], mat,
                by.x = "gene_id", by.y = "ID", sort = FALSE)
-  # Mantener el orden de aba_genes.tsv
+  # Keep the order of aba_genes.tsv
   sub <- sub[order(match(sub$gene_id, genes$gene_id)), ]
   colnames(sub)[1] <- "ID"
-  # anotacion = FALSE: solo ID y valores de expresion (sin geneName ni group)
+  # anotacion = FALSE: only ID and expression values (no geneName or group)
   if (!anotacion) sub <- sub[, setdiff(colnames(sub), c("geneName", "group"))]
   write.table(sub, file = file.path(out_dir, archivo_out),
               quote = FALSE, sep = "\t", row.names = FALSE)
@@ -44,15 +42,15 @@ invisible(escribir_subset("ConteoNormalizado_mean_Drought.tsv", "ConteoNormaliza
                           anotacion = FALSE))
 
 faltan <- genes[!genes$gene_id %in% sub_mean$ID, ]
-cat("Genes en la lista:", nrow(genes), "\n")
-cat("Genes con datos (pasaron el filtro de DESeq2):", nrow(sub_mean), "\n")
+cat("Genes in the list:", nrow(genes), "\n")
+cat("Genes with data (passed the DESeq2 filter):", nrow(sub_mean), "\n")
 if (nrow(faltan) > 0) {
-  cat("Sin datos (filtrados por bajo conteo):",
+  cat("No data (filtered out for low counts):",
       paste0(faltan$geneName, " (", faltan$gene_id, ")", collapse = ", "), "\n")
 }
 
 # -------------------------------------------------------
-# Cargar DGE
+# Load DGE
 # -------------------------------------------------------
 comp_levels <- c("WD 7200", "WD 15840", "WD 20160")
 
@@ -75,10 +73,10 @@ d$sig_status <- ifelse(is.na(d$padj), "No data",
                        ifelse(d$padj < 0.05, "FDR < 0.05", "NS"))
 d$log2FC_cap <- pmax(pmin(d$log2FoldChange, 2), -2)
 d$comparison <- factor(d$comparison, levels = comp_levels)
-# Grupos en el orden en que aparecen en aba_genes.tsv
+# Groups in the order they appear in aba_genes.tsv
 d$Description <- factor(d$group, levels = unique(genes$group))
 
-# Tabla con los valores del dotplot
+# Table with the dot plot values
 tabla <- d[order(d$Description, d$display_name, d$comparison),
            c("gene_id", "display_name", "group", "comparison",
              "log2FoldChange", "padj", "sig_status")]
@@ -86,7 +84,7 @@ write.table(tabla, file = file.path(out_dir, "dotplot_aba_genes_table.tsv"),
             quote = FALSE, sep = "\t", row.names = FALSE)
 
 # -------------------------------------------------------
-# Escalas compartidas
+# Shared scales
 # -------------------------------------------------------
 fc_color_scale <- scale_color_gradient2(
   low = "#4575B4", mid = "white", high = "#D73027",
@@ -100,11 +98,11 @@ sig_shape_scale <- scale_shape_manual(
   name   = "Significance"
 )
 
-# Limites de tamaño fijos para que los puntos sean comparables entre paneles
+# Fixed size limits so points are comparable across panels
 size_limits <- c(0, max(abs(d$log2FoldChange[d$sig_status != "No data"])))
 
 # -------------------------------------------------------
-# Función: dot plot
+# Function: dot plot
 # -------------------------------------------------------
 make_dotplot <- function(data, title, subtitle = "",
                          facet_by_group = TRUE, width = 11) {
@@ -163,7 +161,7 @@ save_dotplot <- function(pl, filename_base) {
   cat("  → dotplot:", paste0(filename_base, "\n"))
 }
 
-# Tres paneles lado a lado en la misma figura
+# Three panels side by side in the same figure
 paneles <- list(
   c("TF", "metabolic"),
   c("catabolic", "transport", "receptor", "phosphatase_cladeA", "phosphatase_cladeB"),

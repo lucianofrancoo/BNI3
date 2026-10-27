@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# Cuantificacion con kallisto de PRJNA1125861 (Solanum lycopersicum, hoja
-# madura, deficit hidrico progresivo). 21 runs paired-end, DNBSEQ-G400.
-# Mapeo SRR -> tratamiento/tiempo en ../raw_data/samples_metadata.tsv
+# kallisto quantification of PRJNA1125861 (Solanum lycopersicum, mature
+# leaves, progressive water deficit). 21 paired-end runs, DNBSEQ-G400.
+# SRR -> treatment/time mapping in coldata.tsv
 
 set -u
 
@@ -14,12 +14,12 @@ OUT="$BASE/Counts"
 archivo_codigos="$BASE/raw_data/lista"
 LOG="$OUT/kallisto.log"
 
-# Ensembl Plants SL3.0 cdna.all, 34658 targets, 1 transcrito por gen.
-# Index version 10 (kallisto 0.48.x), verificado con kallisto inspect.
+# Ensembl Plants SL3.0 cdna.all, 34658 targets, 1 transcript per gene.
+# Index version 10 (kallisto 0.48.x), checked with kallisto inspect.
 INDEX="${INDEX:-$BASE/ref_tomato_SL3/index_tomato_09_26}"
 
-# kallisto 0.48.0 de bioconda (con HDF5). El de apt (/usr/bin/kallisto) esta
-# compilado sin HDF5 y no escribe abundance.h5.
+# kallisto 0.48.0 from bioconda (with HDF5). The apt build (/usr/bin/kallisto) is
+# compiled without HDF5 and does not write abundance.h5.
 KALLISTO="${KALLISTO:-kallisto}"
 
 HILOS=16
@@ -27,12 +27,12 @@ HILOS=16
 cd "$OUT" || exit 1
 
 if [ ! -s "$INDEX" ]; then
-  echo "ERROR: no se encuentra el indice de kallisto en $INDEX" | tee -a "$LOG"
-  echo "       ver README.md en este directorio" | tee -a "$LOG"
+  echo "ERROR: kallisto index not found at $INDEX" | tee -a "$LOG"
+  echo "       set INDEX to the SL3.0 cDNA index" | tee -a "$LOG"
   exit 1
 fi
 
-# Leer cada linea del archivo
+# Read each line of the file
 while IFS= read -r nombre
 do
   [ -z "$nombre" ] && continue
@@ -41,19 +41,19 @@ do
   R1="$CLEAN/clean_${nombre}_1.fastq.gz"
   R2="$CLEAN/clean_${nombre}_2.fastq.gz"
 
-  # saltar si la limpieza aun no termino
+  # skip if read cleaning has not finished yet
   if [ ! -s "$R1" ] || [ ! -s "$R2" ]; then
-    echo "[$(date +%F_%T)] $nombre sin clean data, se omite" | tee -a "$LOG"
+    echo "[$(date +%F_%T)] $nombre has no clean data, skipped" | tee -a "$LOG"
     continue
   fi
 
-  # saltar muestras ya cuantificadas
+  # skip samples already quantified
   if [ -s "$nombre/abundance.h5" ]; then
-    echo "[$(date +%F_%T)] $nombre ya cuantificado, se omite" | tee -a "$LOG"
+    echo "[$(date +%F_%T)] $nombre already quantified, skipped" | tee -a "$LOG"
     continue
   fi
 
-  echo "[$(date +%F_%T)] Procesando $nombre" | tee -a "$LOG"
+  echo "[$(date +%F_%T)] Processing $nombre" | tee -a "$LOG"
   mkdir -p "$nombre"
 
   "$KALLISTO" quant -i "$INDEX" \
@@ -62,12 +62,12 @@ do
                  "$R1" "$R2" 2>>"$LOG"
 
   if [ $? -ne 0 ] || [ ! -s "$nombre/abundance.h5" ]; then
-    echo "[$(date +%F_%T)] ERROR en $nombre" | tee -a "$LOG"
+    echo "[$(date +%F_%T)] ERROR in $nombre" | tee -a "$LOG"
     rm -rf "$nombre"
   fi
 done < "$archivo_codigos"
 
-echo "[$(date +%F_%T)] Agregando conteos" | tee -a "$LOG"
+echo "[$(date +%F_%T)] Aggregating counts" | tee -a "$LOG"
 Rscript "$OUT/extraerCounts.r" "$OUT" 2>&1 | tee -a "$LOG"
 
-echo "[$(date +%F_%T)] Listo" | tee -a "$LOG"
+echo "[$(date +%F_%T)] Done" | tee -a "$LOG"
