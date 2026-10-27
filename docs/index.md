@@ -87,14 +87,17 @@ Here is an example of the rules inferred just for the gene **HB7**:
 | HB7 | 4 | `~ABF3 \| ~HB6 \| ~HB7` | 3 | 3 | 1.9375 |
 
 ### 3.2 Evaluation & Scoring (`evaluation_results.tsv`)
-Because BNI3 infers *multiple* valid rules per gene, the Evaluator tests thousands of network combinations to find the ultimate topology. It calculates a `composite_score` based on:
-- `avg_cycle_length` (penalty for long unstable cycles)
-- `fixed_point_ratio` (reward for biological stability)
-- `final_state_concordance`
+Because BNI3 infers *multiple* valid rules per gene, the Evaluator tests network combinations to find the best topology. Combinations are ranked by a lexicographic cascade: each criterion only breaks the ties left by the previous one.
+1. `final_state_concordance` (max): the network reaches the last observed state of the data
+2. `n_basins` (min)
+3. `avg_cycle_length` (min)
+4. `fixed_point_ratio` (max)
+5. `basin_entropy` (min)
+6. `k_distance_from_2` (min), and further tie-breakers
 
-The winning topology is then saved as `rules_by_gene_evaluated.tsv` and automatically plotted as a high-resolution topological network!
+When the space is too large to enumerate (here 3·10¹⁵ combinations) the evaluator uses hill climbing, so a rerun can pick another of the combinations tied at the optimum. The winning topology is saved as `rules_by_gene_evaluated.tsv` and plotted as a network; edge colors follow the sign of each regulator in the Boolean function (blue activates, red inhibits).
 
-![Inferred Network Topology](../2.Rules_Inference/Example/network/rules_by_gene_network.png)
+![Inferred Network Topology](../2.Rules_Inference/Example/network/rules_by_gene_evaluated_network.png)
 
 ---
 
@@ -108,27 +111,28 @@ The module will scan the state-space and output `attractors.tsv`:
 
 | attractor_id | type | cycle_length | basin_size | basin_percentage | binary_state |
 |---|---|---|---|---|---|
-| 1 | fixed_point | 1 | 8192 | 100.0% | 0011011010101 |
+| 1 | fixed_point | 1 | 7680 | 93.75% | 0011011010101 |
+| 2 | fixed_point | 1 | 512 | 6.25% | 0010010000101 |
 
-The pipeline automatically renders two vital visualizations for your publications. Below is the steady state map for our network:
+The pipeline renders two figures. Below is the steady state map for our network: two fixed points, one of which drains almost the whole state space. Rings in blue mark the states observed in the binarized matrix; hollow nodes count the states that reach the attractor through each drawn state.
 
 <div style="display: flex; justify-content: space-around; align-items: center;">
   <img src="../3.Attractors/Example/attractors_visualization_network.png" alt="Attractors Landscape" width="48%">
   <img src="../3.Attractors/Example/attractors_visualization_heatmap.png" alt="Attractors Heatmap" width="48%">
 </div>
 
-*(Left: The topological basin network. Right: The steady-state expression heatmap).*
+*(Left: the attractors with the states leading into them, `--predecessors 2`. Right: the gene states of each attractor).*
 
 ---
 
 ### Biological Perturbations (In-Silico Mutations)
 BNI3 allows you to simulate Overexpression (Gene:1) or Knockouts (Gene:0). By doing this, you can observe how the topological landscape shifts, potentially discovering new attractors or destroying existing ones.
 
-For instance, if we run the perturbation module simulating a Knockout of **MYB44:0**, the entire network structure changes and shifts towards a new steady state paradigm:
+For instance, simulating a Knockout of **MYB44:0** changes the attractor landscape: three attractors appear (two fixed points and a 2-state cycle) and the dominant wild-type fixed point disappears:
 
 <div style="display: flex; justify-content: space-around; align-items: center;">
   <img src="../3.Attractors/Example/attractors_visualization_MYB44_0_network.png" alt="MYB44 Knockout Landscape" width="48%">
   <img src="../3.Attractors/Example/attractors_visualization_MYB44_0_heatmap.png" alt="MYB44 Knockout Heatmap" width="48%">
 </div>
 
-*(Notice how shutting down the MYB44 node restructures the hierarchy of the remaining active attractors).*
+*(Mutations are passed with `-m`, e.g. `-m "MYB44:0"` or `-m "ABF4:1,MYB44:0"`, and their suffix is added to the output names).*

@@ -92,9 +92,9 @@ Example of rules inferred just for the gene **HB7**:
 | HB7 | 2 | `~ABF3 \| ~CYP707A3` | 3 | 2 | 1.9375 |
 | HB7 | 3 | `~MYB44 \| (ABF4 & ~ZAT6)` | 3 | 3 | 1.9375 |
 
-Because BNI3 infers *multiple* valid rules per gene, the Evaluator tests thousands of network combinations to find the ultimate topology (`rules_by_gene_evaluated.tsv`).
+Because BNI3 infers *multiple* valid rules per gene, the Evaluator tests network combinations to find the best topology (`rules_by_gene_evaluated.tsv`). When the space is too large to enumerate (here 3·10¹⁵ combinations) it uses hill climbing, so a rerun can pick another of the combinations tied at the optimum. Edge colors follow the sign of each regulator in the Boolean function: blue activates, red inhibits.
 
-![Inferred Network Topology](./2.Rules_Inference/Example/network/rules_by_gene_network.png)
+![Inferred Network Topology](./2.Rules_Inference/Example/network/rules_by_gene_evaluated_network.png)
 
 ---
 
@@ -104,23 +104,53 @@ Select `3` in the Main Menu to calculate steady states. The module outputs `attr
 
 | attractor_id | type | cycle_length | basin_size | basin_percentage | binary_state |
 |---|---|---|---|---|---|
-| 1 | fixed_point | 1 | 8192 | 100.0% | 0011011010101 |
+| 1 | fixed_point | 1 | 7680 | 93.75% | 0011011010101 |
+| 2 | fixed_point | 1 | 512 | 6.25% | 0010010000101 |
 
-Below is the steady state map for our network:
+Below is the steady state map for our network: two fixed points, one of which drains almost the whole state space. Rings in blue mark the states observed in the binarized matrix; hollow nodes count the states that reach the attractor through each drawn state.
 
 <div style="display: flex; justify-content: space-around; align-items: center;">
   <img src="./3.Attractors/Example/attractors_visualization_network.png" alt="Attractors Landscape" width="48%">
   <img src="./3.Attractors/Example/attractors_visualization_heatmap.png" alt="Attractors Heatmap" width="48%">
 </div>
 
-*(Left: The topological basin network. Right: The steady-state expression heatmap).*
+*(Left: the attractors with the states leading into them, `--predecessors 2`. Right: the gene states of each attractor).*
 
 ### In-Silico Mutations (e.g. Knockout)
-BNI3 allows you to simulate Overexpression (Gene:1) or Knockouts (Gene:0). If we simulate a Knockout of **MYB44:0**, the entire network structure changes:
+BNI3 allows you to simulate Overexpression (Gene:1) or Knockouts (Gene:0). If we simulate a Knockout of **MYB44:0**, the attractor landscape changes: three attractors appear (two fixed points and a 2-state cycle) and the dominant wild-type fixed point disappears:
 
 <div style="display: flex; justify-content: space-around; align-items: center;">
   <img src="./3.Attractors/Example/attractors_visualization_MYB44_0_network.png" alt="MYB44 Knockout Landscape" width="48%">
   <img src="./3.Attractors/Example/attractors_visualization_MYB44_0_heatmap.png" alt="MYB44 Knockout Heatmap" width="48%">
 </div>
 
-*(Notice how shutting down the MYB44 node restructures the hierarchy of the remaining active attractors).*
+*(Mutations are passed to every step with `-m`, e.g. `-m "MYB44:0"` or `-m "ABF4:1,MYB44:0"`, and their suffix is added to the output names).*
+
+---
+
+## Reproducing the paper
+
+[`reproducibility/`](./reproducibility/) holds the data, scripts and results behind the paper: the DREAM4 size10 benchmark against BoolNet, the synthetic cell-cycle network, and the ABA response to drought in *Arabidopsis thaliana* and tomato. Its [README](./reproducibility/README.md) maps each analysis to its folder and gives the commands.
+
+Figure 5 compares BNI3 with BoolNet on the 25 DREAM4 size10 series, with all 21 time points and reduced to 5:
+
+<div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
+  <img src="./reproducibility/DREAM4/figures/Figure5_A_BalancedAccuracy.png" alt="Balanced accuracy" width="48%">
+  <img src="./reproducibility/DREAM4/figures/Figure5_B_F1.png" alt="F1-score" width="48%">
+  <img src="./reproducibility/DREAM4/figures/Figure5_C_Coverage.png" alt="Coverage ratio" width="48%">
+  <img src="./reproducibility/DREAM4/figures/Figure5_D_PrecisionRecall.png" alt="Precision vs recall" width="48%">
+</div>
+
+```bash
+python3 reproducibility/DREAM4/scripts/make_figure5.py          # figure and statistics from the included results
+bash reproducibility/DREAM4/scripts/run_bni3_dream4.sh          # full rerun (about two days with 50 processes)
+```
+
+The R steps (gold-standard scoring, BoolNet, DESeq2) need R with `dplyr`, `BoolNet`, `DESeq2`, `ggplot2`, `BiocParallel` and `patchwork`.
+
+## Known issues
+
+- `3.Attractors/BNI3_Attractorator.py`: with `-m`, the trajectory files do not get the mutation suffix, so runs of several conditions into the same folder overwrite `trajectory*`. Give each condition its own `-ob`.
+- `2.Rules_Inference/4.BNI3_Boolean_network_visualizer.py`: `-o` must include a directory (`-o out/network`); a bare name fails, and `-d` is ignored when `-o` is given.
+- The header of the rule-inference log prints an example MLP configuration computed for all genes as regulators. The configuration actually used is chosen per candidate rule from its own number of regulators, so `lbfgs` convergence warnings can appear even when the header says `adam`.
+
