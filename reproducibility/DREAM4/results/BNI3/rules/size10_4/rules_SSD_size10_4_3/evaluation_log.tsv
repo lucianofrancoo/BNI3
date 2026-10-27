@@ -1,0 +1,15 @@
+# generated: 2026-10-24 02:31:27
+# rules_file: DREAM4/results/BNI3/rules/size10_4/rules_SSD_size10_4_3/rules_by_gene.tsv
+# matrix_file: DREAM4/results/BNI3/binarized/size10_4/size10_4_3/size10_4_3_binarized_SSD.tsv
+# genes: 10
+# strategy: exhaustive
+# search_space_before_prune: 2.000000e+00
+# search_space_after_prune: 2.000000e+00
+# prune_applied: True
+# prune_evaluations: 11
+# combinations_evaluated: 2
+# processes: 50
+# cascade: final_state_concordance(max) > n_basins(min) > avg_cycle_length(min) > fixed_point_ratio(max) > basin_entropy(min) > k_distance_from_2(min) > total_literals(min) > total_nots(min)
+# priority_regulators: none
+batch	evaluations_total	k_at_best	confidence	best_final_state_concordance	best_n_basins	best_avg_cycle_length	best_fixed_point_ratio	best_basin_entropy	best_k_distance_from_2	best_total_literals	best_total_nots
+1	2	1	1.0	1.0	10.0	1.0	1.0	2.241601	0.9	29.0	8.0
