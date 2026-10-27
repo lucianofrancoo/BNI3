@@ -130,7 +130,7 @@ Both species follow the same steps, one folder each:
 - Tomato: BioProject PRJNA1125861 (21 paired-end runs). `Counts/run_kallisto.sh`
   quantified them against Ensembl Plants SL3.0 cDNA with kallisto 0.48.0, and
   `Counts/extraerCounts.r` built the gene matrix.
-- Arabidopsis: <!-- TODO: GEO/SRA accession of the Arabidopsis drought time course -->
+- Arabidopsis: BioProject PRJNA483528. `Counts/` holds the gene-level count matrix used.
 
 **Not included,** to keep the repository small. All of it is regenerated from the files
 that are here:
